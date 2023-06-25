@@ -1,0 +1,57 @@
+digraph DATAEXFILTRATIONmicrosoftds {
+rankdir="BT"; 
+ graph [ nodesep="0.1", ranksep="0.02"] 
+ node [ fontname=Arial, fontsize=24,penwidth=3]; 
+ edge [ fontname=Arial, fontsize=20,penwidth=5 ];
+"Victim: 10.0.0.224
+DATA EXFILTRATION
+microsoft-ds" [shape=doubleoctagon, style=filled, fillcolor=salmon];
+{ rank = max; "Victim: 10.0.0.224
+DATA EXFILTRATION
+microsoft-ds"}
+"DATA EXFILTRATION
+microsoft-ds | ID: 37" -> "Victim: 10.0.0.224
+DATA EXFILTRATION
+microsoft-ds"
+"DATA EXFILTRATION
+microsoft-ds | ID: 37" [style=filled, fillcolor= salmon]
+{ rank=same; "DATA EXFILTRATION
+microsoft-ds | ID: 37"}
+"VULNERABILTY DISCOVERY
+ncube-lm" [style=filled, fillcolor= yellow]
+"VULNERABILTY DISCOVERY
+ncube-lm" -> "SERVICE DISCOVERY
+ag-swim" [ color=darkgreen] [label=<<font color="darkgreen"> start_next: 04/11/17, 13:53:29<br/>gap: 340sec<br/>end_prev: 04/11/17, 13:47:50</font><br/><font color="darkgreen"><b>Attacker: 10.0.254.35</b></font>>]
+"SERVICE DISCOVERY
+ag-swim" -> "COMMAND AND CONTROL
+unknown | ID: 308" [ label="start_next: 04/11/17, 13:54:51
+gap: 82sec
+end_prev: 04/11/17, 13:53:29"][ fontcolor="darkgreen" color=darkgreen]
+"COMMAND AND CONTROL
+unknown | ID: 308" -> "DATA EXFILTRATION
+microsoft-ds | ID: 37" [ label="start_next: 04/11/17, 14:38:54
+gap: 2643sec
+end_prev: 04/11/17, 13:54:51"][ fontcolor="darkgreen" color=darkgreen]
+"VULNERABILTY DISCOVERY
+ncube-lm" [style=filled, fillcolor= yellow]
+"VULNERABILTY DISCOVERY
+ncube-lm" -> "DATA EXFILTRATION
+microsoft-ds | ID: 37" [ color=turquoise] [label=<<font color="turquoise"> start_next: 04/11/17, 16:30:20<br/>gap: 2187sec<br/>end_prev: 04/11/17, 15:53:53</font><br/><font color="turquoise"><b>Attacker: 10.0.254.31</b></font>>]
+"VULNERABILTY DISCOVERY
+ncube-lm" [shape=oval]
+"VULNERABILTY DISCOVERY
+ncube-lm" [tooltip="ET POLICY Suspicious inbound to Oracle SQL port 1521"]
+"SERVICE DISCOVERY
+ag-swim" [shape=oval]
+"SERVICE DISCOVERY
+ag-swim" [tooltip="ET SCAN Potential VNC Scan 5900-5920"]
+"COMMAND AND CONTROL
+unknown | ID: 308" [shape=box]
+"COMMAND AND CONTROL
+unknown | ID: 308" [tooltip="ET POLICY RDP connection confirm"]
+"DATA EXFILTRATION
+microsoft-ds | ID: 37" [shape=hexagon]
+"DATA EXFILTRATION
+microsoft-ds | ID: 37" [tooltip="GPL NETBIOS SMB-DS IPC$ share access
+GPL NETBIOS SMB-DS ADMIN$ share access"]
+}

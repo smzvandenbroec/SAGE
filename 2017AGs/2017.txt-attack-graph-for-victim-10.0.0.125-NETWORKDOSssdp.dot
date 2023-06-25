@@ -1,0 +1,70 @@
+digraph NETWORKDOSssdp {
+rankdir="BT"; 
+ graph [ nodesep="0.1", ranksep="0.02"] 
+ node [ fontname=Arial, fontsize=24,penwidth=3]; 
+ edge [ fontname=Arial, fontsize=20,penwidth=5 ];
+"Victim: 10.0.0.125
+NETWORK DoS
+ssdp" [shape=doubleoctagon, style=filled, fillcolor=salmon];
+{ rank = max; "Victim: 10.0.0.125
+NETWORK DoS
+ssdp"}
+"NETWORK DoS
+ssdp | ID: 55" -> "Victim: 10.0.0.125
+NETWORK DoS
+ssdp"
+"NETWORK DoS
+ssdp | ID: 55" [style=filled, fillcolor= salmon]
+{ rank=same; "NETWORK DoS
+ssdp | ID: 55"}
+"VULNERABILTY DISCOVERY
+ms-sql-s" [style=filled, fillcolor= yellow]
+"VULNERABILTY DISCOVERY
+ms-sql-s" -> "VULNERABILTY DISCOVERY
+ncube-lm" [ color=blue] [label=<<font color="blue"> start_next: 04/11/17, 14:02:15<br/>gap: 3803sec<br/>end_prev: 04/11/17, 12:58:52</font><br/><font color="blue"><b>Attacker: 10.0.254.31</b></font>>]
+"VULNERABILTY DISCOVERY
+ncube-lm" -> "SERVICE DISCOVERY
+unknown" [ label="start_next: 04/11/17, 14:05:35
+gap: -3sec
+end_prev: 04/11/17, 14:05:38"][ fontcolor="blue" color=blue]
+"SERVICE DISCOVERY
+unknown" -> "NETWORK DoS
+ssdp | ID: 55" [ label="start_next: 04/11/17, 14:06:11
+gap: 33sec
+end_prev: 04/11/17, 14:05:38"][ fontcolor="blue" color=blue]
+"VULNERABILTY DISCOVERY
+ncube-lm" [style=filled, fillcolor= yellow]
+"VULNERABILTY DISCOVERY
+ncube-lm" -> "BRUTE FORCE CREDENTIALS
+pop3 | ID: 382" [ color=blue] [label=<<font color="blue"> start_next: 04/11/17, 16:31:25<br/>gap: 7sec<br/>end_prev: 04/11/17, 16:31:18</font><br/><font color="blue"><b>Attacker: 10.0.254.31</b></font>>]
+"BRUTE FORCE CREDENTIALS
+pop3 | ID: 382" -> "NETWORK DoS
+ssdp | ID: 55" [ label="start_next: 04/11/17, 16:31:57
+gap: 32sec
+end_prev: 04/11/17, 16:31:25"][ fontcolor="blue" color=blue]
+"VULNERABILTY DISCOVERY
+ms-sql-s" [shape=oval]
+"VULNERABILTY DISCOVERY
+ms-sql-s" [tooltip="ET POLICY Suspicious inbound to MSSQL port 1433"]
+"VULNERABILTY DISCOVERY
+ncube-lm" [shape=oval]
+"VULNERABILTY DISCOVERY
+ncube-lm" [tooltip="ET POLICY Suspicious inbound to mySQL port 3306
+ET POLICY Suspicious inbound to mSQL port 4333
+ET POLICY Suspicious inbound to MSSQL port 1433
+ET POLICY Suspicious inbound to Oracle SQL port 1521
+ET POLICY Suspicious inbound to PostgreSQL port 5432"]
+"SERVICE DISCOVERY
+unknown" [shape=oval]
+"SERVICE DISCOVERY
+unknown" [tooltip="ET SCAN Potential VNC Scan 5800-5820
+ET SCAN Potential VNC Scan 5900-5920"]
+"NETWORK DoS
+ssdp | ID: 55" [shape=hexagon]
+"NETWORK DoS
+ssdp | ID: 55" [tooltip="ET DOS Possible SSDP Amplification Scan in Progress"]
+"BRUTE FORCE CREDENTIALS
+pop3 | ID: 382" [shape=box]
+"BRUTE FORCE CREDENTIALS
+pop3 | ID: 382" [tooltip="ET SCAN Rapid POP3 Connections - Possible Brute Force Attack"]
+}

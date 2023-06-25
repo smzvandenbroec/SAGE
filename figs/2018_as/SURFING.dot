@@ -1,0 +1,428 @@
+digraph "" {
+	"SURFING
+etlservicemgr"	[shape=oval,
+		tooltip="\"ET WEB_SERVER WEB-PHP phpinfo access\""];
+	"SURFING
+http"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET WEB_SERVER WEB-PHP phpinfo access\""];
+	"SURFING
+wap-wsp"	[shape=oval,
+		tooltip="\"ET WEB_SERVER WEB-PHP phpinfo access\""];
+	"SURFING
+us-cli"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET WEB_SERVER WEB-PHP phpinfo access\""];
+	"SURFING
+remoteware-cl"	[shape=oval,
+		tooltip="\"ET WEB_SERVER WEB-PHP phpinfo access\""];
+	"SURFING
+unknown"	[shape=oval,
+		tooltip="\"ET WEB_SERVER WEB-PHP phpinfo access\""];
+	"SURFING
+cslistener"	[shape=oval,
+		tooltip="\"ET WEB_SERVER WEB-PHP phpinfo access\""];
+	"SURFING
+commplex-main"	[shape=oval,
+		tooltip="\"ET WEB_SERVER WEB-PHP phpinfo access\""];
+	"DATA MANIPULATION
+http | ID: 17"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SERVER Possible SQL Injection Attempt SELECT FROM
+ET WEB_SERVER MYSQL SELECT CONCAT SQL Injection Attempt
+ET WEB_SERVER \
+Possible SQL Injection Attempt UNION SELECT\""];
+	"DATA MANIPULATION
+http | ID: 17" -> "SURFING
+http"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 14:29:30\ngap: -2sec\nend_prev: 03/11/18, 14:29:32\"'}"];
+	"DATA MANIPULATION
+http | ID: 17" -> "SURFING
+http"	[key=1,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 19:21:28\ngap: -2sec\nend_prev: 03/11/18, 19:21:30\"'}"];
+	"DATA MANIPULATION
+http | ID: 17" -> "SURFING
+http"	[key=2,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 14:42:26\ngap: -3sec\nend_prev: 03/11/18, 14:\
+42:29\"'}"];
+	"DATA MANIPULATION
+http | ID: 17" -> "SURFING
+http"	[key=3,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 17:38:01\ngap: -10sec\nend_prev: 03/11/18, 17:\
+38:12\"'}"];
+	"DATA MANIPULATION
+http | ID: 17" -> "SURFING
+http"	[key=4,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 22:31:09\ngap: -6sec\nend_prev: 03/11/18, 22:\
+31:15\"'}"];
+	"DATA MANIPULATION
+http | ID: 17" -> "SURFING
+http"	[key=5,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 03/11/18, 14:31:42\ngap: -80sec\nend_prev: 03/11/18, 14:33:03\"'}"];
+	"DATA MANIPULATION
+http | ID: 17" -> "SURFING
+http"	[key=6,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 03/11/18, 18:08:20\ngap: -2sec\nend_prev: 03/11/18, 18:08:22\"'}"];
+	"DATA MANIPULATION
+http | ID: 17" -> "SURFING
+http"	[key=7,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 15:16:54\ngap: -2sec\nend_prev: 03/11/18, 15:16:\
+56\"'}"];
+	"DATA MANIPULATION
+http | ID: 17" -> "SURFING
+http"	[key=8,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 19:58:25\ngap: -2sec\nend_prev: 03/11/18, 19:58:\
+27\"'}"];
+	"DATA MANIPULATION
+http | ID: 17" -> "SURFING
+http"	[key=9,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 03/11/18, 14:56:55\ngap: -2sec\nend_prev: 03/11/18, 14:56:57\"'}"];
+	"DATA MANIPULATION
+http | ID: 17" -> "SURFING
+http"	[key=10,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 03/11/18, 21:22:31\ngap: -2sec\nend_prev: 03/11/18, 21:22:33\"'}"];
+	"DATA MANIPULATION
+http | ID: 17" -> "SURFING
+http"	[key=11,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 03/11/18, 21:58:13\ngap: -2sec\nend_prev: 03/11/18, 21:58:15\"'}"];
+	"DATA MANIPULATION
+http | ID: 17" -> "SURFING
+us-cli"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 17:45:56\ngap: -68sec\nend_prev: 03/11/18, 17:47:03\"'}"];
+	"INFO DISCOVERY
+http"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"GPL WEB_SERVER viewcode access
+GPL WEB_SERVER .htaccess access
+GPL WEB_SERVER writeto.cnf access
+GPL WEB_SERVER iisadmin access
+\
+ET WEB_SERVER PHP Easteregg Information-Disclosure (funny-logo)
+ET WEB_SPECIFIC_APPS Request to Wordpress W3TC Plug-in dbcache Directory
+\
+GPL WEB_SERVER services.cnf access
+ET WEB_SERVER PHP Easteregg Information-Disclosure (zend-logo)
+GPL EXPLOIT unicode directory \
+traversal attempt
+ET WEB_SERVER PHP Easteregg Information-Disclosure (php-logo)
+GPL WEB_SERVER service.cnf access
+GPL EXPLOIT iisadmpwd \
+attempt
+ET WEB_SERVER PHP SESSION SuperGlobal in URI
+GPL WEB_SERVER /~root access
+GPL WEB_SERVER authors.pwd access
+ET WEB_SERVER \
+PHP ENV SuperGlobal in URI
+GPL EXPLOIT .cnf access
+ET POLICY Proxy TRACE Request - inbound
+GPL WEB_SERVER .htpasswd access
+GPL WEB_\
+SERVER global.asa access
+ET WEB_SERVER PHP SERVER SuperGlobal in URI
+GPL EXPLOIT fpcount access
+GPL WEB_SERVER globals.pl access
+\
+GPL WEB_SERVER 403 Forbidden
+GPL WEB_SERVER service.pwd
+GPL EXPLOIT ISAPI .idq attempt
+ET WEB_SERVER PHP Easteregg Information-Disclosure (\
+phpinfo)
+GPL WEB_SERVER printenv access
+GPL WEB_SERVER author.exe access
+GPL EXPLOIT iissamples access
+GPL EXPLOIT .htr access
+ET \
+WEB_SERVER PHP REQUEST SuperGlobal in URI\""];
+	"INFO DISCOVERY
+http" -> "SURFING
+http"	[key=0,
+		data="{'color': 'orange', 'fontcolor': '\"orange\"', 'label': '\"start_next: 03/11/18, 18:04:37\ngap: -80sec\nend_prev: 03/11/18, 18:05:56\"'}"];
+	"INFO DISCOVERY
+http" -> "SURFING
+http"	[key=1,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 17:40:34\ngap: 927sec\nend_prev: 03/11/18, 17:25:\
+07\"'}"];
+	"INFO DISCOVERY
+http" -> "SURFING
+http"	[key=2,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 18:13:40\ngap: 922sec\nend_prev: 03/11/18, 17:58:\
+19\"'}"];
+	"INFO DISCOVERY
+http" -> "SURFING
+http"	[key=3,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 18:46:15\ngap: 929sec\nend_prev: 03/11/18, 18:30:\
+46\"'}"];
+	"INFO DISCOVERY
+http" -> "SURFING
+http"	[key=4,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 19:53:32\ngap: 960sec\nend_prev: 03/11/18, 19:37:\
+32\"'}"];
+	"INFO DISCOVERY
+unknown"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"GPL WEB_SERVER 403 Forbidden\""];
+	"INFO DISCOVERY
+unknown" -> "SURFING
+http"	[key=0,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 19:19:31\ngap: 959sec\nend_prev: 03/11/18, 19:03:\
+32\"'}"];
+	"DATA EXFILTRATION
+http | ID: 15"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"GPL WEB_SERVER Tomcat server snoop access
+GPL EXPLOIT ISAPI .ida access
+GPL EXPLOIT /msadc/samples/ access
+ET WEB_SERVER ColdFusion \
+componentutils access
+ET WEB_SERVER /system32/ in Uri - Possible Protected Directory Access Attempt
+ET WEB_SPECIFIC_APPS PHP-CGI \
+query string parameter vulnerability
+ET WEB_SERVER Possible XXE SYSTEM ENTITY in POST BODY.
+ET WEB_SERVER /etc/shadow Detected in \
+URI
+GPL EXPLOIT ISAPI .idq access\""];
+	"DATA EXFILTRATION
+http | ID: 15" -> "SURFING
+http"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 21:03:29\ngap: -352sec\nend_prev: 03/11/18, 21:09:\
+21\"'}"];
+	"DATA EXFILTRATION
+http | ID: 15" -> "SURFING
+wap-wsp"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 21:10:30\ngap: -168sec\nend_prev: 03/11/18, 21:13:\
+18\"'}"];
+	"NETWORK DoS
+http | ID: 5"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SERVER Possible Cherokee Web Server GET AUX Request Denial Of Service Attempt\""];
+	"NETWORK DoS
+http | ID: 5" -> "SURFING
+http"	[key=0,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 15:09:14\ngap: 1sec\nend_prev: 03/11/18, 15:09:13\"'}"];
+	"NETWORK DoS
+http | ID: 5" -> "SURFING
+http"	[key=1,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 22:54:40\ngap: 1sec\nend_prev: 03/11/18, 22:54:39\"'}"];
+	"REMOTE SERVICE EXPLOIT
+http | ID: 33"	[shape=box,
+		tooltip="\"ET WEB_SERVER Script tag in URI Possible Cross Site Scripting Attempt\""];
+	"REMOTE SERVICE EXPLOIT
+http | ID: 33" -> "SURFING
+http"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 03/11/18, 15:46:34\ngap: 459sec\nend_prev: 03/11/18, 15:38:55\"'}"];
+	"VULNERABILTY DISCOVERY
+http"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Suspicious inbound to mySQL port 3306
+ET SCAN Suspicious inbound to MSSQL port 1433
+ET SCAN Nikto Web App Scan in Progress
+\
+ET SCAN Suspicious inbound to PostgreSQL port 5432
+ET SCAN Suspicious inbound to Oracle SQL port 1521
+ET SCAN Suspicious inbound \
+to mSQL port 4333\""];
+	"VULNERABILTY DISCOVERY
+http" -> "SURFING
+etlservicemgr"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 21:13:21\ngap: -116sec\nend_prev: 03/11/18, 21:15:\
+17\"'}"];
+	"DATA MANIPULATION
+etlservicemgr | ID: 59"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SERVER Possible SQL Injection Attempt SELECT FROM
+ET WEB_SERVER Possible SQL Injection Attempt UNION SELECT\""];
+	"DATA MANIPULATION
+etlservicemgr | ID: 59" -> "SURFING
+etlservicemgr"	[key=0,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 15:05:27\ngap: -10sec\nend_prev: 03/11/18, 15:\
+05:37\"'}"];
+	"DATA MANIPULATION
+etlservicemgr | ID: 59" -> "SURFING
+etlservicemgr"	[key=1,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 18:00:20\ngap: -19sec\nend_prev: 03/11/18, 18:\
+00:39\"'}"];
+	"DATA MANIPULATION
+commplex-main | ID: 66"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SERVER Possible SQL Injection Attempt SELECT FROM
+ET WEB_SERVER Possible SQL Injection Attempt UNION SELECT\""];
+	"DATA MANIPULATION
+commplex-main | ID: 66" -> "SURFING
+commplex-main"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 03/11/18, 17:50:24\ngap: -34sec\nend_prev: 03/11/18, 17:50:58\"'}"];
+	"DATA MANIPULATION
+unknown | ID: 57"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SERVER Possible SQL Injection Attempt SELECT FROM
+ET WEB_SERVER Possible SQL Injection Attempt UNION SELECT\""];
+	"DATA MANIPULATION
+unknown | ID: 57" -> "SURFING
+unknown"	[key=0,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 15:06:03\ngap: -14sec\nend_prev: 03/11/18, 15:\
+06:17\"'}"];
+	"INFO DISCOVERY
+remoteware-cl"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"GPL WEB_SERVER viewcode access
+GPL WEB_SERVER .htaccess access
+GPL WEB_SERVER writeto.cnf access
+GPL WEB_SERVER iisadmin access
+\
+ET WEB_SPECIFIC_APPS Request to Wordpress W3TC Plug-in dbcache Directory
+GPL WEB_SERVER services.cnf access
+GPL EXPLOIT unicode \
+directory traversal attempt
+GPL WEB_SERVER service.cnf access
+GPL EXPLOIT iisadmpwd attempt
+ET WEB_SERVER PHP SESSION SuperGlobal \
+in URI
+GPL WEB_SERVER /~root access
+GPL WEB_SERVER authors.pwd access
+GPL EXPLOIT .cnf access
+ET POLICY Proxy TRACE Request - inbound
+\
+GPL WEB_SERVER .htpasswd access
+GPL WEB_SERVER global.asa access
+ET WEB_SERVER PHP SERVER SuperGlobal in URI
+GPL EXPLOIT fpcount \
+access
+GPL WEB_SERVER globals.pl access
+GPL WEB_SERVER 403 Forbidden
+GPL WEB_SERVER service.pwd
+GPL EXPLOIT ISAPI .idq attempt
+ET \
+WEB_SERVER PHP Easteregg Information-Disclosure (phpinfo)
+GPL WEB_SERVER printenv access
+GPL WEB_SERVER author.exe access
+GPL EXPLOIT \
+iissamples access
+GPL EXPLOIT .htr access
+ET WEB_SERVER PHP REQUEST SuperGlobal in URI\""];
+	"INFO DISCOVERY
+remoteware-cl" -> "SURFING
+remoteware-cl"	[key=0,
+		data="{'color': 'magenta', 'label': '<font color=\"magenta\"> start_next: 03/11/18, 15:45:39<br/>gap: -717sec<br/>end_prev: 03/11/18, 15:\
+57:35</font><br/><font color=\"magenta\"><b>Attacker: 10.0.254.203</b></font>'}"];
+	"DATA MANIPULATION
+remoteware-cl | ID: 23"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SERVER Possible SQL Injection Attempt SELECT FROM
+ET WEB_SERVER Possible SQL Injection Attempt UNION SELECT\""];
+	"DATA MANIPULATION
+remoteware-cl | ID: 23" -> "SURFING
+remoteware-cl"	[key=0,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 15:07:02\ngap: -97sec\nend_prev: 03/11/18, 15:\
+08:39\"'}"];
+	"RESOURCE HIJACKING
+http | ID: 20"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"GPL WEB_SERVER Oracle Java Process Manager access\""];
+	"RESOURCE HIJACKING
+http | ID: 20" -> "SURFING
+us-cli"	[key=0,
+		data="{'color': 'blue', 'label': '<font color=\"blue\"> start_next: 03/11/18, 15:17:52<br/>gap: 1873sec<br/>end_prev: 03/11/18, 14:46:39</\
+font><br/><font color=\"blue\"><b>Attacker: 10.0.254.203</b></font>'}"];
+	"INFO DISCOVERY
+us-cli"	[shape=oval,
+		tooltip="\"GPL WEB_SERVER viewcode access
+GPL WEB_SERVER .htaccess access
+GPL WEB_SERVER writeto.cnf access
+GPL WEB_SERVER iisadmin access
+\
+ET POLICY POSSIBLE Web Crawl using Wget
+ET WEB_SPECIFIC_APPS Request to Wordpress W3TC Plug-in dbcache Directory
+GPL WEB_SERVER \
+services.cnf access
+GPL EXPLOIT unicode directory traversal attempt
+GPL WEB_SERVER service.cnf access
+GPL EXPLOIT iisadmpwd attempt
+\
+ET WEB_SERVER PHP SESSION SuperGlobal in URI
+GPL WEB_SERVER /~root access
+GPL WEB_SERVER authors.pwd access
+GPL EXPLOIT .cnf access
+\
+ET POLICY Proxy TRACE Request - inbound
+GPL WEB_SERVER .htpasswd access
+GPL WEB_SERVER global.asa access
+ET WEB_SERVER PHP SERVER \
+SuperGlobal in URI
+GPL EXPLOIT fpcount access
+GPL WEB_SERVER globals.pl access
+GPL WEB_SERVER service.pwd
+GPL EXPLOIT ISAPI .idq \
+attempt
+ET WEB_SERVER PHP Easteregg Information-Disclosure (phpinfo)
+GPL WEB_SERVER printenv access
+GPL WEB_SERVER author.exe access
+\
+GPL EXPLOIT iissamples access
+GPL EXPLOIT .htr access
+ET WEB_SERVER PHP REQUEST SuperGlobal in URI\""];
+	"INFO DISCOVERY
+us-cli" -> "SURFING
+us-cli"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 14:28:15\ngap: -3sec\nend_prev: 03/11/18, 14:28:18\"'}"];
+	"DATA MANIPULATION
+us-cli | ID: 53"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SERVER Possible SQL Injection Attempt SELECT FROM
+ET WEB_SERVER Possible SQL Injection Attempt UNION SELECT\""];
+	"DATA MANIPULATION
+us-cli | ID: 53" -> "SURFING
+us-cli"	[key=0,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 14:57:27\ngap: -5sec\nend_prev: 03/11/18, 14:\
+57:32\"'}"];
+	"ROOT PRIVILEGE ESCALATION
+us-cli | ID: 54"	[shape=box,
+		tooltip="\"ET WEB_SERVER ColdFusion administrator access
+ETPRO WEB_SPECIFIC_APPS ipTIME firmware < 9.58 RCE
+GPL EXPLOIT administrators.pwd \
+access
+GPL EXPLOIT CodeRed v2 root.exe access\""];
+	"ROOT PRIVILEGE ESCALATION
+us-cli | ID: 54" -> "SURFING
+us-cli"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 03/11/18, 15:33:09\ngap: -3sec\nend_prev: 03/11/18, 15:33:12\"'}"];
+	"DATA MANIPULATION
+wap-wsp | ID: 39"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SERVER Possible SQL Injection Attempt SELECT FROM
+ET WEB_SERVER Possible SQL Injection Attempt UNION SELECT\""];
+	"DATA MANIPULATION
+wap-wsp | ID: 39" -> "SURFING
+wap-wsp"	[key=0,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 15:05:28\ngap: -4sec\nend_prev: 03/11/18, 15:\
+05:32\"'}"];
+	"DATA MANIPULATION
+wap-wsp | ID: 39" -> "SURFING
+wap-wsp"	[key=1,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 18:07:15\ngap: -4sec\nend_prev: 03/11/18, 18:\
+07:19\"'}"];
+	"DATA MANIPULATION
+cslistener | ID: 72"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SERVER Possible SQL Injection Attempt SELECT FROM
+ET WEB_SERVER Possible SQL Injection Attempt UNION SELECT\""];
+	"DATA MANIPULATION
+cslistener | ID: 72" -> "SURFING
+cslistener"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 03/11/18, 15:17:41\ngap: -4sec\nend_prev: 03/11/18, 15:17:45\"'}"];
+}

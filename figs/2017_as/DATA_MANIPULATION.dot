@@ -1,0 +1,25 @@
+digraph "" {
+	"Victim: 10.0.0.2
+DATA MANIPULATION
+domain"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA MANIPULATION
+domain | ID: 75"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET POLICY DNS Update From External net\""];
+	"DATA MANIPULATION
+domain | ID: 75" -> "Victim: 10.0.0.2
+DATA MANIPULATION
+domain"	[key=0,
+		data="{}"];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 415"	[shape=box,
+		style=dotted,
+		tooltip="\"ET SNMP Samsung Printer SNMP Hardcode RW Community String\""];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 415" -> "DATA MANIPULATION
+domain | ID: 75"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:01:35\ngap: 9sec\nend_prev: 04/11/17, 14:01:26\"'}"];
+}

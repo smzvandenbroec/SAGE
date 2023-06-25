@@ -1,0 +1,163 @@
+digraph DATAEXFILTRATIONhttp {
+rankdir="BT"; 
+ graph [ nodesep="0.1", ranksep="0.02"] 
+ node [ fontname=Arial, fontsize=24,penwidth=3]; 
+ edge [ fontname=Arial, fontsize=20,penwidth=5 ];
+"Victim: 10.0.0.56
+DATA EXFILTRATION
+http" [shape=doubleoctagon, style=filled, fillcolor=salmon];
+{ rank = max; "Victim: 10.0.0.56
+DATA EXFILTRATION
+http"}
+"DATA EXFILTRATION
+http | ID: 26" -> "Victim: 10.0.0.56
+DATA EXFILTRATION
+http"
+"DATA EXFILTRATION
+http | ID: 26" [style=filled, fillcolor= salmon]
+{ rank=same; "DATA EXFILTRATION
+http | ID: 26"}
+"HOST DISCOVERY
+http" [style=filled, fillcolor= yellow]
+"HOST DISCOVERY
+http" -> "VULNERABILTY DISCOVERY
+mysql" [ color=purple] [label=<<font color="purple"> start_next: 04/11/17, 13:39:59<br/>gap: 4sec<br/>end_prev: 04/11/17, 13:39:56</font><br/><font color="purple"><b>Attacker: 10.0.254.30</b></font>>]
+"VULNERABILTY DISCOVERY
+mysql" -> "SURFING
+http" [ label="start_next: 04/11/17, 13:40:11
+gap: 12sec
+end_prev: 04/11/17, 13:39:59"][ fontcolor="purple" color=purple]
+"SURFING
+http" -> "INFO DISCOVERY
+http" [ label="start_next: 04/11/17, 13:40:13
+gap: -1sec
+end_prev: 04/11/17, 13:40:14"][ fontcolor="purple" color=purple]
+"INFO DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 26" [ label="start_next: 04/11/17, 13:40:14
+gap: 1sec
+end_prev: 04/11/17, 13:40:13"][ fontcolor="purple" color=purple]
+"VULNERABILTY DISCOVERY
+ahsp" [style=filled, fillcolor= yellow]
+"VULNERABILTY DISCOVERY
+ahsp" -> "HOST DISCOVERY
+http" [ color=purple] [label=<<font color="purple"> start_next: 04/11/17, 15:53:10<br/>gap: 6669sec<br/>end_prev: 04/11/17, 14:02:01</font><br/><font color="purple"><b>Attacker: 10.0.254.30</b></font>>]
+"HOST DISCOVERY
+http" -> "VULNERABILTY DISCOVERY
+http" [ label="start_next: 04/11/17, 15:53:11
+gap: 1sec
+end_prev: 04/11/17, 15:53:10"][ fontcolor="purple" color=purple]
+"VULNERABILTY DISCOVERY
+http" -> "INFO DISCOVERY
+http" [ label="start_next: 04/11/17, 15:53:15
+gap: 4sec
+end_prev: 04/11/17, 15:53:11"][ fontcolor="purple" color=purple]
+"INFO DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 26" [ label="start_next: 04/11/17, 15:53:16
+gap: 1sec
+end_prev: 04/11/17, 15:53:15"][ fontcolor="purple" color=purple]
+"SURFING
+http" [style=filled, fillcolor= yellow]
+"SURFING
+http" -> "VULNERABILTY DISCOVERY
+mysql" [ color=purple] [label=<<font color="purple"> start_next: 04/11/17, 20:08:40<br/>gap: 15318sec<br/>end_prev: 04/11/17, 15:53:22</font><br/><font color="purple"><b>Attacker: 10.0.254.30</b></font>>]
+"VULNERABILTY DISCOVERY
+mysql" -> "SERVICE DISCOVERY
+unknown" [ label="start_next: 04/11/17, 20:08:42
+gap: -7sec
+end_prev: 04/11/17, 20:08:50"][ fontcolor="purple" color=purple]
+"SERVICE DISCOVERY
+unknown" -> "HOST DISCOVERY
+http" [ label="start_next: 04/11/17, 20:09:08
+gap: 1sec
+end_prev: 04/11/17, 20:09:07"][ fontcolor="purple" color=purple]
+"HOST DISCOVERY
+http" -> "HOST DISCOVERY
+http" [ label="start_next: 04/11/17, 20:40:36
+gap: 1888sec
+end_prev: 04/11/17, 20:09:08"][ fontcolor="purple" color=purple]
+"HOST DISCOVERY
+http" -> "VULNERABILTY DISCOVERY
+http" [ label="start_next: 04/11/17, 20:40:37
+gap: 1sec
+end_prev: 04/11/17, 20:40:36"][ fontcolor="purple" color=purple]
+"VULNERABILTY DISCOVERY
+http" -> "SURFING
+http" [ label="start_next: 04/11/17, 20:40:42
+gap: 5sec
+end_prev: 04/11/17, 20:40:37"][ fontcolor="purple" color=purple]
+"SURFING
+http" -> "DATA EXFILTRATION
+http | ID: 26" [ label="start_next: 04/11/17, 20:40:42
+gap: -6sec
+end_prev: 04/11/17, 20:40:48"][ fontcolor="purple" color=purple]
+"HOST DISCOVERY
+http" [style=filled, fillcolor= yellow]
+"HOST DISCOVERY
+http" -> "INFO DISCOVERY
+http" [ color=tomato] [label=<<font color="tomato"> start_next: 04/11/17, 13:41:40<br/>gap: 5sec<br/>end_prev: 04/11/17, 13:41:34</font><br/><font color="tomato"><b>Attacker: 10.0.254.33</b></font>>]
+"INFO DISCOVERY
+http" -> "SURFING
+http" [ label="start_next: 04/11/17, 13:41:40
+gap: 1sec
+end_prev: 04/11/17, 13:41:40"][ fontcolor="tomato" color=tomato]
+"SURFING
+http" -> "DATA EXFILTRATION
+http | ID: 26" [ label="start_next: 04/11/17, 13:41:40
+gap: 0sec
+end_prev: 04/11/17, 13:41:41"][ fontcolor="tomato" color=tomato]
+"SERVICE DISCOVERY
+unknown" [style=filled, fillcolor= yellow]
+"SERVICE DISCOVERY
+unknown" -> "HOST DISCOVERY
+http" [ color=turquoise] [label=<<font color="turquoise"> start_next: 04/11/17, 12:55:58<br/>gap: 144sec<br/>end_prev: 04/11/17, 12:53:34</font><br/><font color="turquoise"><b>Attacker: 10.0.254.30</b></font>>]
+"HOST DISCOVERY
+http" -> "SURFING
+http" [ label="start_next: 04/11/17, 12:56:12
+gap: 14sec
+end_prev: 04/11/17, 12:55:58"][ fontcolor="turquoise" color=turquoise]
+"SURFING
+http" -> "DATA EXFILTRATION
+http | ID: 26" [ label="start_next: 04/11/17, 12:56:12
+gap: 0sec
+end_prev: 04/11/17, 12:56:12"][ fontcolor="turquoise" color=turquoise]
+"HOST DISCOVERY
+http" [shape=oval]
+"HOST DISCOVERY
+http" [tooltip="ET SCAN Possible Nmap User-Agent Observed
+ET SCAN Nmap Scripting Engine User-Agent Detected (Nmap Scripting Engine)"]
+"VULNERABILTY DISCOVERY
+mysql" [shape=oval]
+"VULNERABILTY DISCOVERY
+mysql" [tooltip="ET POLICY Suspicious inbound to MSSQL port 1433
+ET POLICY Suspicious inbound to mySQL port 3306
+ET POLICY Suspicious inbound to Oracle SQL port 1521
+ET POLICY Suspicious inbound to PostgreSQL port 5432"]
+"SURFING
+http" [shape=oval]
+"SURFING
+http" [tooltip="ET WEB_SERVER WEB-PHP phpinfo access"]
+"INFO DISCOVERY
+http" [shape=oval]
+"INFO DISCOVERY
+http" [tooltip="GPL WEB_SERVER globals.pl access"]
+"DATA EXFILTRATION
+http | ID: 26" [shape=hexagon]
+"DATA EXFILTRATION
+http | ID: 26" [tooltip="ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability"]
+"VULNERABILTY DISCOVERY
+ahsp" [shape=oval]
+"VULNERABILTY DISCOVERY
+ahsp" [tooltip="ET POLICY Suspicious inbound to mSQL port 4333"]
+"VULNERABILTY DISCOVERY
+http" [shape=oval]
+"VULNERABILTY DISCOVERY
+http" [tooltip="ET SCAN Nikto Web App Scan in Progress"]
+"SERVICE DISCOVERY
+unknown" [shape=oval]
+"SERVICE DISCOVERY
+unknown" [tooltip="ET SCAN Potential VNC Scan 5800-5820
+ET SCAN NMAP OS Detection Probe
+ET SCAN Potential VNC Scan 5900-5920"]
+}

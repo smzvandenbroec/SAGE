@@ -1,0 +1,125 @@
+digraph NETWORKDOSssdp {
+rankdir="BT"; 
+ graph [ nodesep="0.1", ranksep="0.02"] 
+ node [ fontname=Arial, fontsize=24,penwidth=3]; 
+ edge [ fontname=Arial, fontsize=20,penwidth=5 ];
+"Victim: 10.0.0.110
+NETWORK DoS
+ssdp" [shape=doubleoctagon, style=filled, fillcolor=salmon];
+{ rank = max; "Victim: 10.0.0.110
+NETWORK DoS
+ssdp"}
+"NETWORK DoS
+ssdp | ID: 55" -> "Victim: 10.0.0.110
+NETWORK DoS
+ssdp"
+"NETWORK DoS
+ssdp | ID: 55" [style=filled, fillcolor= salmon]
+{ rank=same; "NETWORK DoS
+ssdp | ID: 55"}
+"VULNERABILTY DISCOVERY
+ms-sql-s" [style=filled, fillcolor= yellow]
+"VULNERABILTY DISCOVERY
+ms-sql-s" -> "SERVICE DISCOVERY
+dsd" [ color=blue] [label=<<font color="blue"> start_next: 04/11/17, 13:19:15<br/>gap: 1347sec<br/>end_prev: 04/11/17, 12:56:48</font><br/><font color="blue"><b>Attacker: 10.0.254.31</b></font>>]
+"SERVICE DISCOVERY
+dsd" -> "VULNERABILTY DISCOVERY
+postgresql" [ label="start_next: 04/11/17, 13:22:46
+gap: 211sec
+end_prev: 04/11/17, 13:19:15"][ fontcolor="blue" color=blue]
+"VULNERABILTY DISCOVERY
+postgresql" -> "VULNERABILTY DISCOVERY
+ncube-lm" [ label="start_next: 04/11/17, 13:30:32
+gap: 463sec
+end_prev: 04/11/17, 13:22:49"][ fontcolor="blue" color=blue]
+"VULNERABILTY DISCOVERY
+ncube-lm" -> "SERVICE DISCOVERY
+unknown" [ label="start_next: 04/11/17, 13:34:52
+gap: 256sec
+end_prev: 04/11/17, 13:30:36"][ fontcolor="blue" color=blue]
+"SERVICE DISCOVERY
+unknown" -> "SERVICE DISCOVERY
+epmap" [ label="start_next: 04/11/17, 13:59:48
+gap: 1484sec
+end_prev: 04/11/17, 13:35:04"][ fontcolor="blue" color=blue]
+"SERVICE DISCOVERY
+epmap" -> "VULNERABILTY DISCOVERY
+postgresql" [ label="start_next: 04/11/17, 14:00:55
+gap: 68sec
+end_prev: 04/11/17, 13:59:48"][ fontcolor="blue" color=blue]
+"VULNERABILTY DISCOVERY
+postgresql" -> "ARBITRARY CODE EXECUTION
+ssdp | ID: 355" [ label="start_next: 04/11/17, 14:01:53
+gap: 52sec
+end_prev: 04/11/17, 14:01:01"][ fontcolor="blue" color=blue]
+"ARBITRARY CODE EXECUTION
+ssdp | ID: 355" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: 52" [ label="start_next: 04/11/17, 14:02:32
+gap: 28sec
+end_prev: 04/11/17, 14:02:03"][ fontcolor="blue" color=blue]
+"REMOTE SERVICE EXPLOIT
+snmp | ID: 52" -> "SERVICE DISCOVERY
+unknown" [ label="start_next: 04/11/17, 16:28:37
+gap: 8765sec
+end_prev: 04/11/17, 14:02:32"][ fontcolor="blue" color=blue]
+"SERVICE DISCOVERY
+unknown" -> "VULNERABILTY DISCOVERY
+ms-sql-s" [ label="start_next: 04/11/17, 16:29:04
+gap: 27sec
+end_prev: 04/11/17, 16:28:37"][ fontcolor="blue" color=blue]
+"VULNERABILTY DISCOVERY
+ms-sql-s" -> "BRUTE FORCE CREDENTIALS
+pop3 | ID: 382" [ label="start_next: 04/11/17, 16:29:36
+gap: -17sec
+end_prev: 04/11/17, 16:29:53"][ fontcolor="blue" color=blue]
+"BRUTE FORCE CREDENTIALS
+pop3 | ID: 382" -> "NETWORK DoS
+ssdp | ID: 55" [ label="start_next: 04/11/17, 16:30:56
+gap: 80sec
+end_prev: 04/11/17, 16:29:36"][ fontcolor="blue" color=blue]
+"VULNERABILTY DISCOVERY
+ms-sql-s" [shape=oval]
+"VULNERABILTY DISCOVERY
+ms-sql-s" [tooltip="ET POLICY Suspicious inbound to MSSQL port 1433
+ET POLICY Suspicious inbound to Oracle SQL port 1521
+ET POLICY Suspicious inbound to mSQL port 4333"]
+"SERVICE DISCOVERY
+dsd" [shape=oval]
+"SERVICE DISCOVERY
+dsd" [tooltip="ET SCAN Potential VNC Scan 5900-5920"]
+"VULNERABILTY DISCOVERY
+postgresql" [shape=oval]
+"VULNERABILTY DISCOVERY
+postgresql" [tooltip="ET POLICY Suspicious inbound to Oracle SQL port 1521
+ET POLICY Suspicious inbound to mSQL port 4333
+ET POLICY Suspicious inbound to PostgreSQL port 5432"]
+"VULNERABILTY DISCOVERY
+ncube-lm" [shape=oval]
+"VULNERABILTY DISCOVERY
+ncube-lm" [tooltip="ET POLICY Suspicious inbound to Oracle SQL port 1521"]
+"SERVICE DISCOVERY
+unknown" [shape=oval]
+"SERVICE DISCOVERY
+unknown" [tooltip="ET SCAN NMAP OS Detection Probe
+ET SCAN Potential VNC Scan 5900-5920"]
+"SERVICE DISCOVERY
+epmap" [shape=oval]
+"SERVICE DISCOVERY
+epmap" [tooltip="ET SCAN Behavioral Unusual Port 135 traffic Potential Scan or Infection"]
+"ARBITRARY CODE EXECUTION
+ssdp | ID: 355" [shape=box]
+"ARBITRARY CODE EXECUTION
+ssdp | ID: 355" [tooltip="GPL MISC UPnP malformed advertisement"]
+"REMOTE SERVICE EXPLOIT
+snmp | ID: 52" [shape=box]
+"REMOTE SERVICE EXPLOIT
+snmp | ID: 52" [tooltip="ET SNMP Samsung Printer SNMP Hardcode RW Community String"]
+"BRUTE FORCE CREDENTIALS
+pop3 | ID: 382" [shape=box]
+"BRUTE FORCE CREDENTIALS
+pop3 | ID: 382" [tooltip="ET SCAN Rapid POP3 Connections - Possible Brute Force Attack"]
+"NETWORK DoS
+ssdp | ID: 55" [shape=hexagon]
+"NETWORK DoS
+ssdp | ID: 55" [tooltip="ET DOS Possible SSDP Amplification Scan in Progress"]
+}

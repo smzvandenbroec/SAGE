@@ -1,0 +1,79 @@
+digraph DATAEXFILTRATIONmicrosoftds {
+rankdir="BT"; 
+ graph [ nodesep="0.1", ranksep="0.02"] 
+ node [ fontname=Arial, fontsize=24,penwidth=3]; 
+ edge [ fontname=Arial, fontsize=20,penwidth=5 ];
+"Victim: 10.0.0.221
+DATA EXFILTRATION
+microsoft-ds" [shape=doubleoctagon, style=filled, fillcolor=salmon];
+{ rank = max; "Victim: 10.0.0.221
+DATA EXFILTRATION
+microsoft-ds"}
+"DATA EXFILTRATION
+microsoft-ds | ID: 37" -> "Victim: 10.0.0.221
+DATA EXFILTRATION
+microsoft-ds"
+"DATA EXFILTRATION
+microsoft-ds | ID: 37" [style=filled, fillcolor= salmon]
+{ rank=same; "DATA EXFILTRATION
+microsoft-ds | ID: 37"}
+"BRUTE FORCE CREDENTIALS
+pop3s | ID: -1" [style=filled, fillcolor= yellow]
+"BRUTE FORCE CREDENTIALS
+pop3s | ID: -1" -> "COMMAND AND CONTROL
+unknown | ID: 308" [ color=darkgreen] [label=<<font color="darkgreen"> start_next: 04/11/17, 13:54:51<br/>gap: 634sec<br/>end_prev: 04/11/17, 13:44:18</font><br/><font color="darkgreen"><b>Attacker: 10.0.254.35</b></font>>]
+"COMMAND AND CONTROL
+unknown | ID: 308" -> "DATA EXFILTRATION
+microsoft-ds | ID: 37" [ label="start_next: 04/11/17, 15:09:51
+gap: 4500sec
+end_prev: 04/11/17, 13:54:51"][ fontcolor="darkgreen" color=darkgreen]
+"NETWORK DoS
+ms-wbt-server | ID: 307" [style=filled, fillcolor= yellow]
+"NETWORK DoS
+ms-wbt-server | ID: 307" -> "DATA EXFILTRATION
+microsoft-ds | ID: 37" [ color=turquoise] [label=<<font color="turquoise"> start_next: 04/11/17, 16:30:04<br/>gap: 2441sec<br/>end_prev: 04/11/17, 15:49:23</font><br/><font color="turquoise"><b>Attacker: 10.0.254.31</b></font>>]
+"VULNERABILTY DISCOVERY
+postgresql" [style=filled, fillcolor= yellow]
+"VULNERABILTY DISCOVERY
+postgresql" -> "SERVICE DISCOVERY
+unknown" [ color=turquoise] [label=<<font color="turquoise"> start_next: 04/11/17, 13:08:01<br/>gap: -27sec<br/>end_prev: 04/11/17, 13:08:29</font><br/><font color="turquoise"><b>Attacker: 10.0.254.34</b></font>>]
+"SERVICE DISCOVERY
+unknown" -> "COMMAND AND CONTROL
+unknown | ID: 308" [ label="start_next: 04/11/17, 13:09:15
+gap: 73sec
+end_prev: 04/11/17, 13:08:01"][ fontcolor="turquoise" color=turquoise]
+"COMMAND AND CONTROL
+unknown | ID: 308" -> "DATA EXFILTRATION
+microsoft-ds | ID: 37" [ label="start_next: 04/11/17, 17:45:11
+gap: 16556sec
+end_prev: 04/11/17, 13:09:15"][ fontcolor="turquoise" color=turquoise]
+"BRUTE FORCE CREDENTIALS
+pop3s | ID: -1" [shape=box]
+"BRUTE FORCE CREDENTIALS
+pop3s | ID: -1" [tooltip="ET SCAN Rapid POP3S Connections - Possible Brute Force Attack"]
+"COMMAND AND CONTROL
+unknown | ID: 308" [shape=box]
+"COMMAND AND CONTROL
+unknown | ID: 308" [tooltip="ET POLICY RDP connection confirm"]
+"DATA EXFILTRATION
+microsoft-ds | ID: 37" [shape=hexagon]
+"DATA EXFILTRATION
+microsoft-ds | ID: 37" [tooltip="GPL NETBIOS SMB-DS IPC$ share access
+GPL NETBIOS SMB-DS ADMIN$ share access"]
+"NETWORK DoS
+ms-wbt-server | ID: 307" [shape=hexagon]
+"NETWORK DoS
+ms-wbt-server | ID: 307" [tooltip="ET DOS Microsoft Remote Desktop (RDP) Syn then Reset 30 Second DoS Attempt"]
+"VULNERABILTY DISCOVERY
+postgresql" [shape=oval]
+"VULNERABILTY DISCOVERY
+postgresql" [tooltip="ET POLICY Suspicious inbound to MSSQL port 1433
+ET POLICY Suspicious inbound to mySQL port 3306
+ET POLICY Suspicious inbound to Oracle SQL port 1521
+ET POLICY Suspicious inbound to PostgreSQL port 5432"]
+"SERVICE DISCOVERY
+unknown" [shape=oval]
+"SERVICE DISCOVERY
+unknown" [tooltip="ET SCAN Potential VNC Scan 5800-5820
+ET SCAN Potential VNC Scan 5900-5920"]
+}

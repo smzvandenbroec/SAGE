@@ -1,0 +1,109 @@
+digraph NETWORKDOShttp {
+rankdir="BT"; 
+ graph [ nodesep="0.1", ranksep="0.02"] 
+ node [ fontname=Arial, fontsize=24,penwidth=3]; 
+ edge [ fontname=Arial, fontsize=20,penwidth=5 ];
+"Victim: 10.0.1.41
+NETWORK DoS
+http" [shape=doubleoctagon, style=filled, fillcolor=salmon];
+{ rank = max; "Victim: 10.0.1.41
+NETWORK DoS
+http"}
+"NETWORK DoS
+http | ID: 5" -> "Victim: 10.0.1.41
+NETWORK DoS
+http"
+"NETWORK DoS
+http | ID: 5" [style=filled, fillcolor= salmon]
+{ rank=same; "NETWORK DoS
+http | ID: 5"}
+"VULNERABILTY DISCOVERY
+mysql" [style=filled, fillcolor= yellow]
+"VULNERABILTY DISCOVERY
+mysql" -> "SERVICE DISCOVERY
+unknown" [ color=blue] [label=<<font color="blue"> start_next: 03/11/18, 14:45:40<br/>gap: -2sec<br/>end_prev: 03/11/18, 14:45:42</font><br/><font color="blue"><b>Attacker: 10.0.254.204</b></font>>]
+"SERVICE DISCOVERY
+unknown" -> "ACCOUNT MANIPULATION
+snmp | ID: 43" [ label="start_next: 03/11/18, 18:32:09
+gap: 13588sec
+end_prev: 03/11/18, 14:45:40"][ fontcolor="blue" color=blue]
+"ACCOUNT MANIPULATION
+snmp | ID: 43" -> "VULNERABILTY DISCOVERY
+mysql" [ label="start_next: 03/11/18, 21:00:29
+gap: 8900sec
+end_prev: 03/11/18, 18:32:09"][ fontcolor="blue" color=blue]
+"VULNERABILTY DISCOVERY
+mysql" -> "SERVICE DISCOVERY
+unknown" [ label="start_next: 03/11/18, 21:00:29
+gap: -4sec
+end_prev: 03/11/18, 21:00:33"][ fontcolor="blue" color=blue]
+"SERVICE DISCOVERY
+unknown" -> "INFO DISCOVERY
+http" [ label="start_next: 03/11/18, 22:15:19
+gap: 4490sec
+end_prev: 03/11/18, 21:00:29"][ fontcolor="blue" color=blue]
+"INFO DISCOVERY
+http" -> "NETWORK DoS
+http | ID: 5" [ label="start_next: 03/11/18, 22:15:21
+gap: -9sec
+end_prev: 03/11/18, 22:15:30"][ fontcolor="blue" color=blue]
+"VULNERABILTY DISCOVERY
+mysql" [style=filled, fillcolor= yellow]
+"VULNERABILTY DISCOVERY
+mysql" -> "SERVICE DISCOVERY
+ipsma" [ color=magenta] [label=<<font color="magenta"> start_next: 03/11/18, 21:08:00<br/>gap: -1sec<br/>end_prev: 03/11/18, 21:08:01</font><br/><font color="magenta"><b>Attacker: 10.0.254.203</b></font>>]
+"SERVICE DISCOVERY
+ipsma" -> "VULNERABILTY DISCOVERY
+mysql" [ label="start_next: 03/11/18, 21:41:45
+gap: 2024sec
+end_prev: 03/11/18, 21:08:01"][ fontcolor="magenta" color=magenta]
+"VULNERABILTY DISCOVERY
+mysql" -> "SERVICE DISCOVERY
+dsd" [ label="start_next: 03/11/18, 21:41:45
+gap: -8sec
+end_prev: 03/11/18, 21:41:54"][ fontcolor="magenta" color=magenta]
+"SERVICE DISCOVERY
+dsd" -> "NETWORK DoS
+http | ID: 5" [ label="start_next: 03/11/18, 21:49:58
+gap: 491sec
+end_prev: 03/11/18, 21:41:47"][ fontcolor="magenta" color=magenta]
+"VULNERABILTY DISCOVERY
+mysql" [shape=oval]
+"VULNERABILTY DISCOVERY
+mysql" [tooltip="ET SCAN Suspicious inbound to mySQL port 3306
+ET SCAN Suspicious inbound to MSSQL port 1433
+ET SCAN Suspicious inbound to PostgreSQL port 5432
+ET SCAN Suspicious inbound to Oracle SQL port 1521
+ET SCAN Suspicious inbound to mSQL port 4333"]
+"SERVICE DISCOVERY
+unknown" [shape=oval]
+"SERVICE DISCOVERY
+unknown" [tooltip="ET SCAN Potential VNC Scan 5900-5920
+ET SCAN Potential VNC Scan 5800-5820"]
+"ACCOUNT MANIPULATION
+snmp | ID: 43" [shape=box]
+"ACCOUNT MANIPULATION
+snmp | ID: 43" [tooltip="GPL SNMP public access udp"]
+"INFO DISCOVERY
+http" [shape=oval]
+"INFO DISCOVERY
+http" [tooltip="GPL WEB_SERVER .htaccess access
+GPL WEB_SERVER /~root access
+GPL WEB_SERVER iisadmin access
+GPL WEB_SERVER printenv access
+GPL WEB_SERVER .htpasswd access"]
+"NETWORK DoS
+http | ID: 5" [shape=hexagon]
+"NETWORK DoS
+http | ID: 5" [tooltip="ET WEB_SERVER Possible Cherokee Web Server GET AUX Request Denial Of Service Attempt"]
+"SERVICE DISCOVERY
+ipsma" [shape=oval]
+"SERVICE DISCOVERY
+ipsma" [tooltip="ET SCAN Potential VNC Scan 5900-5920
+ET SCAN Potential VNC Scan 5800-5820"]
+"SERVICE DISCOVERY
+dsd" [shape=oval]
+"SERVICE DISCOVERY
+dsd" [tooltip="ET SCAN Potential VNC Scan 5900-5920
+ET SCAN Potential VNC Scan 5800-5820"]
+}

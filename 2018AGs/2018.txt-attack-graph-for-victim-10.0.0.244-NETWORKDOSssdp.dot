@@ -1,0 +1,65 @@
+digraph NETWORKDOSssdp {
+rankdir="BT"; 
+ graph [ nodesep="0.1", ranksep="0.02"] 
+ node [ fontname=Arial, fontsize=24,penwidth=3]; 
+ edge [ fontname=Arial, fontsize=20,penwidth=5 ];
+"Victim: 10.0.0.244
+NETWORK DoS
+ssdp" [shape=doubleoctagon, style=filled, fillcolor=salmon];
+{ rank = max; "Victim: 10.0.0.244
+NETWORK DoS
+ssdp"}
+"NETWORK DoS
+ssdp | ID: 45" -> "Victim: 10.0.0.244
+NETWORK DoS
+ssdp"
+"NETWORK DoS
+ssdp | ID: 45" [style=filled, fillcolor= salmon]
+{ rank=same; "NETWORK DoS
+ssdp | ID: 45"}
+"VULNERABILTY DISCOVERY
+mysql" [style=filled, fillcolor= yellow]
+"VULNERABILTY DISCOVERY
+mysql" -> "INFO DISCOVERY
+xdmcp" [ color=maroon] [label=<<font color="maroon"> start_next: 03/11/18, 20:57:34<br/>gap: 150sec<br/>end_prev: 03/11/18, 20:55:04</font><br/><font color="maroon"><b>Attacker: 10.0.254.103</b></font>>]
+"INFO DISCOVERY
+xdmcp" -> "HOST DISCOVERY
+asf-rmcp" [ label="start_next: 03/11/18, 20:57:35
+gap: -4sec
+end_prev: 03/11/18, 20:57:39"][ fontcolor="maroon" color=maroon]
+"HOST DISCOVERY
+asf-rmcp" -> "ACCOUNT MANIPULATION
+snmp | ID: 217" [ label="start_next: 03/11/18, 20:57:35
+gap: 0sec
+end_prev: 03/11/18, 20:57:35"][ fontcolor="maroon" color=maroon]
+"ACCOUNT MANIPULATION
+snmp | ID: 217" -> "NETWORK DoS
+ssdp | ID: 45" [ label="start_next: 03/11/18, 20:57:42
+gap: 3sec
+end_prev: 03/11/18, 20:57:40"][ fontcolor="maroon" color=maroon]
+"VULNERABILTY DISCOVERY
+mysql" [shape=oval]
+"VULNERABILTY DISCOVERY
+mysql" [tooltip="ET SCAN Suspicious inbound to mySQL port 3306
+ET SCAN Suspicious inbound to MSSQL port 1433
+ET SCAN Suspicious inbound to PostgreSQL port 5432
+ET SCAN Suspicious inbound to Oracle SQL port 1521
+ET SCAN Suspicious inbound to mSQL port 4333"]
+"INFO DISCOVERY
+xdmcp" [shape=oval]
+"INFO DISCOVERY
+xdmcp" [tooltip="GPL DNS named version attempt
+GPL RPC xdmcp info query"]
+"HOST DISCOVERY
+asf-rmcp" [shape=oval]
+"HOST DISCOVERY
+asf-rmcp" [tooltip="ETPRO SCAN IPMI Get Authentication Request (null seq number - null sessionID)"]
+"ACCOUNT MANIPULATION
+snmp | ID: 217" [style="dotted", shape=box]
+"ACCOUNT MANIPULATION
+snmp | ID: 217" [tooltip="GPL SNMP public access udp"]
+"NETWORK DoS
+ssdp | ID: 45" [shape=hexagon]
+"NETWORK DoS
+ssdp | ID: 45" [tooltip="ET DOS Possible SSDP Amplification Scan in Progress"]
+}

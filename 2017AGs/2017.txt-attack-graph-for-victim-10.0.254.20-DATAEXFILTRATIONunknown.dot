@@ -1,0 +1,34 @@
+digraph DATAEXFILTRATIONunknown {
+rankdir="BT"; 
+ graph [ nodesep="0.1", ranksep="0.02"] 
+ node [ fontname=Arial, fontsize=24,penwidth=3]; 
+ edge [ fontname=Arial, fontsize=20,penwidth=5 ];
+"Victim: 10.0.254.20
+DATA EXFILTRATION
+unknown" [shape=doubleoctagon, style=filled, fillcolor=salmon];
+{ rank = max; "Victim: 10.0.254.20
+DATA EXFILTRATION
+unknown"}
+"DATA EXFILTRATION
+unknown | ID: 389" -> "Victim: 10.0.254.20
+DATA EXFILTRATION
+unknown"
+"DATA EXFILTRATION
+unknown | ID: 389" [style=filled, fillcolor= salmon]
+{ rank=same; "DATA EXFILTRATION
+unknown | ID: 389"}
+"USER PRIVILEGE ESCALATION
+http | ID: 943" [style="dotted,filled", fillcolor= yellow]
+"USER PRIVILEGE ESCALATION
+http | ID: 943" -> "DATA EXFILTRATION
+unknown | ID: 389" [ color=magenta] [label=<<font color="magenta"> start_next: 04/11/17, 20:00:13<br/>gap: 662sec<br/>end_prev: 04/11/17, 19:49:11</font><br/><font color="magenta"><b>Attacker: 10.0.254.30</b></font>>]
+"USER PRIVILEGE ESCALATION
+http | ID: 943" [shape=box]
+"USER PRIVILEGE ESCALATION
+http | ID: 943" [tooltip="ET POLICY Outgoing Basic Auth Base64 HTTP Password detected unencrypted
+ET POLICY Incoming Basic Auth Base64 HTTP Password detected unencrypted"]
+"DATA EXFILTRATION
+unknown | ID: 389" [shape=hexagon]
+"DATA EXFILTRATION
+unknown | ID: 389" [tooltip="ET ATTACK_RESPONSE Possible /etc/passwd via HTTP (linux style)"]
+}

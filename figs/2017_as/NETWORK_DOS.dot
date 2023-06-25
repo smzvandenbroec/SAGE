@@ -1,0 +1,765 @@
+digraph "" {
+	"NETWORK DoS
+ssdp | ID: 55"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET DOS Possible SSDP Amplification Scan in Progress\""];
+	"Victim: 10.0.0.100
+NETWORK DoS
+ssdp"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+ssdp | ID: 55" -> "Victim: 10.0.0.100
+NETWORK DoS
+ssdp"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.110
+NETWORK DoS
+ssdp"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+ssdp | ID: 55" -> "Victim: 10.0.0.110
+NETWORK DoS
+ssdp"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.125
+NETWORK DoS
+ssdp"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+ssdp | ID: 55" -> "Victim: 10.0.0.125
+NETWORK DoS
+ssdp"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.167
+NETWORK DoS
+ssdp"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+ssdp | ID: 55" -> "Victim: 10.0.0.167
+NETWORK DoS
+ssdp"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.190
+NETWORK DoS
+ssdp"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+ssdp | ID: 55" -> "Victim: 10.0.0.190
+NETWORK DoS
+ssdp"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.202
+NETWORK DoS
+ssdp"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+ssdp | ID: 55" -> "Victim: 10.0.0.202
+NETWORK DoS
+ssdp"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.221
+NETWORK DoS
+ssdp"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+ssdp | ID: 55" -> "Victim: 10.0.0.221
+NETWORK DoS
+ssdp"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.27
+NETWORK DoS
+ssdp"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+ssdp | ID: 55" -> "Victim: 10.0.0.27
+NETWORK DoS
+ssdp"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.56
+NETWORK DoS
+ssdp"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+ssdp | ID: 55" -> "Victim: 10.0.0.56
+NETWORK DoS
+ssdp"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.71
+NETWORK DoS
+ssdp"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+ssdp | ID: 55" -> "Victim: 10.0.0.71
+NETWORK DoS
+ssdp"	[key=0,
+		data="{}"];
+	"Victim: 10.0.99.143
+NETWORK DoS
+ssdp"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+ssdp | ID: 55" -> "Victim: 10.0.99.143
+NETWORK DoS
+ssdp"	[key=0,
+		data="{}"];
+	"Victim: 10.0.99.16
+NETWORK DoS
+ssdp"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+ssdp | ID: 55" -> "Victim: 10.0.99.16
+NETWORK DoS
+ssdp"	[key=0,
+		data="{}"];
+	"Victim: 10.0.99.22
+NETWORK DoS
+ssdp"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+ssdp | ID: 55" -> "Victim: 10.0.99.22
+NETWORK DoS
+ssdp"	[key=0,
+		data="{}"];
+	"Victim: 10.0.99.245
+NETWORK DoS
+ssdp"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+ssdp | ID: 55" -> "Victim: 10.0.99.245
+NETWORK DoS
+ssdp"	[key=0,
+		data="{}"];
+	"INFO DISCOVERY
+xdmcp"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"GPL RPC xdmcp info query\""];
+	"NETWORK DoS
+ssdp | ID: 55" -> "INFO DISCOVERY
+xdmcp"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:10:03\ngap: 45sec\nend_prev: 04/11/17, 14:09:19\"'}"];
+	"NETWORK DoS
+ssdp | ID: 55" -> "INFO DISCOVERY
+xdmcp"	[key=1,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:59:54\ngap: 45sec\nend_prev: 04/11/17, 18:59:10\"'}"];
+	"NETWORK DoS
+ssdp | ID: 55" -> "INFO DISCOVERY
+xdmcp"	[key=2,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 17:59:31\ngap: 40sec\nend_prev: 04/11/17, 17:58:52\"'}"];
+	"SURFING
+http"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET WEB_SERVER WEB-PHP phpinfo access\""];
+	"NETWORK DoS
+ssdp | ID: 55" -> "SURFING
+http"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:33:10\ngap: 134sec\nend_prev: 04/11/17, 16:30:56\"'}"];
+	"SERVICE DISCOVERY
+fis"	[shape=oval,
+		tooltip="\"ET SCAN Potential VNC Scan 5900-5920\""];
+	"NETWORK DoS
+ssdp | ID: 55" -> "SERVICE DISCOVERY
+fis"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:27:37\ngap: 8789sec\nend_prev: 04/11/17, 14:01:09\"'}"];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: -1"	[fillcolor=yellow,
+		shape=box,
+		style=filled,
+		tooltip="\"ET SNMP Samsung Printer SNMP Hardcode RW Community String\""];
+	"NETWORK DoS
+ssdp | ID: 55" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: -1"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:33:53\ngap: -11sec\nend_prev: 04/11/17, 14:34:05\"'}"];
+	"INFO DISCOVERY
+unknown"	[shape=oval,
+		tooltip="\"GPL WEB_SERVER globals.pl access
+GPL WEB_SERVER mod_gzip_status access\""];
+	"NETWORK DoS
+ssdp | ID: 55" -> "INFO DISCOVERY
+unknown"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '<font color=\"blue\"> start_next: 04/11/17, 18:04:49<br/>gap: 72sec<br/>end_prev: \
+04/11/17, 18:03:37</font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"NETWORK DoS
+ms-wbt-server | ID: 36"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET DOS Microsoft Remote Desktop (RDP) Syn then Reset 30 Second DoS Attempt\""];
+	"Victim: 10.0.0.100
+NETWORK DoS
+ms-wbt-server"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+ms-wbt-server | ID: 36" -> "Victim: 10.0.0.100
+NETWORK DoS
+ms-wbt-server"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.221
+NETWORK DoS
+ms-wbt-server"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+ms-wbt-server | ID: 36" -> "Victim: 10.0.0.221
+NETWORK DoS
+ms-wbt-server"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.101
+NETWORK DoS
+ms-wbt-server"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+ms-wbt-server | ID: 36" -> "Victim: 10.0.0.101
+NETWORK DoS
+ms-wbt-server"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.222
+NETWORK DoS
+ms-wbt-server"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+ms-wbt-server | ID: 36" -> "Victim: 10.0.0.222
+NETWORK DoS
+ms-wbt-server"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.223
+NETWORK DoS
+ms-wbt-server"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+ms-wbt-server | ID: 36" -> "Victim: 10.0.0.223
+NETWORK DoS
+ms-wbt-server"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.224
+NETWORK DoS
+ms-wbt-server"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+ms-wbt-server | ID: 36" -> "Victim: 10.0.0.224
+NETWORK DoS
+ms-wbt-server"	[key=0,
+		data="{}"];
+	"VULNERABILTY DISCOVERY
+postgresql"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET POLICY Suspicious inbound to PostgreSQL port 5432\""];
+	"NETWORK DoS
+ms-wbt-server | ID: 36" -> "VULNERABILTY DISCOVERY
+postgresql"	[key=0,
+		data="{'color': 'turquoise', 'label': '<font color=\"turquoise\"> start_next: 04/11/17, 15:12:39<br/>gap: -658sec<br/>end_prev: 04/11/17, \
+15:23:37</font><br/><font color=\"turquoise\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"SERVICE DISCOVERY
+unknown"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Potential VNC Scan 5800-5820\""];
+	"NETWORK DoS
+ms-wbt-server | ID: 36" -> "SERVICE DISCOVERY
+unknown"	[key=0,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 04/11/17, 13:49:00\ngap: 403sec\nend_prev: 04/11/17, 13:\
+42:17\"'}"];
+	"VULNERABILTY DISCOVERY
+ms-sql-s"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET POLICY Suspicious inbound to MSSQL port 1433
+ET POLICY Suspicious inbound to mySQL port 3306
+ET POLICY Suspicious inbound to \
+Oracle SQL port 1521
+ET POLICY Suspicious inbound to mSQL port 4333\""];
+	"NETWORK DoS
+ms-wbt-server | ID: 36" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 14:46:49\ngap: -24sec\nend_prev: 04/11/17, 14:47:13\"'}"];
+	"SERVICE DISCOVERY
+epmap"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Behavioral Unusual Port 135 traffic Potential Scan or Infection
+ET SCAN Potential VNC Scan 5800-5820
+ET SCAN Potential \
+VNC Scan 5900-5920\""];
+	"NETWORK DoS
+ms-wbt-server | ID: 36" -> "SERVICE DISCOVERY
+epmap"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:02:11\ngap: -174sec\nend_prev: 04/11/17, 18:05:05\"'}"];
+	"COMMAND AND CONTROL
+unknown | ID: 308"	[fillcolor=yellow,
+		shape=box,
+		style=filled,
+		tooltip="\"ET POLICY RDP connection confirm\""];
+	"NETWORK DoS
+ms-wbt-server | ID: 36" -> "COMMAND AND CONTROL
+unknown | ID: 308"	[key=0,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 04/11/17, 13:54:51\ngap: 756sec\nend_prev: 04/11/17, 13:\
+42:15\"'}"];
+	"NETWORK DoS
+ms-wbt-server | ID: 36" -> "COMMAND AND CONTROL
+unknown | ID: 308"	[key=1,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:04:16\ngap: -41sec\nend_prev: 04/11/17, 18:04:57\"'}"];
+	"VULNERABILTY DISCOVERY
+ahsp"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET POLICY Suspicious inbound to PostgreSQL port 5432
+ET POLICY Suspicious inbound to MSSQL port 1433
+ET POLICY Suspicious inbound \
+to Oracle SQL port 1521
+ET POLICY Suspicious inbound to mSQL port 4333\""];
+	"NETWORK DoS
+ms-wbt-server | ID: 36" -> "VULNERABILTY DISCOVERY
+ahsp"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 16:54:44\ngap: 425sec\nend_prev: 04/11/17, 16:47:39\"'}"];
+	"ACCOUNT MANIPULATION
+snmp | ID: 53"	[shape=box,
+		tooltip="\"GPL SNMP private access udp
+GPL SNMP public access udp\""];
+	"NETWORK DoS
+ms-wbt-server | ID: 36" -> "ACCOUNT MANIPULATION
+snmp | ID: 53"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:05:21\ngap: 21sec\nend_prev: 04/11/17, 18:05:00\"'}"];
+	"SERVICE DISCOVERY
+microsoft-ds"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Behavioral Unusual Port 135 traffic Potential Scan or Infection
+ET SCAN Potential VNC Scan 5800-5820
+ET SCAN Behavioral \
+Unusual Port 445 traffic Potential Scan or Infection\""];
+	"NETWORK DoS
+ms-wbt-server | ID: 36" -> "SERVICE DISCOVERY
+microsoft-ds"	[key=0,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 04/11/17, 13:42:23\ngap: -721sec\nend_prev: 04/11/17, \
+13:54:24\"'}"];
+	"INFO DISCOVERY
+wsman"	[shape=oval,
+		tooltip="\"GPL WEB_SERVER globals.pl access\""];
+	"NETWORK DoS
+ms-wbt-server | ID: 36" -> "INFO DISCOVERY
+wsman"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:06:38\ngap: 19sec\nend_prev: 04/11/17, 14:06:20\"'}"];
+	"NETWORK DoS
+ms-wbt-server | ID: 307"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET DOS Microsoft Remote Desktop (RDP) Syn then Reset 30 Second DoS Attempt\""];
+	"NETWORK DoS
+ms-wbt-server | ID: 307" -> "Victim: 10.0.0.100
+NETWORK DoS
+ms-wbt-server"	[key=0,
+		data="{}"];
+	"NETWORK DoS
+ms-wbt-server | ID: 307" -> "Victim: 10.0.0.221
+NETWORK DoS
+ms-wbt-server"	[key=0,
+		data="{}"];
+	"DATA EXFILTRATION
+microsoft-ds | ID: 37"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"GPL NETBIOS SMB-DS IPC$ unicode share access\""];
+	"NETWORK DoS
+ms-wbt-server | ID: 307" -> "DATA EXFILTRATION
+microsoft-ds | ID: 37"	[key=0,
+		data="{'color': 'turquoise', 'fontcolor': '\"blue\"', 'label': '<font color=\"turquoise\"> start_next: 04/11/17, 16:30:04<br/>gap: 2441sec<\
+br/>end_prev: 04/11/17, 15:49:23</font><br/><font color=\"turquoise\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"NETWORK DoS
+ssdp | ID: 231"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET DOS Possible SSDP Amplification Scan in Progress\""];
+	"Victim: 10.0.99.225
+NETWORK DoS
+ssdp"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+ssdp | ID: 231" -> "Victim: 10.0.99.225
+NETWORK DoS
+ssdp"	[key=0,
+		data="{}"];
+	"DATA DELIVERY
+http | ID: 21"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"GPL WEB_SERVER perl post attempt\""];
+	"NETWORK DoS
+ssdp | ID: 231" -> "DATA DELIVERY
+http | ID: 21"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 21:04:28\ngap: 108sec\nend_prev: 04/11/17, 21:02:41\"'}"];
+	"NETWORK DoS
+ntp | ID: 62"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET DOS Microsoft Remote Desktop (RDP) Syn then Reset 30 Second DoS Attempt
+ET DOS Possible NTP DDoS Inbound Frequent Un-Authed \
+MON_LIST Requests IMPL 0x03\""];
+	"Victim: 10.0.0.100
+NETWORK DoS
+ntp"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+ntp | ID: 62" -> "Victim: 10.0.0.100
+NETWORK DoS
+ntp"	[key=0,
+		data="{}"];
+	"NETWORK DoS
+ntp | ID: 62" -> "INFO DISCOVERY
+xdmcp"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:34:11\ngap: -11sec\nend_prev: 04/11/17, 18:34:23\"'}"];
+	"NETWORK DoS
+ms-wbt-server | ID: 297"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET DOS Microsoft Remote Desktop (RDP) Syn then Reset 30 Second DoS Attempt\""];
+	"NETWORK DoS
+ms-wbt-server | ID: 297" -> "NETWORK DoS
+ms-wbt-server | ID: 36"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 14:46:47\ngap: 5244sec\nend_prev: 04/11/17, 13:19:\
+23\"'}"];
+	"NETWORK DoS
+ms-wbt-server | ID: 297" -> "Victim: 10.0.0.100
+NETWORK DoS
+ms-wbt-server"	[key=0,
+		data="{}"];
+	"NETWORK DoS
+ms-wbt-server | ID: 783"	[fillcolor=salmon,
+		shape=hexagon,
+		style=dotted,
+		tooltip="\"ET DOS Microsoft Remote Desktop (RDP) Syn then Reset 30 Second DoS Attempt\""];
+	"NETWORK DoS
+ms-wbt-server | ID: 783" -> "Victim: 10.0.0.221
+NETWORK DoS
+ms-wbt-server"	[key=0,
+		data="{}"];
+	"NETWORK DoS
+http | ID: 50"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET SCAN Apache mod_deflate DoS via many multiple byte Range values\""];
+	"Victim: 10.0.0.72
+NETWORK DoS
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+http | ID: 50" -> "Victim: 10.0.0.72
+NETWORK DoS
+http"	[key=0,
+		data="{}"];
+	"NETWORK DoS
+nv-video | ID: 84"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET TROJAN DDoS.XOR Checkin\""];
+	"Victim: 10.0.99.16
+NETWORK DoS
+nv-video"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+nv-video | ID: 84" -> "Victim: 10.0.99.16
+NETWORK DoS
+nv-video"	[key=0,
+		data="{}"];
+	"DATA EXFILTRATION
+microsoft-ds | ID: 395"	[fillcolor=salmon,
+		shape=hexagon,
+		style=dotted,
+		tooltip="\"GPL NETBIOS SMB-DS IPC$ unicode share access
+ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability\""];
+	"DATA EXFILTRATION
+microsoft-ds | ID: 395" -> "NETWORK DoS
+ntp | ID: 62"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:34:10\ngap: -122sec\nend_prev: 04/11/17, 18:36:12\"'}"];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "NETWORK DoS
+ssdp | ID: 55"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:01:09\ngap: 67sec\nend_prev: 04/11/17, 14:00:02\"'}"];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "NETWORK DoS
+ms-wbt-server | ID: 36"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 15:47:15\ngap: 0sec\nend_prev: 04/11/17, 15:47:16\"'}"];
+	"SERVICE DISCOVERY
+unknown" -> "NETWORK DoS
+ssdp | ID: 55"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:01:21\ngap: 42sec\nend_prev: 04/11/17, 18:00:38\"'}"];
+	"SERVICE DISCOVERY
+unknown" -> "NETWORK DoS
+ssdp | ID: 55"	[key=1,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 20:58:03\ngap: 66sec\nend_prev: 04/11/17, 20:56:56\"'}"];
+	"SERVICE DISCOVERY
+unknown" -> "NETWORK DoS
+ms-wbt-server | ID: 36"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 16:07:51\ngap: 4763sec\nend_prev: 04/11/17, 14:48:\
+27\"'}"];
+	"SERVICE DISCOVERY
+unknown" -> "NETWORK DoS
+ms-wbt-server | ID: 36"	[key=1,
+		data="{'color': 'turquoise', 'fontcolor': '\"turquoise\"', 'label': '\"start_next: 04/11/17, 17:21:16\ngap: -1sec\nend_prev: 04/11/17, 17:\
+21:17\"'}"];
+	"SERVICE DISCOVERY
+unknown" -> "NETWORK DoS
+ms-wbt-server | ID: 307"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:04:32\ngap: -478sec\nend_prev: 04/11/17, 16:12:30\"'}"];
+	"SERVICE DISCOVERY
+unknown" -> "NETWORK DoS
+ssdp | ID: 231"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 21:02:41\ngap: 23sec\nend_prev: 04/11/17, 21:02:18\"'}"];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "NETWORK DoS
+ssdp | ID: 55"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:08:11\ngap: 33sec\nend_prev: 04/11/17, 14:07:37\"'}"];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "NETWORK DoS
+ssdp | ID: 55"	[key=1,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 21:05:24\ngap: 33sec\nend_prev: 04/11/17, 21:04:51\"'}"];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "NETWORK DoS
+ssdp | ID: 55"	[key=2,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 17:58:52\ngap: -132sec\nend_prev: 04/11/17, 18:01:04\"'}"];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "NETWORK DoS
+ms-wbt-server | ID: 36"	[key=0,
+		data="{'color': 'turquoise', 'fontcolor': '\"turquoise\"', 'label': '\"start_next: 04/11/17, 21:02:47\ngap: -36sec\nend_prev: 04/11/17, 21:\
+03:23\"'}"];
+	"DATA EXFILTRATION
+microsoft-ds | ID: 298"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"GPL NETBIOS SMB-DS IPC$ share access\""];
+	"DATA EXFILTRATION
+microsoft-ds | ID: 298" -> "NETWORK DoS
+ms-wbt-server | ID: 36"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 16:07:49\ngap: 4821sec\nend_prev: 04/11/17, 14:47:\
+28\"'}"];
+	"DATA EXFILTRATION
+microsoft-ds | ID: 298" -> "NETWORK DoS
+ms-wbt-server | ID: 36"	[key=1,
+		data="{'color': 'turquoise', 'fontcolor': '\"turquoise\"', 'label': '\"start_next: 04/11/17, 15:07:53\ngap: 3648sec\nend_prev: 04/11/17, \
+14:07:05\"'}"];
+	"DATA EXFILTRATION
+microsoft-ds | ID: 298" -> "NETWORK DoS
+ms-wbt-server | ID: 36"	[key=2,
+		data="{'color': 'turquoise', 'fontcolor': '\"turquoise\"', 'label': '\"start_next: 04/11/17, 21:15:46\ngap: 23081sec\nend_prev: 04/11/17, \
+14:51:05\"'}"];
+	"VULNERABILTY DISCOVERY
+mysql"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET POLICY Suspicious inbound to MSSQL port 1433
+ET POLICY Suspicious inbound to mySQL port 3306
+ET POLICY Suspicious inbound to \
+Oracle SQL port 1521
+ET POLICY Suspicious inbound to PostgreSQL port 5432\""];
+	"VULNERABILTY DISCOVERY
+mysql" -> "NETWORK DoS
+ssdp | ID: 55"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 19:00:36\ngap: 33sec\nend_prev: 04/11/17, 19:00:03\"'}"];
+	"VULNERABILTY DISCOVERY
+mysql" -> "NETWORK DoS
+ms-wbt-server | ID: 36"	[key=0,
+		data="{'color': 'orange', 'fontcolor': '\"orange\"', 'label': '\"start_next: 04/11/17, 20:28:03\ngap: -1sec\nend_prev: 04/11/17, 20:28:04\"'}"];
+	"VULNERABILTY DISCOVERY
+mysql" -> "NETWORK DoS
+ms-wbt-server | ID: 36"	[key=1,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 14:16:05\ngap: -45sec\nend_prev: 04/11/17, 14:16:50\"'}"];
+	"COMMAND AND CONTROL
+unknown | ID: 39"	[fillcolor=yellow,
+		shape=box,
+		style=filled,
+		tooltip="\"ET POLICY RDP connection confirm\""];
+	"COMMAND AND CONTROL
+unknown | ID: 39" -> "NETWORK DoS
+ms-wbt-server | ID: 36"	[key=0,
+		data="{'color': 'magenta', 'fontcolor': '\"darkgreen\"', 'label': '<font color=\"magenta\"> start_next: 04/11/17, 13:34:55<br/>gap: 539sec<\
+br/>end_prev: 04/11/17, 13:25:56</font><br/><font color=\"magenta\"><b>Attacker: 10.0.254.30</b></font>'}"];
+	"COMMAND AND CONTROL
+unknown | ID: 39" -> "NETWORK DoS
+ms-wbt-server | ID: 36"	[key=1,
+		data="{'color': 'orange', 'fontcolor': '\"orange\"', 'label': '\"start_next: 04/11/17, 20:26:25\ngap: 364sec\nend_prev: 04/11/17, 20:20:22\"'}"];
+	"COMMAND AND CONTROL
+unknown | ID: 39" -> "NETWORK DoS
+ms-wbt-server | ID: 36"	[key=2,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 04/11/17, 13:42:15\ngap: 190sec\nend_prev: 04/11/17, 13:\
+39:05\"'}"];
+	"SERVICE DISCOVERY
+epmap" -> "NETWORK DoS
+ms-wbt-server | ID: 36"	[key=0,
+		data="{'color': 'turquoise', 'fontcolor': '\"turquoise\"', 'label': '\"start_next: 04/11/17, 13:03:57\ngap: -372sec\nend_prev: 04/11/17, \
+13:10:10\"'}"];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 299"	[shape=box,
+		tooltip="\"ET SNMP Samsung Printer SNMP Hardcode RW Community String\""];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 299" -> "NETWORK DoS
+ms-wbt-server | ID: 36"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:05:34\ngap: 6sec\nend_prev: 04/11/17, 14:05:28\"'}"];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 299" -> "NETWORK DoS
+ms-wbt-server | ID: 36"	[key=1,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:03:55\ngap: 14sec\nend_prev: 04/11/17, 18:03:41\"'}"];
+	"ACCOUNT MANIPULATION
+snmp | ID: 300"	[shape=box,
+		tooltip="\"GPL SNMP public access udp\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 300" -> "NETWORK DoS
+ms-wbt-server | ID: 36"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 16:47:39\ngap: 107sec\nend_prev: 04/11/17, 16:45:52\"'}"];
+	"ROOT PRIVILEGE ESCALATION
+ms-wbt-server | ID: 302"	[shape=box,
+		tooltip="\"ET POLICY MS Remote Desktop Administrator Login Request\""];
+	"ROOT PRIVILEGE ESCALATION
+ms-wbt-server | ID: 302" -> "NETWORK DoS
+ms-wbt-server | ID: 36"	[key=0,
+		data="{'color': 'tomato', 'fontcolor': '\"tomato\"', 'label': '\"start_next: 04/11/17, 17:18:43\ngap: 9990sec\nend_prev: 04/11/17, 14:32:\
+14\"'}"];
+	"DATA EXFILTRATION
+http | ID: 296"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability\""];
+	"DATA EXFILTRATION
+http | ID: 296" -> "NETWORK DoS
+ms-wbt-server | ID: 36"	[key=0,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 15:36:41\ngap: 893sec\nend_prev: 04/11/17, 15:21:48\"'}"];
+	"DATA EXFILTRATION
+unknown | ID: 301"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability\""];
+	"DATA EXFILTRATION
+unknown | ID: 301" -> "NETWORK DoS
+ms-wbt-server | ID: 36"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:01:49\ngap: 4202sec\nend_prev: 04/11/17, 16:51:47\"'}"];
+	"VULNERABILTY DISCOVERY
+ahsp" -> "NETWORK DoS
+ssdp | ID: 55"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:04:52\ngap: 32sec\nend_prev: 04/11/17, 14:04:19\"'}"];
+	"SERVICE DISCOVERY
+microsoft-ds" -> "NETWORK DoS
+ssdp | ID: 55"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:09:19\ngap: 42sec\nend_prev: 04/11/17, 14:08:36\"'}"];
+	"BRUTE FORCE CREDENTIALS
+unknown | ID: 1250"	[fillcolor=yellow,
+		shape=box,
+		style="dotted,filled",
+		tooltip="\"ET SCAN Rapid IMAP Connections - Possible Brute Force Attack\""];
+	"BRUTE FORCE CREDENTIALS
+unknown | ID: 1250" -> "NETWORK DoS
+ms-wbt-server | ID: 783"	[key=0,
+		data="{'color': 'brown', 'label': '<font color=\"brown\"> start_next: 04/11/17, 12:50:26<br/>gap: 5sec<br/>end_prev: 04/11/17, 12:50:22</\
+font><br/><font color=\"brown\"><b>Attacker: 10.0.254.33</b></font>'}"];
+	"DATA EXFILTRATION
+nv-video | ID: 426"	[fillcolor=salmon,
+		shape=hexagon,
+		style=dotted,
+		tooltip="\"ET TROJAN ATTACKER IRCBot - PRIVMSG Response - Directory Listing
+ET TROJAN ATTACKER IRCBot - PRIVMSG Response - Directory Listing *\
+nix
+ET TROJAN ATTACKER IRCBot - The command completed successfully - PRIVMSG Response
+ET TROJAN ATTACKER IRCBot - PRIVMSG Response \
+- net command output
+ET TROJAN ATTACKER IRCBot - PRIVMSG Response - ipconfig command output\""];
+	"DATA EXFILTRATION
+nv-video | ID: 426" -> "NETWORK DoS
+nv-video | ID: 84"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 21:36:02\ngap: 0sec\nend_prev: 04/11/17, 21:36:02\"'}"];
+	"DATA EXFILTRATION
+microsoft-ds | ID: 797"	[fillcolor=yellow,
+		shape=hexagon,
+		style="dotted,filled",
+		tooltip="\"GPL NETBIOS SMB-DS IPC$ share access\""];
+	"DATA EXFILTRATION
+microsoft-ds | ID: 797" -> "NETWORK DoS
+ms-wbt-server | ID: 307"	[key=0,
+		data="{'color': 'turquoise', 'label': '<font color=\"turquoise\"> start_next: 04/11/17, 15:49:23<br/>gap: 7751sec<br/>end_prev: 04/11/17, \
+13:40:12</font><br/><font color=\"turquoise\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"DATA DELIVERY
+http | ID: 352"	[fillcolor=salmon,
+		shape=hexagon,
+		style=dotted,
+		tooltip="\"ET WEB_SERVER PHP Possible php Remote File Inclusion Attempt
+ET WEB_SERVER PHP tags in HTTP POST
+GPL WEB_SERVER perl post attempt
+\
+ET WEB_SERVER PHP Possible file Remote File Inclusion Attempt\""];
+	"DATA DELIVERY
+http | ID: 352" -> "NETWORK DoS
+http | ID: 50"	[key=0,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 04/11/17, 22:11:13\ngap: -7sec\nend_prev: 04/11/17, 22:\
+11:20\"'}"];
+	"SERVICE DISCOVERY
+cm"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Potential VNC Scan 5900-5920\""];
+	"SERVICE DISCOVERY
+cm" -> "NETWORK DoS
+ms-wbt-server | ID: 297"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 13:19:23\ngap: 425sec\nend_prev: 04/11/17, 13:12:18\"'}"];
+	"SERVICE DISCOVERY
+netbios-ssn"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Behavioral Unusual Port 445 traffic Potential Scan or Infection
+ET SCAN Behavioral Unusual Port 139 traffic Potential Scan \
+or Infection\""];
+	"SERVICE DISCOVERY
+netbios-ssn" -> "NETWORK DoS
+ssdp | ID: 55"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:57:50\ngap: 34sec\nend_prev: 04/11/17, 18:57:16\"'}"];
+	"BRUTE FORCE CREDENTIALS
+pop3 | ID: 382"	[shape=box,
+		tooltip="\"ET SCAN Rapid POP3 Connections - Possible Brute Force Attack\""];
+	"BRUTE FORCE CREDENTIALS
+pop3 | ID: 382" -> "NETWORK DoS
+ssdp | ID: 55"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:59:10\ngap: 55sec\nend_prev: 04/11/17, 18:58:15\"'}"];
+	"DATA EXFILTRATION
+microsoft-ds | ID: 380"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"GPL NETBIOS SMB-DS IPC$ unicode share access
+ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability\""];
+	"DATA EXFILTRATION
+microsoft-ds | ID: 380" -> "NETWORK DoS
+ssdp | ID: 55"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:33:06\ngap: -169sec\nend_prev: 04/11/17, 14:35:55\"'}"];
+	"DATA EXFILTRATION
+microsoft-ds | ID: 380" -> "NETWORK DoS
+ssdp | ID: 55"	[key=1,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:52:26\ngap: -167sec\nend_prev: 04/11/17, 16:55:13\"'}"];
+	"DATA EXFILTRATION
+unknown | ID: 383"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability\""];
+	"DATA EXFILTRATION
+unknown | ID: 383" -> "NETWORK DoS
+ssdp | ID: 55"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:03:37\ngap: 5458sec\nend_prev: 04/11/17, 16:32:39\"'}"];
+}

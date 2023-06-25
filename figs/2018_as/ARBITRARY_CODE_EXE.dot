@@ -1,0 +1,724 @@
+digraph "" {
+	"ARBITRARY CODE EXECUTION
+http | ID: 368"	[shape=box,
+		tooltip="\"ET WEB_SERVER cmd.exe In URI - Possible Command Execution Attempt\""];
+	"ARBITRARY CODE EXECUTION
+etlservicemgr | ID: 140"	[shape=box,
+		tooltip="\"ET WEB_SERVER Possible CVE-2014-6271 Attempt in HTTP Cookie
+ET WEB_SERVER SQL Injection Local File Access Attempt Using LOAD_FILE
+\
+ET WEB_SPECIFIC_APPS JobHut browse.php pk Parameter SQL Injection
+ET CURRENT_EVENTS QNAP Shellshock CVE-2014-6271
+ET WEB_SPECIFIC_\
+APPS Fork-CMS js.php module parameter Local File Inclusion Attempt
+ET WEB_SERVER Possible CVE-2014-6271 Attempt in Headers\""];
+	"ARBITRARY CODE EXECUTION
+http | ID: 353"	[fillcolor=yellow,
+		shape=box,
+		style=filled,
+		tooltip="\"ET CURRENT_EVENTS QNAP Shellshock CVE-2014-6271
+ET WEB_SPECIFIC_APPS DesktopOnNet don3_requiem.php app_path Parameter Remote File \
+Inclusion
+ET WEB_SPECIFIC_APPS Horde type Parameter Local File Inclusion Attempt
+ET WEB_SPECIFIC_APPS KR-Web krgourl.php DOCUMENT_\
+ROOT Parameter Remote File Inclusion Attempt
+ET WEB_SERVER Possible CVE-2014-6271 Attempt in Headers
+ET WEB_SPECIFIC_APPS BASE base_\
+stat_common.php remote file include
+ET WEB_SPECIFIC_APPS Golem Gaming Portal root_path Parameter Remote File inclusion Attempt
+ET \
+WEB_SPECIFIC_APPS Joomla swMenuPro ImageManager.php Remote File Inclusion Attempt
+ET WEB_SPECIFIC_APPS FormMailer formmailer.admin.inc.php \
+BASE_DIR Parameter Remote File Inclusion Attempt
+ET WEB_SPECIFIC_APPS AjaxPortal di.php pathtoserverdata Parameter Remote File Inclusion \
+Attempt
+ET WEB_SERVER cmd.exe In URI - Possible Command Execution Attempt
+ET WEB_SPECIFIC_APPS KingCMS menu.php CONFIG Parameter \
+Remote File Inclusion
+ETPRO WEB_SPECIFIC_APPS PHPMoAdmin RCE Attempt
+ET WEB_SERVER Exploit Suspected PHP Injection Attack (cmd=)
+\
+ET WEB_SPECIFIC_APPS Achievo debugger.php config_atkroot parameter Remote File Inclusion Attempt
+ET WEB_SERVER Possible CVE-2014-6271 \
+Attempt
+ET WEB_SPECIFIC_APPS Joomla Dada Mail Manager Component config.dadamail.php GLOBALS Parameter Remote File Inclusion
+ET WEB_\
+SPECIFIC_APPS WEB-PHP RCE PHPBB 2004-1315
+ET WEB_SPECIFIC_APPS DesktopOnNet frontpage.php app_path Parameter Remote File Inclusion
+\
+ET WEB_SPECIFIC_APPS Joomla AjaxChat Component ajcuser.php GLOBALS Parameter Remote File Inclusion Attempt\""];
+	"ARBITRARY CODE EXECUTION
+http | ID: 358"	[shape=box,
+		style=dotted,
+		tooltip="\"ET CURRENT_EVENTS QNAP Shellshock CVE-2014-6271
+ET WEB_SPECIFIC_APPS DesktopOnNet don3_requiem.php app_path Parameter Remote File \
+Inclusion
+ET WEB_SPECIFIC_APPS Horde type Parameter Local File Inclusion Attempt
+ET WEB_SPECIFIC_APPS Golem Gaming Portal root_path \
+Parameter Remote File inclusion Attempt
+ET WEB_SERVER Possible CVE-2014-6271 Attempt in Headers
+ET WEB_SPECIFIC_APPS BASE base_stat_\
+common.php remote file include
+ET WEB_SPECIFIC_APPS KR-Web krgourl.php DOCUMENT_ROOT Parameter Remote File Inclusion Attempt
+ET \
+WEB_SPECIFIC_APPS Joomla swMenuPro ImageManager.php Remote File Inclusion Attempt
+ET WEB_SPECIFIC_APPS FormMailer formmailer.admin.inc.php \
+BASE_DIR Parameter Remote File Inclusion Attempt
+ET WEB_SPECIFIC_APPS AjaxPortal di.php pathtoserverdata Parameter Remote File Inclusion \
+Attempt
+ET WEB_SERVER cmd.exe In URI - Possible Command Execution Attempt
+ET WEB_SPECIFIC_APPS KingCMS menu.php CONFIG Parameter \
+Remote File Inclusion
+ETPRO WEB_SPECIFIC_APPS PHPMoAdmin RCE Attempt
+ET WEB_SERVER Exploit Suspected PHP Injection Attack (cmd=)
+\
+ET WEB_SPECIFIC_APPS Achievo debugger.php config_atkroot parameter Remote File Inclusion Attempt
+ET WEB_SERVER Possible CVE-2014-6271 \
+Attempt
+ET WEB_SPECIFIC_APPS Joomla Dada Mail Manager Component config.dadamail.php GLOBALS Parameter Remote File Inclusion
+ET WEB_\
+SPECIFIC_APPS WEB-PHP RCE PHPBB 2004-1315
+ET WEB_SPECIFIC_APPS DesktopOnNet frontpage.php app_path Parameter Remote File Inclusion
+\
+ET WEB_SPECIFIC_APPS Joomla AjaxChat Component ajcuser.php GLOBALS Parameter Remote File Inclusion Attempt\""];
+	"ARBITRARY CODE EXECUTION
+http | ID: 18"	[shape=box,
+		tooltip="\"ET WEB_SERVER cmd.exe In URI - Possible Command Execution Attempt\""];
+	"ARBITRARY CODE EXECUTION
+etlservicemgr | ID: 514"	[shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SPECIFIC_APPS BASE base_stat_common.php remote file include
+ET WEB_SPECIFIC_APPS WEB-PHP RCE PHPBB 2004-1315
+ET CURRENT_\
+EVENTS QNAP Shellshock CVE-2014-6271
+ET WEB_SERVER Exploit Suspected PHP Injection Attack (cmd=)
+ET WEB_SERVER Possible CVE-2014-6271 \
+Attempt in Headers\""];
+	"ARBITRARY CODE EXECUTION
+remoteware-cl | ID: 398"	[shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SPECIFIC_APPS WEB-PHP RCE PHPBB 2004-1315
+ET CURRENT_EVENTS QNAP Shellshock CVE-2014-6271
+ET WEB_SERVER Possible CVE-2014-6271 \
+Attempt in Headers\""];
+	"ARBITRARY CODE EXECUTION
+unknown | ID: 512"	[shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SPECIFIC_APPS BASE base_stat_common.php remote file include
+ET WEB_SPECIFIC_APPS Golem Gaming Portal root_path Parameter \
+Remote File inclusion Attempt
+ET WEB_SPECIFIC_APPS WEB-PHP RCE PHPBB 2004-1315
+ETPRO WEB_SPECIFIC_APPS PHPMoAdmin RCE Attempt
+ET \
+CURRENT_EVENTS QNAP Shellshock CVE-2014-6271
+ET WEB_SERVER Exploit Suspected PHP Injection Attack (cmd=)
+ET WEB_SERVER Possible \
+CVE-2014-6271 Attempt in Headers\""];
+	"ARBITRARY CODE EXECUTION
+cslistener | ID: 532"	[shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SPECIFIC_APPS BASE base_stat_common.php remote file include
+ET WEB_SPECIFIC_APPS Golem Gaming Portal root_path Parameter \
+Remote File inclusion Attempt
+ET WEB_SPECIFIC_APPS WEB-PHP RCE PHPBB 2004-1315
+ETPRO WEB_SPECIFIC_APPS PHPMoAdmin RCE Attempt
+ET \
+CURRENT_EVENTS QNAP Shellshock CVE-2014-6271
+ET WEB_SERVER Exploit Suspected PHP Injection Attack (cmd=)
+ET WEB_SERVER Possible \
+CVE-2014-6271 Attempt in Headers\""];
+	"ARBITRARY CODE EXECUTION
+wap-wsp | ID: 461"	[shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SPECIFIC_APPS BASE base_stat_common.php remote file include
+ET WEB_SPECIFIC_APPS Golem Gaming Portal root_path Parameter \
+Remote File inclusion Attempt
+ET WEB_SPECIFIC_APPS WEB-PHP RCE PHPBB 2004-1315
+ET CURRENT_EVENTS QNAP Shellshock CVE-2014-6271
+ET \
+WEB_SERVER Exploit Suspected PHP Injection Attack (cmd=)
+ET WEB_SERVER Possible CVE-2014-6271 Attempt in Headers\""];
+	"ARBITRARY CODE EXECUTION
+commplex-main | ID: 526"	[shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SPECIFIC_APPS BASE base_stat_common.php remote file include
+ET WEB_SPECIFIC_APPS Golem Gaming Portal root_path Parameter \
+Remote File inclusion Attempt
+ET WEB_SPECIFIC_APPS WEB-PHP RCE PHPBB 2004-1315
+ETPRO WEB_SPECIFIC_APPS PHPMoAdmin RCE Attempt
+ET \
+CURRENT_EVENTS QNAP Shellshock CVE-2014-6271
+ET WEB_SERVER Exploit Suspected PHP Injection Attack (cmd=)
+ET WEB_SERVER Possible \
+CVE-2014-6271 Attempt in Headers\""];
+	"ARBITRARY CODE EXECUTION
+us-cli | ID: 231"	[shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SPECIFIC_APPS BASE base_stat_common.php remote file include
+ET WEB_SPECIFIC_APPS WEB-PHP RCE PHPBB 2004-1315
+ETPRO WEB_SPECIFIC_\
+APPS PHPMoAdmin RCE Attempt
+ET CURRENT_EVENTS QNAP Shellshock CVE-2014-6271
+ET WEB_SERVER Exploit Suspected PHP Injection Attack (\
+cmd=)
+ET WEB_SERVER Possible CVE-2014-6271 Attempt in Headers\""];
+	"ARBITRARY CODE EXECUTION
+us-cli | ID: 507"	[shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SPECIFIC_APPS BASE base_stat_common.php remote file include
+ET WEB_SPECIFIC_APPS WEB-PHP RCE PHPBB 2004-1315
+ETPRO WEB_SPECIFIC_\
+APPS PHPMoAdmin RCE Attempt
+ET CURRENT_EVENTS QNAP Shellshock CVE-2014-6271
+ET WEB_SERVER Exploit Suspected PHP Injection Attack (\
+cmd=)
+ET WEB_SERVER Possible CVE-2014-6271 Attempt in Headers\""];
+	"INFO DISCOVERY
+us-cli"	[shape=oval,
+		tooltip="\"GPL WEB_SERVER viewcode access
+GPL WEB_SERVER .htaccess access
+GPL WEB_SERVER writeto.cnf access
+GPL WEB_SERVER iisadmin access
+\
+ET POLICY POSSIBLE Web Crawl using Wget
+ET WEB_SPECIFIC_APPS Request to Wordpress W3TC Plug-in dbcache Directory
+GPL WEB_SERVER \
+services.cnf access
+GPL EXPLOIT unicode directory traversal attempt
+GPL WEB_SERVER service.cnf access
+GPL EXPLOIT iisadmpwd attempt
+\
+ET WEB_SERVER PHP SESSION SuperGlobal in URI
+GPL WEB_SERVER /~root access
+GPL WEB_SERVER authors.pwd access
+GPL EXPLOIT .cnf access
+\
+ET POLICY Proxy TRACE Request - inbound
+GPL WEB_SERVER .htpasswd access
+GPL WEB_SERVER global.asa access
+ET WEB_SERVER PHP SERVER \
+SuperGlobal in URI
+GPL EXPLOIT fpcount access
+GPL WEB_SERVER globals.pl access
+GPL WEB_SERVER service.pwd
+GPL EXPLOIT ISAPI .idq \
+attempt
+ET WEB_SERVER PHP Easteregg Information-Disclosure (phpinfo)
+GPL WEB_SERVER printenv access
+GPL WEB_SERVER author.exe access
+\
+GPL EXPLOIT iissamples access
+GPL EXPLOIT .htr access
+ET WEB_SERVER PHP REQUEST SuperGlobal in URI\""];
+	"INFO DISCOVERY
+us-cli" -> "ARBITRARY CODE EXECUTION
+us-cli | ID: 231"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 03/11/18, 15:33:08\ngap: -315sec\nend_prev: 03/11/18, 15:38:\
+23\"'}"];
+	"DATA EXFILTRATION
+cslistener | ID: 71"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"GPL WEB_SERVER Tomcat server snoop access
+GPL EXPLOIT ISAPI .ida access
+GPL EXPLOIT /msadc/samples/ access
+ET WEB_SERVER ColdFusion \
+componentutils access
+ET WEB_SERVER /system32/ in Uri - Possible Protected Directory Access Attempt
+ET WEB_SPECIFIC_APPS PHP-CGI \
+query string parameter vulnerability
+ET WEB_SERVER Possible XXE SYSTEM ENTITY in POST BODY.
+ET WEB_SERVER /etc/shadow Detected in \
+URI
+GPL EXPLOIT ISAPI .idq access\""];
+	"DATA EXFILTRATION
+cslistener | ID: 71" -> "ARBITRARY CODE EXECUTION
+cslistener | ID: 532"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 03/11/18, 15:17:40\ngap: -12sec\nend_prev: 03/11/18, 15:17:52\"'}"];
+	"INFO DISCOVERY
+commplex-main"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"GPL WEB_SERVER viewcode access
+GPL WEB_SERVER .htaccess access
+GPL WEB_SERVER writeto.cnf access
+GPL WEB_SERVER iisadmin access
+\
+ET WEB_SPECIFIC_APPS Request to Wordpress W3TC Plug-in dbcache Directory
+GPL WEB_SERVER services.cnf access
+GPL EXPLOIT unicode \
+directory traversal attempt
+GPL WEB_SERVER service.cnf access
+GPL EXPLOIT iisadmpwd attempt
+ET WEB_SERVER PHP SESSION SuperGlobal \
+in URI
+GPL WEB_SERVER /~root access
+GPL WEB_SERVER authors.pwd access
+ET WEB_SERVER PHP ENV SuperGlobal in URI
+GPL EXPLOIT .cnf \
+access
+ET POLICY Proxy TRACE Request - inbound
+GPL WEB_SERVER .htpasswd access
+GPL WEB_SERVER global.asa access
+ET WEB_SERVER PHP \
+SERVER SuperGlobal in URI
+GPL EXPLOIT fpcount access
+GPL WEB_SERVER globals.pl access
+GPL WEB_SERVER service.pwd
+GPL EXPLOIT ISAPI \
+.idq attempt
+ET WEB_SERVER PHP Easteregg Information-Disclosure (phpinfo)
+GPL WEB_SERVER printenv access
+GPL WEB_SERVER author.exe \
+access
+GPL EXPLOIT iissamples access
+GPL EXPLOIT .htr access
+ET WEB_SERVER PHP REQUEST SuperGlobal in URI\""];
+	"INFO DISCOVERY
+commplex-main" -> "ARBITRARY CODE EXECUTION
+commplex-main | ID: 526"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 03/11/18, 17:50:23\ngap: -173sec\nend_prev: 03/11/18, 17:53:16\"'}"];
+	"DATA DELIVERY
+http | ID: 19"	[fillcolor=yellow,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SPECIFIC_APPS PHP-Paid4Mail RFI attempt 
+ET WEB_SPECIFIC_APPS Possible eFront database.php Remote File Inclusion Attempt
+\
+ET WEB_SPECIFIC_APPS MAXcms fm_includes_special Parameter Remote File Inclusion Attempt
+ET WEB_SPECIFIC_APPS PHP Aardvark Topsites \
+PHP CONFIG PATH Remote File Include Attempt
+ET WEB_SPECIFIC_APPS Possible Mambo/Joomla! com_koesubmit Component 'koesubmit.php' \
+Remote File Inclusion Attempt
+ET WEB_SPECIFIC_APPS SERWeb load_lang.php configdir Parameter Remote File Inclusion
+ET WEB_SPECIFIC_\
+APPS TECHNOTE shop_this_skin_path Parameter Remote File Inclusion
+ET WEB_SPECIFIC_APPS p-Table for WordPress wptable-tinymce.php \
+ABSPATH Parameter RFI Attempt
+ET WEB_SPECIFIC_APPS ProjectButler RFI attempt 
+ET WEB_SPECIFIC_APPS PHPOF DB_AdoDB.Class.PHP PHPOF_\
+INCLUDE_PATH parameter Remote File Inclusion
+ET WEB_SPECIFIC_APPS SAPID get_infochannel.inc.php Remote File inclusion Attempt
+ET \
+WEB_SPECIFIC_APPS Joomla Onguma Time Sheet Component onguma.class.php mosConfig_absolute_path Parameter Remote File Inclusion
+ET \
+WEB_SPECIFIC_APPS phptraverse mp3_id.php GLOBALS Parameter Remote File Inclusion Attempt
+ET WEB_SPECIFIC_APPS Sisplet CMS komentar.php \
+site_path Parameter Remote File Inclusion Attempt
+ET WEB_SPECIFIC_APPS SERWeb main_prepend.php functionsdir Parameter Remote File \
+Inclusion
+ET WEB_SPECIFIC_APPS Mambo Component com_smf smf.php Remote File Inclusion Attempt
+ET WEB_SPECIFIC_APPS OpenX phpAdsNew \
+phpAds_geoPlugin Parameter Remote File Inclusion Attempt
+ET WEB_SPECIFIC_APPS Enthusiast path parameter Remote File Inclusion
+ET \
+WEB_SPECIFIC_APPS ProdLer prodler.class.php sPath Parameter Remote File Inclusion Attempt
+ET WEB_SPECIFIC_APPS PHP Classifieds class.phpmailer.php \
+lang_path Parameter Remote File Inclusion Attempt
+ET WEB_SPECIFIC_APPS Joomla Simple RSS Reader admin.rssreader.php mosConfig_live_\
+site Parameter Remote File Inclusion
+ET WEB_SPECIFIC_APPS Possible OpenSiteAdmin pageHeader.php Remote File Inclusion Attempt
+ET \
+WEB_SPECIFIC_APPS phpSkelSite theme parameter remote file inclusion
+ET WEB_SPECIFIC_APPS PointComma pctemplate.php pcConfig Parameter \
+Remote File Inclusion Attempt
+ET WEB_SPECIFIC_APPS phPortal gunaysoft.php icerikyolu Parameter Remote File Inclusion
+ET WEB_SPECIFIC_\
+APPS OBOphiX fonctions_racine.php chemin_lib parameter Remote File Inclusion Attempt
+ET WEB_SPECIFIC_APPS PHP phpMyAgenda rootagenda \
+Remote File Include Attempt
+ET WEB_SPECIFIC_APPS Ve-EDIT edit_htmlarea.php highlighter Parameter Remote File Inclusion
+ET WEB_SPECIFIC_\
+APPS MODx CMS snippet.reflect.php reflect_base Remote File Inclusion
+ET WEB_SPECIFIC_APPS phPortal gunaysoft.php sayfaid Parameter \
+Remote File Inclusion
+ET WEB_SPECIFIC_APPS YapBB class_yapbbcooker.php cfgIncludeDirectory Parameter Remote File Inclusion\""];
+	"DATA DELIVERY
+http | ID: 19" -> "ARBITRARY CODE EXECUTION
+http | ID: 368"	[key=0,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 16:07:48\ngap: 2742sec\nend_prev: 03/11/18, 15:22:\
+06\"'}"];
+	"DATA EXFILTRATION
+etlservicemgr | ID: 40"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"GPL WEB_SERVER Tomcat server snoop access
+GPL EXPLOIT ISAPI .ida access
+GPL EXPLOIT /msadc/samples/ access
+ET WEB_SERVER /system32/ \
+in Uri - Possible Protected Directory Access Attempt
+ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability
+ET WEB_SERVER /\
+etc/shadow Detected in URI
+GPL EXPLOIT ISAPI .idq access\""];
+	"DATA EXFILTRATION
+etlservicemgr | ID: 40" -> "ARBITRARY CODE EXECUTION
+etlservicemgr | ID: 514"	[key=0,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 15:05:23\ngap: -17sec\nend_prev: 03/11/18, 15:\
+05:40\"'}"];
+	"DATA EXFILTRATION
+etlservicemgr | ID: 40" -> "ARBITRARY CODE EXECUTION
+etlservicemgr | ID: 514"	[key=1,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 18:00:14\ngap: -32sec\nend_prev: 03/11/18, 18:\
+00:45\"'}"];
+	"DATA EXFILTRATION
+us-cli | ID: 52"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"GPL WEB_SERVER Tomcat server snoop access
+GPL EXPLOIT ISAPI .ida access
+GPL EXPLOIT /msadc/samples/ access
+ET WEB_SERVER ColdFusion \
+componentutils access
+ET WEB_SERVER /system32/ in Uri - Possible Protected Directory Access Attempt
+ET WEB_SPECIFIC_APPS PHP-CGI \
+query string parameter vulnerability
+ET WEB_SERVER Possible XXE SYSTEM ENTITY in POST BODY.
+ET WEB_SERVER /etc/shadow Detected in \
+URI
+ET WEB_SERVER Possible MySQL SQLi Attempt Information Schema Access
+GPL EXPLOIT ISAPI .idq access\""];
+	"DATA EXFILTRATION
+us-cli | ID: 52" -> "ARBITRARY CODE EXECUTION
+us-cli | ID: 507"	[key=0,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 14:57:25\ngap: -21sec\nend_prev: 03/11/18, 14:\
+57:46\"'}"];
+	"VULNERABILTY DISCOVERY
+http"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Suspicious inbound to mySQL port 3306
+ET SCAN Suspicious inbound to MSSQL port 1433
+ET SCAN Nikto Web App Scan in Progress
+\
+ET SCAN Suspicious inbound to PostgreSQL port 5432
+ET SCAN Suspicious inbound to Oracle SQL port 1521
+ET SCAN Suspicious inbound \
+to mSQL port 4333\""];
+	"VULNERABILTY DISCOVERY
+http" -> "ARBITRARY CODE EXECUTION
+etlservicemgr | ID: 140"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 22:42:32\ngap: -8sec\nend_prev: 03/11/18, 22:42:39\"'}"];
+	"INFO DISCOVERY
+wap-wsp"	[shape=oval,
+		tooltip="\"GPL WEB_SERVER viewcode access
+GPL WEB_SERVER .htaccess access
+GPL WEB_SERVER writeto.cnf access
+GPL WEB_SERVER iisadmin access
+\
+GPL WEB_SERVER services.cnf access
+GPL EXPLOIT unicode directory traversal attempt
+GPL WEB_SERVER service.cnf access
+GPL EXPLOIT \
+iisadmpwd attempt
+ET WEB_SERVER PHP SESSION SuperGlobal in URI
+GPL WEB_SERVER /~root access
+GPL WEB_SERVER authors.pwd access
+ET \
+WEB_SERVER PHP ENV SuperGlobal in URI
+GPL EXPLOIT .cnf access
+ET POLICY Proxy TRACE Request - inbound
+GPL WEB_SERVER .htpasswd access
+\
+GPL WEB_SERVER global.asa access
+ET WEB_SERVER PHP SERVER SuperGlobal in URI
+GPL EXPLOIT fpcount access
+GPL WEB_SERVER globals.pl \
+access
+GPL WEB_SERVER service.pwd
+GPL EXPLOIT ISAPI .idq attempt
+ET WEB_SERVER PHP Easteregg Information-Disclosure (phpinfo)
+GPL \
+WEB_SERVER printenv access
+GPL WEB_SERVER author.exe access
+GPL EXPLOIT iissamples access
+GPL EXPLOIT .htr access
+ET WEB_SERVER \
+PHP REQUEST SuperGlobal in URI\""];
+	"INFO DISCOVERY
+wap-wsp" -> "ARBITRARY CODE EXECUTION
+wap-wsp | ID: 461"	[key=0,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 18:07:14\ngap: -10sec\nend_prev: 03/11/18, 18:\
+07:24\"'}"];
+	"DATA EXFILTRATION
+wap-wsp | ID: 56"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"GPL WEB_SERVER Tomcat server snoop access
+GPL EXPLOIT ISAPI .ida access
+GPL EXPLOIT /msadc/samples/ access
+ET WEB_SERVER /system32/ \
+in Uri - Possible Protected Directory Access Attempt
+ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability
+ET WEB_SERVER /\
+etc/shadow Detected in URI
+GPL EXPLOIT ISAPI .idq access\""];
+	"DATA EXFILTRATION
+wap-wsp | ID: 56" -> "ARBITRARY CODE EXECUTION
+wap-wsp | ID: 461"	[key=0,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 15:05:27\ngap: -5sec\nend_prev: 03/11/18, 15:\
+05:32\"'}"];
+	"INFO DISCOVERY
+http"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"GPL WEB_SERVER viewcode access
+GPL WEB_SERVER .htaccess access
+GPL WEB_SERVER writeto.cnf access
+GPL WEB_SERVER iisadmin access
+\
+ET WEB_SERVER PHP Easteregg Information-Disclosure (funny-logo)
+ET WEB_SPECIFIC_APPS Request to Wordpress W3TC Plug-in dbcache Directory
+\
+GPL WEB_SERVER services.cnf access
+ET WEB_SERVER PHP Easteregg Information-Disclosure (zend-logo)
+GPL EXPLOIT unicode directory \
+traversal attempt
+ET WEB_SERVER PHP Easteregg Information-Disclosure (php-logo)
+GPL WEB_SERVER service.cnf access
+GPL EXPLOIT iisadmpwd \
+attempt
+ET WEB_SERVER PHP SESSION SuperGlobal in URI
+GPL WEB_SERVER /~root access
+GPL WEB_SERVER authors.pwd access
+ET WEB_SERVER \
+PHP ENV SuperGlobal in URI
+GPL EXPLOIT .cnf access
+ET POLICY Proxy TRACE Request - inbound
+GPL WEB_SERVER .htpasswd access
+GPL WEB_\
+SERVER global.asa access
+ET WEB_SERVER PHP SERVER SuperGlobal in URI
+GPL EXPLOIT fpcount access
+GPL WEB_SERVER globals.pl access
+\
+GPL WEB_SERVER 403 Forbidden
+GPL WEB_SERVER service.pwd
+GPL EXPLOIT ISAPI .idq attempt
+ET WEB_SERVER PHP Easteregg Information-Disclosure (\
+phpinfo)
+GPL WEB_SERVER printenv access
+GPL WEB_SERVER author.exe access
+GPL EXPLOIT iissamples access
+GPL EXPLOIT .htr access
+ET \
+WEB_SERVER PHP REQUEST SuperGlobal in URI\""];
+	"INFO DISCOVERY
+http" -> "ARBITRARY CODE EXECUTION
+http | ID: 353"	[key=0,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 17:37:56\ngap: -45sec\nend_prev: 03/11/18, 17:\
+38:41\"'}"];
+	"INFO DISCOVERY
+http" -> "ARBITRARY CODE EXECUTION
+http | ID: 353"	[key=1,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 03/11/18, 18:08:19\ngap: -8sec\nend_prev: 03/11/18, 18:08:28\"'}"];
+	"INFO DISCOVERY
+http" -> "ARBITRARY CODE EXECUTION
+http | ID: 353"	[key=2,
+		data="{'color': 'magenta', 'label': '<font color=\"magenta\"> start_next: 03/11/18, 19:58:24<br/>gap: -8sec<br/>end_prev: 03/11/18, 19:58:\
+33</font><br/><font color=\"magenta\"><b>Attacker: 10.0.254.204</b></font>'}"];
+	"INFO DISCOVERY
+http" -> "ARBITRARY CODE EXECUTION
+http | ID: 353"	[key=3,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 03/11/18, 14:56:54\ngap: -263sec\nend_prev: 03/11/18, 15:01:\
+18\"'}"];
+	"INFO DISCOVERY
+http" -> "ARBITRARY CODE EXECUTION
+http | ID: 353"	[key=4,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 03/11/18, 21:58:12\ngap: -10sec\nend_prev: 03/11/18, 21:58:21\"'}"];
+	"INFO DISCOVERY
+http" -> "ARBITRARY CODE EXECUTION
+http | ID: 358"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 19:22:03\ngap: -46sec\nend_prev: 03/11/18, 19:22:48\"'}"];
+	"DATA EXFILTRATION
+http | ID: 15"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"GPL WEB_SERVER Tomcat server snoop access
+GPL EXPLOIT ISAPI .ida access
+GPL EXPLOIT /msadc/samples/ access
+ET WEB_SERVER ColdFusion \
+componentutils access
+ET WEB_SERVER /system32/ in Uri - Possible Protected Directory Access Attempt
+ET WEB_SPECIFIC_APPS PHP-CGI \
+query string parameter vulnerability
+ET WEB_SERVER Possible XXE SYSTEM ENTITY in POST BODY.
+ET WEB_SERVER /etc/shadow Detected in \
+URI
+GPL EXPLOIT ISAPI .idq access\""];
+	"DATA EXFILTRATION
+http | ID: 15" -> "ARBITRARY CODE EXECUTION
+http | ID: 353"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 14:29:29\ngap: -8sec\nend_prev: 03/11/18, 14:29:37\"'}"];
+	"DATA EXFILTRATION
+http | ID: 15" -> "ARBITRARY CODE EXECUTION
+http | ID: 353"	[key=1,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 19:21:27\ngap: -8sec\nend_prev: 03/11/18, 19:21:35\"'}"];
+	"DATA EXFILTRATION
+http | ID: 15" -> "ARBITRARY CODE EXECUTION
+http | ID: 353"	[key=2,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 14:42:25\ngap: -12sec\nend_prev: 03/11/18, 14:\
+42:37\"'}"];
+	"DATA EXFILTRATION
+http | ID: 15" -> "ARBITRARY CODE EXECUTION
+http | ID: 353"	[key=3,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 22:31:07\ngap: -26sec\nend_prev: 03/11/18, 22:\
+31:33\"'}"];
+	"DATA EXFILTRATION
+http | ID: 15" -> "ARBITRARY CODE EXECUTION
+http | ID: 353"	[key=4,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 03/11/18, 14:31:42\ngap: -86sec\nend_prev: 03/11/18, 14:33:08\"'}"];
+	"DATA EXFILTRATION
+http | ID: 15" -> "ARBITRARY CODE EXECUTION
+http | ID: 353"	[key=5,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 15:16:53\ngap: -314sec\nend_prev: 03/11/18, 15:22:\
+07\"'}"];
+	"DATA EXFILTRATION
+http | ID: 15" -> "ARBITRARY CODE EXECUTION
+http | ID: 353"	[key=6,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 22:55:11\ngap: -8sec\nend_prev: 03/11/18, 22:55:\
+19\"'}"];
+	"DATA EXFILTRATION
+http | ID: 15" -> "ARBITRARY CODE EXECUTION
+http | ID: 353"	[key=7,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 03/11/18, 21:22:30\ngap: -8sec\nend_prev: 03/11/18, 21:22:38\"'}"];
+	"DATA EXFILTRATION
+unknown | ID: 31"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ETPRO ATTACK_RESPONSE MongoDB Database Enumeration Request\""];
+	"DATA EXFILTRATION
+unknown | ID: 31" -> "ARBITRARY CODE EXECUTION
+unknown | ID: 512"	[key=0,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 15:05:58\ngap: -46sec\nend_prev: 03/11/18, 15:\
+06:44\"'}"];
+	"DATA EXFILTRATION
+remoteware-cl | ID: 22"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"GPL WEB_SERVER Tomcat server snoop access
+GPL EXPLOIT ISAPI .ida access
+GPL EXPLOIT /msadc/samples/ access
+ET WEB_SERVER ColdFusion \
+componentutils access
+ET WEB_SERVER /system32/ in Uri - Possible Protected Directory Access Attempt
+ET WEB_SPECIFIC_APPS PHP-CGI \
+query string parameter vulnerability
+ET WEB_SERVER Possible XXE SYSTEM ENTITY in POST BODY.
+ET WEB_SERVER /etc/shadow Detected in \
+URI
+GPL EXPLOIT ISAPI .idq access\""];
+	"DATA EXFILTRATION
+remoteware-cl | ID: 22" -> "ARBITRARY CODE EXECUTION
+remoteware-cl | ID: 398"	[key=0,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 18:07:44\ngap: -549sec\nend_prev: 03/11/18, \
+18:16:53\"'}"];
+	"DATA EXFILTRATION
+remoteware-cl | ID: 22" -> "ARBITRARY CODE EXECUTION
+remoteware-cl | ID: 398"	[key=1,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 15:48:35\ngap: -541sec\nend_prev: 03/11/18, 15:57:\
+36\"'}"];
+	"DATA EXFILTRATION
+remoteware-cl | ID: 22" -> "ARBITRARY CODE EXECUTION
+remoteware-cl | ID: 398"	[key=2,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 15:48:35\ngap: -541sec\nend_prev: 03/11/18, 15:57:\
+36\"'}"];
+	"INFO DISCOVERY
+remoteware-cl"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"GPL WEB_SERVER viewcode access
+GPL WEB_SERVER .htaccess access
+GPL WEB_SERVER writeto.cnf access
+GPL WEB_SERVER iisadmin access
+\
+ET WEB_SPECIFIC_APPS Request to Wordpress W3TC Plug-in dbcache Directory
+GPL WEB_SERVER services.cnf access
+GPL EXPLOIT unicode \
+directory traversal attempt
+GPL WEB_SERVER service.cnf access
+GPL EXPLOIT iisadmpwd attempt
+ET WEB_SERVER PHP SESSION SuperGlobal \
+in URI
+GPL WEB_SERVER /~root access
+GPL WEB_SERVER authors.pwd access
+GPL EXPLOIT .cnf access
+ET POLICY Proxy TRACE Request - inbound
+\
+GPL WEB_SERVER .htpasswd access
+GPL WEB_SERVER global.asa access
+ET WEB_SERVER PHP SERVER SuperGlobal in URI
+GPL EXPLOIT fpcount \
+access
+GPL WEB_SERVER globals.pl access
+GPL WEB_SERVER 403 Forbidden
+GPL WEB_SERVER service.pwd
+GPL EXPLOIT ISAPI .idq attempt
+ET \
+WEB_SERVER PHP Easteregg Information-Disclosure (phpinfo)
+GPL WEB_SERVER printenv access
+GPL WEB_SERVER author.exe access
+GPL EXPLOIT \
+iissamples access
+GPL EXPLOIT .htr access
+ET WEB_SERVER PHP REQUEST SuperGlobal in URI\""];
+	"INFO DISCOVERY
+remoteware-cl" -> "ARBITRARY CODE EXECUTION
+remoteware-cl | ID: 398"	[key=0,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 15:05:58\ngap: -561sec\nend_prev: 03/11/18, \
+15:15:19\"'}"];
+	"ROOT PRIVILEGE ESCALATION
+http | ID: 141"	[shape=box,
+		tooltip="\"GPL EXPLOIT CodeRed v2 root.exe access\""];
+	"ROOT PRIVILEGE ESCALATION
+http | ID: 141" -> "ARBITRARY CODE EXECUTION
+http | ID: 18"	[key=0,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 16:37:55\ngap: 78sec\nend_prev: 03/11/18, 16:36:\
+36\"'}"];
+	"ROOT PRIVILEGE ESCALATION
+http | ID: 141" -> "ARBITRARY CODE EXECUTION
+http | ID: 18"	[key=1,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 17:13:06\ngap: 75sec\nend_prev: 03/11/18, 17:11:\
+51\"'}"];
+	"ROOT PRIVILEGE ESCALATION
+http | ID: 141" -> "ARBITRARY CODE EXECUTION
+http | ID: 18"	[key=2,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 17:46:31\ngap: 75sec\nend_prev: 03/11/18, 17:45:\
+17\"'}"];
+	"ROOT PRIVILEGE ESCALATION
+http | ID: 141" -> "ARBITRARY CODE EXECUTION
+http | ID: 18"	[key=3,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 18:19:27\ngap: 72sec\nend_prev: 03/11/18, 18:18:\
+15\"'}"];
+	"ROOT PRIVILEGE ESCALATION
+http | ID: 141" -> "ARBITRARY CODE EXECUTION
+http | ID: 18"	[key=4,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 18:52:12\ngap: 78sec\nend_prev: 03/11/18, 18:50:\
+55\"'}"];
+	"ROOT PRIVILEGE ESCALATION
+http | ID: 141" -> "ARBITRARY CODE EXECUTION
+http | ID: 18"	[key=5,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 19:25:31\ngap: 76sec\nend_prev: 03/11/18, 19:24:\
+15\"'}"];
+	"PUBLIC APP EXPLOIT
+http | ID: 142"	[shape=box,
+		tooltip="\"ET WEB_SPECIFIC_APPS IBSng str Parameter Cross Site Scripting Attempt\""];
+	"PUBLIC APP EXPLOIT
+http | ID: 142" -> "ARBITRARY CODE EXECUTION
+http | ID: 18"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 21:15:11\ngap: 5sec\nend_prev: 03/11/18, 21:15:06\"'}"];
+	"ROOT PRIVILEGE ESCALATION
+etlservicemgr | ID: 144"	[shape=box,
+		tooltip="\"ET WEB_SERVER ColdFusion administrator access\""];
+	"ROOT PRIVILEGE ESCALATION
+etlservicemgr | ID: 144" -> "ARBITRARY CODE EXECUTION
+http | ID: 18"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 21:44:37\ngap: 1sec\nend_prev: 03/11/18, 21:44:36\"'}"];
+	"PUBLIC APP EXPLOIT
+wap-wsp | ID: 143"	[shape=box,
+		tooltip="\"ET WEB_SPECIFIC_APPS IBSng str Parameter Cross Site Scripting Attempt\""];
+	"PUBLIC APP EXPLOIT
+wap-wsp | ID: 143" -> "ARBITRARY CODE EXECUTION
+http | ID: 18"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 21:13:17\ngap: 5sec\nend_prev: 03/11/18, 21:13:11\"'}"];
+}

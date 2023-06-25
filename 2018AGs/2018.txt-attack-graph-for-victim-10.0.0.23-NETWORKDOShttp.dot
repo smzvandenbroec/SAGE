@@ -1,0 +1,108 @@
+digraph NETWORKDOShttp {
+rankdir="BT"; 
+ graph [ nodesep="0.1", ranksep="0.02"] 
+ node [ fontname=Arial, fontsize=24,penwidth=3]; 
+ edge [ fontname=Arial, fontsize=20,penwidth=5 ];
+"Victim: 10.0.0.23
+NETWORK DoS
+http" [shape=doubleoctagon, style=filled, fillcolor=salmon];
+{ rank = max; "Victim: 10.0.0.23
+NETWORK DoS
+http"}
+"NETWORK DoS
+http | ID: 5" -> "Victim: 10.0.0.23
+NETWORK DoS
+http"
+"NETWORK DoS
+http | ID: 5" [style=filled, fillcolor= salmon]
+{ rank=same; "NETWORK DoS
+http | ID: 5"}
+"VULNERABILTY DISCOVERY
+mysql" [style=filled, fillcolor= yellow]
+"VULNERABILTY DISCOVERY
+mysql" -> "SERVICE DISCOVERY
+unknown" [ color=orange] [label=<<font color="orange"> start_next: 03/11/18, 13:58:44<br/>gap: -277sec<br/>end_prev: 03/11/18, 14:03:21</font><br/><font color="orange"><b>Attacker: 10.0.254.202</b></font>>]
+"SERVICE DISCOVERY
+unknown" -> "HOST DISCOVERY
+unknown" [ label="start_next: 03/11/18, 14:07:13
+gap: -7sec
+end_prev: 03/11/18, 14:07:20"][ fontcolor="orange" color=orange]
+"HOST DISCOVERY
+unknown" -> "VULNERABILTY DISCOVERY
+mysql" [ label="start_next: 03/11/18, 14:20:54
+gap: 806sec
+end_prev: 03/11/18, 14:07:28"][ fontcolor="orange" color=orange]
+"VULNERABILTY DISCOVERY
+mysql" -> "SERVICE DISCOVERY
+unknown" [ label="start_next: 03/11/18, 14:20:54
+gap: -267sec
+end_prev: 03/11/18, 14:25:22"][ fontcolor="orange" color=orange]
+"SERVICE DISCOVERY
+unknown" -> "HOST DISCOVERY
+unknown" [ label="start_next: 03/11/18, 14:28:39
+gap: -7sec
+end_prev: 03/11/18, 14:28:46"][ fontcolor="orange" color=orange]
+"HOST DISCOVERY
+unknown" -> "INFO DISCOVERY
+http" [ label="start_next: 03/11/18, 15:46:54
+gap: 4684sec
+end_prev: 03/11/18, 14:28:49"][ fontcolor="orange" color=orange]
+"INFO DISCOVERY
+http" -> "NETWORK DoS
+http | ID: 5" [ label="start_next: 03/11/18, 15:46:54
+gap: -2sec
+end_prev: 03/11/18, 15:46:55"][ fontcolor="orange" color=orange]
+"VULNERABILTY DISCOVERY
+mysql" [style=filled, fillcolor= yellow]
+"VULNERABILTY DISCOVERY
+mysql" -> "SERVICE DISCOVERY
+unknown" [ color=magenta] [label=<<font color="magenta"> start_next: 03/11/18, 14:24:36<br/>gap: -32sec<br/>end_prev: 03/11/18, 14:25:08</font><br/><font color="magenta"><b>Attacker: 10.0.254.201</b></font>>]
+"SERVICE DISCOVERY
+unknown" -> "HOST DISCOVERY
+unknown" [ label="start_next: 03/11/18, 14:24:42
+gap: 6sec
+end_prev: 03/11/18, 14:24:36"][ fontcolor="magenta" color=magenta]
+"HOST DISCOVERY
+unknown" -> "INFO DISCOVERY
+http" [ label="start_next: 03/11/18, 15:11:08
+gap: 2753sec
+end_prev: 03/11/18, 14:25:15"][ fontcolor="magenta" color=magenta]
+"INFO DISCOVERY
+http" -> "NETWORK DoS
+http | ID: 5" [ label="start_next: 03/11/18, 15:11:08
+gap: -2sec
+end_prev: 03/11/18, 15:11:10"][ fontcolor="magenta" color=magenta]
+"VULNERABILTY DISCOVERY
+mysql" [shape=oval]
+"VULNERABILTY DISCOVERY
+mysql" [tooltip="ET SCAN Suspicious inbound to mySQL port 3306
+ET SCAN Suspicious inbound to MSSQL port 1433
+ET SCAN Suspicious inbound to PostgreSQL port 5432
+ET SCAN Suspicious inbound to Oracle SQL port 1521
+ET SCAN Suspicious inbound to mSQL port 4333"]
+"SERVICE DISCOVERY
+unknown" [shape=oval]
+"SERVICE DISCOVERY
+unknown" [tooltip="ET SCAN Potential VNC Scan 5800-5820
+ET SCAN Potential SSH Scan
+ET SCAN Potential VNC Scan 5900-5920"]
+"HOST DISCOVERY
+unknown" [shape=oval]
+"HOST DISCOVERY
+unknown" [tooltip="ET SCAN Nmap Scripting Engine User-Agent Detected (Nmap Scripting Engine)
+ET SCAN Possible Nmap User-Agent Observed"]
+"INFO DISCOVERY
+http" [shape=oval]
+"INFO DISCOVERY
+http" [tooltip="GPL WEB_SERVER .htaccess access
+GPL WEB_SERVER /~root access
+GPL WEB_SERVER iisadmin access
+GPL WEB_SERVER printenv access
+GPL WEB_SERVER .htpasswd access
+GPL WEB_SERVER global.asa access
+GPL WEB_SERVER 403 Forbidden"]
+"NETWORK DoS
+http | ID: 5" [shape=hexagon]
+"NETWORK DoS
+http | ID: 5" [tooltip="ET WEB_SERVER Possible Cherokee Web Server GET AUX Request Denial Of Service Attempt"]
+}

@@ -1,0 +1,241 @@
+digraph DATADELIVERYhttp {
+rankdir="BT"; 
+ graph [ nodesep="0.1", ranksep="0.02"] 
+ node [ fontname=Arial, fontsize=24,penwidth=3]; 
+ edge [ fontname=Arial, fontsize=20,penwidth=5 ];
+"Victim: 10.0.0.202
+DATA DELIVERY
+http" [shape=doubleoctagon, style=filled, fillcolor=salmon];
+{ rank = max; "Victim: 10.0.0.202
+DATA DELIVERY
+http"}
+"DATA DELIVERY
+http | ID: 21" -> "Victim: 10.0.0.202
+DATA DELIVERY
+http"
+"DATA DELIVERY
+http | ID: 21" [style=filled, fillcolor= salmon]
+"DATA DELIVERY
+http | ID: 246" -> "Victim: 10.0.0.202
+DATA DELIVERY
+http"
+"DATA DELIVERY
+http | ID: 246" [style=filled, fillcolor= salmon]
+{ rank=same; "DATA DELIVERY
+http | ID: 21" "DATA DELIVERY
+http | ID: 246"}
+"VULNERABILTY DISCOVERY
+ms-sql-s" [style=filled, fillcolor= yellow]
+"VULNERABILTY DISCOVERY
+ms-sql-s" -> "VULNERABILTY DISCOVERY
+ncube-lm" [ color=blue] [label=<<font color="blue"> start_next: 04/11/17, 13:08:38<br/>gap: 711sec<br/>end_prev: 04/11/17, 12:56:47</font><br/><font color="blue"><b>Attacker: 10.0.254.31</b></font>>]
+"VULNERABILTY DISCOVERY
+ncube-lm" -> "ACCOUNT MANIPULATION
+snmp | ID: 53" [ label="start_next: 04/11/17, 14:01:27
+gap: 3169sec
+end_prev: 04/11/17, 13:08:38"][ fontcolor="blue" color=blue]
+"ACCOUNT MANIPULATION
+snmp | ID: 53" -> "SERVICE DISCOVERY
+ssh" [ label="start_next: 04/11/17, 14:06:20
+gap: 13sec
+end_prev: 04/11/17, 14:06:08"][ fontcolor="blue" color=blue]
+"SERVICE DISCOVERY
+ssh" -> "SURFING
+http" [ label="start_next: 04/11/17, 14:10:34
+gap: 253sec
+end_prev: 04/11/17, 14:06:20"][ fontcolor="blue" color=blue]
+"SURFING
+http" -> "DATA DELIVERY
+http | ID: 246" [ label="start_next: 04/11/17, 14:10:37
+gap: 1sec
+end_prev: 04/11/17, 14:10:36"][ fontcolor="blue" color=blue]
+"DATA EXFILTRATION
+http | ID: 26" [style=filled, fillcolor= yellow]
+"DATA EXFILTRATION
+http | ID: 26" -> "VULNERABILTY DISCOVERY
+http" [ color=blue] [label=<<font color="blue"> start_next: 04/11/17, 14:18:12<br/>gap: 35sec<br/>end_prev: 04/11/17, 14:17:37</font><br/><font color="blue"><b>Attacker: 10.0.254.31</b></font>>]
+"VULNERABILTY DISCOVERY
+http" -> "VULNERABILTY DISCOVERY
+ahsp" [ label="start_next: 04/11/17, 16:31:18
+gap: 7194sec
+end_prev: 04/11/17, 14:31:25"][ fontcolor="blue" color=blue]
+"VULNERABILTY DISCOVERY
+ahsp" -> "NETWORK DoS
+ssdp | ID: 55" [ label="start_next: 04/11/17, 16:32:58
+gap: 40sec
+end_prev: 04/11/17, 16:32:18"][ fontcolor="blue" color=blue]
+"NETWORK DoS
+ssdp | ID: 55" -> "INFO DISCOVERY
+xdmcp" [ label="start_next: 04/11/17, 16:33:42
+gap: 45sec
+end_prev: 04/11/17, 16:32:58"][ fontcolor="blue" color=blue]
+"INFO DISCOVERY
+xdmcp" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: 874" [ label="start_next: 04/11/17, 16:33:45
+gap: -321sec
+end_prev: 04/11/17, 16:39:06"][ fontcolor="blue" color=blue]
+"REMOTE SERVICE EXPLOIT
+snmp | ID: 874" -> "ACCOUNT MANIPULATION
+snmp | ID: 351" [ label="start_next: 04/11/17, 16:34:48
+gap: 63sec
+end_prev: 04/11/17, 16:33:45"][ fontcolor="blue" color=blue]
+"ACCOUNT MANIPULATION
+snmp | ID: 351" -> "USER PRIVILEGE ESCALATION
+http | ID: 49" [ label="start_next: 04/11/17, 16:39:00
+gap: 240sec
+end_prev: 04/11/17, 16:35:00"][ fontcolor="blue" color=blue]
+"USER PRIVILEGE ESCALATION
+http | ID: 49" -> "VULNERABILTY DISCOVERY
+http" [ label="start_next: 04/11/17, 16:39:03
+gap: -12sec
+end_prev: 04/11/17, 16:39:15"][ fontcolor="blue" color=blue]
+"VULNERABILTY DISCOVERY
+http" -> "SURFING
+http" [ label="start_next: 04/11/17, 16:39:14
+gap: 11sec
+end_prev: 04/11/17, 16:39:03"][ fontcolor="blue" color=blue]
+"SURFING
+http" -> "DATA DELIVERY
+http | ID: 246" [ label="start_next: 04/11/17, 16:39:15
+gap: 1sec
+end_prev: 04/11/17, 16:39:14"][ fontcolor="blue" color=blue]
+"DATA EXFILTRATION
+http | ID: 26" [style=filled, fillcolor= yellow]
+"DATA EXFILTRATION
+http | ID: 26" -> "SERVICE DISCOVERY
+ipsma" [ color=blue] [label=<<font color="blue"> start_next: 04/11/17, 18:02:40<br/>gap: 4592sec<br/>end_prev: 04/11/17, 16:46:08</font><br/><font color="blue"><b>Attacker: 10.0.254.31</b></font>>]
+"SERVICE DISCOVERY
+ipsma" -> "VULNERABILTY DISCOVERY
+postgresql" [ label="start_next: 04/11/17, 18:03:02
+gap: 22sec
+end_prev: 04/11/17, 18:02:40"][ fontcolor="blue" color=blue]
+"VULNERABILTY DISCOVERY
+postgresql" -> "ARBITRARY CODE EXECUTION
+ssdp | ID: 355" [ label="start_next: 04/11/17, 18:04:28
+gap: 87sec
+end_prev: 04/11/17, 18:03:02"][ fontcolor="blue" color=blue]
+"ARBITRARY CODE EXECUTION
+ssdp | ID: 355" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: 52" [ label="start_next: 04/11/17, 18:05:01
+gap: 22sec
+end_prev: 04/11/17, 18:04:38"][ fontcolor="blue" color=blue]
+"REMOTE SERVICE EXPLOIT
+snmp | ID: 52" -> "INFO DISCOVERY
+xdmcp" [ label="start_next: 04/11/17, 18:05:03
+gap: 3sec
+end_prev: 04/11/17, 18:05:01"][ fontcolor="blue" color=blue]
+"INFO DISCOVERY
+xdmcp" -> "ACCOUNT MANIPULATION
+snmp | ID: 351" [ label="start_next: 04/11/17, 18:06:06
+gap: -263sec
+end_prev: 04/11/17, 18:10:29"][ fontcolor="blue" color=blue]
+"ACCOUNT MANIPULATION
+snmp | ID: 351" -> "USER PRIVILEGE ESCALATION
+http | ID: 49" [ label="start_next: 04/11/17, 18:10:23
+gap: 227sec
+end_prev: 04/11/17, 18:06:37"][ fontcolor="blue" color=blue]
+"USER PRIVILEGE ESCALATION
+http | ID: 49" -> "SURFING
+http" [ label="start_next: 04/11/17, 18:10:35
+gap: -3sec
+end_prev: 04/11/17, 18:10:38"][ fontcolor="blue" color=blue]
+"SURFING
+http" -> "DATA EXFILTRATION
+http | ID: 228" [ label="start_next: 04/11/17, 18:10:49
+gap: 12sec
+end_prev: 04/11/17, 18:10:37"][ fontcolor="blue" color=blue]
+"DATA EXFILTRATION
+http | ID: 228" -> "DATA DELIVERY
+http | ID: 21" [ label="start_next: 04/11/17, 18:10:49
+gap: -398sec
+end_prev: 04/11/17, 18:17:27"][ fontcolor="blue" color=blue]
+"VULNERABILTY DISCOVERY
+ms-sql-s" [shape=oval]
+"VULNERABILTY DISCOVERY
+ms-sql-s" [tooltip="ET POLICY Suspicious inbound to MSSQL port 1433"]
+"VULNERABILTY DISCOVERY
+ncube-lm" [shape=oval]
+"VULNERABILTY DISCOVERY
+ncube-lm" [tooltip="ET POLICY Suspicious inbound to Oracle SQL port 1521"]
+"ACCOUNT MANIPULATION
+snmp | ID: 53" [shape=box]
+"ACCOUNT MANIPULATION
+snmp | ID: 53" [tooltip="GPL SNMP private access udp
+GPL SNMP public access udp"]
+"SERVICE DISCOVERY
+ssh" [shape=oval]
+"SERVICE DISCOVERY
+ssh" [tooltip="ET SCAN Potential SSH Scan"]
+"SURFING
+http" [shape=oval]
+"SURFING
+http" [tooltip="ET WEB_SERVER WEB-PHP phpinfo access"]
+"DATA DELIVERY
+http | ID: 246" [shape=hexagon]
+"DATA DELIVERY
+http | ID: 246" [tooltip="ET WEB_SERVER PHP Possible php Remote File Inclusion Attempt
+ET WEB_SERVER PHP tags in HTTP POST
+GPL WEB_SERVER perl post attempt"]
+"DATA EXFILTRATION
+http | ID: 26" [shape=hexagon]
+"DATA EXFILTRATION
+http | ID: 26" [tooltip="ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability"]
+"VULNERABILTY DISCOVERY
+http" [shape=oval]
+"VULNERABILTY DISCOVERY
+http" [tooltip="ET SCAN Nessus User Agent"]
+"VULNERABILTY DISCOVERY
+ahsp" [shape=oval]
+"VULNERABILTY DISCOVERY
+ahsp" [tooltip="ET POLICY Suspicious inbound to PostgreSQL port 5432
+ET POLICY Suspicious inbound to Oracle SQL port 1521
+ET POLICY Suspicious inbound to mSQL port 4333"]
+"NETWORK DoS
+ssdp | ID: 55" [shape=hexagon]
+"NETWORK DoS
+ssdp | ID: 55" [tooltip="ET DOS Possible SSDP Amplification Scan in Progress"]
+"INFO DISCOVERY
+xdmcp" [shape=oval]
+"INFO DISCOVERY
+xdmcp" [tooltip="GPL WEB_SERVER mod_gzip_status access
+GPL RPC xdmcp info query"]
+"REMOTE SERVICE EXPLOIT
+snmp | ID: 874" [style="dotted", shape=box]
+"REMOTE SERVICE EXPLOIT
+snmp | ID: 874" [tooltip="ET SNMP Samsung Printer SNMP Hardcode RW Community String"]
+"ACCOUNT MANIPULATION
+snmp | ID: 351" [style="dotted", shape=box]
+"ACCOUNT MANIPULATION
+snmp | ID: 351" [tooltip="GPL SNMP private access udp
+GPL SNMP public access udp"]
+"USER PRIVILEGE ESCALATION
+http | ID: 49" [shape=box]
+"USER PRIVILEGE ESCALATION
+http | ID: 49" [tooltip="ET POLICY Outgoing Basic Auth Base64 HTTP Password detected unencrypted
+ET POLICY Incoming Basic Auth Base64 HTTP Password detected unencrypted"]
+"SERVICE DISCOVERY
+ipsma" [shape=oval]
+"SERVICE DISCOVERY
+ipsma" [tooltip="ET SCAN Potential VNC Scan 5900-5920"]
+"VULNERABILTY DISCOVERY
+postgresql" [shape=oval]
+"VULNERABILTY DISCOVERY
+postgresql" [tooltip="ET POLICY Suspicious inbound to PostgreSQL port 5432"]
+"ARBITRARY CODE EXECUTION
+ssdp | ID: 355" [shape=box]
+"ARBITRARY CODE EXECUTION
+ssdp | ID: 355" [tooltip="GPL MISC UPnP malformed advertisement"]
+"REMOTE SERVICE EXPLOIT
+snmp | ID: 52" [shape=box]
+"REMOTE SERVICE EXPLOIT
+snmp | ID: 52" [tooltip="ET SNMP Samsung Printer SNMP Hardcode RW Community String"]
+"DATA EXFILTRATION
+http | ID: 228" [shape=hexagon]
+"DATA EXFILTRATION
+http | ID: 228" [tooltip="ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability"]
+"DATA DELIVERY
+http | ID: 21" [shape=hexagon]
+"DATA DELIVERY
+http | ID: 21" [tooltip="ET WEB_SERVER PHP Possible php Remote File Inclusion Attempt
+ET WEB_SERVER PHP tags in HTTP POST"]
+}

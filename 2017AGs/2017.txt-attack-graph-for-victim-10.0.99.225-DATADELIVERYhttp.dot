@@ -1,0 +1,150 @@
+digraph DATADELIVERYhttp {
+rankdir="BT"; 
+ graph [ nodesep="0.1", ranksep="0.02"] 
+ node [ fontname=Arial, fontsize=24,penwidth=3]; 
+ edge [ fontname=Arial, fontsize=20,penwidth=5 ];
+"Victim: 10.0.99.225
+DATA DELIVERY
+http" [shape=doubleoctagon, style=filled, fillcolor=salmon];
+{ rank = max; "Victim: 10.0.99.225
+DATA DELIVERY
+http"}
+"DATA DELIVERY
+http | ID: 21" -> "Victim: 10.0.99.225
+DATA DELIVERY
+http"
+"DATA DELIVERY
+http | ID: 21" [style=filled, fillcolor= salmon]
+"DATA DELIVERY
+http | ID: 246" -> "Victim: 10.0.99.225
+DATA DELIVERY
+http"
+"DATA DELIVERY
+http | ID: 246" [style=filled, fillcolor= salmon]
+{ rank=same; "DATA DELIVERY
+http | ID: 21" "DATA DELIVERY
+http | ID: 246"}
+"VULNERABILTY DISCOVERY
+ms-sql-s" [style=filled, fillcolor= yellow]
+"VULNERABILTY DISCOVERY
+ms-sql-s" -> "SERVICE DISCOVERY
+unknown" [ color=blue] [label=<<font color="blue"> start_next: 04/11/17, 14:08:51<br/>gap: -31sec<br/>end_prev: 04/11/17, 14:09:22</font><br/><font color="blue"><b>Attacker: 10.0.254.31</b></font>>]
+"SERVICE DISCOVERY
+unknown" -> "ARBITRARY CODE EXECUTION
+ssdp | ID: 355" [ label="start_next: 04/11/17, 14:10:13
+gap: -44sec
+end_prev: 04/11/17, 14:10:57"][ fontcolor="blue" color=blue]
+"ARBITRARY CODE EXECUTION
+ssdp | ID: 355" -> "INFO DISCOVERY
+xdmcp" [ label="start_next: 04/11/17, 14:10:45
+gap: 21sec
+end_prev: 04/11/17, 14:10:23"][ fontcolor="blue" color=blue]
+"INFO DISCOVERY
+xdmcp" -> "DATA DELIVERY
+http | ID: 246" [ label="start_next: 04/11/17, 14:12:05
+gap: 2sec
+end_prev: 04/11/17, 14:12:04"][ fontcolor="blue" color=blue]
+"DATA EXFILTRATION
+http | ID: 26" [style=filled, fillcolor= yellow]
+"DATA EXFILTRATION
+http | ID: 26" -> "INFO DISCOVERY
+http" [ color=blue] [label=<<font color="blue"> start_next: 04/11/17, 18:04:44<br/>gap: 13956sec<br/>end_prev: 04/11/17, 14:12:08</font><br/><font color="blue"><b>Attacker: 10.0.254.31</b></font>>]
+"INFO DISCOVERY
+http" -> "DATA DELIVERY
+http | ID: 246" [ label="start_next: 04/11/17, 18:04:46
+gap: 2sec
+end_prev: 04/11/17, 18:04:44"][ fontcolor="blue" color=blue]
+"DATA EXFILTRATION
+http | ID: 26" [style=filled, fillcolor= yellow]
+"DATA EXFILTRATION
+http | ID: 26" -> "SERVICE DISCOVERY
+ssh" [ color=blue] [label=<<font color="blue"> start_next: 04/11/17, 18:56:34<br/>gap: 3104sec<br/>end_prev: 04/11/17, 18:04:50</font><br/><font color="blue"><b>Attacker: 10.0.254.31</b></font>>]
+"SERVICE DISCOVERY
+ssh" -> "VULNERABILTY DISCOVERY
+postgresql" [ label="start_next: 04/11/17, 18:56:44
+gap: -454sec
+end_prev: 04/11/17, 19:04:18"][ fontcolor="blue" color=blue]
+"VULNERABILTY DISCOVERY
+postgresql" -> "ARBITRARY CODE EXECUTION
+ssdp | ID: 355" [ label="start_next: 04/11/17, 18:58:11
+gap: -226sec
+end_prev: 04/11/17, 19:01:57"][ fontcolor="blue" color=blue]
+"ARBITRARY CODE EXECUTION
+ssdp | ID: 355" -> "INFO DISCOVERY
+xdmcp" [ label="start_next: 04/11/17, 20:58:50
+gap: 6963sec
+end_prev: 04/11/17, 19:02:47"][ fontcolor="blue" color=blue]
+"INFO DISCOVERY
+xdmcp" -> "SERVICE DISCOVERY
+unknown" [ label="start_next: 04/11/17, 21:01:21
+gap: -184sec
+end_prev: 04/11/17, 21:04:25"][ fontcolor="blue" color=blue]
+"SERVICE DISCOVERY
+unknown" -> "NETWORK DoS
+ssdp | ID: 231" [ label="start_next: 04/11/17, 21:02:41
+gap: 23sec
+end_prev: 04/11/17, 21:02:18"][ fontcolor="blue" color=blue]
+"NETWORK DoS
+ssdp | ID: 231" -> "DATA DELIVERY
+http | ID: 21" [ label="start_next: 04/11/17, 21:04:28
+gap: 108sec
+end_prev: 04/11/17, 21:02:41"][ fontcolor="blue" color=blue]
+"VULNERABILTY DISCOVERY
+ms-sql-s" [shape=oval]
+"VULNERABILTY DISCOVERY
+ms-sql-s" [tooltip="ET POLICY Suspicious inbound to mySQL port 3306
+ET POLICY Suspicious inbound to mSQL port 4333
+ET POLICY Suspicious inbound to MSSQL port 1433
+ET POLICY Suspicious inbound to Oracle SQL port 1521
+ET POLICY Suspicious inbound to PostgreSQL port 5432"]
+"SERVICE DISCOVERY
+unknown" [shape=oval]
+"SERVICE DISCOVERY
+unknown" [tooltip="ET SCAN Potential VNC Scan 5800-5820
+ET SCAN Potential SSH Scan
+ET SCAN Potential VNC Scan 5900-5920"]
+"ARBITRARY CODE EXECUTION
+ssdp | ID: 355" [shape=box]
+"ARBITRARY CODE EXECUTION
+ssdp | ID: 355" [tooltip="GPL MISC UPnP malformed advertisement"]
+"INFO DISCOVERY
+xdmcp" [shape=oval]
+"INFO DISCOVERY
+xdmcp" [tooltip="GPL WEB_SERVER mod_gzip_status access
+GPL RPC xdmcp info query"]
+"DATA DELIVERY
+http | ID: 246" [shape=hexagon]
+"DATA DELIVERY
+http | ID: 246" [tooltip="GPL WEB_SERVER perl post attempt"]
+"DATA EXFILTRATION
+http | ID: 26" [shape=hexagon]
+"DATA EXFILTRATION
+http | ID: 26" [tooltip="ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability"]
+"INFO DISCOVERY
+http" [shape=oval]
+"INFO DISCOVERY
+http" [tooltip="GPL WEB_SERVER mod_gzip_status access"]
+"SERVICE DISCOVERY
+ssh" [shape=oval]
+"SERVICE DISCOVERY
+ssh" [tooltip="ET SCAN Potential VNC Scan 5800-5820
+ET SCAN Potential SSH Scan
+ET SCAN Potential VNC Scan 5900-5920"]
+"VULNERABILTY DISCOVERY
+postgresql" [shape=oval]
+"VULNERABILTY DISCOVERY
+postgresql" [tooltip="ET POLICY Suspicious inbound to mySQL port 3306
+ET POLICY Suspicious inbound to mSQL port 4333
+ET POLICY Suspicious inbound to MSSQL port 1433
+ET POLICY Suspicious inbound to Oracle SQL port 1521
+ET SCAN Nessus User Agent
+ET POLICY Suspicious inbound to PostgreSQL port 5432"]
+"NETWORK DoS
+ssdp | ID: 231" [shape=hexagon]
+"NETWORK DoS
+ssdp | ID: 231" [tooltip="ET DOS Possible SSDP Amplification Scan in Progress"]
+"DATA DELIVERY
+http | ID: 21" [shape=hexagon]
+"DATA DELIVERY
+http | ID: 21" [tooltip="GPL WEB_SERVER perl post attempt"]
+}

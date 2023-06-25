@@ -1,0 +1,173 @@
+digraph NETWORKDOSssdp {
+rankdir="BT"; 
+ graph [ nodesep="0.1", ranksep="0.02"] 
+ node [ fontname=Arial, fontsize=24,penwidth=3]; 
+ edge [ fontname=Arial, fontsize=20,penwidth=5 ];
+"Victim: 10.0.0.167
+NETWORK DoS
+ssdp" [shape=doubleoctagon, style=filled, fillcolor=salmon];
+{ rank = max; "Victim: 10.0.0.167
+NETWORK DoS
+ssdp"}
+"NETWORK DoS
+ssdp | ID: 55" -> "Victim: 10.0.0.167
+NETWORK DoS
+ssdp"
+"NETWORK DoS
+ssdp | ID: 55" [style=filled, fillcolor= salmon]
+{ rank=same; "NETWORK DoS
+ssdp | ID: 55"}
+"VULNERABILTY DISCOVERY
+postgresql" [style=filled, fillcolor= yellow]
+"VULNERABILTY DISCOVERY
+postgresql" -> "SERVICE DISCOVERY
+ssh" [ color=blue] [label=<<font color="blue"> start_next: 04/11/17, 13:34:49<br/>gap: 859sec<br/>end_prev: 04/11/17, 13:20:30</font><br/><font color="blue"><b>Attacker: 10.0.254.31</b></font>>]
+"SERVICE DISCOVERY
+ssh" -> "VULNERABILTY DISCOVERY
+ms-sql-s" [ label="start_next: 04/11/17, 14:01:06
+gap: 1578sec
+end_prev: 04/11/17, 13:34:49"][ fontcolor="blue" color=blue]
+"VULNERABILTY DISCOVERY
+ms-sql-s" -> "ARBITRARY CODE EXECUTION
+ssdp | ID: 355" [ label="start_next: 04/11/17, 14:03:08
+gap: 51sec
+end_prev: 04/11/17, 14:02:17"][ fontcolor="blue" color=blue]
+"ARBITRARY CODE EXECUTION
+ssdp | ID: 355" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: 52" [ label="start_next: 04/11/17, 14:03:40
+gap: 22sec
+end_prev: 04/11/17, 14:03:18"][ fontcolor="blue" color=blue]
+"REMOTE SERVICE EXPLOIT
+snmp | ID: 52" -> "INFO DISCOVERY
+xdmcp" [ label="start_next: 04/11/17, 14:03:41
+gap: 1sec
+end_prev: 04/11/17, 14:03:40"][ fontcolor="blue" color=blue]
+"INFO DISCOVERY
+xdmcp" -> "ACCOUNT MANIPULATION
+snmp | ID: 53" [ label="start_next: 04/11/17, 14:04:35
+gap: -59sec
+end_prev: 04/11/17, 14:05:34"][ fontcolor="blue" color=blue]
+"ACCOUNT MANIPULATION
+snmp | ID: 53" -> "DATA DELIVERY
+http | ID: 246" [ label="start_next: 04/11/17, 14:05:37
+gap: 33sec
+end_prev: 04/11/17, 14:05:04"][ fontcolor="blue" color=blue]
+"DATA DELIVERY
+http | ID: 246" -> "DATA EXFILTRATION
+http | ID: 26" [ label="start_next: 04/11/17, 14:05:39
+gap: 2sec
+end_prev: 04/11/17, 14:05:37"][ fontcolor="blue" color=blue]
+"DATA EXFILTRATION
+http | ID: 26" -> "SERVICE DISCOVERY
+spt-automation" [ label="start_next: 04/11/17, 16:29:32
+gap: 8632sec
+end_prev: 04/11/17, 14:05:39"][ fontcolor="blue" color=blue]
+"SERVICE DISCOVERY
+spt-automation" -> "VULNERABILTY DISCOVERY
+ms-sql-s" [ label="start_next: 04/11/17, 16:29:55
+gap: -30sec
+end_prev: 04/11/17, 16:30:24"][ fontcolor="blue" color=blue]
+"VULNERABILTY DISCOVERY
+ms-sql-s" -> "ARBITRARY CODE EXECUTION
+ssdp | ID: 355" [ label="start_next: 04/11/17, 16:31:31
+gap: -116sec
+end_prev: 04/11/17, 16:33:27"][ fontcolor="blue" color=blue]
+"ARBITRARY CODE EXECUTION
+ssdp | ID: 355" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: 52" [ label="start_next: 04/11/17, 16:32:03
+gap: 22sec
+end_prev: 04/11/17, 16:31:41"][ fontcolor="blue" color=blue]
+"REMOTE SERVICE EXPLOIT
+snmp | ID: 52" -> "INFO DISCOVERY
+xdmcp" [ label="start_next: 04/11/17, 16:32:05
+gap: 2sec
+end_prev: 04/11/17, 16:32:03"][ fontcolor="blue" color=blue]
+"INFO DISCOVERY
+xdmcp" -> "ACCOUNT MANIPULATION
+snmp | ID: 53" [ label="start_next: 04/11/17, 16:33:04
+gap: -25sec
+end_prev: 04/11/17, 16:33:28"][ fontcolor="blue" color=blue]
+"ACCOUNT MANIPULATION
+snmp | ID: 53" -> "DATA DELIVERY
+http | ID: 246" [ label="start_next: 04/11/17, 16:33:31
+gap: 15sec
+end_prev: 04/11/17, 16:33:16"][ fontcolor="blue" color=blue]
+"DATA DELIVERY
+http | ID: 246" -> "DATA EXFILTRATION
+http | ID: 26" [ label="start_next: 04/11/17, 16:33:38
+gap: 7sec
+end_prev: 04/11/17, 16:33:31"][ fontcolor="blue" color=blue]
+"DATA EXFILTRATION
+http | ID: 26" -> "VULNERABILTY DISCOVERY
+ms-sql-s" [ label="start_next: 04/11/17, 18:00:55
+gap: 5237sec
+end_prev: 04/11/17, 16:33:38"][ fontcolor="blue" color=blue]
+"VULNERABILTY DISCOVERY
+ms-sql-s" -> "SERVICE DISCOVERY
+unknown" [ label="start_next: 04/11/17, 18:01:39
+gap: 40sec
+end_prev: 04/11/17, 18:00:59"][ fontcolor="blue" color=blue]
+"SERVICE DISCOVERY
+unknown" -> "NETWORK DoS
+ssdp | ID: 55" [ label="start_next: 04/11/17, 18:02:30
+gap: -57sec
+end_prev: 04/11/17, 18:03:27"][ fontcolor="blue" color=blue]
+"VULNERABILTY DISCOVERY
+postgresql" [shape=oval]
+"VULNERABILTY DISCOVERY
+postgresql" [tooltip="ET POLICY Suspicious inbound to Oracle SQL port 1521
+ET POLICY Suspicious inbound to PostgreSQL port 5432"]
+"SERVICE DISCOVERY
+ssh" [shape=oval]
+"SERVICE DISCOVERY
+ssh" [tooltip="ET SCAN Potential SSH Scan"]
+"VULNERABILTY DISCOVERY
+ms-sql-s" [shape=oval]
+"VULNERABILTY DISCOVERY
+ms-sql-s" [tooltip="ET POLICY Suspicious inbound to mySQL port 3306
+ET POLICY Suspicious inbound to mSQL port 4333
+ET POLICY Suspicious inbound to MSSQL port 1433
+ET POLICY Suspicious inbound to Oracle SQL port 1521
+ET SCAN Nessus User Agent
+ET POLICY Suspicious inbound to PostgreSQL port 5432"]
+"ARBITRARY CODE EXECUTION
+ssdp | ID: 355" [shape=box]
+"ARBITRARY CODE EXECUTION
+ssdp | ID: 355" [tooltip="GPL MISC UPnP malformed advertisement"]
+"REMOTE SERVICE EXPLOIT
+snmp | ID: 52" [shape=box]
+"REMOTE SERVICE EXPLOIT
+snmp | ID: 52" [tooltip="ET SNMP Samsung Printer SNMP Hardcode RW Community String"]
+"INFO DISCOVERY
+xdmcp" [shape=oval]
+"INFO DISCOVERY
+xdmcp" [tooltip="GPL WEB_SERVER mod_gzip_status access
+GPL RPC xdmcp info query"]
+"ACCOUNT MANIPULATION
+snmp | ID: 53" [shape=box]
+"ACCOUNT MANIPULATION
+snmp | ID: 53" [tooltip="GPL SNMP private access udp
+GPL SNMP public access udp"]
+"DATA DELIVERY
+http | ID: 246" [shape=hexagon]
+"DATA DELIVERY
+http | ID: 246" [tooltip="GPL WEB_SERVER perl post attempt"]
+"DATA EXFILTRATION
+http | ID: 26" [shape=hexagon]
+"DATA EXFILTRATION
+http | ID: 26" [tooltip="ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability"]
+"SERVICE DISCOVERY
+spt-automation" [shape=oval]
+"SERVICE DISCOVERY
+spt-automation" [tooltip="ET SCAN Potential VNC Scan 5800-5820
+ET SCAN Potential SSH Scan"]
+"SERVICE DISCOVERY
+unknown" [shape=oval]
+"SERVICE DISCOVERY
+unknown" [tooltip="ET SCAN Potential SSH Scan
+ET SCAN Potential VNC Scan 5900-5920"]
+"NETWORK DoS
+ssdp | ID: 55" [shape=hexagon]
+"NETWORK DoS
+ssdp | ID: 55" [tooltip="ET DOS Possible SSDP Amplification Scan in Progress"]
+}

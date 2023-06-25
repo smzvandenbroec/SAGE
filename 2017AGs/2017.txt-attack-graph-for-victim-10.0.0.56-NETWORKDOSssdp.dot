@@ -1,0 +1,44 @@
+digraph NETWORKDOSssdp {
+rankdir="BT"; 
+ graph [ nodesep="0.1", ranksep="0.02"] 
+ node [ fontname=Arial, fontsize=24,penwidth=3]; 
+ edge [ fontname=Arial, fontsize=20,penwidth=5 ];
+"Victim: 10.0.0.56
+NETWORK DoS
+ssdp" [shape=doubleoctagon, style=filled, fillcolor=salmon];
+{ rank = max; "Victim: 10.0.0.56
+NETWORK DoS
+ssdp"}
+"NETWORK DoS
+ssdp | ID: 55" -> "Victim: 10.0.0.56
+NETWORK DoS
+ssdp"
+"NETWORK DoS
+ssdp | ID: 55" [style=filled, fillcolor= salmon]
+{ rank=same; "NETWORK DoS
+ssdp | ID: 55"}
+"SERVICE DISCOVERY
+cpdlc" [style=filled, fillcolor= yellow]
+"SERVICE DISCOVERY
+cpdlc" -> "VULNERABILTY DISCOVERY
+postgresql" [ color=blue] [label=<<font color="blue"> start_next: 04/11/17, 13:59:37<br/>gap: 3920sec<br/>end_prev: 04/11/17, 12:54:17</font><br/><font color="blue"><b>Attacker: 10.0.254.31</b></font>>]
+"VULNERABILTY DISCOVERY
+postgresql" -> "NETWORK DoS
+ssdp | ID: 55" [ label="start_next: 04/11/17, 14:01:09
+gap: 67sec
+end_prev: 04/11/17, 14:00:02"][ fontcolor="blue" color=blue]
+"SERVICE DISCOVERY
+cpdlc" [shape=oval]
+"SERVICE DISCOVERY
+cpdlc" [tooltip="ET SCAN Potential VNC Scan 5900-5920"]
+"VULNERABILTY DISCOVERY
+postgresql" [shape=oval]
+"VULNERABILTY DISCOVERY
+postgresql" [tooltip="ET POLICY Suspicious inbound to MSSQL port 1433
+ET POLICY Suspicious inbound to Oracle SQL port 1521
+ET POLICY Suspicious inbound to PostgreSQL port 5432"]
+"NETWORK DoS
+ssdp | ID: 55" [shape=hexagon]
+"NETWORK DoS
+ssdp | ID: 55" [tooltip="ET DOS Possible SSDP Amplification Scan in Progress"]
+}

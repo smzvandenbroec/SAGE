@@ -1,0 +1,299 @@
+digraph NETWORKDOSmswbtserver {
+rankdir="BT"; 
+ graph [ nodesep="0.1", ranksep="0.02"] 
+ node [ fontname=Arial, fontsize=24,penwidth=3]; 
+ edge [ fontname=Arial, fontsize=20,penwidth=5 ];
+"Victim: 10.0.0.223
+NETWORK DoS
+ms-wbt-server" [shape=doubleoctagon, style=filled, fillcolor=salmon];
+{ rank = max; "Victim: 10.0.0.223
+NETWORK DoS
+ms-wbt-server"}
+"NETWORK DoS
+ms-wbt-server | ID: 36" -> "Victim: 10.0.0.223
+NETWORK DoS
+ms-wbt-server"
+"NETWORK DoS
+ms-wbt-server | ID: 36" [style=filled, fillcolor= salmon]
+{ rank=same; "NETWORK DoS
+ms-wbt-server | ID: 36"}
+"HOST DISCOVERY
+ms-wbt-server" [style=filled, fillcolor= yellow]
+"HOST DISCOVERY
+ms-wbt-server" -> "VULNERABILTY DISCOVERY
+ncube-lm" [ color=darkgreen] [label=<<font color="darkgreen"> start_next: 04/11/17, 13:32:40<br/>gap: 215sec<br/>end_prev: 04/11/17, 13:29:05</font><br/><font color="darkgreen"><b>Attacker: 10.0.254.35</b></font>>]
+"VULNERABILTY DISCOVERY
+ncube-lm" -> "SERVICE DISCOVERY
+cm" [ label="start_next: 04/11/17, 13:38:04
+gap: 256sec
+end_prev: 04/11/17, 13:33:48"][ fontcolor="darkgreen" color=darkgreen]
+"SERVICE DISCOVERY
+cm" -> "COMMAND AND CONTROL
+unknown | ID: 39" [ label="start_next: 04/11/17, 13:39:05
+gap: 60sec
+end_prev: 04/11/17, 13:38:04"][ fontcolor="darkgreen" color=darkgreen]
+"COMMAND AND CONTROL
+unknown | ID: 39" -> "NETWORK DoS
+ms-wbt-server | ID: 36" [ label="start_next: 04/11/17, 13:42:17
+gap: 192sec
+end_prev: 04/11/17, 13:39:05"][ fontcolor="darkgreen" color=darkgreen]
+"VULNERABILTY DISCOVERY
+postgresql" [style=filled, fillcolor= yellow]
+"VULNERABILTY DISCOVERY
+postgresql" -> "VULNERABILTY DISCOVERY
+ms-sql-s" [ color=blue] [label=<<font color="blue"> start_next: 04/11/17, 14:03:01<br/>gap: 3603sec<br/>end_prev: 04/11/17, 13:02:57</font><br/><font color="blue"><b>Attacker: 10.0.254.31</b></font>>]
+"VULNERABILTY DISCOVERY
+ms-sql-s" -> "SERVICE DISCOVERY
+unknown" [ label="start_next: 04/11/17, 14:04:31
+gap: 13sec
+end_prev: 04/11/17, 14:04:18"][ fontcolor="blue" color=blue]
+"SERVICE DISCOVERY
+unknown" -> "ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 309" [ label="start_next: 04/11/17, 14:04:45
+gap: 14sec
+end_prev: 04/11/17, 14:04:31"][ fontcolor="blue" color=blue]
+"ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 309" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: 52" [ label="start_next: 04/11/17, 14:05:21
+gap: -80sec
+end_prev: 04/11/17, 14:06:41"][ fontcolor="blue" color=blue]
+"REMOTE SERVICE EXPLOIT
+snmp | ID: 52" -> "COMMAND AND CONTROL
+unknown | ID: 308" [ label="start_next: 04/11/17, 14:05:45
+gap: 24sec
+end_prev: 04/11/17, 14:05:21"][ fontcolor="blue" color=blue]
+"COMMAND AND CONTROL
+unknown | ID: 308" -> "ACCOUNT MANIPULATION
+snmp | ID: 53" [ label="start_next: 04/11/17, 14:05:50
+gap: -110sec
+end_prev: 04/11/17, 14:07:41"][ fontcolor="blue" color=blue]
+"ACCOUNT MANIPULATION
+snmp | ID: 53" -> "DATA DELIVERY
+wsman | ID: 399" [ label="start_next: 04/11/17, 14:06:39
+gap: 41sec
+end_prev: 04/11/17, 14:05:58"][ fontcolor="blue" color=blue]
+"DATA DELIVERY
+wsman | ID: 399" -> "DATA EXFILTRATION
+wsman | ID: 63" [ label="start_next: 04/11/17, 14:06:42
+gap: 3sec
+end_prev: 04/11/17, 14:06:39"][ fontcolor="blue" color=blue]
+"DATA EXFILTRATION
+wsman | ID: 63" -> "SERVICE DISCOVERY
+rfb" [ label="start_next: 04/11/17, 16:22:36
+gap: 8154sec
+end_prev: 04/11/17, 14:06:42"][ fontcolor="blue" color=blue]
+"SERVICE DISCOVERY
+rfb" -> "VULNERABILTY DISCOVERY
+ahsp" [ label="start_next: 04/11/17, 16:27:31
+gap: 290sec
+end_prev: 04/11/17, 16:22:42"][ fontcolor="blue" color=blue]
+"VULNERABILTY DISCOVERY
+ahsp" -> "SERVICE DISCOVERY
+microsoft-ds" [ label="start_next: 04/11/17, 16:31:24
+gap: -294sec
+end_prev: 04/11/17, 16:36:18"][ fontcolor="blue" color=blue]
+"SERVICE DISCOVERY
+microsoft-ds" -> "ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 309" [ label="start_next: 04/11/17, 16:33:08
+gap: -164sec
+end_prev: 04/11/17, 16:35:52"][ fontcolor="blue" color=blue]
+"ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 309" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: 52" [ label="start_next: 04/11/17, 16:33:47
+gap: -170sec
+end_prev: 04/11/17, 16:36:37"][ fontcolor="blue" color=blue]
+"REMOTE SERVICE EXPLOIT
+snmp | ID: 52" -> "COMMAND AND CONTROL
+unknown | ID: 308" [ label="start_next: 04/11/17, 16:34:13
+gap: 26sec
+end_prev: 04/11/17, 16:33:47"][ fontcolor="blue" color=blue]
+"COMMAND AND CONTROL
+unknown | ID: 308" -> "ACCOUNT MANIPULATION
+snmp | ID: 53" [ label="start_next: 04/11/17, 16:34:19
+gap: -105sec
+end_prev: 04/11/17, 16:36:04"][ fontcolor="blue" color=blue]
+"ACCOUNT MANIPULATION
+snmp | ID: 53" -> "DATA DELIVERY
+wsman | ID: 399" [ label="start_next: 04/11/17, 16:35:00
+gap: 34sec
+end_prev: 04/11/17, 16:34:27"][ fontcolor="blue" color=blue]
+"DATA DELIVERY
+wsman | ID: 399" -> "DATA EXFILTRATION
+wsman | ID: 63" [ label="start_next: 04/11/17, 16:35:04
+gap: 3sec
+end_prev: 04/11/17, 16:35:00"][ fontcolor="blue" color=blue]
+"DATA EXFILTRATION
+wsman | ID: 63" -> "HOST DISCOVERY
+wsman" [ label="start_next: 04/11/17, 16:36:36
+gap: -10sec
+end_prev: 04/11/17, 16:36:46"][ fontcolor="blue" color=blue]
+"HOST DISCOVERY
+wsman" -> "SURFING
+wsman" [ label="start_next: 04/11/17, 16:36:38
+gap: 2sec
+end_prev: 04/11/17, 16:36:36"][ fontcolor="blue" color=blue]
+"SURFING
+wsman" -> "HOST DISCOVERY
+unknown" [ label="start_next: 04/11/17, 16:51:38
+gap: 892sec
+end_prev: 04/11/17, 16:36:46"][ fontcolor="blue" color=blue]
+"HOST DISCOVERY
+unknown" -> "ARBITRARY CODE EXECUTION
+unknown | ID: 47" [ label="start_next: 04/11/17, 16:51:39
+gap: 1sec
+end_prev: 04/11/17, 16:51:38"][ fontcolor="blue" color=blue]
+"ARBITRARY CODE EXECUTION
+unknown | ID: 47" -> "SURFING
+unknown" [ label="start_next: 04/11/17, 16:51:40
+gap: 1sec
+end_prev: 04/11/17, 16:51:39"][ fontcolor="blue" color=blue]
+"SURFING
+unknown" -> "INFO DISCOVERY
+unknown" [ label="start_next: 04/11/17, 16:51:42
+gap: -5sec
+end_prev: 04/11/17, 16:51:47"][ fontcolor="blue" color=blue]
+"INFO DISCOVERY
+unknown" -> "DATA EXFILTRATION
+unknown | ID: 301" [ label="start_next: 04/11/17, 16:51:43
+gap: 1sec
+end_prev: 04/11/17, 16:51:42"][ fontcolor="blue" color=blue]
+"DATA EXFILTRATION
+unknown | ID: 301" -> "NETWORK DoS
+ms-wbt-server | ID: 36" [ label="start_next: 04/11/17, 18:01:49
+gap: 4202sec
+end_prev: 04/11/17, 16:51:47"][ fontcolor="blue" color=blue]
+"SERVICE DISCOVERY
+dsd" [style=filled, fillcolor= yellow]
+"SERVICE DISCOVERY
+dsd" -> "VULNERABILTY DISCOVERY
+postgresql" [ color=purple] [label=<<font color="purple"> start_next: 04/11/17, 13:09:59<br/>gap: 310sec<br/>end_prev: 04/11/17, 13:04:49</font><br/><font color="purple"><b>Attacker: 10.0.254.33</b></font>>]
+"VULNERABILTY DISCOVERY
+postgresql" -> "VULNERABILTY DISCOVERY
+postgresql" [ label="start_next: 04/11/17, 15:47:14
+gap: 9435sec
+end_prev: 04/11/17, 13:09:59"][ fontcolor="purple" color=purple]
+"VULNERABILTY DISCOVERY
+postgresql" -> "NETWORK DoS
+ms-wbt-server | ID: 36" [ label="start_next: 04/11/17, 15:47:15
+gap: 0sec
+end_prev: 04/11/17, 15:47:16"][ fontcolor="purple" color=purple]
+"HOST DISCOVERY
+ms-wbt-server" [shape=oval]
+"HOST DISCOVERY
+ms-wbt-server" [tooltip="ET SCAN Behavioral Unusually fast Terminal Server Traffic Potential Scan or Infection (Inbound)"]
+"VULNERABILTY DISCOVERY
+ncube-lm" [shape=oval]
+"VULNERABILTY DISCOVERY
+ncube-lm" [tooltip="ET POLICY Suspicious inbound to Oracle SQL port 1521
+ET POLICY Suspicious inbound to PostgreSQL port 5432"]
+"SERVICE DISCOVERY
+cm" [shape=oval]
+"SERVICE DISCOVERY
+cm" [tooltip="ET SCAN Potential VNC Scan 5900-5920"]
+"COMMAND AND CONTROL
+unknown | ID: 39" [shape=box]
+"COMMAND AND CONTROL
+unknown | ID: 39" [tooltip="ET POLICY RDP connection confirm"]
+"NETWORK DoS
+ms-wbt-server | ID: 36" [shape=hexagon]
+"NETWORK DoS
+ms-wbt-server | ID: 36" [tooltip="ET DOS Microsoft Remote Desktop (RDP) Syn then Reset 30 Second DoS Attempt"]
+"VULNERABILTY DISCOVERY
+postgresql" [shape=oval]
+"VULNERABILTY DISCOVERY
+postgresql" [tooltip="ET POLICY Suspicious inbound to MSSQL port 1433
+ET POLICY Suspicious inbound to mySQL port 3306
+ET POLICY Suspicious inbound to Oracle SQL port 1521
+ET POLICY Suspicious inbound to PostgreSQL port 5432"]
+"VULNERABILTY DISCOVERY
+ms-sql-s" [shape=oval]
+"VULNERABILTY DISCOVERY
+ms-sql-s" [tooltip="ET POLICY Suspicious inbound to MSSQL port 1433
+ET POLICY Suspicious inbound to Oracle SQL port 1521
+ET POLICY Suspicious inbound to mSQL port 4333"]
+"SERVICE DISCOVERY
+unknown" [shape=oval]
+"SERVICE DISCOVERY
+unknown" [tooltip="ET SCAN Potential VNC Scan 5800-5820"]
+"ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 309" [shape=box]
+"ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 309" [tooltip="GPL NETBIOS DCERPC Remote Activation bind attempt
+ET CURRENT_EVENTS QNAP Shellshock CVE-2014-6271
+GPL NETBIOS DCERPC IActivation little endian bind attempt
+GPL MISC UPnP malformed advertisement
+GPL NETBIOS SMB-DS Session Setup NTMLSSP unicode asn1 overflow attempt"]
+"REMOTE SERVICE EXPLOIT
+snmp | ID: 52" [shape=box]
+"REMOTE SERVICE EXPLOIT
+snmp | ID: 52" [tooltip="ET SNMP Samsung Printer SNMP Hardcode RW Community String"]
+"COMMAND AND CONTROL
+unknown | ID: 308" [shape=box]
+"COMMAND AND CONTROL
+unknown | ID: 308" [tooltip="ET POLICY RDP connection confirm"]
+"ACCOUNT MANIPULATION
+snmp | ID: 53" [shape=box]
+"ACCOUNT MANIPULATION
+snmp | ID: 53" [tooltip="GPL SNMP private access udp
+GPL SNMP public access udp"]
+"DATA DELIVERY
+wsman | ID: 399" [shape=hexagon]
+"DATA DELIVERY
+wsman | ID: 399" [tooltip="GPL WEB_SERVER perl post attempt"]
+"DATA EXFILTRATION
+wsman | ID: 63" [shape=hexagon]
+"DATA EXFILTRATION
+wsman | ID: 63" [tooltip="ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability"]
+"SERVICE DISCOVERY
+rfb" [shape=oval]
+"SERVICE DISCOVERY
+rfb" [tooltip="ET SCAN Potential VNC Scan 5800-5820
+ET SCAN Potential VNC Scan 5900-5920"]
+"VULNERABILTY DISCOVERY
+ahsp" [shape=oval]
+"VULNERABILTY DISCOVERY
+ahsp" [tooltip="ET POLICY Suspicious inbound to mySQL port 3306
+ET POLICY Suspicious inbound to mSQL port 4333
+ET POLICY Suspicious inbound to MSSQL port 1433
+ET POLICY Suspicious inbound to Oracle SQL port 1521
+ET POLICY Suspicious inbound to PostgreSQL port 5432"]
+"SERVICE DISCOVERY
+microsoft-ds" [shape=oval]
+"SERVICE DISCOVERY
+microsoft-ds" [tooltip="ET SCAN Behavioral Unusual Port 445 traffic Potential Scan or Infection
+ET SCAN Potential VNC Scan 5900-5920"]
+"HOST DISCOVERY
+wsman" [shape=oval]
+"HOST DISCOVERY
+wsman" [tooltip="ET SCAN Possible Nmap User-Agent Observed
+ET SCAN Nmap Scripting Engine User-Agent Detected (Nmap Scripting Engine)"]
+"SURFING
+wsman" [shape=oval]
+"SURFING
+wsman" [tooltip="ET WEB_SERVER WEB-PHP phpinfo access"]
+"HOST DISCOVERY
+unknown" [shape=oval]
+"HOST DISCOVERY
+unknown" [tooltip="ET SCAN Possible Nmap User-Agent Observed
+ET SCAN Nmap Scripting Engine User-Agent Detected (Nmap Scripting Engine)"]
+"ARBITRARY CODE EXECUTION
+unknown | ID: 47" [shape=box]
+"ARBITRARY CODE EXECUTION
+unknown | ID: 47" [tooltip="ET CURRENT_EVENTS QNAP Shellshock CVE-2014-6271"]
+"SURFING
+unknown" [shape=oval]
+"SURFING
+unknown" [tooltip="ET WEB_SERVER WEB-PHP phpinfo access"]
+"INFO DISCOVERY
+unknown" [shape=oval]
+"INFO DISCOVERY
+unknown" [tooltip="GPL WEB_SERVER globals.pl access"]
+"DATA EXFILTRATION
+unknown | ID: 301" [shape=hexagon]
+"DATA EXFILTRATION
+unknown | ID: 301" [tooltip="ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability"]
+"SERVICE DISCOVERY
+dsd" [shape=oval]
+"SERVICE DISCOVERY
+dsd" [tooltip="ET SCAN Potential VNC Scan 5900-5920"]
+}

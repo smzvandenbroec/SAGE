@@ -1,0 +1,240 @@
+digraph "" {
+	"REMOTE SERVICE EXPLOIT
+http | ID: 137"	[shape=box,
+		tooltip="\"ET WEB_SERVER Script tag in URI Possible Cross Site Scripting Attempt\""];
+	"REMOTE SERVICE EXPLOIT
+http | ID: 299"	[shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SERVER Script tag in URI Possible Cross Site Scripting Attempt\""];
+	"REMOTE SERVICE EXPLOIT
+http | ID: 96"	[shape=box,
+		tooltip="\"ET WEB_SERVER Script tag in URI Possible Cross Site Scripting Attempt\""];
+	"REMOTE SERVICE EXPLOIT
+http | ID: 374"	[shape=box,
+		tooltip="\"ET WEB_SERVER Script tag in URI Possible Cross Site Scripting Attempt\""];
+	"REMOTE SERVICE EXPLOIT
+http | ID: 370"	[fillcolor=yellow,
+		shape=box,
+		style="dotted,filled",
+		tooltip="\"ET WEB_SERVER Script tag in URI Possible Cross Site Scripting Attempt\""];
+	"REMOTE SERVICE EXPLOIT
+http | ID: 372"	[fillcolor=yellow,
+		shape=box,
+		style="dotted,filled",
+		tooltip="\"ET WEB_SERVER Script tag in URI Possible Cross Site Scripting Attempt\""];
+	"REMOTE SERVICE EXPLOIT
+http | ID: 377"	[shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SERVER Script tag in URI Possible Cross Site Scripting Attempt\""];
+	"REMOTE SERVICE EXPLOIT
+http | ID: 634"	[fillcolor=yellow,
+		shape=box,
+		style=filled,
+		tooltip="\"ET WEB_SERVER Script tag in URI Possible Cross Site Scripting Attempt\""];
+	"REMOTE SERVICE EXPLOIT
+wap-wsp | ID: 371"	[fillcolor=yellow,
+		shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SERVER Script tag in URI Possible Cross Site Scripting Attempt\""];
+	"REMOTE SERVICE EXPLOIT
+http | ID: 33"	[shape=box,
+		tooltip="\"ET WEB_SERVER Script tag in URI Possible Cross Site Scripting Attempt\""];
+	"REMOTE SERVICE EXPLOIT
+http | ID: 347"	[shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SERVER Script tag in URI Possible Cross Site Scripting Attempt\""];
+	"REMOTE SERVICE EXPLOIT
+http | ID: 457"	[fillcolor=yellow,
+		shape=box,
+		style="dotted,filled",
+		tooltip="\"ET WEB_SERVER Script tag in URI Possible Cross Site Scripting Attempt\""];
+	"REMOTE SERVICE EXPLOIT
+us-cli | ID: 505"	[shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SERVER Script tag in URI Possible Cross Site Scripting Attempt\""];
+	"REMOTE SERVICE EXPLOIT
+remoteware-cl | ID: 517"	[shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SERVER Script tag in URI Possible Cross Site Scripting Attempt\""];
+	"REMOTE SERVICE EXPLOIT
+cslistener | ID: 139"	[shape=box,
+		tooltip="\"ET WEB_SERVER Script tag in URI Possible Cross Site Scripting Attempt\""];
+	"DATA MANIPULATION
+http | ID: 17"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SERVER Possible SQL Injection Attempt SELECT FROM
+ET WEB_SERVER MYSQL SELECT CONCAT SQL Injection Attempt
+ET WEB_SERVER \
+Possible SQL Injection Attempt UNION SELECT\""];
+	"DATA MANIPULATION
+http | ID: 17" -> "REMOTE SERVICE EXPLOIT
+http | ID: 374"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 03/11/18, 22:32:09\ngap: -5sec\nend_prev: 03/11/18, 22:32:14\"'}"];
+	"DATA MANIPULATION
+http | ID: 17" -> "REMOTE SERVICE EXPLOIT
+http | ID: 370"	[key=0,
+		data="{'color': 'maroon', 'label': '<font color=\"maroon\"> start_next: 03/11/18, 21:15:04<br/>gap: -12sec<br/>end_prev: 03/11/18, 21:15:\
+16</font><br/><font color=\"maroon\"><b>Attacker: 10.0.254.202</b></font>'}"];
+	"DATA MANIPULATION
+http | ID: 17" -> "REMOTE SERVICE EXPLOIT
+http | ID: 372"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 21:44:36\ngap: -1sec\nend_prev: 03/11/18, 21:44:37\"'}"];
+	"DATA MANIPULATION
+http | ID: 17" -> "REMOTE SERVICE EXPLOIT
+http | ID: 377"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 22:42:32\ngap: -6sec\nend_prev: 03/11/18, 22:42:38\"'}"];
+	"DATA MANIPULATION
+http | ID: 17" -> "REMOTE SERVICE EXPLOIT
+http | ID: 634"	[key=0,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 22:55:12\ngap: -2sec\nend_prev: 03/11/18, 22:55:\
+14\"'}"];
+	"DATA MANIPULATION
+http | ID: 17" -> "REMOTE SERVICE EXPLOIT
+wap-wsp | ID: 371"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 21:13:10\ngap: -10sec\nend_prev: 03/11/18, 21:13:20\"'}"];
+	"DATA MANIPULATION
+remoteware-cl | ID: 23"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SERVER Possible SQL Injection Attempt SELECT FROM
+ET WEB_SERVER Possible SQL Injection Attempt UNION SELECT\""];
+	"DATA MANIPULATION
+remoteware-cl | ID: 23" -> "REMOTE SERVICE EXPLOIT
+remoteware-cl | ID: 517"	[key=0,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 18:08:43\ngap: -96sec\nend_prev: 03/11/18, 18:\
+10:19\"'}"];
+	"DATA MANIPULATION
+remoteware-cl | ID: 23" -> "REMOTE SERVICE EXPLOIT
+remoteware-cl | ID: 517"	[key=1,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 15:49:34\ngap: -95sec\nend_prev: 03/11/18, 15:51:\
+09\"'}"];
+	"SERVICE DISCOVERY
+ff-ice"	[shape=oval,
+		tooltip="\"ET SCAN Potential VNC Scan 5900-5920
+ET SCAN Potential VNC Scan 5800-5820\""];
+	"SERVICE DISCOVERY
+ff-ice" -> "REMOTE SERVICE EXPLOIT
+us-cli | ID: 505"	[key=0,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 20:34:30\ngap: 383sec\nend_prev: 03/11/18, 20:28:\
+07\"'}"];
+	"VULNERABILTY DISCOVERY
+us-cli"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Nikto Web App Scan in Progress
+ETPRO WEB_SERVER SQLMap Scan Tool User Agent
+ET SCAN Sqlmap SQL Injection Scan\""];
+	"VULNERABILTY DISCOVERY
+us-cli" -> "REMOTE SERVICE EXPLOIT
+us-cli | ID: 505"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 03/11/18, 15:29:20\ngap: -228sec\nend_prev: 03/11/18, 15:33:\
+07\"'}"];
+	"INFO DISCOVERY
+http"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"GPL WEB_SERVER viewcode access
+GPL WEB_SERVER .htaccess access
+GPL WEB_SERVER writeto.cnf access
+GPL WEB_SERVER iisadmin access
+\
+ET WEB_SERVER PHP Easteregg Information-Disclosure (funny-logo)
+ET WEB_SPECIFIC_APPS Request to Wordpress W3TC Plug-in dbcache Directory
+\
+GPL WEB_SERVER services.cnf access
+ET WEB_SERVER PHP Easteregg Information-Disclosure (zend-logo)
+GPL EXPLOIT unicode directory \
+traversal attempt
+ET WEB_SERVER PHP Easteregg Information-Disclosure (php-logo)
+GPL WEB_SERVER service.cnf access
+GPL EXPLOIT iisadmpwd \
+attempt
+ET WEB_SERVER PHP SESSION SuperGlobal in URI
+GPL WEB_SERVER /~root access
+GPL WEB_SERVER authors.pwd access
+ET WEB_SERVER \
+PHP ENV SuperGlobal in URI
+GPL EXPLOIT .cnf access
+ET POLICY Proxy TRACE Request - inbound
+GPL WEB_SERVER .htpasswd access
+GPL WEB_\
+SERVER global.asa access
+ET WEB_SERVER PHP SERVER SuperGlobal in URI
+GPL EXPLOIT fpcount access
+GPL WEB_SERVER globals.pl access
+\
+GPL WEB_SERVER 403 Forbidden
+GPL WEB_SERVER service.pwd
+GPL EXPLOIT ISAPI .idq attempt
+ET WEB_SERVER PHP Easteregg Information-Disclosure (\
+phpinfo)
+GPL WEB_SERVER printenv access
+GPL WEB_SERVER author.exe access
+GPL EXPLOIT iissamples access
+GPL EXPLOIT .htr access
+ET \
+WEB_SERVER PHP REQUEST SuperGlobal in URI\""];
+	"INFO DISCOVERY
+http" -> "REMOTE SERVICE EXPLOIT
+http | ID: 96"	[key=0,
+		data="{'color': 'purple', 'label': '<font color=\"purple\"> start_next: 03/11/18, 21:17:03<br/>gap: 5sec<br/>end_prev: 03/11/18, 21:16:58</\
+font><br/><font color=\"purple\"><b>Attacker: 10.0.254.202</b></font>'}"];
+	"TRUSTED ORG. EXPLOIT
+http | ID: 362"	[shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SERVER Onmouseover= in URI - Likely Cross Site Scripting Attempt\""];
+	"TRUSTED ORG. EXPLOIT
+http | ID: 362" -> "REMOTE SERVICE EXPLOIT
+cslistener | ID: 139"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 21:42:40\ngap: 0sec\nend_prev: 03/11/18, 21:42:40\"'}"];
+	"SURFING
+http"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET WEB_SERVER WEB-PHP phpinfo access\""];
+	"SURFING
+http" -> "REMOTE SERVICE EXPLOIT
+http | ID: 299"	[key=0,
+		data="{'color': 'purple', 'label': '<font color=\"purple\"> start_next: 03/11/18, 20:03:14<br/>gap: 11sec<br/>end_prev: 03/11/18, 20:03:\
+03</font><br/><font color=\"purple\"><b>Attacker: 10.0.254.202</b></font>'}"];
+	"ROOT PRIVILEGE ESCALATION
+http | ID: 615"	[shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SERVER Possible SQLi xp_cmdshell POST body
+ET WEB_SERVER Attempt To Access MSSQL xp_cmdshell Stored Procedure Via URI\""];
+	"ROOT PRIVILEGE ESCALATION
+http | ID: 615" -> "REMOTE SERVICE EXPLOIT
+http | ID: 347"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 20:45:55\ngap: -42sec\nend_prev: 03/11/18, 20:46:37\"'}"];
+	"INFO DISCOVERY
+unknown"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"GPL WEB_SERVER 403 Forbidden\""];
+	"INFO DISCOVERY
+unknown" -> "REMOTE SERVICE EXPLOIT
+http | ID: 137"	[key=0,
+		data="{'color': 'maroon', 'label': '<font color=\"maroon\"> start_next: 03/11/18, 22:26:43<br/>gap: -20sec<br/>end_prev: 03/11/18, 22:27:\
+03</font><br/><font color=\"maroon\"><b>Attacker: 10.0.254.104</b></font>'}"];
+	"INFO DISCOVERY
+unknown" -> "REMOTE SERVICE EXPLOIT
+http | ID: 33"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 03/11/18, 15:37:48\ngap: -67sec\nend_prev: 03/11/18, 15:38:55\"'}"];
+	"VULNERABILTY DISCOVERY
+http"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Suspicious inbound to mySQL port 3306
+ET SCAN Suspicious inbound to MSSQL port 1433
+ET SCAN Nikto Web App Scan in Progress
+\
+ET SCAN Suspicious inbound to PostgreSQL port 5432
+ET SCAN Suspicious inbound to Oracle SQL port 1521
+ET SCAN Suspicious inbound \
+to mSQL port 4333\""];
+	"VULNERABILTY DISCOVERY
+http" -> "REMOTE SERVICE EXPLOIT
+http | ID: 137"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 21:41:20\ngap: -2sec\nend_prev: 03/11/18, 21:41:21\"'}"];
+}

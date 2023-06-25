@@ -1,0 +1,1862 @@
+digraph "" {
+	"VULNERABILTY DISCOVERY
+postgresql"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET POLICY Suspicious inbound to PostgreSQL port 5432\""];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "VULNERABILTY DISCOVERY
+postgresql"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 13:59:59\ngap: 3353sec\nend_prev: 04/11/17, 13:04:06\"'}"];
+	"VULNERABILTY DISCOVERY
+ncube-lm"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET POLICY Suspicious inbound to mySQL port 3306
+ET POLICY Suspicious inbound to mSQL port 4333
+ET POLICY Suspicious inbound to \
+MSSQL port 1433
+ET POLICY Suspicious inbound to Oracle SQL port 1521
+ET SCAN Nessus User Agent
+ET POLICY Suspicious inbound to PostgreSQL \
+port 5432\""];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 13:28:50\ngap: 463sec\nend_prev: 04/11/17, 13:21:07\"'}"];
+	"VULNERABILTY DISCOVERY
+ms-sql-s"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET POLICY Suspicious inbound to MSSQL port 1433
+ET POLICY Suspicious inbound to mySQL port 3306
+ET POLICY Suspicious inbound to \
+Oracle SQL port 1521
+ET POLICY Suspicious inbound to mSQL port 4333\""];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '<font color=\"blue\"> start_next: 04/11/17, 13:59:23<br/>gap: 3327sec<br/>end_prev: \
+04/11/17, 13:03:57</font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"VULNERABILTY DISCOVERY
+mysql"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET POLICY Suspicious inbound to MSSQL port 1433
+ET POLICY Suspicious inbound to mySQL port 3306
+ET POLICY Suspicious inbound to \
+Oracle SQL port 1521
+ET POLICY Suspicious inbound to PostgreSQL port 5432\""];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "VULNERABILTY DISCOVERY
+mysql"	[key=0,
+		data="{'color': 'brown', 'fontcolor': '\"blue\"', 'label': '<font color=\"brown\"> start_next: 04/11/17, 14:31:02<br/>gap: 908sec<br/>end_\
+prev: 04/11/17, 14:15:54</font><br/><font color=\"brown\"><b>Attacker: 10.0.254.35</b></font>'}"];
+	"VULNERABILTY DISCOVERY
+ahsp"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET POLICY Suspicious inbound to PostgreSQL port 5432
+ET POLICY Suspicious inbound to MSSQL port 1433
+ET POLICY Suspicious inbound \
+to Oracle SQL port 1521
+ET POLICY Suspicious inbound to mSQL port 4333\""];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "VULNERABILTY DISCOVERY
+ahsp"	[key=0,
+		data="{'color': 'purple', 'label': '<font color=\"purple\"> start_next: 04/11/17, 18:12:00<br/>gap: 839sec<br/>end_prev: 04/11/17, 17:58:\
+01</font><br/><font color=\"purple\"><b>Attacker: 10.0.254.30</b></font>'}"];
+	"DATA EXFILTRATION
+http-alt | ID: 25"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability
+ET WEB_SERVER Possible MySQL SQLi Attempt Information Schema \
+Access\""];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "DATA EXFILTRATION
+http-alt | ID: 25"	[key=0,
+		data="{'color': 'turquoise', 'fontcolor': '\"turquoise\"', 'label': '\"start_next: 04/11/17, 13:21:02\ngap: 427sec\nend_prev: 04/11/17, 13:\
+13:55\"'}"];
+	"SERVICE DISCOVERY
+ssh"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Potential SSH Scan
+ET SCAN Potential VNC Scan 5900-5920\""];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "SERVICE DISCOVERY
+ssh"	[key=0,
+		data="{'color': 'blue', 'label': '<font color=\"blue\"> start_next: 04/11/17, 13:34:49<br/>gap: 859sec<br/>end_prev: 04/11/17, 13:20:30</\
+font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"HOST DISCOVERY
+ms-wbt-server"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Behavioral Unusually fast Terminal Server Traffic Potential Scan or Infection (Inbound)\""];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "HOST DISCOVERY
+ms-wbt-server"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 13:20:54\ngap: 23sec\nend_prev: 04/11/17, 13:20:31\"'}"];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "HOST DISCOVERY
+ms-wbt-server"	[key=1,
+		data="{'color': 'turquoise', 'fontcolor': '\"turquoise\"', 'label': '\"start_next: 04/11/17, 15:14:53\ngap: 118sec\nend_prev: 04/11/17, 15:\
+12:55\"'}"];
+	"SERVICE DISCOVERY
+unknown"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Potential VNC Scan 5800-5820\""];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "SERVICE DISCOVERY
+unknown"	[key=0,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '<font color=\"brown\"> start_next: 04/11/17, 13:18:46<br/>gap: -4sec<br/>end_\
+prev: 04/11/17, 13:18:50</font><br/><font color=\"brown\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"INFO DISCOVERY
+xdmcp"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"GPL RPC xdmcp info query\""];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "INFO DISCOVERY
+xdmcp"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:03:54\ngap: 84sec\nend_prev: 04/11/17, 18:02:30\"'}"];
+	"COMMAND AND CONTROL
+unknown | ID: 39"	[fillcolor=yellow,
+		shape=box,
+		style=filled,
+		tooltip="\"ET POLICY RDP connection confirm\""];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "COMMAND AND CONTROL
+unknown | ID: 39"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 14:00:15\ngap: 1215sec\nend_prev: 04/11/17, 13:40:\
+00\"'}"];
+	"ACCOUNT MANIPULATION
+snmp | ID: 53"	[shape=box,
+		tooltip="\"GPL SNMP private access udp
+GPL SNMP public access udp\""];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "ACCOUNT MANIPULATION
+snmp | ID: 53"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 13:58:50\ngap: 3163sec\nend_prev: 04/11/17, 13:06:07\"'}"];
+	"ARBITRARY CODE EXECUTION
+http | ID: 32"	[shape=box,
+		tooltip="\"ET CURRENT_EVENTS QNAP Shellshock CVE-2014-6271\""];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "ARBITRARY CODE EXECUTION
+http | ID: 32"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 17:58:04\ngap: 2sec\nend_prev: 04/11/17, 17:58:02\"'}"];
+	"SURFING
+http"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET WEB_SERVER WEB-PHP phpinfo access\""];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "SURFING
+http"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 15:53:13\ngap: 1sec\nend_prev: 04/11/17, 15:53:12\"'}"];
+	"HOST DISCOVERY
+unknown"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Possible Nmap User-Agent Observed
+ET SCAN Nmap Scripting Engine User-Agent Detected (Nmap Scripting Engine)\""];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "HOST DISCOVERY
+unknown"	[key=0,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 13:32:34\ngap: 238sec\nend_prev: 04/11/17, 13:28:36\"'}"];
+	"ARBITRARY CODE EXECUTION
+ssdp | ID: 355"	[shape=box,
+		tooltip="\"GPL MISC UPnP malformed advertisement\""];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "ARBITRARY CODE EXECUTION
+ssdp | ID: 355"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:58:11\ngap: -226sec\nend_prev: 04/11/17, 19:01:57\"'}"];
+	"SERVICE DISCOVERY
+cm"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Potential VNC Scan 5900-5920\""];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "SERVICE DISCOVERY
+cm"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 19:41:51\ngap: -1sec\nend_prev: 04/11/17, 19:41:52\"'}"];
+	"SERVICE DISCOVERY
+ag-swim"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Potential VNC Scan 5900-5920\""];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "SERVICE DISCOVERY
+ag-swim"	[key=0,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 04/11/17, 13:44:43\ngap: -39sec\nend_prev: 04/11/17, 13:\
+45:22\"'}"];
+	"HOST DISCOVERY
+http"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Possible Nmap User-Agent Observed
+ET SCAN Nmap Scripting Engine User-Agent Detected (Nmap Scripting Engine)\""];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "HOST DISCOVERY
+http"	[key=0,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 13:32:34\ngap: 372sec\nend_prev: 04/11/17, 13:26:22\"'}"];
+	"BRUTE FORCE CREDENTIALS
+pop3s | ID: 886"	[shape=box,
+		tooltip="\"ET SCAN Rapid POP3S Connections - Possible Brute Force Attack\""];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "BRUTE FORCE CREDENTIALS
+pop3s | ID: 886"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:00:31\ngap: 31sec\nend_prev: 04/11/17, 14:00:01\"'}"];
+	"INFO DISCOVERY
+http"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"GPL WEB_SERVER mod_gzip_status access\""];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "INFO DISCOVERY
+http"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 15:53:15\ngap: -108sec\nend_prev: 04/11/17, 15:55:\
+03\"'}"];
+	"NETWORK DoS
+ms-wbt-server | ID: 36"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET DOS Microsoft Remote Desktop (RDP) Syn then Reset 30 Second DoS Attempt\""];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "NETWORK DoS
+ms-wbt-server | ID: 36"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 15:47:15\ngap: 0sec\nend_prev: 04/11/17, 15:47:16\"'}"];
+	"NETWORK DoS
+ssdp | ID: 55"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET DOS Possible SSDP Amplification Scan in Progress\""];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "NETWORK DoS
+ssdp | ID: 55"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:01:09\ngap: 67sec\nend_prev: 04/11/17, 14:00:02\"'}"];
+	"SERVICE DISCOVERY
+ftp"	[shape=oval,
+		tooltip="\"ET SCAN Nessus FTP Scan detected (ftp_writeable_directories.nasl)
+ET SCAN Nessus FTP Scan detected (ftp_anonymous.nasl)
+ET SCAN \
+Behavioral Unusual Port 445 traffic Potential Scan or Infection
+ET SCAN Potential VNC Scan 5900-5920\""];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "SERVICE DISCOVERY
+ftp"	[key=0,
+		data="{'color': 'blue', 'label': '<font color=\"blue\"> start_next: 04/11/17, 14:00:30<br/>gap: 3458sec<br/>end_prev: 04/11/17, 13:02:52</\
+font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"ARBITRARY CODE EXECUTION
+epmap | ID: 64"	[shape=box,
+		tooltip="\"ET EXPLOIT Possible Pure-FTPd CVE-2014-6271 attempt
+GPL NETBIOS DCERPC Remote Activation bind attempt
+GPL NETBIOS DCERPC IActivation \
+little endian bind attempt\""];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "ARBITRARY CODE EXECUTION
+epmap | ID: 64"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:03:08\ngap: 130sec\nend_prev: 04/11/17, 14:00:58\"'}"];
+	"SERVICE DISCOVERY
+asmgcs"	[shape=oval,
+		tooltip="\"ET SCAN Potential VNC Scan 5800-5820
+ET SCAN Potential VNC Scan 5900-5920\""];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "SERVICE DISCOVERY
+asmgcs"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 15:51:09\ngap: 16sec\nend_prev: 04/11/17, 15:50:53\"'}"];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		data="{'color': 'tomato', 'fontcolor': '\"tomato\"', 'label': '\"start_next: 04/11/17, 18:04:33\ngap: 4153sec\nend_prev: 04/11/17, 16:55:\
+20\"'}"];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		data="{'color': 'blue', 'label': '<font color=\"blue\"> start_next: 04/11/17, 14:02:53<br/>gap: 3683sec<br/>end_prev: 04/11/17, 13:01:30</\
+font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "VULNERABILTY DISCOVERY
+ahsp"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:27:52\ngap: 2040sec\nend_prev: 04/11/17, 15:53:52\"'}"];
+	"VULNERABILTY DISCOVERY
+http"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Nikto Web App Scan in Progress\""];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "VULNERABILTY DISCOVERY
+http"	[key=0,
+		data="{'color': 'purple', 'label': '<font color=\"purple\"> start_next: 04/11/17, 20:39:51<br/>gap: 11214sec<br/>end_prev: 04/11/17, 17:\
+32:58</font><br/><font color=\"purple\"><b>Attacker: 10.0.254.30</b></font>'}"];
+	"HOST DISCOVERY
+http-alt"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Possible Nmap User-Agent Observed
+ET SCAN Nmap Scripting Engine User-Agent Detected (Nmap Scripting Engine)\""];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "HOST DISCOVERY
+http-alt"	[key=0,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 13:21:51\ngap: 384sec\nend_prev: 04/11/17, 13:15:27\"'}"];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "HOST DISCOVERY
+ms-wbt-server"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 20:57:27\ngap: 1sec\nend_prev: 04/11/17, 20:57:26\"'}"];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "SERVICE DISCOVERY
+unknown"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '<font color=\"blue\"> start_next: 04/11/17, 14:07:52<br/>gap: -177sec<br/>end_prev: \
+04/11/17, 14:10:49</font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "SERVICE DISCOVERY
+unknown"	[key=1,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:02:05\ngap: 595sec\nend_prev: 04/11/17, 13:52:11\"'}"];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "SERVICE DISCOVERY
+unknown"	[key=2,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 14:07:12\ngap: 396sec\nend_prev: 04/11/17, 14:00:36\"'}"];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "ACCOUNT MANIPULATION
+snmp | ID: 53"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:01:27\ngap: 3169sec\nend_prev: 04/11/17, 13:08:38\"'}"];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "HOST DISCOVERY
+unknown"	[key=0,
+		data="{'color': 'blue', 'label': '<font color=\"blue\"> start_next: 04/11/17, 14:02:06<br/>gap: 365sec<br/>end_prev: 04/11/17, 13:56:02</\
+font><br/><font color=\"blue\"><b>Attacker: 10.0.254.34</b></font>'}"];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "HOST DISCOVERY
+unknown"	[key=1,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 20:48:01\ngap: 181sec\nend_prev: 04/11/17, 20:45:00\"'}"];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "HOST DISCOVERY
+unknown"	[key=2,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 14:07:13\ngap: 286sec\nend_prev: 04/11/17, 14:02:27\"'}"];
+	"SERVICE DISCOVERY
+epmap"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Behavioral Unusual Port 135 traffic Potential Scan or Infection
+ET SCAN Potential VNC Scan 5800-5820
+ET SCAN Potential \
+VNC Scan 5900-5920\""];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "SERVICE DISCOVERY
+epmap"	[key=0,
+		data="{'color': 'blue', 'label': '<font color=\"blue\"> start_next: 04/11/17, 13:35:02<br/>gap: 2011sec<br/>end_prev: 04/11/17, 13:01:31</\
+font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 309"	[fillcolor=yellow,
+		shape=box,
+		style=filled,
+		tooltip="\"GPL NETBIOS SMB-DS Session Setup NTMLSSP unicode asn1 overflow attempt\""];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 309"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:04:20\ngap: 76sec\nend_prev: 04/11/17, 18:03:04\"'}"];
+	"SERVICE DISCOVERY
+ff-ice"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Potential VNC Scan 5900-5920\""];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "SERVICE DISCOVERY
+ff-ice"	[key=0,
+		data="{'color': 'purple', 'label': '<font color=\"purple\"> start_next: 04/11/17, 16:34:38<br/>gap: -1sec<br/>end_prev: 04/11/17, 16:34:\
+38</font><br/><font color=\"purple\"><b>Attacker: 10.0.254.35</b></font>'}"];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "ARBITRARY CODE EXECUTION
+ssdp | ID: 355"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 17:59:57\ngap: 56sec\nend_prev: 04/11/17, 17:59:02\"'}"];
+	"DATA EXFILTRATION
+microsoft-ds | ID: 37"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"GPL NETBIOS SMB-DS IPC$ unicode share access\""];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "DATA EXFILTRATION
+microsoft-ds | ID: 37"	[key=0,
+		data="{'color': 'turquoise', 'label': '<font color=\"turquoise\"> start_next: 04/11/17, 16:30:20<br/>gap: 2187sec<br/>end_prev: 04/11/17, \
+15:53:53</font><br/><font color=\"turquoise\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "SERVICE DISCOVERY
+cm"	[key=0,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 14:16:44\ngap: -14sec\nend_prev: 04/11/17, 14:16:58\"'}"];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "SERVICE DISCOVERY
+ag-swim"	[key=0,
+		data="{'color': 'darkgreen', 'label': '<font color=\"darkgreen\"> start_next: 04/11/17, 13:53:29<br/>gap: 340sec<br/>end_prev: 04/11/17, \
+13:47:50</font><br/><font color=\"darkgreen\"><b>Attacker: 10.0.254.35</b></font>'}"];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "HOST DISCOVERY
+http"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"purple\"', 'label': '<font color=\"blue\"> start_next: 04/11/17, 14:02:06<br/>gap: 564sec<br/>end_\
+prev: 04/11/17, 13:52:43</font><br/><font color=\"blue\"><b>Attacker: 10.0.254.34</b></font>'}"];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "HOST DISCOVERY
+http"	[key=1,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 20:40:36\ngap: 11236sec\nend_prev: 04/11/17, 17:33:\
+21\"'}"];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "BRUTE FORCE CREDENTIALS
+pop3s | ID: 886"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '<font color=\"blue\"> start_next: 04/11/17, 16:30:43<br/>gap: -55sec<br/>end_prev: \
+04/11/17, 16:31:38</font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"ACCOUNT MANIPULATION
+snmp | ID: -1"	[shape=box,
+		tooltip="\"GPL SNMP public access udp\""];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "ACCOUNT MANIPULATION
+snmp | ID: -1"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 13:59:03\ngap: 1845sec\nend_prev: 04/11/17, 13:28:18\"'}"];
+	"HOST DISCOVERY
+wsman"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Possible Nmap User-Agent Observed
+ET SCAN Nmap Scripting Engine User-Agent Detected (Nmap Scripting Engine)\""];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "HOST DISCOVERY
+wsman"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 14:06:33\ngap: 131sec\nend_prev: 04/11/17, 14:04:22\"'}"];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "HOST DISCOVERY
+wsman"	[key=1,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 17:35:44\ngap: 21sec\nend_prev: 04/11/17, 17:35:22\"'}"];
+	"SERVICE DISCOVERY
+dsd"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Potential VNC Scan 5900-5920\""];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "SERVICE DISCOVERY
+dsd"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 14:03:47\ngap: -37sec\nend_prev: 04/11/17, 14:04:24\"'}"];
+	"SERVICE DISCOVERY
+netbios-ssn"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Behavioral Unusual Port 445 traffic Potential Scan or Infection
+ET SCAN Behavioral Unusual Port 139 traffic Potential Scan \
+or Infection\""];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "SERVICE DISCOVERY
+netbios-ssn"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:57:15\ngap: 5sec\nend_prev: 04/11/17, 18:57:10\"'}"];
+	"BRUTE FORCE CREDENTIALS
+pop3 | ID: 382"	[shape=box,
+		tooltip="\"ET SCAN Rapid POP3 Connections - Possible Brute Force Attack\""];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "BRUTE FORCE CREDENTIALS
+pop3 | ID: 382"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:58:15\ngap: -17sec\nend_prev: 04/11/17, 18:58:32\"'}"];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 365"	[shape=box,
+		tooltip="\"ET SNMP Samsung Printer SNMP Hardcode RW Community String\""];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: 365"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:01:20\ngap: 87sec\nend_prev: 04/11/17, 17:59:53\"'}"];
+	"HOST DISCOVERY
+wap-wsp"	[shape=oval,
+		tooltip="\"ET SCAN Possible Nmap User-Agent Observed
+ET SCAN Nmap Scripting Engine User-Agent Detected (Nmap Scripting Engine)\""];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "HOST DISCOVERY
+wap-wsp"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 17:37:26\ngap: 101sec\nend_prev: 04/11/17, 17:35:45\"'}"];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "HOST DISCOVERY
+wap-wsp"	[key=1,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 20:44:14\ngap: 172sec\nend_prev: 04/11/17, 20:41:22\"'}"];
+	"HOST DISCOVERY
+websm"	[shape=oval,
+		tooltip="\"ET SCAN Possible Nmap User-Agent Observed
+ET SCAN Nmap Scripting Engine User-Agent Detected (Nmap Scripting Engine)\""];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "HOST DISCOVERY
+websm"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 17:37:26\ngap: -32sec\nend_prev: 04/11/17, 17:37:58\"'}"];
+	"ARBITRARY CODE EXECUTION
+ssdp | ID: 976"	[shape=box,
+		style=dotted,
+		tooltip="\"GPL MISC UPnP malformed advertisement\""];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "ARBITRARY CODE EXECUTION
+ssdp | ID: 976"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:00:53\ngap: 49sec\nend_prev: 04/11/17, 14:00:04\"'}"];
+	"ARBITRARY CODE EXECUTION
+unknown | ID: 47"	[shape=box,
+		tooltip="\"ET CURRENT_EVENTS QNAP Shellshock CVE-2014-6271\""];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "ARBITRARY CODE EXECUTION
+unknown | ID: 47"	[key=0,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 14:18:02\ngap: 1sec\nend_prev: 04/11/17, 14:18:02\"'}"];
+	"ARBITRARY CODE EXECUTION
+epmap | ID: 356"	[shape=box,
+		tooltip="\"GPL MISC UPnP malformed advertisement
+GPL NETBIOS DCERPC Remote Activation bind attempt
+GPL NETBIOS SMB-DS Session Setup NTMLSSP \
+unicode asn1 overflow attempt
+GPL NETBIOS DCERPC IActivation little endian bind attempt\""];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "ARBITRARY CODE EXECUTION
+epmap | ID: 356"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:04:47\ngap: 64sec\nend_prev: 04/11/17, 18:03:44\"'}"];
+	"SERVICE DISCOVERY
+agma"	[shape=oval,
+		tooltip="\"ET SCAN Potential VNC Scan 5900-5920\""];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "SERVICE DISCOVERY
+agma"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 14:02:41\ngap: 41sec\nend_prev: 04/11/17, 14:02:00\"'}"];
+	"BRUTE FORCE CREDENTIALS
+pop3 | ID: 46"	[shape=box,
+		tooltip="\"ET SCAN Rapid POP3 Connections - Possible Brute Force Attack\""];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "BRUTE FORCE CREDENTIALS
+pop3 | ID: 46"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 17:38:24\ngap: 345sec\nend_prev: 04/11/17, 17:32:40\"'}"];
+	"BRUTE FORCE CREDENTIALS
+pop3 | ID: 1800"	[shape=box,
+		style=dotted,
+		tooltip="\"ET SCAN Rapid POP3 Connections - Possible Brute Force Attack
+ET SCAN Rapid IMAP Connections - Possible Brute Force Attack\""];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "BRUTE FORCE CREDENTIALS
+pop3 | ID: 1800"	[key=0,
+		data="{'color': 'blue', 'label': '<font color=\"blue\"> start_next: 04/11/17, 17:58:41<br/>gap: -221sec<br/>end_prev: 04/11/17, 18:02:22</\
+font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "VULNERABILTY DISCOVERY
+postgresql"	[key=0,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 04/11/17, 16:26:11\ngap: 2304sec\nend_prev: 04/11/17, 15:47:\
+47\"'}"];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		data="{'color': 'blue', 'label': '<font color=\"blue\"> start_next: 04/11/17, 13:08:38<br/>gap: 711sec<br/>end_prev: 04/11/17, 12:56:47</\
+font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 04/11/17, 22:40:06\ngap: 2324sec\nend_prev: 04/11/17, 22:01:\
+23\"'}"];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "VULNERABILTY DISCOVERY
+mysql"	[key=0,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 13:26:24\ngap: 1433sec\nend_prev: 04/11/17, 13:02:31\"'}"];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "SERVICE DISCOVERY
+ssh"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"blue\"', 'label': '<font color=\"purple\"> start_next: 04/11/17, 13:32:13<br/>gap: -222sec<br/>end_\
+prev: 04/11/17, 13:35:55</font><br/><font color=\"purple\"><b>Attacker: 10.0.254.30</b></font>'}"];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "HOST DISCOVERY
+http-alt"	[key=0,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 13:32:34\ngap: 377sec\nend_prev: 04/11/17, 13:26:18\"'}"];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "HOST DISCOVERY
+ms-wbt-server"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:57:32\ngap: 25sec\nend_prev: 04/11/17, 18:57:07\"'}"];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "SERVICE DISCOVERY
+unknown"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '<font color=\"blue\"> start_next: 04/11/17, 18:58:34<br/>gap: -116sec<br/>end_prev: \
+04/11/17, 19:00:31</font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "SERVICE DISCOVERY
+unknown"	[key=1,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 14:23:44\ngap: -170sec\nend_prev: 04/11/17, 14:26:34\"'}"];
+	"SERVICE DISCOVERY
+rpas-c2"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Potential VNC Scan 5900-5920\""];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "SERVICE DISCOVERY
+rpas-c2"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:03:39\ngap: -38sec\nend_prev: 04/11/17, 18:04:17\"'}"];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "COMMAND AND CONTROL
+unknown | ID: 39"	[key=0,
+		data="{'color': 'orange', 'fontcolor': '\"orange\"', 'label': '\"start_next: 04/11/17, 14:08:14\ngap: 2594sec\nend_prev: 04/11/17, 13:25:\
+00\"'}"];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "ACCOUNT MANIPULATION
+snmp | ID: 53"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 18:05:55\ngap: 3sec\nend_prev: 04/11/17, 18:05:52\"'}"];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "ARBITRARY CODE EXECUTION
+http | ID: 32"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 13:31:56\ngap: -7sec\nend_prev: 04/11/17, 13:32:03\"'}"];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "SURFING
+http"	[key=0,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 04/11/17, 19:21:03\ngap: 3629sec\nend_prev: 04/11/17, \
+18:20:34\"'}"];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "SERVICE DISCOVERY
+epmap"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:02:55\ngap: -19sec\nend_prev: 04/11/17, 14:03:14\"'}"];
+	"SERVICE DISCOVERY
+microsoft-ds"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Behavioral Unusual Port 135 traffic Potential Scan or Infection
+ET SCAN Potential VNC Scan 5800-5820
+ET SCAN Behavioral \
+Unusual Port 445 traffic Potential Scan or Infection\""];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "SERVICE DISCOVERY
+microsoft-ds"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '<font color=\"blue\"> start_next: 04/11/17, 14:08:09<br/>gap: -32sec<br/>end_prev: \
+04/11/17, 14:08:41</font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"DATA EXFILTRATION
+http | ID: 26"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability\""];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "DATA EXFILTRATION
+http | ID: 26"	[key=0,
+		data="{'color': 'tomato', 'fontcolor': '\"tomato\"', 'label': '\"start_next: 04/11/17, 14:16:12\ngap: 736sec\nend_prev: 04/11/17, 14:03:56\"'}"];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "SERVICE DISCOVERY
+ff-ice"	[key=0,
+		data="{'color': 'turquoise', 'label': '<font color=\"turquoise\"> start_next: 04/11/17, 17:38:56<br/>gap: -31sec<br/>end_prev: 04/11/17, \
+17:39:27</font><br/><font color=\"turquoise\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "ARBITRARY CODE EXECUTION
+ssdp | ID: 355"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:58:23\ngap: 73sec\nend_prev: 04/11/17, 18:57:10\"'}"];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "ARBITRARY CODE EXECUTION
+ssdp | ID: 355"	[key=1,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:31:31\ngap: -116sec\nend_prev: 04/11/17, 16:33:27\"'}"];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "DATA EXFILTRATION
+microsoft-ds | ID: 37"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 04/11/17, 22:40:44\ngap: 30sec\nend_prev: 04/11/17, 22:40:13\"'}"];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "SERVICE DISCOVERY
+cm"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:34:02\ngap: 1141sec\nend_prev: 04/11/17, 14:15:01\"'}"];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "SERVICE DISCOVERY
+ag-swim"	[key=0,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 04/11/17, 13:52:28\ngap: 138sec\nend_prev: 04/11/17, 13:\
+50:10\"'}"];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "SERVICE DISCOVERY
+dsd"	[key=0,
+		data="{'color': 'blue', 'label': '<font color=\"blue\"> start_next: 04/11/17, 13:00:02<br/>gap: 239sec<br/>end_prev: 04/11/17, 12:56:02</\
+font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "BRUTE FORCE CREDENTIALS
+pop3 | ID: 382"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:29:36\ngap: -17sec\nend_prev: 04/11/17, 16:29:53\"'}"];
+	"SERVICE DISCOVERY
+icmpd"	[shape=oval,
+		tooltip="\"ET SCAN Potential VNC Scan 5800-5820\""];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "SERVICE DISCOVERY
+icmpd"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 13:32:34\ngap: -24sec\nend_prev: 04/11/17, 13:32:58\"'}"];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "NETWORK DoS
+ms-wbt-server | ID: 36"	[key=0,
+		data="{'color': 'turquoise', 'fontcolor': '\"turquoise\"', 'label': '\"start_next: 04/11/17, 21:02:47\ngap: -36sec\nend_prev: 04/11/17, 21:\
+03:23\"'}"];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "NETWORK DoS
+ssdp | ID: 55"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:08:11\ngap: 33sec\nend_prev: 04/11/17, 14:07:37\"'}"];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "NETWORK DoS
+ssdp | ID: 55"	[key=1,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 21:05:24\ngap: 33sec\nend_prev: 04/11/17, 21:04:51\"'}"];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "NETWORK DoS
+ssdp | ID: 55"	[key=2,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 17:58:52\ngap: -132sec\nend_prev: 04/11/17, 18:01:04\"'}"];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "SERVICE DISCOVERY
+ftp"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:00:38\ngap: -42sec\nend_prev: 04/11/17, 18:01:20\"'}"];
+	"BRUTE FORCE CREDENTIALS
+pop3 | ID: 887"	[shape=box,
+		tooltip="\"ET SCAN Rapid POP3 Connections - Possible Brute Force Attack\""];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "BRUTE FORCE CREDENTIALS
+pop3 | ID: 887"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:27:53\ngap: -211sec\nend_prev: 04/11/17, 16:31:24\"'}"];
+	"ROOT PRIVILEGE ESCALATION
+ms-wbt-server | ID: 322"	[shape=box,
+		tooltip="\"ET POLICY MS Terminal Server Root login\""];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "ROOT PRIVILEGE ESCALATION
+ms-wbt-server | ID: 322"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:32:06\ngap: 145sec\nend_prev: 04/11/17, 16:29:42\"'}"];
+	"ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 951"	[shape=box,
+		style=dotted,
+		tooltip="\"GPL MISC UPnP malformed advertisement
+GPL NETBIOS SMB-DS Session Setup NTMLSSP unicode asn1 overflow attempt\""];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 951"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:32:57\ngap: -170sec\nend_prev: 04/11/17, 18:35:47\"'}"];
+	"ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 321"	[shape=box,
+		tooltip="\"GPL NETBIOS SMB-DS Session Setup NTMLSSP unicode asn1 overflow attempt\""];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 321"	[key=0,
+		data="{'color': 'orange', 'fontcolor': '\"orange\"', 'label': '\"start_next: 04/11/17, 14:02:15\ngap: 2138sec\nend_prev: 04/11/17, 13:26:\
+37\"'}"];
+	"DATA EXFILTRATION
+http | ID: -1"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SERVER Tilde in URI - potential .inc source disclosure vulnerability
+ET WEB_SERVER Tilde in URI - potential .php~ source \
+disclosure vulnerability
+ET INFO WinHttp AutoProxy Request wpad.dat Possible BadTunnel\""];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "DATA EXFILTRATION
+http | ID: -1"	[key=0,
+		data="{'color': 'tomato', 'label': '<font color=\"tomato\"> start_next: 04/11/17, 15:00:14<br/>gap: 5885sec<br/>end_prev: 04/11/17, 13:22:\
+09</font><br/><font color=\"tomato\"><b>Attacker: 10.0.254.35</b></font>'}"];
+	"BRUTE FORCE CREDENTIALS
+pop3 | ID: 1743"	[shape=box,
+		style=dotted,
+		tooltip="\"ET SCAN Rapid POP3 Connections - Possible Brute Force Attack
+ET SCAN Rapid IMAP Connections - Possible Brute Force Attack\""];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "BRUTE FORCE CREDENTIALS
+pop3 | ID: 1743"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 13:59:51\ngap: -273sec\nend_prev: 04/11/17, 14:04:24\"'}"];
+	"VULNERABILTY DISCOVERY
+mysql" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		data="{'color': 'purple', 'label': '<font color=\"purple\"> start_next: 04/11/17, 13:49:58<br/>gap: 558sec<br/>end_prev: 04/11/17, 13:40:\
+40</font><br/><font color=\"purple\"><b>Attacker: 10.0.254.32</b></font>'}"];
+	"VULNERABILTY DISCOVERY
+mysql" -> "VULNERABILTY DISCOVERY
+mysql"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:27:53\ngap: 7602sec\nend_prev: 04/11/17, 14:21:11\"'}"];
+	"VULNERABILTY DISCOVERY
+mysql" -> "VULNERABILTY DISCOVERY
+http"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 18:09:40\ngap: 698sec\nend_prev: 04/11/17, 17:58:02\"'}"];
+	"VULNERABILTY DISCOVERY
+mysql" -> "SERVICE DISCOVERY
+ssh"	[key=0,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 13:44:52\ngap: 1sec\nend_prev: 04/11/17, 13:44:51\"'}"];
+	"VULNERABILTY DISCOVERY
+mysql" -> "HOST DISCOVERY
+http-alt"	[key=0,
+		data="{'color': 'turquoise', 'label': '<font color=\"turquoise\"> start_next: 04/11/17, 13:05:50<br/>gap: 12sec<br/>end_prev: 04/11/17, \
+13:05:38</font><br/><font color=\"turquoise\"><b>Attacker: 10.0.254.32</b></font>'}"];
+	"VULNERABILTY DISCOVERY
+mysql" -> "HOST DISCOVERY
+ms-wbt-server"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:48:58\ngap: -351sec\nend_prev: 04/11/17, 16:54:49\"'}"];
+	"VULNERABILTY DISCOVERY
+mysql" -> "SERVICE DISCOVERY
+unknown"	[key=0,
+		data="{'color': 'brown', 'fontcolor': '\"blue\"', 'label': '<font color=\"brown\"> start_next: 04/11/17, 13:00:29<br/>gap: -129sec<br/>end_\
+prev: 04/11/17, 13:02:38</font><br/><font color=\"brown\"><b>Attacker: 10.0.254.35</b></font>'}"];
+	"VULNERABILTY DISCOVERY
+mysql" -> "SERVICE DISCOVERY
+unknown"	[key=1,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 13:20:46\ngap: -2sec\nend_prev: 04/11/17, 13:20:49\"'}"];
+	"VULNERABILTY DISCOVERY
+mysql" -> "SERVICE DISCOVERY
+unknown"	[key=2,
+		data="{'color': 'purple', 'label': '<font color=\"purple\"> start_next: 04/11/17, 12:58:15<br/>gap: -41sec<br/>end_prev: 04/11/17, 12:58:\
+56</font><br/><font color=\"purple\"><b>Attacker: 10.0.254.35</b></font>'}"];
+	"VULNERABILTY DISCOVERY
+mysql" -> "SERVICE DISCOVERY
+unknown"	[key=3,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 13:17:22\ngap: -1036sec\nend_prev: 04/11/17, 13:34:\
+38\"'}"];
+	"VULNERABILTY DISCOVERY
+mysql" -> "SERVICE DISCOVERY
+unknown"	[key=4,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 13:26:28\ngap: -9sec\nend_prev: 04/11/17, 13:26:37\"'}"];
+	"VULNERABILTY DISCOVERY
+mysql" -> "SERVICE DISCOVERY
+unknown"	[key=5,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 13:33:35\ngap: -36sec\nend_prev: 04/11/17, 13:34:11\"'}"];
+	"VULNERABILTY DISCOVERY
+mysql" -> "INFO DISCOVERY
+xdmcp"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:01:26\ngap: 97sec\nend_prev: 04/11/17, 13:59:49\"'}"];
+	"VULNERABILTY DISCOVERY
+mysql" -> "ARBITRARY CODE EXECUTION
+http | ID: 32"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 18:10:05\ngap: 724sec\nend_prev: 04/11/17, 17:58:01\"'}"];
+	"VULNERABILTY DISCOVERY
+mysql" -> "ARBITRARY CODE EXECUTION
+http | ID: 32"	[key=1,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 14:14:21\ngap: -558sec\nend_prev: 04/11/17, 14:23:\
+39\"'}"];
+	"VULNERABILTY DISCOVERY
+mysql" -> "SURFING
+http"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 13:40:11\ngap: 12sec\nend_prev: 04/11/17, 13:39:59\"'}"];
+	"VULNERABILTY DISCOVERY
+mysql" -> "HOST DISCOVERY
+unknown"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 20:41:47\ngap: -1sec\nend_prev: 04/11/17, 20:41:49\"'}"];
+	"VULNERABILTY DISCOVERY
+mysql" -> "SERVICE DISCOVERY
+ff-ice"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 16:39:58\ngap: -461sec\nend_prev: 04/11/17, 16:47:\
+39\"'}"];
+	"VULNERABILTY DISCOVERY
+mysql" -> "ARBITRARY CODE EXECUTION
+ssdp | ID: 355"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:29:55\ngap: -66sec\nend_prev: 04/11/17, 16:31:01\"'}"];
+	"VULNERABILTY DISCOVERY
+mysql" -> "ARBITRARY CODE EXECUTION
+ssdp | ID: 355"	[key=1,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:00:32\ngap: -448sec\nend_prev: 04/11/17, 18:08:01\"'}"];
+	"VULNERABILTY DISCOVERY
+mysql" -> "SERVICE DISCOVERY
+ag-swim"	[key=0,
+		data="{'color': 'turquoise', 'label': '<font color=\"turquoise\"> start_next: 04/11/17, 14:06:24<br/>gap: -30sec<br/>end_prev: 04/11/17, \
+14:06:55</font><br/><font color=\"turquoise\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"VULNERABILTY DISCOVERY
+mysql" -> "HOST DISCOVERY
+http"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 15:53:10\ngap: 6787sec\nend_prev: 04/11/17, 14:00:\
+03\"'}"];
+	"SERVICE DISCOVERY
+rfb"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Potential VNC Scan 5900-5920\""];
+	"VULNERABILTY DISCOVERY
+mysql" -> "SERVICE DISCOVERY
+rfb"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 20:06:13\ngap: -121sec\nend_prev: 04/11/17, 20:08:\
+13\"'}"];
+	"VULNERABILTY DISCOVERY
+mysql" -> "INFO DISCOVERY
+http"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 20:40:43\ngap: 4sec\nend_prev: 04/11/17, 20:40:38\"'}"];
+	"VULNERABILTY DISCOVERY
+mysql" -> "NETWORK DoS
+ms-wbt-server | ID: 36"	[key=0,
+		data="{'color': 'orange', 'fontcolor': '\"orange\"', 'label': '\"start_next: 04/11/17, 20:28:03\ngap: -1sec\nend_prev: 04/11/17, 20:28:04\"'}"];
+	"VULNERABILTY DISCOVERY
+mysql" -> "NETWORK DoS
+ms-wbt-server | ID: 36"	[key=1,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 14:16:05\ngap: -45sec\nend_prev: 04/11/17, 14:16:50\"'}"];
+	"VULNERABILTY DISCOVERY
+mysql" -> "NETWORK DoS
+ssdp | ID: 55"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 19:00:36\ngap: 33sec\nend_prev: 04/11/17, 19:00:03\"'}"];
+	"SERVICE DISCOVERY
+cpdlc"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Potential VNC Scan 5900-5920\""];
+	"VULNERABILTY DISCOVERY
+mysql" -> "SERVICE DISCOVERY
+cpdlc"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 14:08:28\ngap: -298sec\nend_prev: 04/11/17, 14:13:\
+26\"'}"];
+	"ACCOUNT MANIPULATION
+snmp | ID: 831"	[shape=box,
+		style=dotted,
+		tooltip="\"GPL SNMP public access udp\""];
+	"VULNERABILTY DISCOVERY
+mysql" -> "ACCOUNT MANIPULATION
+snmp | ID: 831"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:02:42\ngap: 2sec\nend_prev: 04/11/17, 16:02:40\"'}"];
+	"VULNERABILTY DISCOVERY
+mysql" -> "BRUTE FORCE CREDENTIALS
+pop3 | ID: 887"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:01:59\ngap: -17sec\nend_prev: 04/11/17, 14:02:16\"'}"];
+	"BRUTE FORCE CREDENTIALS
+unknown | ID: 879"	[shape=box,
+		tooltip="\"ET SCAN Rapid POP3S Connections - Possible Brute Force Attack
+ET SCAN Multiple MySQL Login Failures Possible Brute Force Attempt\""];
+	"VULNERABILTY DISCOVERY
+mysql" -> "BRUTE FORCE CREDENTIALS
+unknown | ID: 879"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:28:17\ngap: -370sec\nend_prev: 04/11/17, 16:34:28\"'}"];
+	"ARBITRARY CODE EXECUTION
+ssdp | ID: 902"	[shape=box,
+		tooltip="\"GPL MISC UPnP malformed advertisement\""];
+	"VULNERABILTY DISCOVERY
+mysql" -> "ARBITRARY CODE EXECUTION
+ssdp | ID: 902"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:29:38\ngap: 64sec\nend_prev: 04/11/17, 16:28:34\"'}"];
+	"VULNERABILTY DISCOVERY
+ahsp" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		data="{'color': 'tomato', 'fontcolor': '\"tomato\"', 'label': '\"start_next: 04/11/17, 16:39:53\ngap: 2123sec\nend_prev: 04/11/17, 16:04:\
+30\"'}"];
+	"VULNERABILTY DISCOVERY
+ahsp" -> "HOST DISCOVERY
+ms-wbt-server"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 17:58:43\ngap: -33sec\nend_prev: 04/11/17, 17:59:16\"'}"];
+	"VULNERABILTY DISCOVERY
+ahsp" -> "SERVICE DISCOVERY
+unknown"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 17:31:35\ngap: 2211sec\nend_prev: 04/11/17, 16:54:\
+44\"'}"];
+	"VULNERABILTY DISCOVERY
+ahsp" -> "HOST DISCOVERY
+unknown"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 18:14:38\ngap: -1sec\nend_prev: 04/11/17, 18:14:39\"'}"];
+	"VULNERABILTY DISCOVERY
+ahsp" -> "HOST DISCOVERY
+unknown"	[key=1,
+		data="{'color': 'tomato', 'fontcolor': '\"tomato\"', 'label': '\"start_next: 04/11/17, 17:01:44\ngap: 893sec\nend_prev: 04/11/17, 16:46:51\"'}"];
+	"VULNERABILTY DISCOVERY
+ahsp" -> "SERVICE DISCOVERY
+microsoft-ds"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:31:24\ngap: -294sec\nend_prev: 04/11/17, 16:36:18\"'}"];
+	"VULNERABILTY DISCOVERY
+ahsp" -> "ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 309"	[key=0,
+		data="{'color': 'orange', 'fontcolor': '\"orange\"', 'label': '\"start_next: 04/11/17, 21:04:46\ngap: 24576sec\nend_prev: 04/11/17, 14:15:\
+10\"'}"];
+	"VULNERABILTY DISCOVERY
+ahsp" -> "ARBITRARY CODE EXECUTION
+ssdp | ID: 355"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:31:28\ngap: 125sec\nend_prev: 04/11/17, 16:29:22\"'}"];
+	"VULNERABILTY DISCOVERY
+ahsp" -> "HOST DISCOVERY
+http"	[key=0,
+		data="{'color': 'purple', 'label': '<font color=\"purple\"> start_next: 04/11/17, 15:53:10<br/>gap: 6669sec<br/>end_prev: 04/11/17, 14:02:\
+01</font><br/><font color=\"purple\"><b>Attacker: 10.0.254.30</b></font>'}"];
+	"VULNERABILTY DISCOVERY
+ahsp" -> "HOST DISCOVERY
+wsman"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:12:55\ngap: 0sec\nend_prev: 04/11/17, 16:12:55\"'}"];
+	"ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 931"	[shape=box,
+		style=dotted,
+		tooltip="\"GPL NETBIOS DCERPC Remote Activation bind attempt
+GPL NETBIOS DCERPC IActivation little endian bind attempt
+GPL NETBIOS SMB-DS \
+Session Setup NTMLSSP asn1 overflow attempt
+GPL MISC UPnP malformed advertisement
+GPL NETBIOS SMB-DS Session Setup NTMLSSP unicode \
+asn1 overflow attempt\""];
+	"VULNERABILTY DISCOVERY
+ahsp" -> "ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 931"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:32:40\ngap: -170sec\nend_prev: 04/11/17, 14:35:30\"'}"];
+	"VULNERABILTY DISCOVERY
+ahsp" -> "NETWORK DoS
+ssdp | ID: 55"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:04:52\ngap: 32sec\nend_prev: 04/11/17, 14:04:19\"'}"];
+	"VULNERABILTY DISCOVERY
+ahsp" -> "SERVICE DISCOVERY
+ftp"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:30:38\ngap: 21sec\nend_prev: 04/11/17, 16:30:18\"'}"];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 906"	[shape=box,
+		tooltip="\"ET SNMP Samsung Printer SNMP Hardcode RW Community String\""];
+	"VULNERABILTY DISCOVERY
+ahsp" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: 906"	[key=0,
+		data="{'color': 'blue', 'label': '<font color=\"blue\"> start_next: 04/11/17, 18:05:12<br/>gap: 94sec<br/>end_prev: 04/11/17, 18:03:38</\
+font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"VULNERABILTY DISCOVERY
+http" -> "VULNERABILTY DISCOVERY
+ahsp"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:31:18\ngap: 7194sec\nend_prev: 04/11/17, 14:31:25\"'}"];
+	"VULNERABILTY DISCOVERY
+http" -> "SERVICE DISCOVERY
+unknown"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '<font color=\"blue\"> start_next: 04/11/17, 16:30:32<br/>gap: -366sec<br/>end_prev: \
+04/11/17, 16:36:37</font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"VULNERABILTY DISCOVERY
+http" -> "ARBITRARY CODE EXECUTION
+http | ID: 32"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 22:18:57\ngap: 1sec\nend_prev: 04/11/17, 22:18:57\"'}"];
+	"VULNERABILTY DISCOVERY
+http" -> "ARBITRARY CODE EXECUTION
+http | ID: 32"	[key=1,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 14:16:06\ngap: 1sec\nend_prev: 04/11/17, 14:16:06\"'}"];
+	"VULNERABILTY DISCOVERY
+http" -> "ARBITRARY CODE EXECUTION
+http | ID: 32"	[key=2,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 14:17:29\ngap: -64sec\nend_prev: 04/11/17, 14:18:33\"'}"];
+	"VULNERABILTY DISCOVERY
+http" -> "SURFING
+http"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 15:49:55\ngap: -2sec\nend_prev: 04/11/17, 15:49:57\"'}"];
+	"VULNERABILTY DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 26"	[key=0,
+		data="{'color': 'tomato', 'fontcolor': '\"tomato\"', 'label': '\"start_next: 04/11/17, 16:07:27\ngap: 4sec\nend_prev: 04/11/17, 16:07:23\"'}"];
+	"DATA DELIVERY
+http | ID: 21"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"GPL WEB_SERVER perl post attempt\""];
+	"VULNERABILTY DISCOVERY
+http" -> "DATA DELIVERY
+http | ID: 21"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 19:06:43\ngap: -86sec\nend_prev: 04/11/17, 19:08:09\"'}"];
+	"VULNERABILTY DISCOVERY
+http" -> "ARBITRARY CODE EXECUTION
+ssdp | ID: 355"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:01:40\ngap: -585sec\nend_prev: 04/11/17, 14:11:25\"'}"];
+	"VULNERABILTY DISCOVERY
+http" -> "HOST DISCOVERY
+http"	[key=0,
+		data="{'color': 'purple', 'label': '<font color=\"purple\"> start_next: 04/11/17, 13:39:56<br/>gap: 45sec<br/>end_prev: 04/11/17, 13:39:\
+10</font><br/><font color=\"purple\"><b>Attacker: 10.0.254.30</b></font>'}"];
+	"VULNERABILTY DISCOVERY
+http" -> "HOST DISCOVERY
+http"	[key=1,
+		data="{'color': 'tomato', 'fontcolor': '\"purple\"', 'label': '<font color=\"tomato\"> start_next: 04/11/17, 13:41:34<br/>gap: -2sec<br/>end_\
+prev: 04/11/17, 13:41:36</font><br/><font color=\"tomato\"><b>Attacker: 10.0.254.33</b></font>'}"];
+	"VULNERABILTY DISCOVERY
+http" -> "INFO DISCOVERY
+http"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 15:53:15\ngap: 4sec\nend_prev: 04/11/17, 15:53:11\"'}"];
+	"VULNERABILTY DISCOVERY
+http" -> "INFO DISCOVERY
+http"	[key=1,
+		data="{'color': 'tomato', 'fontcolor': '\"tomato\"', 'label': '\"start_next: 04/11/17, 13:43:34\ngap: -242sec\nend_prev: 04/11/17, 13:47:\
+36\"'}"];
+	"VULNERABILTY DISCOVERY
+http" -> "SERVICE DISCOVERY
+icmpd"	[key=0,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 04/11/17, 22:05:56\ngap: -326sec\nend_prev: 04/11/17, \
+22:11:22\"'}"];
+	"ACCOUNT MANIPULATION
+snmp | ID: 275"	[shape=box,
+		tooltip="\"GPL SNMP public access udp\""];
+	"VULNERABILTY DISCOVERY
+http" -> "ACCOUNT MANIPULATION
+snmp | ID: 275"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:46:25\ngap: -543sec\nend_prev: 04/11/17, 14:55:28\"'}"];
+	"VULNERABILTY DISCOVERY
+http" -> "ACCOUNT MANIPULATION
+snmp | ID: 275"	[key=1,
+		data="{'color': 'turquoise', 'fontcolor': '\"turquoise\"', 'label': '\"start_next: 04/11/17, 12:56:22\ngap: -345sec\nend_prev: 04/11/17, \
+13:02:07\"'}"];
+	"VULNERABILTY DISCOVERY
+remoteware-cl"	[shape=oval,
+		tooltip="\"ET SCAN Nessus User Agent\""];
+	"INFO DISCOVERY
+remoteware-cl"	[shape=oval,
+		tooltip="\"GPL WEB_SERVER globals.pl access
+GPL WEB_SERVER mod_gzip_status access\""];
+	"VULNERABILTY DISCOVERY
+remoteware-cl" -> "INFO DISCOVERY
+remoteware-cl"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:41:45\ngap: -215sec\nend_prev: 04/11/17, 16:45:20\"'}"];
+	"VULNERABILTY DISCOVERY
+remoteware-cl" -> "INFO DISCOVERY
+remoteware-cl"	[key=1,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:12:48\ngap: -177sec\nend_prev: 04/11/17, 18:15:45\"'}"];
+	"VULNERABILTY DISCOVERY
+wsman"	[shape=oval,
+		tooltip="\"ET SCAN Nikto Web App Scan in Progress\""];
+	"ARBITRARY CODE EXECUTION
+wsman | ID: 59"	[shape=box,
+		tooltip="\"ET CURRENT_EVENTS QNAP Shellshock CVE-2014-6271\""];
+	"VULNERABILTY DISCOVERY
+wsman" -> "ARBITRARY CODE EXECUTION
+wsman | ID: 59"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 14:07:06\ngap: 1sec\nend_prev: 04/11/17, 14:07:05\"'}"];
+	"SURFING
+wsman"	[shape=oval,
+		tooltip="\"ET WEB_SERVER WEB-PHP phpinfo access\""];
+	"VULNERABILTY DISCOVERY
+wsman" -> "SURFING
+wsman"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 17:57:44\ngap: 1sec\nend_prev: 04/11/17, 17:57:42\"'}"];
+	"VULNERABILTY DISCOVERY
+unknown"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Nikto Web App Scan in Progress
+ET POLICY Suspicious inbound to MSSQL port 1433
+ET POLICY Suspicious inbound to Oracle SQL \
+port 1521\""];
+	"VULNERABILTY DISCOVERY
+unknown" -> "VULNERABILTY DISCOVERY
+unknown"	[key=0,
+		data="{'color': 'blue', 'label': '<font color=\"blue\"> start_next: 04/11/17, 17:59:02<br/>gap: 4194sec<br/>end_prev: 04/11/17, 16:49:08</\
+font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"VULNERABILTY DISCOVERY
+unknown" -> "ARBITRARY CODE EXECUTION
+ssdp | ID: 355"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:00:42\ngap: -628sec\nend_prev: 04/11/17, 18:11:10\"'}"];
+	"VULNERABILTY DISCOVERY
+unknown" -> "ARBITRARY CODE EXECUTION
+unknown | ID: 47"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 15:48:47\ngap: 1sec\nend_prev: 04/11/17, 15:48:46\"'}"];
+	"VULNERABILTY DISCOVERY
+unknown" -> "ARBITRARY CODE EXECUTION
+unknown | ID: 47"	[key=1,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 14:53:40\ngap: -402sec\nend_prev: 04/11/17, 15:00:21\"'}"];
+	"VULNERABILTY DISCOVERY
+unknown" -> "ARBITRARY CODE EXECUTION
+unknown | ID: 47"	[key=2,
+		data="{'color': 'tomato', 'fontcolor': '\"tomato\"', 'label': '\"start_next: 04/11/17, 17:01:46\ngap: 1sec\nend_prev: 04/11/17, 17:01:45\"'}"];
+	"VULNERABILTY DISCOVERY
+unknown" -> "INFO DISCOVERY
+remoteware-cl"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:13:01\ngap: 8sec\nend_prev: 04/11/17, 14:12:53\"'}"];
+	"VULNERABILTY DISCOVERY
+wap-wsp"	[shape=oval,
+		tooltip="\"ET SCAN Nikto Web App Scan in Progress\""];
+	"ARBITRARY CODE EXECUTION
+wap-wsp | ID: 81"	[shape=box,
+		tooltip="\"ET CURRENT_EVENTS QNAP Shellshock CVE-2014-6271\""];
+	"VULNERABILTY DISCOVERY
+wap-wsp" -> "ARBITRARY CODE EXECUTION
+wap-wsp | ID: 81"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 17:46:44\ngap: 1sec\nend_prev: 04/11/17, 17:46:43\"'}"];
+	"VULNERABILTY DISCOVERY
+wap-wsp" -> "ARBITRARY CODE EXECUTION
+wap-wsp | ID: 81"	[key=1,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 20:48:04\ngap: 1sec\nend_prev: 04/11/17, 20:48:03\"'}"];
+	"VULNERABILTY DISCOVERY
+esmagent"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Nikto Web App Scan in Progress\""];
+	"VULNERABILTY DISCOVERY
+esmagent" -> "SERVICE DISCOVERY
+ssh"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 15:54:30\ngap: 5952sec\nend_prev: 04/11/17, 14:15:\
+17\"'}"];
+	"VULNERABILTY DISCOVERY
+esmagent" -> "HOST DISCOVERY
+http-alt"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 16:48:28\ngap: -620sec\nend_prev: 04/11/17, 16:58:\
+48\"'}"];
+	"SURFING
+remoteware-cl"	[shape=oval,
+		tooltip="\"ET WEB_SERVER WEB-PHP phpinfo access\""];
+	"VULNERABILTY DISCOVERY
+esmagent" -> "SURFING
+remoteware-cl"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 17:47:44\ngap: -567sec\nend_prev: 04/11/17, 17:57:\
+11\"'}"];
+	"VULNERABILTY DISCOVERY
+http-alt"	[shape=oval,
+		tooltip="\"ET SCAN Nikto Web App Scan in Progress\""];
+	"ARBITRARY CODE EXECUTION
+http-alt | ID: 23"	[shape=box,
+		tooltip="\"ET CURRENT_EVENTS QNAP Shellshock CVE-2014-6271\""];
+	"VULNERABILTY DISCOVERY
+http-alt" -> "ARBITRARY CODE EXECUTION
+http-alt | ID: 23"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 04/11/17, 18:02:28\ngap: 1sec\nend_prev: 04/11/17, 18:02:27\"'}"];
+	"VULNERABILTY DISCOVERY
+http-alt" -> "ARBITRARY CODE EXECUTION
+http-alt | ID: 23"	[key=1,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 20:16:08\ngap: 1sec\nend_prev: 04/11/17, 20:16:07\"'}"];
+	"VULNERABILTY DISCOVERY
+http-alt" -> "ARBITRARY CODE EXECUTION
+http-alt | ID: 23"	[key=2,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 14:08:02\ngap: 1sec\nend_prev: 04/11/17, 14:08:02\"'}"];
+	"VULNERABILTY DISCOVERY
+http-alt" -> "ARBITRARY CODE EXECUTION
+http-alt | ID: 23"	[key=3,
+		data="{'color': 'tomato', 'fontcolor': '\"tomato\"', 'label': '\"start_next: 04/11/17, 16:11:46\ngap: 1sec\nend_prev: 04/11/17, 16:11:45\"'}"];
+	"ARBITRARY CODE EXECUTION
+esmagent | ID: 80"	[shape=box,
+		tooltip="\"ET CURRENT_EVENTS QNAP Shellshock CVE-2014-6271\""];
+	"VULNERABILTY DISCOVERY
+http-alt" -> "ARBITRARY CODE EXECUTION
+esmagent | ID: 80"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 14:00:37\ngap: 1sec\nend_prev: 04/11/17, 14:00:37\"'}"];
+	"VULNERABILTY DISCOVERY
+radan-http"	[shape=oval,
+		tooltip="\"ET SCAN Nikto Web App Scan in Progress\""];
+	"INFO DISCOVERY
+http-alt"	[shape=oval,
+		tooltip="\"GPL WEB_SERVER globals.pl access\""];
+	"VULNERABILTY DISCOVERY
+radan-http" -> "INFO DISCOVERY
+http-alt"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 14:08:05\ngap: 1sec\nend_prev: 04/11/17, 14:08:04\"'}"];
+	"VULNERABILTY DISCOVERY
+submission"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET POLICY Suspicious inbound to mySQL port 3306
+ET POLICY Suspicious inbound to MSSQL port 1433
+ET SCAN Nmap NSE Heartbleed Request
+\
+ET POLICY Suspicious inbound to Oracle SQL port 1521
+ET CURRENT_EVENTS Malformed HeartBeat Request
+ET POLICY Suspicious inbound \
+to PostgreSQL port 5432\""];
+	"VULNERABILTY DISCOVERY
+submission" -> "SERVICE DISCOVERY
+ssh"	[key=0,
+		data="{'color': 'tomato', 'label': '<font color=\"tomato\"> start_next: 04/11/17, 19:13:10<br/>gap: -119sec<br/>end_prev: 04/11/17, 19:15:\
+09</font><br/><font color=\"tomato\"><b>Attacker: 10.0.254.30</b></font>'}"];
+	"HOST DISCOVERY
+remoteware-cl"	[shape=oval,
+		tooltip="\"ET SCAN Possible Nmap User-Agent Observed
+ET SCAN Nmap Scripting Engine User-Agent Detected (Nmap Scripting Engine)\""];
+	"HOST DISCOVERY
+remoteware-cl" -> "VULNERABILTY DISCOVERY
+esmagent"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 16:47:54\ngap: 712sec\nend_prev: 04/11/17, 16:36:01\"'}"];
+	"HOST DISCOVERY
+remoteware-cl" -> "VULNERABILTY DISCOVERY
+http-alt"	[key=0,
+		data="{'color': 'tomato', 'fontcolor': '\"tomato\"', 'label': '\"start_next: 04/11/17, 19:18:32\ngap: 32sec\nend_prev: 04/11/17, 19:18:00\"'}"];
+	"DATA EXFILTRATION
+http-alt | ID: 25" -> "VULNERABILTY DISCOVERY
+esmagent"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 14:10:38\ngap: 153sec\nend_prev: 04/11/17, 14:08:04\"'}"];
+	"DATA EXFILTRATION
+http-alt | ID: 25" -> "VULNERABILTY DISCOVERY
+esmagent"	[key=1,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 17:47:43\ngap: 573sec\nend_prev: 04/11/17, 17:38:09\"'}"];
+	"SERVICE DISCOVERY
+ssh" -> "VULNERABILTY DISCOVERY
+postgresql"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"blue\"', 'label': '<font color=\"purple\"> start_next: 04/11/17, 15:49:56<br/>gap: 5026sec<br/>end_\
+prev: 04/11/17, 14:26:09</font><br/><font color=\"purple\"><b>Attacker: 10.0.254.30</b></font>'}"];
+	"SERVICE DISCOVERY
+ssh" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"brown\"', 'label': '<font color=\"blue\"> start_next: 04/11/17, 13:51:51<br/>gap: 3sec<br/>end_prev: \
+04/11/17, 13:51:49</font><br/><font color=\"blue\"><b>Attacker: 10.0.254.34</b></font>'}"];
+	"SERVICE DISCOVERY
+ssh" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=1,
+		data="{'color': 'brown', 'label': '<font color=\"brown\"> start_next: 04/11/17, 13:14:37<br/>gap: 4sec<br/>end_prev: 04/11/17, 13:14:33</\
+font><br/><font color=\"brown\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"SERVICE DISCOVERY
+ssh" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		data="{'color': 'brown', 'fontcolor': '\"blue\"', 'label': '<font color=\"brown\"> start_next: 04/11/17, 13:02:12<br/>gap: 109sec<br/>end_\
+prev: 04/11/17, 13:00:23</font><br/><font color=\"brown\"><b>Attacker: 10.0.254.35</b></font>'}"];
+	"SERVICE DISCOVERY
+ssh" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=1,
+		data="{'color': 'brown', 'label': '<font color=\"brown\"> start_next: 04/11/17, 15:15:57<br/>gap: 31sec<br/>end_prev: 04/11/17, 15:15:26</\
+font><br/><font color=\"brown\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"SERVICE DISCOVERY
+ssh" -> "VULNERABILTY DISCOVERY
+mysql"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:44:34\ngap: 14802sec\nend_prev: 04/11/17, 14:37:53\"'}"];
+	"HOST DISCOVERY
+http-alt" -> "VULNERABILTY DISCOVERY
+postgresql"	[key=0,
+		data="{'color': 'turquoise', 'fontcolor': '\"turquoise\"', 'label': '\"start_next: 04/11/17, 13:13:55\ngap: 485sec\nend_prev: 04/11/17, 13:\
+05:50\"'}"];
+	"HOST DISCOVERY
+http-alt" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 14:16:27\ngap: 3325sec\nend_prev: 04/11/17, 13:21:03\"'}"];
+	"HOST DISCOVERY
+http-alt" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 13:26:18\ngap: 266sec\nend_prev: 04/11/17, 13:21:51\"'}"];
+	"HOST DISCOVERY
+http-alt" -> "VULNERABILTY DISCOVERY
+http-alt"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 20:16:07\ngap: 22440sec\nend_prev: 04/11/17, 14:02:06\"'}"];
+	"HOST DISCOVERY
+http-alt" -> "VULNERABILTY DISCOVERY
+http-alt"	[key=1,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 14:08:02\ngap: 48sec\nend_prev: 04/11/17, 14:07:13\"'}"];
+	"HOST DISCOVERY
+http-alt" -> "VULNERABILTY DISCOVERY
+http-alt"	[key=2,
+		data="{'color': 'tomato', 'fontcolor': '\"tomato\"', 'label': '\"start_next: 04/11/17, 16:11:45\ngap: 30sec\nend_prev: 04/11/17, 16:11:15\"'}"];
+	"HOST DISCOVERY
+ms-wbt-server" -> "VULNERABILTY DISCOVERY
+postgresql"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 13:59:47\ngap: 3sec\nend_prev: 04/11/17, 13:59:44\"'}"];
+	"HOST DISCOVERY
+ms-wbt-server" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 14:57:30\ngap: 105sec\nend_prev: 04/11/17, 14:55:45\"'}"];
+	"HOST DISCOVERY
+ms-wbt-server" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:28:00\ngap: 24sec\nend_prev: 04/11/17, 16:27:35\"'}"];
+	"SERVICE DISCOVERY
+unknown" -> "VULNERABILTY DISCOVERY
+postgresql"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 19:41:50\ngap: 3433sec\nend_prev: 04/11/17, 18:44:37\"'}"];
+	"SERVICE DISCOVERY
+unknown" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 14:00:30\ngap: -27sec\nend_prev: 04/11/17, 14:00:58\"'}"];
+	"SERVICE DISCOVERY
+unknown" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=1,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:00:57\ngap: 1559sec\nend_prev: 04/11/17, 13:34:58\"'}"];
+	"SERVICE DISCOVERY
+unknown" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '<font color=\"blue\"> start_next: 04/11/17, 14:07:00<br/>gap: -93sec<br/>end_prev: \
+04/11/17, 14:08:33</font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"SERVICE DISCOVERY
+unknown" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=1,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:26:51\ngap: 10sec\nend_prev: 04/11/17, 16:26:41\"'}"];
+	"SERVICE DISCOVERY
+unknown" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=2,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 17:57:53\ngap: 9sec\nend_prev: 04/11/17, 17:57:44\"'}"];
+	"SERVICE DISCOVERY
+unknown" -> "VULNERABILTY DISCOVERY
+mysql"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"orange\"', 'label': '<font color=\"purple\"> start_next: 04/11/17, 20:39:01<br/>gap: -11sec<br/>\
+end_prev: 04/11/17, 20:39:11</font><br/><font color=\"purple\"><b>Attacker: 10.0.254.35</b></font>'}"];
+	"SERVICE DISCOVERY
+unknown" -> "VULNERABILTY DISCOVERY
+mysql"	[key=1,
+		data="{'color': 'blue', 'label': '<font color=\"blue\"> start_next: 04/11/17, 15:11:48<br/>gap: 1835sec<br/>end_prev: 04/11/17, 14:41:12</\
+font><br/><font color=\"blue\"><b>Attacker: 10.0.254.32</b></font>'}"];
+	"SERVICE DISCOVERY
+unknown" -> "VULNERABILTY DISCOVERY
+ahsp"	[key=0,
+		data="{'color': 'tomato', 'fontcolor': '\"tomato\"', 'label': '<font color=\"tomato\"> start_next: 04/11/17, 16:46:51<br/>gap: -361sec<br/>\
+end_prev: 04/11/17, 16:52:52</font><br/><font color=\"tomato\"><b>Attacker: 10.0.254.33</b></font>'}"];
+	"SERVICE DISCOVERY
+unknown" -> "VULNERABILTY DISCOVERY
+http"	[key=0,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 14:16:06\ngap: 1811sec\nend_prev: 04/11/17, 13:45:55\"'}"];
+	"INFO DISCOVERY
+xdmcp" -> "VULNERABILTY DISCOVERY
+postgresql"	[key=0,
+		data="{'color': 'blue', 'label': '<font color=\"blue\"> start_next: 04/11/17, 17:59:58<br/>gap: 5247sec<br/>end_prev: 04/11/17, 16:32:31</\
+font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"INFO DISCOVERY
+xdmcp" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 17:58:27\ngap: 5334sec\nend_prev: 04/11/17, 16:29:33\"'}"];
+	"INFO DISCOVERY
+xdmcp" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=1,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:56:43\ngap: 3367sec\nend_prev: 04/11/17, 18:00:36\"'}"];
+	"INFO DISCOVERY
+xdmcp" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '<font color=\"blue\"> start_next: 04/11/17, 18:57:01<br/>gap: 3359sec<br/>end_prev: \
+04/11/17, 18:01:02</font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"INFO DISCOVERY
+xdmcp" -> "VULNERABILTY DISCOVERY
+mysql"	[key=0,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 13:20:44\ngap: 19sec\nend_prev: 04/11/17, 13:20:25\"'}"];
+	"INFO DISCOVERY
+xdmcp" -> "VULNERABILTY DISCOVERY
+ahsp"	[key=0,
+		data="{'color': 'blue', 'label': '<font color=\"blue\"> start_next: 04/11/17, 17:58:38<br/>gap: 5331sec<br/>end_prev: 04/11/17, 16:29:48</\
+font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"INFO DISCOVERY
+xdmcp" -> "VULNERABILTY DISCOVERY
+http"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 19:03:50\ngap: -11sec\nend_prev: 04/11/17, 19:04:01\"'}"];
+	"SERVICE DISCOVERY
+rpas-c2" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '<font color=\"blue\"> start_next: 04/11/17, 18:57:53<br/>gap: 9sec<br/>end_prev: \
+04/11/17, 18:57:44</font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"SERVICE DISCOVERY
+rpas-c2" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		data="{'color': 'orange', 'label': '<font color=\"orange\"> start_next: 04/11/17, 13:26:17<br/>gap: 35sec<br/>end_prev: 04/11/17, 13:25:\
+42</font><br/><font color=\"orange\"><b>Attacker: 10.0.254.30</b></font>'}"];
+	"COMMAND AND CONTROL
+unknown | ID: 39" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 14:03:27\ngap: 192sec\nend_prev: 04/11/17, 14:00:15\"'}"];
+	"ACCOUNT MANIPULATION
+snmp | ID: 53" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:00:02\ngap: -264sec\nend_prev: 04/11/17, 14:04:26\"'}"];
+	"ACCOUNT MANIPULATION
+snmp | ID: 53" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:31:57\ngap: 136sec\nend_prev: 04/11/17, 16:29:41\"'}"];
+	"ACCOUNT MANIPULATION
+snmp | ID: 53" -> "VULNERABILTY DISCOVERY
+mysql"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 17:58:59\ngap: 5253sec\nend_prev: 04/11/17, 16:31:27\"'}"];
+	"ACCOUNT MANIPULATION
+snmp | ID: 53" -> "VULNERABILTY DISCOVERY
+remoteware-cl"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:12:30\ngap: 395sec\nend_prev: 04/11/17, 18:05:56\"'}"];
+	"ARBITRARY CODE EXECUTION
+http | ID: 32" -> "VULNERABILTY DISCOVERY
+postgresql"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 15:53:12\ngap: 0sec\nend_prev: 04/11/17, 15:53:12\"'}"];
+	"ARBITRARY CODE EXECUTION
+http | ID: 32" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 15:53:52\ngap: 352sec\nend_prev: 04/11/17, 15:48:00\"'}"];
+	"SURFING
+http" -> "VULNERABILTY DISCOVERY
+postgresql"	[key=0,
+		data="{'color': 'darkgreen', 'label': '<font color=\"darkgreen\"> start_next: 04/11/17, 13:44:40<br/>gap: 392sec<br/>end_prev: 04/11/17, \
+13:38:08</font><br/><font color=\"darkgreen\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"SURFING
+http" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 17:32:40\ngap: 5963sec\nend_prev: 04/11/17, 15:53:\
+16\"'}"];
+	"SURFING
+http" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"tomato\"', 'label': '<font color=\"purple\"> start_next: 04/11/17, 13:32:02<br/>gap: -3sec<br/>end_\
+prev: 04/11/17, 13:32:05</font><br/><font color=\"purple\"><b>Attacker: 10.0.254.30</b></font>'}"];
+	"SURFING
+http" -> "VULNERABILTY DISCOVERY
+mysql"	[key=0,
+		data="{'color': 'purple', 'label': '<font color=\"purple\"> start_next: 04/11/17, 20:08:40<br/>gap: 15318sec<br/>end_prev: 04/11/17, 15:\
+53:22</font><br/><font color=\"purple\"><b>Attacker: 10.0.254.30</b></font>'}"];
+	"SURFING
+http" -> "VULNERABILTY DISCOVERY
+http"	[key=0,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 04/11/17, 19:27:12\ngap: 363sec\nend_prev: 04/11/17, 19:\
+21:09\"'}"];
+	"SURFING
+http" -> "VULNERABILTY DISCOVERY
+http"	[key=1,
+		data="{'color': 'tomato', 'fontcolor': '\"tomato\"', 'label': '\"start_next: 04/11/17, 13:42:36\ngap: -262sec\nend_prev: 04/11/17, 13:46:\
+58\"'}"];
+	"HOST DISCOVERY
+unknown" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 14:02:03\ngap: 1769sec\nend_prev: 04/11/17, 13:32:34\"'}"];
+	"HOST DISCOVERY
+unknown" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 14:22:51\ngap: 937sec\nend_prev: 04/11/17, 14:07:13\"'}"];
+	"HOST DISCOVERY
+unknown" -> "VULNERABILTY DISCOVERY
+mysql"	[key=0,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 13:44:51\ngap: 671sec\nend_prev: 04/11/17, 13:33:40\"'}"];
+	"HOST DISCOVERY
+unknown" -> "VULNERABILTY DISCOVERY
+unknown"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 15:48:46\ngap: 6400sec\nend_prev: 04/11/17, 14:02:06\"'}"];
+	"HOST DISCOVERY
+unknown" -> "VULNERABILTY DISCOVERY
+unknown"	[key=1,
+		data="{'color': 'brown', 'label': '<font color=\"brown\"> start_next: 04/11/17, 14:53:39<br/>gap: 1519sec<br/>end_prev: 04/11/17, 14:28:\
+20</font><br/><font color=\"brown\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"HOST DISCOVERY
+unknown" -> "VULNERABILTY DISCOVERY
+unknown"	[key=2,
+		data="{'color': 'tomato', 'fontcolor': '\"tomato\"', 'label': '\"start_next: 04/11/17, 17:01:45\ngap: 2sec\nend_prev: 04/11/17, 17:01:44\"'}"];
+	"SERVICE DISCOVERY
+epmap" -> "VULNERABILTY DISCOVERY
+postgresql"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:00:55\ngap: 68sec\nend_prev: 04/11/17, 13:59:48\"'}"];
+	"SERVICE DISCOVERY
+epmap" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:58:00\ngap: 43sec\nend_prev: 04/11/17, 18:57:18\"'}"];
+	"SERVICE DISCOVERY
+epmap" -> "VULNERABILTY DISCOVERY
+mysql"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:57:43\ngap: -134sec\nend_prev: 04/11/17, 18:59:57\"'}"];
+	"SERVICE DISCOVERY
+fis"	[shape=oval,
+		tooltip="\"ET SCAN Potential VNC Scan 5900-5920\""];
+	"SERVICE DISCOVERY
+fis" -> "VULNERABILTY DISCOVERY
+postgresql"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:27:56\ngap: 19sec\nend_prev: 04/11/17, 16:27:37\"'}"];
+	"SERVICE DISCOVERY
+fis" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		data="{'color': 'tomato', 'fontcolor': '\"tomato\"', 'label': '\"start_next: 04/11/17, 16:55:20\ngap: 558sec\nend_prev: 04/11/17, 16:46:01\"'}"];
+	"SERVICE DISCOVERY
+microsoft-ds" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:02:46\ngap: 38sec\nend_prev: 04/11/17, 18:02:08\"'}"];
+	"SERVICE DISCOVERY
+microsoft-ds" -> "VULNERABILTY DISCOVERY
+ahsp"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:03:02\ngap: -181sec\nend_prev: 04/11/17, 14:06:04\"'}"];
+	"DATA EXFILTRATION
+wsman | ID: 63"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability\""];
+	"DATA EXFILTRATION
+wsman | ID: 63" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:25:53\ngap: 8339sec\nend_prev: 04/11/17, 14:06:54\"'}"];
+	"DATA EXFILTRATION
+http | ID: 26" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 14:01:07\ngap: 23sec\nend_prev: 04/11/17, 14:00:44\"'}"];
+	"DATA EXFILTRATION
+http | ID: 26" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:27:25\ngap: 8574sec\nend_prev: 04/11/17, 14:04:31\"'}"];
+	"DATA EXFILTRATION
+http | ID: 26" -> "VULNERABILTY DISCOVERY
+mysql"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 16:39:57\ngap: 2731sec\nend_prev: 04/11/17, 15:54:\
+26\"'}"];
+	"DATA EXFILTRATION
+http | ID: 26" -> "VULNERABILTY DISCOVERY
+http"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '<font color=\"blue\"> start_next: 04/11/17, 16:29:03<br/>gap: 8644sec<br/>end_prev: \
+04/11/17, 14:04:59</font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"DATA DELIVERY
+http | ID: 21" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		data="{'color': 'blue', 'label': '<font color=\"blue\"> start_next: 04/11/17, 17:59:05<br/>gap: 5153sec<br/>end_prev: 04/11/17, 16:33:11</\
+font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"DATA DELIVERY
+http | ID: 21" -> "VULNERABILTY DISCOVERY
+mysql"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:27:57\ngap: 8560sec\nend_prev: 04/11/17, 14:05:17\"'}"];
+	"DATA DELIVERY
+http | ID: 21" -> "VULNERABILTY DISCOVERY
+ahsp"	[key=0,
+		data="{'color': 'blue', 'label': '<font color=\"blue\"> start_next: 04/11/17, 16:30:20<br/>gap: 8649sec<br/>end_prev: 04/11/17, 14:06:11</\
+font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"SERVICE DISCOVERY
+ipsma"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Potential VNC Scan 5800-5820
+ET SCAN Potential VNC Scan 5900-5920\""];
+	"SERVICE DISCOVERY
+ipsma" -> "VULNERABILTY DISCOVERY
+postgresql"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '<font color=\"blue\"> start_next: 04/11/17, 18:03:02<br/>gap: 22sec<br/>end_prev: \
+04/11/17, 18:02:40</font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"SERVICE DISCOVERY
+ipsma" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		data="{'color': 'purple', 'label': '<font color=\"purple\"> start_next: 04/11/17, 14:00:41<br/>gap: 0sec<br/>end_prev: 04/11/17, 14:00:41</\
+font><br/><font color=\"purple\"><b>Attacker: 10.0.254.30</b></font>'}"];
+	"DATA EXFILTRATION
+wap-wsp | ID: 68"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability\""];
+	"DATA EXFILTRATION
+wap-wsp | ID: 68" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		data="{'color': 'blue', 'label': '<font color=\"blue\"> start_next: 04/11/17, 16:28:37<br/>gap: 8677sec<br/>end_prev: 04/11/17, 14:03:59</\
+font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"DATA EXFILTRATION
+remoteware-cl | ID: 67"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability\""];
+	"DATA EXFILTRATION
+remoteware-cl | ID: 67" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		data="{'color': 'blue', 'label': '<font color=\"blue\"> start_next: 04/11/17, 16:30:33<br/>gap: 8034sec<br/>end_prev: 04/11/17, 14:16:39</\
+font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"DATA EXFILTRATION
+remoteware-cl | ID: 67" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		data="{'color': 'blue', 'label': '<font color=\"blue\"> start_next: 04/11/17, 18:01:11<br/>gap: 4555sec<br/>end_prev: 04/11/17, 16:45:16</\
+font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"SERVICE DISCOVERY
+ff-ice" -> "VULNERABILTY DISCOVERY
+postgresql"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '<font color=\"blue\"> start_next: 04/11/17, 13:03:10<br/>gap: 63sec<br/>end_prev: \
+04/11/17, 13:02:07</font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"SERVICE DISCOVERY
+ff-ice" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		data="{'color': 'purple', 'label': '<font color=\"purple\"> start_next: 04/11/17, 13:40:01<br/>gap: 535sec<br/>end_prev: 04/11/17, 13:31:\
+05</font><br/><font color=\"purple\"><b>Attacker: 10.0.254.32</b></font>'}"];
+	"SERVICE DISCOVERY
+ff-ice" -> "VULNERABILTY DISCOVERY
+mysql"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 13:34:49\ngap: 1205sec\nend_prev: 04/11/17, 13:14:43\"'}"];
+	"ARBITRARY CODE EXECUTION
+ssdp | ID: 355" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:56:58\ngap: 3395sec\nend_prev: 04/11/17, 18:00:23\"'}"];
+	"DATA EXFILTRATION
+microsoft-ds | ID: 37" -> "VULNERABILTY DISCOVERY
+postgresql"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:11:07\ngap: 697sec\nend_prev: 04/11/17, 13:59:30\"'}"];
+	"DATA EXFILTRATION
+microsoft-ds | ID: 37" -> "VULNERABILTY DISCOVERY
+ahsp"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:08:22\ngap: -282sec\nend_prev: 04/11/17, 16:13:04\"'}"];
+	"SERVICE DISCOVERY
+cm" -> "VULNERABILTY DISCOVERY
+postgresql"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:35:40\ngap: -52sec\nend_prev: 04/11/17, 14:36:32\"'}"];
+	"SERVICE DISCOVERY
+cm" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		data="{'color': 'orange', 'label': '<font color=\"orange\"> start_next: 04/11/17, 16:20:15<br/>gap: -87sec<br/>end_prev: 04/11/17, 16:21:\
+42</font><br/><font color=\"orange\"><b>Attacker: 10.0.254.35</b></font>'}"];
+	"SERVICE DISCOVERY
+cm" -> "VULNERABILTY DISCOVERY
+http"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 22:18:57\ngap: 9425sec\nend_prev: 04/11/17, 19:41:51\"'}"];
+	"SERVICE DISCOVERY
+ag-swim" -> "VULNERABILTY DISCOVERY
+postgresql"	[key=0,
+		data="{'color': 'blue', 'label': '<font color=\"blue\"> start_next: 04/11/17, 13:01:26<br/>gap: 16sec<br/>end_prev: 04/11/17, 13:01:10</\
+font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"SERVICE DISCOVERY
+ag-swim" -> "VULNERABILTY DISCOVERY
+mysql"	[key=0,
+		data="{'color': 'purple', 'label': '<font color=\"purple\"> start_next: 04/11/17, 14:16:05<br/>gap: 2854sec<br/>end_prev: 04/11/17, 13:28:\
+31</font><br/><font color=\"purple\"><b>Attacker: 10.0.254.32</b></font>'}"];
+	"HOST DISCOVERY
+http" -> "VULNERABILTY DISCOVERY
+postgresql"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 17:58:02\ngap: 1178sec\nend_prev: 04/11/17, 17:38:\
+24\"'}"];
+	"HOST DISCOVERY
+http" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"turquoise\"', 'label': '<font color=\"purple\"> start_next: 04/11/17, 13:31:55<br/>gap: 1sec<br/>\
+end_prev: 04/11/17, 13:31:54</font><br/><font color=\"purple\"><b>Attacker: 10.0.254.30</b></font>'}"];
+	"HOST DISCOVERY
+http" -> "VULNERABILTY DISCOVERY
+mysql"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 17:58:01\ngap: 1177sec\nend_prev: 04/11/17, 17:38:\
+24\"'}"];
+	"HOST DISCOVERY
+http" -> "VULNERABILTY DISCOVERY
+mysql"	[key=1,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 13:16:35\ngap: 1082sec\nend_prev: 04/11/17, 12:58:\
+33\"'}"];
+	"HOST DISCOVERY
+http" -> "VULNERABILTY DISCOVERY
+mysql"	[key=2,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 13:33:32\ngap: 402sec\nend_prev: 04/11/17, 13:26:50\"'}"];
+	"HOST DISCOVERY
+http" -> "VULNERABILTY DISCOVERY
+mysql"	[key=3,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 13:59:54\ngap: 1640sec\nend_prev: 04/11/17, 13:32:34\"'}"];
+	"HOST DISCOVERY
+http" -> "VULNERABILTY DISCOVERY
+http"	[key=0,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 14:17:29\ngap: 615sec\nend_prev: 04/11/17, 14:07:13\"'}"];
+	"HOST DISCOVERY
+http" -> "VULNERABILTY DISCOVERY
+http"	[key=1,
+		data="{'color': 'tomato', 'fontcolor': '\"brown\"', 'label': '<font color=\"tomato\"> start_next: 04/11/17, 16:07:23<br/>gap: 1sec<br/>end_\
+prev: 04/11/17, 16:07:22</font><br/><font color=\"tomato\"><b>Attacker: 10.0.254.33</b></font>'}"];
+	"HOST DISCOVERY
+http" -> "VULNERABILTY DISCOVERY
+http"	[key=2,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 15:27:20\ngap: 334sec\nend_prev: 04/11/17, 15:21:46\"'}"];
+	"HOST DISCOVERY
+wsman" -> "VULNERABILTY DISCOVERY
+wsman"	[key=0,
+		data="{'color': 'purple', 'label': '<font color=\"purple\"> start_next: 04/11/17, 14:07:05<br/>gap: 32sec<br/>end_prev: 04/11/17, 14:06:\
+33</font><br/><font color=\"purple\"><b>Attacker: 10.0.254.30</b></font>'}"];
+	"SERVICE DISCOVERY
+dsd" -> "VULNERABILTY DISCOVERY
+postgresql"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '<font color=\"blue\"> start_next: 04/11/17, 13:06:01<br/>gap: 101sec<br/>end_prev: \
+04/11/17, 13:04:20</font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"SERVICE DISCOVERY
+dsd" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		data="{'color': 'maroon', 'label': '<font color=\"maroon\"> start_next: 04/11/17, 22:01:23<br/>gap: 175sec<br/>end_prev: 04/11/17, 21:58:\
+28</font><br/><font color=\"maroon\"><b>Attacker: 10.0.254.33</b></font>'}"];
+	"SERVICE DISCOVERY
+dsd" -> "VULNERABILTY DISCOVERY
+http"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 13:59:50\ngap: 3588sec\nend_prev: 04/11/17, 13:00:02\"'}"];
+	"HOST DISCOVERY
+wap-wsp" -> "VULNERABILTY DISCOVERY
+wap-wsp"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 17:46:43\ngap: 556sec\nend_prev: 04/11/17, 17:37:26\"'}"];
+	"HOST DISCOVERY
+wap-wsp" -> "VULNERABILTY DISCOVERY
+wap-wsp"	[key=1,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 20:48:03\ngap: 229sec\nend_prev: 04/11/17, 20:44:14\"'}"];
+	"SERVICE DISCOVERY
+rfb" -> "VULNERABILTY DISCOVERY
+postgresql"	[key=0,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 13:28:00\ngap: -109sec\nend_prev: 04/11/17, 13:29:50\"'}"];
+	"SERVICE DISCOVERY
+rfb" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 04/11/17, 13:50:10\ngap: 356sec\nend_prev: 04/11/17, 13:\
+44:14\"'}"];
+	"SERVICE DISCOVERY
+rfb" -> "VULNERABILTY DISCOVERY
+ahsp"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:27:31\ngap: 290sec\nend_prev: 04/11/17, 16:22:42\"'}"];
+	"SERVICE DISCOVERY
+rfb" -> "VULNERABILTY DISCOVERY
+http"	[key=0,
+		data="{'color': 'brown', 'label': '<font color=\"brown\"> start_next: 04/11/17, 17:25:06<br/>gap: 4675sec<br/>end_prev: 04/11/17, 16:07:\
+11</font><br/><font color=\"brown\"><b>Attacker: 10.0.254.32</b></font>'}"];
+	"USER PRIVILEGE ESCALATION
+http | ID: 49"	[shape=box,
+		tooltip="\"ET POLICY Outgoing Basic Auth Base64 HTTP Password detected unencrypted
+ET POLICY Incoming Basic Auth Base64 HTTP Password detected \
+unencrypted\""];
+	"USER PRIVILEGE ESCALATION
+http | ID: 49" -> "VULNERABILTY DISCOVERY
+http"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:39:03\ngap: -12sec\nend_prev: 04/11/17, 16:39:15\"'}"];
+	"SERVICE DISCOVERY
+icmpd" -> "VULNERABILTY DISCOVERY
+ahsp"	[key=0,
+		data="{'color': 'tomato', 'fontcolor': '\"tomato\"', 'label': '\"start_next: 04/11/17, 16:02:41\ngap: 3315sec\nend_prev: 04/11/17, 15:07:\
+27\"'}"];
+	"SURFING
+http-alt"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET WEB_SERVER WEB-PHP phpinfo access\""];
+	"SURFING
+http-alt" -> "VULNERABILTY DISCOVERY
+http-alt"	[key=0,
+		data="{'color': 'maroon', 'label': '<font color=\"maroon\"> start_next: 04/11/17, 18:02:27<br/>gap: 6908sec<br/>end_prev: 04/11/17, 16:07:\
+19</font><br/><font color=\"maroon\"><b>Attacker: 10.0.254.30</b></font>'}"];
+	"SURFING
+http-alt" -> "VULNERABILTY DISCOVERY
+radan-http"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 14:08:04\ngap: -18sec\nend_prev: 04/11/17, 14:08:21\"'}"];
+	"NETWORK DoS
+ms-wbt-server | ID: 36" -> "VULNERABILTY DISCOVERY
+postgresql"	[key=0,
+		data="{'color': 'turquoise', 'label': '<font color=\"turquoise\"> start_next: 04/11/17, 15:12:39<br/>gap: -658sec<br/>end_prev: 04/11/17, \
+15:23:37</font><br/><font color=\"turquoise\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"NETWORK DoS
+ms-wbt-server | ID: 36" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 14:46:49\ngap: -24sec\nend_prev: 04/11/17, 14:47:13\"'}"];
+	"NETWORK DoS
+ms-wbt-server | ID: 36" -> "VULNERABILTY DISCOVERY
+ahsp"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 16:54:44\ngap: 425sec\nend_prev: 04/11/17, 16:47:39\"'}"];
+	"DATA DELIVERY
+distinct | ID: 70"	[fillcolor=yellow,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SERVER PHP Possible php Remote File Inclusion Attempt
+ET WEB_SERVER PHP tags in HTTP POST\""];
+	"DATA DELIVERY
+distinct | ID: 70" -> "VULNERABILTY DISCOVERY
+ahsp"	[key=0,
+		data="{'color': 'blue', 'label': '<font color=\"blue\"> start_next: 04/11/17, 16:29:22<br/>gap: 8642sec<br/>end_prev: 04/11/17, 14:05:20</\
+font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"SERVICE DISCOVERY
+ftp" -> "VULNERABILTY DISCOVERY
+postgresql"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:00:53\ngap: -322sec\nend_prev: 04/11/17, 14:06:14\"'}"];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 52"	[shape=box,
+		tooltip="\"ET SNMP Samsung Printer SNMP Hardcode RW Community String\""];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 52" -> "VULNERABILTY DISCOVERY
+remoteware-cl"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:41:27\ngap: 459sec\nend_prev: 04/11/17, 16:33:48\"'}"];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 52" -> "VULNERABILTY DISCOVERY
+unknown"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:12:53\ngap: 470sec\nend_prev: 04/11/17, 14:05:03\"'}"];
+	"BRUTE FORCE CREDENTIALS
+unknown | ID: 1"	[shape=box,
+		tooltip="\"ET SCAN Multiple MySQL Login Failures Possible Brute Force Attempt\""];
+	"BRUTE FORCE CREDENTIALS
+unknown | ID: 1" -> "VULNERABILTY DISCOVERY
+mysql"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:27:54\ngap: 8664sec\nend_prev: 04/11/17, 14:03:30\"'}"];
+	"BRUTE FORCE CREDENTIALS
+unknown | ID: 1" -> "VULNERABILTY DISCOVERY
+wsman"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 17:57:42\ngap: 1171sec\nend_prev: 04/11/17, 17:38:\
+11\"'}"];
+	"SERVICE DISCOVERY
+spt-automation"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Potential VNC Scan 5800-5820\""];
+	"SERVICE DISCOVERY
+spt-automation" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:29:55\ngap: -30sec\nend_prev: 04/11/17, 16:30:24\"'}"];
+	"SERVICE DISCOVERY
+spt-automation" -> "VULNERABILTY DISCOVERY
+mysql"	[key=0,
+		data="{'color': 'purple', 'label': '<font color=\"purple\"> start_next: 04/11/17, 19:49:29<br/>gap: 5933sec<br/>end_prev: 04/11/17, 18:10:\
+36</font><br/><font color=\"purple\"><b>Attacker: 10.0.254.30</b></font>'}"];
+	"DATA DELIVERY
+unknown | ID: 56"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SERVER PHP Possible php Remote File Inclusion Attempt
+ET WEB_SERVER PHP tags in HTTP POST
+GPL WEB_SERVER perl post attempt\""];
+	"DATA DELIVERY
+unknown | ID: 56" -> "VULNERABILTY DISCOVERY
+mysql"	[key=0,
+		data="{'color': 'blue', 'label': '<font color=\"blue\"> start_next: 04/11/17, 14:21:11<br/>gap: 967sec<br/>end_prev: 04/11/17, 14:05:04</\
+font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"SERVICE DISCOVERY
+cpdlc" -> "VULNERABILTY DISCOVERY
+postgresql"	[key=0,
+		data="{'color': 'blue', 'label': '<font color=\"blue\"> start_next: 04/11/17, 13:59:37<br/>gap: 3920sec<br/>end_prev: 04/11/17, 12:54:17</\
+font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"SERVICE DISCOVERY
+cpdlc" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:14:58\ngap: 792sec\nend_prev: 04/11/17, 14:01:46\"'}"];
+	"DATA EXFILTRATION
+vrml-multi-use | ID: 76"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability\""];
+	"DATA EXFILTRATION
+vrml-multi-use | ID: 76" -> "VULNERABILTY DISCOVERY
+postgresql"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:31:19\ngap: 8383sec\nend_prev: 04/11/17, 14:11:36\"'}"];
+	"DATA EXFILTRATION
+vrml-multi-use | ID: 76" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:03:03\ngap: 5294sec\nend_prev: 04/11/17, 16:34:50\"'}"];
+	"DATA EXFILTRATION
+unknown | ID: 57"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability\""];
+	"DATA EXFILTRATION
+unknown | ID: 57" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		data="{'color': 'blue', 'label': '<font color=\"blue\"> start_next: 04/11/17, 18:58:13<br/>gap: 3157sec<br/>end_prev: 04/11/17, 18:05:36</\
+font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 40"	[shape=box,
+		tooltip="\"GPL NETBIOS DCERPC Remote Activation bind attempt
+GPL NETBIOS SMB-DS Session Setup NTMLSSP unicode asn1 overflow attempt
+GPL NETBIOS \
+DCERPC IActivation little endian bind attempt\""];
+	"ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 40" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:03:07\ngap: -220sec\nend_prev: 04/11/17, 14:06:47\"'}"];
+}

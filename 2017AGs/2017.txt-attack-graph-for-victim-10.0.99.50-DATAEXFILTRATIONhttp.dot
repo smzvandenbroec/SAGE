@@ -1,0 +1,107 @@
+digraph DATAEXFILTRATIONhttp {
+rankdir="BT"; 
+ graph [ nodesep="0.1", ranksep="0.02"] 
+ node [ fontname=Arial, fontsize=24,penwidth=3]; 
+ edge [ fontname=Arial, fontsize=20,penwidth=5 ];
+"Victim: 10.0.99.50
+DATA EXFILTRATION
+http" [shape=doubleoctagon, style=filled, fillcolor=salmon];
+{ rank = max; "Victim: 10.0.99.50
+DATA EXFILTRATION
+http"}
+"DATA EXFILTRATION
+http | ID: 26" -> "Victim: 10.0.99.50
+DATA EXFILTRATION
+http"
+"DATA EXFILTRATION
+http | ID: 26" [style=filled, fillcolor= salmon]
+{ rank=same; "DATA EXFILTRATION
+http | ID: 26"}
+"INFO DISCOVERY
+xdmcp" [style=filled, fillcolor= yellow]
+"INFO DISCOVERY
+xdmcp" -> "VULNERABILTY DISCOVERY
+ahsp" [ color=blue] [label=<<font color="blue"> start_next: 04/11/17, 17:58:38<br/>gap: 5331sec<br/>end_prev: 04/11/17, 16:29:48</font><br/><font color="blue"><b>Attacker: 10.0.254.31</b></font>>]
+"VULNERABILTY DISCOVERY
+ahsp" -> "HOST DISCOVERY
+ms-wbt-server" [ label="start_next: 04/11/17, 17:58:43
+gap: -33sec
+end_prev: 04/11/17, 17:59:16"][ fontcolor="blue" color=blue]
+"HOST DISCOVERY
+ms-wbt-server" -> "ARBITRARY CODE EXECUTION
+ssdp | ID: 355" [ label="start_next: 04/11/17, 18:00:13
+gap: 90sec
+end_prev: 04/11/17, 17:58:43"][ fontcolor="blue" color=blue]
+"ARBITRARY CODE EXECUTION
+ssdp | ID: 355" -> "VULNERABILTY DISCOVERY
+ms-sql-s" [ label="start_next: 04/11/17, 18:56:58
+gap: 3395sec
+end_prev: 04/11/17, 18:00:23"][ fontcolor="blue" color=blue]
+"VULNERABILTY DISCOVERY
+ms-sql-s" -> "HOST DISCOVERY
+ms-wbt-server" [ label="start_next: 04/11/17, 18:57:32
+gap: 25sec
+end_prev: 04/11/17, 18:57:07"][ fontcolor="blue" color=blue]
+"HOST DISCOVERY
+ms-wbt-server" -> "SERVICE DISCOVERY
+unknown" [ label="start_next: 04/11/17, 18:57:32
+gap: 0sec
+end_prev: 04/11/17, 18:57:32"][ fontcolor="blue" color=blue]
+"SERVICE DISCOVERY
+unknown" -> "ARBITRARY CODE EXECUTION
+ssdp | ID: 703" [ label="start_next: 04/11/17, 18:58:24
+gap: 52sec
+end_prev: 04/11/17, 18:57:32"][ fontcolor="blue" color=blue]
+"ARBITRARY CODE EXECUTION
+ssdp | ID: 703" -> "DATA DELIVERY
+http | ID: 246" [ label="start_next: 04/11/17, 19:00:38
+gap: 124sec
+end_prev: 04/11/17, 18:58:34"][ fontcolor="blue" color=blue]
+"DATA DELIVERY
+http | ID: 246" -> "DATA EXFILTRATION
+http | ID: 26" [ label="start_next: 04/11/17, 19:00:50
+gap: 12sec
+end_prev: 04/11/17, 19:00:38"][ fontcolor="blue" color=blue]
+"INFO DISCOVERY
+xdmcp" [shape=oval]
+"INFO DISCOVERY
+xdmcp" [tooltip="GPL RPC xdmcp info query"]
+"VULNERABILTY DISCOVERY
+ahsp" [shape=oval]
+"VULNERABILTY DISCOVERY
+ahsp" [tooltip="ET POLICY Suspicious inbound to PostgreSQL port 5432
+ET POLICY Suspicious inbound to MSSQL port 1433
+ET POLICY Suspicious inbound to Oracle SQL port 1521
+ET POLICY Suspicious inbound to mSQL port 4333"]
+"HOST DISCOVERY
+ms-wbt-server" [shape=oval]
+"HOST DISCOVERY
+ms-wbt-server" [tooltip="ET SCAN Behavioral Unusually fast Terminal Server Traffic Potential Scan or Infection (Inbound)"]
+"ARBITRARY CODE EXECUTION
+ssdp | ID: 355" [shape=box]
+"ARBITRARY CODE EXECUTION
+ssdp | ID: 355" [tooltip="GPL MISC UPnP malformed advertisement"]
+"VULNERABILTY DISCOVERY
+ms-sql-s" [shape=oval]
+"VULNERABILTY DISCOVERY
+ms-sql-s" [tooltip="ET POLICY Suspicious inbound to MSSQL port 1433
+ET POLICY Suspicious inbound to mySQL port 3306
+ET POLICY Suspicious inbound to Oracle SQL port 1521
+ET POLICY Suspicious inbound to mSQL port 4333"]
+"SERVICE DISCOVERY
+unknown" [shape=oval]
+"SERVICE DISCOVERY
+unknown" [tooltip="ET SCAN Potential VNC Scan 5800-5820"]
+"ARBITRARY CODE EXECUTION
+ssdp | ID: 703" [shape=box]
+"ARBITRARY CODE EXECUTION
+ssdp | ID: 703" [tooltip="GPL MISC UPnP malformed advertisement"]
+"DATA DELIVERY
+http | ID: 246" [shape=hexagon]
+"DATA DELIVERY
+http | ID: 246" [tooltip="GPL WEB_SERVER perl post attempt"]
+"DATA EXFILTRATION
+http | ID: 26" [shape=hexagon]
+"DATA EXFILTRATION
+http | ID: 26" [tooltip="ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability"]
+}

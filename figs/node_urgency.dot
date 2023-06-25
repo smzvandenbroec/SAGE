@@ -1,0 +1,6553 @@
+digraph DATAEXFILTRATIONhttp {
+	graph [name=DATAEXFILTRATIONhttp,
+		rankdir="\"BT\""
+	];
+	node [fontname=Arial,
+		fontsize=24,
+		penwidth=3
+	];
+	edge [fontname=Arial,
+		fontsize=20,
+		penwidth=5
+	];
+	"Victim: 10.0.0.100
+DATA DELIVERY
+wsman"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+wsman | ID: 61"	[fillcolor=salmon,
+		fontcolor=chartreuse,
+		shape=hexagon,
+		style=filled];
+	"DATA DELIVERY
+wsman | ID: 61" -> "Victim: 10.0.0.100
+DATA DELIVERY
+wsman"	[key=0];
+	"ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 309"	[fillcolor=yellow,
+		fontcolor=firebrick4,
+		shape=box,
+		style=filled];
+	"DATA DELIVERY
+wsman | ID: 61" -> "ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 309"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA EXFILTRATION
+microsoft-ds | ID: 37"	[fillcolor=salmon,
+		fontcolor=firebrick4,
+		shape=hexagon,
+		style=filled];
+	"ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 309" -> "DATA EXFILTRATION
+microsoft-ds | ID: 37"	[key=0,
+		color=tomato,
+		fontcolor="\"tomato\""];
+	"ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 309" -> "DATA EXFILTRATION
+microsoft-ds | ID: 37"	[key=1,
+		color=tomato,
+		fontcolor="\"tomato\""];
+	"ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 309" -> "DATA EXFILTRATION
+microsoft-ds | ID: 37"	[key=2,
+		color=tomato,
+		fontcolor="\"tomato\""];
+	"ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 309" -> "DATA EXFILTRATION
+microsoft-ds | ID: 37"	[key=3,
+		color=tomato,
+		fontcolor="\"tomato\""];
+	"ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 309" -> "DATA EXFILTRATION
+microsoft-ds | ID: 37"	[key=4,
+		color=tomato,
+		fontcolor="\"tomato\""];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 52"	[fontcolor=darkgoldenrod1,
+		shape=box];
+	"ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 309" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: 52"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 309" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: 52"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 309" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: 52"	[key=2,
+		color=blue,
+		fontcolor="\"blue\""];
+	"HOST DISCOVERY
+ms-wbt-server"	[fillcolor=yellow,
+		fontcolor=chartreuse,
+		shape=oval,
+		style=filled];
+	"HOST DISCOVERY
+ms-wbt-server" -> "HOST DISCOVERY
+ms-wbt-server"	[key=0,
+		color=blue];
+	"SERVICE DISCOVERY
+ff-ice"	[fillcolor=yellow,
+		fontcolor=chartreuse,
+		shape=oval,
+		style=filled];
+	"HOST DISCOVERY
+ms-wbt-server" -> "SERVICE DISCOVERY
+ff-ice"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+postgresql"	[fillcolor=yellow,
+		fontcolor=firebrick4,
+		shape=oval,
+		style=filled];
+	"HOST DISCOVERY
+ms-wbt-server" -> "VULNERABILTY DISCOVERY
+postgresql"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+ncube-lm"	[fillcolor=yellow,
+		fontcolor=firebrick4,
+		shape=oval,
+		style=filled];
+	"HOST DISCOVERY
+ms-wbt-server" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		color=brown,
+		fontcolor="\"brown\""];
+	"SERVICE DISCOVERY
+unknown"	[fillcolor=yellow,
+		fontcolor=firebrick4,
+		shape=oval,
+		style=filled];
+	"HOST DISCOVERY
+ms-wbt-server" -> "SERVICE DISCOVERY
+unknown"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 931"	[fontcolor=chartreuse,
+		shape=box,
+		style=dotted];
+	"HOST DISCOVERY
+ms-wbt-server" -> "ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 931"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"COMMAND AND CONTROL
+unknown | ID: 308"	[fillcolor=yellow,
+		fontcolor=firebrick4,
+		shape=box,
+		style=filled];
+	"HOST DISCOVERY
+ms-wbt-server" -> "COMMAND AND CONTROL
+unknown | ID: 308"	[key=0,
+		color=darkgreen,
+		fontcolor="\"darkgreen\""];
+	"VULNERABILTY DISCOVERY
+ms-sql-s"	[fillcolor=yellow,
+		fontcolor=firebrick4,
+		shape=oval,
+		style=filled];
+	"HOST DISCOVERY
+ms-wbt-server" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"INFO DISCOVERY
+xdmcp"	[fillcolor=yellow,
+		fontcolor=darkgoldenrod1,
+		shape=oval,
+		style=filled];
+	"HOST DISCOVERY
+ms-wbt-server" -> "INFO DISCOVERY
+xdmcp"	[key=0,
+		color=brown,
+		fontcolor="\"brown\""];
+	"USER PRIVILEGE ESCALATION
+wsman | ID: 394"	[fontcolor=chartreuse,
+		shape=box,
+		style=dotted];
+	"HOST DISCOVERY
+ms-wbt-server" -> "USER PRIVILEGE ESCALATION
+wsman | ID: 394"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA EXFILTRATION
+microsoft-ds | ID: 298"	[fillcolor=salmon,
+		fontcolor=chartreuse,
+		shape=hexagon,
+		style=filled];
+	"HOST DISCOVERY
+ms-wbt-server" -> "DATA EXFILTRATION
+microsoft-ds | ID: 298"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"SERVICE DISCOVERY
+cpdlc"	[fillcolor=yellow,
+		fontcolor=chartreuse,
+		shape=oval,
+		style=filled];
+	"HOST DISCOVERY
+ms-wbt-server" -> "SERVICE DISCOVERY
+cpdlc"	[key=0,
+		color=turquoise,
+		fontcolor="\"turquoise\""];
+	"DATA EXFILTRATION
+http | ID: 228"	[fillcolor=salmon,
+		fontcolor=darkgoldenrod1,
+		shape=hexagon,
+		style=filled];
+	"HOST DISCOVERY
+ms-wbt-server" -> "DATA EXFILTRATION
+http | ID: 228"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ARBITRARY CODE EXECUTION
+ssdp | ID: 355"	[fontcolor=firebrick4,
+		shape=box];
+	"HOST DISCOVERY
+ms-wbt-server" -> "ARBITRARY CODE EXECUTION
+ssdp | ID: 355"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+ssh"	[fillcolor=yellow,
+		fontcolor=chartreuse,
+		shape=oval,
+		style=filled];
+	"HOST DISCOVERY
+ms-wbt-server" -> "SERVICE DISCOVERY
+ssh"	[key=0,
+		color=brown];
+	"SERVICE DISCOVERY
+rpas-c2"	[fillcolor=yellow,
+		fontcolor=chartreuse,
+		shape=oval,
+		style=filled];
+	"HOST DISCOVERY
+ms-wbt-server" -> "SERVICE DISCOVERY
+rpas-c2"	[key=0,
+		color=turquoise];
+	"SERVICE DISCOVERY
+ff-ice" -> "VULNERABILTY DISCOVERY
+postgresql"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+ff-ice" -> "COMMAND AND CONTROL
+unknown | ID: 308"	[key=0,
+		color=turquoise];
+	"SERVICE DISCOVERY
+ff-ice" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		color=purple];
+	"SERVICE DISCOVERY
+ff-ice" -> "DATA EXFILTRATION
+microsoft-ds | ID: 37"	[key=0,
+		color=turquoise,
+		fontcolor="\"turquoise\""];
+	"VULNERABILTY DISCOVERY
+mysql"	[fillcolor=yellow,
+		fontcolor=firebrick4,
+		shape=oval,
+		style=filled];
+	"SERVICE DISCOVERY
+ff-ice" -> "VULNERABILTY DISCOVERY
+mysql"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"COMMAND AND CONTROL
+unknown | ID: 39"	[fillcolor=yellow,
+		fontcolor=darkgoldenrod1,
+		shape=box,
+		style=filled];
+	"SERVICE DISCOVERY
+ff-ice" -> "COMMAND AND CONTROL
+unknown | ID: 39"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"HOST DISCOVERY
+remoteware-cl"	[fontcolor=chartreuse,
+		shape=oval];
+	"SERVICE DISCOVERY
+ff-ice" -> "HOST DISCOVERY
+remoteware-cl"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "HOST DISCOVERY
+ms-wbt-server"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "HOST DISCOVERY
+ms-wbt-server"	[key=1,
+		color=turquoise,
+		fontcolor="\"turquoise\""];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "VULNERABILTY DISCOVERY
+postgresql"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		color=brown,
+		fontcolor="\"brown\""];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "SERVICE DISCOVERY
+unknown"	[key=0,
+		color=brown,
+		fontcolor="\"brown\""];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "INFO DISCOVERY
+xdmcp"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "ARBITRARY CODE EXECUTION
+ssdp | ID: 355"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "SERVICE DISCOVERY
+ssh"	[key=0,
+		color=blue];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "VULNERABILTY DISCOVERY
+mysql"	[key=0,
+		color=brown,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "COMMAND AND CONTROL
+unknown | ID: 39"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"VULNERABILTY DISCOVERY
+ahsp"	[fillcolor=yellow,
+		fontcolor=darkgoldenrod1,
+		shape=oval,
+		style=filled];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "VULNERABILTY DISCOVERY
+ahsp"	[key=0,
+		color=purple];
+	"NETWORK DoS
+ssdp | ID: 55"	[fillcolor=salmon,
+		fontcolor=firebrick4,
+		shape=hexagon,
+		style=filled];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "NETWORK DoS
+ssdp | ID: 55"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 53"	[fontcolor=firebrick4,
+		shape=box];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "ACCOUNT MANIPULATION
+snmp | ID: 53"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"NETWORK DoS
+ms-wbt-server | ID: 36"	[fillcolor=salmon,
+		fontcolor=firebrick4,
+		shape=hexagon,
+		style=filled];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "NETWORK DoS
+ms-wbt-server | ID: 36"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"SERVICE DISCOVERY
+cm"	[fillcolor=yellow,
+		fontcolor=chartreuse,
+		shape=oval,
+		style=filled];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "SERVICE DISCOVERY
+cm"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+ag-swim"	[fillcolor=yellow,
+		fontcolor=chartreuse,
+		shape=oval,
+		style=filled];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "SERVICE DISCOVERY
+ag-swim"	[key=0,
+		color=darkgreen,
+		fontcolor="\"darkgreen\""];
+	"HOST DISCOVERY
+http"	[fillcolor=yellow,
+		fontcolor=firebrick4,
+		shape=oval,
+		style=filled];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "HOST DISCOVERY
+http"	[key=0,
+		color=brown,
+		fontcolor="\"brown\""];
+	"SERVICE DISCOVERY
+ftp"	[fontcolor=chartreuse,
+		shape=oval];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "SERVICE DISCOVERY
+ftp"	[key=0,
+		color=blue];
+	"ARBITRARY CODE EXECUTION
+epmap | ID: 64"	[fontcolor=chartreuse,
+		shape=box];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "ARBITRARY CODE EXECUTION
+epmap | ID: 64"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ARBITRARY CODE EXECUTION
+http | ID: 32"	[fontcolor=firebrick4,
+		shape=box];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "ARBITRARY CODE EXECUTION
+http | ID: 32"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"SURFING
+http"	[fillcolor=yellow,
+		fontcolor=darkgoldenrod1,
+		shape=oval,
+		style=filled];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "SURFING
+http"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"INFO DISCOVERY
+http"	[fillcolor=yellow,
+		fontcolor=darkgoldenrod1,
+		shape=oval,
+		style=filled];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "INFO DISCOVERY
+http"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"BRUTE FORCE CREDENTIALS
+pop3s | ID: 886"	[fontcolor=chartreuse,
+		shape=box];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "BRUTE FORCE CREDENTIALS
+pop3s | ID: 886"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA EXFILTRATION
+http-alt | ID: 25"	[fillcolor=salmon,
+		fontcolor=darkgoldenrod1,
+		shape=hexagon,
+		style=filled];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "DATA EXFILTRATION
+http-alt | ID: 25"	[key=0,
+		color=turquoise,
+		fontcolor="\"turquoise\""];
+	"HOST DISCOVERY
+unknown"	[fillcolor=yellow,
+		fontcolor=chartreuse,
+		shape=oval,
+		style=filled];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "HOST DISCOVERY
+unknown"	[key=0,
+		color=brown,
+		fontcolor="\"brown\""];
+	"SERVICE DISCOVERY
+asmgcs"	[fontcolor=chartreuse,
+		shape=oval];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "SERVICE DISCOVERY
+asmgcs"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 309"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "HOST DISCOVERY
+ms-wbt-server"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "SERVICE DISCOVERY
+ff-ice"	[key=0,
+		color=purple];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		color=tomato,
+		fontcolor="\"tomato\""];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "SERVICE DISCOVERY
+unknown"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "SERVICE DISCOVERY
+unknown"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "SERVICE DISCOVERY
+unknown"	[key=2,
+		color=brown,
+		fontcolor="\"brown\""];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		color=blue];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "ARBITRARY CODE EXECUTION
+ssdp | ID: 355"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "DATA EXFILTRATION
+microsoft-ds | ID: 37"	[key=0,
+		color=turquoise];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "VULNERABILTY DISCOVERY
+ahsp"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "ACCOUNT MANIPULATION
+snmp | ID: 53"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "SERVICE DISCOVERY
+cm"	[key=0,
+		color=brown,
+		fontcolor="\"brown\""];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "SERVICE DISCOVERY
+ag-swim"	[key=0,
+		color=darkgreen];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "HOST DISCOVERY
+http"	[key=0,
+		color=blue,
+		fontcolor="\"purple\""];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "HOST DISCOVERY
+http"	[key=1,
+		color=purple,
+		fontcolor="\"purple\""];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "BRUTE FORCE CREDENTIALS
+pop3s | ID: 886"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "HOST DISCOVERY
+unknown"	[key=0,
+		color=blue];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "HOST DISCOVERY
+unknown"	[key=1,
+		color=purple,
+		fontcolor="\"purple\""];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "HOST DISCOVERY
+unknown"	[key=2,
+		color=brown,
+		fontcolor="\"brown\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: -1"	[fontcolor=chartreuse,
+		shape=box];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "ACCOUNT MANIPULATION
+snmp | ID: -1"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"HOST DISCOVERY
+wsman"	[fillcolor=yellow,
+		fontcolor=chartreuse,
+		shape=oval,
+		style=filled];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "HOST DISCOVERY
+wsman"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "HOST DISCOVERY
+wsman"	[key=1,
+		color=purple,
+		fontcolor="\"purple\""];
+	"SERVICE DISCOVERY
+dsd"	[fillcolor=yellow,
+		fontcolor=chartreuse,
+		shape=oval,
+		style=filled];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "SERVICE DISCOVERY
+dsd"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"SERVICE DISCOVERY
+netbios-ssn"	[fillcolor=yellow,
+		fontcolor=chartreuse,
+		shape=oval,
+		style=filled];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "SERVICE DISCOVERY
+netbios-ssn"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+epmap"	[fillcolor=yellow,
+		fontcolor=chartreuse,
+		shape=oval,
+		style=filled];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "SERVICE DISCOVERY
+epmap"	[key=0,
+		color=blue];
+	"VULNERABILTY DISCOVERY
+http"	[fillcolor=yellow,
+		fontcolor=darkgoldenrod1,
+		shape=oval,
+		style=filled];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "VULNERABILTY DISCOVERY
+http"	[key=0,
+		color=purple];
+	"BRUTE FORCE CREDENTIALS
+pop3 | ID: 382"	[fontcolor=chartreuse,
+		shape=box];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "BRUTE FORCE CREDENTIALS
+pop3 | ID: 382"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 365"	[fontcolor=chartreuse,
+		shape=box];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: 365"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"HOST DISCOVERY
+wap-wsp"	[fontcolor=chartreuse,
+		shape=oval];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "HOST DISCOVERY
+wap-wsp"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "HOST DISCOVERY
+wap-wsp"	[key=1,
+		color=purple,
+		fontcolor="\"purple\""];
+	"HOST DISCOVERY
+http-alt"	[fillcolor=yellow,
+		fontcolor=chartreuse,
+		shape=oval,
+		style=filled];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "HOST DISCOVERY
+http-alt"	[key=0,
+		color=brown,
+		fontcolor="\"brown\""];
+	"HOST DISCOVERY
+websm"	[fontcolor=chartreuse,
+		shape=oval];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "HOST DISCOVERY
+websm"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"ARBITRARY CODE EXECUTION
+ssdp | ID: 976"	[fontcolor=chartreuse,
+		shape=box,
+		style=dotted];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "ARBITRARY CODE EXECUTION
+ssdp | ID: 976"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ARBITRARY CODE EXECUTION
+unknown | ID: 47"	[fontcolor=darkgoldenrod1,
+		shape=box];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "ARBITRARY CODE EXECUTION
+unknown | ID: 47"	[key=0,
+		color=brown,
+		fontcolor="\"brown\""];
+	"ARBITRARY CODE EXECUTION
+epmap | ID: 356"	[fontcolor=chartreuse,
+		shape=box];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "ARBITRARY CODE EXECUTION
+epmap | ID: 356"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+agma"	[fontcolor=chartreuse,
+		shape=oval];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "SERVICE DISCOVERY
+agma"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"BRUTE FORCE CREDENTIALS
+pop3 | ID: 46"	[fontcolor=chartreuse,
+		shape=box];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "BRUTE FORCE CREDENTIALS
+pop3 | ID: 46"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"BRUTE FORCE CREDENTIALS
+pop3 | ID: 1800"	[fontcolor=chartreuse,
+		shape=box,
+		style=dotted];
+	"VULNERABILTY DISCOVERY
+ncube-lm" -> "BRUTE FORCE CREDENTIALS
+pop3 | ID: 1800"	[key=0,
+		color=blue];
+	"SERVICE DISCOVERY
+unknown" -> "ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 309"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+unknown" -> "HOST DISCOVERY
+ms-wbt-server"	[key=0,
+		color=brown,
+		fontcolor="\"brown\""];
+	"SERVICE DISCOVERY
+unknown" -> "SERVICE DISCOVERY
+ff-ice"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+unknown" -> "VULNERABILTY DISCOVERY
+postgresql"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+unknown" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		color=brown,
+		fontcolor="\"brown\""];
+	"SERVICE DISCOVERY
+unknown" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+unknown" -> "SERVICE DISCOVERY
+unknown"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"SERVICE DISCOVERY
+unknown" -> "SERVICE DISCOVERY
+unknown"	[key=1,
+		color=tomato,
+		fontcolor="\"tomato\""];
+	"SERVICE DISCOVERY
+unknown" -> "COMMAND AND CONTROL
+unknown | ID: 308"	[key=0,
+		color=darkgreen,
+		fontcolor="\"darkgreen\""];
+	"SERVICE DISCOVERY
+unknown" -> "COMMAND AND CONTROL
+unknown | ID: 308"	[key=1,
+		color=purple];
+	"SERVICE DISCOVERY
+unknown" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+unknown" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+unknown" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=2,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+unknown" -> "INFO DISCOVERY
+xdmcp"	[key=0,
+		color=brown,
+		fontcolor="\"brown\""];
+	"SERVICE DISCOVERY
+unknown" -> "SERVICE DISCOVERY
+cpdlc"	[key=0,
+		color=blue,
+		fontcolor="\"tomato\""];
+	"SERVICE DISCOVERY
+unknown" -> "ARBITRARY CODE EXECUTION
+ssdp | ID: 355"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+unknown" -> "ARBITRARY CODE EXECUTION
+ssdp | ID: 355"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+unknown" -> "VULNERABILTY DISCOVERY
+mysql"	[key=0,
+		color=purple,
+		fontcolor="\"orange\""];
+	"SERVICE DISCOVERY
+unknown" -> "VULNERABILTY DISCOVERY
+mysql"	[key=1,
+		color=blue];
+	"SERVICE DISCOVERY
+unknown" -> "COMMAND AND CONTROL
+unknown | ID: 39"	[key=0,
+		color=orange,
+		fontcolor="\"orange\""];
+	"SERVICE DISCOVERY
+unknown" -> "COMMAND AND CONTROL
+unknown | ID: 39"	[key=1,
+		color=darkgreen,
+		fontcolor="\"darkgreen\""];
+	"SERVICE DISCOVERY
+unknown" -> "VULNERABILTY DISCOVERY
+ahsp"	[key=0,
+		color=tomato,
+		fontcolor="\"tomato\""];
+	"SERVICE DISCOVERY
+unknown" -> "NETWORK DoS
+ssdp | ID: 55"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+unknown" -> "NETWORK DoS
+ssdp | ID: 55"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+unknown" -> "NETWORK DoS
+ms-wbt-server | ID: 36"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"SERVICE DISCOVERY
+unknown" -> "NETWORK DoS
+ms-wbt-server | ID: 36"	[key=1,
+		color=turquoise,
+		fontcolor="\"turquoise\""];
+	"SERVICE DISCOVERY
+unknown" -> "HOST DISCOVERY
+http"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"SERVICE DISCOVERY
+unknown" -> "HOST DISCOVERY
+http"	[key=1,
+		color=purple,
+		fontcolor="\"purple\""];
+	"SERVICE DISCOVERY
+unknown" -> "HOST DISCOVERY
+http"	[key=2,
+		color=brown,
+		fontcolor="\"brown\""];
+	"SERVICE DISCOVERY
+unknown" -> "HOST DISCOVERY
+http"	[key=3,
+		color=brown,
+		fontcolor="\"brown\""];
+	"SERVICE DISCOVERY
+unknown" -> "HOST DISCOVERY
+http"	[key=4,
+		color=brown,
+		fontcolor="\"brown\""];
+	"SERVICE DISCOVERY
+unknown" -> "HOST DISCOVERY
+http"	[key=5,
+		color=brown,
+		fontcolor="\"brown\""];
+	"SERVICE DISCOVERY
+unknown" -> "ARBITRARY CODE EXECUTION
+http | ID: 32"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"SERVICE DISCOVERY
+unknown" -> "INFO DISCOVERY
+http"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+unknown" -> "HOST DISCOVERY
+unknown"	[key=0,
+		color=brown,
+		fontcolor="\"brown\""];
+	"SERVICE DISCOVERY
+unknown" -> "HOST DISCOVERY
+unknown"	[key=1,
+		color=brown,
+		fontcolor="\"brown\""];
+	"SERVICE DISCOVERY
+unknown" -> "SERVICE DISCOVERY
+epmap"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+unknown" -> "VULNERABILTY DISCOVERY
+http"	[key=0,
+		color=brown,
+		fontcolor="\"brown\""];
+	"SERVICE DISCOVERY
+unknown" -> "HOST DISCOVERY
+wap-wsp"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"SERVICE DISCOVERY
+unknown" -> "HOST DISCOVERY
+http-alt"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+unknown" -> "HOST DISCOVERY
+http-alt"	[key=1,
+		color=brown,
+		fontcolor="\"brown\""];
+	"SERVICE DISCOVERY
+unknown" -> "HOST DISCOVERY
+http-alt"	[key=2,
+		color=brown,
+		fontcolor="\"brown\""];
+	"SERVICE DISCOVERY
+unknown" -> "HOST DISCOVERY
+http-alt"	[key=3,
+		color=tomato];
+	"SERVICE DISCOVERY
+unknown" -> "ARBITRARY CODE EXECUTION
+unknown | ID: 47"	[key=0,
+		color=brown,
+		fontcolor="\"brown\""];
+	"NETWORK DoS
+ms-wbt-server | ID: 307"	[fillcolor=salmon,
+		fontcolor=chartreuse,
+		shape=hexagon,
+		style=filled];
+	"SERVICE DISCOVERY
+unknown" -> "NETWORK DoS
+ms-wbt-server | ID: 307"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"COMMAND AND CONTROL
+unknown | ID: 785"	[fontcolor=chartreuse,
+		shape=box,
+		style=dotted];
+	"SERVICE DISCOVERY
+unknown" -> "COMMAND AND CONTROL
+unknown | ID: 785"	[key=0,
+		color=turquoise];
+	"SERVICE DISCOVERY
+fis"	[fontcolor=chartreuse,
+		shape=oval];
+	"SERVICE DISCOVERY
+unknown" -> "SERVICE DISCOVERY
+fis"	[key=0,
+		color=tomato,
+		fontcolor="\"tomato\""];
+	"BRUTE FORCE CREDENTIALS
+pop3 | ID: 363"	[fontcolor=chartreuse,
+		shape=box];
+	"SERVICE DISCOVERY
+unknown" -> "BRUTE FORCE CREDENTIALS
+pop3 | ID: 363"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"BRUTE FORCE CREDENTIALS
+pop3s | ID: 34"	[fontcolor=chartreuse,
+		shape=box];
+	"SERVICE DISCOVERY
+unknown" -> "BRUTE FORCE CREDENTIALS
+pop3s | ID: 34"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"BRUTE FORCE CREDENTIALS
+pop3s | ID: 354"	[fontcolor=chartreuse,
+		shape=box];
+	"SERVICE DISCOVERY
+unknown" -> "BRUTE FORCE CREDENTIALS
+pop3s | ID: 354"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"HOST DISCOVERY
+radan-http"	[fontcolor=chartreuse,
+		shape=oval];
+	"SERVICE DISCOVERY
+unknown" -> "HOST DISCOVERY
+radan-http"	[key=0,
+		color=tomato,
+		fontcolor="\"tomato\""];
+	"ARBITRARY CODE EXECUTION
+ssdp | ID: 703"	[fontcolor=chartreuse,
+		shape=box];
+	"SERVICE DISCOVERY
+unknown" -> "ARBITRARY CODE EXECUTION
+ssdp | ID: 703"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"NETWORK DoS
+ssdp | ID: 231"	[fillcolor=salmon,
+		fontcolor=chartreuse,
+		shape=hexagon,
+		style=filled];
+	"SERVICE DISCOVERY
+unknown" -> "NETWORK DoS
+ssdp | ID: 231"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA EXFILTRATION
+microsoft-ds | ID: 380"	[fillcolor=salmon,
+		fontcolor=chartreuse,
+		shape=hexagon,
+		style=filled];
+	"ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 931" -> "DATA EXFILTRATION
+microsoft-ds | ID: 380"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 931" -> "DATA EXFILTRATION
+microsoft-ds | ID: 380"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"COMMAND AND CONTROL
+unknown | ID: 308" -> "DATA EXFILTRATION
+microsoft-ds | ID: 37"	[key=0,
+		color=darkgreen,
+		fontcolor="\"darkgreen\""];
+	"COMMAND AND CONTROL
+unknown | ID: 308" -> "DATA EXFILTRATION
+microsoft-ds | ID: 37"	[key=1,
+		color=turquoise,
+		fontcolor="\"turquoise\""];
+	"COMMAND AND CONTROL
+unknown | ID: 308" -> "DATA EXFILTRATION
+microsoft-ds | ID: 37"	[key=2,
+		color=purple,
+		fontcolor="\"purple\""];
+	"COMMAND AND CONTROL
+unknown | ID: 308" -> "DATA EXFILTRATION
+microsoft-ds | ID: 37"	[key=3,
+		color=turquoise,
+		fontcolor="\"turquoise\""];
+	"COMMAND AND CONTROL
+unknown | ID: 308" -> "ACCOUNT MANIPULATION
+snmp | ID: 53"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"COMMAND AND CONTROL
+unknown | ID: 308" -> "ACCOUNT MANIPULATION
+snmp | ID: 53"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"COMMAND AND CONTROL
+unknown | ID: 308" -> "ACCOUNT MANIPULATION
+snmp | ID: 53"	[key=2,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "HOST DISCOVERY
+ms-wbt-server"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "SERVICE DISCOVERY
+ff-ice"	[key=0,
+		color=turquoise];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "VULNERABILTY DISCOVERY
+postgresql"	[key=0,
+		color=magenta,
+		fontcolor="\"magenta\""];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		color=blue];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "SERVICE DISCOVERY
+unknown"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "SERVICE DISCOVERY
+unknown"	[key=1,
+		color=brown,
+		fontcolor="\"brown\""];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		color=maroon,
+		fontcolor="\"maroon\""];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "ARBITRARY CODE EXECUTION
+ssdp | ID: 355"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "ARBITRARY CODE EXECUTION
+ssdp | ID: 355"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "SERVICE DISCOVERY
+ssh"	[key=0,
+		color=purple,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "SERVICE DISCOVERY
+rpas-c2"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "DATA EXFILTRATION
+microsoft-ds | ID: 37"	[key=0,
+		color=maroon,
+		fontcolor="\"maroon\""];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "VULNERABILTY DISCOVERY
+mysql"	[key=0,
+		color=brown,
+		fontcolor="\"brown\""];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "COMMAND AND CONTROL
+unknown | ID: 39"	[key=0,
+		color=orange,
+		fontcolor="\"orange\""];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "NETWORK DoS
+ssdp | ID: 55"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "NETWORK DoS
+ssdp | ID: 55"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "NETWORK DoS
+ssdp | ID: 55"	[key=2,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "ACCOUNT MANIPULATION
+snmp | ID: 53"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "NETWORK DoS
+ms-wbt-server | ID: 36"	[key=0,
+		color=turquoise,
+		fontcolor="\"turquoise\""];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "SERVICE DISCOVERY
+cm"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "SERVICE DISCOVERY
+ag-swim"	[key=0,
+		color=darkgreen,
+		fontcolor="\"darkgreen\""];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "SERVICE DISCOVERY
+ftp"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "ARBITRARY CODE EXECUTION
+http | ID: 32"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "SURFING
+http"	[key=0,
+		color=darkgreen,
+		fontcolor="\"darkgreen\""];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "SERVICE DISCOVERY
+dsd"	[key=0,
+		color=blue];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "SERVICE DISCOVERY
+epmap"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "BRUTE FORCE CREDENTIALS
+pop3 | ID: 382"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "HOST DISCOVERY
+http-alt"	[key=0,
+		color=brown,
+		fontcolor="\"brown\""];
+	"SERVICE DISCOVERY
+microsoft-ds"	[fillcolor=yellow,
+		fontcolor=chartreuse,
+		shape=oval,
+		style=filled];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "SERVICE DISCOVERY
+microsoft-ds"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"BRUTE FORCE CREDENTIALS
+pop3 | ID: 887"	[fontcolor=chartreuse,
+		shape=box];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "BRUTE FORCE CREDENTIALS
+pop3 | ID: 887"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ROOT PRIVILEGE ESCALATION
+ms-wbt-server | ID: 322"	[fontcolor=chartreuse,
+		shape=box];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "ROOT PRIVILEGE ESCALATION
+ms-wbt-server | ID: 322"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 951"	[fontcolor=chartreuse,
+		shape=box,
+		style=dotted];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 951"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA EXFILTRATION
+http | ID: 26"	[fillcolor=salmon,
+		fontcolor=firebrick4,
+		shape=hexagon,
+		style=filled];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "DATA EXFILTRATION
+http | ID: 26"	[key=0,
+		color=tomato,
+		fontcolor="\"tomato\""];
+	"SERVICE DISCOVERY
+icmpd"	[fontcolor=chartreuse,
+		shape=oval];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "SERVICE DISCOVERY
+icmpd"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 321"	[fontcolor=chartreuse,
+		shape=box];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 321"	[key=0,
+		color=orange,
+		fontcolor="\"orange\""];
+	"DATA EXFILTRATION
+http | ID: -1"	[fillcolor=salmon,
+		fontcolor=chartreuse,
+		shape=hexagon,
+		style=filled];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "DATA EXFILTRATION
+http | ID: -1"	[key=0,
+		color=tomato];
+	"BRUTE FORCE CREDENTIALS
+pop3 | ID: 1743"	[fontcolor=chartreuse,
+		shape=box,
+		style=dotted];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "BRUTE FORCE CREDENTIALS
+pop3 | ID: 1743"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"INFO DISCOVERY
+xdmcp" -> "VULNERABILTY DISCOVERY
+postgresql"	[key=0,
+		color=blue];
+	"INFO DISCOVERY
+xdmcp" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"INFO DISCOVERY
+xdmcp" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"INFO DISCOVERY
+xdmcp" -> "SERVICE DISCOVERY
+unknown"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"INFO DISCOVERY
+xdmcp" -> "COMMAND AND CONTROL
+unknown | ID: 308"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"INFO DISCOVERY
+xdmcp" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"INFO DISCOVERY
+xdmcp" -> "VULNERABILTY DISCOVERY
+mysql"	[key=0,
+		color=brown,
+		fontcolor="\"brown\""];
+	"INFO DISCOVERY
+xdmcp" -> "VULNERABILTY DISCOVERY
+ahsp"	[key=0,
+		color=blue];
+	"INFO DISCOVERY
+xdmcp" -> "ACCOUNT MANIPULATION
+snmp | ID: 53"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"INFO DISCOVERY
+xdmcp" -> "ACCOUNT MANIPULATION
+snmp | ID: 53"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"INFO DISCOVERY
+xdmcp" -> "ACCOUNT MANIPULATION
+snmp | ID: 53"	[key=2,
+		color=blue,
+		fontcolor="\"blue\""];
+	"INFO DISCOVERY
+xdmcp" -> "SURFING
+http"	[key=0,
+		color=blue];
+	"INFO DISCOVERY
+xdmcp" -> "SURFING
+http"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"INFO DISCOVERY
+xdmcp" -> "SURFING
+http"	[key=2,
+		color=blue,
+		fontcolor="\"blue\""];
+	"INFO DISCOVERY
+xdmcp" -> "SERVICE DISCOVERY
+epmap"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"INFO DISCOVERY
+xdmcp" -> "VULNERABILTY DISCOVERY
+http"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"INFO DISCOVERY
+xdmcp" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: 365"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"INFO DISCOVERY
+xdmcp" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: 365"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA DELIVERY
+http | ID: 246"	[fillcolor=salmon,
+		fontcolor=darkgoldenrod1,
+		shape=hexagon,
+		style=filled];
+	"INFO DISCOVERY
+xdmcp" -> "DATA DELIVERY
+http | ID: 246"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"COMMAND AND CONTROL
+unknown | ID: 1363"	[fontcolor=chartreuse,
+		shape=box,
+		style=dotted];
+	"INFO DISCOVERY
+xdmcp" -> "COMMAND AND CONTROL
+unknown | ID: 1363"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 299"	[fontcolor=chartreuse,
+		shape=box];
+	"INFO DISCOVERY
+xdmcp" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: 299"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SURFING
+unknown"	[fillcolor=yellow,
+		fontcolor=chartreuse,
+		shape=oval,
+		style=filled];
+	"INFO DISCOVERY
+xdmcp" -> "SURFING
+unknown"	[key=0,
+		color=blue];
+	"INFO DISCOVERY
+xdmcp" -> "SURFING
+unknown"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 300"	[fontcolor=chartreuse,
+		shape=box];
+	"INFO DISCOVERY
+xdmcp" -> "ACCOUNT MANIPULATION
+snmp | ID: 300"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 965"	[fontcolor=chartreuse,
+		shape=box,
+		style=dotted];
+	"INFO DISCOVERY
+xdmcp" -> "ACCOUNT MANIPULATION
+snmp | ID: 965"	[key=0,
+		color=blue];
+	"ACCOUNT MANIPULATION
+snmp | ID: 408"	[fontcolor=chartreuse,
+		shape=box,
+		style=dotted];
+	"INFO DISCOVERY
+xdmcp" -> "ACCOUNT MANIPULATION
+snmp | ID: 408"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"INFO DISCOVERY
+xdmcp" -> "ACCOUNT MANIPULATION
+snmp | ID: 408"	[key=1,
+		color=blue];
+	"SURFING
+http-alt"	[fillcolor=yellow,
+		fontcolor=chartreuse,
+		shape=oval,
+		style=filled];
+	"INFO DISCOVERY
+xdmcp" -> "SURFING
+http-alt"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"INFO DISCOVERY
+xdmcp" -> "SURFING
+http-alt"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA EXFILTRATION
+distinct | ID: 409"	[fillcolor=salmon,
+		fontcolor=chartreuse,
+		shape=hexagon,
+		style=dotted];
+	"INFO DISCOVERY
+xdmcp" -> "DATA EXFILTRATION
+distinct | ID: 409"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 367"	[fontcolor=chartreuse,
+		shape=box];
+	"INFO DISCOVERY
+xdmcp" -> "ACCOUNT MANIPULATION
+snmp | ID: 367"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 874"	[fontcolor=chartreuse,
+		shape=box,
+		style=dotted];
+	"INFO DISCOVERY
+xdmcp" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: 874"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 351"	[fontcolor=chartreuse,
+		shape=box,
+		style=dotted];
+	"INFO DISCOVERY
+xdmcp" -> "ACCOUNT MANIPULATION
+snmp | ID: 351"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 1357"	[fontcolor=chartreuse,
+		shape=box,
+		style=dotted];
+	"INFO DISCOVERY
+xdmcp" -> "ACCOUNT MANIPULATION
+snmp | ID: 1357"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 942"	[fontcolor=chartreuse,
+		shape=box,
+		style=dotted];
+	"INFO DISCOVERY
+xdmcp" -> "ACCOUNT MANIPULATION
+snmp | ID: 942"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 938"	[fontcolor=chartreuse,
+		shape=box,
+		style=dotted];
+	"INFO DISCOVERY
+xdmcp" -> "ACCOUNT MANIPULATION
+snmp | ID: 938"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 1368"	[fontcolor=chartreuse,
+		shape=box,
+		style=dotted];
+	"INFO DISCOVERY
+xdmcp" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: 1368"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"COMMAND AND CONTROL
+unknown | ID: 956"	[fontcolor=chartreuse,
+		shape=box];
+	"INFO DISCOVERY
+xdmcp" -> "COMMAND AND CONTROL
+unknown | ID: 956"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"COMMAND AND CONTROL
+unknown | ID: 1365"	[fontcolor=chartreuse,
+		shape=box,
+		style=dotted];
+	"INFO DISCOVERY
+xdmcp" -> "COMMAND AND CONTROL
+unknown | ID: 1365"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 230"	[fontcolor=chartreuse,
+		shape=box];
+	"INFO DISCOVERY
+xdmcp" -> "ACCOUNT MANIPULATION
+snmp | ID: 230"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 889"	[fontcolor=chartreuse,
+		shape=box];
+	"INFO DISCOVERY
+xdmcp" -> "ACCOUNT MANIPULATION
+snmp | ID: 889"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 1505"	[fontcolor=chartreuse,
+		shape=box,
+		style=dotted];
+	"INFO DISCOVERY
+xdmcp" -> "ACCOUNT MANIPULATION
+snmp | ID: 1505"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 1155"	[fontcolor=chartreuse,
+		shape=box,
+		style=dotted];
+	"INFO DISCOVERY
+xdmcp" -> "ACCOUNT MANIPULATION
+snmp | ID: 1155"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"BRUTE FORCE CREDENTIALS
+unknown | ID: 358"	[fontcolor=chartreuse,
+		shape=box];
+	"INFO DISCOVERY
+xdmcp" -> "BRUTE FORCE CREDENTIALS
+unknown | ID: 358"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 413"	[fontcolor=chartreuse,
+		shape=box,
+		style=dotted];
+	"INFO DISCOVERY
+xdmcp" -> "ACCOUNT MANIPULATION
+snmp | ID: 413"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 1158"	[fontcolor=chartreuse,
+		shape=box,
+		style=dotted];
+	"INFO DISCOVERY
+xdmcp" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: 1158"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 350"	[fontcolor=chartreuse,
+		shape=box,
+		style=dotted];
+	"INFO DISCOVERY
+xdmcp" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: 350"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA DELIVERY
+vrml-multi-use | ID: 416"	[fillcolor=salmon,
+		fontcolor=chartreuse,
+		shape=hexagon,
+		style=filled];
+	"INFO DISCOVERY
+xdmcp" -> "DATA DELIVERY
+vrml-multi-use | ID: 416"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SURFING
+vrml-multi-use"	[fontcolor=chartreuse,
+		shape=oval];
+	"INFO DISCOVERY
+xdmcp" -> "SURFING
+vrml-multi-use"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"INFO DISCOVERY
+xdmcp" -> "SURFING
+vrml-multi-use"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"INFO DISCOVERY
+xdmcp" -> "SURFING
+vrml-multi-use"	[key=2,
+		color=blue,
+		fontcolor="\"blue\""];
+	"INFO DISCOVERY
+xdmcp" -> "SURFING
+vrml-multi-use"	[key=3,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA DELIVERY
+unknown | ID: 935"	[fillcolor=salmon,
+		fontcolor=chartreuse,
+		shape=hexagon,
+		style=dotted];
+	"INFO DISCOVERY
+xdmcp" -> "DATA DELIVERY
+unknown | ID: 935"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"USER PRIVILEGE ESCALATION
+wsman | ID: 394" -> "DATA DELIVERY
+wsman | ID: 61"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"USER PRIVILEGE ESCALATION
+wsman | ID: 394" -> "DATA DELIVERY
+wsman | ID: 61"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA EXFILTRATION
+microsoft-ds | ID: 298" -> "NETWORK DoS
+ms-wbt-server | ID: 36"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"DATA EXFILTRATION
+microsoft-ds | ID: 298" -> "NETWORK DoS
+ms-wbt-server | ID: 36"	[key=1,
+		color=turquoise,
+		fontcolor="\"turquoise\""];
+	"DATA EXFILTRATION
+microsoft-ds | ID: 298" -> "NETWORK DoS
+ms-wbt-server | ID: 36"	[key=2,
+		color=turquoise,
+		fontcolor="\"turquoise\""];
+	"Victim: 10.0.0.100
+DATA EXFILTRATION
+microsoft-ds"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+microsoft-ds | ID: 298" -> "Victim: 10.0.0.100
+DATA EXFILTRATION
+microsoft-ds"	[key=0];
+	"SERVICE DISCOVERY
+cpdlc" -> "VULNERABILTY DISCOVERY
+postgresql"	[key=0,
+		color=blue];
+	"SERVICE DISCOVERY
+cpdlc" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+cpdlc" -> "DATA EXFILTRATION
+microsoft-ds | ID: 37"	[key=0,
+		color=turquoise,
+		fontcolor="\"turquoise\""];
+	"SERVICE DISCOVERY
+cpdlc" -> "HOST DISCOVERY
+remoteware-cl"	[key=0,
+		color=tomato,
+		fontcolor="\"tomato\""];
+	"SERVICE DISCOVERY
+cpdlc" -> "HOST DISCOVERY
+http"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"DATA DELIVERY
+http | ID: 21"	[fillcolor=salmon,
+		fontcolor=darkgoldenrod1,
+		shape=hexagon,
+		style=filled];
+	"DATA EXFILTRATION
+http | ID: 228" -> "DATA DELIVERY
+http | ID: 21"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA EXFILTRATION
+http | ID: 228" -> "DATA DELIVERY
+http | ID: 21"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"Victim: 10.0.0.101
+DATA EXFILTRATION
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+http | ID: 228" -> "Victim: 10.0.0.101
+DATA EXFILTRATION
+http"	[key=0];
+	"Victim: 10.0.0.110
+DATA EXFILTRATION
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+http | ID: 228" -> "Victim: 10.0.0.110
+DATA EXFILTRATION
+http"	[key=0];
+	"Victim: 10.0.0.150
+DATA EXFILTRATION
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+http | ID: 228" -> "Victim: 10.0.0.150
+DATA EXFILTRATION
+http"	[key=0];
+	"Victim: 10.0.0.202
+DATA EXFILTRATION
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+http | ID: 228" -> "Victim: 10.0.0.202
+DATA EXFILTRATION
+http"	[key=0];
+	"Victim: 10.0.0.27
+DATA EXFILTRATION
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+http | ID: 228" -> "Victim: 10.0.0.27
+DATA EXFILTRATION
+http"	[key=0];
+	"Victim: 10.0.0.47
+DATA EXFILTRATION
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+http | ID: 228" -> "Victim: 10.0.0.47
+DATA EXFILTRATION
+http"	[key=0];
+	"Victim: 10.0.0.71
+DATA EXFILTRATION
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+http | ID: 228" -> "Victim: 10.0.0.71
+DATA EXFILTRATION
+http"	[key=0];
+	"Victim: 10.0.0.72
+DATA EXFILTRATION
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+http | ID: 228" -> "Victim: 10.0.0.72
+DATA EXFILTRATION
+http"	[key=0];
+	"Victim: 10.0.0.77
+DATA EXFILTRATION
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+http | ID: 228" -> "Victim: 10.0.0.77
+DATA EXFILTRATION
+http"	[key=0];
+	"Victim: 10.0.0.80
+DATA EXFILTRATION
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+http | ID: 228" -> "Victim: 10.0.0.80
+DATA EXFILTRATION
+http"	[key=0];
+	"Victim: 10.0.0.81
+DATA EXFILTRATION
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+http | ID: 228" -> "Victim: 10.0.0.81
+DATA EXFILTRATION
+http"	[key=0];
+	"Victim: 10.0.99.102
+DATA EXFILTRATION
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+http | ID: 228" -> "Victim: 10.0.99.102
+DATA EXFILTRATION
+http"	[key=0];
+	"ARBITRARY CODE EXECUTION
+ssdp | ID: 355" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ARBITRARY CODE EXECUTION
+ssdp | ID: 355" -> "INFO DISCOVERY
+xdmcp"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ARBITRARY CODE EXECUTION
+ssdp | ID: 355" -> "INFO DISCOVERY
+xdmcp"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ARBITRARY CODE EXECUTION
+ssdp | ID: 355" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: 52"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ARBITRARY CODE EXECUTION
+ssdp | ID: 355" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: 52"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ARBITRARY CODE EXECUTION
+ssdp | ID: 355" -> "SURFING
+http"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ARBITRARY CODE EXECUTION
+ssdp | ID: 355" -> "INFO DISCOVERY
+http"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+ssh" -> "VULNERABILTY DISCOVERY
+postgresql"	[key=0,
+		color=purple,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+ssh" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		color=blue,
+		fontcolor="\"brown\""];
+	"SERVICE DISCOVERY
+ssh" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=1,
+		color=brown];
+	"SERVICE DISCOVERY
+ssh" -> "SERVICE DISCOVERY
+unknown"	[key=0,
+		color=brown,
+		fontcolor="\"brown\""];
+	"SERVICE DISCOVERY
+ssh" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		color=brown,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+ssh" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=1,
+		color=brown];
+	"SERVICE DISCOVERY
+ssh" -> "ARBITRARY CODE EXECUTION
+ssdp | ID: 355"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+ssh" -> "VULNERABILTY DISCOVERY
+mysql"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+ssh" -> "HOST DISCOVERY
+http"	[key=0,
+		color=brown,
+		fontcolor="\"brown\""];
+	"SERVICE DISCOVERY
+ssh" -> "HOST DISCOVERY
+http"	[key=1,
+		color=brown,
+		fontcolor="\"brown\""];
+	"SERVICE DISCOVERY
+ssh" -> "SURFING
+http"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+ssh" -> "HOST DISCOVERY
+unknown"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"SERVICE DISCOVERY
+ssh" -> "HOST DISCOVERY
+http-alt"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"SERVICE DISCOVERY
+rpas-c2" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+rpas-c2" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		color=orange];
+	"SERVICE DISCOVERY
+rpas-c2" -> "INFO DISCOVERY
+xdmcp"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+rpas-c2" -> "HOST DISCOVERY
+http"	[key=0,
+		color=turquoise,
+		fontcolor="\"turquoise\""];
+	"DATA EXFILTRATION
+microsoft-ds | ID: 37" -> "VULNERABILTY DISCOVERY
+postgresql"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA EXFILTRATION
+microsoft-ds | ID: 37" -> "SERVICE DISCOVERY
+unknown"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA EXFILTRATION
+microsoft-ds | ID: 37" -> "SERVICE DISCOVERY
+unknown"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA EXFILTRATION
+microsoft-ds | ID: 37" -> "DATA EXFILTRATION
+microsoft-ds | ID: 37"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA EXFILTRATION
+microsoft-ds | ID: 37" -> "DATA EXFILTRATION
+microsoft-ds | ID: 37"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA EXFILTRATION
+microsoft-ds | ID: 37" -> "VULNERABILTY DISCOVERY
+ahsp"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"INFO DISCOVERY
+microsoft-ds"	[fillcolor=yellow,
+		fontcolor=chartreuse,
+		shape=oval,
+		style=filled];
+	"DATA EXFILTRATION
+microsoft-ds | ID: 37" -> "INFO DISCOVERY
+microsoft-ds"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA EXFILTRATION
+microsoft-ds | ID: 37" -> "Victim: 10.0.0.100
+DATA EXFILTRATION
+microsoft-ds"	[key=0];
+	"Victim: 10.0.0.221
+DATA EXFILTRATION
+microsoft-ds"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+microsoft-ds | ID: 37" -> "Victim: 10.0.0.221
+DATA EXFILTRATION
+microsoft-ds"	[key=0];
+	"Victim: 10.0.0.222
+DATA EXFILTRATION
+microsoft-ds"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+microsoft-ds | ID: 37" -> "Victim: 10.0.0.222
+DATA EXFILTRATION
+microsoft-ds"	[key=0];
+	"Victim: 10.0.0.223
+DATA EXFILTRATION
+microsoft-ds"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+microsoft-ds | ID: 37" -> "Victim: 10.0.0.223
+DATA EXFILTRATION
+microsoft-ds"	[key=0];
+	"Victim: 10.0.0.224
+DATA EXFILTRATION
+microsoft-ds"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+microsoft-ds | ID: 37" -> "Victim: 10.0.0.224
+DATA EXFILTRATION
+microsoft-ds"	[key=0];
+	"Victim: 10.0.254.21
+DATA EXFILTRATION
+microsoft-ds"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+microsoft-ds | ID: 37" -> "Victim: 10.0.254.21
+DATA EXFILTRATION
+microsoft-ds"	[key=0];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 52" -> "SERVICE DISCOVERY
+unknown"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 52" -> "COMMAND AND CONTROL
+unknown | ID: 308"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 52" -> "COMMAND AND CONTROL
+unknown | ID: 308"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 52" -> "INFO DISCOVERY
+xdmcp"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 52" -> "INFO DISCOVERY
+xdmcp"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 52" -> "SURFING
+http"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 52" -> "SURFING
+http"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+remoteware-cl"	[fontcolor=chartreuse,
+		shape=oval];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 52" -> "VULNERABILTY DISCOVERY
+remoteware-cl"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 52" -> "SURFING
+unknown"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 52" -> "COMMAND AND CONTROL
+unknown | ID: 1365"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"BRUTE FORCE CREDENTIALS
+unknown | ID: 1362"	[fontcolor=chartreuse,
+		shape=box,
+		style=dotted];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 52" -> "BRUTE FORCE CREDENTIALS
+unknown | ID: 1362"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+unknown"	[fillcolor=yellow,
+		fontcolor=chartreuse,
+		shape=oval,
+		style=filled];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 52" -> "VULNERABILTY DISCOVERY
+unknown"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SURFING
+distinct"	[fontcolor=chartreuse,
+		shape=oval];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 52" -> "SURFING
+distinct"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+mysql" -> "HOST DISCOVERY
+ms-wbt-server"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+mysql" -> "SERVICE DISCOVERY
+ff-ice"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"VULNERABILTY DISCOVERY
+mysql" -> "SERVICE DISCOVERY
+unknown"	[key=0,
+		color=brown,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+mysql" -> "SERVICE DISCOVERY
+unknown"	[key=1,
+		color=brown,
+		fontcolor="\"brown\""];
+	"VULNERABILTY DISCOVERY
+mysql" -> "SERVICE DISCOVERY
+unknown"	[key=2,
+		color=purple];
+	"VULNERABILTY DISCOVERY
+mysql" -> "SERVICE DISCOVERY
+unknown"	[key=3,
+		color=purple,
+		fontcolor="\"purple\""];
+	"VULNERABILTY DISCOVERY
+mysql" -> "SERVICE DISCOVERY
+unknown"	[key=4,
+		color=brown,
+		fontcolor="\"brown\""];
+	"VULNERABILTY DISCOVERY
+mysql" -> "SERVICE DISCOVERY
+unknown"	[key=5,
+		color=brown,
+		fontcolor="\"brown\""];
+	"VULNERABILTY DISCOVERY
+mysql" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		color=purple];
+	"VULNERABILTY DISCOVERY
+mysql" -> "INFO DISCOVERY
+xdmcp"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+mysql" -> "SERVICE DISCOVERY
+cpdlc"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"VULNERABILTY DISCOVERY
+mysql" -> "ARBITRARY CODE EXECUTION
+ssdp | ID: 355"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+mysql" -> "ARBITRARY CODE EXECUTION
+ssdp | ID: 355"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+mysql" -> "SERVICE DISCOVERY
+ssh"	[key=0,
+		color=brown,
+		fontcolor="\"brown\""];
+	"VULNERABILTY DISCOVERY
+mysql" -> "VULNERABILTY DISCOVERY
+mysql"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+mysql" -> "NETWORK DoS
+ssdp | ID: 55"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+mysql" -> "NETWORK DoS
+ms-wbt-server | ID: 36"	[key=0,
+		color=orange,
+		fontcolor="\"orange\""];
+	"VULNERABILTY DISCOVERY
+mysql" -> "NETWORK DoS
+ms-wbt-server | ID: 36"	[key=1,
+		color=purple,
+		fontcolor="\"purple\""];
+	"VULNERABILTY DISCOVERY
+mysql" -> "SERVICE DISCOVERY
+ag-swim"	[key=0,
+		color=turquoise];
+	"VULNERABILTY DISCOVERY
+mysql" -> "HOST DISCOVERY
+http"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"VULNERABILTY DISCOVERY
+mysql" -> "ARBITRARY CODE EXECUTION
+http | ID: 32"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"VULNERABILTY DISCOVERY
+mysql" -> "ARBITRARY CODE EXECUTION
+http | ID: 32"	[key=1,
+		color=purple,
+		fontcolor="\"purple\""];
+	"VULNERABILTY DISCOVERY
+mysql" -> "SURFING
+http"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"VULNERABILTY DISCOVERY
+mysql" -> "INFO DISCOVERY
+http"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"VULNERABILTY DISCOVERY
+mysql" -> "HOST DISCOVERY
+unknown"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"VULNERABILTY DISCOVERY
+mysql" -> "VULNERABILTY DISCOVERY
+http"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"VULNERABILTY DISCOVERY
+mysql" -> "HOST DISCOVERY
+http-alt"	[key=0,
+		color=turquoise];
+	"ACCOUNT MANIPULATION
+snmp | ID: 831"	[fontcolor=chartreuse,
+		shape=box,
+		style=dotted];
+	"VULNERABILTY DISCOVERY
+mysql" -> "ACCOUNT MANIPULATION
+snmp | ID: 831"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+rfb"	[fillcolor=yellow,
+		fontcolor=chartreuse,
+		shape=oval,
+		style=filled];
+	"VULNERABILTY DISCOVERY
+mysql" -> "SERVICE DISCOVERY
+rfb"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"VULNERABILTY DISCOVERY
+mysql" -> "BRUTE FORCE CREDENTIALS
+pop3 | ID: 887"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"BRUTE FORCE CREDENTIALS
+unknown | ID: 879"	[fontcolor=chartreuse,
+		shape=box];
+	"VULNERABILTY DISCOVERY
+mysql" -> "BRUTE FORCE CREDENTIALS
+unknown | ID: 879"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ARBITRARY CODE EXECUTION
+ssdp | ID: 902"	[fontcolor=chartreuse,
+		shape=box];
+	"VULNERABILTY DISCOVERY
+mysql" -> "ARBITRARY CODE EXECUTION
+ssdp | ID: 902"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"COMMAND AND CONTROL
+unknown | ID: 39" -> "HOST DISCOVERY
+ms-wbt-server"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"COMMAND AND CONTROL
+unknown | ID: 39" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"COMMAND AND CONTROL
+unknown | ID: 39" -> "SERVICE DISCOVERY
+unknown"	[key=0,
+		color=orange,
+		fontcolor="\"orange\""];
+	"COMMAND AND CONTROL
+unknown | ID: 39" -> "SERVICE DISCOVERY
+unknown"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"COMMAND AND CONTROL
+unknown | ID: 39" -> "NETWORK DoS
+ms-wbt-server | ID: 36"	[key=0,
+		color=magenta,
+		fontcolor="\"darkgreen\""];
+	"COMMAND AND CONTROL
+unknown | ID: 39" -> "NETWORK DoS
+ms-wbt-server | ID: 36"	[key=1,
+		color=orange,
+		fontcolor="\"orange\""];
+	"COMMAND AND CONTROL
+unknown | ID: 39" -> "NETWORK DoS
+ms-wbt-server | ID: 36"	[key=2,
+		color=darkgreen,
+		fontcolor="\"darkgreen\""];
+	"COMMAND AND CONTROL
+unknown | ID: 39" -> "HOST DISCOVERY
+http"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"VULNERABILTY DISCOVERY
+esmagent"	[fillcolor=yellow,
+		fontcolor=chartreuse,
+		shape=oval,
+		style=filled];
+	"HOST DISCOVERY
+remoteware-cl" -> "VULNERABILTY DISCOVERY
+esmagent"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"VULNERABILTY DISCOVERY
+http-alt"	[fontcolor=chartreuse,
+		shape=oval];
+	"HOST DISCOVERY
+remoteware-cl" -> "VULNERABILTY DISCOVERY
+http-alt"	[key=0,
+		color=tomato,
+		fontcolor="\"tomato\""];
+	"VULNERABILTY DISCOVERY
+ahsp" -> "ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 309"	[key=0,
+		color=orange,
+		fontcolor="\"orange\""];
+	"VULNERABILTY DISCOVERY
+ahsp" -> "HOST DISCOVERY
+ms-wbt-server"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+ahsp" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		color=tomato,
+		fontcolor="\"tomato\""];
+	"VULNERABILTY DISCOVERY
+ahsp" -> "SERVICE DISCOVERY
+unknown"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"VULNERABILTY DISCOVERY
+ahsp" -> "ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 931"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+ahsp" -> "ARBITRARY CODE EXECUTION
+ssdp | ID: 355"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+ahsp" -> "NETWORK DoS
+ssdp | ID: 55"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+ahsp" -> "HOST DISCOVERY
+http"	[key=0,
+		color=purple];
+	"VULNERABILTY DISCOVERY
+ahsp" -> "SERVICE DISCOVERY
+ftp"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+ahsp" -> "HOST DISCOVERY
+unknown"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"VULNERABILTY DISCOVERY
+ahsp" -> "HOST DISCOVERY
+unknown"	[key=1,
+		color=tomato,
+		fontcolor="\"tomato\""];
+	"VULNERABILTY DISCOVERY
+ahsp" -> "HOST DISCOVERY
+wsman"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+ahsp" -> "SERVICE DISCOVERY
+microsoft-ds"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 906"	[fontcolor=chartreuse,
+		shape=box];
+	"VULNERABILTY DISCOVERY
+ahsp" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: 906"	[key=0,
+		color=blue];
+	"NETWORK DoS
+ssdp | ID: 55" -> "INFO DISCOVERY
+xdmcp"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"NETWORK DoS
+ssdp | ID: 55" -> "INFO DISCOVERY
+xdmcp"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"NETWORK DoS
+ssdp | ID: 55" -> "INFO DISCOVERY
+xdmcp"	[key=2,
+		color=blue,
+		fontcolor="\"blue\""];
+	"NETWORK DoS
+ssdp | ID: 55" -> "SURFING
+http"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"NETWORK DoS
+ssdp | ID: 55" -> "SERVICE DISCOVERY
+fis"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: -1"	[fillcolor=yellow,
+		fontcolor=chartreuse,
+		shape=box,
+		style=filled];
+	"NETWORK DoS
+ssdp | ID: 55" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: -1"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"Victim: 10.0.0.100
+NETWORK DoS
+ssdp"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+ssdp | ID: 55" -> "Victim: 10.0.0.100
+NETWORK DoS
+ssdp"	[key=0];
+	"INFO DISCOVERY
+unknown"	[fontcolor=chartreuse,
+		shape=oval];
+	"NETWORK DoS
+ssdp | ID: 55" -> "INFO DISCOVERY
+unknown"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"Victim: 10.0.0.110
+NETWORK DoS
+ssdp"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+ssdp | ID: 55" -> "Victim: 10.0.0.110
+NETWORK DoS
+ssdp"	[key=0];
+	"Victim: 10.0.0.125
+NETWORK DoS
+ssdp"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+ssdp | ID: 55" -> "Victim: 10.0.0.125
+NETWORK DoS
+ssdp"	[key=0];
+	"Victim: 10.0.0.167
+NETWORK DoS
+ssdp"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+ssdp | ID: 55" -> "Victim: 10.0.0.167
+NETWORK DoS
+ssdp"	[key=0];
+	"Victim: 10.0.0.190
+NETWORK DoS
+ssdp"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+ssdp | ID: 55" -> "Victim: 10.0.0.190
+NETWORK DoS
+ssdp"	[key=0];
+	"Victim: 10.0.0.202
+NETWORK DoS
+ssdp"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+ssdp | ID: 55" -> "Victim: 10.0.0.202
+NETWORK DoS
+ssdp"	[key=0];
+	"Victim: 10.0.0.221
+NETWORK DoS
+ssdp"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+ssdp | ID: 55" -> "Victim: 10.0.0.221
+NETWORK DoS
+ssdp"	[key=0];
+	"Victim: 10.0.0.27
+NETWORK DoS
+ssdp"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+ssdp | ID: 55" -> "Victim: 10.0.0.27
+NETWORK DoS
+ssdp"	[key=0];
+	"Victim: 10.0.0.56
+NETWORK DoS
+ssdp"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+ssdp | ID: 55" -> "Victim: 10.0.0.56
+NETWORK DoS
+ssdp"	[key=0];
+	"Victim: 10.0.0.71
+NETWORK DoS
+ssdp"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+ssdp | ID: 55" -> "Victim: 10.0.0.71
+NETWORK DoS
+ssdp"	[key=0];
+	"Victim: 10.0.99.143
+NETWORK DoS
+ssdp"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+ssdp | ID: 55" -> "Victim: 10.0.99.143
+NETWORK DoS
+ssdp"	[key=0];
+	"Victim: 10.0.99.16
+NETWORK DoS
+ssdp"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+ssdp | ID: 55" -> "Victim: 10.0.99.16
+NETWORK DoS
+ssdp"	[key=0];
+	"Victim: 10.0.99.22
+NETWORK DoS
+ssdp"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+ssdp | ID: 55" -> "Victim: 10.0.99.22
+NETWORK DoS
+ssdp"	[key=0];
+	"Victim: 10.0.99.245
+NETWORK DoS
+ssdp"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+ssdp | ID: 55" -> "Victim: 10.0.99.245
+NETWORK DoS
+ssdp"	[key=0];
+	"ACCOUNT MANIPULATION
+snmp | ID: 53" -> "HOST DISCOVERY
+ms-wbt-server"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 53" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 53" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 53" -> "SERVICE DISCOVERY
+ssh"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 53" -> "VULNERABILTY DISCOVERY
+mysql"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 53" -> "SURFING
+http"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 53" -> "SURFING
+http"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 53" -> "INFO DISCOVERY
+http"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 53" -> "DATA DELIVERY
+http | ID: 246"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 53" -> "DATA DELIVERY
+http | ID: 246"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 53" -> "DATA DELIVERY
+http | ID: 246"	[key=2,
+		color=blue,
+		fontcolor="\"blue\""];
+	"BRUTE FORCE CREDENTIALS
+unknown | ID: 1"	[fontcolor=chartreuse,
+		shape=box];
+	"ACCOUNT MANIPULATION
+snmp | ID: 53" -> "BRUTE FORCE CREDENTIALS
+unknown | ID: 1"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 53" -> "BRUTE FORCE CREDENTIALS
+unknown | ID: 1"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"INFO DISCOVERY
+domain"	[fontcolor=chartreuse,
+		shape=oval];
+	"ACCOUNT MANIPULATION
+snmp | ID: 53" -> "INFO DISCOVERY
+domain"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 53" -> "VULNERABILTY DISCOVERY
+remoteware-cl"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA DELIVERY
+wsman | ID: 399"	[fillcolor=salmon,
+		fontcolor=chartreuse,
+		shape=hexagon,
+		style=filled];
+	"ACCOUNT MANIPULATION
+snmp | ID: 53" -> "DATA DELIVERY
+wsman | ID: 399"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 53" -> "DATA DELIVERY
+wsman | ID: 399"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"NETWORK DoS
+ms-wbt-server | ID: 36" -> "VULNERABILTY DISCOVERY
+postgresql"	[key=0,
+		color=turquoise];
+	"NETWORK DoS
+ms-wbt-server | ID: 36" -> "SERVICE DISCOVERY
+unknown"	[key=0,
+		color=darkgreen,
+		fontcolor="\"darkgreen\""];
+	"NETWORK DoS
+ms-wbt-server | ID: 36" -> "COMMAND AND CONTROL
+unknown | ID: 308"	[key=0,
+		color=darkgreen,
+		fontcolor="\"darkgreen\""];
+	"NETWORK DoS
+ms-wbt-server | ID: 36" -> "COMMAND AND CONTROL
+unknown | ID: 308"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"NETWORK DoS
+ms-wbt-server | ID: 36" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"NETWORK DoS
+ms-wbt-server | ID: 36" -> "VULNERABILTY DISCOVERY
+ahsp"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"NETWORK DoS
+ms-wbt-server | ID: 36" -> "ACCOUNT MANIPULATION
+snmp | ID: 53"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"NETWORK DoS
+ms-wbt-server | ID: 36" -> "SERVICE DISCOVERY
+epmap"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"NETWORK DoS
+ms-wbt-server | ID: 36" -> "SERVICE DISCOVERY
+microsoft-ds"	[key=0,
+		color=darkgreen,
+		fontcolor="\"darkgreen\""];
+	"Victim: 10.0.0.100
+NETWORK DoS
+ms-wbt-server"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+ms-wbt-server | ID: 36" -> "Victim: 10.0.0.100
+NETWORK DoS
+ms-wbt-server"	[key=0];
+	"Victim: 10.0.0.221
+NETWORK DoS
+ms-wbt-server"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+ms-wbt-server | ID: 36" -> "Victim: 10.0.0.221
+NETWORK DoS
+ms-wbt-server"	[key=0];
+	"INFO DISCOVERY
+wsman"	[fontcolor=chartreuse,
+		shape=oval];
+	"NETWORK DoS
+ms-wbt-server | ID: 36" -> "INFO DISCOVERY
+wsman"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"Victim: 10.0.0.101
+NETWORK DoS
+ms-wbt-server"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+ms-wbt-server | ID: 36" -> "Victim: 10.0.0.101
+NETWORK DoS
+ms-wbt-server"	[key=0];
+	"Victim: 10.0.0.222
+NETWORK DoS
+ms-wbt-server"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+ms-wbt-server | ID: 36" -> "Victim: 10.0.0.222
+NETWORK DoS
+ms-wbt-server"	[key=0];
+	"Victim: 10.0.0.223
+NETWORK DoS
+ms-wbt-server"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+ms-wbt-server | ID: 36" -> "Victim: 10.0.0.223
+NETWORK DoS
+ms-wbt-server"	[key=0];
+	"Victim: 10.0.0.224
+NETWORK DoS
+ms-wbt-server"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+ms-wbt-server | ID: 36" -> "Victim: 10.0.0.224
+NETWORK DoS
+ms-wbt-server"	[key=0];
+	"SERVICE DISCOVERY
+cm" -> "VULNERABILTY DISCOVERY
+postgresql"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+cm" -> "SERVICE DISCOVERY
+unknown"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+cm" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		color=orange];
+	"SERVICE DISCOVERY
+cm" -> "COMMAND AND CONTROL
+unknown | ID: 39"	[key=0,
+		color=darkgreen,
+		fontcolor="\"darkgreen\""];
+	"SERVICE DISCOVERY
+cm" -> "VULNERABILTY DISCOVERY
+http"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"NETWORK DoS
+ms-wbt-server | ID: 297"	[fillcolor=salmon,
+		fontcolor=chartreuse,
+		shape=hexagon,
+		style=filled];
+	"SERVICE DISCOVERY
+cm" -> "NETWORK DoS
+ms-wbt-server | ID: 297"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"ARBITRARY CODE EXECUTION
+http-alt | ID: 23"	[fontcolor=darkgoldenrod1,
+		shape=box];
+	"SERVICE DISCOVERY
+cm" -> "ARBITRARY CODE EXECUTION
+http-alt | ID: 23"	[key=0,
+		color=brown,
+		fontcolor="\"brown\""];
+	"SERVICE DISCOVERY
+ag-swim" -> "VULNERABILTY DISCOVERY
+postgresql"	[key=0,
+		color=blue];
+	"SERVICE DISCOVERY
+ag-swim" -> "COMMAND AND CONTROL
+unknown | ID: 308"	[key=0,
+		color=darkgreen,
+		fontcolor="\"darkgreen\""];
+	"SERVICE DISCOVERY
+ag-swim" -> "VULNERABILTY DISCOVERY
+mysql"	[key=0,
+		color=purple];
+	"SERVICE DISCOVERY
+ag-swim" -> "HOST DISCOVERY
+http"	[key=0,
+		color=darkgreen,
+		fontcolor="\"darkgreen\""];
+	"SERVICE DISCOVERY
+ag-swim" -> "ARBITRARY CODE EXECUTION
+http | ID: 32"	[key=0,
+		color=darkgreen,
+		fontcolor="\"darkgreen\""];
+	"SERVICE DISCOVERY
+ag-swim" -> "COMMAND AND CONTROL
+unknown | ID: 785"	[key=0,
+		color=turquoise,
+		fontcolor="\"turquoise\""];
+	"HOST DISCOVERY
+http" -> "HOST DISCOVERY
+ms-wbt-server"	[key=0,
+		color=brown,
+		fontcolor="\"brown\""];
+	"HOST DISCOVERY
+http" -> "VULNERABILTY DISCOVERY
+postgresql"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"HOST DISCOVERY
+http" -> "SERVICE DISCOVERY
+unknown"	[key=0,
+		color=brown,
+		fontcolor="\"brown\""];
+	"HOST DISCOVERY
+http" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		color=purple,
+		fontcolor="\"turquoise\""];
+	"HOST DISCOVERY
+http" -> "INFO DISCOVERY
+xdmcp"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"HOST DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 228"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"HOST DISCOVERY
+http" -> "SERVICE DISCOVERY
+ssh"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"HOST DISCOVERY
+http" -> "SERVICE DISCOVERY
+ssh"	[key=1,
+		color=brown,
+		fontcolor="\"brown\""];
+	"HOST DISCOVERY
+http" -> "VULNERABILTY DISCOVERY
+mysql"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"HOST DISCOVERY
+http" -> "VULNERABILTY DISCOVERY
+mysql"	[key=1,
+		color=purple,
+		fontcolor="\"purple\""];
+	"HOST DISCOVERY
+http" -> "VULNERABILTY DISCOVERY
+mysql"	[key=2,
+		color=brown,
+		fontcolor="\"brown\""];
+	"HOST DISCOVERY
+http" -> "VULNERABILTY DISCOVERY
+mysql"	[key=3,
+		color=brown,
+		fontcolor="\"brown\""];
+	"HOST DISCOVERY
+http" -> "HOST DISCOVERY
+http"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"HOST DISCOVERY
+http" -> "ARBITRARY CODE EXECUTION
+http | ID: 32"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"HOST DISCOVERY
+http" -> "ARBITRARY CODE EXECUTION
+http | ID: 32"	[key=1,
+		color=purple,
+		fontcolor="\"purple\""];
+	"HOST DISCOVERY
+http" -> "ARBITRARY CODE EXECUTION
+http | ID: 32"	[key=2,
+		color=purple,
+		fontcolor="\"purple\""];
+	"HOST DISCOVERY
+http" -> "SURFING
+http"	[key=0,
+		color=tomato,
+		fontcolor="\"darkgreen\""];
+	"HOST DISCOVERY
+http" -> "SURFING
+http"	[key=1,
+		color=turquoise,
+		fontcolor="\"turquoise\""];
+	"HOST DISCOVERY
+http" -> "SURFING
+http"	[key=2,
+		color=purple,
+		fontcolor="\"purple\""];
+	"HOST DISCOVERY
+http" -> "SURFING
+http"	[key=3,
+		color=turquoise];
+	"HOST DISCOVERY
+http" -> "INFO DISCOVERY
+http"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"HOST DISCOVERY
+http" -> "INFO DISCOVERY
+http"	[key=1,
+		color=purple,
+		fontcolor="\"purple\""];
+	"HOST DISCOVERY
+http" -> "VULNERABILTY DISCOVERY
+http"	[key=0,
+		color=brown,
+		fontcolor="\"brown\""];
+	"HOST DISCOVERY
+http" -> "VULNERABILTY DISCOVERY
+http"	[key=1,
+		color=tomato,
+		fontcolor="\"brown\""];
+	"HOST DISCOVERY
+http" -> "VULNERABILTY DISCOVERY
+http"	[key=2,
+		color=brown,
+		fontcolor="\"brown\""];
+	"HOST DISCOVERY
+http" -> "SERVICE DISCOVERY
+rfb"	[key=0,
+		color=brown,
+		fontcolor="\"brown\""];
+	"HOST DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: -1"	[key=0,
+		color=tomato];
+	"HOST DISCOVERY
+http" -> "DATA DELIVERY
+http | ID: 21"	[key=0,
+		color=maroon,
+		fontcolor="\"maroon\""];
+	"PRIVILEGE ESCALATION
+http | ID: 1160"	[fontcolor=chartreuse,
+		shape=box,
+		style=dotted];
+	"HOST DISCOVERY
+http" -> "PRIVILEGE ESCALATION
+http | ID: 1160"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 275"	[fontcolor=chartreuse,
+		shape=box];
+	"HOST DISCOVERY
+http" -> "ACCOUNT MANIPULATION
+snmp | ID: 275"	[key=0,
+		color=tomato];
+	"PRIVILEGE ESCALATION
+http | ID: 677"	[fontcolor=chartreuse,
+		shape=box];
+	"HOST DISCOVERY
+http" -> "PRIVILEGE ESCALATION
+http | ID: 677"	[key=0,
+		color=tomato,
+		fontcolor="\"tomato\""];
+	"SERVICE DISCOVERY
+ftp" -> "VULNERABILTY DISCOVERY
+postgresql"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+ftp" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: 52"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ARBITRARY CODE EXECUTION
+ssdp | ID: 788"	[fontcolor=chartreuse,
+		shape=box,
+		style=dotted];
+	"SERVICE DISCOVERY
+ftp" -> "ARBITRARY CODE EXECUTION
+ssdp | ID: 788"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"INFO DISCOVERY
+ftp"	[fontcolor=chartreuse,
+		shape=oval];
+	"ARBITRARY CODE EXECUTION
+epmap | ID: 64" -> "INFO DISCOVERY
+ftp"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ARBITRARY CODE EXECUTION
+http | ID: 32" -> "VULNERABILTY DISCOVERY
+postgresql"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"ARBITRARY CODE EXECUTION
+http | ID: 32" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ARBITRARY CODE EXECUTION
+http | ID: 32" -> "SERVICE DISCOVERY
+unknown"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"ARBITRARY CODE EXECUTION
+http | ID: 32" -> "SURFING
+http"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ARBITRARY CODE EXECUTION
+http | ID: 32" -> "SURFING
+http"	[key=1,
+		color=purple,
+		fontcolor="\"purple\""];
+	"ARBITRARY CODE EXECUTION
+http | ID: 32" -> "SURFING
+http"	[key=2,
+		color=purple,
+		fontcolor="\"purple\""];
+	"ARBITRARY CODE EXECUTION
+http | ID: 32" -> "SURFING
+http"	[key=3,
+		color=purple,
+		fontcolor="\"purple\""];
+	"ARBITRARY CODE EXECUTION
+http | ID: 32" -> "SURFING
+http"	[key=4,
+		color=purple,
+		fontcolor="\"purple\""];
+	"ARBITRARY CODE EXECUTION
+http | ID: 32" -> "SURFING
+http"	[key=5,
+		color=brown,
+		fontcolor="\"brown\""];
+	"ARBITRARY CODE EXECUTION
+http | ID: 32" -> "SURFING
+http"	[key=6,
+		color=brown,
+		fontcolor="\"brown\""];
+	"ARBITRARY CODE EXECUTION
+http | ID: 32" -> "INFO DISCOVERY
+http"	[key=0,
+		color=darkgreen,
+		fontcolor="\"darkgreen\""];
+	"SURFING
+http" -> "VULNERABILTY DISCOVERY
+postgresql"	[key=0,
+		color=darkgreen];
+	"SURFING
+http" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"SURFING
+http" -> "SERVICE DISCOVERY
+unknown"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SURFING
+http" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		color=purple,
+		fontcolor="\"tomato\""];
+	"SURFING
+http" -> "DATA EXFILTRATION
+http | ID: 228"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SURFING
+http" -> "DATA EXFILTRATION
+http | ID: 228"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SURFING
+http" -> "SERVICE DISCOVERY
+ssh"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SURFING
+http" -> "VULNERABILTY DISCOVERY
+mysql"	[key=0,
+		color=purple];
+	"SURFING
+http" -> "INFO DISCOVERY
+http"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SURFING
+http" -> "INFO DISCOVERY
+http"	[key=1,
+		color=purple,
+		fontcolor="\"purple\""];
+	"SURFING
+http" -> "INFO DISCOVERY
+http"	[key=2,
+		color=purple,
+		fontcolor="\"purple\""];
+	"SURFING
+http" -> "INFO DISCOVERY
+http"	[key=3,
+		color=purple,
+		fontcolor="\"purple\""];
+	"SURFING
+http" -> "INFO DISCOVERY
+http"	[key=4,
+		color=purple,
+		fontcolor="\"purple\""];
+	"SURFING
+http" -> "INFO DISCOVERY
+http"	[key=5,
+		color=brown,
+		fontcolor="\"brown\""];
+	"SURFING
+http" -> "INFO DISCOVERY
+http"	[key=6,
+		color=brown,
+		fontcolor="\"brown\""];
+	"SURFING
+http" -> "INFO DISCOVERY
+http"	[key=7,
+		color=tomato];
+	"SURFING
+http" -> "VULNERABILTY DISCOVERY
+http"	[key=0,
+		color=darkgreen,
+		fontcolor="\"darkgreen\""];
+	"SURFING
+http" -> "VULNERABILTY DISCOVERY
+http"	[key=1,
+		color=tomato,
+		fontcolor="\"tomato\""];
+	"SURFING
+http" -> "DATA DELIVERY
+http | ID: 246"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SURFING
+http" -> "DATA DELIVERY
+http | ID: 246"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SURFING
+http" -> "DATA EXFILTRATION
+http | ID: 26"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"SURFING
+http" -> "DATA EXFILTRATION
+http | ID: 26"	[key=1,
+		color=tomato,
+		fontcolor="\"tomato\""];
+	"SURFING
+http" -> "DATA EXFILTRATION
+http | ID: 26"	[key=2,
+		color=turquoise,
+		fontcolor="\"turquoise\""];
+	"SURFING
+http" -> "INFO DISCOVERY
+ftp"	[key=0,
+		color=turquoise,
+		fontcolor="\"turquoise\""];
+	"DATA DELIVERY
+http | ID: 705"	[fillcolor=salmon,
+		fontcolor=chartreuse,
+		shape=hexagon,
+		style=dotted];
+	"SURFING
+http" -> "DATA DELIVERY
+http | ID: 705"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"USER PRIVILEGE ESCALATION
+http | ID: 274"	[fontcolor=chartreuse,
+		shape=box];
+	"SURFING
+http" -> "USER PRIVILEGE ESCALATION
+http | ID: 274"	[key=0,
+		color=darkgreen,
+		fontcolor="\"darkgreen\""];
+	"INFO DISCOVERY
+http" -> "SURFING
+http"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"INFO DISCOVERY
+http" -> "SURFING
+http"	[key=1,
+		color=tomato,
+		fontcolor="\"purple\""];
+	"INFO DISCOVERY
+http" -> "HOST DISCOVERY
+http-alt"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"INFO DISCOVERY
+http" -> "DATA DELIVERY
+http | ID: 246"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"INFO DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 26"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"INFO DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 26"	[key=1,
+		color=purple,
+		fontcolor="\"purple\""];
+	"INFO DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 26"	[key=2,
+		color=purple,
+		fontcolor="\"purple\""];
+	"INFO DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 26"	[key=3,
+		color=purple,
+		fontcolor="\"purple\""];
+	"INFO DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 26"	[key=4,
+		color=purple,
+		fontcolor="\"purple\""];
+	"INFO DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 26"	[key=5,
+		color=brown,
+		fontcolor="\"brown\""];
+	"INFO DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 26"	[key=6,
+		color=brown,
+		fontcolor="\"brown\""];
+	"INFO DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 26"	[key=7,
+		color=tomato,
+		fontcolor="\"tomato\""];
+	"INFO DISCOVERY
+http" -> "DATA DELIVERY
+http | ID: 705"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA EXFILTRATION
+http | ID: 296"	[fillcolor=salmon,
+		fontcolor=chartreuse,
+		shape=hexagon,
+		style=filled];
+	"INFO DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 296"	[key=0,
+		color=brown,
+		fontcolor="\"brown\""];
+	"DATA EXFILTRATION
+http | ID: 876"	[fillcolor=salmon,
+		fontcolor=chartreuse,
+		shape=hexagon,
+		style=dotted];
+	"INFO DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 876"	[key=0,
+		color=darkgreen,
+		fontcolor="\"darkgreen\""];
+	"BRUTE FORCE CREDENTIALS
+pop3s | ID: 886" -> "ARBITRARY CODE EXECUTION
+ssdp | ID: 355"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA EXFILTRATION
+http-alt | ID: 25" -> "INFO DISCOVERY
+xdmcp"	[key=0,
+		color=blue];
+	"DATA EXFILTRATION
+http-alt | ID: 25" -> "Victim: 10.0.0.27
+DATA EXFILTRATION
+http"	[key=0];
+	"SURFING
+remoteware-cl"	[fontcolor=chartreuse,
+		shape=oval];
+	"DATA EXFILTRATION
+http-alt | ID: 25" -> "SURFING
+remoteware-cl"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"Victim: 10.0.0.153
+DATA EXFILTRATION
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+http-alt | ID: 25" -> "Victim: 10.0.0.153
+DATA EXFILTRATION
+http"	[key=0];
+	"DATA EXFILTRATION
+http-alt | ID: 25" -> "VULNERABILTY DISCOVERY
+esmagent"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"DATA EXFILTRATION
+http-alt | ID: 25" -> "VULNERABILTY DISCOVERY
+esmagent"	[key=1,
+		color=purple,
+		fontcolor="\"purple\""];
+	"Victim: 10.0.0.153
+DATA EXFILTRATION
+http-alt"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+http-alt | ID: 25" -> "Victim: 10.0.0.153
+DATA EXFILTRATION
+http-alt"	[key=0];
+	"Victim: 10.0.0.27
+DATA EXFILTRATION
+http-alt"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+http-alt | ID: 25" -> "Victim: 10.0.0.27
+DATA EXFILTRATION
+http-alt"	[key=0];
+	"Victim: 10.0.99.44
+DATA EXFILTRATION
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+http-alt | ID: 25" -> "Victim: 10.0.99.44
+DATA EXFILTRATION
+http"	[key=0];
+	"Victim: 10.0.99.44
+DATA EXFILTRATION
+http-alt"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+http-alt | ID: 25" -> "Victim: 10.0.99.44
+DATA EXFILTRATION
+http-alt"	[key=0];
+	"HOST DISCOVERY
+unknown" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		color=brown,
+		fontcolor="\"brown\""];
+	"HOST DISCOVERY
+unknown" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		color=brown,
+		fontcolor="\"brown\""];
+	"HOST DISCOVERY
+unknown" -> "VULNERABILTY DISCOVERY
+mysql"	[key=0,
+		color=brown,
+		fontcolor="\"brown\""];
+	"HOST DISCOVERY
+unknown" -> "ARBITRARY CODE EXECUTION
+unknown | ID: 47"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"HOST DISCOVERY
+unknown" -> "ARBITRARY CODE EXECUTION
+unknown | ID: 47"	[key=1,
+		color=purple,
+		fontcolor="\"purple\""];
+	"HOST DISCOVERY
+unknown" -> "ARBITRARY CODE EXECUTION
+unknown | ID: 47"	[key=2,
+		color=purple,
+		fontcolor="\"purple\""];
+	"HOST DISCOVERY
+unknown" -> "ARBITRARY CODE EXECUTION
+unknown | ID: 47"	[key=3,
+		color=purple,
+		fontcolor="\"purple\""];
+	"HOST DISCOVERY
+unknown" -> "ARBITRARY CODE EXECUTION
+unknown | ID: 47"	[key=4,
+		color=purple,
+		fontcolor="\"purple\""];
+	"HOST DISCOVERY
+unknown" -> "SERVICE DISCOVERY
+rfb"	[key=0,
+		color=brown,
+		fontcolor="\"brown\""];
+	"HOST DISCOVERY
+unknown" -> "SURFING
+unknown"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"HOST DISCOVERY
+unknown" -> "VULNERABILTY DISCOVERY
+unknown"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"HOST DISCOVERY
+unknown" -> "VULNERABILTY DISCOVERY
+unknown"	[key=1,
+		color=brown];
+	"HOST DISCOVERY
+unknown" -> "VULNERABILTY DISCOVERY
+unknown"	[key=2,
+		color=tomato,
+		fontcolor="\"tomato\""];
+	"SERVICE DISCOVERY
+asmgcs" -> "HOST DISCOVERY
+unknown"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: -1" -> "ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 309"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: -1" -> "ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 309"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: -1" -> "ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 309"	[key=2,
+		color=blue,
+		fontcolor="\"blue\""];
+	"HOST DISCOVERY
+wsman" -> "BRUTE FORCE CREDENTIALS
+unknown | ID: 1"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"ARBITRARY CODE EXECUTION
+wsman | ID: 59"	[fontcolor=chartreuse,
+		shape=box];
+	"HOST DISCOVERY
+wsman" -> "ARBITRARY CODE EXECUTION
+wsman | ID: 59"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"SURFING
+wsman"	[fontcolor=chartreuse,
+		shape=oval];
+	"HOST DISCOVERY
+wsman" -> "SURFING
+wsman"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"HOST DISCOVERY
+wsman" -> "SURFING
+wsman"	[key=1,
+		color=purple];
+	"HOST DISCOVERY
+wsman" -> "INFO DISCOVERY
+wsman"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"VULNERABILTY DISCOVERY
+wsman"	[fontcolor=chartreuse,
+		shape=oval];
+	"HOST DISCOVERY
+wsman" -> "VULNERABILTY DISCOVERY
+wsman"	[key=0,
+		color=purple];
+	"SERVICE DISCOVERY
+dsd" -> "VULNERABILTY DISCOVERY
+postgresql"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+dsd" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		color=maroon];
+	"SERVICE DISCOVERY
+dsd" -> "HOST DISCOVERY
+http"	[key=0,
+		color=turquoise];
+	"SERVICE DISCOVERY
+dsd" -> "HOST DISCOVERY
+wsman"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"SERVICE DISCOVERY
+dsd" -> "VULNERABILTY DISCOVERY
+http"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+netbios-ssn" -> "NETWORK DoS
+ssdp | ID: 55"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"COMMAND AND CONTROL
+unknown | ID: 420"	[fontcolor=chartreuse,
+		shape=box,
+		style=dotted];
+	"SERVICE DISCOVERY
+netbios-ssn" -> "COMMAND AND CONTROL
+unknown | ID: 420"	[key=0,
+		color=magenta];
+	"SERVICE DISCOVERY
+epmap" -> "ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 309"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+epmap" -> "VULNERABILTY DISCOVERY
+postgresql"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+epmap" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+epmap" -> "VULNERABILTY DISCOVERY
+mysql"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+epmap" -> "NETWORK DoS
+ms-wbt-server | ID: 36"	[key=0,
+		color=turquoise,
+		fontcolor="\"turquoise\""];
+	"SERVICE DISCOVERY
+epmap" -> "HOST DISCOVERY
+http-alt"	[key=0,
+		color=purple];
+	"ACCOUNT MANIPULATION
+snmp | ID: 326"	[fontcolor=chartreuse,
+		shape=box,
+		style=dotted];
+	"SERVICE DISCOVERY
+epmap" -> "ACCOUNT MANIPULATION
+snmp | ID: 326"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+http" -> "SERVICE DISCOVERY
+unknown"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+http" -> "ARBITRARY CODE EXECUTION
+ssdp | ID: 355"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+http" -> "VULNERABILTY DISCOVERY
+ahsp"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+http" -> "HOST DISCOVERY
+http"	[key=0,
+		color=purple];
+	"VULNERABILTY DISCOVERY
+http" -> "HOST DISCOVERY
+http"	[key=1,
+		color=tomato,
+		fontcolor="\"purple\""];
+	"VULNERABILTY DISCOVERY
+http" -> "ARBITRARY CODE EXECUTION
+http | ID: 32"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+http" -> "ARBITRARY CODE EXECUTION
+http | ID: 32"	[key=1,
+		color=brown,
+		fontcolor="\"brown\""];
+	"VULNERABILTY DISCOVERY
+http" -> "ARBITRARY CODE EXECUTION
+http | ID: 32"	[key=2,
+		color=brown,
+		fontcolor="\"brown\""];
+	"VULNERABILTY DISCOVERY
+http" -> "SURFING
+http"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"VULNERABILTY DISCOVERY
+http" -> "INFO DISCOVERY
+http"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"VULNERABILTY DISCOVERY
+http" -> "INFO DISCOVERY
+http"	[key=1,
+		color=tomato,
+		fontcolor="\"tomato\""];
+	"VULNERABILTY DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 26"	[key=0,
+		color=tomato,
+		fontcolor="\"tomato\""];
+	"VULNERABILTY DISCOVERY
+http" -> "SERVICE DISCOVERY
+icmpd"	[key=0,
+		color=darkgreen,
+		fontcolor="\"darkgreen\""];
+	"VULNERABILTY DISCOVERY
+http" -> "DATA DELIVERY
+http | ID: 21"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+http" -> "ACCOUNT MANIPULATION
+snmp | ID: 275"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+http" -> "ACCOUNT MANIPULATION
+snmp | ID: 275"	[key=1,
+		color=turquoise,
+		fontcolor="\"turquoise\""];
+	"BRUTE FORCE CREDENTIALS
+pop3 | ID: 382" -> "NETWORK DoS
+ssdp | ID: 55"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 365" -> "ACCOUNT MANIPULATION
+snmp | ID: 53"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 365" -> "ACCOUNT MANIPULATION
+snmp | ID: 53"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"INFO DISCOVERY
+wap-wsp"	[fontcolor=chartreuse,
+		shape=oval];
+	"HOST DISCOVERY
+wap-wsp" -> "INFO DISCOVERY
+wap-wsp"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"VULNERABILTY DISCOVERY
+wap-wsp"	[fontcolor=chartreuse,
+		shape=oval];
+	"HOST DISCOVERY
+wap-wsp" -> "VULNERABILTY DISCOVERY
+wap-wsp"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"HOST DISCOVERY
+wap-wsp" -> "VULNERABILTY DISCOVERY
+wap-wsp"	[key=1,
+		color=purple,
+		fontcolor="\"purple\""];
+	"HOST DISCOVERY
+http-alt" -> "VULNERABILTY DISCOVERY
+postgresql"	[key=0,
+		color=turquoise,
+		fontcolor="\"turquoise\""];
+	"HOST DISCOVERY
+http-alt" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		color=brown,
+		fontcolor="\"brown\""];
+	"HOST DISCOVERY
+http-alt" -> "SERVICE DISCOVERY
+unknown"	[key=0,
+		color=brown,
+		fontcolor="\"brown\""];
+	"HOST DISCOVERY
+http-alt" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		color=brown,
+		fontcolor="\"brown\""];
+	"HOST DISCOVERY
+http-alt" -> "DATA EXFILTRATION
+http | ID: 26"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"HOST DISCOVERY
+http-alt" -> "SERVICE DISCOVERY
+icmpd"	[key=0,
+		color=tomato];
+	"HOST DISCOVERY
+http-alt" -> "VULNERABILTY DISCOVERY
+http-alt"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"HOST DISCOVERY
+http-alt" -> "VULNERABILTY DISCOVERY
+http-alt"	[key=1,
+		color=brown,
+		fontcolor="\"brown\""];
+	"HOST DISCOVERY
+http-alt" -> "VULNERABILTY DISCOVERY
+http-alt"	[key=2,
+		color=tomato,
+		fontcolor="\"tomato\""];
+	"ARBITRARY CODE EXECUTION
+esmagent | ID: 80"	[fontcolor=chartreuse,
+		shape=box];
+	"HOST DISCOVERY
+http-alt" -> "ARBITRARY CODE EXECUTION
+esmagent | ID: 80"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"HOST DISCOVERY
+websm" -> "ARBITRARY CODE EXECUTION
+http-alt | ID: 23"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 415"	[fontcolor=chartreuse,
+		shape=box,
+		style=dotted];
+	"ARBITRARY CODE EXECUTION
+ssdp | ID: 976" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: 415"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ARBITRARY CODE EXECUTION
+unknown | ID: 47" -> "SURFING
+unknown"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ARBITRARY CODE EXECUTION
+unknown | ID: 47" -> "SURFING
+unknown"	[key=1,
+		color=purple,
+		fontcolor="\"purple\""];
+	"ARBITRARY CODE EXECUTION
+unknown | ID: 47" -> "SURFING
+unknown"	[key=2,
+		color=purple,
+		fontcolor="\"purple\""];
+	"ARBITRARY CODE EXECUTION
+unknown | ID: 47" -> "SURFING
+unknown"	[key=3,
+		color=purple,
+		fontcolor="\"purple\""];
+	"ARBITRARY CODE EXECUTION
+unknown | ID: 47" -> "SURFING
+unknown"	[key=4,
+		color=purple,
+		fontcolor="\"purple\""];
+	"ARBITRARY CODE EXECUTION
+unknown | ID: 47" -> "SURFING
+unknown"	[key=5,
+		color=purple,
+		fontcolor="\"purple\""];
+	"ARBITRARY CODE EXECUTION
+unknown | ID: 47" -> "SURFING
+unknown"	[key=6,
+		color=brown,
+		fontcolor="\"brown\""];
+	"ARBITRARY CODE EXECUTION
+unknown | ID: 47" -> "SURFING
+unknown"	[key=7,
+		color=brown,
+		fontcolor="\"brown\""];
+	"ARBITRARY CODE EXECUTION
+unknown | ID: 47" -> "SURFING
+unknown"	[key=8,
+		color=brown,
+		fontcolor="\"brown\""];
+	"ARBITRARY CODE EXECUTION
+unknown | ID: 47" -> "SURFING
+unknown"	[key=9,
+		color=tomato,
+		fontcolor="\"tomato\""];
+	"ARBITRARY CODE EXECUTION
+epmap | ID: 356" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: 52"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+agma" -> "ARBITRARY CODE EXECUTION
+http-alt | ID: 23"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"BRUTE FORCE CREDENTIALS
+pop3 | ID: 46" -> "HOST DISCOVERY
+http"	[key=0,
+		color=darkgreen,
+		fontcolor="\"darkgreen\""];
+	"BRUTE FORCE CREDENTIALS
+pop3 | ID: 46" -> "HOST DISCOVERY
+http"	[key=1,
+		color=purple,
+		fontcolor="\"purple\""];
+	"ARBITRARY CODE EXECUTION
+ssdp | ID: 1632"	[fontcolor=chartreuse,
+		shape=box,
+		style=dotted];
+	"BRUTE FORCE CREDENTIALS
+pop3 | ID: 1800" -> "ARBITRARY CODE EXECUTION
+ssdp | ID: 1632"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ROOT PRIVILEGE ESCALATION
+ms-wbt-server | ID: -1"	[fontcolor=chartreuse,
+		shape=box];
+	"INFO DISCOVERY
+microsoft-ds" -> "ROOT PRIVILEGE ESCALATION
+ms-wbt-server | ID: -1"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"NETWORK DoS
+ms-wbt-server | ID: 307" -> "DATA EXFILTRATION
+microsoft-ds | ID: 37"	[key=0,
+		color=turquoise,
+		fontcolor="\"blue\""];
+	"NETWORK DoS
+ms-wbt-server | ID: 307" -> "Victim: 10.0.0.100
+NETWORK DoS
+ms-wbt-server"	[key=0];
+	"NETWORK DoS
+ms-wbt-server | ID: 307" -> "Victim: 10.0.0.221
+NETWORK DoS
+ms-wbt-server"	[key=0];
+	"COMMAND AND CONTROL
+unknown | ID: 785" -> "DATA EXFILTRATION
+microsoft-ds | ID: 298"	[key=0,
+		color=turquoise,
+		fontcolor="\"turquoise\""];
+	"COMMAND AND CONTROL
+unknown | ID: 785" -> "DATA EXFILTRATION
+microsoft-ds | ID: 298"	[key=1,
+		color=turquoise,
+		fontcolor="\"turquoise\""];
+	"SERVICE DISCOVERY
+fis" -> "VULNERABILTY DISCOVERY
+postgresql"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+fis" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		color=tomato,
+		fontcolor="\"tomato\""];
+	"BRUTE FORCE CREDENTIALS
+pop3 | ID: 363" -> "ACCOUNT MANIPULATION
+snmp | ID: 53"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"BRUTE FORCE CREDENTIALS
+pop3s | ID: 34" -> "INFO DISCOVERY
+xdmcp"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"BRUTE FORCE CREDENTIALS
+pop3s | ID: 354" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: 52"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"HOST DISCOVERY
+radan-http" -> "ARBITRARY CODE EXECUTION
+http-alt | ID: 23"	[key=0,
+		color=tomato,
+		fontcolor="\"tomato\""];
+	"ARBITRARY CODE EXECUTION
+ssdp | ID: 703" -> "DATA DELIVERY
+http | ID: 246"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"NETWORK DoS
+ssdp | ID: 231" -> "DATA DELIVERY
+http | ID: 21"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"Victim: 10.0.99.225
+NETWORK DoS
+ssdp"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+ssdp | ID: 231" -> "Victim: 10.0.99.225
+NETWORK DoS
+ssdp"	[key=0];
+	"SERVICE DISCOVERY
+microsoft-ds" -> "ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 309"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+microsoft-ds" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+microsoft-ds" -> "SERVICE DISCOVERY
+unknown"	[key=0,
+		color=darkgreen,
+		fontcolor="\"darkgreen\""];
+	"SERVICE DISCOVERY
+microsoft-ds" -> "COMMAND AND CONTROL
+unknown | ID: 39"	[key=0,
+		color=darkgreen];
+	"SERVICE DISCOVERY
+microsoft-ds" -> "VULNERABILTY DISCOVERY
+ahsp"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+microsoft-ds" -> "NETWORK DoS
+ssdp | ID: 55"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+microsoft-ds" -> "HOST DISCOVERY
+http"	[key=0,
+		color=turquoise];
+	"SERVICE DISCOVERY
+microsoft-ds" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: 299"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 906" -> "ACCOUNT MANIPULATION
+snmp | ID: 367"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA EXFILTRATION
+microsoft-ds | ID: 380" -> "NETWORK DoS
+ssdp | ID: 55"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA EXFILTRATION
+microsoft-ds | ID: 380" -> "NETWORK DoS
+ssdp | ID: 55"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA EXFILTRATION
+microsoft-ds | ID: 380" -> "Victim: 10.0.0.100
+DATA EXFILTRATION
+microsoft-ds"	[key=0];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: -1" -> "COMMAND AND CONTROL
+unknown | ID: 308"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"INFO DISCOVERY
+unknown" -> "SURFING
+unknown"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA EXFILTRATION
+unknown | ID: 57"	[fillcolor=salmon,
+		fontcolor=firebrick4,
+		shape=hexagon,
+		style=filled];
+	"INFO DISCOVERY
+unknown" -> "DATA EXFILTRATION
+unknown | ID: 57"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"INFO DISCOVERY
+unknown" -> "DATA EXFILTRATION
+unknown | ID: 57"	[key=1,
+		color=purple,
+		fontcolor="\"purple\""];
+	"INFO DISCOVERY
+unknown" -> "DATA EXFILTRATION
+unknown | ID: 57"	[key=2,
+		color=purple,
+		fontcolor="\"purple\""];
+	"INFO DISCOVERY
+unknown" -> "DATA EXFILTRATION
+unknown | ID: 57"	[key=3,
+		color=purple,
+		fontcolor="\"purple\""];
+	"INFO DISCOVERY
+unknown" -> "DATA EXFILTRATION
+unknown | ID: 57"	[key=4,
+		color=purple,
+		fontcolor="\"purple\""];
+	"INFO DISCOVERY
+unknown" -> "DATA EXFILTRATION
+unknown | ID: 57"	[key=5,
+		color=purple,
+		fontcolor="\"purple\""];
+	"INFO DISCOVERY
+unknown" -> "DATA EXFILTRATION
+unknown | ID: 57"	[key=6,
+		color=brown,
+		fontcolor="\"brown\""];
+	"INFO DISCOVERY
+unknown" -> "DATA EXFILTRATION
+unknown | ID: 57"	[key=7,
+		color=brown,
+		fontcolor="\"brown\""];
+	"INFO DISCOVERY
+unknown" -> "DATA EXFILTRATION
+unknown | ID: 57"	[key=8,
+		color=brown,
+		fontcolor="\"brown\""];
+	"INFO DISCOVERY
+unknown" -> "DATA EXFILTRATION
+unknown | ID: 57"	[key=9,
+		color=brown,
+		fontcolor="\"brown\""];
+	"INFO DISCOVERY
+unknown" -> "DATA EXFILTRATION
+unknown | ID: 57"	[key=10,
+		color=tomato,
+		fontcolor="\"tomato\""];
+	"DATA EXFILTRATION
+unknown | ID: 301"	[fillcolor=salmon,
+		fontcolor=chartreuse,
+		shape=hexagon,
+		style=filled];
+	"INFO DISCOVERY
+unknown" -> "DATA EXFILTRATION
+unknown | ID: 301"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA DELIVERY
+http | ID: 246" -> "DATA EXFILTRATION
+http | ID: 26"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA DELIVERY
+http | ID: 246" -> "DATA EXFILTRATION
+http | ID: 26"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA DELIVERY
+http | ID: 246" -> "DATA EXFILTRATION
+http | ID: 26"	[key=2,
+		color=blue,
+		fontcolor="\"blue\""];
+	"Victim: 10.0.0.101
+DATA DELIVERY
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+http | ID: 246" -> "Victim: 10.0.0.101
+DATA DELIVERY
+http"	[key=0];
+	"Victim: 10.0.0.110
+DATA DELIVERY
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+http | ID: 246" -> "Victim: 10.0.0.110
+DATA DELIVERY
+http"	[key=0];
+	"Victim: 10.0.0.150
+DATA DELIVERY
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+http | ID: 246" -> "Victim: 10.0.0.150
+DATA DELIVERY
+http"	[key=0];
+	"Victim: 10.0.0.202
+DATA DELIVERY
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+http | ID: 246" -> "Victim: 10.0.0.202
+DATA DELIVERY
+http"	[key=0];
+	"Victim: 10.0.0.27
+DATA DELIVERY
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+http | ID: 246" -> "Victim: 10.0.0.27
+DATA DELIVERY
+http"	[key=0];
+	"Victim: 10.0.0.77
+DATA DELIVERY
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+http | ID: 246" -> "Victim: 10.0.0.77
+DATA DELIVERY
+http"	[key=0];
+	"Victim: 10.0.0.80
+DATA DELIVERY
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+http | ID: 246" -> "Victim: 10.0.0.80
+DATA DELIVERY
+http"	[key=0];
+	"Victim: 10.0.99.102
+DATA DELIVERY
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+http | ID: 246" -> "Victim: 10.0.99.102
+DATA DELIVERY
+http"	[key=0];
+	"Victim: 10.0.99.225
+DATA DELIVERY
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+http | ID: 246" -> "Victim: 10.0.99.225
+DATA DELIVERY
+http"	[key=0];
+	"Victim: 10.0.0.167
+DATA DELIVERY
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+http | ID: 246" -> "Victim: 10.0.0.167
+DATA DELIVERY
+http"	[key=0];
+	"Victim: 10.0.99.50
+DATA DELIVERY
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+http | ID: 246" -> "Victim: 10.0.99.50
+DATA DELIVERY
+http"	[key=0];
+	"BRUTE FORCE CREDENTIALS
+unknown | ID: 1" -> "HOST DISCOVERY
+ms-wbt-server"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"BRUTE FORCE CREDENTIALS
+unknown | ID: 1" -> "VULNERABILTY DISCOVERY
+mysql"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"BRUTE FORCE CREDENTIALS
+unknown | ID: 1" -> "SURFING
+http"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"BRUTE FORCE CREDENTIALS
+unknown | ID: 1" -> "VULNERABILTY DISCOVERY
+wsman"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"BRUTE FORCE CREDENTIALS
+unknown | ID: 1" -> "INFO DISCOVERY
+ftp"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"INFO DISCOVERY
+domain" -> "SURFING
+unknown"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"INFO DISCOVERY
+remoteware-cl"	[fontcolor=chartreuse,
+		shape=oval];
+	"VULNERABILTY DISCOVERY
+remoteware-cl" -> "INFO DISCOVERY
+remoteware-cl"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+remoteware-cl" -> "INFO DISCOVERY
+remoteware-cl"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA EXFILTRATION
+wsman | ID: 63"	[fillcolor=salmon,
+		fontcolor=darkgoldenrod1,
+		shape=hexagon,
+		style=filled];
+	"DATA DELIVERY
+wsman | ID: 399" -> "DATA EXFILTRATION
+wsman | ID: 63"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA DELIVERY
+wsman | ID: 399" -> "DATA EXFILTRATION
+wsman | ID: 63"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA DELIVERY
+wsman | ID: 399" -> "DATA EXFILTRATION
+wsman | ID: 63"	[key=2,
+		color=blue,
+		fontcolor="\"blue\""];
+	"Victim: 10.0.0.221
+DATA DELIVERY
+wsman"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+wsman | ID: 399" -> "Victim: 10.0.0.221
+DATA DELIVERY
+wsman"	[key=0];
+	"Victim: 10.0.0.222
+DATA DELIVERY
+wsman"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+wsman | ID: 399" -> "Victim: 10.0.0.222
+DATA DELIVERY
+wsman"	[key=0];
+	"Victim: 10.0.0.223
+DATA DELIVERY
+wsman"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+wsman | ID: 399" -> "Victim: 10.0.0.223
+DATA DELIVERY
+wsman"	[key=0];
+	"Victim: 10.0.0.224
+DATA DELIVERY
+wsman"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+wsman | ID: 399" -> "Victim: 10.0.0.224
+DATA DELIVERY
+wsman"	[key=0];
+	"ACCOUNT MANIPULATION
+snmp | ID: 831" -> "ROOT PRIVILEGE ESCALATION
+ms-wbt-server | ID: 322"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+rfb" -> "VULNERABILTY DISCOVERY
+postgresql"	[key=0,
+		color=brown,
+		fontcolor="\"brown\""];
+	"SERVICE DISCOVERY
+rfb" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		color=darkgreen,
+		fontcolor="\"darkgreen\""];
+	"SERVICE DISCOVERY
+rfb" -> "VULNERABILTY DISCOVERY
+ahsp"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+rfb" -> "HOST DISCOVERY
+http"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"SERVICE DISCOVERY
+rfb" -> "HOST DISCOVERY
+http"	[key=1,
+		color=brown];
+	"SERVICE DISCOVERY
+rfb" -> "VULNERABILTY DISCOVERY
+http"	[key=0,
+		color=brown];
+	"BRUTE FORCE CREDENTIALS
+pop3 | ID: 887" -> "ARBITRARY CODE EXECUTION
+ssdp | ID: 355"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"BRUTE FORCE CREDENTIALS
+unknown | ID: 879" -> "ARBITRARY CODE EXECUTION
+ssdp | ID: 355"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ARBITRARY CODE EXECUTION
+ssdp | ID: 902" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: 365"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ROOT PRIVILEGE ESCALATION
+ms-wbt-server | ID: 322" -> "COMMAND AND CONTROL
+unknown | ID: 39"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ROOT PRIVILEGE ESCALATION
+ms-wbt-server | ID: 322" -> "COMMAND AND CONTROL
+unknown | ID: 39"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ARBITRARY CODE EXECUTION
+wsman | ID: 59" -> "SURFING
+wsman"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"SURFING
+wsman" -> "HOST DISCOVERY
+unknown"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SURFING
+wsman" -> "INFO DISCOVERY
+wsman"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"SURFING
+wsman" -> "INFO DISCOVERY
+wsman"	[key=1,
+		color=purple,
+		fontcolor="\"purple\""];
+	"SURFING
+wsman" -> "DATA EXFILTRATION
+wsman | ID: 63"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"INFO DISCOVERY
+wsman" -> "ACCOUNT MANIPULATION
+snmp | ID: -1"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"INFO DISCOVERY
+wsman" -> "DATA DELIVERY
+wsman | ID: 399"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"INFO DISCOVERY
+wsman" -> "SURFING
+wsman"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"INFO DISCOVERY
+wsman" -> "DATA EXFILTRATION
+wsman | ID: 63"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"INFO DISCOVERY
+wsman" -> "DATA EXFILTRATION
+wsman | ID: 63"	[key=1,
+		color=purple,
+		fontcolor="\"purple\""];
+	"VULNERABILTY DISCOVERY
+wsman" -> "ARBITRARY CODE EXECUTION
+wsman | ID: 59"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"VULNERABILTY DISCOVERY
+wsman" -> "SURFING
+wsman"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"DATA EXFILTRATION
+wsman | ID: 63" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA EXFILTRATION
+wsman | ID: 63" -> "SERVICE DISCOVERY
+unknown"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"DATA EXFILTRATION
+wsman | ID: 63" -> "COMMAND AND CONTROL
+unknown | ID: 308"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA EXFILTRATION
+wsman | ID: 63" -> "INFO DISCOVERY
+xdmcp"	[key=0,
+		color=blue];
+	"DATA EXFILTRATION
+wsman | ID: 63" -> "HOST DISCOVERY
+unknown"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"DATA EXFILTRATION
+wsman | ID: 63" -> "HOST DISCOVERY
+wsman"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA EXFILTRATION
+wsman | ID: 63" -> "SERVICE DISCOVERY
+rfb"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA EXFILTRATION
+wsman | ID: 63" -> "SURFING
+unknown"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"Victim: 10.0.0.101
+DATA EXFILTRATION
+wsman"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+wsman | ID: 63" -> "Victim: 10.0.0.101
+DATA EXFILTRATION
+wsman"	[key=0];
+	"Victim: 10.0.0.221
+DATA EXFILTRATION
+wsman"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+wsman | ID: 63" -> "Victim: 10.0.0.221
+DATA EXFILTRATION
+wsman"	[key=0];
+	"Victim: 10.0.0.222
+DATA EXFILTRATION
+wsman"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+wsman | ID: 63" -> "Victim: 10.0.0.222
+DATA EXFILTRATION
+wsman"	[key=0];
+	"Victim: 10.0.0.223
+DATA EXFILTRATION
+wsman"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+wsman | ID: 63" -> "Victim: 10.0.0.223
+DATA EXFILTRATION
+wsman"	[key=0];
+	"Victim: 10.0.0.224
+DATA EXFILTRATION
+wsman"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+wsman | ID: 63" -> "Victim: 10.0.0.224
+DATA EXFILTRATION
+wsman"	[key=0];
+	"DATA EXFILTRATION
+microsoft-ds | ID: 395"	[fillcolor=salmon,
+		fontcolor=chartreuse,
+		shape=hexagon,
+		style=dotted];
+	"ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 951" -> "DATA EXFILTRATION
+microsoft-ds | ID: 395"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA EXFILTRATION
+http | ID: 26" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"DATA EXFILTRATION
+http | ID: 26" -> "SERVICE DISCOVERY
+unknown"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA EXFILTRATION
+http | ID: 26" -> "SERVICE DISCOVERY
+unknown"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA EXFILTRATION
+http | ID: 26" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA EXFILTRATION
+http | ID: 26" -> "INFO DISCOVERY
+xdmcp"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA EXFILTRATION
+http | ID: 26" -> "SERVICE DISCOVERY
+ssh"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA EXFILTRATION
+http | ID: 26" -> "SERVICE DISCOVERY
+rpas-c2"	[key=0,
+		color=blue];
+	"DATA EXFILTRATION
+http | ID: 26" -> "VULNERABILTY DISCOVERY
+mysql"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"DATA EXFILTRATION
+http | ID: 26" -> "INFO DISCOVERY
+http"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA EXFILTRATION
+http | ID: 26" -> "VULNERABILTY DISCOVERY
+http"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ARBITRARY CODE EXECUTION
+ftp | ID: -1"	[fillcolor=yellow,
+		fontcolor=chartreuse,
+		shape=box,
+		style=filled];
+	"DATA EXFILTRATION
+http | ID: 26" -> "ARBITRARY CODE EXECUTION
+ftp | ID: -1"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA EXFILTRATION
+http | ID: 26" -> "Victim: 10.0.0.101
+DATA EXFILTRATION
+http"	[key=0];
+	"DATA EXFILTRATION
+http | ID: 26" -> "Victim: 10.0.0.110
+DATA EXFILTRATION
+http"	[key=0];
+	"DATA EXFILTRATION
+http | ID: 26" -> "Victim: 10.0.0.150
+DATA EXFILTRATION
+http"	[key=0];
+	"SERVICE DISCOVERY
+spt-automation"	[fillcolor=yellow,
+		fontcolor=chartreuse,
+		shape=oval,
+		style=filled];
+	"DATA EXFILTRATION
+http | ID: 26" -> "SERVICE DISCOVERY
+spt-automation"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"Victim: 10.0.0.167
+DATA EXFILTRATION
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+http | ID: 26" -> "Victim: 10.0.0.167
+DATA EXFILTRATION
+http"	[key=0];
+	"SERVICE DISCOVERY
+ipsma"	[fillcolor=yellow,
+		fontcolor=chartreuse,
+		shape=oval,
+		style=filled];
+	"DATA EXFILTRATION
+http | ID: 26" -> "SERVICE DISCOVERY
+ipsma"	[key=0,
+		color=blue];
+	"DATA EXFILTRATION
+http | ID: 26" -> "Victim: 10.0.0.202
+DATA EXFILTRATION
+http"	[key=0];
+	"DATA EXFILTRATION
+http | ID: 26" -> "Victim: 10.0.0.27
+DATA EXFILTRATION
+http"	[key=0];
+	"Victim: 10.0.0.35
+DATA EXFILTRATION
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+http | ID: 26" -> "Victim: 10.0.0.35
+DATA EXFILTRATION
+http"	[key=0];
+	"DATA EXFILTRATION
+http | ID: 26" -> "Victim: 10.0.0.47
+DATA EXFILTRATION
+http"	[key=0];
+	"Victim: 10.0.0.56
+DATA EXFILTRATION
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+http | ID: 26" -> "Victim: 10.0.0.56
+DATA EXFILTRATION
+http"	[key=0];
+	"DATA EXFILTRATION
+http | ID: 26" -> "Victim: 10.0.0.71
+DATA EXFILTRATION
+http"	[key=0];
+	"DATA EXFILTRATION
+http | ID: 26" -> "Victim: 10.0.0.72
+DATA EXFILTRATION
+http"	[key=0];
+	"ACCOUNT MANIPULATION
+snmp | ID: 1179"	[fillcolor=yellow,
+		fontcolor=chartreuse,
+		shape=box,
+		style="dotted,filled"];
+	"DATA EXFILTRATION
+http | ID: 26" -> "ACCOUNT MANIPULATION
+snmp | ID: 1179"	[key=0,
+		color=blue];
+	"DATA EXFILTRATION
+http | ID: 26" -> "Victim: 10.0.0.77
+DATA EXFILTRATION
+http"	[key=0];
+	"DATA EXFILTRATION
+http | ID: 26" -> "Victim: 10.0.0.80
+DATA EXFILTRATION
+http"	[key=0];
+	"DATA EXFILTRATION
+http | ID: 26" -> "Victim: 10.0.0.81
+DATA EXFILTRATION
+http"	[key=0];
+	"DATA EXFILTRATION
+http | ID: 26" -> "Victim: 10.0.99.102
+DATA EXFILTRATION
+http"	[key=0];
+	"Victim: 10.0.99.143
+DATA EXFILTRATION
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+http | ID: 26" -> "Victim: 10.0.99.143
+DATA EXFILTRATION
+http"	[key=0];
+	"Victim: 10.0.99.225
+DATA EXFILTRATION
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+http | ID: 26" -> "Victim: 10.0.99.225
+DATA EXFILTRATION
+http"	[key=0];
+	"Victim: 10.0.99.50
+DATA EXFILTRATION
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+http | ID: 26" -> "Victim: 10.0.99.50
+DATA EXFILTRATION
+http"	[key=0];
+	"SERVICE DISCOVERY
+icmpd" -> "VULNERABILTY DISCOVERY
+ahsp"	[key=0,
+		color=tomato,
+		fontcolor="\"tomato\""];
+	"SERVICE DISCOVERY
+icmpd" -> "HOST DISCOVERY
+http"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"SERVICE DISCOVERY
+icmpd" -> "BRUTE FORCE CREDENTIALS
+pop3 | ID: 46"	[key=0,
+		color=darkgreen,
+		fontcolor="\"darkgreen\""];
+	"ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 321" -> "COMMAND AND CONTROL
+unknown | ID: 39"	[key=0,
+		color=orange,
+		fontcolor="\"orange\""];
+	"DATA EXFILTRATION
+http | ID: -1" -> "Victim: 10.0.0.47
+DATA EXFILTRATION
+http"	[key=0];
+	"DATA EXFILTRATION
+http | ID: -1" -> "Victim: 10.0.0.72
+DATA EXFILTRATION
+http"	[key=0];
+	"ARBITRARY CODE EXECUTION
+pop3 | ID: 1525"	[fontcolor=chartreuse,
+		shape=box,
+		style=dotted];
+	"BRUTE FORCE CREDENTIALS
+pop3 | ID: 1743" -> "ARBITRARY CODE EXECUTION
+pop3 | ID: 1525"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 950"	[fontcolor=chartreuse,
+		shape=box,
+		style=dotted];
+	"COMMAND AND CONTROL
+unknown | ID: 1363" -> "ACCOUNT MANIPULATION
+snmp | ID: 950"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 299" -> "NETWORK DoS
+ms-wbt-server | ID: 36"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 299" -> "NETWORK DoS
+ms-wbt-server | ID: 36"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SURFING
+unknown" -> "INFO DISCOVERY
+unknown"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SURFING
+unknown" -> "INFO DISCOVERY
+unknown"	[key=1,
+		color=purple,
+		fontcolor="\"purple\""];
+	"SURFING
+unknown" -> "INFO DISCOVERY
+unknown"	[key=2,
+		color=purple,
+		fontcolor="\"purple\""];
+	"SURFING
+unknown" -> "INFO DISCOVERY
+unknown"	[key=3,
+		color=purple,
+		fontcolor="\"purple\""];
+	"SURFING
+unknown" -> "INFO DISCOVERY
+unknown"	[key=4,
+		color=purple,
+		fontcolor="\"purple\""];
+	"SURFING
+unknown" -> "INFO DISCOVERY
+unknown"	[key=5,
+		color=purple,
+		fontcolor="\"purple\""];
+	"SURFING
+unknown" -> "INFO DISCOVERY
+unknown"	[key=6,
+		color=brown,
+		fontcolor="\"brown\""];
+	"SURFING
+unknown" -> "INFO DISCOVERY
+unknown"	[key=7,
+		color=brown];
+	"SURFING
+unknown" -> "INFO DISCOVERY
+unknown"	[key=8,
+		color=brown,
+		fontcolor="\"brown\""];
+	"SURFING
+unknown" -> "INFO DISCOVERY
+unknown"	[key=9,
+		color=brown,
+		fontcolor="\"brown\""];
+	"SURFING
+unknown" -> "INFO DISCOVERY
+unknown"	[key=10,
+		color=tomato,
+		fontcolor="\"tomato\""];
+	"SURFING
+unknown" -> "DATA EXFILTRATION
+unknown | ID: 57"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"DATA DELIVERY
+unknown | ID: 388"	[fillcolor=salmon,
+		fontcolor=chartreuse,
+		shape=hexagon,
+		style=filled];
+	"SURFING
+unknown" -> "DATA DELIVERY
+unknown | ID: 388"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SURFING
+unknown" -> "DATA DELIVERY
+unknown | ID: 388"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA DELIVERY
+unknown | ID: 56"	[fillcolor=salmon,
+		fontcolor=chartreuse,
+		shape=hexagon,
+		style=filled];
+	"SURFING
+unknown" -> "DATA DELIVERY
+unknown | ID: 56"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 300" -> "NETWORK DoS
+ms-wbt-server | ID: 36"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"DATA DELIVERY
+wap-wsp | ID: 406"	[fillcolor=salmon,
+		fontcolor=chartreuse,
+		shape=hexagon,
+		style=dotted];
+	"ACCOUNT MANIPULATION
+snmp | ID: 965" -> "DATA DELIVERY
+wap-wsp | ID: 406"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA DELIVERY
+wap-wsp | ID: 69"	[fillcolor=salmon,
+		fontcolor=chartreuse,
+		shape=hexagon,
+		style=filled];
+	"ACCOUNT MANIPULATION
+snmp | ID: 408" -> "DATA DELIVERY
+wap-wsp | ID: 69"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 408" -> "DATA DELIVERY
+wap-wsp | ID: 69"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"INFO DISCOVERY
+http-alt"	[fontcolor=chartreuse,
+		shape=oval];
+	"SURFING
+http-alt" -> "INFO DISCOVERY
+http-alt"	[key=0,
+		color=maroon,
+		fontcolor="\"maroon\""];
+	"SURFING
+http-alt" -> "INFO DISCOVERY
+http-alt"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SURFING
+http-alt" -> "INFO DISCOVERY
+http-alt"	[key=2,
+		color=brown,
+		fontcolor="\"brown\""];
+	"SURFING
+http-alt" -> "INFO DISCOVERY
+http-alt"	[key=3,
+		color=brown,
+		fontcolor="\"brown\""];
+	"SURFING
+http-alt" -> "INFO DISCOVERY
+http-alt"	[key=4,
+		color=tomato,
+		fontcolor="\"tomato\""];
+	"SURFING
+http-alt" -> "VULNERABILTY DISCOVERY
+http-alt"	[key=0,
+		color=maroon];
+	"VULNERABILTY DISCOVERY
+radan-http"	[fontcolor=chartreuse,
+		shape=oval];
+	"SURFING
+http-alt" -> "VULNERABILTY DISCOVERY
+radan-http"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"DATA DELIVERY
+http-alt | ID: 242"	[fillcolor=salmon,
+		fontcolor=chartreuse,
+		shape=hexagon,
+		style=filled];
+	"SURFING
+http-alt" -> "DATA DELIVERY
+http-alt | ID: 242"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SURFING
+http-alt" -> "DATA DELIVERY
+http-alt | ID: 242"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA DELIVERY
+distinct | ID: 70"	[fillcolor=yellow,
+		fontcolor=chartreuse,
+		shape=hexagon,
+		style=filled];
+	"DATA EXFILTRATION
+distinct | ID: 409" -> "DATA DELIVERY
+distinct | ID: 70"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"Victim: 10.0.0.162
+DATA EXFILTRATION
+distinct"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+distinct | ID: 409" -> "Victim: 10.0.0.162
+DATA EXFILTRATION
+distinct"	[key=0];
+	"ACCOUNT MANIPULATION
+snmp | ID: 367" -> "ACCOUNT MANIPULATION
+snmp | ID: 53"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 367" -> "ACCOUNT MANIPULATION
+snmp | ID: 53"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 874" -> "ACCOUNT MANIPULATION
+snmp | ID: 351"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"USER PRIVILEGE ESCALATION
+http | ID: 49"	[fontcolor=chartreuse,
+		shape=box];
+	"ACCOUNT MANIPULATION
+snmp | ID: 351" -> "USER PRIVILEGE ESCALATION
+http | ID: 49"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 351" -> "USER PRIVILEGE ESCALATION
+http | ID: 49"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"BRUTE FORCE CREDENTIALS
+unknown | ID: 937"	[fontcolor=chartreuse,
+		shape=box,
+		style=dotted];
+	"ACCOUNT MANIPULATION
+snmp | ID: 1357" -> "BRUTE FORCE CREDENTIALS
+unknown | ID: 937"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 942" -> "DATA DELIVERY
+unknown | ID: 388"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"BRUTE FORCE CREDENTIALS
+unknown | ID: 386"	[fontcolor=chartreuse,
+		shape=box];
+	"ACCOUNT MANIPULATION
+snmp | ID: 938" -> "BRUTE FORCE CREDENTIALS
+unknown | ID: 386"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 1368" -> "COMMAND AND CONTROL
+unknown | ID: 956"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"COMMAND AND CONTROL
+unknown | ID: 956" -> "DATA DELIVERY
+wsman | ID: 399"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 952"	[fontcolor=chartreuse,
+		shape=box,
+		style=dotted];
+	"COMMAND AND CONTROL
+unknown | ID: 1365" -> "ACCOUNT MANIPULATION
+snmp | ID: 952"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 230" -> "DATA DELIVERY
+http | ID: 21"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 889" -> "ARBITRARY CODE EXECUTION
+ssdp | ID: 355"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"BRUTE FORCE CREDENTIALS
+unknown | ID: 1157"	[fontcolor=chartreuse,
+		shape=box,
+		style=dotted];
+	"ACCOUNT MANIPULATION
+snmp | ID: 1505" -> "BRUTE FORCE CREDENTIALS
+unknown | ID: 1157"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"BRUTE FORCE CREDENTIALS
+unknown | ID: 672"	[fontcolor=chartreuse,
+		shape=box];
+	"ACCOUNT MANIPULATION
+snmp | ID: 1155" -> "BRUTE FORCE CREDENTIALS
+unknown | ID: 672"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"BRUTE FORCE CREDENTIALS
+unknown | ID: 358" -> "ACCOUNT MANIPULATION
+snmp | ID: 53"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA EXFILTRATION
+smtp | ID: 74"	[fillcolor=salmon,
+		fontcolor=chartreuse,
+		shape=hexagon,
+		style=filled];
+	"ACCOUNT MANIPULATION
+snmp | ID: 413" -> "DATA EXFILTRATION
+smtp | ID: 74"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 676"	[fontcolor=chartreuse,
+		shape=box];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 1158" -> "ACCOUNT MANIPULATION
+snmp | ID: 676"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 350" -> "USER PRIVILEGE ESCALATION
+http | ID: 49"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"Victim: 10.0.99.143
+DATA DELIVERY
+vrml-multi-use"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+vrml-multi-use | ID: 416" -> "Victim: 10.0.99.143
+DATA DELIVERY
+vrml-multi-use"	[key=0];
+	"DATA EXFILTRATION
+vrml-multi-use | ID: 76"	[fillcolor=salmon,
+		fontcolor=chartreuse,
+		shape=hexagon,
+		style=filled];
+	"DATA DELIVERY
+vrml-multi-use | ID: 416" -> "DATA EXFILTRATION
+vrml-multi-use | ID: 76"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA DELIVERY
+vrml-multi-use | ID: 416" -> "DATA EXFILTRATION
+vrml-multi-use | ID: 76"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA DELIVERY
+vrml-multi-use | ID: 416" -> "DATA EXFILTRATION
+vrml-multi-use | ID: 76"	[key=2,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA DELIVERY
+vrml-multi-use | ID: 416" -> "DATA EXFILTRATION
+vrml-multi-use | ID: 76"	[key=3,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA DELIVERY
+vrml-multi-use | ID: 416" -> "DATA EXFILTRATION
+vrml-multi-use | ID: 76"	[key=4,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SURFING
+vrml-multi-use" -> "DATA DELIVERY
+vrml-multi-use | ID: 416"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SURFING
+vrml-multi-use" -> "DATA DELIVERY
+vrml-multi-use | ID: 416"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SURFING
+vrml-multi-use" -> "DATA DELIVERY
+vrml-multi-use | ID: 416"	[key=2,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SURFING
+vrml-multi-use" -> "DATA DELIVERY
+vrml-multi-use | ID: 416"	[key=3,
+		color=blue,
+		fontcolor="\"blue\""];
+	"Victim: 10.0.99.245
+DATA DELIVERY
+unknown"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+unknown | ID: 935" -> "Victim: 10.0.99.245
+DATA DELIVERY
+unknown"	[key=0];
+	"DATA EXFILTRATION
+unknown | ID: 383"	[fillcolor=salmon,
+		fontcolor=chartreuse,
+		shape=hexagon,
+		style=filled];
+	"DATA DELIVERY
+unknown | ID: 935" -> "DATA EXFILTRATION
+unknown | ID: 383"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 950" -> "USER PRIVILEGE ESCALATION
+wsman | ID: 394"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ROOT PRIVILEGE ESCALATION
+ms-wbt-server | ID: -1" -> "COMMAND AND CONTROL
+unknown | ID: 308"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"COMMAND AND CONTROL
+unknown | ID: -1"	[fontcolor=chartreuse,
+		shape=box];
+	"ROOT PRIVILEGE ESCALATION
+ms-wbt-server | ID: -1" -> "COMMAND AND CONTROL
+unknown | ID: -1"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"COMMAND AND CONTROL
+unknown | ID: -1" -> "ACCOUNT MANIPULATION
+snmp | ID: -1"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA EXFILTRATION
+microsoft-ds | ID: 395" -> "Victim: 10.0.0.100
+DATA EXFILTRATION
+microsoft-ds"	[key=0];
+	"NETWORK DoS
+ntp | ID: 62"	[fillcolor=salmon,
+		fontcolor=chartreuse,
+		shape=hexagon,
+		style=filled];
+	"DATA EXFILTRATION
+microsoft-ds | ID: 395" -> "NETWORK DoS
+ntp | ID: 62"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"NETWORK DoS
+ntp | ID: 62" -> "INFO DISCOVERY
+xdmcp"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"Victim: 10.0.0.100
+NETWORK DoS
+ntp"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+ntp | ID: 62" -> "Victim: 10.0.0.100
+NETWORK DoS
+ntp"	[key=0];
+	"USER PRIVILEGE ESCALATION
+kerberos | ID: 79"	[fontcolor=chartreuse,
+		shape=box];
+	"COMMAND AND CONTROL
+unknown | ID: 420" -> "USER PRIVILEGE ESCALATION
+kerberos | ID: 79"	[key=0,
+		color=magenta,
+		fontcolor="\"magenta\""];
+	"USER PRIVILEGE ESCALATION
+kerberos | ID: 79" -> "SERVICE DISCOVERY
+unknown"	[key=0,
+		color=magenta,
+		fontcolor="\"magenta\""];
+	"NETWORK DoS
+ms-wbt-server | ID: 297" -> "NETWORK DoS
+ms-wbt-server | ID: 36"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"NETWORK DoS
+ms-wbt-server | ID: 297" -> "Victim: 10.0.0.100
+NETWORK DoS
+ms-wbt-server"	[key=0];
+	"ARBITRARY CODE EXECUTION
+http-alt | ID: 23" -> "SURFING
+http-alt"	[key=0,
+		color=maroon,
+		fontcolor="\"maroon\""];
+	"ARBITRARY CODE EXECUTION
+http-alt | ID: 23" -> "SURFING
+http-alt"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ARBITRARY CODE EXECUTION
+http-alt | ID: 23" -> "SURFING
+http-alt"	[key=2,
+		color=brown,
+		fontcolor="\"brown\""];
+	"ARBITRARY CODE EXECUTION
+http-alt | ID: 23" -> "SURFING
+http-alt"	[key=3,
+		color=brown,
+		fontcolor="\"brown\""];
+	"ARBITRARY CODE EXECUTION
+http-alt | ID: 23" -> "SURFING
+http-alt"	[key=4,
+		color=tomato,
+		fontcolor="\"tomato\""];
+	"COMMAND AND CONTROL
+unknown | ID: 1578"	[fillcolor=yellow,
+		fontcolor=chartreuse,
+		shape=box,
+		style="dotted,filled"];
+	"ROOT PRIVILEGE ESCALATION
+ms-wbt-server | ID: 1258"	[fontcolor=chartreuse,
+		shape=box,
+		style=dotted];
+	"COMMAND AND CONTROL
+unknown | ID: 1578" -> "ROOT PRIVILEGE ESCALATION
+ms-wbt-server | ID: 1258"	[key=0,
+		color=tomato];
+	"COMMAND AND CONTROL
+unknown | ID: 792"	[fontcolor=chartreuse,
+		shape=box,
+		style=dotted];
+	"ROOT PRIVILEGE ESCALATION
+ms-wbt-server | ID: 1258" -> "COMMAND AND CONTROL
+unknown | ID: 792"	[key=0,
+		color=tomato,
+		fontcolor="\"tomato\""];
+	"ROOT PRIVILEGE ESCALATION
+ms-wbt-server | ID: 302"	[fontcolor=chartreuse,
+		shape=box];
+	"COMMAND AND CONTROL
+unknown | ID: 792" -> "ROOT PRIVILEGE ESCALATION
+ms-wbt-server | ID: 302"	[key=0,
+		color=tomato,
+		fontcolor="\"tomato\""];
+	"ROOT PRIVILEGE ESCALATION
+ms-wbt-server | ID: 302" -> "NETWORK DoS
+ms-wbt-server | ID: 36"	[key=0,
+		color=tomato,
+		fontcolor="\"tomato\""];
+	"ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 40"	[fontcolor=chartreuse,
+		shape=box];
+	"ACCOUNT MANIPULATION
+snmp | ID: 326" -> "ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 40"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA DELIVERY
+http | ID: 21" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		color=blue];
+	"DATA DELIVERY
+http | ID: 21" -> "INFO DISCOVERY
+xdmcp"	[key=0,
+		color=blue];
+	"DATA DELIVERY
+http | ID: 21" -> "SERVICE DISCOVERY
+ssh"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA DELIVERY
+http | ID: 21" -> "VULNERABILTY DISCOVERY
+mysql"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA DELIVERY
+http | ID: 21" -> "VULNERABILTY DISCOVERY
+ahsp"	[key=0,
+		color=blue];
+	"DATA DELIVERY
+http | ID: 21" -> "HOST DISCOVERY
+http"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA DELIVERY
+http | ID: 21" -> "SURFING
+http"	[key=0,
+		color=purple];
+	"DATA DELIVERY
+http | ID: 21" -> "Victim: 10.0.0.101
+DATA DELIVERY
+http"	[key=0];
+	"DATA DELIVERY
+http | ID: 21" -> "Victim: 10.0.0.110
+DATA DELIVERY
+http"	[key=0];
+	"DATA DELIVERY
+http | ID: 21" -> "Victim: 10.0.0.150
+DATA DELIVERY
+http"	[key=0];
+	"DATA DELIVERY
+http | ID: 21" -> "Victim: 10.0.0.202
+DATA DELIVERY
+http"	[key=0];
+	"DATA DELIVERY
+http | ID: 21" -> "Victim: 10.0.0.27
+DATA DELIVERY
+http"	[key=0];
+	"Victim: 10.0.0.35
+DATA DELIVERY
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+http | ID: 21" -> "Victim: 10.0.0.35
+DATA DELIVERY
+http"	[key=0];
+	"Victim: 10.0.0.47
+DATA DELIVERY
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+http | ID: 21" -> "Victim: 10.0.0.47
+DATA DELIVERY
+http"	[key=0];
+	"Victim: 10.0.0.56
+DATA DELIVERY
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+http | ID: 21" -> "Victim: 10.0.0.56
+DATA DELIVERY
+http"	[key=0];
+	"Victim: 10.0.0.71
+DATA DELIVERY
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+http | ID: 21" -> "Victim: 10.0.0.71
+DATA DELIVERY
+http"	[key=0];
+	"Victim: 10.0.0.72
+DATA DELIVERY
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+http | ID: 21" -> "Victim: 10.0.0.72
+DATA DELIVERY
+http"	[key=0];
+	"DATA DELIVERY
+http | ID: 21" -> "Victim: 10.0.0.77
+DATA DELIVERY
+http"	[key=0];
+	"DATA DELIVERY
+http | ID: 21" -> "Victim: 10.0.0.80
+DATA DELIVERY
+http"	[key=0];
+	"Victim: 10.0.0.81
+DATA DELIVERY
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+http | ID: 21" -> "Victim: 10.0.0.81
+DATA DELIVERY
+http"	[key=0];
+	"DATA DELIVERY
+http | ID: 21" -> "Victim: 10.0.99.102
+DATA DELIVERY
+http"	[key=0];
+	"DATA DELIVERY
+http | ID: 21" -> "Victim: 10.0.99.225
+DATA DELIVERY
+http"	[key=0];
+	"PUBLIC APP EXPLOIT
+http | ID: 678"	[fontcolor=chartreuse,
+		shape=box];
+	"PRIVILEGE ESCALATION
+http | ID: 1160" -> "PUBLIC APP EXPLOIT
+http | ID: 678"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 275" -> "ARBITRARY CODE EXECUTION
+http | ID: 32"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 275" -> "ARBITRARY CODE EXECUTION
+http | ID: 32"	[key=1,
+		color=tomato,
+		fontcolor="\"tomato\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 275" -> "ARBITRARY CODE EXECUTION
+http | ID: 32"	[key=2,
+		color=turquoise,
+		fontcolor="\"turquoise\""];
+	"PRIVILEGE ESCALATION
+http | ID: 677" -> "DATA EXFILTRATION
+http | ID: 228"	[key=0,
+		color=tomato,
+		fontcolor="\"tomato\""];
+	"ARBITRARY CODE EXECUTION
+ftp | ID: -1" -> "ROOT PRIVILEGE ESCALATION
+ms-wbt-server | ID: -1"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+spt-automation" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+spt-automation" -> "VULNERABILTY DISCOVERY
+mysql"	[key=0,
+		color=purple];
+	"SERVICE DISCOVERY
+ipsma" -> "VULNERABILTY DISCOVERY
+postgresql"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SERVICE DISCOVERY
+ipsma" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		color=purple];
+	"ACCOUNT MANIPULATION
+snmp | ID: 1179" -> "ARBITRARY CODE EXECUTION
+ssdp | ID: 703"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ARBITRARY CODE EXECUTION
+ssdp | ID: 788" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: 299"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"INFO DISCOVERY
+ftp" -> "SERVICE DISCOVERY
+unknown"	[key=0,
+		color=turquoise,
+		fontcolor="\"turquoise\""];
+	"INFO DISCOVERY
+ftp" -> "SURFING
+http"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"INFO DISCOVERY
+ftp" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: 299"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"COMMAND AND CONTROL
+unknown | ID: 945"	[fontcolor=chartreuse,
+		shape=box,
+		style=dotted];
+	"BRUTE FORCE CREDENTIALS
+unknown | ID: 1362" -> "COMMAND AND CONTROL
+unknown | ID: 945"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+unknown" -> "ARBITRARY CODE EXECUTION
+ssdp | ID: 355"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+unknown" -> "ARBITRARY CODE EXECUTION
+unknown | ID: 47"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+unknown" -> "ARBITRARY CODE EXECUTION
+unknown | ID: 47"	[key=1,
+		color=brown,
+		fontcolor="\"brown\""];
+	"VULNERABILTY DISCOVERY
+unknown" -> "ARBITRARY CODE EXECUTION
+unknown | ID: 47"	[key=2,
+		color=tomato,
+		fontcolor="\"tomato\""];
+	"VULNERABILTY DISCOVERY
+unknown" -> "VULNERABILTY DISCOVERY
+unknown"	[key=0,
+		color=blue];
+	"VULNERABILTY DISCOVERY
+unknown" -> "INFO DISCOVERY
+remoteware-cl"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA DELIVERY
+distinct | ID: 410"	[fillcolor=salmon,
+		fontcolor=chartreuse,
+		shape=hexagon,
+		style=dotted];
+	"SURFING
+distinct" -> "DATA DELIVERY
+distinct | ID: 410"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 391"	[fontcolor=chartreuse,
+		shape=box,
+		style=dotted];
+	"COMMAND AND CONTROL
+unknown | ID: 945" -> "ACCOUNT MANIPULATION
+snmp | ID: 391"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ROOT PRIVILEGE ESCALATION
+ms-wbt-server | ID: 58"	[fontcolor=chartreuse,
+		shape=box];
+	"ACCOUNT MANIPULATION
+snmp | ID: 391" -> "ROOT PRIVILEGE ESCALATION
+ms-wbt-server | ID: 58"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ROOT PRIVILEGE ESCALATION
+ms-wbt-server | ID: 58" -> "SURFING
+http"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA DELIVERY
+http | ID: 705" -> "Victim: 10.0.0.35
+DATA DELIVERY
+http"	[key=0];
+	"DATA DELIVERY
+http | ID: 705" -> "Victim: 10.0.0.71
+DATA DELIVERY
+http"	[key=0];
+	"DATA EXFILTRATION
+http | ID: 247"	[fillcolor=salmon,
+		fontcolor=chartreuse,
+		shape=hexagon,
+		style=filled];
+	"DATA DELIVERY
+http | ID: 705" -> "DATA EXFILTRATION
+http | ID: 247"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"USER PRIVILEGE ESCALATION
+http | ID: 274" -> "ARBITRARY CODE EXECUTION
+http | ID: 32"	[key=0,
+		color=darkgreen,
+		fontcolor="\"darkgreen\""];
+	"DATA EXFILTRATION
+http | ID: 296" -> "NETWORK DoS
+ms-wbt-server | ID: 36"	[key=0,
+		color=brown,
+		fontcolor="\"brown\""];
+	"DATA EXFILTRATION
+http | ID: 296" -> "Victim: 10.0.0.101
+DATA EXFILTRATION
+http"	[key=0];
+	"DATA EXFILTRATION
+http | ID: 876" -> "Victim: 10.0.0.72
+DATA EXFILTRATION
+http"	[key=0];
+	"DATA DELIVERY
+http | ID: 352"	[fillcolor=salmon,
+		fontcolor=chartreuse,
+		shape=hexagon,
+		style=dotted];
+	"DATA EXFILTRATION
+http | ID: 876" -> "DATA DELIVERY
+http | ID: 352"	[key=0,
+		color=darkgreen,
+		fontcolor="\"darkgreen\""];
+	"DATA EXFILTRATION
+unknown | ID: 57" -> "HOST DISCOVERY
+ms-wbt-server"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA EXFILTRATION
+unknown | ID: 57" -> "SERVICE DISCOVERY
+unknown"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA EXFILTRATION
+unknown | ID: 57" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		color=blue];
+	"DATA EXFILTRATION
+unknown | ID: 57" -> "HOST DISCOVERY
+http"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"DATA EXFILTRATION
+unknown | ID: 57" -> "SERVICE DISCOVERY
+microsoft-ds"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"Victim: 10.0.0.101
+DATA EXFILTRATION
+unknown"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+unknown | ID: 57" -> "Victim: 10.0.0.101
+DATA EXFILTRATION
+unknown"	[key=0];
+	"Victim: 10.0.0.22
+DATA EXFILTRATION
+unknown"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+unknown | ID: 57" -> "Victim: 10.0.0.22
+DATA EXFILTRATION
+unknown"	[key=0];
+	"Victim: 10.0.0.221
+DATA EXFILTRATION
+unknown"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+unknown | ID: 57" -> "Victim: 10.0.0.221
+DATA EXFILTRATION
+unknown"	[key=0];
+	"Victim: 10.0.0.222
+DATA EXFILTRATION
+unknown"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+unknown | ID: 57" -> "Victim: 10.0.0.222
+DATA EXFILTRATION
+unknown"	[key=0];
+	"Victim: 10.0.0.224
+DATA EXFILTRATION
+unknown"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+unknown | ID: 57" -> "Victim: 10.0.0.224
+DATA EXFILTRATION
+unknown"	[key=0];
+	"Victim: 10.0.0.77
+DATA EXFILTRATION
+unknown"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+unknown | ID: 57" -> "Victim: 10.0.0.77
+DATA EXFILTRATION
+unknown"	[key=0];
+	"Victim: 10.0.99.245
+DATA EXFILTRATION
+unknown"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+unknown | ID: 57" -> "Victim: 10.0.99.245
+DATA EXFILTRATION
+unknown"	[key=0];
+	"DATA DELIVERY
+unknown | ID: 388" -> "DATA EXFILTRATION
+unknown | ID: 57"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA DELIVERY
+unknown | ID: 388" -> "DATA EXFILTRATION
+unknown | ID: 57"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"Victim: 10.0.0.22
+DATA DELIVERY
+unknown"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+unknown | ID: 388" -> "Victim: 10.0.0.22
+DATA DELIVERY
+unknown"	[key=0];
+	"Victim: 10.0.0.77
+DATA DELIVERY
+unknown"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+unknown | ID: 388" -> "Victim: 10.0.0.77
+DATA DELIVERY
+unknown"	[key=0];
+	"DATA DELIVERY
+unknown | ID: 388" -> "Victim: 10.0.99.245
+DATA DELIVERY
+unknown"	[key=0];
+	"DATA DELIVERY
+unknown | ID: 56" -> "INFO DISCOVERY
+xdmcp"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA DELIVERY
+unknown | ID: 56" -> "VULNERABILTY DISCOVERY
+mysql"	[key=0,
+		color=blue];
+	"DATA DELIVERY
+unknown | ID: 56" -> "Victim: 10.0.0.22
+DATA DELIVERY
+unknown"	[key=0];
+	"DATA DELIVERY
+unknown | ID: 56" -> "Victim: 10.0.99.245
+DATA DELIVERY
+unknown"	[key=0];
+	"DATA EXFILTRATION
+unknown | ID: 301" -> "NETWORK DoS
+ms-wbt-server | ID: 36"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"Victim: 10.0.0.223
+DATA EXFILTRATION
+unknown"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+unknown | ID: 301" -> "Victim: 10.0.0.223
+DATA EXFILTRATION
+unknown"	[key=0];
+	"PUBLIC APP EXPLOIT
+http | ID: 678" -> "DATA EXFILTRATION
+http | ID: 228"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"Victim: 10.0.0.151
+DATA DELIVERY
+wap-wsp"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+wap-wsp | ID: 406" -> "Victim: 10.0.0.151
+DATA DELIVERY
+wap-wsp"	[key=0];
+	"DATA EXFILTRATION
+wap-wsp | ID: 68"	[fillcolor=salmon,
+		fontcolor=chartreuse,
+		shape=hexagon,
+		style=filled];
+	"DATA DELIVERY
+wap-wsp | ID: 406" -> "DATA EXFILTRATION
+wap-wsp | ID: 68"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA EXFILTRATION
+wap-wsp | ID: 68" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		color=blue];
+	"Victim: 10.0.0.151
+DATA EXFILTRATION
+wap-wsp"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+wap-wsp | ID: 68" -> "Victim: 10.0.0.151
+DATA EXFILTRATION
+wap-wsp"	[key=0];
+	"DATA DELIVERY
+wap-wsp | ID: 69" -> "Victim: 10.0.0.151
+DATA DELIVERY
+wap-wsp"	[key=0];
+	"INFO DISCOVERY
+wap-wsp" -> "DATA EXFILTRATION
+wap-wsp | ID: 68"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"INFO DISCOVERY
+wap-wsp" -> "DATA EXFILTRATION
+wap-wsp | ID: 68"	[key=1,
+		color=purple,
+		fontcolor="\"purple\""];
+	"SURFING
+wap-wsp"	[fontcolor=chartreuse,
+		shape=oval];
+	"INFO DISCOVERY
+wap-wsp" -> "SURFING
+wap-wsp"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"ARBITRARY CODE EXECUTION
+wap-wsp | ID: 81"	[fontcolor=chartreuse,
+		shape=box];
+	"VULNERABILTY DISCOVERY
+wap-wsp" -> "ARBITRARY CODE EXECUTION
+wap-wsp | ID: 81"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"VULNERABILTY DISCOVERY
+wap-wsp" -> "ARBITRARY CODE EXECUTION
+wap-wsp | ID: 81"	[key=1,
+		color=purple,
+		fontcolor="\"purple\""];
+	"SURFING
+wap-wsp" -> "DATA EXFILTRATION
+wap-wsp | ID: 68"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"SURFING
+wap-wsp" -> "INFO DISCOVERY
+wap-wsp"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"SURFING
+wap-wsp" -> "INFO DISCOVERY
+wap-wsp"	[key=1,
+		color=purple,
+		fontcolor="\"purple\""];
+	"ARBITRARY CODE EXECUTION
+wap-wsp | ID: 81" -> "SURFING
+wap-wsp"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"ARBITRARY CODE EXECUTION
+wap-wsp | ID: 81" -> "SURFING
+wap-wsp"	[key=1,
+		color=purple,
+		fontcolor="\"purple\""];
+	"Victim: 10.0.0.153
+DATA DELIVERY
+remoteware-cl"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+remoteware-cl | ID: -1"	[fillcolor=salmon,
+		fontcolor=chartreuse,
+		shape=hexagon,
+		style=filled];
+	"DATA DELIVERY
+remoteware-cl | ID: -1" -> "Victim: 10.0.0.153
+DATA DELIVERY
+remoteware-cl"	[key=0];
+	"DATA EXFILTRATION
+remoteware-cl | ID: 67"	[fillcolor=salmon,
+		fontcolor=chartreuse,
+		shape=hexagon,
+		style=filled];
+	"DATA DELIVERY
+remoteware-cl | ID: -1" -> "DATA EXFILTRATION
+remoteware-cl | ID: 67"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA DELIVERY
+remoteware-cl | ID: -1" -> "DATA EXFILTRATION
+remoteware-cl | ID: 67"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA DELIVERY
+remoteware-cl | ID: -1" -> "DATA EXFILTRATION
+remoteware-cl | ID: 67"	[key=2,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA EXFILTRATION
+remoteware-cl | ID: 67" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		color=blue];
+	"DATA EXFILTRATION
+remoteware-cl | ID: 67" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		color=blue];
+	"DATA EXFILTRATION
+remoteware-cl | ID: 67" -> "SURFING
+http-alt"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"Victim: 10.0.0.153
+DATA EXFILTRATION
+remoteware-cl"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+remoteware-cl | ID: 67" -> "Victim: 10.0.0.153
+DATA EXFILTRATION
+remoteware-cl"	[key=0];
+	"INFO DISCOVERY
+remoteware-cl" -> "DATA EXFILTRATION
+remoteware-cl | ID: 67"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"INFO DISCOVERY
+remoteware-cl" -> "DATA EXFILTRATION
+remoteware-cl | ID: 67"	[key=1,
+		color=purple,
+		fontcolor="\"purple\""];
+	"BRUTE FORCE CREDENTIALS
+websm | ID: 66"	[fontcolor=chartreuse,
+		shape=box];
+	"INFO DISCOVERY
+remoteware-cl" -> "BRUTE FORCE CREDENTIALS
+websm | ID: 66"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"INFO DISCOVERY
+remoteware-cl" -> "BRUTE FORCE CREDENTIALS
+websm | ID: 66"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"INFO DISCOVERY
+remoteware-cl" -> "BRUTE FORCE CREDENTIALS
+websm | ID: 66"	[key=2,
+		color=blue,
+		fontcolor="\"blue\""];
+	"BRUTE FORCE CREDENTIALS
+websm | ID: 66" -> "SURFING
+remoteware-cl"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"BRUTE FORCE CREDENTIALS
+websm | ID: 66" -> "SURFING
+remoteware-cl"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"BRUTE FORCE CREDENTIALS
+websm | ID: 66" -> "SURFING
+remoteware-cl"	[key=2,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SURFING
+remoteware-cl" -> "DATA DELIVERY
+remoteware-cl | ID: -1"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SURFING
+remoteware-cl" -> "DATA DELIVERY
+remoteware-cl | ID: -1"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SURFING
+remoteware-cl" -> "DATA DELIVERY
+remoteware-cl | ID: -1"	[key=2,
+		color=blue,
+		fontcolor="\"blue\""];
+	"SURFING
+remoteware-cl" -> "INFO DISCOVERY
+remoteware-cl"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"SURFING
+remoteware-cl" -> "INFO DISCOVERY
+remoteware-cl"	[key=1,
+		color=purple,
+		fontcolor="\"purple\""];
+	"SURFING
+remoteware-cl" -> "INFO DISCOVERY
+http-alt"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"INFO DISCOVERY
+http-alt" -> "DATA EXFILTRATION
+http-alt | ID: 25"	[key=0,
+		color=maroon,
+		fontcolor="\"maroon\""];
+	"INFO DISCOVERY
+http-alt" -> "DATA EXFILTRATION
+http-alt | ID: 25"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"INFO DISCOVERY
+http-alt" -> "DATA EXFILTRATION
+http-alt | ID: 25"	[key=2,
+		color=brown,
+		fontcolor="\"brown\""];
+	"INFO DISCOVERY
+http-alt" -> "DATA EXFILTRATION
+http-alt | ID: 25"	[key=3,
+		color=brown,
+		fontcolor="\"brown\""];
+	"INFO DISCOVERY
+http-alt" -> "DATA EXFILTRATION
+http-alt | ID: 25"	[key=4,
+		color=tomato,
+		fontcolor="\"tomato\""];
+	"VULNERABILTY DISCOVERY
+esmagent" -> "SERVICE DISCOVERY
+ssh"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"VULNERABILTY DISCOVERY
+esmagent" -> "HOST DISCOVERY
+http-alt"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"VULNERABILTY DISCOVERY
+esmagent" -> "SURFING
+remoteware-cl"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"VULNERABILTY DISCOVERY
+http-alt" -> "ARBITRARY CODE EXECUTION
+http-alt | ID: 23"	[key=0,
+		color=maroon,
+		fontcolor="\"maroon\""];
+	"VULNERABILTY DISCOVERY
+http-alt" -> "ARBITRARY CODE EXECUTION
+http-alt | ID: 23"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"VULNERABILTY DISCOVERY
+http-alt" -> "ARBITRARY CODE EXECUTION
+http-alt | ID: 23"	[key=2,
+		color=brown,
+		fontcolor="\"brown\""];
+	"VULNERABILTY DISCOVERY
+http-alt" -> "ARBITRARY CODE EXECUTION
+http-alt | ID: 23"	[key=3,
+		color=tomato,
+		fontcolor="\"tomato\""];
+	"VULNERABILTY DISCOVERY
+http-alt" -> "ARBITRARY CODE EXECUTION
+esmagent | ID: 80"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"ARBITRARY CODE EXECUTION
+esmagent | ID: 80" -> "SURFING
+http-alt"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"ARBITRARY CODE EXECUTION
+esmagent | ID: 80" -> "SURFING
+remoteware-cl"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"VULNERABILTY DISCOVERY
+radan-http" -> "INFO DISCOVERY
+http-alt"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"DATA DELIVERY
+http-alt | ID: 242" -> "DATA EXFILTRATION
+http-alt | ID: 25"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA DELIVERY
+http-alt | ID: 242" -> "DATA EXFILTRATION
+http-alt | ID: 25"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"Victim: 10.0.99.44
+DATA DELIVERY
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+http-alt | ID: 242" -> "Victim: 10.0.99.44
+DATA DELIVERY
+http"	[key=0];
+	"Victim: 10.0.99.44
+DATA DELIVERY
+http-alt"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+http-alt | ID: 242" -> "Victim: 10.0.99.44
+DATA DELIVERY
+http-alt"	[key=0];
+	"Victim: 10.0.0.162
+DATA DELIVERY
+distinct"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+distinct | ID: 70" -> "VULNERABILTY DISCOVERY
+ahsp"	[key=0,
+		color=blue];
+	"DATA DELIVERY
+distinct | ID: 70" -> "Victim: 10.0.0.162
+DATA DELIVERY
+distinct"	[key=0];
+	"DATA DELIVERY
+distinct | ID: 410" -> "Victim: 10.0.0.162
+DATA DELIVERY
+distinct"	[key=0];
+	"DATA EXFILTRATION
+distinct | ID: 71"	[fillcolor=salmon,
+		fontcolor=chartreuse,
+		shape=hexagon,
+		style=filled];
+	"DATA DELIVERY
+distinct | ID: 410" -> "DATA EXFILTRATION
+distinct | ID: 71"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA EXFILTRATION
+distinct | ID: 71" -> "Victim: 10.0.0.162
+DATA EXFILTRATION
+distinct"	[key=0];
+	"Victim: 10.0.0.2
+DATA MANIPULATION
+domain"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA MANIPULATION
+domain | ID: 75"	[fillcolor=salmon,
+		fontcolor=chartreuse,
+		shape=hexagon,
+		style=filled];
+	"DATA MANIPULATION
+domain | ID: 75" -> "Victim: 10.0.0.2
+DATA MANIPULATION
+domain"	[key=0];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 415" -> "DATA MANIPULATION
+domain | ID: 75"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"USER PRIVILEGE ESCALATION
+http | ID: 49" -> "SURFING
+http"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"USER PRIVILEGE ESCALATION
+http | ID: 49" -> "SURFING
+http"	[key=1,
+		color=blue,
+		fontcolor="\"blue\""];
+	"USER PRIVILEGE ESCALATION
+http | ID: 49" -> "VULNERABILTY DISCOVERY
+http"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA EXFILTRATION
+unknown | ID: 385"	[fillcolor=salmon,
+		fontcolor=chartreuse,
+		shape=hexagon,
+		style=dotted];
+	"BRUTE FORCE CREDENTIALS
+unknown | ID: 937" -> "DATA EXFILTRATION
+unknown | ID: 385"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA EXFILTRATION
+unknown | ID: 385" -> "DATA DELIVERY
+unknown | ID: 56"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA EXFILTRATION
+unknown | ID: 385" -> "Victim: 10.0.0.22
+DATA EXFILTRATION
+unknown"	[key=0];
+	"BRUTE FORCE CREDENTIALS
+unknown | ID: 386" -> "DATA EXFILTRATION
+unknown | ID: 57"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 40" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 40" -> "SERVICE DISCOVERY
+microsoft-ds"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"BRUTE FORCE CREDENTIALS
+pop3s | ID: -1"	[fillcolor=yellow,
+		fontcolor=chartreuse,
+		shape=box,
+		style=filled];
+	"BRUTE FORCE CREDENTIALS
+pop3s | ID: -1" -> "COMMAND AND CONTROL
+unknown | ID: 308"	[key=0,
+		color=darkgreen];
+	"NETWORK DoS
+ms-wbt-server | ID: 783"	[fillcolor=salmon,
+		fontcolor=chartreuse,
+		shape=hexagon,
+		style=dotted];
+	"NETWORK DoS
+ms-wbt-server | ID: 783" -> "Victim: 10.0.0.221
+NETWORK DoS
+ms-wbt-server"	[key=0];
+	"BRUTE FORCE CREDENTIALS
+unknown | ID: 1250"	[fillcolor=yellow,
+		fontcolor=chartreuse,
+		shape=box,
+		style="dotted,filled"];
+	"BRUTE FORCE CREDENTIALS
+unknown | ID: 1250" -> "NETWORK DoS
+ms-wbt-server | ID: 783"	[key=0,
+		color=brown];
+	"DATA EXFILTRATION
+microsoft-ds | ID: 797"	[fillcolor=yellow,
+		fontcolor=chartreuse,
+		shape=hexagon,
+		style="dotted,filled"];
+	"DATA EXFILTRATION
+microsoft-ds | ID: 797" -> "NETWORK DoS
+ms-wbt-server | ID: 307"	[key=0,
+		color=turquoise];
+	"Victim: 10.0.0.223
+DATA DELIVERY
+unknown"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+unknown | ID: 396"	[fillcolor=salmon,
+		fontcolor=chartreuse,
+		shape=hexagon,
+		style=filled];
+	"DATA DELIVERY
+unknown | ID: 396" -> "DATA EXFILTRATION
+wsman | ID: 63"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA DELIVERY
+unknown | ID: 396" -> "Victim: 10.0.0.223
+DATA DELIVERY
+unknown"	[key=0];
+	"Victim: 10.0.0.224
+DATA DELIVERY
+unknown"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+unknown | ID: 396" -> "Victim: 10.0.0.224
+DATA DELIVERY
+unknown"	[key=0];
+	"ACCOUNT MANIPULATION
+snmp | ID: 952" -> "DATA DELIVERY
+unknown | ID: 396"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA EXFILTRATION
+http | ID: 247" -> "Victim: 10.0.0.35
+DATA EXFILTRATION
+http"	[key=0];
+	"DATA EXFILTRATION
+http | ID: 247" -> "Victim: 10.0.0.71
+DATA EXFILTRATION
+http"	[key=0];
+	"USER PRIVILEGE ESCALATION
+http | ID: 675"	[fontcolor=chartreuse,
+		shape=box];
+	"BRUTE FORCE CREDENTIALS
+unknown | ID: 1157" -> "USER PRIVILEGE ESCALATION
+http | ID: 675"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"USER PRIVILEGE ESCALATION
+http | ID: 675" -> "DATA EXFILTRATION
+http | ID: 228"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"BRUTE FORCE CREDENTIALS
+unknown | ID: 672" -> "DATA EXFILTRATION
+http | ID: 228"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA DELIVERY
+http | ID: 352" -> "Victim: 10.0.0.72
+DATA DELIVERY
+http"	[key=0];
+	"NETWORK DoS
+http | ID: 50"	[fillcolor=salmon,
+		fontcolor=chartreuse,
+		shape=hexagon,
+		style=filled];
+	"DATA DELIVERY
+http | ID: 352" -> "NETWORK DoS
+http | ID: 50"	[key=0,
+		color=darkgreen,
+		fontcolor="\"darkgreen\""];
+	"Victim: 10.0.0.72
+NETWORK DoS
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+http | ID: 50" -> "Victim: 10.0.0.72
+NETWORK DoS
+http"	[key=0];
+	"VULNERABILTY DISCOVERY
+submission"	[fillcolor=yellow,
+		fontcolor=chartreuse,
+		shape=oval,
+		style=filled];
+	"VULNERABILTY DISCOVERY
+submission" -> "SERVICE DISCOVERY
+ssh"	[key=0,
+		color=tomato];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 1189"	[fontcolor=chartreuse,
+		shape=box,
+		style=dotted];
+	"ARBITRARY CODE EXECUTION
+pop3 | ID: 1525" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: 1189"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 712"	[fontcolor=chartreuse,
+		shape=box,
+		style=dotted];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 1189" -> "ACCOUNT MANIPULATION
+snmp | ID: 712"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"COMMAND AND CONTROL
+smtp | ID: 250"	[fontcolor=chartreuse,
+		shape=box];
+	"ACCOUNT MANIPULATION
+snmp | ID: 712" -> "COMMAND AND CONTROL
+smtp | ID: 250"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"COMMAND AND CONTROL
+smtp | ID: 250" -> "DATA EXFILTRATION
+http | ID: 26"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"Victim: 10.0.0.72
+DATA EXFILTRATION
+smtp"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+smtp | ID: 74" -> "Victim: 10.0.0.72
+DATA EXFILTRATION
+smtp"	[key=0];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 1376"	[fontcolor=chartreuse,
+		shape=box,
+		style=dotted];
+	"ARBITRARY CODE EXECUTION
+ssdp | ID: 1632" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: 1376"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 975"	[fontcolor=chartreuse,
+		shape=box,
+		style=dotted];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 1376" -> "ACCOUNT MANIPULATION
+snmp | ID: 975"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"COMMAND AND CONTROL
+smtp | ID: 414"	[fontcolor=chartreuse,
+		shape=box,
+		style=dotted];
+	"ACCOUNT MANIPULATION
+snmp | ID: 975" -> "COMMAND AND CONTROL
+smtp | ID: 414"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"COMMAND AND CONTROL
+smtp | ID: 414" -> "DATA EXFILTRATION
+smtp | ID: 74"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 676" -> "DATA EXFILTRATION
+http | ID: 228"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"Victim: 10.0.254.20
+DATA EXFILTRATION
+unknown"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+unknown | ID: 389"	[fillcolor=salmon,
+		fontcolor=chartreuse,
+		shape=hexagon,
+		style=filled];
+	"DATA EXFILTRATION
+unknown | ID: 389" -> "Victim: 10.0.254.20
+DATA EXFILTRATION
+unknown"	[key=0];
+	"USER PRIVILEGE ESCALATION
+http | ID: 943"	[fillcolor=yellow,
+		fontcolor=chartreuse,
+		shape=box,
+		style="dotted,filled"];
+	"USER PRIVILEGE ESCALATION
+http | ID: 943" -> "DATA EXFILTRATION
+unknown | ID: 389"	[key=0,
+		color=magenta];
+	"ARBITRARY CODE EXECUTION
+microsoft-ds | ID: -1"	[fillcolor=yellow,
+		fontcolor=chartreuse,
+		shape=box,
+		style=filled];
+	"ARBITRARY CODE EXECUTION
+microsoft-ds | ID: -1" -> "ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 309"	[key=0,
+		color=tomato];
+	"ARBITRARY CODE EXECUTION
+microsoft-ds | ID: -1" -> "ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 309"	[key=1,
+		color=tomato];
+	"ARBITRARY CODE EXECUTION
+microsoft-ds | ID: -1" -> "ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 309"	[key=2,
+		color=tomato];
+	"ARBITRARY CODE EXECUTION
+microsoft-ds | ID: -1" -> "ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 309"	[key=3,
+		color=tomato];
+	"COMMAND AND CONTROL
+appiq-mgmt | ID: -1"	[fillcolor=yellow,
+		fontcolor=chartreuse,
+		shape=box,
+		style=filled];
+	"COMMAND AND CONTROL
+appiq-mgmt | ID: -1" -> "ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 309"	[key=0,
+		color=tomato];
+	"DATA EXFILTRATION
+vrml-multi-use | ID: 76" -> "VULNERABILTY DISCOVERY
+postgresql"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA EXFILTRATION
+vrml-multi-use | ID: 76" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA EXFILTRATION
+vrml-multi-use | ID: 76" -> "INFO DISCOVERY
+xdmcp"	[key=0,
+		color=blue];
+	"DATA EXFILTRATION
+vrml-multi-use | ID: 76" -> "SERVICE DISCOVERY
+epmap"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"Victim: 10.0.99.143
+DATA EXFILTRATION
+vrml-multi-use"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+vrml-multi-use | ID: 76" -> "Victim: 10.0.99.143
+DATA EXFILTRATION
+vrml-multi-use"	[key=0];
+	"Victim: 10.0.99.16
+DATA EXFILTRATION
+nv-video"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+nv-video | ID: 426"	[fillcolor=salmon,
+		fontcolor=chartreuse,
+		shape=hexagon,
+		style=dotted];
+	"DATA EXFILTRATION
+nv-video | ID: 426" -> "Victim: 10.0.99.16
+DATA EXFILTRATION
+nv-video"	[key=0];
+	"NETWORK DoS
+nv-video | ID: 84"	[fillcolor=salmon,
+		fontcolor=chartreuse,
+		shape=hexagon,
+		style=filled];
+	"DATA EXFILTRATION
+nv-video | ID: 426" -> "NETWORK DoS
+nv-video | ID: 84"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"Victim: 10.0.99.16
+NETWORK DoS
+nv-video"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+nv-video | ID: 84" -> "Victim: 10.0.99.16
+NETWORK DoS
+nv-video"	[key=0];
+	"COMMAND AND CONTROL
+nv-video | ID: 1388"	[fillcolor=yellow,
+		fontcolor=chartreuse,
+		shape=box,
+		style="dotted,filled"];
+	"DEFENSE EVASION
+nv-video | ID: 989"	[fontcolor=chartreuse,
+		shape=box,
+		style=dotted];
+	"COMMAND AND CONTROL
+nv-video | ID: 1388" -> "DEFENSE EVASION
+nv-video | ID: 989"	[key=0,
+		color=purple];
+	"DEFENSE EVASION
+nv-video | ID: 989" -> "DATA EXFILTRATION
+nv-video | ID: 426"	[key=0,
+		color=purple,
+		fontcolor="\"purple\""];
+	"Victim: 10.0.99.21
+DATA DELIVERY
+unknown"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+unknown | ID: 136"	[fillcolor=salmon,
+		fontcolor=chartreuse,
+		shape=hexagon,
+		style=filled];
+	"DATA DELIVERY
+unknown | ID: 136" -> "Victim: 10.0.99.21
+DATA DELIVERY
+unknown"	[key=0];
+	"COMMAND AND CONTROL
+unknown | ID: 541"	[fillcolor=yellow,
+		fontcolor=chartreuse,
+		shape=box,
+		style="dotted,filled"];
+	"COMMAND AND CONTROL
+unknown | ID: 541" -> "DATA DELIVERY
+unknown | ID: 136"	[key=0,
+		color=turquoise];
+	"DATA EXFILTRATION
+unknown | ID: 383" -> "NETWORK DoS
+ssdp | ID: 55"	[key=0,
+		color=blue,
+		fontcolor="\"blue\""];
+	"DATA EXFILTRATION
+unknown | ID: 383" -> "Victim: 10.0.99.245
+DATA EXFILTRATION
+unknown"	[key=0];
+}

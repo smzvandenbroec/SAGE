@@ -1,0 +1,360 @@
+digraph DATAEXFILTRATIONhttp {
+rankdir="BT"; 
+ graph [ nodesep="0.1", ranksep="0.02"] 
+ node [ fontname=Arial, fontsize=24,penwidth=3]; 
+ edge [ fontname=Arial, fontsize=20,penwidth=5 ];
+"Victim: 10.0.99.143
+DATA EXFILTRATION
+http" [shape=doubleoctagon, style=filled, fillcolor=salmon];
+{ rank = max; "Victim: 10.0.99.143
+DATA EXFILTRATION
+http"}
+"DATA EXFILTRATION
+http | ID: 26" -> "Victim: 10.0.99.143
+DATA EXFILTRATION
+http"
+"DATA EXFILTRATION
+http | ID: 26" [style=filled, fillcolor= salmon]
+{ rank=same; "DATA EXFILTRATION
+http | ID: 26"}
+"SURFING
+http" [style=filled, fillcolor= yellow]
+"SURFING
+http" -> "INFO DISCOVERY
+http" [ color=maroon] [label=<<font color="maroon"> start_next: 04/11/17, 17:45:04<br/>gap: -7sec<br/>end_prev: 04/11/17, 17:45:11</font><br/><font color="maroon"><b>Attacker: 10.0.254.30</b></font>>]
+"INFO DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 26" [ label="start_next: 04/11/17, 17:45:05
+gap: 1sec
+end_prev: 04/11/17, 17:45:04"][ fontcolor="maroon" color=maroon]
+"HOST DISCOVERY
+http" [style=filled, fillcolor= yellow]
+"HOST DISCOVERY
+http" -> "INFO DISCOVERY
+http" [ color=purple] [label=<<font color="purple"> start_next: 04/11/17, 13:31:59<br/>gap: 5sec<br/>end_prev: 04/11/17, 13:31:54</font><br/><font color="purple"><b>Attacker: 10.0.254.30</b></font>>]
+"INFO DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 26" [ label="start_next: 04/11/17, 13:32:00
+gap: 1sec
+end_prev: 04/11/17, 13:31:59"][ fontcolor="purple" color=purple]
+"SURFING
+http" [style=filled, fillcolor= yellow]
+"SURFING
+http" -> "VULNERABILTY DISCOVERY
+ms-sql-s" [ color=purple] [label=<<font color="purple"> start_next: 04/11/17, 13:32:02<br/>gap: -3sec<br/>end_prev: 04/11/17, 13:32:05</font><br/><font color="purple"><b>Attacker: 10.0.254.30</b></font>>]
+"VULNERABILTY DISCOVERY
+ms-sql-s" -> "SERVICE DISCOVERY
+icmpd" [ label="start_next: 04/11/17, 13:32:34
+gap: -24sec
+end_prev: 04/11/17, 13:32:58"][ fontcolor="purple" color=purple]
+"SERVICE DISCOVERY
+icmpd" -> "HOST DISCOVERY
+http" [ label="start_next: 04/11/17, 15:49:51
+gap: 8237sec
+end_prev: 04/11/17, 13:32:34"][ fontcolor="purple" color=purple]
+"HOST DISCOVERY
+http" -> "INFO DISCOVERY
+http" [ label="start_next: 04/11/17, 15:49:55
+gap: 4sec
+end_prev: 04/11/17, 15:49:51"][ fontcolor="purple" color=purple]
+"INFO DISCOVERY
+http" -> "SURFING
+http" [ label="start_next: 04/11/17, 15:49:56
+gap: 1sec
+end_prev: 04/11/17, 15:49:55"][ fontcolor="purple" color=purple]
+"SURFING
+http" -> "DATA EXFILTRATION
+http | ID: 26" [ label="start_next: 04/11/17, 15:49:56
+gap: -5sec
+end_prev: 04/11/17, 15:50:01"][ fontcolor="purple" color=purple]
+"SERVICE DISCOVERY
+rfb" [style=filled, fillcolor= yellow]
+"SERVICE DISCOVERY
+rfb" -> "HOST DISCOVERY
+http" [ color=purple] [label=<<font color="purple"> start_next: 04/11/17, 17:38:24<br/>gap: 6497sec<br/>end_prev: 04/11/17, 15:50:06</font><br/><font color="purple"><b>Attacker: 10.0.254.30</b></font>>]
+"HOST DISCOVERY
+http" -> "VULNERABILTY DISCOVERY
+mysql" [ label="start_next: 04/11/17, 17:58:02
+gap: 1178sec
+end_prev: 04/11/17, 17:38:24"][ fontcolor="purple" color=purple]
+"VULNERABILTY DISCOVERY
+mysql" -> "VULNERABILTY DISCOVERY
+http" [ label="start_next: 04/11/17, 18:09:40
+gap: 698sec
+end_prev: 04/11/17, 17:58:02"][ fontcolor="purple" color=purple]
+"VULNERABILTY DISCOVERY
+http" -> "ARBITRARY CODE EXECUTION
+http | ID: 32" [ label="start_next: 04/11/17, 18:09:41
+gap: 1sec
+end_prev: 04/11/17, 18:09:40"][ fontcolor="purple" color=purple]
+"ARBITRARY CODE EXECUTION
+http | ID: 32" -> "SURFING
+http" [ label="start_next: 04/11/17, 18:09:42
+gap: 1sec
+end_prev: 04/11/17, 18:09:41"][ fontcolor="purple" color=purple]
+"SURFING
+http" -> "INFO DISCOVERY
+http" [ label="start_next: 04/11/17, 18:09:44
+gap: -6sec
+end_prev: 04/11/17, 18:09:50"][ fontcolor="purple" color=purple]
+"INFO DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 26" [ label="start_next: 04/11/17, 18:09:45
+gap: 1sec
+end_prev: 04/11/17, 18:09:44"][ fontcolor="purple" color=purple]
+"SERVICE DISCOVERY
+spt-automation" [style=filled, fillcolor= yellow]
+"SERVICE DISCOVERY
+spt-automation" -> "VULNERABILTY DISCOVERY
+mysql" [ color=purple] [label=<<font color="purple"> start_next: 04/11/17, 19:49:29<br/>gap: 5933sec<br/>end_prev: 04/11/17, 18:10:36</font><br/><font color="purple"><b>Attacker: 10.0.254.30</b></font>>]
+"VULNERABILTY DISCOVERY
+mysql" -> "SERVICE DISCOVERY
+unknown" [ label="start_next: 04/11/17, 19:51:40
+gap: 131sec
+end_prev: 04/11/17, 19:49:29"][ fontcolor="purple" color=purple]
+"SERVICE DISCOVERY
+unknown" -> "SERVICE DISCOVERY
+unknown" [ label="start_next: 04/11/17, 20:00:54
+gap: 554sec
+end_prev: 04/11/17, 19:51:40"][ fontcolor="purple" color=purple]
+"SERVICE DISCOVERY
+unknown" -> "VULNERABILTY DISCOVERY
+ncube-lm" [ label="start_next: 04/11/17, 20:04:04
+gap: -416sec
+end_prev: 04/11/17, 20:10:59"][ fontcolor="purple" color=purple]
+"VULNERABILTY DISCOVERY
+ncube-lm" -> "HOST DISCOVERY
+http" [ label="start_next: 04/11/17, 20:40:36
+gap: 1435sec
+end_prev: 04/11/17, 20:16:42"][ fontcolor="purple" color=purple]
+"HOST DISCOVERY
+http" -> "ARBITRARY CODE EXECUTION
+http | ID: 32" [ label="start_next: 04/11/17, 20:40:38
+gap: 2sec
+end_prev: 04/11/17, 20:40:36"][ fontcolor="purple" color=purple]
+"ARBITRARY CODE EXECUTION
+http | ID: 32" -> "SURFING
+http" [ label="start_next: 04/11/17, 20:40:39
+gap: 1sec
+end_prev: 04/11/17, 20:40:38"][ fontcolor="purple" color=purple]
+"SURFING
+http" -> "INFO DISCOVERY
+http" [ label="start_next: 04/11/17, 20:40:41
+gap: -6sec
+end_prev: 04/11/17, 20:40:47"][ fontcolor="purple" color=purple]
+"INFO DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 26" [ label="start_next: 04/11/17, 20:40:42
+gap: 1sec
+end_prev: 04/11/17, 20:40:41"][ fontcolor="purple" color=purple]
+"HOST DISCOVERY
+http" [style=filled, fillcolor= yellow]
+"HOST DISCOVERY
+http" -> "VULNERABILTY DISCOVERY
+mysql" [ color=purple] [label=<<font color="purple"> start_next: 04/11/17, 13:54:14<br/>gap: 0sec<br/>end_prev: 04/11/17, 13:54:13</font><br/><font color="purple"><b>Attacker: 10.0.254.35</b></font>>]
+"VULNERABILTY DISCOVERY
+mysql" -> "ARBITRARY CODE EXECUTION
+http | ID: 32" [ label="start_next: 04/11/17, 13:54:14
+gap: -1sec
+end_prev: 04/11/17, 13:54:15"][ fontcolor="purple" color=purple]
+"ARBITRARY CODE EXECUTION
+http | ID: 32" -> "SERVICE DISCOVERY
+unknown" [ label="start_next: 04/11/17, 13:55:54
+gap: 100sec
+end_prev: 04/11/17, 13:54:14"][ fontcolor="purple" color=purple]
+"SERVICE DISCOVERY
+unknown" -> "HOST DISCOVERY
+http" [ label="start_next: 04/11/17, 14:14:20
+gap: 949sec
+end_prev: 04/11/17, 13:58:31"][ fontcolor="purple" color=purple]
+"HOST DISCOVERY
+http" -> "VULNERABILTY DISCOVERY
+mysql" [ label="start_next: 04/11/17, 14:14:20
+gap: 0sec
+end_prev: 04/11/17, 14:14:20"][ fontcolor="purple" color=purple]
+"VULNERABILTY DISCOVERY
+mysql" -> "ARBITRARY CODE EXECUTION
+http | ID: 32" [ label="start_next: 04/11/17, 14:14:21
+gap: -558sec
+end_prev: 04/11/17, 14:23:39"][ fontcolor="purple" color=purple]
+"ARBITRARY CODE EXECUTION
+http | ID: 32" -> "SURFING
+http" [ label="start_next: 04/11/17, 14:14:22
+gap: 1sec
+end_prev: 04/11/17, 14:14:21"][ fontcolor="purple" color=purple]
+"SURFING
+http" -> "INFO DISCOVERY
+http" [ label="start_next: 04/11/17, 14:14:24
+gap: -22sec
+end_prev: 04/11/17, 14:14:45"][ fontcolor="purple" color=purple]
+"INFO DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 26" [ label="start_next: 04/11/17, 14:14:25
+gap: 1sec
+end_prev: 04/11/17, 14:14:24"][ fontcolor="purple" color=purple]
+"VULNERABILTY DISCOVERY
+ncube-lm" [style=filled, fillcolor= yellow]
+"VULNERABILTY DISCOVERY
+ncube-lm" -> "SERVICE DISCOVERY
+unknown" [ color=brown] [label=<<font color="brown"> start_next: 04/11/17, 13:15:49<br/>gap: 2sec<br/>end_prev: 04/11/17, 13:15:46</font><br/><font color="brown"><b>Attacker: 10.0.254.31</b></font>>]
+"SERVICE DISCOVERY
+unknown" -> "HOST DISCOVERY
+http" [ label="start_next: 04/11/17, 13:21:51
+gap: 362sec
+end_prev: 04/11/17, 13:15:49"][ fontcolor="brown" color=brown]
+"HOST DISCOVERY
+http" -> "SERVICE DISCOVERY
+unknown" [ label="start_next: 04/11/17, 13:26:05
+gap: 254sec
+end_prev: 04/11/17, 13:21:51"][ fontcolor="brown" color=brown]
+"SERVICE DISCOVERY
+unknown" -> "VULNERABILTY DISCOVERY
+postgresql" [ label="start_next: 04/11/17, 13:26:12
+gap: 7sec
+end_prev: 04/11/17, 13:26:05"][ fontcolor="brown" color=brown]
+"VULNERABILTY DISCOVERY
+postgresql" -> "HOST DISCOVERY
+http" [ label="start_next: 04/11/17, 13:32:34
+gap: 372sec
+end_prev: 04/11/17, 13:26:22"][ fontcolor="brown" color=brown]
+"HOST DISCOVERY
+http" -> "VULNERABILTY DISCOVERY
+mysql" [ label="start_next: 04/11/17, 13:59:54
+gap: 1640sec
+end_prev: 04/11/17, 13:32:34"][ fontcolor="brown" color=brown]
+"VULNERABILTY DISCOVERY
+mysql" -> "SERVICE DISCOVERY
+ssh" [ label="start_next: 04/11/17, 13:59:56
+gap: 1sec
+end_prev: 04/11/17, 13:59:54"][ fontcolor="brown" color=brown]
+"SERVICE DISCOVERY
+ssh" -> "HOST DISCOVERY
+http" [ label="start_next: 04/11/17, 14:07:13
+gap: 372sec
+end_prev: 04/11/17, 14:01:01"][ fontcolor="brown" color=brown]
+"HOST DISCOVERY
+http" -> "VULNERABILTY DISCOVERY
+http" [ label="start_next: 04/11/17, 14:13:39
+gap: 385sec
+end_prev: 04/11/17, 14:07:13"][ fontcolor="brown" color=brown]
+"VULNERABILTY DISCOVERY
+http" -> "ARBITRARY CODE EXECUTION
+http | ID: 32" [ label="start_next: 04/11/17, 14:13:39
+gap: 1sec
+end_prev: 04/11/17, 14:13:39"][ fontcolor="brown" color=brown]
+"ARBITRARY CODE EXECUTION
+http | ID: 32" -> "SURFING
+http" [ label="start_next: 04/11/17, 14:13:40
+gap: 1sec
+end_prev: 04/11/17, 14:13:39"][ fontcolor="brown" color=brown]
+"SURFING
+http" -> "INFO DISCOVERY
+http" [ label="start_next: 04/11/17, 14:13:42
+gap: -6sec
+end_prev: 04/11/17, 14:13:48"][ fontcolor="brown" color=brown]
+"INFO DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 26" [ label="start_next: 04/11/17, 14:13:43
+gap: 1sec
+end_prev: 04/11/17, 14:13:42"][ fontcolor="brown" color=brown]
+"SERVICE DISCOVERY
+unknown" [style=filled, fillcolor= yellow]
+"SERVICE DISCOVERY
+unknown" -> "VULNERABILTY DISCOVERY
+ms-sql-s" [ color=tomato] [label=<<font color="tomato"> start_next: 04/11/17, 14:03:56<br/>gap: 2sec<br/>end_prev: 04/11/17, 14:03:54</font><br/><font color="tomato"><b>Attacker: 10.0.254.35</b></font>>]
+"VULNERABILTY DISCOVERY
+ms-sql-s" -> "DATA EXFILTRATION
+http | ID: 26" [ label="start_next: 04/11/17, 14:16:12
+gap: 736sec
+end_prev: 04/11/17, 14:03:56"][ fontcolor="tomato" color=tomato]
+"HOST DISCOVERY
+http" [style=filled, fillcolor= yellow]
+"HOST DISCOVERY
+http" -> "VULNERABILTY DISCOVERY
+http" [ color=tomato] [label=<<font color="tomato"> start_next: 04/11/17, 16:07:23<br/>gap: 1sec<br/>end_prev: 04/11/17, 16:07:22</font><br/><font color="tomato"><b>Attacker: 10.0.254.33</b></font>>]
+"VULNERABILTY DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 26" [ label="start_next: 04/11/17, 16:07:27
+gap: 4sec
+end_prev: 04/11/17, 16:07:23"][ fontcolor="tomato" color=tomato]
+"SURFING
+http" [shape=oval]
+"SURFING
+http" [tooltip="ET WEB_SERVER WEB-PHP phpinfo access"]
+"INFO DISCOVERY
+http" [shape=oval]
+"INFO DISCOVERY
+http" [tooltip="GPL WEB_SERVER globals.pl access"]
+"DATA EXFILTRATION
+http | ID: 26" [shape=hexagon]
+"DATA EXFILTRATION
+http | ID: 26" [tooltip="ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability
+ET WEB_SERVER Tilde in URI - potential .inc source disclosure vulnerability
+ET WEB_SERVER Tilde in URI - potential .php~ source disclosure vulnerability
+ET INFO WinHttp AutoProxy Request wpad.dat Possible BadTunnel"]
+"HOST DISCOVERY
+http" [shape=oval]
+"HOST DISCOVERY
+http" [tooltip="ET SCAN Possible Nmap User-Agent Observed
+ET SCAN Nmap Scripting Engine User-Agent Detected (Nmap Scripting Engine)"]
+"VULNERABILTY DISCOVERY
+ms-sql-s" [shape=oval]
+"VULNERABILTY DISCOVERY
+ms-sql-s" [tooltip="ET POLICY Suspicious inbound to mySQL port 3306
+ET POLICY Suspicious inbound to mSQL port 4333
+ET POLICY Suspicious inbound to MSSQL port 1433
+ET POLICY Suspicious inbound to Oracle SQL port 1521
+ET POLICY Suspicious inbound to PostgreSQL port 5432"]
+"SERVICE DISCOVERY
+icmpd" [shape=oval]
+"SERVICE DISCOVERY
+icmpd" [tooltip="ET SCAN Potential VNC Scan 5800-5820"]
+"SERVICE DISCOVERY
+rfb" [shape=oval]
+"SERVICE DISCOVERY
+rfb" [tooltip="ET SCAN Potential VNC Scan 5900-5920"]
+"VULNERABILTY DISCOVERY
+mysql" [shape=oval]
+"VULNERABILTY DISCOVERY
+mysql" [tooltip="ET POLICY Suspicious inbound to mySQL port 3306
+ET POLICY Suspicious inbound to mSQL port 4333
+ET POLICY Suspicious inbound to MSSQL port 1433
+ET POLICY Suspicious inbound to Oracle SQL port 1521
+ET POLICY Suspicious inbound to PostgreSQL port 5432
+ET SCAN Nikto Web App Scan in Progress"]
+"VULNERABILTY DISCOVERY
+http" [shape=oval]
+"VULNERABILTY DISCOVERY
+http" [tooltip="ET SCAN Nikto Web App Scan in Progress"]
+"ARBITRARY CODE EXECUTION
+http | ID: 32" [shape=box]
+"ARBITRARY CODE EXECUTION
+http | ID: 32" [tooltip="ET CURRENT_EVENTS QNAP Shellshock CVE-2014-6271"]
+"SERVICE DISCOVERY
+spt-automation" [shape=oval]
+"SERVICE DISCOVERY
+spt-automation" [tooltip="ET SCAN Potential VNC Scan 5800-5820"]
+"SERVICE DISCOVERY
+unknown" [shape=oval]
+"SERVICE DISCOVERY
+unknown" [tooltip="ET SCAN Potential VNC Scan 5800-5820
+ET SCAN NMAP OS Detection Probe
+ET SCAN Potential VNC Scan 5900-5920"]
+"VULNERABILTY DISCOVERY
+ncube-lm" [shape=oval]
+"VULNERABILTY DISCOVERY
+ncube-lm" [tooltip="ET POLICY Suspicious inbound to MSSQL port 1433
+ET POLICY Suspicious inbound to mSQL port 4333
+ET POLICY Suspicious inbound to Oracle SQL port 1521
+ET POLICY Suspicious inbound to PostgreSQL port 5432"]
+"VULNERABILTY DISCOVERY
+postgresql" [shape=oval]
+"VULNERABILTY DISCOVERY
+postgresql" [tooltip="ET POLICY Suspicious inbound to Oracle SQL port 1521
+ET POLICY Suspicious inbound to PostgreSQL port 5432"]
+"SERVICE DISCOVERY
+ssh" [shape=oval]
+"SERVICE DISCOVERY
+ssh" [tooltip="ET SCAN Potential VNC Scan 5800-5820
+ET SCAN Potential SSH Scan"]
+}

@@ -1,0 +1,33 @@
+digraph NETWORKDOSmswbtserver {
+rankdir="BT"; 
+ graph [ nodesep="0.1", ranksep="0.02"] 
+ node [ fontname=Arial, fontsize=24,penwidth=3]; 
+ edge [ fontname=Arial, fontsize=20,penwidth=5 ];
+"Victim: 10.0.0.224
+NETWORK DoS
+ms-wbt-server" [shape=doubleoctagon, style=filled, fillcolor=salmon];
+{ rank = max; "Victim: 10.0.0.224
+NETWORK DoS
+ms-wbt-server"}
+"NETWORK DoS
+ms-wbt-server | ID: 36" -> "Victim: 10.0.0.224
+NETWORK DoS
+ms-wbt-server"
+"NETWORK DoS
+ms-wbt-server | ID: 36" [style=filled, fillcolor= salmon]
+{ rank=same; "NETWORK DoS
+ms-wbt-server | ID: 36"}
+"COMMAND AND CONTROL
+unknown | ID: 39" [style=filled, fillcolor= yellow]
+"COMMAND AND CONTROL
+unknown | ID: 39" -> "NETWORK DoS
+ms-wbt-server | ID: 36" [ color=magenta] [label=<<font color="magenta"> start_next: 04/11/17, 13:34:55<br/>gap: 539sec<br/>end_prev: 04/11/17, 13:25:56</font><br/><font color="magenta"><b>Attacker: 10.0.254.30</b></font>>]
+"COMMAND AND CONTROL
+unknown | ID: 39" [shape=box]
+"COMMAND AND CONTROL
+unknown | ID: 39" [tooltip="ET POLICY RDP connection confirm"]
+"NETWORK DoS
+ms-wbt-server | ID: 36" [shape=hexagon]
+"NETWORK DoS
+ms-wbt-server | ID: 36" [tooltip="ET DOS Microsoft Remote Desktop (RDP) Syn then Reset 30 Second DoS Attempt"]
+}

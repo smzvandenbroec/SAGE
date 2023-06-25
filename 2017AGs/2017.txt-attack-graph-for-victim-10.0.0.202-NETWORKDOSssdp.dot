@@ -1,0 +1,110 @@
+digraph NETWORKDOSssdp {
+rankdir="BT"; 
+ graph [ nodesep="0.1", ranksep="0.02"] 
+ node [ fontname=Arial, fontsize=24,penwidth=3]; 
+ edge [ fontname=Arial, fontsize=20,penwidth=5 ];
+"Victim: 10.0.0.202
+NETWORK DoS
+ssdp" [shape=doubleoctagon, style=filled, fillcolor=salmon];
+{ rank = max; "Victim: 10.0.0.202
+NETWORK DoS
+ssdp"}
+"NETWORK DoS
+ssdp | ID: 55" -> "Victim: 10.0.0.202
+NETWORK DoS
+ssdp"
+"NETWORK DoS
+ssdp | ID: 55" [style=filled, fillcolor= salmon]
+{ rank=same; "NETWORK DoS
+ssdp | ID: 55"}
+"VULNERABILTY DISCOVERY
+ms-sql-s" [style=filled, fillcolor= yellow]
+"VULNERABILTY DISCOVERY
+ms-sql-s" -> "VULNERABILTY DISCOVERY
+ncube-lm" [ color=blue] [label=<<font color="blue"> start_next: 04/11/17, 13:08:38<br/>gap: 711sec<br/>end_prev: 04/11/17, 12:56:47</font><br/><font color="blue"><b>Attacker: 10.0.254.31</b></font>>]
+"VULNERABILTY DISCOVERY
+ncube-lm" -> "ACCOUNT MANIPULATION
+snmp | ID: 53" [ label="start_next: 04/11/17, 14:01:27
+gap: 3169sec
+end_prev: 04/11/17, 13:08:38"][ fontcolor="blue" color=blue]
+"ACCOUNT MANIPULATION
+snmp | ID: 53" -> "SERVICE DISCOVERY
+ssh" [ label="start_next: 04/11/17, 14:06:20
+gap: 13sec
+end_prev: 04/11/17, 14:06:08"][ fontcolor="blue" color=blue]
+"SERVICE DISCOVERY
+ssh" -> "SURFING
+http" [ label="start_next: 04/11/17, 14:10:34
+gap: 253sec
+end_prev: 04/11/17, 14:06:20"][ fontcolor="blue" color=blue]
+"SURFING
+http" -> "DATA DELIVERY
+http | ID: 246" [ label="start_next: 04/11/17, 14:10:37
+gap: 1sec
+end_prev: 04/11/17, 14:10:36"][ fontcolor="blue" color=blue]
+"DATA DELIVERY
+http | ID: 246" -> "DATA EXFILTRATION
+http | ID: 26" [ label="start_next: 04/11/17, 14:10:48
+gap: -319sec
+end_prev: 04/11/17, 14:16:07"][ fontcolor="blue" color=blue]
+"DATA EXFILTRATION
+http | ID: 26" -> "VULNERABILTY DISCOVERY
+http" [ label="start_next: 04/11/17, 14:18:12
+gap: 35sec
+end_prev: 04/11/17, 14:17:37"][ fontcolor="blue" color=blue]
+"VULNERABILTY DISCOVERY
+http" -> "VULNERABILTY DISCOVERY
+ahsp" [ label="start_next: 04/11/17, 16:31:18
+gap: 7194sec
+end_prev: 04/11/17, 14:31:25"][ fontcolor="blue" color=blue]
+"VULNERABILTY DISCOVERY
+ahsp" -> "NETWORK DoS
+ssdp | ID: 55" [ label="start_next: 04/11/17, 16:32:58
+gap: 40sec
+end_prev: 04/11/17, 16:32:18"][ fontcolor="blue" color=blue]
+"VULNERABILTY DISCOVERY
+ms-sql-s" [shape=oval]
+"VULNERABILTY DISCOVERY
+ms-sql-s" [tooltip="ET POLICY Suspicious inbound to MSSQL port 1433"]
+"VULNERABILTY DISCOVERY
+ncube-lm" [shape=oval]
+"VULNERABILTY DISCOVERY
+ncube-lm" [tooltip="ET POLICY Suspicious inbound to Oracle SQL port 1521"]
+"ACCOUNT MANIPULATION
+snmp | ID: 53" [shape=box]
+"ACCOUNT MANIPULATION
+snmp | ID: 53" [tooltip="GPL SNMP private access udp
+GPL SNMP public access udp"]
+"SERVICE DISCOVERY
+ssh" [shape=oval]
+"SERVICE DISCOVERY
+ssh" [tooltip="ET SCAN Potential SSH Scan"]
+"SURFING
+http" [shape=oval]
+"SURFING
+http" [tooltip="ET WEB_SERVER WEB-PHP phpinfo access"]
+"DATA DELIVERY
+http | ID: 246" [shape=hexagon]
+"DATA DELIVERY
+http | ID: 246" [tooltip="ET WEB_SERVER PHP Possible php Remote File Inclusion Attempt
+ET WEB_SERVER PHP tags in HTTP POST
+GPL WEB_SERVER perl post attempt"]
+"DATA EXFILTRATION
+http | ID: 26" [shape=hexagon]
+"DATA EXFILTRATION
+http | ID: 26" [tooltip="ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability"]
+"VULNERABILTY DISCOVERY
+http" [shape=oval]
+"VULNERABILTY DISCOVERY
+http" [tooltip="ET SCAN Nessus User Agent"]
+"VULNERABILTY DISCOVERY
+ahsp" [shape=oval]
+"VULNERABILTY DISCOVERY
+ahsp" [tooltip="ET POLICY Suspicious inbound to PostgreSQL port 5432
+ET POLICY Suspicious inbound to Oracle SQL port 1521
+ET POLICY Suspicious inbound to mSQL port 4333"]
+"NETWORK DoS
+ssdp | ID: 55" [shape=hexagon]
+"NETWORK DoS
+ssdp | ID: 55" [tooltip="ET DOS Possible SSDP Amplification Scan in Progress"]
+}

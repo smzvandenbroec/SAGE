@@ -1,0 +1,391 @@
+digraph DATAEXFILTRATIONhttp {
+rankdir="BT"; 
+ graph [ nodesep="0.1", ranksep="0.02"] 
+ node [ fontname=Arial, fontsize=24,penwidth=3]; 
+ edge [ fontname=Arial, fontsize=20,penwidth=5 ];
+"Victim: 10.0.0.22
+DATA EXFILTRATION
+http" [shape=doubleoctagon, style=filled, fillcolor=salmon];
+{ rank = max; "Victim: 10.0.0.22
+DATA EXFILTRATION
+http"}
+"DATA EXFILTRATION
+http | ID: 15" -> "Victim: 10.0.0.22
+DATA EXFILTRATION
+http"
+"DATA EXFILTRATION
+http | ID: 15" [style=filled, fillcolor= salmon]
+{ rank=same; "DATA EXFILTRATION
+http | ID: 15"}
+"VULNERABILTY DISCOVERY
+mysql" [style=filled, fillcolor= yellow]
+"VULNERABILTY DISCOVERY
+mysql" -> "SERVICE DISCOVERY
+unknown" [ color=maroon] [label=<<font color="maroon"> start_next: 03/11/18, 18:01:23<br/>gap: -127sec<br/>end_prev: 03/11/18, 18:03:30</font><br/><font color="maroon"><b>Attacker: 10.0.254.202</b></font>>]
+"SERVICE DISCOVERY
+unknown" -> "BRUTE FORCE CREDENTIALS
+pop3 | ID: 41" [ label="start_next: 03/11/18, 18:01:51
+gap: -285sec
+end_prev: 03/11/18, 18:06:36"][ fontcolor="maroon" color=maroon]
+"BRUTE FORCE CREDENTIALS
+pop3 | ID: 41" -> "HOST DISCOVERY
+http" [ label="start_next: 03/11/18, 18:06:30
+gap: 158sec
+end_prev: 03/11/18, 18:03:52"][ fontcolor="maroon" color=maroon]
+"HOST DISCOVERY
+http" -> "VULNERABILTY DISCOVERY
+ncube-lm" [ label="start_next: 03/11/18, 18:55:37
+gap: 2941sec
+end_prev: 03/11/18, 18:06:36"][ fontcolor="maroon" color=maroon]
+"VULNERABILTY DISCOVERY
+ncube-lm" -> "SERVICE DISCOVERY
+unknown" [ label="start_next: 03/11/18, 18:55:43
+gap: 0sec
+end_prev: 03/11/18, 18:55:43"][ fontcolor="maroon" color=maroon]
+"SERVICE DISCOVERY
+unknown" -> "INFO DISCOVERY
+ssh" [ label="start_next: 03/11/18, 20:15:42
+gap: 4799sec
+end_prev: 03/11/18, 18:55:43"][ fontcolor="maroon" color=maroon]
+"INFO DISCOVERY
+ssh" -> "VULNERABILTY DISCOVERY
+mysql" [ label="start_next: 03/11/18, 20:29:53
+gap: 781sec
+end_prev: 03/11/18, 20:16:52"][ fontcolor="maroon" color=maroon]
+"VULNERABILTY DISCOVERY
+mysql" -> "INFO DISCOVERY
+ssh" [ label="start_next: 03/11/18, 20:38:31
+gap: 447sec
+end_prev: 03/11/18, 20:31:04"][ fontcolor="maroon" color=maroon]
+"INFO DISCOVERY
+ssh" -> "VULNERABILTY DISCOVERY
+http" [ label="start_next: 03/11/18, 20:53:37
+gap: 746sec
+end_prev: 03/11/18, 20:41:11"][ fontcolor="maroon" color=maroon]
+"VULNERABILTY DISCOVERY
+http" -> "SERVICE DISCOVERY
+ff-ice" [ label="start_next: 03/11/18, 20:53:42
+gap: -127sec
+end_prev: 03/11/18, 20:55:50"][ fontcolor="maroon" color=maroon]
+"SERVICE DISCOVERY
+ff-ice" -> "BRUTE FORCE CREDENTIALS
+unknown | ID: 12" [ label="start_next: 03/11/18, 20:54:51
+gap: 53sec
+end_prev: 03/11/18, 20:53:59"][ fontcolor="maroon" color=maroon]
+"BRUTE FORCE CREDENTIALS
+unknown | ID: 12" -> "VULNERABILTY DISCOVERY
+http" [ label="start_next: 03/11/18, 21:02:14
+gap: 163sec
+end_prev: 03/11/18, 20:59:31"][ fontcolor="maroon" color=maroon]
+"VULNERABILTY DISCOVERY
+http" -> "SERVICE DISCOVERY
+ssh" [ label="start_next: 03/11/18, 21:02:36
+gap: -419sec
+end_prev: 03/11/18, 21:09:36"][ fontcolor="maroon" color=maroon]
+"SERVICE DISCOVERY
+ssh" -> "INFO DISCOVERY
+http" [ label="start_next: 03/11/18, 21:02:53
+gap: -643sec
+end_prev: 03/11/18, 21:13:36"][ fontcolor="maroon" color=maroon]
+"INFO DISCOVERY
+http" -> "RESOURCE HIJACKING
+http | ID: 130" [ label="start_next: 03/11/18, 21:02:54
+gap: -401sec
+end_prev: 03/11/18, 21:09:35"][ fontcolor="maroon" color=maroon]
+"RESOURCE HIJACKING
+http | ID: 130" -> "DATA EXFILTRATION
+http | ID: 15" [ label="start_next: 03/11/18, 21:02:56
+gap: 2sec
+end_prev: 03/11/18, 21:02:54"][ fontcolor="maroon" color=maroon]
+"VULNERABILTY DISCOVERY
+mysql" [style=filled, fillcolor= yellow]
+"VULNERABILTY DISCOVERY
+mysql" -> "SERVICE DISCOVERY
+unknown" [ color=maroon] [label=<<font color="maroon"> start_next: 03/11/18, 20:51:07<br/>gap: -574sec<br/>end_prev: 03/11/18, 21:00:40</font><br/><font color="maroon"><b>Attacker: 10.0.254.103</b></font>>]
+"SERVICE DISCOVERY
+unknown" -> "INFO DISCOVERY
+xdmcp" [ label="start_next: 03/11/18, 20:57:34
+gap: -158sec
+end_prev: 03/11/18, 21:00:11"][ fontcolor="maroon" color=maroon]
+"INFO DISCOVERY
+xdmcp" -> "ACCOUNT MANIPULATION
+snmp | ID: 43" [ label="start_next: 03/11/18, 20:57:35
+gap: -186sec
+end_prev: 03/11/18, 21:00:40"][ fontcolor="maroon" color=maroon]
+"ACCOUNT MANIPULATION
+snmp | ID: 43" -> "BRUTE FORCE CREDENTIALS
+unknown | ID: 366" [ label="start_next: 03/11/18, 20:58:00
+gap: 25sec
+end_prev: 03/11/18, 20:57:35"][ fontcolor="maroon" color=maroon]
+"BRUTE FORCE CREDENTIALS
+unknown | ID: 366" -> "ROOT PRIVILEGE ESCALATION
+http | ID: 141" [ label="start_next: 03/11/18, 21:00:40
+gap: 156sec
+end_prev: 03/11/18, 20:58:03"][ fontcolor="maroon" color=maroon]
+"ROOT PRIVILEGE ESCALATION
+http | ID: 141" -> "DATA EXFILTRATION
+http | ID: 15" [ label="start_next: 03/11/18, 21:00:40
+gap: 0sec
+end_prev: 03/11/18, 21:00:40"][ fontcolor="maroon" color=maroon]
+"HOST DISCOVERY
+http" [style=filled, fillcolor= yellow]
+"HOST DISCOVERY
+http" -> "VULNERABILTY DISCOVERY
+mysql" [ color=darkgreen] [label=<<font color="darkgreen"> start_next: 03/11/18, 14:52:49<br/>gap: 3sec<br/>end_prev: 03/11/18, 14:52:45</font><br/><font color="darkgreen"><b>Attacker: 10.0.254.201</b></font>>]
+"VULNERABILTY DISCOVERY
+mysql" -> "INFO DISCOVERY
+http" [ label="start_next: 03/11/18, 14:52:49
+gap: -336sec
+end_prev: 03/11/18, 14:58:24"][ fontcolor="darkgreen" color=darkgreen]
+"INFO DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 15" [ label="start_next: 03/11/18, 14:52:49
+gap: -23sec
+end_prev: 03/11/18, 14:53:12"][ fontcolor="darkgreen" color=darkgreen]
+"HOST DISCOVERY
+http" [style=filled, fillcolor= yellow]
+"HOST DISCOVERY
+http" -> "INFO DISCOVERY
+http" [ color=darkgreen] [label=<<font color="darkgreen"> start_next: 03/11/18, 17:37:53<br/>gap: 5sec<br/>end_prev: 03/11/18, 17:37:48</font><br/><font color="darkgreen"><b>Attacker: 10.0.254.204</b></font>>]
+"INFO DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 15" [ label="start_next: 03/11/18, 17:37:54
+gap: -48sec
+end_prev: 03/11/18, 17:38:43"][ fontcolor="darkgreen" color=darkgreen]
+"VULNERABILTY DISCOVERY
+mysql" [style=filled, fillcolor= yellow]
+"VULNERABILTY DISCOVERY
+mysql" -> "SERVICE DISCOVERY
+unknown" [ color=blue] [label=<<font color="blue"> start_next: 03/11/18, 18:40:54<br/>gap: -79sec<br/>end_prev: 03/11/18, 18:42:13</font><br/><font color="blue"><b>Attacker: 10.0.254.205</b></font>>]
+"SERVICE DISCOVERY
+unknown" -> "VULNERABILTY DISCOVERY
+mysql" [ label="start_next: 03/11/18, 18:50:33
+gap: 517sec
+end_prev: 03/11/18, 18:41:56"][ fontcolor="blue" color=blue]
+"VULNERABILTY DISCOVERY
+mysql" -> "SERVICE DISCOVERY
+unknown" [ label="start_next: 03/11/18, 18:50:49
+gap: -77sec
+end_prev: 03/11/18, 18:52:06"][ fontcolor="blue" color=blue]
+"SERVICE DISCOVERY
+unknown" -> "BRUTE FORCE CREDENTIALS
+pop3 | ID: 41" [ label="start_next: 03/11/18, 18:51:10
+gap: -51sec
+end_prev: 03/11/18, 18:52:01"][ fontcolor="blue" color=blue]
+"BRUTE FORCE CREDENTIALS
+pop3 | ID: 41" -> "VULNERABILTY DISCOVERY
+mysql" [ label="start_next: 03/11/18, 20:32:58
+gap: 6108sec
+end_prev: 03/11/18, 18:51:10"][ fontcolor="blue" color=blue]
+"VULNERABILTY DISCOVERY
+mysql" -> "SERVICE DISCOVERY
+unknown" [ label="start_next: 03/11/18, 20:33:17
+gap: -342sec
+end_prev: 03/11/18, 20:39:00"][ fontcolor="blue" color=blue]
+"SERVICE DISCOVERY
+unknown" -> "HOST DISCOVERY
+http" [ label="start_next: 03/11/18, 20:35:31
+gap: 66sec
+end_prev: 03/11/18, 20:34:24"][ fontcolor="blue" color=blue]
+"HOST DISCOVERY
+http" -> "INFO DISCOVERY
+http" [ label="start_next: 03/11/18, 20:39:00
+gap: 209sec
+end_prev: 03/11/18, 20:35:31"][ fontcolor="blue" color=blue]
+"INFO DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 15" [ label="start_next: 03/11/18, 20:39:00
+gap: -9sec
+end_prev: 03/11/18, 20:39:09"][ fontcolor="blue" color=blue]
+"VULNERABILTY DISCOVERY
+http" [style=filled, fillcolor= yellow]
+"VULNERABILTY DISCOVERY
+http" -> "INFO DISCOVERY
+http" [ color=magenta] [label=<<font color="magenta"> start_next: 03/11/18, 15:25:01<br/>gap: 0sec<br/>end_prev: 03/11/18, 15:25:01</font><br/><font color="magenta"><b>Attacker: 10.0.254.206</b></font>>]
+"INFO DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 15" [ label="start_next: 03/11/18, 15:25:01
+gap: -9sec
+end_prev: 03/11/18, 15:25:10"][ fontcolor="magenta" color=magenta]
+"VULNERABILTY DISCOVERY
+http" [style=filled, fillcolor= yellow]
+"VULNERABILTY DISCOVERY
+http" -> "INFO DISCOVERY
+http" [ color=magenta] [label=<<font color="magenta"> start_next: 03/11/18, 15:16:02<br/>gap: 0sec<br/>end_prev: 03/11/18, 15:16:02</font><br/><font color="magenta"><b>Attacker: 10.0.254.203</b></font>>]
+"INFO DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 15" [ label="start_next: 03/11/18, 15:16:02
+gap: -8sec
+end_prev: 03/11/18, 15:16:10"][ fontcolor="magenta" color=magenta]
+"SERVICE DISCOVERY
+ssh" [style=filled, fillcolor= yellow]
+"SERVICE DISCOVERY
+ssh" -> "VULNERABILTY DISCOVERY
+http" [ color=purple] [label=<<font color="purple"> start_next: 03/11/18, 17:42:48<br/>gap: 11502sec<br/>end_prev: 03/11/18, 14:31:06</font><br/><font color="purple"><b>Attacker: 10.0.254.203</b></font>>]
+"VULNERABILTY DISCOVERY
+http" -> "DATA MANIPULATION
+http | ID: 129" [ label="start_next: 03/11/18, 17:42:51
+gap: 0sec
+end_prev: 03/11/18, 17:42:51"][ fontcolor="purple" color=purple]
+"DATA MANIPULATION
+http | ID: 129" -> "DATA EXFILTRATION
+http | ID: 15" [ label="start_next: 03/11/18, 17:42:51
+gap: -1sec
+end_prev: 03/11/18, 17:42:52"][ fontcolor="purple" color=purple]
+"VULNERABILTY DISCOVERY
+mysql" [shape=oval]
+"VULNERABILTY DISCOVERY
+mysql" [tooltip="ET SCAN Suspicious inbound to mSQL port 4333
+ET SCAN Suspicious inbound to mySQL port 3306
+ET SCAN Suspicious inbound to MSSQL port 1433
+ET SCAN Suspicious inbound to PostgreSQL port 5432
+ET SCAN Nikto Web App Scan in Progress
+ET SCAN Suspicious inbound to Oracle SQL port 1521
+ET CURRENT_EVENTS Malformed HeartBeat Request
+ET CURRENT_EVENTS Possible TLS HeartBleed Unencrypted Request Method 4 (Inbound to Common SSL Port)"]
+"SERVICE DISCOVERY
+unknown" [shape=oval]
+"SERVICE DISCOVERY
+unknown" [tooltip="GPL POLICY PCAnywhere server response
+ET SCAN Potential VNC Scan 5800-5820
+ET SCAN Potential SSH Scan
+ET SCAN Potential VNC Scan 5900-5920
+ET SCAN NMAP OS Detection Probe"]
+"BRUTE FORCE CREDENTIALS
+pop3 | ID: 41" [shape=box]
+"BRUTE FORCE CREDENTIALS
+pop3 | ID: 41" [tooltip="ET SCAN Rapid POP3 Connections - Possible Brute Force Attack"]
+"HOST DISCOVERY
+http" [shape=oval]
+"HOST DISCOVERY
+http" [tooltip="ET SCAN Nmap Scripting Engine User-Agent Detected (Nmap Scripting Engine)
+ET SCAN Possible Nmap User-Agent Observed"]
+"VULNERABILTY DISCOVERY
+ncube-lm" [shape=oval]
+"VULNERABILTY DISCOVERY
+ncube-lm" [tooltip="ET SCAN Suspicious inbound to PostgreSQL port 5432
+ET SCAN Suspicious inbound to mySQL port 3306
+ET SCAN Suspicious inbound to MSSQL port 1433
+ET SCAN Suspicious inbound to Oracle SQL port 1521"]
+"INFO DISCOVERY
+ssh" [shape=oval]
+"INFO DISCOVERY
+ssh" [tooltip="ET INFO NetSSH SSH Version String Hardcoded in Metasploit"]
+"VULNERABILTY DISCOVERY
+http" [shape=oval]
+"VULNERABILTY DISCOVERY
+http" [tooltip="ET SCAN Suspicious inbound to mySQL port 3306
+ET SCAN Suspicious inbound to MSSQL port 1433
+ET SCAN Sqlmap SQL Injection Scan
+ETPRO WEB_SERVER SQLMap Scan Tool User Agent
+ET SCAN Suspicious inbound to PostgreSQL port 5432
+ET SCAN Nikto Web App Scan in Progress
+ET SCAN Suspicious inbound to Oracle SQL port 1521
+ET SCAN OpenVAS User-Agent Inbound
+ET SCAN Suspicious inbound to mSQL port 4333"]
+"SERVICE DISCOVERY
+ff-ice" [shape=oval]
+"SERVICE DISCOVERY
+ff-ice" [tooltip="ET SCAN Potential VNC Scan 5900-5920
+ET SCAN Potential VNC Scan 5800-5820
+ET SCAN Potential SSH Scan"]
+"BRUTE FORCE CREDENTIALS
+unknown | ID: 12" [shape=box]
+"BRUTE FORCE CREDENTIALS
+unknown | ID: 12" [tooltip="ET SCAN Rapid IMAP Connections - Possible Brute Force Attack
+ET SCAN Rapid POP3 Connections - Possible Brute Force Attack
+ET SCAN Rapid IMAPS Connections - Possible Brute Force Attack
+ET SCAN Rapid POP3S Connections - Possible Brute Force Attack"]
+"SERVICE DISCOVERY
+ssh" [shape=oval]
+"SERVICE DISCOVERY
+ssh" [tooltip="ET SCAN Potential SSH Scan"]
+"INFO DISCOVERY
+http" [shape=oval]
+"INFO DISCOVERY
+http" [tooltip="GPL WEB_SERVER viewcode access
+GPL WEB_SERVER .htaccess access
+GPL WEB_SERVER writeto.cnf access
+GPL WEB_SERVER iisadmin access
+ET WEB_SERVER PHP Easteregg Information-Disclosure (funny-logo)
+ET WEB_SPECIFIC_APPS Request to Wordpress W3TC Plug-in dbcache Directory
+GPL WEB_SERVER services.cnf access
+ET WEB_SERVER PHP Easteregg Information-Disclosure (zend-logo)
+ET WEB_SERVER PHP.//Input in HTTP POST
+GPL EXPLOIT unicode directory traversal attempt
+ET WEB_SERVER PHP Easteregg Information-Disclosure (php-logo)
+GPL WEB_SERVER service.cnf access
+GPL EXPLOIT iisadmpwd attempt
+ET WEB_SERVER PHP SESSION SuperGlobal in URI
+GPL WEB_SERVER /~root access
+GPL WEB_SERVER authors.pwd access
+ET WEB_SERVER PHP ENV SuperGlobal in URI
+GPL EXPLOIT .cnf access
+ET POLICY Proxy TRACE Request - inbound
+GPL WEB_SERVER .htpasswd access
+GPL WEB_SERVER global.asa access
+ET WEB_SERVER PHP SERVER SuperGlobal in URI
+GPL EXPLOIT fpcount access
+GPL WEB_SERVER globals.pl access
+GPL WEB_SERVER service.pwd
+GPL EXPLOIT ISAPI .idq attempt
+ET WEB_SERVER PHP Easteregg Information-Disclosure (phpinfo)
+ET SCAN SFTP/FTP Password Exposure via sftp-config.json
+GPL WEB_SERVER printenv access
+GPL WEB_SERVER author.exe access
+GPL EXPLOIT iissamples access
+GPL EXPLOIT .htr access
+ET WEB_SERVER PHP REQUEST SuperGlobal in URI"]
+"RESOURCE HIJACKING
+http | ID: 130" [shape=hexagon]
+"RESOURCE HIJACKING
+http | ID: 130" [tooltip="GPL WEB_SERVER Oracle Java Process Manager access"]
+"DATA EXFILTRATION
+http | ID: 15" [shape=hexagon]
+"DATA EXFILTRATION
+http | ID: 15" [tooltip="GPL WEB_SERVER Tomcat server snoop access
+ET WEB_SERVER Possible MySQL SQLi Attempt Information Schema Access
+ET WEB_SERVER Coldfusion cfcexplorer Directory Traversal
+GPL EXPLOIT ISAPI .ida access
+ET WEB_SPECIFIC_APPS PithCMS oldnews_reader.php lang Parameter Local File Inclusion Attempt
+GPL EXPLOIT /msadc/samples/ access
+ET WEB_SERVER ColdFusion componentutils access
+ET WEB_SERVER DD-WRT Information Disclosure Attempt
+ET WEB_SERVER IIS 8.3 Filename With Wildcard (Possible File/Dir Bruteforce)
+ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability
+ET WEB_SERVER Possible XXE SYSTEM ENTITY in POST BODY.
+ET WEB_SERVER /system32/ in Uri - Possible Protected Directory Access Attempt
+ET WEB_SERVER /etc/shadow Detected in URI
+ET WEB_SERVER ColdFusion password.properties access
+ET INFO WinHttp AutoProxy Request wpad.dat Possible BadTunnel
+GPL EXPLOIT ISAPI .idq access
+ET WEB_SERVER Joomla Component SQLi Attempt"]
+"INFO DISCOVERY
+xdmcp" [shape=oval]
+"INFO DISCOVERY
+xdmcp" [tooltip="GPL DNS named version attempt
+ET POLICY Proxy TRACE Request - inbound
+GPL RPC xdmcp info query
+ET POLICY Http Client Body contains passwd= in cleartext"]
+"ACCOUNT MANIPULATION
+snmp | ID: 43" [shape=box]
+"ACCOUNT MANIPULATION
+snmp | ID: 43" [tooltip="GPL SNMP public access udp"]
+"BRUTE FORCE CREDENTIALS
+unknown | ID: 366" [shape=box]
+"BRUTE FORCE CREDENTIALS
+unknown | ID: 366" [tooltip="ET SCAN Rapid IMAP Connections - Possible Brute Force Attack
+ET SCAN Rapid POP3 Connections - Possible Brute Force Attack
+ET SCAN Rapid IMAPS Connections - Possible Brute Force Attack
+ET SCAN Rapid POP3S Connections - Possible Brute Force Attack"]
+"ROOT PRIVILEGE ESCALATION
+http | ID: 141" [shape=box]
+"ROOT PRIVILEGE ESCALATION
+http | ID: 141" [tooltip="ET WEB_SERVER ColdFusion administrator access"]
+"DATA MANIPULATION
+http | ID: 129" [shape=hexagon]
+"DATA MANIPULATION
+http | ID: 129" [tooltip="ET WEB_SERVER Possible SQL Injection Attempt SELECT FROM
+ET WEB_SERVER MYSQL SELECT CONCAT SQL Injection Attempt
+ET WEB_SERVER Possible SQL Injection Attempt UNION SELECT"]
+}

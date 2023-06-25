@@ -1,0 +1,166 @@
+digraph DATAEXFILTRATIONdistinct {
+rankdir="BT"; 
+ graph [ nodesep="0.1", ranksep="0.02"] 
+ node [ fontname=Arial, fontsize=24,penwidth=3]; 
+ edge [ fontname=Arial, fontsize=20,penwidth=5 ];
+"Victim: 10.0.0.162
+DATA EXFILTRATION
+distinct" [shape=doubleoctagon, style=filled, fillcolor=salmon];
+{ rank = max; "Victim: 10.0.0.162
+DATA EXFILTRATION
+distinct"}
+"DATA EXFILTRATION
+distinct | ID: 409" -> "Victim: 10.0.0.162
+DATA EXFILTRATION
+distinct"
+"DATA EXFILTRATION
+distinct | ID: 409" [style="filled,dotted", fillcolor= salmon]
+"DATA EXFILTRATION
+distinct | ID: 71" -> "Victim: 10.0.0.162
+DATA EXFILTRATION
+distinct"
+"DATA EXFILTRATION
+distinct | ID: 71" [style=filled, fillcolor= salmon]
+{ rank=same; "DATA EXFILTRATION
+distinct | ID: 409" "DATA EXFILTRATION
+distinct | ID: 71"}
+"VULNERABILTY DISCOVERY
+ms-sql-s" [style=filled, fillcolor= yellow]
+"VULNERABILTY DISCOVERY
+ms-sql-s" -> "SERVICE DISCOVERY
+unknown" [ color=blue] [label=<<font color="blue"> start_next: 04/11/17, 12:59:22<br/>gap: -366sec<br/>end_prev: 04/11/17, 13:05:28</font><br/><font color="blue"><b>Attacker: 10.0.254.31</b></font>>]
+"SERVICE DISCOVERY
+unknown" -> "BRUTE FORCE CREDENTIALS
+pop3 | ID: 363" [ label="start_next: 04/11/17, 13:01:54
+gap: 152sec
+end_prev: 04/11/17, 12:59:22"][ fontcolor="blue" color=blue]
+"BRUTE FORCE CREDENTIALS
+pop3 | ID: 363" -> "ACCOUNT MANIPULATION
+snmp | ID: 53" [ label="start_next: 04/11/17, 13:59:55
+gap: 3481sec
+end_prev: 04/11/17, 13:01:54"][ fontcolor="blue" color=blue]
+"ACCOUNT MANIPULATION
+snmp | ID: 53" -> "SERVICE DISCOVERY
+ssh" [ label="start_next: 04/11/17, 14:00:17
+gap: -285sec
+end_prev: 04/11/17, 14:05:03"][ fontcolor="blue" color=blue]
+"SERVICE DISCOVERY
+ssh" -> "VULNERABILTY DISCOVERY
+ms-sql-s" [ label="start_next: 04/11/17, 14:01:07
+gap: 49sec
+end_prev: 04/11/17, 14:00:17"][ fontcolor="blue" color=blue]
+"VULNERABILTY DISCOVERY
+ms-sql-s" -> "ARBITRARY CODE EXECUTION
+ssdp | ID: 355" [ label="start_next: 04/11/17, 14:02:54
+gap: 103sec
+end_prev: 04/11/17, 14:01:11"][ fontcolor="blue" color=blue]
+"ARBITRARY CODE EXECUTION
+ssdp | ID: 355" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: 52" [ label="start_next: 04/11/17, 14:03:24
+gap: 19sec
+end_prev: 04/11/17, 14:03:05"][ fontcolor="blue" color=blue]
+"REMOTE SERVICE EXPLOIT
+snmp | ID: 52" -> "INFO DISCOVERY
+xdmcp" [ label="start_next: 04/11/17, 14:03:24
+gap: 0sec
+end_prev: 04/11/17, 14:03:24"][ fontcolor="blue" color=blue]
+"INFO DISCOVERY
+xdmcp" -> "DATA EXFILTRATION
+distinct | ID: 409" [ label="start_next: 04/11/17, 14:05:13
+gap: 26sec
+end_prev: 04/11/17, 14:04:47"][ fontcolor="blue" color=blue]
+"DATA DELIVERY
+distinct | ID: 70" [style=filled, fillcolor= yellow]
+"DATA DELIVERY
+distinct | ID: 70" -> "VULNERABILTY DISCOVERY
+ahsp" [ color=blue] [label=<<font color="blue"> start_next: 04/11/17, 16:29:22<br/>gap: 8642sec<br/>end_prev: 04/11/17, 14:05:20</font><br/><font color="blue"><b>Attacker: 10.0.254.31</b></font>>]
+"VULNERABILTY DISCOVERY
+ahsp" -> "ARBITRARY CODE EXECUTION
+ssdp | ID: 355" [ label="start_next: 04/11/17, 16:31:28
+gap: 125sec
+end_prev: 04/11/17, 16:29:22"][ fontcolor="blue" color=blue]
+"ARBITRARY CODE EXECUTION
+ssdp | ID: 355" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: 52" [ label="start_next: 04/11/17, 16:31:55
+gap: 17sec
+end_prev: 04/11/17, 16:31:38"][ fontcolor="blue" color=blue]
+"REMOTE SERVICE EXPLOIT
+snmp | ID: 52" -> "SURFING
+distinct" [ label="start_next: 04/11/17, 16:33:21
+gap: 86sec
+end_prev: 04/11/17, 16:31:55"][ fontcolor="blue" color=blue]
+"SURFING
+distinct" -> "DATA DELIVERY
+distinct | ID: 410" [ label="start_next: 04/11/17, 16:33:26
+gap: 2sec
+end_prev: 04/11/17, 16:33:24"][ fontcolor="blue" color=blue]
+"DATA DELIVERY
+distinct | ID: 410" -> "DATA EXFILTRATION
+distinct | ID: 71" [ label="start_next: 04/11/17, 16:33:32
+gap: -2sec
+end_prev: 04/11/17, 16:33:35"][ fontcolor="blue" color=blue]
+"VULNERABILTY DISCOVERY
+ms-sql-s" [shape=oval]
+"VULNERABILTY DISCOVERY
+ms-sql-s" [tooltip="ET POLICY Suspicious inbound to MSSQL port 1433
+ET POLICY Suspicious inbound to mSQL port 4333
+ET POLICY Suspicious inbound to Oracle SQL port 1521
+ET POLICY Suspicious inbound to PostgreSQL port 5432"]
+"SERVICE DISCOVERY
+unknown" [shape=oval]
+"SERVICE DISCOVERY
+unknown" [tooltip="ET SCAN Potential VNC Scan 5800-5820"]
+"BRUTE FORCE CREDENTIALS
+pop3 | ID: 363" [shape=box]
+"BRUTE FORCE CREDENTIALS
+pop3 | ID: 363" [tooltip="ET SCAN Rapid POP3 Connections - Possible Brute Force Attack"]
+"ACCOUNT MANIPULATION
+snmp | ID: 53" [shape=box]
+"ACCOUNT MANIPULATION
+snmp | ID: 53" [tooltip="GPL SNMP private access udp
+GPL SNMP public access udp"]
+"SERVICE DISCOVERY
+ssh" [shape=oval]
+"SERVICE DISCOVERY
+ssh" [tooltip="ET SCAN Potential SSH Scan"]
+"ARBITRARY CODE EXECUTION
+ssdp | ID: 355" [shape=box]
+"ARBITRARY CODE EXECUTION
+ssdp | ID: 355" [tooltip="GPL MISC UPnP malformed advertisement"]
+"REMOTE SERVICE EXPLOIT
+snmp | ID: 52" [shape=box]
+"REMOTE SERVICE EXPLOIT
+snmp | ID: 52" [tooltip="ET SNMP Samsung Printer SNMP Hardcode RW Community String"]
+"INFO DISCOVERY
+xdmcp" [shape=oval]
+"INFO DISCOVERY
+xdmcp" [tooltip="GPL WEB_SERVER mod_gzip_status access
+GPL RPC xdmcp info query"]
+"DATA EXFILTRATION
+distinct | ID: 409" [style="dotted", shape=hexagon]
+"DATA EXFILTRATION
+distinct | ID: 409" [tooltip="ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability"]
+"DATA DELIVERY
+distinct | ID: 70" [shape=hexagon]
+"DATA DELIVERY
+distinct | ID: 70" [tooltip="ET WEB_SERVER PHP Possible php Remote File Inclusion Attempt
+ET WEB_SERVER PHP tags in HTTP POST"]
+"VULNERABILTY DISCOVERY
+ahsp" [shape=oval]
+"VULNERABILTY DISCOVERY
+ahsp" [tooltip="ET POLICY Suspicious inbound to mSQL port 4333"]
+"SURFING
+distinct" [shape=oval]
+"SURFING
+distinct" [tooltip="ET WEB_SERVER WEB-PHP phpinfo access"]
+"DATA DELIVERY
+distinct | ID: 410" [style="dotted", shape=hexagon]
+"DATA DELIVERY
+distinct | ID: 410" [tooltip="ET WEB_SERVER PHP Possible php Remote File Inclusion Attempt
+ET WEB_SERVER PHP tags in HTTP POST
+GPL WEB_SERVER perl post attempt"]
+"DATA EXFILTRATION
+distinct | ID: 71" [shape=hexagon]
+"DATA EXFILTRATION
+distinct | ID: 71" [tooltip="ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability"]
+}

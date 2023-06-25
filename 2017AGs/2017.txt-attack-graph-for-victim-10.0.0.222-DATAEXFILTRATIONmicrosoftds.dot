@@ -1,0 +1,71 @@
+digraph DATAEXFILTRATIONmicrosoftds {
+rankdir="BT"; 
+ graph [ nodesep="0.1", ranksep="0.02"] 
+ node [ fontname=Arial, fontsize=24,penwidth=3]; 
+ edge [ fontname=Arial, fontsize=20,penwidth=5 ];
+"Victim: 10.0.0.222
+DATA EXFILTRATION
+microsoft-ds" [shape=doubleoctagon, style=filled, fillcolor=salmon];
+{ rank = max; "Victim: 10.0.0.222
+DATA EXFILTRATION
+microsoft-ds"}
+"DATA EXFILTRATION
+microsoft-ds | ID: 37" -> "Victim: 10.0.0.222
+DATA EXFILTRATION
+microsoft-ds"
+"DATA EXFILTRATION
+microsoft-ds | ID: 37" [style=filled, fillcolor= salmon]
+{ rank=same; "DATA EXFILTRATION
+microsoft-ds | ID: 37"}
+"VULNERABILTY DISCOVERY
+ncube-lm" [style=filled, fillcolor= yellow]
+"VULNERABILTY DISCOVERY
+ncube-lm" -> "SERVICE DISCOVERY
+unknown" [ color=darkgreen] [label=<<font color="darkgreen"> start_next: 04/11/17, 13:37:04<br/>gap: 203sec<br/>end_prev: 04/11/17, 13:33:40</font><br/><font color="darkgreen"><b>Attacker: 10.0.254.35</b></font>>]
+"SERVICE DISCOVERY
+unknown" -> "COMMAND AND CONTROL
+unknown | ID: 39" [ label="start_next: 04/11/17, 13:39:05
+gap: 121sec
+end_prev: 04/11/17, 13:37:04"][ fontcolor="darkgreen" color=darkgreen]
+"COMMAND AND CONTROL
+unknown | ID: 39" -> "NETWORK DoS
+ms-wbt-server | ID: 36" [ label="start_next: 04/11/17, 13:42:15
+gap: 190sec
+end_prev: 04/11/17, 13:39:05"][ fontcolor="darkgreen" color=darkgreen]
+"NETWORK DoS
+ms-wbt-server | ID: 36" -> "COMMAND AND CONTROL
+unknown | ID: 308" [ label="start_next: 04/11/17, 13:54:51
+gap: 756sec
+end_prev: 04/11/17, 13:42:15"][ fontcolor="darkgreen" color=darkgreen]
+"COMMAND AND CONTROL
+unknown | ID: 308" -> "DATA EXFILTRATION
+microsoft-ds | ID: 37" [ label="start_next: 04/11/17, 15:11:14
+gap: 4583sec
+end_prev: 04/11/17, 13:54:51"][ fontcolor="darkgreen" color=darkgreen]
+"VULNERABILTY DISCOVERY
+ncube-lm" [shape=oval]
+"VULNERABILTY DISCOVERY
+ncube-lm" [tooltip="ET POLICY Suspicious inbound to Oracle SQL port 1521
+ET POLICY Suspicious inbound to PostgreSQL port 5432"]
+"SERVICE DISCOVERY
+unknown" [shape=oval]
+"SERVICE DISCOVERY
+unknown" [tooltip="ET SCAN Potential VNC Scan 5900-5920"]
+"COMMAND AND CONTROL
+unknown | ID: 39" [shape=box]
+"COMMAND AND CONTROL
+unknown | ID: 39" [tooltip="ET POLICY RDP connection confirm"]
+"NETWORK DoS
+ms-wbt-server | ID: 36" [shape=hexagon]
+"NETWORK DoS
+ms-wbt-server | ID: 36" [tooltip="ET DOS Microsoft Remote Desktop (RDP) Syn then Reset 30 Second DoS Attempt"]
+"COMMAND AND CONTROL
+unknown | ID: 308" [shape=box]
+"COMMAND AND CONTROL
+unknown | ID: 308" [tooltip="ET POLICY RDP connection confirm"]
+"DATA EXFILTRATION
+microsoft-ds | ID: 37" [shape=hexagon]
+"DATA EXFILTRATION
+microsoft-ds | ID: 37" [tooltip="GPL NETBIOS SMB-DS IPC$ share access
+GPL NETBIOS SMB-DS ADMIN$ share access"]
+}

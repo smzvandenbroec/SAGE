@@ -1,0 +1,33 @@
+digraph DATADELIVERYunknown {
+rankdir="BT"; 
+ graph [ nodesep="0.1", ranksep="0.02"] 
+ node [ fontname=Arial, fontsize=24,penwidth=3]; 
+ edge [ fontname=Arial, fontsize=20,penwidth=5 ];
+"Victim: 10.0.99.21
+DATA DELIVERY
+unknown" [shape=doubleoctagon, style=filled, fillcolor=salmon];
+{ rank = max; "Victim: 10.0.99.21
+DATA DELIVERY
+unknown"}
+"DATA DELIVERY
+unknown | ID: 136" -> "Victim: 10.0.99.21
+DATA DELIVERY
+unknown"
+"DATA DELIVERY
+unknown | ID: 136" [style=filled, fillcolor= salmon]
+{ rank=same; "DATA DELIVERY
+unknown | ID: 136"}
+"COMMAND AND CONTROL
+unknown | ID: 541" [style="dotted,filled", fillcolor= yellow]
+"COMMAND AND CONTROL
+unknown | ID: 541" -> "DATA DELIVERY
+unknown | ID: 136" [ color=turquoise] [label=<<font color="turquoise"> start_next: 04/11/17, 18:57:06<br/>gap: -65sec<br/>end_prev: 04/11/17, 18:58:11</font><br/><font color="turquoise"><b>Attacker: 10.0.254.31</b></font>>]
+"COMMAND AND CONTROL
+unknown | ID: 541" [shape=box]
+"COMMAND AND CONTROL
+unknown | ID: 541" [tooltip="ET INFO Possible Windows executable sent when remote host claims to send a Text File"]
+"DATA DELIVERY
+unknown | ID: 136" [shape=hexagon]
+"DATA DELIVERY
+unknown | ID: 136" [tooltip="ET POLICY PE EXE or DLL Windows file download HTTP"]
+}

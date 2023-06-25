@@ -1,0 +1,167 @@
+digraph NETWORKDOSssdp {
+rankdir="BT"; 
+ graph [ nodesep="0.1", ranksep="0.02"] 
+ node [ fontname=Arial, fontsize=24,penwidth=3]; 
+ edge [ fontname=Arial, fontsize=20,penwidth=5 ];
+"Victim: 10.0.0.190
+NETWORK DoS
+ssdp" [shape=doubleoctagon, style=filled, fillcolor=salmon];
+{ rank = max; "Victim: 10.0.0.190
+NETWORK DoS
+ssdp"}
+"NETWORK DoS
+ssdp | ID: 55" -> "Victim: 10.0.0.190
+NETWORK DoS
+ssdp"
+"NETWORK DoS
+ssdp | ID: 55" [style=filled, fillcolor= salmon]
+{ rank=same; "NETWORK DoS
+ssdp | ID: 55"}
+"HOST DISCOVERY
+ms-wbt-server" [style=filled, fillcolor= yellow]
+"HOST DISCOVERY
+ms-wbt-server" -> "VULNERABILTY DISCOVERY
+ms-sql-s" [ color=blue] [label=<<font color="blue"> start_next: 04/11/17, 12:55:47<br/>gap: 156sec<br/>end_prev: 04/11/17, 12:53:12</font><br/><font color="blue"><b>Attacker: 10.0.254.31</b></font>>]
+"VULNERABILTY DISCOVERY
+ms-sql-s" -> "SERVICE DISCOVERY
+cm" [ label="start_next: 04/11/17, 12:58:00
+gap: 7sec
+end_prev: 04/11/17, 12:57:53"][ fontcolor="blue" color=blue]
+"SERVICE DISCOVERY
+cm" -> "SERVICE DISCOVERY
+unknown" [ label="start_next: 04/11/17, 14:02:30
+gap: 3806sec
+end_prev: 04/11/17, 12:59:04"][ fontcolor="blue" color=blue]
+"SERVICE DISCOVERY
+unknown" -> "BRUTE FORCE CREDENTIALS
+pop3s | ID: 34" [ label="start_next: 04/11/17, 14:02:37
+gap: -28sec
+end_prev: 04/11/17, 14:03:05"][ fontcolor="blue" color=blue]
+"BRUTE FORCE CREDENTIALS
+pop3s | ID: 34" -> "INFO DISCOVERY
+xdmcp" [ label="start_next: 04/11/17, 14:04:32
+gap: 114sec
+end_prev: 04/11/17, 14:02:37"][ fontcolor="blue" color=blue]
+"INFO DISCOVERY
+xdmcp" -> "ACCOUNT MANIPULATION
+snmp | ID: 367" [ label="start_next: 04/11/17, 14:05:28
+gap: 52sec
+end_prev: 04/11/17, 14:04:36"][ fontcolor="blue" color=blue]
+"ACCOUNT MANIPULATION
+snmp | ID: 367" -> "ACCOUNT MANIPULATION
+snmp | ID: 53" [ label="start_next: 04/11/17, 16:29:39
+gap: 8639sec
+end_prev: 04/11/17, 14:05:40"][ fontcolor="blue" color=blue]
+"ACCOUNT MANIPULATION
+snmp | ID: 53" -> "VULNERABILTY DISCOVERY
+ms-sql-s" [ label="start_next: 04/11/17, 16:31:57
+gap: 136sec
+end_prev: 04/11/17, 16:29:41"][ fontcolor="blue" color=blue]
+"VULNERABILTY DISCOVERY
+ms-sql-s" -> "HOST DISCOVERY
+ms-wbt-server" [ label="start_next: 04/11/17, 16:33:11
+gap: -135sec
+end_prev: 04/11/17, 16:35:26"][ fontcolor="blue" color=blue]
+"HOST DISCOVERY
+ms-wbt-server" -> "SERVICE DISCOVERY
+unknown" [ label="start_next: 04/11/17, 16:33:42
+gap: 31sec
+end_prev: 04/11/17, 16:33:11"][ fontcolor="blue" color=blue]
+"SERVICE DISCOVERY
+unknown" -> "NETWORK DoS
+ssdp | ID: 55" [ label="start_next: 04/11/17, 16:35:58
+gap: 71sec
+end_prev: 04/11/17, 16:34:46"][ fontcolor="blue" color=blue]
+"VULNERABILTY DISCOVERY
+ahsp" [style=filled, fillcolor= yellow]
+"VULNERABILTY DISCOVERY
+ahsp" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: 906" [ color=blue] [label=<<font color="blue"> start_next: 04/11/17, 18:05:12<br/>gap: 94sec<br/>end_prev: 04/11/17, 18:03:38</font><br/><font color="blue"><b>Attacker: 10.0.254.31</b></font>>]
+"REMOTE SERVICE EXPLOIT
+snmp | ID: 906" -> "ACCOUNT MANIPULATION
+snmp | ID: 367" [ label="start_next: 04/11/17, 18:06:09
+gap: 57sec
+end_prev: 04/11/17, 18:05:12"][ fontcolor="blue" color=blue]
+"ACCOUNT MANIPULATION
+snmp | ID: 367" -> "ACCOUNT MANIPULATION
+snmp | ID: 53" [ label="start_next: 04/11/17, 20:55:39
+gap: 10158sec
+end_prev: 04/11/17, 18:06:21"][ fontcolor="blue" color=blue]
+"ACCOUNT MANIPULATION
+snmp | ID: 53" -> "VULNERABILTY DISCOVERY
+mysql" [ label="start_next: 04/11/17, 20:56:55
+gap: -211sec
+end_prev: 04/11/17, 21:00:26"][ fontcolor="blue" color=blue]
+"VULNERABILTY DISCOVERY
+mysql" -> "SERVICE DISCOVERY
+unknown" [ label="start_next: 04/11/17, 20:56:56
+gap: -288sec
+end_prev: 04/11/17, 21:01:44"][ fontcolor="blue" color=blue]
+"SERVICE DISCOVERY
+unknown" -> "NETWORK DoS
+ssdp | ID: 55" [ label="start_next: 04/11/17, 20:58:03
+gap: 66sec
+end_prev: 04/11/17, 20:56:56"][ fontcolor="blue" color=blue]
+"HOST DISCOVERY
+ms-wbt-server" [shape=oval]
+"HOST DISCOVERY
+ms-wbt-server" [tooltip="ET SCAN Behavioral Unusually fast Terminal Server Traffic Potential Scan or Infection (Inbound)"]
+"VULNERABILTY DISCOVERY
+ms-sql-s" [shape=oval]
+"VULNERABILTY DISCOVERY
+ms-sql-s" [tooltip="ET POLICY Suspicious inbound to mySQL port 3306
+ET POLICY Suspicious inbound to mSQL port 4333
+ET POLICY Suspicious inbound to MSSQL port 1433
+ET POLICY Suspicious inbound to Oracle SQL port 1521
+ET POLICY Suspicious inbound to PostgreSQL port 5432"]
+"SERVICE DISCOVERY
+cm" [shape=oval]
+"SERVICE DISCOVERY
+cm" [tooltip="ET SCAN Potential VNC Scan 5900-5920"]
+"SERVICE DISCOVERY
+unknown" [shape=oval]
+"SERVICE DISCOVERY
+unknown" [tooltip="ET SCAN Potential VNC Scan 5800-5820
+ET SCAN Potential VNC Scan 5900-5920
+ET SCAN Behavioral Unusual Port 139 traffic Potential Scan or Infection"]
+"BRUTE FORCE CREDENTIALS
+pop3s | ID: 34" [shape=box]
+"BRUTE FORCE CREDENTIALS
+pop3s | ID: 34" [tooltip="ET SCAN Rapid POP3S Connections - Possible Brute Force Attack"]
+"INFO DISCOVERY
+xdmcp" [shape=oval]
+"INFO DISCOVERY
+xdmcp" [tooltip="GPL RPC xdmcp info query"]
+"ACCOUNT MANIPULATION
+snmp | ID: 367" [shape=box]
+"ACCOUNT MANIPULATION
+snmp | ID: 367" [tooltip="GPL SNMP private access udp
+GPL SNMP public access udp"]
+"ACCOUNT MANIPULATION
+snmp | ID: 53" [shape=box]
+"ACCOUNT MANIPULATION
+snmp | ID: 53" [tooltip="GPL SNMP public access udp"]
+"NETWORK DoS
+ssdp | ID: 55" [shape=hexagon]
+"NETWORK DoS
+ssdp | ID: 55" [tooltip="ET DOS Possible SSDP Amplification Scan in Progress"]
+"VULNERABILTY DISCOVERY
+ahsp" [shape=oval]
+"VULNERABILTY DISCOVERY
+ahsp" [tooltip="ET POLICY Suspicious inbound to PostgreSQL port 5432
+ET POLICY Suspicious inbound to MSSQL port 1433
+ET POLICY Suspicious inbound to mySQL port 3306
+ET POLICY Suspicious inbound to mSQL port 4333"]
+"REMOTE SERVICE EXPLOIT
+snmp | ID: 906" [shape=box]
+"REMOTE SERVICE EXPLOIT
+snmp | ID: 906" [tooltip="ET SNMP Samsung Printer SNMP Hardcode RW Community String"]
+"VULNERABILTY DISCOVERY
+mysql" [shape=oval]
+"VULNERABILTY DISCOVERY
+mysql" [tooltip="ET POLICY Suspicious inbound to mySQL port 3306
+ET POLICY Suspicious inbound to mSQL port 4333
+ET POLICY Suspicious inbound to MSSQL port 1433
+ET POLICY Suspicious inbound to Oracle SQL port 1521
+ET POLICY Suspicious inbound to PostgreSQL port 5432"]
+}

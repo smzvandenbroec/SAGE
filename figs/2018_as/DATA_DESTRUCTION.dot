@@ -1,0 +1,27 @@
+digraph "" {
+	"DATA DESTRUCTION
+us-cli | ID: 1332"	[fillcolor=salmon,
+		shape=hexagon,
+		style=dotted,
+		tooltip="\"GPL WEB_SERVER DELETE attempt\""];
+	"Victim: 10.0.1.46
+DATA DESTRUCTION
+us-cli"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DESTRUCTION
+us-cli | ID: 1332" -> "Victim: 10.0.1.46
+DATA DESTRUCTION
+us-cli"	[key=0,
+		data="{}"];
+	"INFO DISCOVERY
+unknown"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"GPL WEB_SERVER 403 Forbidden\""];
+	"INFO DISCOVERY
+unknown" -> "DATA DESTRUCTION
+us-cli | ID: 1332"	[key=0,
+		data="{'color': 'blue', 'label': '<font color=\"blue\"> start_next: 03/11/18, 15:22:24<br/>gap: 1604sec<br/>end_prev: 03/11/18, 14:55:40</\
+font><br/><font color=\"blue\"><b>Attacker: 10.0.254.204</b></font>'}"];
+}

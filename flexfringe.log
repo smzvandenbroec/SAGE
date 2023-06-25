@@ -1,0 +1,32 @@
+
+
+
+
+
+arguments: ../FlexFringe/cmake-build-debug/flexfringe.exe --ini=../FlexFringe/ini/spdfa-config.ini --symbol_count=2 --state_count=4 2017.txt
+Current dir: C:\Users\senne\Documents\University\TU Delft CSE\Y3\Q4\Research Project\SAGE
+File verbosity level: 9
+date       time         ( uptime  ) [ thread name/id ]                   file:line     v| 
+2023-06-19 11:39:22.165 (   0.037s) [main thread     ]             loguru.cpp:841   INFO| Logging to 'flexfringe.log', mode: 'a', verbosity: 9
+2023-06-19 11:39:22.167 (   0.037s) [main thread     ]               main.cpp:379   INFO| Starting flexfringe run
+2023-06-19 11:39:22.168 (   0.037s) [main thread     ]               main.cpp:70    INFO| Using heuristic alergia
+2023-06-19 11:39:22.170 (   0.040s) [main thread     ]               apta.cpp:34    INFO| Creating APTA data structure
+2023-06-19 11:39:22.899 (   0.769s) [main thread     ]               main.cpp:124   INFO| Greedy mode selected, starting run
+2023-06-19 11:39:23.511 (   1.380s) [main thread     ]               main.cpp:383   INFO| Ending flexfringe run normally
+2023-06-19 11:39:23.511 (   1.381s) [main thread     ]             loguru.cpp:538   INFO| atexit
+
+
+
+
+
+arguments: ../FlexFringe/cmake-build-debug/flexfringe.exe --ini=../FlexFringe/ini/spdfa-config.ini --symbol_count=2 --state_count=4 2018.txt
+Current dir: C:\Users\senne\Documents\University\TU Delft CSE\Y3\Q4\Research Project\SAGE
+File verbosity level: 9
+date       time         ( uptime  ) [ thread name/id ]                   file:line     v| 
+2023-06-19 11:39:54.996 (   0.031s) [main thread     ]             loguru.cpp:841   INFO| Logging to 'flexfringe.log', mode: 'a', verbosity: 9
+2023-06-19 11:39:54.998 (   0.032s) [main thread     ]               main.cpp:379   INFO| Starting flexfringe run
+2023-06-19 11:39:54.998 (   0.032s) [main thread     ]               main.cpp:70    INFO| Using heuristic alergia
+2023-06-19 11:39:54.999 (   0.032s) [main thread     ]               apta.cpp:34    INFO| Creating APTA data structure
+2023-06-19 11:39:55.526 (   0.560s) [main thread     ]               main.cpp:124   INFO| Greedy mode selected, starting run
+2023-06-19 11:39:56.053 (   1.087s) [main thread     ]               main.cpp:383   INFO| Ending flexfringe run normally
+2023-06-19 11:39:56.054 (   1.087s) [main thread     ]             loguru.cpp:538   INFO| atexit

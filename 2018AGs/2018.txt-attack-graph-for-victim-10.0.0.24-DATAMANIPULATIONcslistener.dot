@@ -1,0 +1,178 @@
+digraph DATAMANIPULATIONcslistener {
+rankdir="BT"; 
+ graph [ nodesep="0.1", ranksep="0.02"] 
+ node [ fontname=Arial, fontsize=24,penwidth=3]; 
+ edge [ fontname=Arial, fontsize=20,penwidth=5 ];
+"Victim: 10.0.0.24
+DATA MANIPULATION
+cslistener" [shape=doubleoctagon, style=filled, fillcolor=salmon];
+{ rank = max; "Victim: 10.0.0.24
+DATA MANIPULATION
+cslistener"}
+"DATA MANIPULATION
+cslistener | ID: 72" -> "Victim: 10.0.0.24
+DATA MANIPULATION
+cslistener"
+"DATA MANIPULATION
+cslistener | ID: 72" [style=filled, fillcolor= salmon]
+{ rank=same; "DATA MANIPULATION
+cslistener | ID: 72"}
+"VULNERABILTY DISCOVERY
+mysql" [style=filled, fillcolor= yellow]
+"VULNERABILTY DISCOVERY
+mysql" -> "SERVICE DISCOVERY
+unknown" [ color=purple] [label=<<font color="purple"> start_next: 03/11/18, 14:57:35<br/>gap: 0sec<br/>end_prev: 03/11/18, 14:57:35</font><br/><font color="purple"><b>Attacker: 10.0.254.206</b></font>>]
+"SERVICE DISCOVERY
+unknown" -> "HOST DISCOVERY
+http" [ label="start_next: 03/11/18, 14:59:39
+gap: 124sec
+end_prev: 03/11/18, 14:57:35"][ fontcolor="purple" color=purple]
+"HOST DISCOVERY
+http" -> "INFO DISCOVERY
+http" [ label="start_next: 03/11/18, 15:10:40
+gap: 661sec
+end_prev: 03/11/18, 14:59:39"][ fontcolor="purple" color=purple]
+"INFO DISCOVERY
+http" -> "NETWORK DoS
+http | ID: 5" [ label="start_next: 03/11/18, 15:10:40
+gap: -1sec
+end_prev: 03/11/18, 15:10:41"][ fontcolor="purple" color=purple]
+"NETWORK DoS
+http | ID: 5" -> "SURFING
+http" [ label="start_next: 03/11/18, 15:10:41
+gap: 1sec
+end_prev: 03/11/18, 15:10:40"][ fontcolor="purple" color=purple]
+"SURFING
+http" -> "VULNERABILTY DISCOVERY
+cslistener" [ label="start_next: 03/11/18, 15:17:39
+gap: 418sec
+end_prev: 03/11/18, 15:10:41"][ fontcolor="purple" color=purple]
+"VULNERABILTY DISCOVERY
+cslistener" -> "INFO DISCOVERY
+cslistener" [ label="start_next: 03/11/18, 15:17:39
+gap: 0sec
+end_prev: 03/11/18, 15:17:39"][ fontcolor="purple" color=purple]
+"INFO DISCOVERY
+cslistener" -> "DATA EXFILTRATION
+cslistener | ID: 71" [ label="start_next: 03/11/18, 15:17:39
+gap: -13sec
+end_prev: 03/11/18, 15:17:52"][ fontcolor="purple" color=purple]
+"DATA EXFILTRATION
+cslistener | ID: 71" -> "ARBITRARY CODE EXECUTION
+cslistener | ID: 532" [ label="start_next: 03/11/18, 15:17:40
+gap: -12sec
+end_prev: 03/11/18, 15:17:52"][ fontcolor="purple" color=purple]
+"ARBITRARY CODE EXECUTION
+cslistener | ID: 532" -> "ROOT PRIVILEGE ESCALATION
+cslistener | ID: 254" [ label="start_next: 03/11/18, 15:17:40
+gap: -12sec
+end_prev: 03/11/18, 15:17:52"][ fontcolor="purple" color=purple]
+"ROOT PRIVILEGE ESCALATION
+cslistener | ID: 254" -> "DATA MANIPULATION
+cslistener | ID: 72" [ label="start_next: 03/11/18, 15:17:41
+gap: -5sec
+end_prev: 03/11/18, 15:17:45"][ fontcolor="purple" color=purple]
+"VULNERABILTY DISCOVERY
+mysql" [shape=oval]
+"VULNERABILTY DISCOVERY
+mysql" [tooltip="ET SCAN Suspicious inbound to PostgreSQL port 5432
+ET SCAN Suspicious inbound to mySQL port 3306
+ET SCAN Suspicious inbound to MSSQL port 1433
+ET SCAN Suspicious inbound to Oracle SQL port 1521"]
+"SERVICE DISCOVERY
+unknown" [shape=oval]
+"SERVICE DISCOVERY
+unknown" [tooltip="ET SCAN Potential VNC Scan 5900-5920
+ET SCAN Potential VNC Scan 5800-5820"]
+"HOST DISCOVERY
+http" [shape=oval]
+"HOST DISCOVERY
+http" [tooltip="ET SCAN Nmap Scripting Engine User-Agent Detected (Nmap Scripting Engine)
+ET SCAN Possible Nmap User-Agent Observed"]
+"INFO DISCOVERY
+http" [shape=oval]
+"INFO DISCOVERY
+http" [tooltip="GPL WEB_SERVER .htaccess access
+GPL WEB_SERVER /~root access
+GPL WEB_SERVER iisadmin access
+GPL WEB_SERVER printenv access
+GPL WEB_SERVER .htpasswd access
+GPL WEB_SERVER global.asa access"]
+"NETWORK DoS
+http | ID: 5" [shape=hexagon]
+"NETWORK DoS
+http | ID: 5" [tooltip="ET WEB_SERVER Possible Cherokee Web Server GET AUX Request Denial Of Service Attempt"]
+"SURFING
+http" [shape=oval]
+"SURFING
+http" [tooltip="ET WEB_SERVER WEB-PHP phpinfo access"]
+"VULNERABILTY DISCOVERY
+cslistener" [shape=oval]
+"VULNERABILTY DISCOVERY
+cslistener" [tooltip="ET SCAN Nikto Web App Scan in Progress"]
+"INFO DISCOVERY
+cslistener" [shape=oval]
+"INFO DISCOVERY
+cslistener" [tooltip="GPL WEB_SERVER viewcode access
+GPL WEB_SERVER .htaccess access
+GPL WEB_SERVER writeto.cnf access
+GPL WEB_SERVER iisadmin access
+ET WEB_SPECIFIC_APPS Request to Wordpress W3TC Plug-in dbcache Directory
+GPL WEB_SERVER services.cnf access
+GPL EXPLOIT unicode directory traversal attempt
+GPL WEB_SERVER service.cnf access
+GPL EXPLOIT iisadmpwd attempt
+ET WEB_SERVER PHP SESSION SuperGlobal in URI
+GPL WEB_SERVER /~root access
+GPL WEB_SERVER authors.pwd access
+ET WEB_SERVER PHP ENV SuperGlobal in URI
+GPL EXPLOIT .cnf access
+ET POLICY Proxy TRACE Request - inbound
+GPL WEB_SERVER .htpasswd access
+GPL WEB_SERVER global.asa access
+ET WEB_SERVER PHP SERVER SuperGlobal in URI
+GPL EXPLOIT fpcount access
+GPL WEB_SERVER globals.pl access
+GPL WEB_SERVER service.pwd
+GPL EXPLOIT ISAPI .idq attempt
+ET WEB_SERVER PHP Easteregg Information-Disclosure (phpinfo)
+GPL WEB_SERVER printenv access
+GPL WEB_SERVER author.exe access
+GPL EXPLOIT iissamples access
+GPL EXPLOIT .htr access
+ET WEB_SERVER PHP REQUEST SuperGlobal in URI"]
+"DATA EXFILTRATION
+cslistener | ID: 71" [shape=hexagon]
+"DATA EXFILTRATION
+cslistener | ID: 71" [tooltip="GPL WEB_SERVER Tomcat server snoop access
+GPL EXPLOIT ISAPI .ida access
+GPL EXPLOIT /msadc/samples/ access
+ET WEB_SERVER ColdFusion componentutils access
+ET WEB_SERVER /system32/ in Uri - Possible Protected Directory Access Attempt
+ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability
+ET WEB_SERVER Possible XXE SYSTEM ENTITY in POST BODY.
+ET WEB_SERVER /etc/shadow Detected in URI
+GPL EXPLOIT ISAPI .idq access"]
+"ARBITRARY CODE EXECUTION
+cslistener | ID: 532" [style="dotted", shape=box]
+"ARBITRARY CODE EXECUTION
+cslistener | ID: 532" [tooltip="ET WEB_SPECIFIC_APPS BASE base_stat_common.php remote file include
+ET WEB_SPECIFIC_APPS Golem Gaming Portal root_path Parameter Remote File inclusion Attempt
+ET WEB_SPECIFIC_APPS WEB-PHP RCE PHPBB 2004-1315
+ETPRO WEB_SPECIFIC_APPS PHPMoAdmin RCE Attempt
+ET CURRENT_EVENTS QNAP Shellshock CVE-2014-6271
+ET WEB_SERVER Exploit Suspected PHP Injection Attack (cmd=)
+ET WEB_SERVER Possible CVE-2014-6271 Attempt in Headers"]
+"ROOT PRIVILEGE ESCALATION
+cslistener | ID: 254" [style="dotted", shape=box]
+"ROOT PRIVILEGE ESCALATION
+cslistener | ID: 254" [tooltip="ET WEB_SERVER ColdFusion administrator access
+ETPRO WEB_SPECIFIC_APPS ipTIME firmware < 9.58 RCE
+GPL EXPLOIT administrators.pwd access
+GPL EXPLOIT CodeRed v2 root.exe access"]
+"DATA MANIPULATION
+cslistener | ID: 72" [shape=hexagon]
+"DATA MANIPULATION
+cslistener | ID: 72" [tooltip="ET WEB_SERVER Possible SQL Injection Attempt SELECT FROM
+ET WEB_SERVER Possible SQL Injection Attempt UNION SELECT"]
+}

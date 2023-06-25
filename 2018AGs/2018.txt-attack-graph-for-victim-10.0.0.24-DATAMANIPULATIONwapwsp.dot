@@ -1,0 +1,459 @@
+digraph DATAMANIPULATIONwapwsp {
+rankdir="BT"; 
+ graph [ nodesep="0.1", ranksep="0.02"] 
+ node [ fontname=Arial, fontsize=24,penwidth=3]; 
+ edge [ fontname=Arial, fontsize=20,penwidth=5 ];
+"Victim: 10.0.0.24
+DATA MANIPULATION
+wap-wsp" [shape=doubleoctagon, style=filled, fillcolor=salmon];
+{ rank = max; "Victim: 10.0.0.24
+DATA MANIPULATION
+wap-wsp"}
+"DATA MANIPULATION
+wap-wsp | ID: 39" -> "Victim: 10.0.0.24
+DATA MANIPULATION
+wap-wsp"
+"DATA MANIPULATION
+wap-wsp | ID: 39" [style=filled, fillcolor= salmon]
+{ rank=same; "DATA MANIPULATION
+wap-wsp | ID: 39"}
+"VULNERABILTY DISCOVERY
+mysql" [style=filled, fillcolor= yellow]
+"VULNERABILTY DISCOVERY
+mysql" -> "SERVICE DISCOVERY
+unknown" [ color=maroon] [label=<<font color="maroon"> start_next: 03/11/18, 18:01:28<br/>gap: -105sec<br/>end_prev: 03/11/18, 18:03:13</font><br/><font color="maroon"><b>Attacker: 10.0.254.202</b></font>>]
+"SERVICE DISCOVERY
+unknown" -> "HOST DISCOVERY
+http" [ label="start_next: 03/11/18, 18:06:33
+gap: 14sec
+end_prev: 03/11/18, 18:06:19"][ fontcolor="maroon" color=maroon]
+"HOST DISCOVERY
+http" -> "INFO DISCOVERY
+ssh" [ label="start_next: 03/11/18, 20:39:09
+gap: 9154sec
+end_prev: 03/11/18, 18:06:36"][ fontcolor="maroon" color=maroon]
+"INFO DISCOVERY
+ssh" -> "VULNERABILTY DISCOVERY
+http" [ label="start_next: 03/11/18, 20:53:37
+gap: 801sec
+end_prev: 03/11/18, 20:40:17"][ fontcolor="maroon" color=maroon]
+"VULNERABILTY DISCOVERY
+http" -> "SERVICE DISCOVERY
+unknown" [ label="start_next: 03/11/18, 20:53:38
+gap: -2sec
+end_prev: 03/11/18, 20:53:41"][ fontcolor="maroon" color=maroon]
+"SERVICE DISCOVERY
+unknown" -> "SERVICE DISCOVERY
+ssh" [ label="start_next: 03/11/18, 21:04:15
+gap: 615sec
+end_prev: 03/11/18, 20:54:01"][ fontcolor="maroon" color=maroon]
+"SERVICE DISCOVERY
+ssh" -> "VULNERABILTY DISCOVERY
+wap-wsp" [ label="start_next: 03/11/18, 21:09:49
+gap: 334sec
+end_prev: 03/11/18, 21:04:15"][ fontcolor="maroon" color=maroon]
+"VULNERABILTY DISCOVERY
+wap-wsp" -> "INFO DISCOVERY
+wap-wsp" [ label="start_next: 03/11/18, 21:09:52
+gap: -210sec
+end_prev: 03/11/18, 21:13:22"][ fontcolor="maroon" color=maroon]
+"INFO DISCOVERY
+wap-wsp" -> "RESOURCE HIJACKING
+http | ID: 130" [ label="start_next: 03/11/18, 21:09:57
+gap: -189sec
+end_prev: 03/11/18, 21:13:06"][ fontcolor="maroon" color=maroon]
+"RESOURCE HIJACKING
+http | ID: 130" -> "DATA EXFILTRATION
+http | ID: 15" [ label="start_next: 03/11/18, 21:09:58
+gap: 1sec
+end_prev: 03/11/18, 21:09:57"][ fontcolor="maroon" color=maroon]
+"DATA EXFILTRATION
+http | ID: 15" -> "SURFING
+wap-wsp" [ label="start_next: 03/11/18, 21:10:30
+gap: -168sec
+end_prev: 03/11/18, 21:13:18"][ fontcolor="maroon" color=maroon]
+"SURFING
+wap-wsp" -> "ROOT PRIVILEGE ESCALATION
+wap-wsp | ID: 627" [ label="start_next: 03/11/18, 21:10:42
+gap: 12sec
+end_prev: 03/11/18, 21:10:30"][ fontcolor="maroon" color=maroon]
+"ROOT PRIVILEGE ESCALATION
+wap-wsp | ID: 627" -> "USER PRIVILEGE ESCALATION
+wap-wsp | ID: 361" [ label="start_next: 03/11/18, 21:10:44
+gap: 2sec
+end_prev: 03/11/18, 21:10:42"][ fontcolor="maroon" color=maroon]
+"USER PRIVILEGE ESCALATION
+wap-wsp | ID: 361" -> "DATA DELIVERY
+wap-wsp | ID: 138" [ label="start_next: 03/11/18, 21:12:06
+gap: 64sec
+end_prev: 03/11/18, 21:11:02"][ fontcolor="maroon" color=maroon]
+"DATA DELIVERY
+wap-wsp | ID: 138" -> "DATA MANIPULATION
+http | ID: 17" [ label="start_next: 03/11/18, 21:13:10
+gap: -10sec
+end_prev: 03/11/18, 21:13:20"][ fontcolor="maroon" color=maroon]
+"DATA MANIPULATION
+http | ID: 17" -> "REMOTE SERVICE EXPLOIT
+wap-wsp | ID: 371" [ label="start_next: 03/11/18, 21:13:10
+gap: -10sec
+end_prev: 03/11/18, 21:13:20"][ fontcolor="maroon" color=maroon]
+"REMOTE SERVICE EXPLOIT
+wap-wsp | ID: 371" -> "PUBLIC APP EXPLOIT
+wap-wsp | ID: 143" [ label="start_next: 03/11/18, 21:13:11
+gap: -11sec
+end_prev: 03/11/18, 21:13:22"][ fontcolor="maroon" color=maroon]
+"PUBLIC APP EXPLOIT
+wap-wsp | ID: 143" -> "ARBITRARY CODE EXECUTION
+http | ID: 18" [ label="start_next: 03/11/18, 21:13:17
+gap: 5sec
+end_prev: 03/11/18, 21:13:11"][ fontcolor="maroon" color=maroon]
+"ARBITRARY CODE EXECUTION
+http | ID: 18" -> "SERVICE DISCOVERY
+ssh" [ label="start_next: 03/11/18, 21:13:22
+gap: 5sec
+end_prev: 03/11/18, 21:13:17"][ fontcolor="maroon" color=maroon]
+"SERVICE DISCOVERY
+ssh" -> "VULNERABILTY DISCOVERY
+cslistener" [ label="start_next: 03/11/18, 21:37:07
+gap: 212sec
+end_prev: 03/11/18, 21:33:35"][ fontcolor="maroon" color=maroon]
+"VULNERABILTY DISCOVERY
+cslistener" -> "TRUSTED ORG. EXPLOIT
+http | ID: 362" [ label="start_next: 03/11/18, 21:42:40
+gap: -4sec
+end_prev: 03/11/18, 21:42:44"][ fontcolor="maroon" color=maroon]
+"TRUSTED ORG. EXPLOIT
+http | ID: 362" -> "REMOTE SERVICE EXPLOIT
+cslistener | ID: 139" [ label="start_next: 03/11/18, 21:42:40
+gap: 0sec
+end_prev: 03/11/18, 21:42:40"][ fontcolor="maroon" color=maroon]
+"REMOTE SERVICE EXPLOIT
+cslistener | ID: 139" -> "DATA MANIPULATION
+http | ID: 17" [ label="start_next: 03/11/18, 21:42:42
+gap: -1sec
+end_prev: 03/11/18, 21:42:43"][ fontcolor="maroon" color=maroon]
+"DATA MANIPULATION
+http | ID: 17" -> "SERVICE DISCOVERY
+ssh" [ label="start_next: 03/11/18, 21:42:44
+gap: 2sec
+end_prev: 03/11/18, 21:42:42"][ fontcolor="maroon" color=maroon]
+"SERVICE DISCOVERY
+ssh" -> "SERVICE DISCOVERY
+ssh" [ label="start_next: 03/11/18, 21:54:55
+gap: 441sec
+end_prev: 03/11/18, 21:47:34"][ fontcolor="maroon" color=maroon]
+"SERVICE DISCOVERY
+ssh" -> "SERVICE DISCOVERY
+ssh" [ label="start_next: 03/11/18, 22:23:38
+gap: 680sec
+end_prev: 03/11/18, 22:12:18"][ fontcolor="maroon" color=maroon]
+"SERVICE DISCOVERY
+ssh" -> "SERVICE DISCOVERY
+ssh" [ label="start_next: 03/11/18, 22:33:41
+gap: 603sec
+end_prev: 03/11/18, 22:23:38"][ fontcolor="maroon" color=maroon]
+"SERVICE DISCOVERY
+ssh" -> "VULNERABILTY DISCOVERY
+cslistener" [ label="start_next: 03/11/18, 22:39:49
+gap: 368sec
+end_prev: 03/11/18, 22:33:41"][ fontcolor="maroon" color=maroon]
+"VULNERABILTY DISCOVERY
+cslistener" -> "DATA MANIPULATION
+wap-wsp | ID: 39" [ label="start_next: 03/11/18, 22:39:50
+gap: -132sec
+end_prev: 03/11/18, 22:42:02"][ fontcolor="maroon" color=maroon]
+"HOST DISCOVERY
+http" [style=filled, fillcolor= yellow]
+"HOST DISCOVERY
+http" -> "VULNERABILTY DISCOVERY
+mysql" [ color=darkgreen] [label=<<font color="darkgreen"> start_next: 03/11/18, 14:52:49<br/>gap: 3sec<br/>end_prev: 03/11/18, 14:52:45</font><br/><font color="darkgreen"><b>Attacker: 10.0.254.201</b></font>>]
+"VULNERABILTY DISCOVERY
+mysql" -> "INFO DISCOVERY
+http" [ label="start_next: 03/11/18, 14:52:49
+gap: -313sec
+end_prev: 03/11/18, 14:58:02"][ fontcolor="darkgreen" color=darkgreen]
+"INFO DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 15" [ label="start_next: 03/11/18, 14:52:49
+gap: -3sec
+end_prev: 03/11/18, 14:52:51"][ fontcolor="darkgreen" color=darkgreen]
+"DATA EXFILTRATION
+http | ID: 15" -> "SERVICE DISCOVERY
+unknown" [ label="start_next: 03/11/18, 14:53:39
+gap: 50sec
+end_prev: 03/11/18, 14:52:49"][ fontcolor="darkgreen" color=darkgreen]
+"SERVICE DISCOVERY
+unknown" -> "HOST DISCOVERY
+wap-wsp" [ label="start_next: 03/11/18, 15:01:05
+gap: 194sec
+end_prev: 03/11/18, 14:57:51"][ fontcolor="darkgreen" color=darkgreen]
+"HOST DISCOVERY
+wap-wsp" -> "VULNERABILTY DISCOVERY
+wap-wsp" [ label="start_next: 03/11/18, 15:05:26
+gap: 260sec
+end_prev: 03/11/18, 15:01:06"][ fontcolor="darkgreen" color=darkgreen]
+"VULNERABILTY DISCOVERY
+wap-wsp" -> "INFO DISCOVERY
+wap-wsp" [ label="start_next: 03/11/18, 15:05:26
+gap: 0sec
+end_prev: 03/11/18, 15:05:26"][ fontcolor="darkgreen" color=darkgreen]
+"INFO DISCOVERY
+wap-wsp" -> "DATA EXFILTRATION
+wap-wsp | ID: 56" [ label="start_next: 03/11/18, 15:05:26
+gap: -10sec
+end_prev: 03/11/18, 15:05:37"][ fontcolor="darkgreen" color=darkgreen]
+"DATA EXFILTRATION
+wap-wsp | ID: 56" -> "ARBITRARY CODE EXECUTION
+wap-wsp | ID: 461" [ label="start_next: 03/11/18, 15:05:27
+gap: -5sec
+end_prev: 03/11/18, 15:05:32"][ fontcolor="darkgreen" color=darkgreen]
+"ARBITRARY CODE EXECUTION
+wap-wsp | ID: 461" -> "ROOT PRIVILEGE ESCALATION
+wap-wsp | ID: 202" [ label="start_next: 03/11/18, 15:05:27
+gap: -9sec
+end_prev: 03/11/18, 15:05:37"][ fontcolor="darkgreen" color=darkgreen]
+"ROOT PRIVILEGE ESCALATION
+wap-wsp | ID: 202" -> "DATA MANIPULATION
+wap-wsp | ID: 39" [ label="start_next: 03/11/18, 15:05:28
+gap: -4sec
+end_prev: 03/11/18, 15:05:33"][ fontcolor="darkgreen" color=darkgreen]
+"HOST DISCOVERY
+http" [style=filled, fillcolor= yellow]
+"HOST DISCOVERY
+http" -> "VULNERABILTY DISCOVERY
+http" [ color=darkgreen] [label=<<font color="darkgreen"> start_next: 03/11/18, 17:37:53<br/>gap: 5sec<br/>end_prev: 03/11/18, 17:37:48</font><br/><font color="darkgreen"><b>Attacker: 10.0.254.204</b></font>>]
+"VULNERABILTY DISCOVERY
+http" -> "INFO DISCOVERY
+http" [ label="start_next: 03/11/18, 17:37:53
+gap: -292sec
+end_prev: 03/11/18, 17:42:44"][ fontcolor="darkgreen" color=darkgreen]
+"INFO DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 15" [ label="start_next: 03/11/18, 17:37:54
+gap: -3sec
+end_prev: 03/11/18, 17:37:57"][ fontcolor="darkgreen" color=darkgreen]
+"DATA EXFILTRATION
+http | ID: 15" -> "SERVICE DISCOVERY
+unknown" [ label="start_next: 03/11/18, 17:42:35
+gap: 281sec
+end_prev: 03/11/18, 17:37:54"][ fontcolor="darkgreen" color=darkgreen]
+"SERVICE DISCOVERY
+unknown" -> "HOST DISCOVERY
+wap-wsp" [ label="start_next: 03/11/18, 17:59:39
+gap: 938sec
+end_prev: 03/11/18, 17:44:01"][ fontcolor="darkgreen" color=darkgreen]
+"HOST DISCOVERY
+wap-wsp" -> "VULNERABILTY DISCOVERY
+wap-wsp" [ label="start_next: 03/11/18, 18:07:13
+gap: 454sec
+end_prev: 03/11/18, 17:59:40"][ fontcolor="darkgreen" color=darkgreen]
+"VULNERABILTY DISCOVERY
+wap-wsp" -> "DATA EXFILTRATION
+wap-wsp | ID: 56" [ label="start_next: 03/11/18, 18:07:13
+gap: 0sec
+end_prev: 03/11/18, 18:07:13"][ fontcolor="darkgreen" color=darkgreen]
+"DATA EXFILTRATION
+wap-wsp | ID: 56" -> "INFO DISCOVERY
+wap-wsp" [ label="start_next: 03/11/18, 18:07:13
+gap: -6sec
+end_prev: 03/11/18, 18:07:19"][ fontcolor="darkgreen" color=darkgreen]
+"INFO DISCOVERY
+wap-wsp" -> "ARBITRARY CODE EXECUTION
+wap-wsp | ID: 461" [ label="start_next: 03/11/18, 18:07:14
+gap: -10sec
+end_prev: 03/11/18, 18:07:24"][ fontcolor="darkgreen" color=darkgreen]
+"ARBITRARY CODE EXECUTION
+wap-wsp | ID: 461" -> "ROOT PRIVILEGE ESCALATION
+wap-wsp | ID: 202" [ label="start_next: 03/11/18, 18:07:14
+gap: -9sec
+end_prev: 03/11/18, 18:07:24"][ fontcolor="darkgreen" color=darkgreen]
+"ROOT PRIVILEGE ESCALATION
+wap-wsp | ID: 202" -> "DATA MANIPULATION
+wap-wsp | ID: 39" [ label="start_next: 03/11/18, 18:07:15
+gap: -4sec
+end_prev: 03/11/18, 18:07:19"][ fontcolor="darkgreen" color=darkgreen]
+"VULNERABILTY DISCOVERY
+mysql" [shape=oval]
+"VULNERABILTY DISCOVERY
+mysql" [tooltip="ET SCAN Suspicious inbound to mySQL port 3306
+ET SCAN Suspicious inbound to MSSQL port 1433
+ET SCAN Suspicious inbound to PostgreSQL port 5432
+ET SCAN Nikto Web App Scan in Progress
+ET SCAN Suspicious inbound to Oracle SQL port 1521
+ET SCAN Suspicious inbound to mSQL port 4333"]
+"SERVICE DISCOVERY
+unknown" [shape=oval]
+"SERVICE DISCOVERY
+unknown" [tooltip="ET SCAN Potential SSH Scan
+ET SCAN Potential VNC Scan 5900-5920
+ET SCAN Potential VNC Scan 5800-5820
+ET SCAN NMAP OS Detection Probe"]
+"HOST DISCOVERY
+http" [shape=oval]
+"HOST DISCOVERY
+http" [tooltip="ET SCAN Nmap Scripting Engine User-Agent Detected (Nmap Scripting Engine)
+ET SCAN Possible Nmap User-Agent Observed"]
+"INFO DISCOVERY
+ssh" [shape=oval]
+"INFO DISCOVERY
+ssh" [tooltip="ET INFO NetSSH SSH Version String Hardcoded in Metasploit"]
+"VULNERABILTY DISCOVERY
+http" [shape=oval]
+"VULNERABILTY DISCOVERY
+http" [tooltip="ET SCAN Suspicious inbound to mySQL port 3306
+ET SCAN Suspicious inbound to MSSQL port 1433
+ET SCAN Suspicious inbound to PostgreSQL port 5432
+ET SCAN Nikto Web App Scan in Progress
+ET SCAN Suspicious inbound to Oracle SQL port 1521
+ET SCAN OpenVAS User-Agent Inbound
+ET SCAN Suspicious inbound to mSQL port 4333"]
+"SERVICE DISCOVERY
+ssh" [shape=oval]
+"SERVICE DISCOVERY
+ssh" [tooltip="ET SCAN Potential SSH Scan"]
+"VULNERABILTY DISCOVERY
+wap-wsp" [shape=oval]
+"VULNERABILTY DISCOVERY
+wap-wsp" [tooltip="ET SCAN Nikto Web App Scan in Progress
+ET SCAN OpenVAS User-Agent Inbound"]
+"INFO DISCOVERY
+wap-wsp" [shape=oval]
+"INFO DISCOVERY
+wap-wsp" [tooltip="GPL WEB_SERVER viewcode access
+GPL WEB_SERVER .htaccess access
+GPL WEB_SERVER writeto.cnf access
+GPL WEB_SERVER iisadmin access
+GPL WEB_SERVER services.cnf access
+GPL EXPLOIT unicode directory traversal attempt
+GPL WEB_SERVER service.cnf access
+GPL EXPLOIT iisadmpwd attempt
+GPL ATTACK_RESPONSE directory listing
+ET WEB_SERVER PHP SESSION SuperGlobal in URI
+GPL WEB_SERVER /~root access
+GPL WEB_SERVER authors.pwd access
+ET WEB_SERVER PHP ENV SuperGlobal in URI
+GPL EXPLOIT .cnf access
+ET POLICY Proxy TRACE Request - inbound
+GPL WEB_SERVER .htpasswd access
+GPL WEB_SERVER global.asa access
+ET WEB_SERVER PHP SERVER SuperGlobal in URI
+GPL EXPLOIT fpcount access
+GPL WEB_SERVER globals.pl access
+GPL WEB_SERVER service.pwd
+GPL EXPLOIT ISAPI .idq attempt
+ET WEB_SERVER PHP Easteregg Information-Disclosure (phpinfo)
+GPL WEB_SERVER printenv access
+ET SCAN SFTP/FTP Password Exposure via sftp-config.json
+GPL WEB_SERVER author.exe access
+GPL EXPLOIT iissamples access
+GPL EXPLOIT .htr access
+ET WEB_SERVER PHP REQUEST SuperGlobal in URI"]
+"RESOURCE HIJACKING
+http | ID: 130" [shape=hexagon]
+"RESOURCE HIJACKING
+http | ID: 130" [tooltip="GPL WEB_SERVER Oracle Java Process Manager access"]
+"DATA EXFILTRATION
+http | ID: 15" [shape=hexagon]
+"DATA EXFILTRATION
+http | ID: 15" [tooltip="GPL EXPLOIT ISAPI .ida access
+ET WEB_SERVER IIS 8.3 Filename With Wildcard (Possible File/Dir Bruteforce)
+ET WEB_SERVER Possible XXE SYSTEM ENTITY in POST BODY.
+ET INFO WinHttp AutoProxy Request wpad.dat Possible BadTunnel
+GPL EXPLOIT ISAPI .idq access"]
+"SURFING
+wap-wsp" [shape=oval]
+"SURFING
+wap-wsp" [tooltip="ET WEB_SERVER WEB-PHP phpinfo access"]
+"ROOT PRIVILEGE ESCALATION
+wap-wsp | ID: 627" [style="dotted", shape=box]
+"ROOT PRIVILEGE ESCALATION
+wap-wsp | ID: 627" [tooltip="ET WEB_SERVER ColdFusion administrator access"]
+"USER PRIVILEGE ESCALATION
+wap-wsp | ID: 361" [style="dotted", shape=box]
+"USER PRIVILEGE ESCALATION
+wap-wsp | ID: 361" [tooltip="ET POLICY Outgoing Basic Auth Base64 HTTP Password detected unencrypted
+ET POLICY Incoming Basic Auth Base64 HTTP Password detected unencrypted
+ET WEB_SPECIFIC_APPS Microhard Systems 3G/4G Cellular Ethernet and Serial Gateway - Default Credentials"]
+"DATA DELIVERY
+wap-wsp | ID: 138" [shape=hexagon]
+"DATA DELIVERY
+wap-wsp | ID: 138" [tooltip="ET WEB_SERVER PHP tags in HTTP POST
+GPL WEB_SERVER perl post attempt"]
+"DATA MANIPULATION
+http | ID: 17" [shape=hexagon]
+"DATA MANIPULATION
+http | ID: 17" [tooltip="ET WEB_SERVER Possible SQL Injection Attempt SELECT FROM
+ET WEB_SERVER MYSQL SELECT CONCAT SQL Injection Attempt
+ET WEB_SERVER Possible SQL Injection Attempt UNION SELECT"]
+"REMOTE SERVICE EXPLOIT
+wap-wsp | ID: 371" [style="dotted", shape=box]
+"REMOTE SERVICE EXPLOIT
+wap-wsp | ID: 371" [tooltip="ET WEB_SERVER Script tag in URI Possible Cross Site Scripting Attempt"]
+"PUBLIC APP EXPLOIT
+wap-wsp | ID: 143" [shape=box]
+"PUBLIC APP EXPLOIT
+wap-wsp | ID: 143" [tooltip="ET WEB_SPECIFIC_APPS IBSng str Parameter Cross Site Scripting Attempt"]
+"ARBITRARY CODE EXECUTION
+http | ID: 18" [shape=box]
+"ARBITRARY CODE EXECUTION
+http | ID: 18" [tooltip="ET WEB_SPECIFIC_APPS AlstraSoft AskMe que_id Parameter SELECT FROM SQL Injection Attempt"]
+"VULNERABILTY DISCOVERY
+cslistener" [shape=oval]
+"VULNERABILTY DISCOVERY
+cslistener" [tooltip="ET SCAN OpenVAS User-Agent Inbound"]
+"TRUSTED ORG. EXPLOIT
+http | ID: 362" [style="dotted", shape=box]
+"TRUSTED ORG. EXPLOIT
+http | ID: 362" [tooltip="ET WEB_SERVER Onmouseover= in URI - Likely Cross Site Scripting Attempt"]
+"REMOTE SERVICE EXPLOIT
+cslistener | ID: 139" [shape=box]
+"REMOTE SERVICE EXPLOIT
+cslistener | ID: 139" [tooltip="ET WEB_SERVER Script tag in URI Possible Cross Site Scripting Attempt"]
+"DATA MANIPULATION
+wap-wsp | ID: 39" [shape=hexagon]
+"DATA MANIPULATION
+wap-wsp | ID: 39" [tooltip="ET WEB_SERVER Possible SQL Injection Attempt SELECT FROM
+ET WEB_SERVER Possible SQL Injection Attempt UNION SELECT"]
+"INFO DISCOVERY
+http" [shape=oval]
+"INFO DISCOVERY
+http" [tooltip="GPL WEB_SERVER .htaccess access
+GPL WEB_SERVER /~root access
+GPL WEB_SERVER iisadmin access
+GPL WEB_SERVER printenv access
+GPL EXPLOIT .cnf access
+ET POLICY Proxy TRACE Request - inbound
+GPL WEB_SERVER .htpasswd access
+GPL EXPLOIT .htr access"]
+"HOST DISCOVERY
+wap-wsp" [shape=oval]
+"HOST DISCOVERY
+wap-wsp" [tooltip="ET SCAN Nmap Scripting Engine User-Agent Detected (Nmap Scripting Engine)
+ET SCAN Possible Nmap User-Agent Observed"]
+"DATA EXFILTRATION
+wap-wsp | ID: 56" [shape=hexagon]
+"DATA EXFILTRATION
+wap-wsp | ID: 56" [tooltip="GPL WEB_SERVER Tomcat server snoop access
+GPL EXPLOIT ISAPI .ida access
+GPL EXPLOIT /msadc/samples/ access
+ET WEB_SERVER /system32/ in Uri - Possible Protected Directory Access Attempt
+ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability
+ET WEB_SERVER /etc/shadow Detected in URI
+GPL EXPLOIT ISAPI .idq access"]
+"ARBITRARY CODE EXECUTION
+wap-wsp | ID: 461" [style="dotted", shape=box]
+"ARBITRARY CODE EXECUTION
+wap-wsp | ID: 461" [tooltip="ET WEB_SPECIFIC_APPS BASE base_stat_common.php remote file include
+ET WEB_SPECIFIC_APPS Golem Gaming Portal root_path Parameter Remote File inclusion Attempt
+ET WEB_SPECIFIC_APPS WEB-PHP RCE PHPBB 2004-1315
+ET CURRENT_EVENTS QNAP Shellshock CVE-2014-6271
+ET WEB_SERVER Exploit Suspected PHP Injection Attack (cmd=)
+ET WEB_SERVER Possible CVE-2014-6271 Attempt in Headers"]
+"ROOT PRIVILEGE ESCALATION
+wap-wsp | ID: 202" [style="dotted", shape=box]
+"ROOT PRIVILEGE ESCALATION
+wap-wsp | ID: 202" [tooltip="ET WEB_SERVER ColdFusion administrator access
+ETPRO WEB_SPECIFIC_APPS ipTIME firmware < 9.58 RCE
+GPL EXPLOIT administrators.pwd access
+GPL EXPLOIT CodeRed v2 root.exe access"]
+}

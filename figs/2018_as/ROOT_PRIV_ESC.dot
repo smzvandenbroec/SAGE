@@ -1,0 +1,586 @@
+digraph "" {
+	"ROOT PRIVILEGE ESCALATION
+http | ID: 615"	[shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SERVER Possible SQLi xp_cmdshell POST body
+ET WEB_SERVER Attempt To Access MSSQL xp_cmdshell Stored Procedure Via URI\""];
+	"ROOT PRIVILEGE ESCALATION
+http | ID: 623"	[shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SERVER ColdFusion administrator access
+GPL SMTP expn root
+GPL SMTP vrfy root
+ETPRO EXPLOIT SOAP Netgear WNDR Auth Bypass/\
+Info Disclosure\""];
+	"ROOT PRIVILEGE ESCALATION
+us-cli | ID: 229"	[shape=box,
+		style=dotted,
+		tooltip="\"GPL EXPLOIT CodeRed v2 root.exe access\""];
+	"ROOT PRIVILEGE ESCALATION
+http | ID: 847"	[shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SERVER ColdFusion administrator access\""];
+	"ROOT PRIVILEGE ESCALATION
+etlservicemgr | ID: 849"	[shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SERVER ColdFusion administrator access\""];
+	"ROOT PRIVILEGE ESCALATION
+http | ID: 133"	[shape=box,
+		tooltip="\"ET WEB_SERVER ColdFusion administrator access
+ETPRO WEB_SPECIFIC_APPS ipTIME firmware < 9.58 RCE
+GPL EXPLOIT administrators.pwd \
+access
+GPL EXPLOIT CodeRed v2 root.exe access\""];
+	"ROOT PRIVILEGE ESCALATION
+http | ID: 141"	[shape=box,
+		tooltip="\"GPL EXPLOIT CodeRed v2 root.exe access\""];
+	"ROOT PRIVILEGE ESCALATION
+etlservicemgr | ID: 144"	[shape=box,
+		tooltip="\"ET WEB_SERVER ColdFusion administrator access\""];
+	"ROOT PRIVILEGE ESCALATION
+etlservicemgr | ID: 237"	[shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SERVER ColdFusion administrator access
+ETPRO WEB_SPECIFIC_APPS ipTIME firmware < 9.58 RCE
+GPL EXPLOIT administrators.pwd \
+access
+GPL EXPLOIT CodeRed v2 root.exe access\""];
+	"ROOT PRIVILEGE ESCALATION
+remoteware-cl | ID: -1"	[shape=box,
+		tooltip="\"ET WEB_SERVER ColdFusion administrator access\""];
+	"ROOT PRIVILEGE ESCALATION
+remoteware-cl | ID: 157"	[shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SERVER ColdFusion administrator access
+ETPRO WEB_SPECIFIC_APPS ipTIME firmware < 9.58 RCE
+GPL EXPLOIT administrators.pwd \
+access
+GPL EXPLOIT CodeRed v2 root.exe access\""];
+	"ROOT PRIVILEGE ESCALATION
+unknown | ID: 235"	[shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SERVER ColdFusion administrator access
+ETPRO WEB_SPECIFIC_APPS ipTIME firmware < 9.58 RCE
+GPL EXPLOIT administrators.pwd \
+access
+GPL EXPLOIT CodeRed v2 root.exe access\""];
+	"ROOT PRIVILEGE ESCALATION
+cslistener | ID: 254"	[shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SERVER ColdFusion administrator access
+ETPRO WEB_SPECIFIC_APPS ipTIME firmware < 9.58 RCE
+GPL EXPLOIT administrators.pwd \
+access
+GPL EXPLOIT CodeRed v2 root.exe access\""];
+	"ROOT PRIVILEGE ESCALATION
+wap-wsp | ID: 136"	[shape=box,
+		tooltip="\"ET WEB_SERVER ColdFusion administrator access
+ETPRO WEB_SPECIFIC_APPS ipTIME firmware < 9.58 RCE
+GPL EXPLOIT administrators.pwd \
+access
+GPL EXPLOIT CodeRed v2 root.exe access\""];
+	"ROOT PRIVILEGE ESCALATION
+wap-wsp | ID: 627"	[shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SERVER ColdFusion administrator access\""];
+	"ROOT PRIVILEGE ESCALATION
+wap-wsp | ID: 202"	[shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SERVER ColdFusion administrator access
+ETPRO WEB_SPECIFIC_APPS ipTIME firmware < 9.58 RCE
+GPL EXPLOIT administrators.pwd \
+access
+GPL EXPLOIT CodeRed v2 root.exe access\""];
+	"ROOT PRIVILEGE ESCALATION
+commplex-main | ID: 248"	[shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SERVER ColdFusion administrator access
+ETPRO WEB_SPECIFIC_APPS ipTIME firmware < 9.58 RCE
+GPL EXPLOIT administrators.pwd \
+access
+GPL EXPLOIT CodeRed v2 root.exe access\""];
+	"ROOT PRIVILEGE ESCALATION
+us-cli | ID: 230"	[shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SERVER ColdFusion administrator access
+ETPRO WEB_SPECIFIC_APPS ipTIME firmware < 9.58 RCE
+GPL EXPLOIT administrators.pwd \
+access
+GPL EXPLOIT CodeRed v2 root.exe access\""];
+	"ROOT PRIVILEGE ESCALATION
+us-cli | ID: 54"	[shape=box,
+		tooltip="\"ET WEB_SERVER ColdFusion administrator access
+ETPRO WEB_SPECIFIC_APPS ipTIME firmware < 9.58 RCE
+GPL EXPLOIT administrators.pwd \
+access
+GPL EXPLOIT CodeRed v2 root.exe access\""];
+	"ARBITRARY CODE EXECUTION
+us-cli | ID: 507"	[shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SPECIFIC_APPS BASE base_stat_common.php remote file include
+ET WEB_SPECIFIC_APPS WEB-PHP RCE PHPBB 2004-1315
+ETPRO WEB_SPECIFIC_\
+APPS PHPMoAdmin RCE Attempt
+ET CURRENT_EVENTS QNAP Shellshock CVE-2014-6271
+ET WEB_SERVER Exploit Suspected PHP Injection Attack (\
+cmd=)
+ET WEB_SERVER Possible CVE-2014-6271 Attempt in Headers\""];
+	"ARBITRARY CODE EXECUTION
+us-cli | ID: 507" -> "ROOT PRIVILEGE ESCALATION
+us-cli | ID: 230"	[key=0,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 14:57:25\ngap: -21sec\nend_prev: 03/11/18, 14:\
+57:46\"'}"];
+	"SURFING
+http"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET WEB_SERVER WEB-PHP phpinfo access\""];
+	"SURFING
+http" -> "ROOT PRIVILEGE ESCALATION
+http | ID: 623"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 21:03:43\ngap: 13sec\nend_prev: 03/11/18, 21:03:29\"'}"];
+	"SURFING
+http" -> "ROOT PRIVILEGE ESCALATION
+us-cli | ID: 229"	[key=0,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 21:07:58\ngap: 4466sec\nend_prev: 03/11/18, 19:53:\
+32\"'}"];
+	"ARBITRARY CODE EXECUTION
+unknown | ID: 512"	[shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SPECIFIC_APPS BASE base_stat_common.php remote file include
+ET WEB_SPECIFIC_APPS Golem Gaming Portal root_path Parameter \
+Remote File inclusion Attempt
+ET WEB_SPECIFIC_APPS WEB-PHP RCE PHPBB 2004-1315
+ETPRO WEB_SPECIFIC_APPS PHPMoAdmin RCE Attempt
+ET \
+CURRENT_EVENTS QNAP Shellshock CVE-2014-6271
+ET WEB_SERVER Exploit Suspected PHP Injection Attack (cmd=)
+ET WEB_SERVER Possible \
+CVE-2014-6271 Attempt in Headers\""];
+	"ARBITRARY CODE EXECUTION
+unknown | ID: 512" -> "ROOT PRIVILEGE ESCALATION
+unknown | ID: 235"	[key=0,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 15:05:59\ngap: -46sec\nend_prev: 03/11/18, 15:\
+06:45\"'}"];
+	"ARBITRARY CODE EXECUTION
+etlservicemgr | ID: 514"	[shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SPECIFIC_APPS BASE base_stat_common.php remote file include
+ET WEB_SPECIFIC_APPS WEB-PHP RCE PHPBB 2004-1315
+ET CURRENT_\
+EVENTS QNAP Shellshock CVE-2014-6271
+ET WEB_SERVER Exploit Suspected PHP Injection Attack (cmd=)
+ET WEB_SERVER Possible CVE-2014-6271 \
+Attempt in Headers\""];
+	"ARBITRARY CODE EXECUTION
+etlservicemgr | ID: 514" -> "ROOT PRIVILEGE ESCALATION
+etlservicemgr | ID: 237"	[key=0,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 15:05:24\ngap: -31sec\nend_prev: 03/11/18, 15:\
+05:55\"'}"];
+	"ARBITRARY CODE EXECUTION
+etlservicemgr | ID: 514" -> "ROOT PRIVILEGE ESCALATION
+etlservicemgr | ID: 237"	[key=1,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 18:00:15\ngap: -55sec\nend_prev: 03/11/18, 18:\
+01:10\"'}"];
+	"INFO DISCOVERY
+http"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"GPL WEB_SERVER viewcode access
+GPL WEB_SERVER .htaccess access
+GPL WEB_SERVER writeto.cnf access
+GPL WEB_SERVER iisadmin access
+\
+ET WEB_SERVER PHP Easteregg Information-Disclosure (funny-logo)
+ET WEB_SPECIFIC_APPS Request to Wordpress W3TC Plug-in dbcache Directory
+\
+GPL WEB_SERVER services.cnf access
+ET WEB_SERVER PHP Easteregg Information-Disclosure (zend-logo)
+GPL EXPLOIT unicode directory \
+traversal attempt
+ET WEB_SERVER PHP Easteregg Information-Disclosure (php-logo)
+GPL WEB_SERVER service.cnf access
+GPL EXPLOIT iisadmpwd \
+attempt
+ET WEB_SERVER PHP SESSION SuperGlobal in URI
+GPL WEB_SERVER /~root access
+GPL WEB_SERVER authors.pwd access
+ET WEB_SERVER \
+PHP ENV SuperGlobal in URI
+GPL EXPLOIT .cnf access
+ET POLICY Proxy TRACE Request - inbound
+GPL WEB_SERVER .htpasswd access
+GPL WEB_\
+SERVER global.asa access
+ET WEB_SERVER PHP SERVER SuperGlobal in URI
+GPL EXPLOIT fpcount access
+GPL WEB_SERVER globals.pl access
+\
+GPL WEB_SERVER 403 Forbidden
+GPL WEB_SERVER service.pwd
+GPL EXPLOIT ISAPI .idq attempt
+ET WEB_SERVER PHP Easteregg Information-Disclosure (\
+phpinfo)
+GPL WEB_SERVER printenv access
+GPL WEB_SERVER author.exe access
+GPL EXPLOIT iissamples access
+GPL EXPLOIT .htr access
+ET \
+WEB_SERVER PHP REQUEST SuperGlobal in URI\""];
+	"INFO DISCOVERY
+http" -> "ROOT PRIVILEGE ESCALATION
+http | ID: 847"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 21:08:04\ngap: -235sec\nend_prev: 03/11/18, 21:11:\
+59\"'}"];
+	"INFO DISCOVERY
+http" -> "ROOT PRIVILEGE ESCALATION
+etlservicemgr | ID: 849"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 21:13:29\ngap: -92sec\nend_prev: 03/11/18, 21:15:01\"'}"];
+	"REMOTE SERVICE EXPLOIT
+http | ID: 372"	[fillcolor=yellow,
+		shape=box,
+		style="dotted,filled",
+		tooltip="\"ET WEB_SERVER Script tag in URI Possible Cross Site Scripting Attempt\""];
+	"REMOTE SERVICE EXPLOIT
+http | ID: 372" -> "ROOT PRIVILEGE ESCALATION
+etlservicemgr | ID: 144"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '<font color=\"maroon\"> start_next: 03/11/18, 21:44:36<br/>gap: -127sec<br/>\
+end_prev: 03/11/18, 21:46:44</font><br/><font color=\"maroon\"><b>Attacker: 10.0.254.202</b></font>'}"];
+	"ARBITRARY CODE EXECUTION
+commplex-main | ID: 526"	[shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SPECIFIC_APPS BASE base_stat_common.php remote file include
+ET WEB_SPECIFIC_APPS Golem Gaming Portal root_path Parameter \
+Remote File inclusion Attempt
+ET WEB_SPECIFIC_APPS WEB-PHP RCE PHPBB 2004-1315
+ETPRO WEB_SPECIFIC_APPS PHPMoAdmin RCE Attempt
+ET \
+CURRENT_EVENTS QNAP Shellshock CVE-2014-6271
+ET WEB_SERVER Exploit Suspected PHP Injection Attack (cmd=)
+ET WEB_SERVER Possible \
+CVE-2014-6271 Attempt in Headers\""];
+	"ARBITRARY CODE EXECUTION
+commplex-main | ID: 526" -> "ROOT PRIVILEGE ESCALATION
+commplex-main | ID: 248"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 03/11/18, 17:50:23\ngap: -43sec\nend_prev: 03/11/18, 17:51:06\"'}"];
+	"ARBITRARY CODE EXECUTION
+remoteware-cl | ID: 398"	[shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SPECIFIC_APPS WEB-PHP RCE PHPBB 2004-1315
+ET CURRENT_EVENTS QNAP Shellshock CVE-2014-6271
+ET WEB_SERVER Possible CVE-2014-6271 \
+Attempt in Headers\""];
+	"ARBITRARY CODE EXECUTION
+remoteware-cl | ID: 398" -> "ROOT PRIVILEGE ESCALATION
+remoteware-cl | ID: 157"	[key=0,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 15:06:04\ngap: -81sec\nend_prev: 03/11/18, 15:\
+07:25\"'}"];
+	"ARBITRARY CODE EXECUTION
+remoteware-cl | ID: 398" -> "ROOT PRIVILEGE ESCALATION
+remoteware-cl | ID: 157"	[key=1,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 18:07:49\ngap: -71sec\nend_prev: 03/11/18, 18:\
+09:00\"'}"];
+	"ARBITRARY CODE EXECUTION
+remoteware-cl | ID: 398" -> "ROOT PRIVILEGE ESCALATION
+remoteware-cl | ID: 157"	[key=2,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 15:48:40\ngap: -72sec\nend_prev: 03/11/18, 15:49:\
+52\"'}"];
+	"ARBITRARY CODE EXECUTION
+remoteware-cl | ID: 398" -> "ROOT PRIVILEGE ESCALATION
+remoteware-cl | ID: 157"	[key=3,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 15:48:40\ngap: -72sec\nend_prev: 03/11/18, 15:49:\
+52\"'}"];
+	"ARBITRARY CODE EXECUTION
+wap-wsp | ID: 461"	[shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SPECIFIC_APPS BASE base_stat_common.php remote file include
+ET WEB_SPECIFIC_APPS Golem Gaming Portal root_path Parameter \
+Remote File inclusion Attempt
+ET WEB_SPECIFIC_APPS WEB-PHP RCE PHPBB 2004-1315
+ET CURRENT_EVENTS QNAP Shellshock CVE-2014-6271
+ET \
+WEB_SERVER Exploit Suspected PHP Injection Attack (cmd=)
+ET WEB_SERVER Possible CVE-2014-6271 Attempt in Headers\""];
+	"ARBITRARY CODE EXECUTION
+wap-wsp | ID: 461" -> "ROOT PRIVILEGE ESCALATION
+wap-wsp | ID: 202"	[key=0,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 15:05:27\ngap: -9sec\nend_prev: 03/11/18, 15:\
+05:37\"'}"];
+	"ARBITRARY CODE EXECUTION
+wap-wsp | ID: 461" -> "ROOT PRIVILEGE ESCALATION
+wap-wsp | ID: 202"	[key=1,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 18:07:14\ngap: -9sec\nend_prev: 03/11/18, 18:\
+07:24\"'}"];
+	"SURFING
+wap-wsp"	[shape=oval,
+		tooltip="\"ET WEB_SERVER WEB-PHP phpinfo access\""];
+	"SURFING
+wap-wsp" -> "ROOT PRIVILEGE ESCALATION
+wap-wsp | ID: 627"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 21:10:42\ngap: 12sec\nend_prev: 03/11/18, 21:10:30\"'}"];
+	"INFO DISCOVERY
+unknown"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"GPL WEB_SERVER 403 Forbidden\""];
+	"INFO DISCOVERY
+unknown" -> "ROOT PRIVILEGE ESCALATION
+http | ID: 141"	[key=0,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 16:05:20\ngap: -49sec\nend_prev: 03/11/18, 16:06:\
+09\"'}"];
+	"INFO DISCOVERY
+unknown" -> "ROOT PRIVILEGE ESCALATION
+http | ID: 141"	[key=1,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 16:36:36\ngap: 53sec\nend_prev: 03/11/18, 16:35:\
+44\"'}"];
+	"INFO DISCOVERY
+unknown" -> "ROOT PRIVILEGE ESCALATION
+http | ID: 141"	[key=2,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 17:11:51\ngap: -62sec\nend_prev: 03/11/18, 17:12:\
+53\"'}"];
+	"INFO DISCOVERY
+unknown" -> "ROOT PRIVILEGE ESCALATION
+http | ID: 141"	[key=3,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 17:45:17\ngap: 52sec\nend_prev: 03/11/18, 17:44:\
+25\"'}"];
+	"INFO DISCOVERY
+unknown" -> "ROOT PRIVILEGE ESCALATION
+http | ID: 141"	[key=4,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 18:18:15\ngap: 49sec\nend_prev: 03/11/18, 18:17:\
+26\"'}"];
+	"INFO DISCOVERY
+unknown" -> "ROOT PRIVILEGE ESCALATION
+http | ID: 141"	[key=5,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 18:50:55\ngap: -34sec\nend_prev: 03/11/18, 18:51:\
+29\"'}"];
+	"INFO DISCOVERY
+unknown" -> "ROOT PRIVILEGE ESCALATION
+http | ID: 141"	[key=6,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 19:24:15\ngap: 52sec\nend_prev: 03/11/18, 19:23:\
+23\"'}"];
+	"ARBITRARY CODE EXECUTION
+http | ID: 368"	[shape=box,
+		tooltip="\"ET WEB_SERVER cmd.exe In URI - Possible Command Execution Attempt\""];
+	"ARBITRARY CODE EXECUTION
+http | ID: 368" -> "ROOT PRIVILEGE ESCALATION
+http | ID: 141"	[key=0,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 19:57:07\ngap: 13759sec\nend_prev: 03/11/18, 16:\
+07:48\"'}"];
+	"SERVICE DISCOVERY
+rpas-c2"	[shape=oval,
+		tooltip="\"ET SCAN Potential VNC Scan 5900-5920
+ET SCAN Potential VNC Scan 5800-5820\""];
+	"SERVICE DISCOVERY
+rpas-c2" -> "ROOT PRIVILEGE ESCALATION
+http | ID: 141"	[key=0,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 16:18:43\ngap: 4509sec\nend_prev: 03/11/18, 15:03:\
+35\"'}"];
+	"HOST DISCOVERY
+etlservicemgr"	[shape=oval,
+		tooltip="\"ET SCAN Nmap Scripting Engine User-Agent Detected (Nmap Scripting Engine)
+ET SCAN Possible Nmap User-Agent Observed\""];
+	"HOST DISCOVERY
+etlservicemgr" -> "ROOT PRIVILEGE ESCALATION
+http | ID: 141"	[key=0,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 16:20:09\ngap: 6417sec\nend_prev: 03/11/18, 14:33:\
+12\"'}"];
+	"BRUTE FORCE CREDENTIALS
+unknown | ID: 366"	[shape=box,
+		tooltip="\"ET SCAN Rapid IMAP Connections - Possible Brute Force Attack
+ET SCAN Rapid POP3 Connections - Possible Brute Force Attack
+ET SCAN \
+Rapid IMAPS Connections - Possible Brute Force Attack
+ET SCAN Rapid POP3S Connections - Possible Brute Force Attack\""];
+	"BRUTE FORCE CREDENTIALS
+unknown | ID: 366" -> "ROOT PRIVILEGE ESCALATION
+http | ID: 141"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 21:00:40\ngap: 156sec\nend_prev: 03/11/18, 20:58:03\"'}"];
+	"VULNERABILTY DISCOVERY
+remoteware-cl"	[shape=oval,
+		tooltip="\"ET SCAN Nikto Web App Scan in Progress\""];
+	"VULNERABILTY DISCOVERY
+remoteware-cl" -> "ROOT PRIVILEGE ESCALATION
+remoteware-cl | ID: -1"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 21:08:24\ngap: -245sec\nend_prev: 03/11/18, 21:12:\
+29\"'}"];
+	"VULNERABILTY DISCOVERY
+http"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Suspicious inbound to mySQL port 3306
+ET SCAN Suspicious inbound to MSSQL port 1433
+ET SCAN Nikto Web App Scan in Progress
+\
+ET SCAN Suspicious inbound to PostgreSQL port 5432
+ET SCAN Suspicious inbound to Oracle SQL port 1521
+ET SCAN Suspicious inbound \
+to mSQL port 4333\""];
+	"VULNERABILTY DISCOVERY
+http" -> "ROOT PRIVILEGE ESCALATION
+http | ID: 615"	[key=0,
+		data="{'color': 'maroon', 'label': '<font color=\"maroon\"> start_next: 03/11/18, 20:45:55<br/>gap: -82sec<br/>end_prev: 03/11/18, 20:47:\
+17</font><br/><font color=\"maroon\"><b>Attacker: 10.0.254.206</b></font>'}"];
+	"ARBITRARY CODE EXECUTION
+cslistener | ID: 532"	[shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SPECIFIC_APPS BASE base_stat_common.php remote file include
+ET WEB_SPECIFIC_APPS Golem Gaming Portal root_path Parameter \
+Remote File inclusion Attempt
+ET WEB_SPECIFIC_APPS WEB-PHP RCE PHPBB 2004-1315
+ETPRO WEB_SPECIFIC_APPS PHPMoAdmin RCE Attempt
+ET \
+CURRENT_EVENTS QNAP Shellshock CVE-2014-6271
+ET WEB_SERVER Exploit Suspected PHP Injection Attack (cmd=)
+ET WEB_SERVER Possible \
+CVE-2014-6271 Attempt in Headers\""];
+	"ARBITRARY CODE EXECUTION
+cslistener | ID: 532" -> "ROOT PRIVILEGE ESCALATION
+cslistener | ID: 254"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 03/11/18, 15:17:40\ngap: -12sec\nend_prev: 03/11/18, 15:17:52\"'}"];
+	"ARBITRARY CODE EXECUTION
+us-cli | ID: 231"	[shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SPECIFIC_APPS BASE base_stat_common.php remote file include
+ET WEB_SPECIFIC_APPS WEB-PHP RCE PHPBB 2004-1315
+ETPRO WEB_SPECIFIC_\
+APPS PHPMoAdmin RCE Attempt
+ET CURRENT_EVENTS QNAP Shellshock CVE-2014-6271
+ET WEB_SERVER Exploit Suspected PHP Injection Attack (\
+cmd=)
+ET WEB_SERVER Possible CVE-2014-6271 Attempt in Headers\""];
+	"ARBITRARY CODE EXECUTION
+us-cli | ID: 231" -> "ROOT PRIVILEGE ESCALATION
+us-cli | ID: 54"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 03/11/18, 15:33:09\ngap: -9sec\nend_prev: 03/11/18, 15:33:18\"'}"];
+	"ARBITRARY CODE EXECUTION
+http | ID: 353"	[fillcolor=yellow,
+		shape=box,
+		style=filled,
+		tooltip="\"ET CURRENT_EVENTS QNAP Shellshock CVE-2014-6271
+ET WEB_SPECIFIC_APPS DesktopOnNet don3_requiem.php app_path Parameter Remote File \
+Inclusion
+ET WEB_SPECIFIC_APPS Horde type Parameter Local File Inclusion Attempt
+ET WEB_SPECIFIC_APPS KR-Web krgourl.php DOCUMENT_\
+ROOT Parameter Remote File Inclusion Attempt
+ET WEB_SERVER Possible CVE-2014-6271 Attempt in Headers
+ET WEB_SPECIFIC_APPS BASE base_\
+stat_common.php remote file include
+ET WEB_SPECIFIC_APPS Golem Gaming Portal root_path Parameter Remote File inclusion Attempt
+ET \
+WEB_SPECIFIC_APPS Joomla swMenuPro ImageManager.php Remote File Inclusion Attempt
+ET WEB_SPECIFIC_APPS FormMailer formmailer.admin.inc.php \
+BASE_DIR Parameter Remote File Inclusion Attempt
+ET WEB_SPECIFIC_APPS AjaxPortal di.php pathtoserverdata Parameter Remote File Inclusion \
+Attempt
+ET WEB_SERVER cmd.exe In URI - Possible Command Execution Attempt
+ET WEB_SPECIFIC_APPS KingCMS menu.php CONFIG Parameter \
+Remote File Inclusion
+ETPRO WEB_SPECIFIC_APPS PHPMoAdmin RCE Attempt
+ET WEB_SERVER Exploit Suspected PHP Injection Attack (cmd=)
+\
+ET WEB_SPECIFIC_APPS Achievo debugger.php config_atkroot parameter Remote File Inclusion Attempt
+ET WEB_SERVER Possible CVE-2014-6271 \
+Attempt
+ET WEB_SPECIFIC_APPS Joomla Dada Mail Manager Component config.dadamail.php GLOBALS Parameter Remote File Inclusion
+ET WEB_\
+SPECIFIC_APPS WEB-PHP RCE PHPBB 2004-1315
+ET WEB_SPECIFIC_APPS DesktopOnNet frontpage.php app_path Parameter Remote File Inclusion
+\
+ET WEB_SPECIFIC_APPS Joomla AjaxChat Component ajcuser.php GLOBALS Parameter Remote File Inclusion Attempt\""];
+	"ARBITRARY CODE EXECUTION
+http | ID: 353" -> "ROOT PRIVILEGE ESCALATION
+http | ID: 133"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 14:29:29\ngap: -7sec\nend_prev: 03/11/18, 14:29:37\"'}"];
+	"ARBITRARY CODE EXECUTION
+http | ID: 353" -> "ROOT PRIVILEGE ESCALATION
+http | ID: 133"	[key=1,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 19:21:27\ngap: -8sec\nend_prev: 03/11/18, 19:21:35\"'}"];
+	"ARBITRARY CODE EXECUTION
+http | ID: 353" -> "ROOT PRIVILEGE ESCALATION
+http | ID: 133"	[key=2,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 14:42:25\ngap: -12sec\nend_prev: 03/11/18, 14:\
+42:37\"'}"];
+	"ARBITRARY CODE EXECUTION
+http | ID: 353" -> "ROOT PRIVILEGE ESCALATION
+http | ID: 133"	[key=3,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 17:37:58\ngap: -44sec\nend_prev: 03/11/18, 17:\
+38:42\"'}"];
+	"ARBITRARY CODE EXECUTION
+http | ID: 353" -> "ROOT PRIVILEGE ESCALATION
+http | ID: 133"	[key=4,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 22:31:07\ngap: -26sec\nend_prev: 03/11/18, 22:\
+31:33\"'}"];
+	"ARBITRARY CODE EXECUTION
+http | ID: 353" -> "ROOT PRIVILEGE ESCALATION
+http | ID: 133"	[key=5,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 03/11/18, 14:31:42\ngap: -86sec\nend_prev: 03/11/18, 14:33:08\"'}"];
+	"ARBITRARY CODE EXECUTION
+http | ID: 353" -> "ROOT PRIVILEGE ESCALATION
+http | ID: 133"	[key=6,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 03/11/18, 18:08:20\ngap: -8sec\nend_prev: 03/11/18, 18:08:28\"'}"];
+	"ARBITRARY CODE EXECUTION
+http | ID: 353" -> "ROOT PRIVILEGE ESCALATION
+http | ID: 133"	[key=7,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 15:16:53\ngap: -314sec\nend_prev: 03/11/18, 15:22:\
+07\"'}"];
+	"ARBITRARY CODE EXECUTION
+http | ID: 353" -> "ROOT PRIVILEGE ESCALATION
+http | ID: 133"	[key=8,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 22:55:11\ngap: -8sec\nend_prev: 03/11/18, 22:55:\
+19\"'}"];
+	"ARBITRARY CODE EXECUTION
+http | ID: 353" -> "ROOT PRIVILEGE ESCALATION
+http | ID: 133"	[key=9,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 19:58:24\ngap: -8sec\nend_prev: 03/11/18, 19:58:\
+33\"'}"];
+	"ARBITRARY CODE EXECUTION
+http | ID: 353" -> "ROOT PRIVILEGE ESCALATION
+http | ID: 133"	[key=10,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 03/11/18, 14:56:55\ngap: -8sec\nend_prev: 03/11/18, 14:57:02\"'}"];
+	"ARBITRARY CODE EXECUTION
+http | ID: 353" -> "ROOT PRIVILEGE ESCALATION
+http | ID: 133"	[key=11,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 03/11/18, 21:22:30\ngap: -8sec\nend_prev: 03/11/18, 21:22:38\"'}"];
+	"ARBITRARY CODE EXECUTION
+http | ID: 353" -> "ROOT PRIVILEGE ESCALATION
+http | ID: 133"	[key=12,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 03/11/18, 21:58:12\ngap: -10sec\nend_prev: 03/11/18, 21:58:21\"'}"];
+	"ARBITRARY CODE EXECUTION
+http | ID: 358"	[shape=box,
+		style=dotted,
+		tooltip="\"ET CURRENT_EVENTS QNAP Shellshock CVE-2014-6271
+ET WEB_SPECIFIC_APPS DesktopOnNet don3_requiem.php app_path Parameter Remote File \
+Inclusion
+ET WEB_SPECIFIC_APPS Horde type Parameter Local File Inclusion Attempt
+ET WEB_SPECIFIC_APPS Golem Gaming Portal root_path \
+Parameter Remote File inclusion Attempt
+ET WEB_SERVER Possible CVE-2014-6271 Attempt in Headers
+ET WEB_SPECIFIC_APPS BASE base_stat_\
+common.php remote file include
+ET WEB_SPECIFIC_APPS KR-Web krgourl.php DOCUMENT_ROOT Parameter Remote File Inclusion Attempt
+ET \
+WEB_SPECIFIC_APPS Joomla swMenuPro ImageManager.php Remote File Inclusion Attempt
+ET WEB_SPECIFIC_APPS FormMailer formmailer.admin.inc.php \
+BASE_DIR Parameter Remote File Inclusion Attempt
+ET WEB_SPECIFIC_APPS AjaxPortal di.php pathtoserverdata Parameter Remote File Inclusion \
+Attempt
+ET WEB_SERVER cmd.exe In URI - Possible Command Execution Attempt
+ET WEB_SPECIFIC_APPS KingCMS menu.php CONFIG Parameter \
+Remote File Inclusion
+ETPRO WEB_SPECIFIC_APPS PHPMoAdmin RCE Attempt
+ET WEB_SERVER Exploit Suspected PHP Injection Attack (cmd=)
+\
+ET WEB_SPECIFIC_APPS Achievo debugger.php config_atkroot parameter Remote File Inclusion Attempt
+ET WEB_SERVER Possible CVE-2014-6271 \
+Attempt
+ET WEB_SPECIFIC_APPS Joomla Dada Mail Manager Component config.dadamail.php GLOBALS Parameter Remote File Inclusion
+ET WEB_\
+SPECIFIC_APPS WEB-PHP RCE PHPBB 2004-1315
+ET WEB_SPECIFIC_APPS DesktopOnNet frontpage.php app_path Parameter Remote File Inclusion
+\
+ET WEB_SPECIFIC_APPS Joomla AjaxChat Component ajcuser.php GLOBALS Parameter Remote File Inclusion Attempt\""];
+	"ARBITRARY CODE EXECUTION
+http | ID: 358" -> "ROOT PRIVILEGE ESCALATION
+wap-wsp | ID: 136"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 19:22:03\ngap: -46sec\nend_prev: 03/11/18, 19:22:48\"'}"];
+}

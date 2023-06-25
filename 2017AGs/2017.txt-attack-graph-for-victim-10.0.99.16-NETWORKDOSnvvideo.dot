@@ -1,0 +1,75 @@
+digraph NETWORKDOSnvvideo {
+rankdir="BT"; 
+ graph [ nodesep="0.1", ranksep="0.02"] 
+ node [ fontname=Arial, fontsize=24,penwidth=3]; 
+ edge [ fontname=Arial, fontsize=20,penwidth=5 ];
+"Victim: 10.0.99.16
+NETWORK DoS
+nv-video" [shape=doubleoctagon, style=filled, fillcolor=salmon];
+{ rank = max; "Victim: 10.0.99.16
+NETWORK DoS
+nv-video"}
+"NETWORK DoS
+nv-video | ID: 84" -> "Victim: 10.0.99.16
+NETWORK DoS
+nv-video"
+"NETWORK DoS
+nv-video | ID: 84" [style=filled, fillcolor= salmon]
+{ rank=same; "NETWORK DoS
+nv-video | ID: 84"}
+"COMMAND AND CONTROL
+nv-video | ID: 1388" [style="dotted,filled", fillcolor= yellow]
+"COMMAND AND CONTROL
+nv-video | ID: 1388" -> "DEFENSE EVASION
+nv-video | ID: 989" [ color=purple] [label=<<font color="purple"> start_next: 04/11/17, 21:36:02<br/>gap: 0sec<br/>end_prev: 04/11/17, 21:36:02</font><br/><font color="purple"><b>Attacker: 10.0.254.35</b></font>>]
+"DEFENSE EVASION
+nv-video | ID: 989" -> "DATA EXFILTRATION
+nv-video | ID: 426" [ label="start_next: 04/11/17, 21:36:02
+gap: 0sec
+end_prev: 04/11/17, 21:36:02"][ fontcolor="purple" color=purple]
+"DATA EXFILTRATION
+nv-video | ID: 426" -> "NETWORK DoS
+nv-video | ID: 84" [ label="start_next: 04/11/17, 21:36:02
+gap: 0sec
+end_prev: 04/11/17, 21:36:02"][ fontcolor="purple" color=purple]
+"COMMAND AND CONTROL
+nv-video | ID: 1388" [shape=box]
+"COMMAND AND CONTROL
+nv-video | ID: 1388" [tooltip="ET TROJAN Windows nbtstat -r Microsoft Windows DOS prompt command exit OUTBOUND
+ET TROJAN Windows driverquery -si Microsoft Windows DOS prompt command exit OUTBOUND
+ET TROJAN Windows dir Microsoft Windows DOS prompt command exit OUTBOUND
+ET TROJAN Windows WMIC SERVER get Microsoft Windows DOS prompt command exit OUTBOUND
+ET TROJAN Windows nbtstat -n Microsoft Windows DOS prompt command exit OUTBOUND
+ET TROJAN Windows WMIC SERVICE get Microsoft Windows DOS prompt command exit OUTBOUND
+ET TROJAN Windows quser Microsoft Windows DOS prompt command exit OUTBOUND
+ET TROJAN Windows qwinsta Microsoft Windows DOS prompt command exit OUTBOUND
+ET TROJAN Windows nbtstat -a Microsoft Windows DOS prompt command exit OUTBOUND
+ET TROJAN Windows WMIC NIC get Microsoft Windows DOS prompt command exit OUTBOUND
+ET TROJAN Windows WMIC STARTUP get Microsoft Windows DOS prompt command exit OUTBOUND
+ET TROJAN Windows WMIC SHARE get Microsoft Windows DOS prompt command exit OUTBOUND
+ET TROJAN Windows WMIC OS get Microsoft Windows DOS prompt command exit OUTBOUND
+ET TROJAN Windows driverquery -v Microsoft Windows DOS prompt command exit OUTBOUND
+ET TROJAN Windows nbtstat -s Microsoft Windows DOS prompt command exit OUTBOUND
+ET TROJAN Windows gpresult Microsoft Windows DOS prompt command exit OUTBOUND
+ET TROJAN Windows WMIC NETLOGIN get Microsoft Windows DOS prompt command exit OUTBOUND
+ET TROJAN NgrBot IRC CnC Channel Join
+ET MOBILE_MALWARE Android/Code4hk.A Checkin
+ET TROJAN Windows WMIC COMPUTERSYSTEM get Microsoft Windows DOS prompt command exit OUTBOUND
+ET TROJAN Windows WMIC PROCESS get Microsoft Windows DOS prompt command exit OUTBOUND"]
+"DEFENSE EVASION
+nv-video | ID: 989" [style="dotted", shape=box]
+"DEFENSE EVASION
+nv-video | ID: 989" [tooltip="ET P2P TOR 1.0 Outbound Circuit Traffic"]
+"DATA EXFILTRATION
+nv-video | ID: 426" [style="dotted", shape=hexagon]
+"DATA EXFILTRATION
+nv-video | ID: 426" [tooltip="ET TROJAN ATTACKER IRCBot - PRIVMSG Response - Directory Listing
+ET TROJAN ATTACKER IRCBot - PRIVMSG Response - Directory Listing *nix
+ET TROJAN ATTACKER IRCBot - The command completed successfully - PRIVMSG Response
+ET TROJAN ATTACKER IRCBot - PRIVMSG Response - net command output
+ET TROJAN ATTACKER IRCBot - PRIVMSG Response - ipconfig command output"]
+"NETWORK DoS
+nv-video | ID: 84" [shape=hexagon]
+"NETWORK DoS
+nv-video | ID: 84" [tooltip="ET TROJAN DDoS.XOR Checkin"]
+}

@@ -1,0 +1,33 @@
+digraph DATADESTRUCTIONuscli {
+rankdir="BT"; 
+ graph [ nodesep="0.1", ranksep="0.02"] 
+ node [ fontname=Arial, fontsize=24,penwidth=3]; 
+ edge [ fontname=Arial, fontsize=20,penwidth=5 ];
+"Victim: 10.0.1.46
+DATA DESTRUCTION
+us-cli" [shape=doubleoctagon, style=filled, fillcolor=salmon];
+{ rank = max; "Victim: 10.0.1.46
+DATA DESTRUCTION
+us-cli"}
+"DATA DESTRUCTION
+us-cli | ID: 1332" -> "Victim: 10.0.1.46
+DATA DESTRUCTION
+us-cli"
+"DATA DESTRUCTION
+us-cli | ID: 1332" [style="filled,dotted", fillcolor= salmon]
+{ rank=same; "DATA DESTRUCTION
+us-cli | ID: 1332"}
+"INFO DISCOVERY
+unknown" [style=filled, fillcolor= yellow]
+"INFO DISCOVERY
+unknown" -> "DATA DESTRUCTION
+us-cli | ID: 1332" [ color=blue] [label=<<font color="blue"> start_next: 03/11/18, 15:22:24<br/>gap: 1604sec<br/>end_prev: 03/11/18, 14:55:40</font><br/><font color="blue"><b>Attacker: 10.0.254.204</b></font>>]
+"INFO DISCOVERY
+unknown" [shape=oval]
+"INFO DISCOVERY
+unknown" [tooltip="GPL WEB_SERVER 403 Forbidden"]
+"DATA DESTRUCTION
+us-cli | ID: 1332" [style="dotted", shape=hexagon]
+"DATA DESTRUCTION
+us-cli | ID: 1332" [tooltip="GPL WEB_SERVER DELETE attempt"]
+}

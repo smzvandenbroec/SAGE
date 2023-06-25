@@ -1,0 +1,38 @@
+digraph NETWORKDOShttp {
+rankdir="BT"; 
+ graph [ nodesep="0.1", ranksep="0.02"] 
+ node [ fontname=Arial, fontsize=24,penwidth=3]; 
+ edge [ fontname=Arial, fontsize=20,penwidth=5 ];
+"Victim: 10.0.0.22
+NETWORK DoS
+http" [shape=doubleoctagon, style=filled, fillcolor=salmon];
+{ rank = max; "Victim: 10.0.0.22
+NETWORK DoS
+http"}
+"NETWORK DoS
+http | ID: 112" -> "Victim: 10.0.0.22
+NETWORK DoS
+http"
+"NETWORK DoS
+http | ID: 112" [style="filled,dotted", fillcolor= salmon]
+{ rank=same; "NETWORK DoS
+http | ID: 112"}
+"INFO DISCOVERY
+http" [style=filled, fillcolor= yellow]
+"INFO DISCOVERY
+http" -> "NETWORK DoS
+http | ID: 112" [ color=magenta] [label=<<font color="magenta"> start_next: 03/11/18, 15:10:01<br/>gap: -1sec<br/>end_prev: 03/11/18, 15:10:02</font><br/><font color="magenta"><b>Attacker: 10.0.254.201</b></font>>]
+"INFO DISCOVERY
+http" [shape=oval]
+"INFO DISCOVERY
+http" [tooltip="GPL WEB_SERVER .htaccess access
+GPL WEB_SERVER /~root access
+GPL WEB_SERVER iisadmin access
+GPL WEB_SERVER printenv access
+GPL WEB_SERVER .htpasswd access
+GPL WEB_SERVER global.asa access"]
+"NETWORK DoS
+http | ID: 112" [style="dotted", shape=hexagon]
+"NETWORK DoS
+http | ID: 112" [tooltip="ET WEB_SERVER Possible Cherokee Web Server GET AUX Request Denial Of Service Attempt"]
+}

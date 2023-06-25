@@ -1,0 +1,207 @@
+digraph DATAEXFILTRATIONwapwsp {
+rankdir="BT"; 
+ graph [ nodesep="0.1", ranksep="0.02"] 
+ node [ fontname=Arial, fontsize=24,penwidth=3]; 
+ edge [ fontname=Arial, fontsize=20,penwidth=5 ];
+"Victim: 10.0.0.151
+DATA EXFILTRATION
+wap-wsp" [shape=doubleoctagon, style=filled, fillcolor=salmon];
+{ rank = max; "Victim: 10.0.0.151
+DATA EXFILTRATION
+wap-wsp"}
+"DATA EXFILTRATION
+wap-wsp | ID: 68" -> "Victim: 10.0.0.151
+DATA EXFILTRATION
+wap-wsp"
+"DATA EXFILTRATION
+wap-wsp | ID: 68" [style=filled, fillcolor= salmon]
+{ rank=same; "DATA EXFILTRATION
+wap-wsp | ID: 68"}
+"INFO DISCOVERY
+xdmcp" [style=filled, fillcolor= yellow]
+"INFO DISCOVERY
+xdmcp" -> "ACCOUNT MANIPULATION
+snmp | ID: 965" [ color=blue] [label=<<font color="blue"> start_next: 04/11/17, 14:03:19<br/>gap: -22sec<br/>end_prev: 04/11/17, 14:03:41</font><br/><font color="blue"><b>Attacker: 10.0.254.31</b></font>>]
+"ACCOUNT MANIPULATION
+snmp | ID: 965" -> "DATA DELIVERY
+wap-wsp | ID: 406" [ label="start_next: 04/11/17, 14:03:49
+gap: 26sec
+end_prev: 04/11/17, 14:03:23"][ fontcolor="blue" color=blue]
+"DATA DELIVERY
+wap-wsp | ID: 406" -> "DATA EXFILTRATION
+wap-wsp | ID: 68" [ label="start_next: 04/11/17, 14:03:58
+gap: 0sec
+end_prev: 04/11/17, 14:03:58"][ fontcolor="blue" color=blue]
+"VULNERABILTY DISCOVERY
+ms-sql-s" [style=filled, fillcolor= yellow]
+"VULNERABILTY DISCOVERY
+ms-sql-s" -> "VULNERABILTY DISCOVERY
+ncube-lm" [ color=purple] [label=<<font color="purple"> start_next: 04/11/17, 14:03:11<br/>gap: 1391sec<br/>end_prev: 04/11/17, 13:40:00</font><br/><font color="purple"><b>Attacker: 10.0.254.30</b></font>>]
+"VULNERABILTY DISCOVERY
+ncube-lm" -> "SERVICE DISCOVERY
+unknown" [ label="start_next: 04/11/17, 14:03:49
+gap: -18sec
+end_prev: 04/11/17, 14:04:07"][ fontcolor="purple" color=purple]
+"SERVICE DISCOVERY
+unknown" -> "HOST DISCOVERY
+wap-wsp" [ label="start_next: 04/11/17, 14:06:33
+gap: 110sec
+end_prev: 04/11/17, 14:04:42"][ fontcolor="purple" color=purple]
+"HOST DISCOVERY
+wap-wsp" -> "INFO DISCOVERY
+wap-wsp" [ label="start_next: 04/11/17, 14:07:50
+gap: 77sec
+end_prev: 04/11/17, 14:06:33"][ fontcolor="purple" color=purple]
+"INFO DISCOVERY
+wap-wsp" -> "SURFING
+wap-wsp" [ label="start_next: 04/11/17, 14:07:50
+gap: 1sec
+end_prev: 04/11/17, 14:07:50"][ fontcolor="purple" color=purple]
+"SURFING
+wap-wsp" -> "DATA EXFILTRATION
+wap-wsp | ID: 68" [ label="start_next: 04/11/17, 14:07:51
+gap: 0sec
+end_prev: 04/11/17, 14:07:51"][ fontcolor="purple" color=purple]
+"SERVICE DISCOVERY
+unknown" [style=filled, fillcolor= yellow]
+"SERVICE DISCOVERY
+unknown" -> "VULNERABILTY DISCOVERY
+ncube-lm" [ color=purple] [label=<<font color="purple"> start_next: 04/11/17, 17:35:45<br/>gap: 0sec<br/>end_prev: 04/11/17, 17:35:45</font><br/><font color="purple"><b>Attacker: 10.0.254.30</b></font>>]
+"VULNERABILTY DISCOVERY
+ncube-lm" -> "HOST DISCOVERY
+wap-wsp" [ label="start_next: 04/11/17, 17:37:26
+gap: 101sec
+end_prev: 04/11/17, 17:35:45"][ fontcolor="purple" color=purple]
+"HOST DISCOVERY
+wap-wsp" -> "VULNERABILTY DISCOVERY
+wap-wsp" [ label="start_next: 04/11/17, 17:46:43
+gap: 556sec
+end_prev: 04/11/17, 17:37:26"][ fontcolor="purple" color=purple]
+"VULNERABILTY DISCOVERY
+wap-wsp" -> "ARBITRARY CODE EXECUTION
+wap-wsp | ID: 81" [ label="start_next: 04/11/17, 17:46:44
+gap: 1sec
+end_prev: 04/11/17, 17:46:43"][ fontcolor="purple" color=purple]
+"ARBITRARY CODE EXECUTION
+wap-wsp | ID: 81" -> "SURFING
+wap-wsp" [ label="start_next: 04/11/17, 17:47:25
+gap: 41sec
+end_prev: 04/11/17, 17:46:44"][ fontcolor="purple" color=purple]
+"SURFING
+wap-wsp" -> "INFO DISCOVERY
+wap-wsp" [ label="start_next: 04/11/17, 17:47:27
+gap: -1sec
+end_prev: 04/11/17, 17:47:29"][ fontcolor="purple" color=purple]
+"INFO DISCOVERY
+wap-wsp" -> "DATA EXFILTRATION
+wap-wsp | ID: 68" [ label="start_next: 04/11/17, 17:47:28
+gap: 1sec
+end_prev: 04/11/17, 17:47:27"][ fontcolor="purple" color=purple]
+"VULNERABILTY DISCOVERY
+mysql" [style=filled, fillcolor= yellow]
+"VULNERABILTY DISCOVERY
+mysql" -> "SERVICE DISCOVERY
+ssh" [ color=purple] [label=<<font color="purple"> start_next: 04/11/17, 19:40:46<br/>gap: 1sec<br/>end_prev: 04/11/17, 19:40:45</font><br/><font color="purple"><b>Attacker: 10.0.254.30</b></font>>]
+"SERVICE DISCOVERY
+ssh" -> "SERVICE DISCOVERY
+unknown" [ label="start_next: 04/11/17, 20:41:17
+gap: 3631sec
+end_prev: 04/11/17, 19:40:46"][ fontcolor="purple" color=purple]
+"SERVICE DISCOVERY
+unknown" -> "VULNERABILTY DISCOVERY
+ncube-lm" [ label="start_next: 04/11/17, 20:41:17
+gap: 0sec
+end_prev: 04/11/17, 20:41:17"][ fontcolor="purple" color=purple]
+"VULNERABILTY DISCOVERY
+ncube-lm" -> "HOST DISCOVERY
+wap-wsp" [ label="start_next: 04/11/17, 20:44:14
+gap: 172sec
+end_prev: 04/11/17, 20:41:22"][ fontcolor="purple" color=purple]
+"HOST DISCOVERY
+wap-wsp" -> "VULNERABILTY DISCOVERY
+wap-wsp" [ label="start_next: 04/11/17, 20:48:03
+gap: 229sec
+end_prev: 04/11/17, 20:44:14"][ fontcolor="purple" color=purple]
+"VULNERABILTY DISCOVERY
+wap-wsp" -> "ARBITRARY CODE EXECUTION
+wap-wsp | ID: 81" [ label="start_next: 04/11/17, 20:48:04
+gap: 1sec
+end_prev: 04/11/17, 20:48:03"][ fontcolor="purple" color=purple]
+"ARBITRARY CODE EXECUTION
+wap-wsp | ID: 81" -> "SURFING
+wap-wsp" [ label="start_next: 04/11/17, 20:48:45
+gap: 41sec
+end_prev: 04/11/17, 20:48:04"][ fontcolor="purple" color=purple]
+"SURFING
+wap-wsp" -> "INFO DISCOVERY
+wap-wsp" [ label="start_next: 04/11/17, 20:48:47
+gap: -1sec
+end_prev: 04/11/17, 20:48:48"][ fontcolor="purple" color=purple]
+"INFO DISCOVERY
+wap-wsp" -> "DATA EXFILTRATION
+wap-wsp | ID: 68" [ label="start_next: 04/11/17, 20:48:48
+gap: 1sec
+end_prev: 04/11/17, 20:48:47"][ fontcolor="purple" color=purple]
+"INFO DISCOVERY
+xdmcp" [shape=oval]
+"INFO DISCOVERY
+xdmcp" [tooltip="GPL WEB_SERVER mod_gzip_status access
+GPL RPC xdmcp info query"]
+"ACCOUNT MANIPULATION
+snmp | ID: 965" [style="dotted", shape=box]
+"ACCOUNT MANIPULATION
+snmp | ID: 965" [tooltip="GPL SNMP private access udp
+GPL SNMP public access udp"]
+"DATA DELIVERY
+wap-wsp | ID: 406" [style="dotted", shape=hexagon]
+"DATA DELIVERY
+wap-wsp | ID: 406" [tooltip="ET WEB_SERVER PHP tags in HTTP POST
+GPL WEB_SERVER perl post attempt"]
+"DATA EXFILTRATION
+wap-wsp | ID: 68" [shape=hexagon]
+"DATA EXFILTRATION
+wap-wsp | ID: 68" [tooltip="ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability"]
+"VULNERABILTY DISCOVERY
+ms-sql-s" [shape=oval]
+"VULNERABILTY DISCOVERY
+ms-sql-s" [tooltip="ET POLICY Suspicious inbound to MSSQL port 1433"]
+"VULNERABILTY DISCOVERY
+ncube-lm" [shape=oval]
+"VULNERABILTY DISCOVERY
+ncube-lm" [tooltip="ET POLICY Suspicious inbound to Oracle SQL port 1521
+ET POLICY Suspicious inbound to mSQL port 4333"]
+"SERVICE DISCOVERY
+unknown" [shape=oval]
+"SERVICE DISCOVERY
+unknown" [tooltip="ET SCAN Potential VNC Scan 5800-5820
+ET SCAN Potential VNC Scan 5900-5920"]
+"HOST DISCOVERY
+wap-wsp" [shape=oval]
+"HOST DISCOVERY
+wap-wsp" [tooltip="ET SCAN Possible Nmap User-Agent Observed
+ET SCAN Nmap Scripting Engine User-Agent Detected (Nmap Scripting Engine)"]
+"INFO DISCOVERY
+wap-wsp" [shape=oval]
+"INFO DISCOVERY
+wap-wsp" [tooltip="GPL WEB_SERVER globals.pl access"]
+"SURFING
+wap-wsp" [shape=oval]
+"SURFING
+wap-wsp" [tooltip="ET WEB_SERVER WEB-PHP phpinfo access"]
+"VULNERABILTY DISCOVERY
+wap-wsp" [shape=oval]
+"VULNERABILTY DISCOVERY
+wap-wsp" [tooltip="ET SCAN Nikto Web App Scan in Progress"]
+"ARBITRARY CODE EXECUTION
+wap-wsp | ID: 81" [shape=box]
+"ARBITRARY CODE EXECUTION
+wap-wsp | ID: 81" [tooltip="ET CURRENT_EVENTS QNAP Shellshock CVE-2014-6271"]
+"VULNERABILTY DISCOVERY
+mysql" [shape=oval]
+"VULNERABILTY DISCOVERY
+mysql" [tooltip="ET POLICY Suspicious inbound to mySQL port 3306"]
+"SERVICE DISCOVERY
+ssh" [shape=oval]
+"SERVICE DISCOVERY
+ssh" [tooltip="ET SCAN Potential SSH Scan"]
+}

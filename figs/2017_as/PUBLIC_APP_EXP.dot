@@ -1,0 +1,22 @@
+digraph "" {
+	"PUBLIC APP EXPLOIT
+http | ID: 678"	[shape=box,
+		tooltip="\"ET SCAN DEBUG Method Request with Command\""];
+	"DATA EXFILTRATION
+http | ID: 228"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability\""];
+	"PUBLIC APP EXPLOIT
+http | ID: 678" -> "DATA EXFILTRATION
+http | ID: 228"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 20:25:19\ngap: 0sec\nend_prev: 04/11/17, 20:25:19\"'}"];
+	"PRIVILEGE ESCALATION
+http | ID: 1160"	[shape=box,
+		style=dotted,
+		tooltip="\"ET POLICY Http Client Body contains pass= in cleartext\""];
+	"PRIVILEGE ESCALATION
+http | ID: 1160" -> "PUBLIC APP EXPLOIT
+http | ID: 678"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 20:25:19\ngap: 0sec\nend_prev: 04/11/17, 20:25:19\"'}"];
+}

@@ -1,0 +1,562 @@
+digraph "" {
+	"DATA MANIPULATION
+http | ID: 17"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SERVER Possible SQL Injection Attempt SELECT FROM
+ET WEB_SERVER MYSQL SELECT CONCAT SQL Injection Attempt
+ET WEB_SERVER \
+Possible SQL Injection Attempt UNION SELECT\""];
+	"Victim: 10.0.0.11
+DATA MANIPULATION
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA MANIPULATION
+http | ID: 17" -> "Victim: 10.0.0.11
+DATA MANIPULATION
+http"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.176
+DATA MANIPULATION
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA MANIPULATION
+http | ID: 17" -> "Victim: 10.0.0.176
+DATA MANIPULATION
+http"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.22
+DATA MANIPULATION
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA MANIPULATION
+http | ID: 17" -> "Victim: 10.0.0.22
+DATA MANIPULATION
+http"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.23
+DATA MANIPULATION
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA MANIPULATION
+http | ID: 17" -> "Victim: 10.0.0.23
+DATA MANIPULATION
+http"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.24
+DATA MANIPULATION
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA MANIPULATION
+http | ID: 17" -> "Victim: 10.0.0.24
+DATA MANIPULATION
+http"	[key=0,
+		data="{}"];
+	"Victim: 10.0.1.40
+DATA MANIPULATION
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA MANIPULATION
+http | ID: 17" -> "Victim: 10.0.1.40
+DATA MANIPULATION
+http"	[key=0,
+		data="{}"];
+	"Victim: 10.0.1.41
+DATA MANIPULATION
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA MANIPULATION
+http | ID: 17" -> "Victim: 10.0.1.41
+DATA MANIPULATION
+http"	[key=0,
+		data="{}"];
+	"Victim: 10.0.1.46
+DATA MANIPULATION
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA MANIPULATION
+http | ID: 17" -> "Victim: 10.0.1.46
+DATA MANIPULATION
+http"	[key=0,
+		data="{}"];
+	"Victim: 10.0.1.5
+DATA MANIPULATION
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA MANIPULATION
+http | ID: 17" -> "Victim: 10.0.1.5
+DATA MANIPULATION
+http"	[key=0,
+		data="{}"];
+	"DATA MANIPULATION
+http | ID: 129"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SERVER Possible SQL Injection Attempt SELECT FROM
+ET WEB_SERVER MYSQL SELECT CONCAT SQL Injection Attempt
+ET WEB_SERVER \
+Possible SQL Injection Attempt UNION SELECT\""];
+	"DATA MANIPULATION
+http | ID: 129" -> "Victim: 10.0.0.176
+DATA MANIPULATION
+http"	[key=0,
+		data="{}"];
+	"DATA MANIPULATION
+http | ID: 129" -> "Victim: 10.0.0.22
+DATA MANIPULATION
+http"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.176
+DATA MANIPULATION
+etlservicemgr"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA MANIPULATION
+etlservicemgr | ID: 59"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SERVER Possible SQL Injection Attempt SELECT FROM
+ET WEB_SERVER Possible SQL Injection Attempt UNION SELECT\""];
+	"DATA MANIPULATION
+etlservicemgr | ID: 59" -> "Victim: 10.0.0.176
+DATA MANIPULATION
+etlservicemgr"	[key=0,
+		data="{}"];
+	"DATA MANIPULATION
+http | ID: 198"	[fillcolor=salmon,
+		shape=hexagon,
+		style=dotted,
+		tooltip="\"ET WEB_SERVER Possible SQL Injection Attempt UNION SELECT\""];
+	"DATA MANIPULATION
+http | ID: 198" -> "Victim: 10.0.0.176
+DATA MANIPULATION
+http"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.20
+DATA MANIPULATION
+remoteware-cl"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA MANIPULATION
+remoteware-cl | ID: 23"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SERVER Possible SQL Injection Attempt SELECT FROM
+ET WEB_SERVER Possible SQL Injection Attempt UNION SELECT\""];
+	"DATA MANIPULATION
+remoteware-cl | ID: 23" -> "Victim: 10.0.0.20
+DATA MANIPULATION
+remoteware-cl"	[key=0,
+		data="{}"];
+	"DATA MANIPULATION
+unknown | ID: 57"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SERVER Possible SQL Injection Attempt SELECT FROM
+ET WEB_SERVER Possible SQL Injection Attempt UNION SELECT\""];
+	"Victim: 10.0.0.23
+DATA MANIPULATION
+unknown"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA MANIPULATION
+unknown | ID: 57" -> "Victim: 10.0.0.23
+DATA MANIPULATION
+unknown"	[key=0,
+		data="{}"];
+	"DATA MANIPULATION
+wap-wsp | ID: 39"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SERVER Possible SQL Injection Attempt SELECT FROM
+ET WEB_SERVER Possible SQL Injection Attempt UNION SELECT\""];
+	"Victim: 10.0.0.24
+DATA MANIPULATION
+wap-wsp"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA MANIPULATION
+wap-wsp | ID: 39" -> "Victim: 10.0.0.24
+DATA MANIPULATION
+wap-wsp"	[key=0,
+		data="{}"];
+	"DATA MANIPULATION
+cslistener | ID: 72"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SERVER Possible SQL Injection Attempt SELECT FROM
+ET WEB_SERVER Possible SQL Injection Attempt UNION SELECT\""];
+	"Victim: 10.0.0.24
+DATA MANIPULATION
+cslistener"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA MANIPULATION
+cslistener | ID: 72" -> "Victim: 10.0.0.24
+DATA MANIPULATION
+cslistener"	[key=0,
+		data="{}"];
+	"DATA MANIPULATION
+commplex-main | ID: 66"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SERVER Possible SQL Injection Attempt SELECT FROM
+ET WEB_SERVER Possible SQL Injection Attempt UNION SELECT\""];
+	"Victim: 10.0.1.42
+DATA MANIPULATION
+commplex-main"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA MANIPULATION
+commplex-main | ID: 66" -> "Victim: 10.0.1.42
+DATA MANIPULATION
+commplex-main"	[key=0,
+		data="{}"];
+	"DATA MANIPULATION
+us-cli | ID: 53"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SERVER Possible SQL Injection Attempt SELECT FROM
+ET WEB_SERVER Possible SQL Injection Attempt UNION SELECT\""];
+	"Victim: 10.0.1.46
+DATA MANIPULATION
+us-cli"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA MANIPULATION
+us-cli | ID: 53" -> "Victim: 10.0.1.46
+DATA MANIPULATION
+us-cli"	[key=0,
+		data="{}"];
+	"DATA MANIPULATION
+us-cli | ID: 228"	[fillcolor=salmon,
+		shape=hexagon,
+		style=dotted,
+		tooltip="\"ET WEB_SERVER Possible SQL Injection Attempt SELECT FROM
+ET WEB_SERVER Possible SQL Injection Attempt UNION SELECT\""];
+	"DATA MANIPULATION
+us-cli | ID: 228" -> "Victim: 10.0.1.46
+DATA MANIPULATION
+us-cli"	[key=0,
+		data="{}"];
+	"VULNERABILTY DISCOVERY
+cslistener"	[shape=oval,
+		tooltip="\"ET SCAN Nikto Web App Scan in Progress\""];
+	"VULNERABILTY DISCOVERY
+cslistener" -> "DATA MANIPULATION
+wap-wsp | ID: 39"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 22:39:50\ngap: -132sec\nend_prev: 03/11/18, 22:42:\
+02\"'}"];
+	"ROOT PRIVILEGE ESCALATION
+wap-wsp | ID: 202"	[shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SERVER ColdFusion administrator access
+ETPRO WEB_SPECIFIC_APPS ipTIME firmware < 9.58 RCE
+GPL EXPLOIT administrators.pwd \
+access
+GPL EXPLOIT CodeRed v2 root.exe access\""];
+	"ROOT PRIVILEGE ESCALATION
+wap-wsp | ID: 202" -> "DATA MANIPULATION
+wap-wsp | ID: 39"	[key=0,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 15:05:28\ngap: -4sec\nend_prev: 03/11/18, 15:\
+05:33\"'}"];
+	"ROOT PRIVILEGE ESCALATION
+wap-wsp | ID: 202" -> "DATA MANIPULATION
+wap-wsp | ID: 39"	[key=1,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 18:07:15\ngap: -4sec\nend_prev: 03/11/18, 18:\
+07:19\"'}"];
+	"REMOTE SERVICE EXPLOIT
+us-cli | ID: 505"	[shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SERVER Script tag in URI Possible Cross Site Scripting Attempt\""];
+	"REMOTE SERVICE EXPLOIT
+us-cli | ID: 505" -> "DATA MANIPULATION
+us-cli | ID: 228"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 03/11/18, 15:29:20\ngap: -237sec\nend_prev: 03/11/18, 15:33:\
+16\"'}"];
+	"REMOTE SERVICE EXPLOIT
+us-cli | ID: 505" -> "DATA MANIPULATION
+us-cli | ID: 228"	[key=1,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 03/11/18, 15:29:20\ngap: -237sec\nend_prev: 03/11/18, 15:33:\
+16\"'}"];
+	"VULNERABILTY DISCOVERY
+http"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Suspicious inbound to mySQL port 3306
+ET SCAN Suspicious inbound to MSSQL port 1433
+ET SCAN Nikto Web App Scan in Progress
+\
+ET SCAN Suspicious inbound to PostgreSQL port 5432
+ET SCAN Suspicious inbound to Oracle SQL port 1521
+ET SCAN Suspicious inbound \
+to mSQL port 4333\""];
+	"VULNERABILTY DISCOVERY
+http" -> "DATA MANIPULATION
+http | ID: 17"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 21:44:35\ngap: -128sec\nend_prev: 03/11/18, 21:46:\
+44\"'}"];
+	"VULNERABILTY DISCOVERY
+http" -> "DATA MANIPULATION
+http | ID: 129"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 03/11/18, 17:42:51\ngap: 0sec\nend_prev: 03/11/18, 17:42:51\"'}"];
+	"REMOTE SERVICE EXPLOIT
+http | ID: 347"	[shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SERVER Script tag in URI Possible Cross Site Scripting Attempt\""];
+	"REMOTE SERVICE EXPLOIT
+http | ID: 347" -> "DATA MANIPULATION
+http | ID: 129"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 20:45:55\ngap: 0sec\nend_prev: 03/11/18, 20:45:55\"'}"];
+	"REMOTE SERVICE EXPLOIT
+http | ID: 457"	[fillcolor=yellow,
+		shape=box,
+		style="dotted,filled",
+		tooltip="\"ET WEB_SERVER Script tag in URI Possible Cross Site Scripting Attempt\""];
+	"REMOTE SERVICE EXPLOIT
+http | ID: 457" -> "DATA MANIPULATION
+http | ID: 198"	[key=0,
+		data="{'color': 'maroon', 'label': '<font color=\"maroon\"> start_next: 03/11/18, 21:27:50<br/>gap: 12sec<br/>end_prev: 03/11/18, 21:27:\
+38</font><br/><font color=\"maroon\"><b>Attacker: 10.0.254.104</b></font>'}"];
+	"ROOT PRIVILEGE ESCALATION
+unknown | ID: 235"	[shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SERVER ColdFusion administrator access
+ETPRO WEB_SPECIFIC_APPS ipTIME firmware < 9.58 RCE
+GPL EXPLOIT administrators.pwd \
+access
+GPL EXPLOIT CodeRed v2 root.exe access\""];
+	"ROOT PRIVILEGE ESCALATION
+unknown | ID: 235" -> "DATA MANIPULATION
+unknown | ID: 57"	[key=0,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 15:06:03\ngap: -15sec\nend_prev: 03/11/18, 15:\
+06:17\"'}"];
+	"ROOT PRIVILEGE ESCALATION
+remoteware-cl | ID: 157"	[shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SERVER ColdFusion administrator access
+ETPRO WEB_SPECIFIC_APPS ipTIME firmware < 9.58 RCE
+GPL EXPLOIT administrators.pwd \
+access
+GPL EXPLOIT CodeRed v2 root.exe access\""];
+	"ROOT PRIVILEGE ESCALATION
+remoteware-cl | ID: 157" -> "DATA MANIPULATION
+remoteware-cl | ID: 23"	[key=0,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 15:07:00\ngap: -148sec\nend_prev: 03/11/18, \
+15:09:29\"'}"];
+	"ROOT PRIVILEGE ESCALATION
+remoteware-cl | ID: 157" -> "DATA MANIPULATION
+remoteware-cl | ID: 23"	[key=1,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 18:08:43\ngap: -147sec\nend_prev: 03/11/18, \
+18:11:10\"'}"];
+	"ROOT PRIVILEGE ESCALATION
+remoteware-cl | ID: 157" -> "DATA MANIPULATION
+remoteware-cl | ID: 23"	[key=2,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 15:49:34\ngap: -146sec\nend_prev: 03/11/18, 15:52:\
+00\"'}"];
+	"ROOT PRIVILEGE ESCALATION
+remoteware-cl | ID: 157" -> "DATA MANIPULATION
+remoteware-cl | ID: 23"	[key=3,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 15:49:34\ngap: -146sec\nend_prev: 03/11/18, 15:52:\
+00\"'}"];
+	"DATA DELIVERY
+http | ID: 134"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SPECIFIC_APPS WHMCompleteSolution templatefile Parameter Local File Inclusion Attempt
+GPL WEB_SERVER perl post attempt
+ET \
+WEB_SPECIFIC_APPS evision cms addplain.php module parameter Local File Inclusion
+ET WEB_SERVER PHP Possible php Remote File Inclusion \
+Attempt
+ET WEB_SERVER PHP tags in HTTP POST
+ET WEB_SPECIFIC_APPS Opencadastre soustab.php script Local File Inclusion Vulnerability
+\
+ET WEB_SERVER PHP Possible file Remote File Inclusion Attempt
+ET WEB_SPECIFIC_APPS Zen Cart loader_file Parameter Local File Inclusion \
+Attempt
+ET WEB_SPECIFIC_APPS axdcms aXconf Parameter Local File Inclusion Attempt\""];
+	"DATA DELIVERY
+http | ID: 134" -> "DATA MANIPULATION
+http | ID: 17"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 21:07:21\ngap: -105sec\nend_prev: 03/11/18, 21:09:\
+06\"'}"];
+	"REMOTE SERVICE EXPLOIT
+http | ID: 137"	[shape=box,
+		tooltip="\"ET WEB_SERVER Script tag in URI Possible Cross Site Scripting Attempt\""];
+	"REMOTE SERVICE EXPLOIT
+http | ID: 137" -> "DATA MANIPULATION
+http | ID: 17"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 22:26:46\ngap: 2sec\nend_prev: 03/11/18, 22:26:44\"'}"];
+	"ARBITRARY CODE EXECUTION
+etlservicemgr | ID: 140"	[shape=box,
+		tooltip="\"ET WEB_SERVER Possible CVE-2014-6271 Attempt in HTTP Cookie
+ET WEB_SERVER SQL Injection Local File Access Attempt Using LOAD_FILE
+\
+ET WEB_SPECIFIC_APPS JobHut browse.php pk Parameter SQL Injection
+ET CURRENT_EVENTS QNAP Shellshock CVE-2014-6271
+ET WEB_SPECIFIC_\
+APPS Fork-CMS js.php module parameter Local File Inclusion Attempt
+ET WEB_SERVER Possible CVE-2014-6271 Attempt in Headers\""];
+	"ARBITRARY CODE EXECUTION
+etlservicemgr | ID: 140" -> "DATA MANIPULATION
+http | ID: 17"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 22:42:32\ngap: -8sec\nend_prev: 03/11/18, 22:42:39\"'}"];
+	"ROOT PRIVILEGE ESCALATION
+http | ID: 133"	[shape=box,
+		tooltip="\"ET WEB_SERVER ColdFusion administrator access
+ETPRO WEB_SPECIFIC_APPS ipTIME firmware < 9.58 RCE
+GPL EXPLOIT administrators.pwd \
+access
+GPL EXPLOIT CodeRed v2 root.exe access\""];
+	"ROOT PRIVILEGE ESCALATION
+http | ID: 133" -> "DATA MANIPULATION
+http | ID: 17"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 14:29:30\ngap: -3sec\nend_prev: 03/11/18, 14:29:32\"'}"];
+	"ROOT PRIVILEGE ESCALATION
+http | ID: 133" -> "DATA MANIPULATION
+http | ID: 17"	[key=1,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 19:21:28\ngap: -3sec\nend_prev: 03/11/18, 19:21:31\"'}"];
+	"ROOT PRIVILEGE ESCALATION
+http | ID: 133" -> "DATA MANIPULATION
+http | ID: 17"	[key=2,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 14:42:26\ngap: -4sec\nend_prev: 03/11/18, 14:\
+42:30\"'}"];
+	"ROOT PRIVILEGE ESCALATION
+http | ID: 133" -> "DATA MANIPULATION
+http | ID: 17"	[key=3,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 17:38:01\ngap: -15sec\nend_prev: 03/11/18, 17:\
+38:16\"'}"];
+	"ROOT PRIVILEGE ESCALATION
+http | ID: 133" -> "DATA MANIPULATION
+http | ID: 17"	[key=4,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 22:31:09\ngap: -9sec\nend_prev: 03/11/18, 22:\
+31:18\"'}"];
+	"ROOT PRIVILEGE ESCALATION
+http | ID: 133" -> "DATA MANIPULATION
+http | ID: 17"	[key=5,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 03/11/18, 14:31:42\ngap: -81sec\nend_prev: 03/11/18, 14:33:03\"'}"];
+	"ROOT PRIVILEGE ESCALATION
+http | ID: 133" -> "DATA MANIPULATION
+http | ID: 17"	[key=6,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 03/11/18, 18:08:20\ngap: -3sec\nend_prev: 03/11/18, 18:08:23\"'}"];
+	"ROOT PRIVILEGE ESCALATION
+http | ID: 133" -> "DATA MANIPULATION
+http | ID: 17"	[key=7,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 15:16:53\ngap: -309sec\nend_prev: 03/11/18, 15:22:\
+02\"'}"];
+	"ROOT PRIVILEGE ESCALATION
+http | ID: 133" -> "DATA MANIPULATION
+http | ID: 17"	[key=8,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 22:55:12\ngap: -3sec\nend_prev: 03/11/18, 22:55:\
+15\"'}"];
+	"ROOT PRIVILEGE ESCALATION
+http | ID: 133" -> "DATA MANIPULATION
+http | ID: 17"	[key=9,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 19:58:25\ngap: -3sec\nend_prev: 03/11/18, 19:58:\
+28\"'}"];
+	"ROOT PRIVILEGE ESCALATION
+http | ID: 133" -> "DATA MANIPULATION
+http | ID: 17"	[key=10,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 03/11/18, 14:56:55\ngap: -3sec\nend_prev: 03/11/18, 14:56:58\"'}"];
+	"ROOT PRIVILEGE ESCALATION
+http | ID: 133" -> "DATA MANIPULATION
+http | ID: 17"	[key=11,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 03/11/18, 21:22:30\ngap: -3sec\nend_prev: 03/11/18, 21:22:33\"'}"];
+	"ROOT PRIVILEGE ESCALATION
+http | ID: 133" -> "DATA MANIPULATION
+http | ID: 17"	[key=12,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 03/11/18, 21:58:12\ngap: -3sec\nend_prev: 03/11/18, 21:58:16\"'}"];
+	"ROOT PRIVILEGE ESCALATION
+wap-wsp | ID: 136"	[shape=box,
+		tooltip="\"ET WEB_SERVER ColdFusion administrator access
+ETPRO WEB_SPECIFIC_APPS ipTIME firmware < 9.58 RCE
+GPL EXPLOIT administrators.pwd \
+access
+GPL EXPLOIT CodeRed v2 root.exe access\""];
+	"ROOT PRIVILEGE ESCALATION
+wap-wsp | ID: 136" -> "DATA MANIPULATION
+http | ID: 17"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 19:22:03\ngap: -40sec\nend_prev: 03/11/18, 19:22:43\"'}"];
+	"DATA DELIVERY
+wap-wsp | ID: 138"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SERVER PHP tags in HTTP POST
+GPL WEB_SERVER perl post attempt\""];
+	"DATA DELIVERY
+wap-wsp | ID: 138" -> "DATA MANIPULATION
+http | ID: 17"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 21:13:10\ngap: -10sec\nend_prev: 03/11/18, 21:13:20\"'}"];
+	"REMOTE SERVICE EXPLOIT
+cslistener | ID: 139"	[shape=box,
+		tooltip="\"ET WEB_SERVER Script tag in URI Possible Cross Site Scripting Attempt\""];
+	"REMOTE SERVICE EXPLOIT
+cslistener | ID: 139" -> "DATA MANIPULATION
+http | ID: 17"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 21:42:42\ngap: -1sec\nend_prev: 03/11/18, 21:42:43\"'}"];
+	"ROOT PRIVILEGE ESCALATION
+commplex-main | ID: 248"	[shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SERVER ColdFusion administrator access
+ETPRO WEB_SPECIFIC_APPS ipTIME firmware < 9.58 RCE
+GPL EXPLOIT administrators.pwd \
+access
+GPL EXPLOIT CodeRed v2 root.exe access\""];
+	"ROOT PRIVILEGE ESCALATION
+commplex-main | ID: 248" -> "DATA MANIPULATION
+commplex-main | ID: 66"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 03/11/18, 17:50:24\ngap: -34sec\nend_prev: 03/11/18, 17:50:58\"'}"];
+	"ROOT PRIVILEGE ESCALATION
+cslistener | ID: 254"	[shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SERVER ColdFusion administrator access
+ETPRO WEB_SPECIFIC_APPS ipTIME firmware < 9.58 RCE
+GPL EXPLOIT administrators.pwd \
+access
+GPL EXPLOIT CodeRed v2 root.exe access\""];
+	"ROOT PRIVILEGE ESCALATION
+cslistener | ID: 254" -> "DATA MANIPULATION
+cslistener | ID: 72"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 03/11/18, 15:17:41\ngap: -5sec\nend_prev: 03/11/18, 15:17:45\"'}"];
+	"ROOT PRIVILEGE ESCALATION
+us-cli | ID: 230"	[shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SERVER ColdFusion administrator access
+ETPRO WEB_SPECIFIC_APPS ipTIME firmware < 9.58 RCE
+GPL EXPLOIT administrators.pwd \
+access
+GPL EXPLOIT CodeRed v2 root.exe access\""];
+	"ROOT PRIVILEGE ESCALATION
+us-cli | ID: 230" -> "DATA MANIPULATION
+us-cli | ID: 53"	[key=0,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 14:57:27\ngap: -6sec\nend_prev: 03/11/18, 14:\
+57:33\"'}"];
+	"ROOT PRIVILEGE ESCALATION
+etlservicemgr | ID: 237"	[shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SERVER ColdFusion administrator access
+ETPRO WEB_SPECIFIC_APPS ipTIME firmware < 9.58 RCE
+GPL EXPLOIT administrators.pwd \
+access
+GPL EXPLOIT CodeRed v2 root.exe access\""];
+	"ROOT PRIVILEGE ESCALATION
+etlservicemgr | ID: 237" -> "DATA MANIPULATION
+etlservicemgr | ID: 59"	[key=0,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 15:05:26\ngap: -12sec\nend_prev: 03/11/18, 15:\
+05:39\"'}"];
+	"ROOT PRIVILEGE ESCALATION
+etlservicemgr | ID: 237" -> "DATA MANIPULATION
+etlservicemgr | ID: 59"	[key=1,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 18:00:19\ngap: -23sec\nend_prev: 03/11/18, 18:\
+00:42\"'}"];
+}

@@ -1,0 +1,922 @@
+digraph "" {
+	"DATA EXFILTRATION
+http | ID: 15"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"GPL WEB_SERVER Tomcat server snoop access
+GPL EXPLOIT ISAPI .ida access
+GPL EXPLOIT /msadc/samples/ access
+ET WEB_SERVER ColdFusion \
+componentutils access
+ET WEB_SERVER /system32/ in Uri - Possible Protected Directory Access Attempt
+ET WEB_SPECIFIC_APPS PHP-CGI \
+query string parameter vulnerability
+ET WEB_SERVER Possible XXE SYSTEM ENTITY in POST BODY.
+ET WEB_SERVER /etc/shadow Detected in \
+URI
+GPL EXPLOIT ISAPI .idq access\""];
+	"Victim: 10.0.0.11
+DATA EXFILTRATION
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+http | ID: 15" -> "Victim: 10.0.0.11
+DATA EXFILTRATION
+http"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.176
+DATA EXFILTRATION
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+http | ID: 15" -> "Victim: 10.0.0.176
+DATA EXFILTRATION
+http"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.22
+DATA EXFILTRATION
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+http | ID: 15" -> "Victim: 10.0.0.22
+DATA EXFILTRATION
+http"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.23
+DATA EXFILTRATION
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+http | ID: 15" -> "Victim: 10.0.0.23
+DATA EXFILTRATION
+http"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.24
+DATA EXFILTRATION
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+http | ID: 15" -> "Victim: 10.0.0.24
+DATA EXFILTRATION
+http"	[key=0,
+		data="{}"];
+	"Victim: 10.0.1.40
+DATA EXFILTRATION
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+http | ID: 15" -> "Victim: 10.0.1.40
+DATA EXFILTRATION
+http"	[key=0,
+		data="{}"];
+	"Victim: 10.0.1.41
+DATA EXFILTRATION
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+http | ID: 15" -> "Victim: 10.0.1.41
+DATA EXFILTRATION
+http"	[key=0,
+		data="{}"];
+	"Victim: 10.0.1.46
+DATA EXFILTRATION
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+http | ID: 15" -> "Victim: 10.0.1.46
+DATA EXFILTRATION
+http"	[key=0,
+		data="{}"];
+	"Victim: 10.0.1.5
+DATA EXFILTRATION
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+http | ID: 15" -> "Victim: 10.0.1.5
+DATA EXFILTRATION
+http"	[key=0,
+		data="{}"];
+	"DATA EXFILTRATION
+unknown | ID: 31"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ETPRO ATTACK_RESPONSE MongoDB Database Enumeration Request\""];
+	"Victim: 10.0.0.20
+DATA EXFILTRATION
+unknown"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+unknown | ID: 31" -> "Victim: 10.0.0.20
+DATA EXFILTRATION
+unknown"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.23
+DATA EXFILTRATION
+unknown"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+unknown | ID: 31" -> "Victim: 10.0.0.23
+DATA EXFILTRATION
+unknown"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.24
+DATA EXFILTRATION
+unknown"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+unknown | ID: 31" -> "Victim: 10.0.0.24
+DATA EXFILTRATION
+unknown"	[key=0,
+		data="{}"];
+	"DATA EXFILTRATION
+http | ID: 354"	[fillcolor=salmon,
+		shape=hexagon,
+		style=dotted,
+		tooltip="\"ET WEB_SERVER Possible XXE SYSTEM ENTITY in POST BODY.
+ET INFO WinHttp AutoProxy Request wpad.dat Possible BadTunnel\""];
+	"DATA EXFILTRATION
+http | ID: 354" -> "Victim: 10.0.0.11
+DATA EXFILTRATION
+http"	[key=0,
+		data="{}"];
+	"DATA EXFILTRATION
+unknown | ID: 185"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ETPRO ATTACK_RESPONSE MongoDB Database Enumeration Request\""];
+	"DATA EXFILTRATION
+unknown | ID: 185" -> "Victim: 10.0.0.20
+DATA EXFILTRATION
+unknown"	[key=0,
+		data="{}"];
+	"DATA EXFILTRATION
+etlservicemgr | ID: 356"	[fillcolor=salmon,
+		shape=hexagon,
+		style=dotted,
+		tooltip="\"ET WEB_SERVER Possible XXE SYSTEM ENTITY in POST BODY.
+ET INFO WinHttp AutoProxy Request wpad.dat Possible BadTunnel\""];
+	"Victim: 10.0.0.176
+DATA EXFILTRATION
+etlservicemgr"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+etlservicemgr | ID: 356" -> "Victim: 10.0.0.176
+DATA EXFILTRATION
+etlservicemgr"	[key=0,
+		data="{}"];
+	"DATA EXFILTRATION
+etlservicemgr | ID: 40"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"GPL WEB_SERVER Tomcat server snoop access
+GPL EXPLOIT ISAPI .ida access
+GPL EXPLOIT /msadc/samples/ access
+ET WEB_SERVER /system32/ \
+in Uri - Possible Protected Directory Access Attempt
+ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability
+ET WEB_SERVER /\
+etc/shadow Detected in URI
+GPL EXPLOIT ISAPI .idq access\""];
+	"DATA EXFILTRATION
+etlservicemgr | ID: 40" -> "Victim: 10.0.0.176
+DATA EXFILTRATION
+etlservicemgr"	[key=0,
+		data="{}"];
+	"DATA EXFILTRATION
+commplex-main | ID: 65"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"GPL WEB_SERVER Tomcat server snoop access
+GPL EXPLOIT ISAPI .ida access
+GPL EXPLOIT /msadc/samples/ access
+ET WEB_SERVER ColdFusion \
+componentutils access
+ET WEB_SERVER /system32/ in Uri - Possible Protected Directory Access Attempt
+ET WEB_SPECIFIC_APPS PHP-CGI \
+query string parameter vulnerability
+ET WEB_SERVER Possible XXE SYSTEM ENTITY in POST BODY.
+ET WEB_SERVER /etc/shadow Detected in \
+URI
+GPL EXPLOIT ISAPI .idq access\""];
+	"Victim: 10.0.1.42
+DATA EXFILTRATION
+commplex-main"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+commplex-main | ID: 65" -> "Victim: 10.0.1.42
+DATA EXFILTRATION
+commplex-main"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.20
+DATA EXFILTRATION
+remoteware-cl"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+remoteware-cl | ID: 22"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"GPL WEB_SERVER Tomcat server snoop access
+GPL EXPLOIT ISAPI .ida access
+GPL EXPLOIT /msadc/samples/ access
+ET WEB_SERVER ColdFusion \
+componentutils access
+ET WEB_SERVER /system32/ in Uri - Possible Protected Directory Access Attempt
+ET WEB_SPECIFIC_APPS PHP-CGI \
+query string parameter vulnerability
+ET WEB_SERVER Possible XXE SYSTEM ENTITY in POST BODY.
+ET WEB_SERVER /etc/shadow Detected in \
+URI
+GPL EXPLOIT ISAPI .idq access\""];
+	"DATA EXFILTRATION
+remoteware-cl | ID: 22" -> "Victim: 10.0.0.20
+DATA EXFILTRATION
+remoteware-cl"	[key=0,
+		data="{}"];
+	"DATA EXFILTRATION
+cslistener | ID: 71"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"GPL WEB_SERVER Tomcat server snoop access
+GPL EXPLOIT ISAPI .ida access
+GPL EXPLOIT /msadc/samples/ access
+ET WEB_SERVER ColdFusion \
+componentutils access
+ET WEB_SERVER /system32/ in Uri - Possible Protected Directory Access Attempt
+ET WEB_SPECIFIC_APPS PHP-CGI \
+query string parameter vulnerability
+ET WEB_SERVER Possible XXE SYSTEM ENTITY in POST BODY.
+ET WEB_SERVER /etc/shadow Detected in \
+URI
+GPL EXPLOIT ISAPI .idq access\""];
+	"Victim: 10.0.0.24
+DATA EXFILTRATION
+cslistener"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+cslistener | ID: 71" -> "Victim: 10.0.0.24
+DATA EXFILTRATION
+cslistener"	[key=0,
+		data="{}"];
+	"DATA EXFILTRATION
+wap-wsp | ID: 56"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"GPL WEB_SERVER Tomcat server snoop access
+GPL EXPLOIT ISAPI .ida access
+GPL EXPLOIT /msadc/samples/ access
+ET WEB_SERVER /system32/ \
+in Uri - Possible Protected Directory Access Attempt
+ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability
+ET WEB_SERVER /\
+etc/shadow Detected in URI
+GPL EXPLOIT ISAPI .idq access\""];
+	"Victim: 10.0.0.24
+DATA EXFILTRATION
+wap-wsp"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+wap-wsp | ID: 56" -> "Victim: 10.0.0.24
+DATA EXFILTRATION
+wap-wsp"	[key=0,
+		data="{}"];
+	"DATA EXFILTRATION
+us-cli | ID: 52"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"GPL WEB_SERVER Tomcat server snoop access
+GPL EXPLOIT ISAPI .ida access
+GPL EXPLOIT /msadc/samples/ access
+ET WEB_SERVER ColdFusion \
+componentutils access
+ET WEB_SERVER /system32/ in Uri - Possible Protected Directory Access Attempt
+ET WEB_SPECIFIC_APPS PHP-CGI \
+query string parameter vulnerability
+ET WEB_SERVER Possible XXE SYSTEM ENTITY in POST BODY.
+ET WEB_SERVER /etc/shadow Detected in \
+URI
+ET WEB_SERVER Possible MySQL SQLi Attempt Information Schema Access
+GPL EXPLOIT ISAPI .idq access\""];
+	"Victim: 10.0.1.46
+DATA EXFILTRATION
+us-cli"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA EXFILTRATION
+us-cli | ID: 52" -> "Victim: 10.0.1.46
+DATA EXFILTRATION
+us-cli"	[key=0,
+		data="{}"];
+	"INFO DISCOVERY
+cslistener"	[shape=oval,
+		tooltip="\"GPL WEB_SERVER viewcode access
+GPL WEB_SERVER .htaccess access
+GPL WEB_SERVER writeto.cnf access
+GPL WEB_SERVER iisadmin access
+\
+ET WEB_SPECIFIC_APPS Request to Wordpress W3TC Plug-in dbcache Directory
+GPL WEB_SERVER services.cnf access
+GPL EXPLOIT unicode \
+directory traversal attempt
+GPL WEB_SERVER service.cnf access
+GPL EXPLOIT iisadmpwd attempt
+ET WEB_SERVER PHP SESSION SuperGlobal \
+in URI
+GPL WEB_SERVER /~root access
+GPL WEB_SERVER authors.pwd access
+ET WEB_SERVER PHP ENV SuperGlobal in URI
+GPL EXPLOIT .cnf \
+access
+ET POLICY Proxy TRACE Request - inbound
+GPL WEB_SERVER .htpasswd access
+GPL WEB_SERVER global.asa access
+ET WEB_SERVER PHP \
+SERVER SuperGlobal in URI
+GPL EXPLOIT fpcount access
+GPL WEB_SERVER globals.pl access
+GPL WEB_SERVER service.pwd
+GPL EXPLOIT ISAPI \
+.idq attempt
+ET WEB_SERVER PHP Easteregg Information-Disclosure (phpinfo)
+GPL WEB_SERVER printenv access
+GPL WEB_SERVER author.exe \
+access
+GPL EXPLOIT iissamples access
+GPL EXPLOIT .htr access
+ET WEB_SERVER PHP REQUEST SuperGlobal in URI\""];
+	"INFO DISCOVERY
+cslistener" -> "DATA EXFILTRATION
+cslistener | ID: 71"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 03/11/18, 15:17:39\ngap: -13sec\nend_prev: 03/11/18, 15:17:52\"'}"];
+	"USER PRIVILEGE ESCALATION
+etlservicemgr | ID: 624"	[shape=box,
+		style=dotted,
+		tooltip="\"ET POLICY Outgoing Basic Auth Base64 HTTP Password detected unencrypted
+ET POLICY Incoming Basic Auth Base64 HTTP Password detected \
+unencrypted
+ET WEB_SPECIFIC_APPS Microhard Systems 3G/4G Cellular Ethernet and Serial Gateway - Default Credentials\""];
+	"USER PRIVILEGE ESCALATION
+etlservicemgr | ID: 624" -> "DATA EXFILTRATION
+etlservicemgr | ID: 356"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 21:13:48\ngap: 9sec\nend_prev: 03/11/18, 21:13:39\"'}"];
+	"USER PRIVILEGE ESCALATION
+http | ID: 622"	[shape=box,
+		style=dotted,
+		tooltip="\"ET POLICY Outgoing Basic Auth Base64 HTTP Password detected unencrypted
+ET POLICY Incoming Basic Auth Base64 HTTP Password detected \
+unencrypted
+ET WEB_SPECIFIC_APPS Microhard Systems 3G/4G Cellular Ethernet and Serial Gateway - Default Credentials\""];
+	"USER PRIVILEGE ESCALATION
+http | ID: 622" -> "DATA EXFILTRATION
+http | ID: 354"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 21:09:19\ngap: 48sec\nend_prev: 03/11/18, 21:08:31\"'}"];
+	"SERVICE DISCOVERY
+unknown"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Potential VNC Scan 5800-5820
+ET SCAN Potential SSH Scan
+GPL ICMP_INFO PING *NIX
+ET SCAN Potential VNC Scan 5900-5920
+ET \
+SCAN NMAP OS Detection Probe\""];
+	"SERVICE DISCOVERY
+unknown" -> "DATA EXFILTRATION
+http | ID: 15"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 03/11/18, 18:08:19\ngap: 89sec\nend_prev: 03/11/18, 18:06:50\"'}"];
+	"SERVICE DISCOVERY
+unknown" -> "DATA EXFILTRATION
+unknown | ID: 31"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 03/11/18, 16:07:07\ngap: 492sec\nend_prev: 03/11/18, 15:58:55\"'}"];
+	"INFO DISCOVERY
+unknown"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"GPL WEB_SERVER 403 Forbidden\""];
+	"INFO DISCOVERY
+unknown" -> "DATA EXFILTRATION
+unknown | ID: 31"	[key=0,
+		data="{'color': 'orange', 'fontcolor': '\"orange\"', 'label': '\"start_next: 03/11/18, 14:07:18\ngap: 4sec\nend_prev: 03/11/18, 14:07:14\"'}"];
+	"INFO DISCOVERY
+unknown" -> "DATA EXFILTRATION
+unknown | ID: 31"	[key=1,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 03/11/18, 15:07:00\ngap: 0sec\nend_prev: 03/11/18, 15:07:00\"'}"];
+	"INFO DISCOVERY
+unknown" -> "DATA EXFILTRATION
+unknown | ID: 31"	[key=2,
+		data="{'color': 'orange', 'fontcolor': '\"orange\"', 'label': '\"start_next: 03/11/18, 14:02:29\ngap: 0sec\nend_prev: 03/11/18, 14:02:29\"'}"];
+	"INFO DISCOVERY
+unknown" -> "DATA EXFILTRATION
+unknown | ID: 31"	[key=3,
+		data="{'color': 'orange', 'fontcolor': '\"orange\"', 'label': '\"start_next: 03/11/18, 17:14:46\ngap: 0sec\nend_prev: 03/11/18, 17:14:46\"'}"];
+	"INFO DISCOVERY
+unknown" -> "DATA EXFILTRATION
+unknown | ID: 31"	[key=4,
+		data="{'color': 'orange', 'fontcolor': '\"orange\"', 'label': '\"start_next: 03/11/18, 20:41:52\ngap: -344sec\nend_prev: 03/11/18, 20:47:\
+36\"'}"];
+	"INFO DISCOVERY
+unknown" -> "DATA EXFILTRATION
+unknown | ID: 31"	[key=5,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 03/11/18, 17:13:45\ngap: 2sec\nend_prev: 03/11/18, 17:13:42\"'}"];
+	"INFO DISCOVERY
+unknown" -> "DATA EXFILTRATION
+unknown | ID: 31"	[key=6,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 03/11/18, 14:51:16\ngap: 0sec\nend_prev: 03/11/18, 14:51:16\"'}"];
+	"INFO DISCOVERY
+unknown" -> "DATA EXFILTRATION
+unknown | ID: 31"	[key=7,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 15:33:12\ngap: 0sec\nend_prev: 03/11/18, 15:33:12\"'}"];
+	"INFO DISCOVERY
+unknown" -> "DATA EXFILTRATION
+unknown | ID: 185"	[key=0,
+		data="{'color': 'orange', 'label': '<font color=\"orange\"> start_next: 03/11/18, 15:12:39<br/>gap: -1338sec<br/>end_prev: 03/11/18, 15:\
+34:58</font><br/><font color=\"orange\"><b>Attacker: 10.0.254.204</b></font>'}"];
+	"SERVICE DISCOVERY
+ssh"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Potential SSH Scan\""];
+	"SERVICE DISCOVERY
+ssh" -> "DATA EXFILTRATION
+unknown | ID: 31"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 03/11/18, 15:43:51\ngap: 1sec\nend_prev: 03/11/18, 15:43:50\"'}"];
+	"VULNERABILTY DISCOVERY
+ms-sql-s"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Suspicious inbound to mySQL port 3306
+ET SCAN Suspicious inbound to MSSQL port 1433
+ET SCAN Suspicious inbound to PostgreSQL \
+port 5432
+ET SCAN Suspicious inbound to Oracle SQL port 1521
+ET SCAN Suspicious inbound to mSQL port 4333\""];
+	"VULNERABILTY DISCOVERY
+ms-sql-s" -> "DATA EXFILTRATION
+unknown | ID: 31"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 03/11/18, 16:27:23\ngap: -581sec\nend_prev: 03/11/18, 16:37:\
+04\"'}"];
+	"SERVICE DISCOVERY
+ff-ice"	[shape=oval,
+		tooltip="\"ET SCAN Potential VNC Scan 5900-5920
+ET SCAN Potential VNC Scan 5800-5820\""];
+	"SERVICE DISCOVERY
+ff-ice" -> "DATA EXFILTRATION
+unknown | ID: 31"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 03/11/18, 16:46:35\ngap: 768sec\nend_prev: 03/11/18, 16:33:47\"'}"];
+	"SERVICE DISCOVERY
+ipsma"	[shape=oval,
+		tooltip="\"ET SCAN Potential VNC Scan 5900-5920
+ET SCAN Potential VNC Scan 5800-5820\""];
+	"SERVICE DISCOVERY
+ipsma" -> "DATA EXFILTRATION
+unknown | ID: 31"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 03/11/18, 17:47:24\ngap: 0sec\nend_prev: 03/11/18, 17:47:25\"'}"];
+	"HOST DISCOVERY
+remoteware-cl"	[shape=oval,
+		tooltip="\"ET SCAN Nmap Scripting Engine User-Agent Detected (Nmap Scripting Engine)
+ET SCAN Possible Nmap User-Agent Observed\""];
+	"HOST DISCOVERY
+remoteware-cl" -> "DATA EXFILTRATION
+unknown | ID: 31"	[key=0,
+		data="{'color': 'orange', 'fontcolor': '\"orange\"', 'label': '\"start_next: 03/11/18, 14:22:18\ngap: -1sec\nend_prev: 03/11/18, 14:22:20\"'}"];
+	"HOST DISCOVERY
+remoteware-cl" -> "DATA EXFILTRATION
+unknown | ID: 31"	[key=1,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 03/11/18, 14:43:59\ngap: -4sec\nend_prev: 03/11/18, 14:44:03\"'}"];
+	"HOST DISCOVERY
+wap-wsp"	[shape=oval,
+		tooltip="\"ET SCAN Nmap Scripting Engine User-Agent Detected (Nmap Scripting Engine)
+ET SCAN Possible Nmap User-Agent Observed\""];
+	"HOST DISCOVERY
+wap-wsp" -> "DATA EXFILTRATION
+unknown | ID: 31"	[key=0,
+		data="{'color': 'orange', 'fontcolor': '\"orange\"', 'label': '\"start_next: 03/11/18, 14:28:39\ngap: -8sec\nend_prev: 03/11/18, 14:28:48\"'}"];
+	"HOST DISCOVERY
+wap-wsp" -> "DATA EXFILTRATION
+unknown | ID: 31"	[key=1,
+		data="{'color': 'orange', 'fontcolor': '\"orange\"', 'label': '\"start_next: 03/11/18, 17:19:21\ngap: -3sec\nend_prev: 03/11/18, 17:19:24\"'}"];
+	"HOST DISCOVERY
+wap-wsp" -> "DATA EXFILTRATION
+unknown | ID: 31"	[key=2,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 03/11/18, 17:37:14\ngap: -26sec\nend_prev: 03/11/18, 17:37:41\"'}"];
+	"VULNERABILTY DISCOVERY
+http"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Suspicious inbound to mySQL port 3306
+ET SCAN Suspicious inbound to MSSQL port 1433
+ET SCAN Nikto Web App Scan in Progress
+\
+ET SCAN Suspicious inbound to PostgreSQL port 5432
+ET SCAN Suspicious inbound to Oracle SQL port 1521
+ET SCAN Suspicious inbound \
+to mSQL port 4333\""];
+	"VULNERABILTY DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 15"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 19:21:27\ngap: 0sec\nend_prev: 03/11/18, 19:21:27\"'}"];
+	"VULNERABILTY DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 15"	[key=1,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 17:37:53\ngap: -292sec\nend_prev: 03/11/18, \
+17:42:45\"'}"];
+	"VULNERABILTY DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 15"	[key=2,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 22:31:05\ngap: -46sec\nend_prev: 03/11/18, 22:\
+31:51\"'}"];
+	"VULNERABILTY DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 15"	[key=3,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 22:55:10\ngap: 0sec\nend_prev: 03/11/18, 22:55:10\"'}"];
+	"VULNERABILTY DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 15"	[key=4,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 03/11/18, 14:56:54\ngap: 0sec\nend_prev: 03/11/18, 14:56:54\"'}"];
+	"INFO DISCOVERY
+http"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"GPL WEB_SERVER viewcode access
+GPL WEB_SERVER .htaccess access
+GPL WEB_SERVER writeto.cnf access
+GPL WEB_SERVER iisadmin access
+\
+ET WEB_SERVER PHP Easteregg Information-Disclosure (funny-logo)
+ET WEB_SPECIFIC_APPS Request to Wordpress W3TC Plug-in dbcache Directory
+\
+GPL WEB_SERVER services.cnf access
+ET WEB_SERVER PHP Easteregg Information-Disclosure (zend-logo)
+GPL EXPLOIT unicode directory \
+traversal attempt
+ET WEB_SERVER PHP Easteregg Information-Disclosure (php-logo)
+GPL WEB_SERVER service.cnf access
+GPL EXPLOIT iisadmpwd \
+attempt
+ET WEB_SERVER PHP SESSION SuperGlobal in URI
+GPL WEB_SERVER /~root access
+GPL WEB_SERVER authors.pwd access
+ET WEB_SERVER \
+PHP ENV SuperGlobal in URI
+GPL EXPLOIT .cnf access
+ET POLICY Proxy TRACE Request - inbound
+GPL WEB_SERVER .htpasswd access
+GPL WEB_\
+SERVER global.asa access
+ET WEB_SERVER PHP SERVER SuperGlobal in URI
+GPL EXPLOIT fpcount access
+GPL WEB_SERVER globals.pl access
+\
+GPL WEB_SERVER 403 Forbidden
+GPL WEB_SERVER service.pwd
+GPL EXPLOIT ISAPI .idq attempt
+ET WEB_SERVER PHP Easteregg Information-Disclosure (\
+phpinfo)
+GPL WEB_SERVER printenv access
+GPL WEB_SERVER author.exe access
+GPL EXPLOIT iissamples access
+GPL EXPLOIT .htr access
+ET \
+WEB_SERVER PHP REQUEST SuperGlobal in URI\""];
+	"INFO DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 15"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 14:29:29\ngap: -8sec\nend_prev: 03/11/18, 14:29:37\"'}"];
+	"INFO DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 15"	[key=1,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 14:42:24\ngap: -13sec\nend_prev: 03/11/18, 14:\
+42:37\"'}"];
+	"INFO DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 15"	[key=2,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 03/11/18, 14:31:41\ngap: -257sec\nend_prev: 03/11/18, 14:35:58\"'}"];
+	"INFO DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 15"	[key=3,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 15:16:52\ngap: -315sec\nend_prev: 03/11/18, 15:22:\
+07\"'}"];
+	"INFO DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 15"	[key=4,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 03/11/18, 21:22:29\ngap: -35sec\nend_prev: 03/11/18, 21:23:05\"'}"];
+	"HOST DISCOVERY
+http"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Nmap Scripting Engine User-Agent Detected (Nmap Scripting Engine)
+ET SCAN Possible Nmap User-Agent Observed\""];
+	"HOST DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 15"	[key=0,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 22:31:05\ngap: 2sec\nend_prev: 03/11/18, 22:\
+31:03\"'}"];
+	"DATA MANIPULATION
+http | ID: 129"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SERVER Possible SQL Injection Attempt SELECT FROM
+ET WEB_SERVER MYSQL SELECT CONCAT SQL Injection Attempt
+ET WEB_SERVER \
+Possible SQL Injection Attempt UNION SELECT\""];
+	"DATA MANIPULATION
+http | ID: 129" -> "DATA EXFILTRATION
+http | ID: 15"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 03/11/18, 17:42:51\ngap: -1sec\nend_prev: 03/11/18, 17:42:52\"'}"];
+	"VULNERABILTY DISCOVERY
+wap-wsp"	[shape=oval,
+		tooltip="\"ET SCAN Nikto Web App Scan in Progress\""];
+	"VULNERABILTY DISCOVERY
+wap-wsp" -> "DATA EXFILTRATION
+http | ID: 15"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 19:22:02\ngap: 0sec\nend_prev: 03/11/18, 19:22:02\"'}"];
+	"VULNERABILTY DISCOVERY
+wap-wsp" -> "DATA EXFILTRATION
+wap-wsp | ID: 56"	[key=0,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 18:07:13\ngap: 0sec\nend_prev: 03/11/18, 18:\
+07:13\"'}"];
+	"RESOURCE HIJACKING
+http | ID: 130"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"GPL WEB_SERVER Oracle Java Process Manager access\""];
+	"RESOURCE HIJACKING
+http | ID: 130" -> "DATA EXFILTRATION
+http | ID: 15"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 21:09:58\ngap: 1sec\nend_prev: 03/11/18, 21:09:57\"'}"];
+	"ROOT PRIVILEGE ESCALATION
+http | ID: 141"	[shape=box,
+		tooltip="\"GPL EXPLOIT CodeRed v2 root.exe access\""];
+	"ROOT PRIVILEGE ESCALATION
+http | ID: 141" -> "DATA EXFILTRATION
+http | ID: 15"	[key=0,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 19:57:29\ngap: 22sec\nend_prev: 03/11/18, 19:57:\
+07\"'}"];
+	"SERVICE DISCOVERY
+dsd"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Potential VNC Scan 5900-5920
+ET SCAN Potential VNC Scan 5800-5820\""];
+	"SERVICE DISCOVERY
+dsd" -> "DATA EXFILTRATION
+commplex-main | ID: 65"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 03/11/18, 22:44:45\ngap: 2889sec\nend_prev: 03/11/18, 21:56:36\"'}"];
+	"VULNERABILTY DISCOVERY
+commplex-main"	[shape=oval,
+		tooltip="\"ET SCAN Nikto Web App Scan in Progress\""];
+	"VULNERABILTY DISCOVERY
+commplex-main" -> "DATA EXFILTRATION
+commplex-main | ID: 65"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 03/11/18, 17:50:22\ngap: -174sec\nend_prev: 03/11/18, 17:53:16\"'}"];
+	"DATA DELIVERY
+commplex-main | ID: 247"	[fillcolor=salmon,
+		shape=hexagon,
+		style=dotted,
+		tooltip="\"ET WEB_SPECIFIC_APPS SAPID get_infochannel.inc.php Remote File inclusion Attempt
+ET WEB_SPECIFIC_APPS Possible OpenSiteAdmin pageHeader.php \
+Remote File Inclusion Attempt\""];
+	"DATA DELIVERY
+commplex-main | ID: 247" -> "DATA EXFILTRATION
+commplex-main | ID: 65"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 03/11/18, 21:33:35\ngap: 13352sec\nend_prev: 03/11/18, 17:51:03\"'}"];
+	"INFO DISCOVERY
+etlservicemgr"	[shape=oval,
+		tooltip="\"GPL WEB_SERVER viewcode access
+GPL WEB_SERVER .htaccess access
+GPL WEB_SERVER writeto.cnf access
+GPL WEB_SERVER iisadmin access
+\
+GPL WEB_SERVER services.cnf access
+GPL EXPLOIT unicode directory traversal attempt
+GPL WEB_SERVER service.cnf access
+GPL EXPLOIT \
+iisadmpwd attempt
+ET WEB_SERVER PHP SESSION SuperGlobal in URI
+GPL WEB_SERVER /~root access
+GPL WEB_SERVER authors.pwd access
+GPL \
+EXPLOIT .cnf access
+ET POLICY Proxy TRACE Request - inbound
+GPL WEB_SERVER .htpasswd access
+GPL WEB_SERVER global.asa access
+GPL \
+EXPLOIT fpcount access
+GPL WEB_SERVER globals.pl access
+GPL WEB_SERVER service.pwd
+GPL EXPLOIT ISAPI .idq attempt
+ET WEB_SERVER \
+PHP Easteregg Information-Disclosure (phpinfo)
+GPL WEB_SERVER printenv access
+GPL WEB_SERVER author.exe access
+GPL EXPLOIT iissamples \
+access
+GPL EXPLOIT .htr access
+ET WEB_SERVER PHP REQUEST SuperGlobal in URI\""];
+	"INFO DISCOVERY
+etlservicemgr" -> "DATA EXFILTRATION
+etlservicemgr | ID: 40"	[key=0,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 15:05:20\ngap: -36sec\nend_prev: 03/11/18, 15:\
+05:55\"'}"];
+	"INFO DISCOVERY
+etlservicemgr" -> "DATA EXFILTRATION
+etlservicemgr | ID: 40"	[key=1,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 18:00:10\ngap: -59sec\nend_prev: 03/11/18, 18:\
+01:10\"'}"];
+	"ROOT PRIVILEGE ESCALATION
+us-cli | ID: 229"	[shape=box,
+		style=dotted,
+		tooltip="\"GPL EXPLOIT CodeRed v2 root.exe access\""];
+	"ROOT PRIVILEGE ESCALATION
+us-cli | ID: 229" -> "DATA EXFILTRATION
+us-cli | ID: 52"	[key=0,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 21:08:43\ngap: 45sec\nend_prev: 03/11/18, 21:07:\
+58\"'}"];
+	"INFO DISCOVERY
+us-cli"	[shape=oval,
+		tooltip="\"GPL WEB_SERVER viewcode access
+GPL WEB_SERVER .htaccess access
+GPL WEB_SERVER writeto.cnf access
+GPL WEB_SERVER iisadmin access
+\
+ET POLICY POSSIBLE Web Crawl using Wget
+ET WEB_SPECIFIC_APPS Request to Wordpress W3TC Plug-in dbcache Directory
+GPL WEB_SERVER \
+services.cnf access
+GPL EXPLOIT unicode directory traversal attempt
+GPL WEB_SERVER service.cnf access
+GPL EXPLOIT iisadmpwd attempt
+\
+ET WEB_SERVER PHP SESSION SuperGlobal in URI
+GPL WEB_SERVER /~root access
+GPL WEB_SERVER authors.pwd access
+GPL EXPLOIT .cnf access
+\
+ET POLICY Proxy TRACE Request - inbound
+GPL WEB_SERVER .htpasswd access
+GPL WEB_SERVER global.asa access
+ET WEB_SERVER PHP SERVER \
+SuperGlobal in URI
+GPL EXPLOIT fpcount access
+GPL WEB_SERVER globals.pl access
+GPL WEB_SERVER service.pwd
+GPL EXPLOIT ISAPI .idq \
+attempt
+ET WEB_SERVER PHP Easteregg Information-Disclosure (phpinfo)
+GPL WEB_SERVER printenv access
+GPL WEB_SERVER author.exe access
+\
+GPL EXPLOIT iissamples access
+GPL EXPLOIT .htr access
+ET WEB_SERVER PHP REQUEST SuperGlobal in URI\""];
+	"INFO DISCOVERY
+us-cli" -> "DATA EXFILTRATION
+us-cli | ID: 52"	[key=0,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 14:57:23\ngap: -22sec\nend_prev: 03/11/18, 14:\
+57:46\"'}"];
+	"DATA MANIPULATION
+us-cli | ID: 228"	[fillcolor=salmon,
+		shape=hexagon,
+		style=dotted,
+		tooltip="\"ET WEB_SERVER Possible SQL Injection Attempt SELECT FROM
+ET WEB_SERVER Possible SQL Injection Attempt UNION SELECT\""];
+	"DATA MANIPULATION
+us-cli | ID: 228" -> "DATA EXFILTRATION
+us-cli | ID: 52"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 03/11/18, 15:29:20\ngap: -232sec\nend_prev: 03/11/18, 15:33:\
+12\"'}"];
+	"DATA MANIPULATION
+us-cli | ID: 228" -> "DATA EXFILTRATION
+us-cli | ID: 52"	[key=1,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 03/11/18, 15:29:20\ngap: -232sec\nend_prev: 03/11/18, 15:33:\
+12\"'}"];
+	"INFO DISCOVERY
+wap-wsp"	[shape=oval,
+		tooltip="\"GPL WEB_SERVER viewcode access
+GPL WEB_SERVER .htaccess access
+GPL WEB_SERVER writeto.cnf access
+GPL WEB_SERVER iisadmin access
+\
+GPL WEB_SERVER services.cnf access
+GPL EXPLOIT unicode directory traversal attempt
+GPL WEB_SERVER service.cnf access
+GPL EXPLOIT \
+iisadmpwd attempt
+ET WEB_SERVER PHP SESSION SuperGlobal in URI
+GPL WEB_SERVER /~root access
+GPL WEB_SERVER authors.pwd access
+ET \
+WEB_SERVER PHP ENV SuperGlobal in URI
+GPL EXPLOIT .cnf access
+ET POLICY Proxy TRACE Request - inbound
+GPL WEB_SERVER .htpasswd access
+\
+GPL WEB_SERVER global.asa access
+ET WEB_SERVER PHP SERVER SuperGlobal in URI
+GPL EXPLOIT fpcount access
+GPL WEB_SERVER globals.pl \
+access
+GPL WEB_SERVER service.pwd
+GPL EXPLOIT ISAPI .idq attempt
+ET WEB_SERVER PHP Easteregg Information-Disclosure (phpinfo)
+GPL \
+WEB_SERVER printenv access
+GPL WEB_SERVER author.exe access
+GPL EXPLOIT iissamples access
+GPL EXPLOIT .htr access
+ET WEB_SERVER \
+PHP REQUEST SuperGlobal in URI\""];
+	"INFO DISCOVERY
+wap-wsp" -> "DATA EXFILTRATION
+wap-wsp | ID: 56"	[key=0,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 15:05:26\ngap: -10sec\nend_prev: 03/11/18, 15:\
+05:37\"'}"];
+	"VULNERABILTY DISCOVERY
+remoteware-cl"	[shape=oval,
+		tooltip="\"ET SCAN Nikto Web App Scan in Progress\""];
+	"VULNERABILTY DISCOVERY
+remoteware-cl" -> "DATA EXFILTRATION
+remoteware-cl | ID: 22"	[key=0,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 15:05:41\ngap: -571sec\nend_prev: 03/11/18, \
+15:15:13\"'}"];
+	"VULNERABILTY DISCOVERY
+remoteware-cl" -> "DATA EXFILTRATION
+remoteware-cl | ID: 22"	[key=1,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 15:48:26\ngap: -552sec\nend_prev: 03/11/18, 15:57:\
+38\"'}"];
+	"INFO DISCOVERY
+remoteware-cl"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"GPL WEB_SERVER viewcode access
+GPL WEB_SERVER .htaccess access
+GPL WEB_SERVER writeto.cnf access
+GPL WEB_SERVER iisadmin access
+\
+ET WEB_SPECIFIC_APPS Request to Wordpress W3TC Plug-in dbcache Directory
+GPL WEB_SERVER services.cnf access
+GPL EXPLOIT unicode \
+directory traversal attempt
+GPL WEB_SERVER service.cnf access
+GPL EXPLOIT iisadmpwd attempt
+ET WEB_SERVER PHP SESSION SuperGlobal \
+in URI
+GPL WEB_SERVER /~root access
+GPL WEB_SERVER authors.pwd access
+GPL EXPLOIT .cnf access
+ET POLICY Proxy TRACE Request - inbound
+\
+GPL WEB_SERVER .htpasswd access
+GPL WEB_SERVER global.asa access
+ET WEB_SERVER PHP SERVER SuperGlobal in URI
+GPL EXPLOIT fpcount \
+access
+GPL WEB_SERVER globals.pl access
+GPL WEB_SERVER 403 Forbidden
+GPL WEB_SERVER service.pwd
+GPL EXPLOIT ISAPI .idq attempt
+ET \
+WEB_SERVER PHP Easteregg Information-Disclosure (phpinfo)
+GPL WEB_SERVER printenv access
+GPL WEB_SERVER author.exe access
+GPL EXPLOIT \
+iissamples access
+GPL EXPLOIT .htr access
+ET WEB_SERVER PHP REQUEST SuperGlobal in URI\""];
+	"INFO DISCOVERY
+remoteware-cl" -> "DATA EXFILTRATION
+remoteware-cl | ID: 22"	[key=0,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 18:07:28\ngap: -564sec\nend_prev: 03/11/18, \
+18:16:52\"'}"];
+	"INFO DISCOVERY
+remoteware-cl" -> "DATA EXFILTRATION
+remoteware-cl | ID: 22"	[key=1,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 03/11/18, 18:07:28\ngap: -564sec\nend_prev: 03/11/18, \
+18:16:52\"'}"];
+	"USER PRIVILEGE ESCALATION
+remoteware-cl | ID: -1"	[shape=box,
+		tooltip="\"ET POLICY Outgoing Basic Auth Base64 HTTP Password detected unencrypted
+ET POLICY Incoming Basic Auth Base64 HTTP Password detected \
+unencrypted
+ET WEB_SPECIFIC_APPS Microhard Systems 3G/4G Cellular Ethernet and Serial Gateway - Default Credentials\""];
+	"USER PRIVILEGE ESCALATION
+remoteware-cl | ID: -1" -> "DATA EXFILTRATION
+remoteware-cl | ID: 22"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 21:09:29\ngap: 42sec\nend_prev: 03/11/18, 21:08:47\"'}"];
+}

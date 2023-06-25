@@ -1,0 +1,309 @@
+digraph "" {
+	"NETWORK DoS
+http | ID: 5"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SERVER Possible Cherokee Web Server GET AUX Request Denial Of Service Attempt\""];
+	"Victim: 10.0.0.11
+NETWORK DoS
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+http | ID: 5" -> "Victim: 10.0.0.11
+NETWORK DoS
+http"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.176
+NETWORK DoS
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+http | ID: 5" -> "Victim: 10.0.0.176
+NETWORK DoS
+http"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.23
+NETWORK DoS
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+http | ID: 5" -> "Victim: 10.0.0.23
+NETWORK DoS
+http"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.24
+NETWORK DoS
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+http | ID: 5" -> "Victim: 10.0.0.24
+NETWORK DoS
+http"	[key=0,
+		data="{}"];
+	"Victim: 10.0.1.40
+NETWORK DoS
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+http | ID: 5" -> "Victim: 10.0.1.40
+NETWORK DoS
+http"	[key=0,
+		data="{}"];
+	"Victim: 10.0.1.41
+NETWORK DoS
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+http | ID: 5" -> "Victim: 10.0.1.41
+NETWORK DoS
+http"	[key=0,
+		data="{}"];
+	"Victim: 10.0.1.46
+NETWORK DoS
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+http | ID: 5" -> "Victim: 10.0.1.46
+NETWORK DoS
+http"	[key=0,
+		data="{}"];
+	"Victim: 10.0.1.5
+NETWORK DoS
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+http | ID: 5" -> "Victim: 10.0.1.5
+NETWORK DoS
+http"	[key=0,
+		data="{}"];
+	"NETWORK DoS
+http | ID: 112"	[fillcolor=salmon,
+		shape=hexagon,
+		style=dotted,
+		tooltip="\"ET WEB_SERVER Possible Cherokee Web Server GET AUX Request Denial Of Service Attempt\""];
+	"NETWORK DoS
+http | ID: 112" -> "Victim: 10.0.0.11
+NETWORK DoS
+http"	[key=0,
+		data="{}"];
+	"NETWORK DoS
+http | ID: 112" -> "Victim: 10.0.0.24
+NETWORK DoS
+http"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.22
+NETWORK DoS
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+http | ID: 112" -> "Victim: 10.0.0.22
+NETWORK DoS
+http"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.244
+NETWORK DoS
+ssdp"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"NETWORK DoS
+ssdp | ID: 45"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET DOS Possible SSDP Amplification Scan in Progress\""];
+	"NETWORK DoS
+ssdp | ID: 45" -> "Victim: 10.0.0.244
+NETWORK DoS
+ssdp"	[key=0,
+		data="{}"];
+	"NETWORK DoS
+http | ID: 91"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SERVER Possible Cherokee Web Server GET AUX Request Denial Of Service Attempt\""];
+	"NETWORK DoS
+http | ID: 91" -> "Victim: 10.0.1.5
+NETWORK DoS
+http"	[key=0,
+		data="{}"];
+	"REMOTE SERVICE EXPLOIT
+http | ID: 299"	[shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SERVER Script tag in URI Possible Cross Site Scripting Attempt\""];
+	"REMOTE SERVICE EXPLOIT
+http | ID: 299" -> "NETWORK DoS
+http | ID: 91"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 03/11/18, 21:01:13\ngap: 3479sec\nend_prev: 03/11/18, 20:03:\
+14\"'}"];
+	"ACCOUNT MANIPULATION
+snmp | ID: 217"	[shape=box,
+		style=dotted,
+		tooltip="\"GPL SNMP public access udp\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 217" -> "NETWORK DoS
+ssdp | ID: 45"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 20:57:42\ngap: 3sec\nend_prev: 03/11/18, 20:57:40\"'}"];
+	"INFO DISCOVERY
+http"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"GPL WEB_SERVER viewcode access
+GPL WEB_SERVER .htaccess access
+GPL WEB_SERVER writeto.cnf access
+GPL WEB_SERVER iisadmin access
+\
+ET WEB_SERVER PHP Easteregg Information-Disclosure (funny-logo)
+ET WEB_SPECIFIC_APPS Request to Wordpress W3TC Plug-in dbcache Directory
+\
+GPL WEB_SERVER services.cnf access
+ET WEB_SERVER PHP Easteregg Information-Disclosure (zend-logo)
+GPL EXPLOIT unicode directory \
+traversal attempt
+ET WEB_SERVER PHP Easteregg Information-Disclosure (php-logo)
+GPL WEB_SERVER service.cnf access
+GPL EXPLOIT iisadmpwd \
+attempt
+ET WEB_SERVER PHP SESSION SuperGlobal in URI
+GPL WEB_SERVER /~root access
+GPL WEB_SERVER authors.pwd access
+ET WEB_SERVER \
+PHP ENV SuperGlobal in URI
+GPL EXPLOIT .cnf access
+ET POLICY Proxy TRACE Request - inbound
+GPL WEB_SERVER .htpasswd access
+GPL WEB_\
+SERVER global.asa access
+ET WEB_SERVER PHP SERVER SuperGlobal in URI
+GPL EXPLOIT fpcount access
+GPL WEB_SERVER globals.pl access
+\
+GPL WEB_SERVER 403 Forbidden
+GPL WEB_SERVER service.pwd
+GPL EXPLOIT ISAPI .idq attempt
+ET WEB_SERVER PHP Easteregg Information-Disclosure (\
+phpinfo)
+GPL WEB_SERVER printenv access
+GPL WEB_SERVER author.exe access
+GPL EXPLOIT iissamples access
+GPL EXPLOIT .htr access
+ET \
+WEB_SERVER PHP REQUEST SuperGlobal in URI\""];
+	"INFO DISCOVERY
+http" -> "NETWORK DoS
+http | ID: 5"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 03/11/18, 14:44:18\ngap: -7sec\nend_prev: 03/11/18, 14:44:25\"'}"];
+	"INFO DISCOVERY
+http" -> "NETWORK DoS
+http | ID: 5"	[key=1,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 15:09:13\ngap: -1sec\nend_prev: 03/11/18, 15:09:\
+14\"'}"];
+	"INFO DISCOVERY
+http" -> "NETWORK DoS
+http | ID: 5"	[key=2,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 22:54:39\ngap: -40sec\nend_prev: 03/11/18, 22:55:\
+19\"'}"];
+	"INFO DISCOVERY
+http" -> "NETWORK DoS
+http | ID: 5"	[key=3,
+		data="{'color': 'orange', 'fontcolor': '\"orange\"', 'label': '\"start_next: 03/11/18, 20:27:17\ngap: -1sec\nend_prev: 03/11/18, 20:27:18\"'}"];
+	"INFO DISCOVERY
+http" -> "NETWORK DoS
+http | ID: 5"	[key=4,
+		data="{'color': 'orange', 'fontcolor': '\"orange\"', 'label': '\"start_next: 03/11/18, 22:10:14\ngap: -78sec\nend_prev: 03/11/18, 22:11:32\"'}"];
+	"INFO DISCOVERY
+http" -> "NETWORK DoS
+http | ID: 5"	[key=5,
+		data="{'color': 'orange', 'fontcolor': '\"orange\"', 'label': '\"start_next: 03/11/18, 18:07:51\ngap: -1sec\nend_prev: 03/11/18, 18:07:52\"'}"];
+	"INFO DISCOVERY
+http" -> "NETWORK DoS
+http | ID: 5"	[key=6,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 03/11/18, 14:44:18\ngap: -7sec\nend_prev: 03/11/18, 14:44:25\"'}"];
+	"INFO DISCOVERY
+http" -> "NETWORK DoS
+http | ID: 5"	[key=7,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 15:09:13\ngap: -1sec\nend_prev: 03/11/18, 15:09:\
+14\"'}"];
+	"INFO DISCOVERY
+http" -> "NETWORK DoS
+http | ID: 5"	[key=8,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 22:54:39\ngap: -40sec\nend_prev: 03/11/18, 22:55:\
+19\"'}"];
+	"INFO DISCOVERY
+http" -> "NETWORK DoS
+http | ID: 5"	[key=9,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 03/11/18, 20:03:02\ngap: -1sec\nend_prev: 03/11/18, 20:03:03\"'}"];
+	"INFO DISCOVERY
+http" -> "NETWORK DoS
+http | ID: 5"	[key=10,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 03/11/18, 15:00:40\ngap: -12sec\nend_prev: 03/11/18, 15:00:52\"'}"];
+	"INFO DISCOVERY
+http" -> "NETWORK DoS
+http | ID: 112"	[key=0,
+		data="{'color': 'magenta', 'label': '<font color=\"magenta\"> start_next: 03/11/18, 15:11:34<br/>gap: -1sec<br/>end_prev: 03/11/18, 15:11:\
+35</font><br/><font color=\"magenta\"><b>Attacker: 10.0.254.203</b></font>'}"];
+	"INFO DISCOVERY
+unknown"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"GPL WEB_SERVER 403 Forbidden\""];
+	"INFO DISCOVERY
+unknown" -> "NETWORK DoS
+http | ID: 5"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 03/11/18, 20:36:17\ngap: 10132sec\nend_prev: 03/11/18, 17:47:\
+24\"'}"];
+	"SERVICE DISCOVERY
+dsd"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Potential VNC Scan 5900-5920
+ET SCAN Potential VNC Scan 5800-5820\""];
+	"SERVICE DISCOVERY
+dsd" -> "NETWORK DoS
+http | ID: 5"	[key=0,
+		data="{'color': 'magenta', 'fontcolor': '\"magenta\"', 'label': '\"start_next: 03/11/18, 21:49:58\ngap: 491sec\nend_prev: 03/11/18, 21:41:\
+47\"'}"];
+	"HOST DISCOVERY
+http"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Nmap Scripting Engine User-Agent Detected (Nmap Scripting Engine)
+ET SCAN Possible Nmap User-Agent Observed\""];
+	"HOST DISCOVERY
+http" -> "NETWORK DoS
+http | ID: 5"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 03/11/18, 21:34:23\ngap: 34sec\nend_prev: 03/11/18, 21:33:50\"'}"];
+	"SURFING
+http"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET WEB_SERVER WEB-PHP phpinfo access\""];
+	"SURFING
+http" -> "NETWORK DoS
+http | ID: 5"	[key=0,
+		data="{'color': 'orange', 'fontcolor': '\"orange\"', 'label': '\"start_next: 03/11/18, 18:05:40\ngap: -17sec\nend_prev: 03/11/18, 18:05:56\"'}"];
+	"HOST DISCOVERY
+etlservicemgr"	[shape=oval,
+		tooltip="\"ET SCAN Nmap Scripting Engine User-Agent Detected (Nmap Scripting Engine)
+ET SCAN Possible Nmap User-Agent Observed\""];
+	"HOST DISCOVERY
+etlservicemgr" -> "NETWORK DoS
+http | ID: 5"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 03/11/18, 21:25:42\ngap: 5564sec\nend_prev: 03/11/18, 19:52:\
+58\"'}"];
+	"REMOTE SERVICE EXPLOIT
+http | ID: 96"	[shape=box,
+		tooltip="\"ET WEB_SERVER Script tag in URI Possible Cross Site Scripting Attempt\""];
+	"REMOTE SERVICE EXPLOIT
+http | ID: 96" -> "NETWORK DoS
+http | ID: 5"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 03/11/18, 22:00:36\ngap: 2613sec\nend_prev: 03/11/18, 21:17:\
+03\"'}"];
+}

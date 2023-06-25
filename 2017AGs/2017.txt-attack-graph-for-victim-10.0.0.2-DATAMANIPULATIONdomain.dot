@@ -1,0 +1,64 @@
+digraph DATAMANIPULATIONdomain {
+rankdir="BT"; 
+ graph [ nodesep="0.1", ranksep="0.02"] 
+ node [ fontname=Arial, fontsize=24,penwidth=3]; 
+ edge [ fontname=Arial, fontsize=20,penwidth=5 ];
+"Victim: 10.0.0.2
+DATA MANIPULATION
+domain" [shape=doubleoctagon, style=filled, fillcolor=salmon];
+{ rank = max; "Victim: 10.0.0.2
+DATA MANIPULATION
+domain"}
+"DATA MANIPULATION
+domain | ID: 75" -> "Victim: 10.0.0.2
+DATA MANIPULATION
+domain"
+"DATA MANIPULATION
+domain | ID: 75" [style=filled, fillcolor= salmon]
+{ rank=same; "DATA MANIPULATION
+domain | ID: 75"}
+"SERVICE DISCOVERY
+ssh" [style=filled, fillcolor= yellow]
+"SERVICE DISCOVERY
+ssh" -> "VULNERABILTY DISCOVERY
+ncube-lm" [ color=blue] [label=<<font color="blue"> start_next: 04/11/17, 13:59:31<br/>gap: 2sec<br/>end_prev: 04/11/17, 13:59:29</font><br/><font color="blue"><b>Attacker: 10.0.254.31</b></font>>]
+"VULNERABILTY DISCOVERY
+ncube-lm" -> "ARBITRARY CODE EXECUTION
+ssdp | ID: 976" [ label="start_next: 04/11/17, 14:00:53
+gap: 49sec
+end_prev: 04/11/17, 14:00:04"][ fontcolor="blue" color=blue]
+"ARBITRARY CODE EXECUTION
+ssdp | ID: 976" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: 415" [ label="start_next: 04/11/17, 14:01:26
+gap: 22sec
+end_prev: 04/11/17, 14:01:04"][ fontcolor="blue" color=blue]
+"REMOTE SERVICE EXPLOIT
+snmp | ID: 415" -> "DATA MANIPULATION
+domain | ID: 75" [ label="start_next: 04/11/17, 14:01:35
+gap: 9sec
+end_prev: 04/11/17, 14:01:26"][ fontcolor="blue" color=blue]
+"SERVICE DISCOVERY
+ssh" [shape=oval]
+"SERVICE DISCOVERY
+ssh" [tooltip="ET SCAN Potential SSH Scan
+ET SCAN Potential VNC Scan 5900-5920"]
+"VULNERABILTY DISCOVERY
+ncube-lm" [shape=oval]
+"VULNERABILTY DISCOVERY
+ncube-lm" [tooltip="ET POLICY Suspicious inbound to PostgreSQL port 5432
+ET POLICY Suspicious inbound to MSSQL port 1433
+ET POLICY Suspicious inbound to Oracle SQL port 1521
+ET POLICY Suspicious inbound to mSQL port 4333"]
+"ARBITRARY CODE EXECUTION
+ssdp | ID: 976" [style="dotted", shape=box]
+"ARBITRARY CODE EXECUTION
+ssdp | ID: 976" [tooltip="GPL MISC UPnP malformed advertisement"]
+"REMOTE SERVICE EXPLOIT
+snmp | ID: 415" [style="dotted", shape=box]
+"REMOTE SERVICE EXPLOIT
+snmp | ID: 415" [tooltip="ET SNMP Samsung Printer SNMP Hardcode RW Community String"]
+"DATA MANIPULATION
+domain | ID: 75" [shape=hexagon]
+"DATA MANIPULATION
+domain | ID: 75" [tooltip="ET POLICY DNS Update From External net"]
+}

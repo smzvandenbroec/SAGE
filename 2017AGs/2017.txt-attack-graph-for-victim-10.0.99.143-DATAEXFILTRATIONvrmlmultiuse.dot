@@ -1,0 +1,225 @@
+digraph DATAEXFILTRATIONvrmlmultiuse {
+rankdir="BT"; 
+ graph [ nodesep="0.1", ranksep="0.02"] 
+ node [ fontname=Arial, fontsize=24,penwidth=3]; 
+ edge [ fontname=Arial, fontsize=20,penwidth=5 ];
+"Victim: 10.0.99.143
+DATA EXFILTRATION
+vrml-multi-use" [shape=doubleoctagon, style=filled, fillcolor=salmon];
+{ rank = max; "Victim: 10.0.99.143
+DATA EXFILTRATION
+vrml-multi-use"}
+"DATA EXFILTRATION
+vrml-multi-use | ID: 76" -> "Victim: 10.0.99.143
+DATA EXFILTRATION
+vrml-multi-use"
+"DATA EXFILTRATION
+vrml-multi-use | ID: 76" [style=filled, fillcolor= salmon]
+{ rank=same; "DATA EXFILTRATION
+vrml-multi-use | ID: 76"}
+"VULNERABILTY DISCOVERY
+ms-sql-s" [style=filled, fillcolor= yellow]
+"VULNERABILTY DISCOVERY
+ms-sql-s" -> "SERVICE DISCOVERY
+microsoft-ds" [ color=blue] [label=<<font color="blue"> start_next: 04/11/17, 14:08:09<br/>gap: -32sec<br/>end_prev: 04/11/17, 14:08:41</font><br/><font color="blue"><b>Attacker: 10.0.254.31</b></font>>]
+"SERVICE DISCOVERY
+microsoft-ds" -> "NETWORK DoS
+ssdp | ID: 55" [ label="start_next: 04/11/17, 14:09:19
+gap: 42sec
+end_prev: 04/11/17, 14:08:36"][ fontcolor="blue" color=blue]
+"NETWORK DoS
+ssdp | ID: 55" -> "INFO DISCOVERY
+xdmcp" [ label="start_next: 04/11/17, 14:10:03
+gap: 45sec
+end_prev: 04/11/17, 14:09:19"][ fontcolor="blue" color=blue]
+"INFO DISCOVERY
+xdmcp" -> "SURFING
+vrml-multi-use" [ label="start_next: 04/11/17, 14:11:32
+gap: 2sec
+end_prev: 04/11/17, 14:11:30"][ fontcolor="blue" color=blue]
+"SURFING
+vrml-multi-use" -> "DATA DELIVERY
+vrml-multi-use | ID: 416" [ label="start_next: 04/11/17, 14:11:33
+gap: 1sec
+end_prev: 04/11/17, 14:11:32"][ fontcolor="blue" color=blue]
+"DATA DELIVERY
+vrml-multi-use | ID: 416" -> "DATA EXFILTRATION
+vrml-multi-use | ID: 76" [ label="start_next: 04/11/17, 14:11:35
+gap: -1sec
+end_prev: 04/11/17, 14:11:36"][ fontcolor="blue" color=blue]
+"VULNERABILTY DISCOVERY
+postgresql" [style=filled, fillcolor= yellow]
+"VULNERABILTY DISCOVERY
+postgresql" -> "SERVICE DISCOVERY
+unknown" [ color=blue] [label=<<font color="blue"> start_next: 04/11/17, 16:31:31<br/>gap: -35sec<br/>end_prev: 04/11/17, 16:32:06</font><br/><font color="blue"><b>Attacker: 10.0.254.31</b></font>>]
+"SERVICE DISCOVERY
+unknown" -> "ARBITRARY CODE EXECUTION
+ssdp | ID: 355" [ label="start_next: 04/11/17, 16:32:58
+gap: 52sec
+end_prev: 04/11/17, 16:32:07"][ fontcolor="blue" color=blue]
+"ARBITRARY CODE EXECUTION
+ssdp | ID: 355" -> "INFO DISCOVERY
+xdmcp" [ label="start_next: 04/11/17, 16:33:30
+gap: 21sec
+end_prev: 04/11/17, 16:33:08"][ fontcolor="blue" color=blue]
+"INFO DISCOVERY
+xdmcp" -> "SURFING
+vrml-multi-use" [ label="start_next: 04/11/17, 16:34:42
+gap: 2sec
+end_prev: 04/11/17, 16:34:40"][ fontcolor="blue" color=blue]
+"SURFING
+vrml-multi-use" -> "DATA DELIVERY
+vrml-multi-use | ID: 416" [ label="start_next: 04/11/17, 16:34:46
+gap: 3sec
+end_prev: 04/11/17, 16:34:43"][ fontcolor="blue" color=blue]
+"DATA DELIVERY
+vrml-multi-use | ID: 416" -> "DATA EXFILTRATION
+vrml-multi-use | ID: 76" [ label="start_next: 04/11/17, 16:34:48
+gap: -1sec
+end_prev: 04/11/17, 16:34:49"][ fontcolor="blue" color=blue]
+"VULNERABILTY DISCOVERY
+ms-sql-s" [style=filled, fillcolor= yellow]
+"VULNERABILTY DISCOVERY
+ms-sql-s" -> "SERVICE DISCOVERY
+rpas-c2" [ color=blue] [label=<<font color="blue"> start_next: 04/11/17, 18:03:39<br/>gap: -38sec<br/>end_prev: 04/11/17, 18:04:17</font><br/><font color="blue"><b>Attacker: 10.0.254.31</b></font>>]
+"SERVICE DISCOVERY
+rpas-c2" -> "INFO DISCOVERY
+xdmcp" [ label="start_next: 04/11/17, 18:05:40
+gap: 121sec
+end_prev: 04/11/17, 18:03:39"][ fontcolor="blue" color=blue]
+"INFO DISCOVERY
+xdmcp" -> "SURFING
+vrml-multi-use" [ label="start_next: 04/11/17, 18:07:07
+gap: 2sec
+end_prev: 04/11/17, 18:07:05"][ fontcolor="blue" color=blue]
+"SURFING
+vrml-multi-use" -> "DATA DELIVERY
+vrml-multi-use | ID: 416" [ label="start_next: 04/11/17, 18:07:08
+gap: 1sec
+end_prev: 04/11/17, 18:07:07"][ fontcolor="blue" color=blue]
+"DATA DELIVERY
+vrml-multi-use | ID: 416" -> "DATA EXFILTRATION
+vrml-multi-use | ID: 76" [ label="start_next: 04/11/17, 18:07:15
+gap: -1sec
+end_prev: 04/11/17, 18:07:16"][ fontcolor="blue" color=blue]
+"SERVICE DISCOVERY
+epmap" [style=filled, fillcolor= yellow]
+"SERVICE DISCOVERY
+epmap" -> "VULNERABILTY DISCOVERY
+ncube-lm" [ color=blue] [label=<<font color="blue"> start_next: 04/11/17, 18:58:00<br/>gap: 43sec<br/>end_prev: 04/11/17, 18:57:18</font><br/><font color="blue"><b>Attacker: 10.0.254.31</b></font>>]
+"VULNERABILTY DISCOVERY
+ncube-lm" -> "BRUTE FORCE CREDENTIALS
+pop3 | ID: 382" [ label="start_next: 04/11/17, 18:58:15
+gap: -17sec
+end_prev: 04/11/17, 18:58:32"][ fontcolor="blue" color=blue]
+"BRUTE FORCE CREDENTIALS
+pop3 | ID: 382" -> "NETWORK DoS
+ssdp | ID: 55" [ label="start_next: 04/11/17, 18:59:10
+gap: 55sec
+end_prev: 04/11/17, 18:58:15"][ fontcolor="blue" color=blue]
+"NETWORK DoS
+ssdp | ID: 55" -> "INFO DISCOVERY
+xdmcp" [ label="start_next: 04/11/17, 18:59:54
+gap: 45sec
+end_prev: 04/11/17, 18:59:10"][ fontcolor="blue" color=blue]
+"INFO DISCOVERY
+xdmcp" -> "SURFING
+vrml-multi-use" [ label="start_next: 04/11/17, 19:01:18
+gap: 2sec
+end_prev: 04/11/17, 19:01:16"][ fontcolor="blue" color=blue]
+"SURFING
+vrml-multi-use" -> "DATA DELIVERY
+vrml-multi-use | ID: 416" [ label="start_next: 04/11/17, 19:01:20
+gap: 1sec
+end_prev: 04/11/17, 19:01:18"][ fontcolor="blue" color=blue]
+"DATA DELIVERY
+vrml-multi-use | ID: 416" -> "DATA EXFILTRATION
+vrml-multi-use | ID: 76" [ label="start_next: 04/11/17, 19:01:24
+gap: -1sec
+end_prev: 04/11/17, 19:01:25"][ fontcolor="blue" color=blue]
+"INFO DISCOVERY
+xdmcp" [style=filled, fillcolor= yellow]
+"INFO DISCOVERY
+xdmcp" -> "DATA DELIVERY
+vrml-multi-use | ID: 416" [ color=blue] [label=<<font color="blue"> start_next: 04/11/17, 21:00:04<br/>gap: -289sec<br/>end_prev: 04/11/17, 21:04:53</font><br/><font color="blue"><b>Attacker: 10.0.254.31</b></font>>]
+"DATA DELIVERY
+vrml-multi-use | ID: 416" -> "DATA EXFILTRATION
+vrml-multi-use | ID: 76" [ label="start_next: 04/11/17, 21:00:21
+gap: -292sec
+end_prev: 04/11/17, 21:05:13"][ fontcolor="blue" color=blue]
+"VULNERABILTY DISCOVERY
+ms-sql-s" [shape=oval]
+"VULNERABILTY DISCOVERY
+ms-sql-s" [tooltip="ET POLICY Suspicious inbound to mySQL port 3306
+ET POLICY Suspicious inbound to mSQL port 4333
+ET POLICY Suspicious inbound to MSSQL port 1433
+ET POLICY Suspicious inbound to Oracle SQL port 1521
+ET POLICY Suspicious inbound to PostgreSQL port 5432"]
+"SERVICE DISCOVERY
+microsoft-ds" [shape=oval]
+"SERVICE DISCOVERY
+microsoft-ds" [tooltip="ET SCAN Behavioral Unusual Port 135 traffic Potential Scan or Infection
+ET SCAN Potential VNC Scan 5800-5820
+ET SCAN Behavioral Unusual Port 445 traffic Potential Scan or Infection"]
+"NETWORK DoS
+ssdp | ID: 55" [shape=hexagon]
+"NETWORK DoS
+ssdp | ID: 55" [tooltip="ET DOS Possible SSDP Amplification Scan in Progress"]
+"INFO DISCOVERY
+xdmcp" [shape=oval]
+"INFO DISCOVERY
+xdmcp" [tooltip="GPL WEB_SERVER mod_gzip_status access
+GPL RPC xdmcp info query"]
+"SURFING
+vrml-multi-use" [shape=oval]
+"SURFING
+vrml-multi-use" [tooltip="ET WEB_SERVER WEB-PHP phpinfo access"]
+"DATA DELIVERY
+vrml-multi-use | ID: 416" [shape=hexagon]
+"DATA DELIVERY
+vrml-multi-use | ID: 416" [tooltip="ET WEB_SERVER PHP Possible php Remote File Inclusion Attempt
+ET WEB_SERVER PHP tags in HTTP POST
+GPL WEB_SERVER perl post attempt"]
+"DATA EXFILTRATION
+vrml-multi-use | ID: 76" [shape=hexagon]
+"DATA EXFILTRATION
+vrml-multi-use | ID: 76" [tooltip="ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability"]
+"VULNERABILTY DISCOVERY
+postgresql" [shape=oval]
+"VULNERABILTY DISCOVERY
+postgresql" [tooltip="ET POLICY Suspicious inbound to mySQL port 3306
+ET POLICY Suspicious inbound to mSQL port 4333
+ET POLICY Suspicious inbound to MSSQL port 1433
+ET POLICY Suspicious inbound to Oracle SQL port 1521
+ET POLICY Suspicious inbound to PostgreSQL port 5432"]
+"SERVICE DISCOVERY
+unknown" [shape=oval]
+"SERVICE DISCOVERY
+unknown" [tooltip="ET SCAN Behavioral Unusual Port 135 traffic Potential Scan or Infection
+ET SCAN Potential VNC Scan 5800-5820
+ET SCAN Behavioral Unusual Port 445 traffic Potential Scan or Infection"]
+"ARBITRARY CODE EXECUTION
+ssdp | ID: 355" [shape=box]
+"ARBITRARY CODE EXECUTION
+ssdp | ID: 355" [tooltip="GPL MISC UPnP malformed advertisement"]
+"SERVICE DISCOVERY
+rpas-c2" [shape=oval]
+"SERVICE DISCOVERY
+rpas-c2" [tooltip="ET SCAN Potential VNC Scan 5900-5920"]
+"SERVICE DISCOVERY
+epmap" [shape=oval]
+"SERVICE DISCOVERY
+epmap" [tooltip="ET SCAN Behavioral Unusual Port 135 traffic Potential Scan or Infection"]
+"VULNERABILTY DISCOVERY
+ncube-lm" [shape=oval]
+"VULNERABILTY DISCOVERY
+ncube-lm" [tooltip="ET POLICY Suspicious inbound to mySQL port 3306
+ET POLICY Suspicious inbound to mSQL port 4333
+ET POLICY Suspicious inbound to MSSQL port 1433
+ET POLICY Suspicious inbound to Oracle SQL port 1521
+ET POLICY Suspicious inbound to PostgreSQL port 5432"]
+"BRUTE FORCE CREDENTIALS
+pop3 | ID: 382" [shape=box]
+"BRUTE FORCE CREDENTIALS
+pop3 | ID: 382" [tooltip="ET SCAN Rapid POP3 Connections - Possible Brute Force Attack"]
+}

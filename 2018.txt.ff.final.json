@@ -1,0 +1,3056 @@
+{
+	"types" : [
+"1"
+	],
+	"alphabet" : [
+"CnC|http",
+"infoD|http",
+"serD|unknown",
+"vulnD|mysql",
+"serD|dsd",
+"netDOS|http",
+"hostD|http",
+"surf|us-cli",
+"infoD|us-cli",
+"hostD|us-cli",
+"surf|http",
+"surf|commplex-main",
+"infoD|commplex-main",
+"serD|rpas-c2",
+"surf|remoteware-cl",
+"infoD|remoteware-cl",
+"hostD|remoteware-cl",
+"bfCred|unknown",
+"hostD|etlservicemgr",
+"hostD|unknown",
+"hostD|wap-wsp",
+"exfil|http",
+"serD|ff-ice",
+"dManip|http",
+"rPrivEsc|http",
+"ACE|http",
+"delivery|http",
+"resHJ|http",
+"acctManip|http",
+"vulnD|http",
+"vulnD|wap-wsp",
+"serD|cpdlc",
+"rPrivEsc|wap-wsp",
+"resHJ|wap-wsp",
+"acctManip|wap-wsp",
+"exfil|remoteware-cl",
+"vulnD|remoteware-cl",
+"dManip|remoteware-cl",
+"rPrivEsc|remoteware-cl",
+"ACE|remoteware-cl",
+"serD|cm",
+"resHJ|us-cli",
+"acctManip|us-cli",
+"vulnD|ahsp",
+"hostD|asf-rmcp",
+"infoD|xdmcp",
+"vulnD|ms-sql-s",
+"vulnD|ncube-lm",
+"vulnD|postgresql",
+"exfil|unknown",
+"infoD|unknown",
+"serD|sip",
+"bfCred|pop3s",
+"serD|rfb",
+"remoteexp|http",
+"uPrivEsc|http",
+"serD|ssh",
+"PAexp|http",
+"uPrivEsc|remoteware-cl",
+"remoteexp|remoteware-cl",
+"infoD|wap-wsp",
+"infoD|ssh",
+"delivery|wap-wsp",
+"uPrivEsc|wap-wsp",
+"surf|wap-wsp",
+"PAexp|wap-wsp",
+"remoteexp|wap-wsp",
+"remoteexp|cslistener",
+"TOexp|http",
+"vulnD|cslistener",
+"dManip|wap-wsp",
+"exfil|etlservicemgr",
+"uPrivEsc|etlservicemgr",
+"rPrivEsc|etlservicemgr",
+"surf|etlservicemgr",
+"ACE|etlservicemgr",
+"bfCred|pop3",
+"servS|http",
+"privEsc|http",
+"acctManip|snmp",
+"uPrivEsc|cslistener",
+"netDOS|ssdp",
+"CnC|http-alt",
+"rPrivEsc|smtp",
+"serD|asmgcs",
+"serD|agma",
+"serD|spt-automation",
+"serD|ipsma",
+"serD|ag-swim",
+"vulnD|sip",
+"infoD|smtp",
+"exfil|us-cli",
+"vulnD|us-cli",
+"dManip|us-cli",
+"rPrivEsc|us-cli",
+"ACE|us-cli",
+"delivery|us-cli",
+"exfil|wap-wsp",
+"ACE|wap-wsp",
+"vulnD|unknown",
+"dManip|unknown",
+"rPrivEsc|unknown",
+"ACE|unknown",
+"delivery|unknown",
+"resHJ|unknown",
+"acctManip|unknown",
+"surf|unknown",
+"infoD|etlservicemgr",
+"vulnD|etlservicemgr",
+"dManip|etlservicemgr",
+"resHJ|etlservicemgr",
+"acctManip|etlservicemgr",
+"resHJ|remoteware-cl",
+"acctManip|remoteware-cl",
+"serD|fis",
+"serD|ads-c",
+"CnC|unknown",
+"exfil|commplex-main",
+"CnC|remoteware-cl",
+"vulnD|commplex-main",
+"dManip|commplex-main",
+"rPrivEsc|commplex-main",
+"ACE|commplex-main",
+"delivery|commplex-main",
+"resHJ|commplex-main",
+"acctManip|commplex-main",
+"dDestruct|us-cli",
+"remoteexp|us-cli",
+"exfil|ssh",
+"infoD|domain",
+"serD|icmpd",
+"exfil|cslistener",
+"infoD|cslistener",
+"dManip|cslistener",
+"rPrivEsc|cslistener",
+"ACE|cslistener",
+"delivery|cslistener",
+"resHJ|cslistener",
+"acctManip|cslistener",
+"surf|cslistener"
+	],
+	"nodes" : [
+		{
+			"id" : 0,
+			"source" :  -1,
+			"label" : "fin:  path: 0:664 , ",
+			"size" : 664,
+			"level" : 0,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "0 0",
+			"data" :  {"path_counts":{"0":664},"symbol_counts":null,"total_final":0,"total_paths":664,"trans_counts":{"ACE|http":"16","CnC|http":"16","CnC|http-alt":"1","CnC|unknown":"2","PAexp|http":"1","TOexp|http":"1","acctManip|snmp":"48","bfCred|pop3":"3","bfCred|pop3s":"5","bfCred|unknown":"8","dDestruct|us-cli":"1","dManip|commplex-main":"1","dManip|cslistener":"1","dManip|etlservicemgr":"2","dManip|http":"51","dManip|remoteware-cl":"4","dManip|unknown":"1","dManip|us-cli":"1","dManip|wap-wsp":"3","delivery|cslistener":"1","delivery|http":"40","delivery|unknown":"1","delivery|us-cli":"2","delivery|wap-wsp":"2","exfil|commplex-main":"4","exfil|cslistener":"1","exfil|etlservicemgr":"2","exfil|http":"53","exfil|remoteware-cl":"5","exfil|ssh":"1","exfil|unknown":"25","exfil|us-cli":"4","exfil|wap-wsp":"2","hostD|asf-rmcp":"19","hostD|etlservicemgr":"4","hostD|http":"45","hostD|remoteware-cl":"3","hostD|unknown":"4","hostD|us-cli":"2","infoD|http":"3","infoD|smtp":"1","infoD|unknown":"5","infoD|xdmcp":"4","netDOS|http":"35","netDOS|ssdp":"1","rPrivEsc|commplex-main":"1","rPrivEsc|smtp":"3","rPrivEsc|us-cli":"1","remoteexp|http":"2","remoteexp|remoteware-cl":"1","resHJ|etlservicemgr":"2","resHJ|http":"9","resHJ|remoteware-cl":"3","serD|ads-c":"1","serD|ag-swim":"6","serD|agma":"6","serD|cm":"3","serD|cpdlc":"12","serD|dsd":"7","serD|ff-ice":"3","serD|fis":"10","serD|icmpd":"1","serD|rpas-c2":"5","serD|ssh":"14","serD|unknown":"93","servS|http":"1","surf|commplex-main":"1","surf|http":"4","surf|remoteware-cl":"1","uPrivEsc|cslistener":"8","vulnD|ahsp":"4","vulnD|ms-sql-s":"3","vulnD|mysql":"7","vulnD|ncube-lm":"2","vulnD|postgresql":"14","vulnD|sip":"1"}}
+		},
+		{
+			"id" : 1,
+			"source" :  0,
+			"label" : "fin:  path: 0:16 , ",
+			"size" : 16,
+			"level" : 1,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 1 CnC|http",
+			"data" :  {"path_counts":{"0":16},"symbol_counts":null,"total_final":0,"total_paths":16,"trans_counts":{"CnC|http":"1","hostD|etlservicemgr":"1","infoD|http":"6","serD|ssh":"1","surf|http":"7"}}
+		},
+		{
+			"id" : 3,
+			"source" :  0,
+			"label" : "fin: 0:0 ,  path: 0:139 , ",
+			"size" : 139,
+			"level" : 6,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 1 serD|unknown",
+			"data" :  {"final_counts":{"0":0},"path_counts":{"0":139},"symbol_counts":null,"total_final":0,"total_paths":139,"trans_counts":{"CnC|http":"1","hostD|us-cli":"1","serD|asmgcs":"1","serD|ssh":"1","serD|unknown":"3","surf|http":"1","vulnD|ahsp":"3","vulnD|http":"0","vulnD|ms-sql-s":"6","vulnD|mysql":"116","vulnD|postgresql":"6"}}
+		},
+		{
+			"id" : 4,
+			"source" :  0,
+			"label" : "fin:  path: 0:14 , ",
+			"size" : 14,
+			"level" : 2,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 1 serD|dsd",
+			"data" :  {"path_counts":{"0":14},"symbol_counts":null,"total_final":0,"total_paths":14,"trans_counts":{"serD|unknown":"1","vulnD|mysql":"13"}}
+		},
+		{
+			"id" : 5,
+			"source" :  0,
+			"label" : "fin:  path: 0:42 , ",
+			"size" : 42,
+			"level" : 2,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 1 netDOS|http",
+			"data" :  {"path_counts":{"0":42},"symbol_counts":null,"total_final":0,"total_paths":42,"trans_counts":{"hostD|etlservicemgr":"1","hostD|http":"1","infoD|http":"35","infoD|unknown":"1","netDOS|http":"1","remoteexp|http":"1","serD|dsd":"1","surf|http":"1"}}
+		},
+		{
+			"id" : 6,
+			"source" :  0,
+			"label" : "fin: 0:13 ,  path: 0:61 , ",
+			"size" : 74,
+			"level" : 5,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 1 hostD|http",
+			"data" :  {"final_counts":{"0":13},"path_counts":{"0":61},"symbol_counts":null,"total_final":13,"total_paths":61,"trans_counts":{"exfil|unknown":"1","hostD|http":"2","hostD|us-cli":"1","serD|agma":"5","serD|cpdlc":"10","serD|rpas-c2":"2","serD|sip":"1","serD|spt-automation":"1","serD|ssh":"1","serD|unknown":"30","vulnD|ahsp":"1","vulnD|http":"2","vulnD|mysql":"2","vulnD|ncube-lm":"1","vulnD|postgresql":"1"}}
+		},
+		{
+			"id" : 12,
+			"source" :  0,
+			"label" : "fin:  path: 0:8 , ",
+			"size" : 8,
+			"level" : 1,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 1 bfCred|unknown",
+			"data" :  {"path_counts":{"0":8},"symbol_counts":null,"total_final":0,"total_paths":8,"trans_counts":{"serD|ag-swim":"1","serD|cpdlc":"1","serD|ff-ice":"1","serD|rpas-c2":"1","serD|unknown":"4"}}
+		},
+		{
+			"id" : 15,
+			"source" :  0,
+			"label" : "fin:  path: 0:53 , ",
+			"size" : 53,
+			"level" : 1,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 1 exfil|http",
+			"data" :  {"path_counts":{"0":53},"symbol_counts":null,"total_final":0,"total_paths":53,"trans_counts":{"dManip|http":"2","hostD|http":"1","infoD|http":"28","rPrivEsc|http":"6","resHJ|http":"2","serD|unknown":"1","vulnD|http":"12","vulnD|wap-wsp":"1"}}
+		},
+		{
+			"id" : 17,
+			"source" :  0,
+			"label" : "fin:  path: 0:51 , ",
+			"size" : 51,
+			"level" : 1,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 1 dManip|http",
+			"data" :  {"path_counts":{"0":51},"symbol_counts":null,"total_final":0,"total_paths":51,"trans_counts":{"ACE|etlservicemgr":"1","delivery|http":"3","delivery|wap-wsp":"1","rPrivEsc|http":"41","rPrivEsc|wap-wsp":"1","remoteexp|cslistener":"1","remoteexp|http":"2","vulnD|http":"1"}}
+		},
+		{
+			"id" : 18,
+			"source" :  0,
+			"label" : "fin:  path: 0:16 , ",
+			"size" : 16,
+			"level" : 1,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 1 ACE|http",
+			"data" :  {"path_counts":{"0":16},"symbol_counts":null,"total_final":0,"total_paths":16,"trans_counts":{"PAexp|http":"2","PAexp|wap-wsp":"1","rPrivEsc|etlservicemgr":"1","rPrivEsc|http":"12"}}
+		},
+		{
+			"id" : 19,
+			"source" :  0,
+			"label" : "fin:  path: 0:40 , ",
+			"size" : 40,
+			"level" : 1,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 1 delivery|http",
+			"data" :  {"path_counts":{"0":40},"symbol_counts":null,"total_final":0,"total_paths":40,"trans_counts":{"TOexp|http":"1","resHJ|http":"37","resHJ|us-cli":"1","resHJ|wap-wsp":"1"}}
+		},
+		{
+			"id" : 20,
+			"source" :  0,
+			"label" : "fin:  path: 0:9 , ",
+			"size" : 9,
+			"level" : 1,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 1 resHJ|http",
+			"data" :  {"path_counts":{"0":9},"symbol_counts":null,"total_final":0,"total_paths":9,"trans_counts":{"acctManip|http":"2","netDOS|http":"7"}}
+		},
+		{
+			"id" : 21,
+			"source" :  0,
+			"label" : "fin:  path: 0:31 , ",
+			"size" : 31,
+			"level" : 3,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 1 serD|cpdlc",
+			"data" :  {"path_counts":{"0":31},"symbol_counts":null,"total_final":0,"total_paths":31,"trans_counts":{"vulnD|ahsp":"1","vulnD|http":"2","vulnD|mysql":"27","vulnD|postgresql":"1"}}
+		},
+		{
+			"id" : 22,
+			"source" :  0,
+			"label" : "fin:  path: 0:5 , ",
+			"size" : 5,
+			"level" : 1,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 1 exfil|remoteware-cl",
+			"data" :  {"path_counts":{"0":5},"symbol_counts":null,"total_final":0,"total_paths":5,"trans_counts":{"infoD|remoteware-cl":"2","uPrivEsc|remoteware-cl":"1","vulnD|remoteware-cl":"2"}}
+		},
+		{
+			"id" : 26,
+			"source" :  0,
+			"label" : "fin:  path: 0:26 , ",
+			"size" : 26,
+			"level" : 2,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 1 hostD|asf-rmcp",
+			"data" :  {"path_counts":{"0":26},"symbol_counts":null,"total_final":0,"total_paths":26,"trans_counts":{"infoD|xdmcp":"26"}}
+		},
+		{
+			"id" : 30,
+			"source" :  0,
+			"label" : "fin: 0:2 ,  path: 0:25 , ",
+			"size" : 27,
+			"level" : 2,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 1 vulnD|postgresql",
+			"data" :  {"final_counts":{"0":2},"path_counts":{"0":25},"symbol_counts":null,"total_final":2,"total_paths":25,"trans_counts":{"serD|agma":"1","serD|asmgcs":"1","serD|dsd":"1","serD|ipsma":"1","serD|spt-automation":"1","serD|ssh":"1","serD|unknown":"8","vulnD|ahsp":"1","vulnD|ms-sql-s":"2","vulnD|ncube-lm":"1","vulnD|postgresql":"7"}}
+		},
+		{
+			"id" : 31,
+			"source" :  0,
+			"label" : "fin:  path: 0:25 , ",
+			"size" : 25,
+			"level" : 1,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 1 exfil|unknown",
+			"data" :  {"path_counts":{"0":25},"symbol_counts":null,"total_final":0,"total_paths":25,"trans_counts":{"exfil|unknown":"1","hostD|remoteware-cl":"2","hostD|wap-wsp":"3","infoD|unknown":"11","serD|ff-ice":"1","serD|ipsma":"2","serD|ssh":"2","serD|unknown":"2","vulnD|ms-sql-s":"1"}}
+		},
+		{
+			"id" : 32,
+			"source" :  0,
+			"label" : "fin:  path: 0:5 , ",
+			"size" : 5,
+			"level" : 1,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 1 bfCred|pop3s",
+			"data" :  {"path_counts":{"0":5},"symbol_counts":null,"total_final":0,"total_paths":5,"trans_counts":{"serD|unknown":"5"}}
+		},
+		{
+			"id" : 34,
+			"source" :  0,
+			"label" : "fin: 0:4 ,  path: 0:26 , ",
+			"size" : 30,
+			"level" : 2,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 1 serD|ssh",
+			"data" :  {"final_counts":{"0":4},"path_counts":{"0":26},"symbol_counts":null,"total_final":4,"total_paths":26,"trans_counts":{"hostD|etlservicemgr":"2","hostD|http":"1","hostD|unknown":"1","hostD|us-cli":"1","infoD|wap-wsp":"1","serD|agma":"1","serD|ssh":"10","serD|unknown":"8","vulnD|sip":"1"}}
+		},
+		{
+			"id" : 43,
+			"source" :  0,
+			"label" : "fin:  path: 0:48 , ",
+			"size" : 48,
+			"level" : 1,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 1 acctManip|snmp",
+			"data" :  {"path_counts":{"0":48},"symbol_counts":null,"total_final":0,"total_paths":48,"trans_counts":{"CnC|unknown":"1","infoD|xdmcp":"6","serD|unknown":"14","vulnD|ahsp":"10","vulnD|ms-sql-s":"4","vulnD|mysql":"7","vulnD|ncube-lm":"4","vulnD|postgresql":"2"}}
+		},
+		{
+			"id" : 44,
+			"source" :  0,
+			"label" : "fin:  path: 0:8 , ",
+			"size" : 8,
+			"level" : 1,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 1 uPrivEsc|cslistener",
+			"data" :  {"path_counts":{"0":8},"symbol_counts":null,"total_final":0,"total_paths":8,"trans_counts":{"hostD|http":"1","hostD|wap-wsp":"1","serD|ag-swim":"1","uPrivEsc|cslistener":"4","vulnD|mysql":"1"}}
+		},
+		{
+			"id" : 48,
+			"source" :  0,
+			"label" : "fin:  path: 0:11 , ",
+			"size" : 11,
+			"level" : 2,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 1 serD|agma",
+			"data" :  {"path_counts":{"0":11},"symbol_counts":null,"total_final":0,"total_paths":11,"trans_counts":{"vulnD|mysql":"11"}}
+		},
+		{
+			"id" : 49,
+			"source" :  0,
+			"label" : "fin:  path: 0:6 , ",
+			"size" : 6,
+			"level" : 1,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 1 serD|ag-swim",
+			"data" :  {"path_counts":{"0":6},"symbol_counts":null,"total_final":0,"total_paths":6,"trans_counts":{"vulnD|ms-sql-s":"3","vulnD|mysql":"3"}}
+		},
+		{
+			"id" : 62,
+			"source" :  0,
+			"label" : "fin:  path: 0:10 , ",
+			"size" : 10,
+			"level" : 1,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 1 serD|fis",
+			"data" :  {"path_counts":{"0":10},"symbol_counts":null,"total_final":0,"total_paths":10,"trans_counts":{"vulnD|mysql":"9","vulnD|postgresql":"1"}}
+		},
+		{
+			"id" : 75,
+			"source" :  1,
+			"label" : "fin: 0:6 ,  path: 0:7 , ",
+			"size" : 13,
+			"level" : 4,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 2 CnC|http surf|http",
+			"data" :  {"final_counts":{"0":6},"path_counts":{"0":7},"symbol_counts":null,"total_final":6,"total_paths":7,"trans_counts":{"infoD|http":"6","infoD|unknown":"1"}}
+		},
+		{
+			"id" : 82,
+			"source" :  3,
+			"label" : "fin: 0:20 ,  path: 0:121 , ",
+			"size" : 141,
+			"level" : 10,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 2 serD|unknown vulnD|mysql",
+			"data" :  {"final_counts":{"0":20},"path_counts":{"0":121},"symbol_counts":null,"total_final":20,"total_paths":121,"trans_counts":{"acctManip|snmp":"5","hostD|asf-rmcp":"7","hostD|http":"4","infoD|unknown":"1","serD|ag-swim":"1","serD|asmgcs":"2","serD|cm":"8","serD|cpdlc":"3","serD|dsd":"2","serD|fis":"0","serD|icmpd":"1","serD|ipsma":"1","serD|rpas-c2":"4","serD|ssh":"4","serD|unknown":"75","surf|http":"1","vulnD|ahsp":"0","vulnD|postgresql":"2"}}
+		},
+		{
+			"id" : 89,
+			"source" :  5,
+			"label" : "fin: 0:2 ,  path: 0:33 , ",
+			"size" : 35,
+			"level" : 4,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 2 netDOS|http infoD|http",
+			"data" :  {"final_counts":{"0":2},"path_counts":{"0":33},"symbol_counts":null,"total_final":2,"total_paths":33,"trans_counts":{"hostD|asf-rmcp":"1","hostD|etlservicemgr":"4","hostD|http":"6","hostD|unknown":"2","hostD|wap-wsp":"1","infoD|xdmcp":"1","serD|dsd":"1","serD|ssh":"3","serD|unknown":"11","surf|http":"2","vulnD|sip":"1"}}
+		},
+		{
+			"id" : 97,
+			"source" :  6,
+			"label" : "fin: 0:1 ,  path: 0:73 , ",
+			"size" : 74,
+			"level" : 9,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 2 hostD|http serD|unknown",
+			"data" :  {"final_counts":{"0":1},"path_counts":{"0":73},"symbol_counts":null,"total_final":1,"total_paths":73,"trans_counts":{"serD|fis":"0","serD|unknown":"0","surf|http":"0","vulnD|ahsp":"1","vulnD|http":"1","vulnD|ms-sql-s":"4","vulnD|mysql":"66","vulnD|postgresql":"1"}}
+		},
+		{
+			"id" : 126,
+			"source" :  15,
+			"label" : "fin:  path: 0:28 , ",
+			"size" : 28,
+			"level" : 3,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 2 exfil|http infoD|http",
+			"data" :  {"path_counts":{"0":28},"symbol_counts":null,"total_final":0,"total_paths":28,"trans_counts":{"hostD|http":"4","serD|ff-ice":"1","vulnD|http":"18","vulnD|mysql":"5"}}
+		},
+		{
+			"id" : 133,
+			"source" :  17,
+			"label" : "fin:  path: 0:41 , ",
+			"size" : 41,
+			"level" : 3,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 2 dManip|http rPrivEsc|http",
+			"data" :  {"path_counts":{"0":41},"symbol_counts":null,"total_final":0,"total_paths":41,"trans_counts":{"ACE|http":"41"}}
+		},
+		{
+			"id" : 141,
+			"source" :  18,
+			"label" : "fin:  path: 0:18 , ",
+			"size" : 18,
+			"level" : 4,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 2 ACE|http rPrivEsc|http",
+			"data" :  {"path_counts":{"0":18},"symbol_counts":null,"total_final":0,"total_paths":18,"trans_counts":{"ACE|http":"1","CnC|http":"4","bfCred|unknown":"1","hostD|etlservicemgr":"1","infoD|unknown":"9","serD|rpas-c2":"1","vulnD|http":"1"}}
+		},
+		{
+			"id" : 145,
+			"source" :  19,
+			"label" : "fin:  path: 0:37 , ",
+			"size" : 37,
+			"level" : 3,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 2 delivery|http resHJ|http",
+			"data" :  {"path_counts":{"0":37},"symbol_counts":null,"total_final":0,"total_paths":37,"trans_counts":{"acctManip|http":"36","remoteexp|http":"1"}}
+		},
+		{
+			"id" : 150,
+			"source" :  21,
+			"label" : "fin: 0:7 ,  path: 0:70 , ",
+			"size" : 77,
+			"level" : 10,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 2 serD|cpdlc vulnD|mysql",
+			"data" :  {"final_counts":{"0":7},"path_counts":{"0":70},"symbol_counts":null,"total_final":7,"total_paths":70,"trans_counts":{"acctManip|snmp":"1","hostD|asf-rmcp":"0","hostD|http":"3","infoD|unknown":"1","serD|ads-c":"1","serD|ag-swim":"1","serD|cm":"1","serD|cpdlc":"9","serD|dsd":"7","serD|fis":"1","serD|rpas-c2":"7","serD|ssh":"6","serD|unknown":"26","surf|http":"2","vulnD|ahsp":"1","vulnD|mysql":"3"}}
+		},
+		{
+			"id" : 163,
+			"source" :  26,
+			"label" : "fin:  path: 0:32 , ",
+			"size" : 32,
+			"level" : 5,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 2 hostD|asf-rmcp infoD|xdmcp",
+			"data" :  {"path_counts":{"0":32},"symbol_counts":null,"total_final":0,"total_paths":32,"trans_counts":{"hostD|etlservicemgr":"1","hostD|http":"2","hostD|remoteware-cl":"1","hostD|unknown":"1","infoD|xdmcp":"11","serD|unknown":"14","vulnD|mysql":"2"}}
+		},
+		{
+			"id" : 186,
+			"source" :  31,
+			"label" : "fin: 0:9 ,  path: 0:16 , ",
+			"size" : 25,
+			"level" : 5,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 2 exfil|unknown infoD|unknown",
+			"data" :  {"final_counts":{"0":9},"path_counts":{"0":16},"symbol_counts":null,"total_final":9,"total_paths":16,"trans_counts":{"hostD|http":"1","hostD|remoteware-cl":"5","hostD|wap-wsp":"2","infoD|unknown":"2","infoD|xdmcp":"1","serD|ag-swim":"1","serD|unknown":"3","vulnD|unknown":"1"}}
+		},
+		{
+			"id" : 207,
+			"source" :  43,
+			"label" : "fin:  path: 0:10 , ",
+			"size" : 10,
+			"level" : 3,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 2 acctManip|snmp vulnD|ahsp",
+			"data" :  {"path_counts":{"0":10},"symbol_counts":null,"total_final":0,"total_paths":10,"trans_counts":{"serD|ads-c":"1","serD|rpas-c2":"1","serD|unknown":"2","vulnD|ms-sql-s":"3","vulnD|mysql":"2","vulnD|ncube-lm":"1"}}
+		},
+		{
+			"id" : 222,
+			"source" :  48,
+			"label" : "fin: 0:0 ,  path: 0:21 , ",
+			"size" : 21,
+			"level" : 6,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 2 serD|agma vulnD|mysql",
+			"data" :  {"final_counts":{"0":0},"path_counts":{"0":21},"symbol_counts":null,"total_final":0,"total_paths":21,"trans_counts":{"hostD|http":"9","hostD|us-cli":"1","serD|cpdlc":"5","serD|unknown":"1","vulnD|ahsp":"4","vulnD|mysql":"1"}}
+		},
+		{
+			"id" : 267,
+			"source" :  82,
+			"label" : "fin: 0:3 ,  path: 0:72 , ",
+			"size" : 75,
+			"level" : 12,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 3 serD|unknown vulnD|mysql serD|unknown",
+			"data" :  {"final_counts":{"0":3},"path_counts":{"0":72},"symbol_counts":null,"total_final":3,"total_paths":72,"trans_counts":{"serD|unknown":"0","surf|http":"0","vulnD|ahsp":"0","vulnD|http":"0","vulnD|ms-sql-s":"0","vulnD|mysql":"71","vulnD|postgresql":"1"}}
+		},
+		{
+			"id" : 273,
+			"source" :  82,
+			"label" : "fin:  path: 0:8 , ",
+			"size" : 8,
+			"level" : 12,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 3 serD|unknown vulnD|mysql serD|cm",
+			"data" :  {"path_counts":{"0":8},"symbol_counts":null,"total_final":0,"total_paths":8,"trans_counts":{"vulnD|mysql":"8"}}
+		},
+		{
+			"id" : 277,
+			"source" :  82,
+			"label" : "fin: 0:5 ,  path: ",
+			"size" : 5,
+			"level" : 12,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 3 serD|unknown vulnD|mysql acctManip|snmp",
+			"data" :  {"final_counts":{"0":5},"symbol_counts":null,"total_final":5,"total_paths":0}
+		},
+		{
+			"id" : 305,
+			"source" :  97,
+			"label" : "fin: 0:53 ,  path: 0:19 , ",
+			"size" : 72,
+			"level" : 12,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 3 hostD|http serD|unknown vulnD|mysql",
+			"data" :  {"final_counts":{"0":53},"path_counts":{"0":19},"symbol_counts":null,"total_final":53,"total_paths":19,"trans_counts":{"acctManip|snmp":"0","hostD|asf-rmcp":"3","hostD|http":"5","infoD|domain":"1","infoD|unknown":"2","serD|ag-swim":"0","serD|agma":"1","serD|dsd":"3","serD|ssh":"0","serD|unknown":"1","surf|http":"1","surf|us-cli":"1","vulnD|mysql":"1"}}
+		},
+		{
+			"id" : 343,
+			"source" :  126,
+			"label" : "fin: 0:10 ,  path: 0:20 , ",
+			"size" : 30,
+			"level" : 6,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 3 exfil|http infoD|http vulnD|http",
+			"data" :  {"final_counts":{"0":10},"path_counts":{"0":20},"symbol_counts":null,"total_final":10,"total_paths":20,"trans_counts":{"hostD|http":"9","infoD|http":"3","serD|unknown":"2","surf|http":"6"}}
+		},
+		{
+			"id" : 353,
+			"source" :  133,
+			"label" : "fin: 0:33 ,  path: 0:8 , ",
+			"size" : 41,
+			"level" : 5,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 3 dManip|http rPrivEsc|http ACE|http",
+			"data" :  {"final_counts":{"0":33},"path_counts":{"0":8},"symbol_counts":null,"total_final":33,"total_paths":8,"trans_counts":{"infoD|http":"8"}}
+		},
+		{
+			"id" : 373,
+			"source" :  145,
+			"label" : "fin:  path: 0:36 , ",
+			"size" : 36,
+			"level" : 5,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 3 delivery|http resHJ|http acctManip|http",
+			"data" :  {"path_counts":{"0":36},"symbol_counts":null,"total_final":0,"total_paths":36,"trans_counts":{"remoteexp|http":"3","surf|http":"33"}}
+		},
+		{
+			"id" : 379,
+			"source" :  150,
+			"label" : "fin: 0:1 ,  path: 0:25 , ",
+			"size" : 26,
+			"level" : 12,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 3 serD|cpdlc vulnD|mysql serD|unknown",
+			"data" :  {"final_counts":{"0":1},"path_counts":{"0":25},"symbol_counts":null,"total_final":1,"total_paths":25,"trans_counts":{"serD|fis":"1","serD|unknown":"1","vulnD|ahsp":"2","vulnD|ms-sql-s":"2","vulnD|mysql":"19","vulnD|postgresql":"0"}}
+		},
+		{
+			"id" : 383,
+			"source" :  150,
+			"label" : "fin:  path: 0:12 , ",
+			"size" : 12,
+			"level" : 13,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 3 serD|cpdlc vulnD|mysql serD|rpas-c2",
+			"data" :  {"path_counts":{"0":12},"symbol_counts":null,"total_final":0,"total_paths":12,"trans_counts":{"vulnD|mysql":"12"}}
+		},
+		{
+			"id" : 411,
+			"source" :  163,
+			"label" : "fin:  path: 0:11 , ",
+			"size" : 11,
+			"level" : 7,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 3 hostD|asf-rmcp infoD|xdmcp infoD|xdmcp",
+			"data" :  {"path_counts":{"0":11},"symbol_counts":null,"total_final":0,"total_paths":11,"trans_counts":{"hostD|asf-rmcp":"10","serD|cpdlc":"1","serD|unknown":"0","vulnD|mysql":"0"}}
+		},
+		{
+			"id" : 439,
+			"source" :  186,
+			"label" : "fin:  path: 0:5 , ",
+			"size" : 5,
+			"level" : 7,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 3 exfil|unknown infoD|unknown hostD|remoteware-cl",
+			"data" :  {"path_counts":{"0":5},"symbol_counts":null,"total_final":0,"total_paths":5,"trans_counts":{"serD|agma":"1","serD|asmgcs":"1","serD|unknown":"3"}}
+		},
+		{
+			"id" : 495,
+			"source" :  222,
+			"label" : "fin:  path: 0:5 , ",
+			"size" : 5,
+			"level" : 8,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 3 serD|agma vulnD|mysql serD|cpdlc",
+			"data" :  {"path_counts":{"0":5},"symbol_counts":null,"total_final":0,"total_paths":5,"trans_counts":{"vulnD|mysql":"5"}}
+		},
+		{
+			"id" : 539,
+			"source" :  267,
+			"label" : "fin: 0:29 ,  path: 0:42 , ",
+			"size" : 71,
+			"level" : 14,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 4 serD|unknown vulnD|mysql serD|unknown vulnD|mysql",
+			"data" :  {"final_counts":{"0":29},"path_counts":{"0":42},"symbol_counts":null,"total_final":29,"total_paths":42,"trans_counts":{"acctManip|snmp":"0","hostD|http":"1","infoD|unknown":"0","serD|ag-swim":"0","serD|cm":"2","serD|cpdlc":"0","serD|dsd":"6","serD|fis":"0","serD|ssh":"3","serD|unknown":"30","surf|http":"0","vulnD|ahsp":"0"}}
+		},
+		{
+			"id" : 621,
+			"source" :  353,
+			"label" : "fin: 0:20 ,  path: 0:6 , ",
+			"size" : 26,
+			"level" : 9,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 4 dManip|http rPrivEsc|http ACE|http infoD|http",
+			"data" :  {"final_counts":{"0":20},"path_counts":{"0":6},"symbol_counts":null,"total_final":20,"total_paths":6,"trans_counts":{"infoD|http":"6"}}
+		},
+		{
+			"id" : 633,
+			"source" :  373,
+			"label" : "fin: 0:33 ,  path: ",
+			"size" : 33,
+			"level" : 7,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 4 delivery|http resHJ|http acctManip|http surf|http",
+			"data" :  {"final_counts":{"0":33},"symbol_counts":null,"total_final":33,"total_paths":0}
+		},
+		{
+			"id" : 672,
+			"source" :  411,
+			"label" : "fin:  path: 0:10 , ",
+			"size" : 10,
+			"level" : 9,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 4 hostD|asf-rmcp infoD|xdmcp infoD|xdmcp hostD|asf-rmcp",
+			"data" :  {"path_counts":{"0":10},"symbol_counts":null,"total_final":0,"total_paths":10,"trans_counts":{"infoD|xdmcp":"0","serD|unknown":"9","surf|us-cli":"1"}}
+		},
+		{
+			"id" : 782,
+			"source" :  539,
+			"label" : "fin:  path: 0:6 , ",
+			"size" : 6,
+			"level" : 16,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 5 serD|unknown vulnD|mysql serD|unknown vulnD|mysql serD|dsd",
+			"data" :  {"path_counts":{"0":6},"symbol_counts":null,"total_final":0,"total_paths":6,"trans_counts":{"vulnD|mysql":"6"}}
+		},
+		{
+			"id" : 890,
+			"source" :  672,
+			"label" : "fin:  path: 0:9 , ",
+			"size" : 9,
+			"level" : 11,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 5 hostD|asf-rmcp infoD|xdmcp infoD|xdmcp hostD|asf-rmcp serD|unknown",
+			"data" :  {"path_counts":{"0":9},"symbol_counts":null,"total_final":0,"total_paths":9,"trans_counts":{"serD|unknown":"0","vulnD|ms-sql-s":"9","vulnD|mysql":"0","vulnD|postgresql":"0"}}
+		},
+		{
+			"id" : 1053,
+			"source" :  890,
+			"label" : "fin: 0:12 ,  path: 0:3 , ",
+			"size" : 15,
+			"level" : 14,
+			"style" : "",
+			"isred" :  1,
+			"issink" :  0,
+			"isblue" :  0,
+			"trace" :  "1 6 hostD|asf-rmcp infoD|xdmcp infoD|xdmcp hostD|asf-rmcp serD|unknown vulnD|ms-sql-s",
+			"data" :  {"final_counts":{"0":12},"path_counts":{"0":3},"symbol_counts":null,"total_final":12,"total_paths":3,"trans_counts":{"exfil|ssh":"1","serD|unknown":"1","vulnD|ncube-lm":"1"}}
+		}
+	],
+	"edges" : [
+		{
+			"id" : "0_1",
+			"source" : "0",
+			"target" : "1",
+			"name": "CnC|http",
+			"appearances": ""}
+,
+		{
+			"id" : "0_2",
+			"source" : "0",
+			"target" : "2",
+			"name": "infoD|http",
+			"appearances": ""}
+,
+		{
+			"id" : "0_3",
+			"source" : "0",
+			"target" : "3",
+			"name": "serD|unknown",
+			"appearances": ""}
+,
+		{
+			"id" : "0_150",
+			"source" : "0",
+			"target" : "150",
+			"name": "vulnD|mysql",
+			"appearances": ""}
+,
+		{
+			"id" : "0_4",
+			"source" : "0",
+			"target" : "4",
+			"name": "serD|dsd",
+			"appearances": ""}
+,
+		{
+			"id" : "0_5",
+			"source" : "0",
+			"target" : "5",
+			"name": "netDOS|http",
+			"appearances": ""}
+,
+		{
+			"id" : "0_6",
+			"source" : "0",
+			"target" : "6",
+			"name": "hostD|http",
+			"appearances": ""}
+,
+		{
+			"id" : "0_7",
+			"source" : "0",
+			"target" : "7",
+			"name": "hostD|us-cli",
+			"appearances": ""}
+,
+		{
+			"id" : "0_8",
+			"source" : "0",
+			"target" : "8",
+			"name": "surf|http",
+			"appearances": ""}
+,
+		{
+			"id" : "0_9",
+			"source" : "0",
+			"target" : "9",
+			"name": "surf|commplex-main",
+			"appearances": ""}
+,
+		{
+			"id" : "0_383",
+			"source" : "0",
+			"target" : "383",
+			"name": "serD|rpas-c2",
+			"appearances": ""}
+,
+		{
+			"id" : "0_10",
+			"source" : "0",
+			"target" : "10",
+			"name": "surf|remoteware-cl",
+			"appearances": ""}
+,
+		{
+			"id" : "0_11",
+			"source" : "0",
+			"target" : "11",
+			"name": "hostD|remoteware-cl",
+			"appearances": ""}
+,
+		{
+			"id" : "0_12",
+			"source" : "0",
+			"target" : "12",
+			"name": "bfCred|unknown",
+			"appearances": ""}
+,
+		{
+			"id" : "0_13",
+			"source" : "0",
+			"target" : "13",
+			"name": "hostD|etlservicemgr",
+			"appearances": ""}
+,
+		{
+			"id" : "0_14",
+			"source" : "0",
+			"target" : "14",
+			"name": "hostD|unknown",
+			"appearances": ""}
+,
+		{
+			"id" : "0_15",
+			"source" : "0",
+			"target" : "15",
+			"name": "exfil|http",
+			"appearances": ""}
+,
+		{
+			"id" : "0_16",
+			"source" : "0",
+			"target" : "16",
+			"name": "serD|ff-ice",
+			"appearances": ""}
+,
+		{
+			"id" : "0_17",
+			"source" : "0",
+			"target" : "17",
+			"name": "dManip|http",
+			"appearances": ""}
+,
+		{
+			"id" : "0_18",
+			"source" : "0",
+			"target" : "18",
+			"name": "ACE|http",
+			"appearances": ""}
+,
+		{
+			"id" : "0_19",
+			"source" : "0",
+			"target" : "19",
+			"name": "delivery|http",
+			"appearances": ""}
+,
+		{
+			"id" : "0_20",
+			"source" : "0",
+			"target" : "20",
+			"name": "resHJ|http",
+			"appearances": ""}
+,
+		{
+			"id" : "0_21",
+			"source" : "0",
+			"target" : "21",
+			"name": "serD|cpdlc",
+			"appearances": ""}
+,
+		{
+			"id" : "0_22",
+			"source" : "0",
+			"target" : "22",
+			"name": "exfil|remoteware-cl",
+			"appearances": ""}
+,
+		{
+			"id" : "0_23",
+			"source" : "0",
+			"target" : "23",
+			"name": "dManip|remoteware-cl",
+			"appearances": ""}
+,
+		{
+			"id" : "0_24",
+			"source" : "0",
+			"target" : "24",
+			"name": "serD|cm",
+			"appearances": ""}
+,
+		{
+			"id" : "0_25",
+			"source" : "0",
+			"target" : "25",
+			"name": "vulnD|ahsp",
+			"appearances": ""}
+,
+		{
+			"id" : "0_26",
+			"source" : "0",
+			"target" : "26",
+			"name": "hostD|asf-rmcp",
+			"appearances": ""}
+,
+		{
+			"id" : "0_27",
+			"source" : "0",
+			"target" : "27",
+			"name": "infoD|xdmcp",
+			"appearances": ""}
+,
+		{
+			"id" : "0_28",
+			"source" : "0",
+			"target" : "28",
+			"name": "vulnD|ms-sql-s",
+			"appearances": ""}
+,
+		{
+			"id" : "0_29",
+			"source" : "0",
+			"target" : "29",
+			"name": "vulnD|ncube-lm",
+			"appearances": ""}
+,
+		{
+			"id" : "0_30",
+			"source" : "0",
+			"target" : "30",
+			"name": "vulnD|postgresql",
+			"appearances": ""}
+,
+		{
+			"id" : "0_31",
+			"source" : "0",
+			"target" : "31",
+			"name": "exfil|unknown",
+			"appearances": ""}
+,
+		{
+			"id" : "0_186",
+			"source" : "0",
+			"target" : "186",
+			"name": "infoD|unknown",
+			"appearances": ""}
+,
+		{
+			"id" : "0_32",
+			"source" : "0",
+			"target" : "32",
+			"name": "bfCred|pop3s",
+			"appearances": ""}
+,
+		{
+			"id" : "0_33",
+			"source" : "0",
+			"target" : "33",
+			"name": "remoteexp|http",
+			"appearances": ""}
+,
+		{
+			"id" : "0_34",
+			"source" : "0",
+			"target" : "34",
+			"name": "serD|ssh",
+			"appearances": ""}
+,
+		{
+			"id" : "0_35",
+			"source" : "0",
+			"target" : "35",
+			"name": "PAexp|http",
+			"appearances": ""}
+,
+		{
+			"id" : "0_36",
+			"source" : "0",
+			"target" : "36",
+			"name": "remoteexp|remoteware-cl",
+			"appearances": ""}
+,
+		{
+			"id" : "0_37",
+			"source" : "0",
+			"target" : "37",
+			"name": "delivery|wap-wsp",
+			"appearances": ""}
+,
+		{
+			"id" : "0_38",
+			"source" : "0",
+			"target" : "38",
+			"name": "TOexp|http",
+			"appearances": ""}
+,
+		{
+			"id" : "0_39",
+			"source" : "0",
+			"target" : "39",
+			"name": "dManip|wap-wsp",
+			"appearances": ""}
+,
+		{
+			"id" : "0_40",
+			"source" : "0",
+			"target" : "40",
+			"name": "exfil|etlservicemgr",
+			"appearances": ""}
+,
+		{
+			"id" : "0_41",
+			"source" : "0",
+			"target" : "41",
+			"name": "bfCred|pop3",
+			"appearances": ""}
+,
+		{
+			"id" : "0_42",
+			"source" : "0",
+			"target" : "42",
+			"name": "servS|http",
+			"appearances": ""}
+,
+		{
+			"id" : "0_43",
+			"source" : "0",
+			"target" : "43",
+			"name": "acctManip|snmp",
+			"appearances": ""}
+,
+		{
+			"id" : "0_44",
+			"source" : "0",
+			"target" : "44",
+			"name": "uPrivEsc|cslistener",
+			"appearances": ""}
+,
+		{
+			"id" : "0_45",
+			"source" : "0",
+			"target" : "45",
+			"name": "netDOS|ssdp",
+			"appearances": ""}
+,
+		{
+			"id" : "0_46",
+			"source" : "0",
+			"target" : "46",
+			"name": "CnC|http-alt",
+			"appearances": ""}
+,
+		{
+			"id" : "0_47",
+			"source" : "0",
+			"target" : "47",
+			"name": "rPrivEsc|smtp",
+			"appearances": ""}
+,
+		{
+			"id" : "0_48",
+			"source" : "0",
+			"target" : "48",
+			"name": "serD|agma",
+			"appearances": ""}
+,
+		{
+			"id" : "0_49",
+			"source" : "0",
+			"target" : "49",
+			"name": "serD|ag-swim",
+			"appearances": ""}
+,
+		{
+			"id" : "0_50",
+			"source" : "0",
+			"target" : "50",
+			"name": "vulnD|sip",
+			"appearances": ""}
+,
+		{
+			"id" : "0_51",
+			"source" : "0",
+			"target" : "51",
+			"name": "infoD|smtp",
+			"appearances": ""}
+,
+		{
+			"id" : "0_52",
+			"source" : "0",
+			"target" : "52",
+			"name": "exfil|us-cli",
+			"appearances": ""}
+,
+		{
+			"id" : "0_53",
+			"source" : "0",
+			"target" : "53",
+			"name": "dManip|us-cli",
+			"appearances": ""}
+,
+		{
+			"id" : "0_54",
+			"source" : "0",
+			"target" : "54",
+			"name": "rPrivEsc|us-cli",
+			"appearances": ""}
+,
+		{
+			"id" : "0_55",
+			"source" : "0",
+			"target" : "55",
+			"name": "delivery|us-cli",
+			"appearances": ""}
+,
+		{
+			"id" : "0_56",
+			"source" : "0",
+			"target" : "56",
+			"name": "exfil|wap-wsp",
+			"appearances": ""}
+,
+		{
+			"id" : "0_57",
+			"source" : "0",
+			"target" : "57",
+			"name": "dManip|unknown",
+			"appearances": ""}
+,
+		{
+			"id" : "0_58",
+			"source" : "0",
+			"target" : "58",
+			"name": "delivery|unknown",
+			"appearances": ""}
+,
+		{
+			"id" : "0_59",
+			"source" : "0",
+			"target" : "59",
+			"name": "dManip|etlservicemgr",
+			"appearances": ""}
+,
+		{
+			"id" : "0_60",
+			"source" : "0",
+			"target" : "60",
+			"name": "resHJ|etlservicemgr",
+			"appearances": ""}
+,
+		{
+			"id" : "0_61",
+			"source" : "0",
+			"target" : "61",
+			"name": "resHJ|remoteware-cl",
+			"appearances": ""}
+,
+		{
+			"id" : "0_62",
+			"source" : "0",
+			"target" : "62",
+			"name": "serD|fis",
+			"appearances": ""}
+,
+		{
+			"id" : "0_63",
+			"source" : "0",
+			"target" : "63",
+			"name": "serD|ads-c",
+			"appearances": ""}
+,
+		{
+			"id" : "0_64",
+			"source" : "0",
+			"target" : "64",
+			"name": "CnC|unknown",
+			"appearances": ""}
+,
+		{
+			"id" : "0_65",
+			"source" : "0",
+			"target" : "65",
+			"name": "exfil|commplex-main",
+			"appearances": ""}
+,
+		{
+			"id" : "0_66",
+			"source" : "0",
+			"target" : "66",
+			"name": "dManip|commplex-main",
+			"appearances": ""}
+,
+		{
+			"id" : "0_67",
+			"source" : "0",
+			"target" : "67",
+			"name": "rPrivEsc|commplex-main",
+			"appearances": ""}
+,
+		{
+			"id" : "0_68",
+			"source" : "0",
+			"target" : "68",
+			"name": "dDestruct|us-cli",
+			"appearances": ""}
+,
+		{
+			"id" : "0_69",
+			"source" : "0",
+			"target" : "69",
+			"name": "exfil|ssh",
+			"appearances": ""}
+,
+		{
+			"id" : "0_70",
+			"source" : "0",
+			"target" : "70",
+			"name": "serD|icmpd",
+			"appearances": ""}
+,
+		{
+			"id" : "0_71",
+			"source" : "0",
+			"target" : "71",
+			"name": "exfil|cslistener",
+			"appearances": ""}
+,
+		{
+			"id" : "0_72",
+			"source" : "0",
+			"target" : "72",
+			"name": "dManip|cslistener",
+			"appearances": ""}
+,
+		{
+			"id" : "0_73",
+			"source" : "0",
+			"target" : "73",
+			"name": "delivery|cslistener",
+			"appearances": ""}
+,
+		{
+			"id" : "1_74",
+			"source" : "1",
+			"target" : "74",
+			"name": "CnC|http",
+			"appearances": ""}
+,
+		{
+			"id" : "1_621",
+			"source" : "1",
+			"target" : "621",
+			"name": "infoD|http",
+			"appearances": ""}
+,
+		{
+			"id" : "1_75",
+			"source" : "1",
+			"target" : "75",
+			"name": "surf|http",
+			"appearances": ""}
+,
+		{
+			"id" : "1_76",
+			"source" : "1",
+			"target" : "76",
+			"name": "hostD|etlservicemgr",
+			"appearances": ""}
+,
+		{
+			"id" : "1_77",
+			"source" : "1",
+			"target" : "77",
+			"name": "serD|ssh",
+			"appearances": ""}
+,
+		{
+			"id" : "3_80",
+			"source" : "3",
+			"target" : "80",
+			"name": "CnC|http",
+			"appearances": ""}
+,
+		{
+			"id" : "3_81",
+			"source" : "3",
+			"target" : "81",
+			"name": "serD|unknown",
+			"appearances": ""}
+,
+		{
+			"id" : "3_82",
+			"source" : "3",
+			"target" : "82",
+			"name": "vulnD|mysql",
+			"appearances": ""}
+,
+		{
+			"id" : "3_83",
+			"source" : "3",
+			"target" : "83",
+			"name": "hostD|us-cli",
+			"appearances": ""}
+,
+		{
+			"id" : "3_84",
+			"source" : "3",
+			"target" : "84",
+			"name": "surf|http",
+			"appearances": ""}
+,
+		{
+			"id" : "3_85",
+			"source" : "3",
+			"target" : "85",
+			"name": "vulnD|ahsp",
+			"appearances": ""}
+,
+		{
+			"id" : "3_1053",
+			"source" : "3",
+			"target" : "1053",
+			"name": "vulnD|ms-sql-s",
+			"appearances": ""}
+,
+		{
+			"id" : "3_30",
+			"source" : "3",
+			"target" : "30",
+			"name": "vulnD|postgresql",
+			"appearances": ""}
+,
+		{
+			"id" : "3_86",
+			"source" : "3",
+			"target" : "86",
+			"name": "serD|ssh",
+			"appearances": ""}
+,
+		{
+			"id" : "3_87",
+			"source" : "3",
+			"target" : "87",
+			"name": "serD|asmgcs",
+			"appearances": ""}
+,
+		{
+			"id" : "4_88",
+			"source" : "4",
+			"target" : "88",
+			"name": "serD|unknown",
+			"appearances": ""}
+,
+		{
+			"id" : "4_82",
+			"source" : "4",
+			"target" : "82",
+			"name": "vulnD|mysql",
+			"appearances": ""}
+,
+		{
+			"id" : "5_89",
+			"source" : "5",
+			"target" : "89",
+			"name": "infoD|http",
+			"appearances": ""}
+,
+		{
+			"id" : "5_90",
+			"source" : "5",
+			"target" : "90",
+			"name": "serD|dsd",
+			"appearances": ""}
+,
+		{
+			"id" : "5_91",
+			"source" : "5",
+			"target" : "91",
+			"name": "netDOS|http",
+			"appearances": ""}
+,
+		{
+			"id" : "5_92",
+			"source" : "5",
+			"target" : "92",
+			"name": "hostD|http",
+			"appearances": ""}
+,
+		{
+			"id" : "5_93",
+			"source" : "5",
+			"target" : "93",
+			"name": "surf|http",
+			"appearances": ""}
+,
+		{
+			"id" : "5_94",
+			"source" : "5",
+			"target" : "94",
+			"name": "hostD|etlservicemgr",
+			"appearances": ""}
+,
+		{
+			"id" : "5_95",
+			"source" : "5",
+			"target" : "95",
+			"name": "infoD|unknown",
+			"appearances": ""}
+,
+		{
+			"id" : "5_96",
+			"source" : "5",
+			"target" : "96",
+			"name": "remoteexp|http",
+			"appearances": ""}
+,
+		{
+			"id" : "6_97",
+			"source" : "6",
+			"target" : "97",
+			"name": "serD|unknown",
+			"appearances": ""}
+,
+		{
+			"id" : "6_98",
+			"source" : "6",
+			"target" : "98",
+			"name": "vulnD|mysql",
+			"appearances": ""}
+,
+		{
+			"id" : "6_99",
+			"source" : "6",
+			"target" : "99",
+			"name": "hostD|http",
+			"appearances": ""}
+,
+		{
+			"id" : "6_100",
+			"source" : "6",
+			"target" : "100",
+			"name": "hostD|us-cli",
+			"appearances": ""}
+,
+		{
+			"id" : "6_101",
+			"source" : "6",
+			"target" : "101",
+			"name": "serD|rpas-c2",
+			"appearances": ""}
+,
+		{
+			"id" : "6_102",
+			"source" : "6",
+			"target" : "102",
+			"name": "vulnD|http",
+			"appearances": ""}
+,
+		{
+			"id" : "6_21",
+			"source" : "6",
+			"target" : "21",
+			"name": "serD|cpdlc",
+			"appearances": ""}
+,
+		{
+			"id" : "6_103",
+			"source" : "6",
+			"target" : "103",
+			"name": "vulnD|ahsp",
+			"appearances": ""}
+,
+		{
+			"id" : "6_104",
+			"source" : "6",
+			"target" : "104",
+			"name": "vulnD|ncube-lm",
+			"appearances": ""}
+,
+		{
+			"id" : "6_105",
+			"source" : "6",
+			"target" : "105",
+			"name": "vulnD|postgresql",
+			"appearances": ""}
+,
+		{
+			"id" : "6_106",
+			"source" : "6",
+			"target" : "106",
+			"name": "exfil|unknown",
+			"appearances": ""}
+,
+		{
+			"id" : "6_107",
+			"source" : "6",
+			"target" : "107",
+			"name": "serD|sip",
+			"appearances": ""}
+,
+		{
+			"id" : "6_108",
+			"source" : "6",
+			"target" : "108",
+			"name": "serD|ssh",
+			"appearances": ""}
+,
+		{
+			"id" : "6_48",
+			"source" : "6",
+			"target" : "48",
+			"name": "serD|agma",
+			"appearances": ""}
+,
+		{
+			"id" : "6_109",
+			"source" : "6",
+			"target" : "109",
+			"name": "serD|spt-automation",
+			"appearances": ""}
+,
+		{
+			"id" : "15_126",
+			"source" : "15",
+			"target" : "126",
+			"name": "infoD|http",
+			"appearances": ""}
+,
+		{
+			"id" : "15_127",
+			"source" : "15",
+			"target" : "127",
+			"name": "serD|unknown",
+			"appearances": ""}
+,
+		{
+			"id" : "15_128",
+			"source" : "15",
+			"target" : "128",
+			"name": "hostD|http",
+			"appearances": ""}
+,
+		{
+			"id" : "15_129",
+			"source" : "15",
+			"target" : "129",
+			"name": "dManip|http",
+			"appearances": ""}
+,
+		{
+			"id" : "15_141",
+			"source" : "15",
+			"target" : "141",
+			"name": "rPrivEsc|http",
+			"appearances": ""}
+,
+		{
+			"id" : "15_130",
+			"source" : "15",
+			"target" : "130",
+			"name": "resHJ|http",
+			"appearances": ""}
+,
+		{
+			"id" : "15_343",
+			"source" : "15",
+			"target" : "343",
+			"name": "vulnD|http",
+			"appearances": ""}
+,
+		{
+			"id" : "15_131",
+			"source" : "15",
+			"target" : "131",
+			"name": "vulnD|wap-wsp",
+			"appearances": ""}
+,
+		{
+			"id" : "17_133",
+			"source" : "17",
+			"target" : "133",
+			"name": "rPrivEsc|http",
+			"appearances": ""}
+,
+		{
+			"id" : "17_134",
+			"source" : "17",
+			"target" : "134",
+			"name": "delivery|http",
+			"appearances": ""}
+,
+		{
+			"id" : "17_135",
+			"source" : "17",
+			"target" : "135",
+			"name": "vulnD|http",
+			"appearances": ""}
+,
+		{
+			"id" : "17_136",
+			"source" : "17",
+			"target" : "136",
+			"name": "rPrivEsc|wap-wsp",
+			"appearances": ""}
+,
+		{
+			"id" : "17_137",
+			"source" : "17",
+			"target" : "137",
+			"name": "remoteexp|http",
+			"appearances": ""}
+,
+		{
+			"id" : "17_138",
+			"source" : "17",
+			"target" : "138",
+			"name": "delivery|wap-wsp",
+			"appearances": ""}
+,
+		{
+			"id" : "17_139",
+			"source" : "17",
+			"target" : "139",
+			"name": "remoteexp|cslistener",
+			"appearances": ""}
+,
+		{
+			"id" : "17_140",
+			"source" : "17",
+			"target" : "140",
+			"name": "ACE|etlservicemgr",
+			"appearances": ""}
+,
+		{
+			"id" : "18_141",
+			"source" : "18",
+			"target" : "141",
+			"name": "rPrivEsc|http",
+			"appearances": ""}
+,
+		{
+			"id" : "18_142",
+			"source" : "18",
+			"target" : "142",
+			"name": "PAexp|http",
+			"appearances": ""}
+,
+		{
+			"id" : "18_143",
+			"source" : "18",
+			"target" : "143",
+			"name": "PAexp|wap-wsp",
+			"appearances": ""}
+,
+		{
+			"id" : "18_144",
+			"source" : "18",
+			"target" : "144",
+			"name": "rPrivEsc|etlservicemgr",
+			"appearances": ""}
+,
+		{
+			"id" : "19_145",
+			"source" : "19",
+			"target" : "145",
+			"name": "resHJ|http",
+			"appearances": ""}
+,
+		{
+			"id" : "19_146",
+			"source" : "19",
+			"target" : "146",
+			"name": "resHJ|wap-wsp",
+			"appearances": ""}
+,
+		{
+			"id" : "19_147",
+			"source" : "19",
+			"target" : "147",
+			"name": "resHJ|us-cli",
+			"appearances": ""}
+,
+		{
+			"id" : "19_148",
+			"source" : "19",
+			"target" : "148",
+			"name": "TOexp|http",
+			"appearances": ""}
+,
+		{
+			"id" : "20_5",
+			"source" : "20",
+			"target" : "5",
+			"name": "netDOS|http",
+			"appearances": ""}
+,
+		{
+			"id" : "20_149",
+			"source" : "20",
+			"target" : "149",
+			"name": "acctManip|http",
+			"appearances": ""}
+,
+		{
+			"id" : "21_150",
+			"source" : "21",
+			"target" : "150",
+			"name": "vulnD|mysql",
+			"appearances": ""}
+,
+		{
+			"id" : "21_151",
+			"source" : "21",
+			"target" : "151",
+			"name": "vulnD|http",
+			"appearances": ""}
+,
+		{
+			"id" : "21_152",
+			"source" : "21",
+			"target" : "152",
+			"name": "vulnD|ahsp",
+			"appearances": ""}
+,
+		{
+			"id" : "21_153",
+			"source" : "21",
+			"target" : "153",
+			"name": "vulnD|postgresql",
+			"appearances": ""}
+,
+		{
+			"id" : "26_163",
+			"source" : "26",
+			"target" : "163",
+			"name": "infoD|xdmcp",
+			"appearances": ""}
+,
+		{
+			"id" : "30_3",
+			"source" : "30",
+			"target" : "3",
+			"name": "serD|unknown",
+			"appearances": ""}
+,
+		{
+			"id" : "30_171",
+			"source" : "30",
+			"target" : "171",
+			"name": "serD|dsd",
+			"appearances": ""}
+,
+		{
+			"id" : "30_172",
+			"source" : "30",
+			"target" : "172",
+			"name": "vulnD|ahsp",
+			"appearances": ""}
+,
+		{
+			"id" : "30_173",
+			"source" : "30",
+			"target" : "173",
+			"name": "vulnD|ms-sql-s",
+			"appearances": ""}
+,
+		{
+			"id" : "30_174",
+			"source" : "30",
+			"target" : "174",
+			"name": "vulnD|ncube-lm",
+			"appearances": ""}
+,
+		{
+			"id" : "30_30",
+			"source" : "30",
+			"target" : "30",
+			"name": "vulnD|postgresql",
+			"appearances": ""}
+,
+		{
+			"id" : "30_175",
+			"source" : "30",
+			"target" : "175",
+			"name": "serD|ssh",
+			"appearances": ""}
+,
+		{
+			"id" : "30_176",
+			"source" : "30",
+			"target" : "176",
+			"name": "serD|asmgcs",
+			"appearances": ""}
+,
+		{
+			"id" : "30_177",
+			"source" : "30",
+			"target" : "177",
+			"name": "serD|agma",
+			"appearances": ""}
+,
+		{
+			"id" : "30_178",
+			"source" : "30",
+			"target" : "178",
+			"name": "serD|spt-automation",
+			"appearances": ""}
+,
+		{
+			"id" : "30_179",
+			"source" : "30",
+			"target" : "179",
+			"name": "serD|ipsma",
+			"appearances": ""}
+,
+		{
+			"id" : "31_180",
+			"source" : "31",
+			"target" : "180",
+			"name": "serD|unknown",
+			"appearances": ""}
+,
+		{
+			"id" : "31_181",
+			"source" : "31",
+			"target" : "181",
+			"name": "hostD|remoteware-cl",
+			"appearances": ""}
+,
+		{
+			"id" : "31_182",
+			"source" : "31",
+			"target" : "182",
+			"name": "hostD|wap-wsp",
+			"appearances": ""}
+,
+		{
+			"id" : "31_183",
+			"source" : "31",
+			"target" : "183",
+			"name": "serD|ff-ice",
+			"appearances": ""}
+,
+		{
+			"id" : "31_184",
+			"source" : "31",
+			"target" : "184",
+			"name": "vulnD|ms-sql-s",
+			"appearances": ""}
+,
+		{
+			"id" : "31_185",
+			"source" : "31",
+			"target" : "185",
+			"name": "exfil|unknown",
+			"appearances": ""}
+,
+		{
+			"id" : "31_186",
+			"source" : "31",
+			"target" : "186",
+			"name": "infoD|unknown",
+			"appearances": ""}
+,
+		{
+			"id" : "31_187",
+			"source" : "31",
+			"target" : "187",
+			"name": "serD|ssh",
+			"appearances": ""}
+,
+		{
+			"id" : "31_188",
+			"source" : "31",
+			"target" : "188",
+			"name": "serD|ipsma",
+			"appearances": ""}
+,
+		{
+			"id" : "32_3",
+			"source" : "32",
+			"target" : "3",
+			"name": "serD|unknown",
+			"appearances": ""}
+,
+		{
+			"id" : "34_3",
+			"source" : "34",
+			"target" : "3",
+			"name": "serD|unknown",
+			"appearances": ""}
+,
+		{
+			"id" : "34_191",
+			"source" : "34",
+			"target" : "191",
+			"name": "hostD|http",
+			"appearances": ""}
+,
+		{
+			"id" : "34_192",
+			"source" : "34",
+			"target" : "192",
+			"name": "hostD|us-cli",
+			"appearances": ""}
+,
+		{
+			"id" : "34_193",
+			"source" : "34",
+			"target" : "193",
+			"name": "hostD|etlservicemgr",
+			"appearances": ""}
+,
+		{
+			"id" : "34_194",
+			"source" : "34",
+			"target" : "194",
+			"name": "hostD|unknown",
+			"appearances": ""}
+,
+		{
+			"id" : "34_34",
+			"source" : "34",
+			"target" : "34",
+			"name": "serD|ssh",
+			"appearances": ""}
+,
+		{
+			"id" : "34_195",
+			"source" : "34",
+			"target" : "195",
+			"name": "infoD|wap-wsp",
+			"appearances": ""}
+,
+		{
+			"id" : "34_196",
+			"source" : "34",
+			"target" : "196",
+			"name": "serD|agma",
+			"appearances": ""}
+,
+		{
+			"id" : "34_197",
+			"source" : "34",
+			"target" : "197",
+			"name": "vulnD|sip",
+			"appearances": ""}
+,
+		{
+			"id" : "43_97",
+			"source" : "43",
+			"target" : "97",
+			"name": "serD|unknown",
+			"appearances": ""}
+,
+		{
+			"id" : "43_150",
+			"source" : "43",
+			"target" : "150",
+			"name": "vulnD|mysql",
+			"appearances": ""}
+,
+		{
+			"id" : "43_207",
+			"source" : "43",
+			"target" : "207",
+			"name": "vulnD|ahsp",
+			"appearances": ""}
+,
+		{
+			"id" : "43_163",
+			"source" : "43",
+			"target" : "163",
+			"name": "infoD|xdmcp",
+			"appearances": ""}
+,
+		{
+			"id" : "43_208",
+			"source" : "43",
+			"target" : "208",
+			"name": "vulnD|ms-sql-s",
+			"appearances": ""}
+,
+		{
+			"id" : "43_209",
+			"source" : "43",
+			"target" : "209",
+			"name": "vulnD|ncube-lm",
+			"appearances": ""}
+,
+		{
+			"id" : "43_210",
+			"source" : "43",
+			"target" : "210",
+			"name": "vulnD|postgresql",
+			"appearances": ""}
+,
+		{
+			"id" : "43_211",
+			"source" : "43",
+			"target" : "211",
+			"name": "CnC|unknown",
+			"appearances": ""}
+,
+		{
+			"id" : "48_222",
+			"source" : "48",
+			"target" : "222",
+			"name": "vulnD|mysql",
+			"appearances": ""}
+,
+		{
+			"id" : "62_150",
+			"source" : "62",
+			"target" : "150",
+			"name": "vulnD|mysql",
+			"appearances": ""}
+,
+		{
+			"id" : "62_240",
+			"source" : "62",
+			"target" : "240",
+			"name": "vulnD|postgresql",
+			"appearances": ""}
+,
+		{
+			"id" : "75_621",
+			"source" : "75",
+			"target" : "621",
+			"name": "infoD|http",
+			"appearances": ""}
+,
+		{
+			"id" : "75_257",
+			"source" : "75",
+			"target" : "257",
+			"name": "infoD|unknown",
+			"appearances": ""}
+,
+		{
+			"id" : "82_267",
+			"source" : "82",
+			"target" : "267",
+			"name": "serD|unknown",
+			"appearances": ""}
+,
+		{
+			"id" : "82_268",
+			"source" : "82",
+			"target" : "268",
+			"name": "serD|dsd",
+			"appearances": ""}
+,
+		{
+			"id" : "82_269",
+			"source" : "82",
+			"target" : "269",
+			"name": "hostD|http",
+			"appearances": ""}
+,
+		{
+			"id" : "82_270",
+			"source" : "82",
+			"target" : "270",
+			"name": "surf|http",
+			"appearances": ""}
+,
+		{
+			"id" : "82_271",
+			"source" : "82",
+			"target" : "271",
+			"name": "serD|rpas-c2",
+			"appearances": ""}
+,
+		{
+			"id" : "82_272",
+			"source" : "82",
+			"target" : "272",
+			"name": "serD|cpdlc",
+			"appearances": ""}
+,
+		{
+			"id" : "82_273",
+			"source" : "82",
+			"target" : "273",
+			"name": "serD|cm",
+			"appearances": ""}
+,
+		{
+			"id" : "82_26",
+			"source" : "82",
+			"target" : "26",
+			"name": "hostD|asf-rmcp",
+			"appearances": ""}
+,
+		{
+			"id" : "82_274",
+			"source" : "82",
+			"target" : "274",
+			"name": "vulnD|postgresql",
+			"appearances": ""}
+,
+		{
+			"id" : "82_275",
+			"source" : "82",
+			"target" : "275",
+			"name": "infoD|unknown",
+			"appearances": ""}
+,
+		{
+			"id" : "82_276",
+			"source" : "82",
+			"target" : "276",
+			"name": "serD|ssh",
+			"appearances": ""}
+,
+		{
+			"id" : "82_277",
+			"source" : "82",
+			"target" : "277",
+			"name": "acctManip|snmp",
+			"appearances": ""}
+,
+		{
+			"id" : "82_278",
+			"source" : "82",
+			"target" : "278",
+			"name": "serD|asmgcs",
+			"appearances": ""}
+,
+		{
+			"id" : "82_279",
+			"source" : "82",
+			"target" : "279",
+			"name": "serD|ipsma",
+			"appearances": ""}
+,
+		{
+			"id" : "82_280",
+			"source" : "82",
+			"target" : "280",
+			"name": "serD|ag-swim",
+			"appearances": ""}
+,
+		{
+			"id" : "82_281",
+			"source" : "82",
+			"target" : "281",
+			"name": "serD|icmpd",
+			"appearances": ""}
+,
+		{
+			"id" : "89_3",
+			"source" : "89",
+			"target" : "3",
+			"name": "serD|unknown",
+			"appearances": ""}
+,
+		{
+			"id" : "89_289",
+			"source" : "89",
+			"target" : "289",
+			"name": "serD|dsd",
+			"appearances": ""}
+,
+		{
+			"id" : "89_6",
+			"source" : "89",
+			"target" : "6",
+			"name": "hostD|http",
+			"appearances": ""}
+,
+		{
+			"id" : "89_290",
+			"source" : "89",
+			"target" : "290",
+			"name": "surf|http",
+			"appearances": ""}
+,
+		{
+			"id" : "89_291",
+			"source" : "89",
+			"target" : "291",
+			"name": "hostD|etlservicemgr",
+			"appearances": ""}
+,
+		{
+			"id" : "89_292",
+			"source" : "89",
+			"target" : "292",
+			"name": "hostD|unknown",
+			"appearances": ""}
+,
+		{
+			"id" : "89_293",
+			"source" : "89",
+			"target" : "293",
+			"name": "hostD|wap-wsp",
+			"appearances": ""}
+,
+		{
+			"id" : "89_294",
+			"source" : "89",
+			"target" : "294",
+			"name": "hostD|asf-rmcp",
+			"appearances": ""}
+,
+		{
+			"id" : "89_295",
+			"source" : "89",
+			"target" : "295",
+			"name": "infoD|xdmcp",
+			"appearances": ""}
+,
+		{
+			"id" : "89_296",
+			"source" : "89",
+			"target" : "296",
+			"name": "serD|ssh",
+			"appearances": ""}
+,
+		{
+			"id" : "89_297",
+			"source" : "89",
+			"target" : "297",
+			"name": "vulnD|sip",
+			"appearances": ""}
+,
+		{
+			"id" : "97_305",
+			"source" : "97",
+			"target" : "305",
+			"name": "vulnD|mysql",
+			"appearances": ""}
+,
+		{
+			"id" : "97_306",
+			"source" : "97",
+			"target" : "306",
+			"name": "vulnD|http",
+			"appearances": ""}
+,
+		{
+			"id" : "97_307",
+			"source" : "97",
+			"target" : "307",
+			"name": "vulnD|ahsp",
+			"appearances": ""}
+,
+		{
+			"id" : "97_308",
+			"source" : "97",
+			"target" : "308",
+			"name": "vulnD|ms-sql-s",
+			"appearances": ""}
+,
+		{
+			"id" : "97_309",
+			"source" : "97",
+			"target" : "309",
+			"name": "vulnD|postgresql",
+			"appearances": ""}
+,
+		{
+			"id" : "126_222",
+			"source" : "126",
+			"target" : "222",
+			"name": "vulnD|mysql",
+			"appearances": ""}
+,
+		{
+			"id" : "126_341",
+			"source" : "126",
+			"target" : "341",
+			"name": "hostD|http",
+			"appearances": ""}
+,
+		{
+			"id" : "126_342",
+			"source" : "126",
+			"target" : "342",
+			"name": "serD|ff-ice",
+			"appearances": ""}
+,
+		{
+			"id" : "126_343",
+			"source" : "126",
+			"target" : "343",
+			"name": "vulnD|http",
+			"appearances": ""}
+,
+		{
+			"id" : "133_353",
+			"source" : "133",
+			"target" : "353",
+			"name": "ACE|http",
+			"appearances": ""}
+,
+		{
+			"id" : "141_364",
+			"source" : "141",
+			"target" : "364",
+			"name": "CnC|http",
+			"appearances": ""}
+,
+		{
+			"id" : "141_365",
+			"source" : "141",
+			"target" : "365",
+			"name": "serD|rpas-c2",
+			"appearances": ""}
+,
+		{
+			"id" : "141_366",
+			"source" : "141",
+			"target" : "366",
+			"name": "bfCred|unknown",
+			"appearances": ""}
+,
+		{
+			"id" : "141_367",
+			"source" : "141",
+			"target" : "367",
+			"name": "hostD|etlservicemgr",
+			"appearances": ""}
+,
+		{
+			"id" : "141_368",
+			"source" : "141",
+			"target" : "368",
+			"name": "ACE|http",
+			"appearances": ""}
+,
+		{
+			"id" : "141_369",
+			"source" : "141",
+			"target" : "369",
+			"name": "vulnD|http",
+			"appearances": ""}
+,
+		{
+			"id" : "141_186",
+			"source" : "141",
+			"target" : "186",
+			"name": "infoD|unknown",
+			"appearances": ""}
+,
+		{
+			"id" : "145_373",
+			"source" : "145",
+			"target" : "373",
+			"name": "acctManip|http",
+			"appearances": ""}
+,
+		{
+			"id" : "145_374",
+			"source" : "145",
+			"target" : "374",
+			"name": "remoteexp|http",
+			"appearances": ""}
+,
+		{
+			"id" : "150_379",
+			"source" : "150",
+			"target" : "379",
+			"name": "serD|unknown",
+			"appearances": ""}
+,
+		{
+			"id" : "150_380",
+			"source" : "150",
+			"target" : "380",
+			"name": "vulnD|mysql",
+			"appearances": ""}
+,
+		{
+			"id" : "150_4",
+			"source" : "150",
+			"target" : "4",
+			"name": "serD|dsd",
+			"appearances": ""}
+,
+		{
+			"id" : "150_381",
+			"source" : "150",
+			"target" : "381",
+			"name": "hostD|http",
+			"appearances": ""}
+,
+		{
+			"id" : "150_382",
+			"source" : "150",
+			"target" : "382",
+			"name": "surf|http",
+			"appearances": ""}
+,
+		{
+			"id" : "150_383",
+			"source" : "150",
+			"target" : "383",
+			"name": "serD|rpas-c2",
+			"appearances": ""}
+,
+		{
+			"id" : "150_21",
+			"source" : "150",
+			"target" : "21",
+			"name": "serD|cpdlc",
+			"appearances": ""}
+,
+		{
+			"id" : "150_384",
+			"source" : "150",
+			"target" : "384",
+			"name": "serD|cm",
+			"appearances": ""}
+,
+		{
+			"id" : "150_385",
+			"source" : "150",
+			"target" : "385",
+			"name": "vulnD|ahsp",
+			"appearances": ""}
+,
+		{
+			"id" : "150_386",
+			"source" : "150",
+			"target" : "386",
+			"name": "infoD|unknown",
+			"appearances": ""}
+,
+		{
+			"id" : "150_34",
+			"source" : "150",
+			"target" : "34",
+			"name": "serD|ssh",
+			"appearances": ""}
+,
+		{
+			"id" : "150_387",
+			"source" : "150",
+			"target" : "387",
+			"name": "acctManip|snmp",
+			"appearances": ""}
+,
+		{
+			"id" : "150_388",
+			"source" : "150",
+			"target" : "388",
+			"name": "serD|ag-swim",
+			"appearances": ""}
+,
+		{
+			"id" : "150_389",
+			"source" : "150",
+			"target" : "389",
+			"name": "serD|fis",
+			"appearances": ""}
+,
+		{
+			"id" : "150_390",
+			"source" : "150",
+			"target" : "390",
+			"name": "serD|ads-c",
+			"appearances": ""}
+,
+		{
+			"id" : "163_3",
+			"source" : "163",
+			"target" : "3",
+			"name": "serD|unknown",
+			"appearances": ""}
+,
+		{
+			"id" : "163_406",
+			"source" : "163",
+			"target" : "406",
+			"name": "vulnD|mysql",
+			"appearances": ""}
+,
+		{
+			"id" : "163_407",
+			"source" : "163",
+			"target" : "407",
+			"name": "hostD|http",
+			"appearances": ""}
+,
+		{
+			"id" : "163_408",
+			"source" : "163",
+			"target" : "408",
+			"name": "hostD|remoteware-cl",
+			"appearances": ""}
+,
+		{
+			"id" : "163_409",
+			"source" : "163",
+			"target" : "409",
+			"name": "hostD|etlservicemgr",
+			"appearances": ""}
+,
+		{
+			"id" : "163_410",
+			"source" : "163",
+			"target" : "410",
+			"name": "hostD|unknown",
+			"appearances": ""}
+,
+		{
+			"id" : "163_411",
+			"source" : "163",
+			"target" : "411",
+			"name": "infoD|xdmcp",
+			"appearances": ""}
+,
+		{
+			"id" : "186_437",
+			"source" : "186",
+			"target" : "437",
+			"name": "serD|unknown",
+			"appearances": ""}
+,
+		{
+			"id" : "186_438",
+			"source" : "186",
+			"target" : "438",
+			"name": "hostD|http",
+			"appearances": ""}
+,
+		{
+			"id" : "186_439",
+			"source" : "186",
+			"target" : "439",
+			"name": "hostD|remoteware-cl",
+			"appearances": ""}
+,
+		{
+			"id" : "186_440",
+			"source" : "186",
+			"target" : "440",
+			"name": "hostD|wap-wsp",
+			"appearances": ""}
+,
+		{
+			"id" : "186_441",
+			"source" : "186",
+			"target" : "441",
+			"name": "infoD|xdmcp",
+			"appearances": ""}
+,
+		{
+			"id" : "186_442",
+			"source" : "186",
+			"target" : "442",
+			"name": "infoD|unknown",
+			"appearances": ""}
+,
+		{
+			"id" : "186_443",
+			"source" : "186",
+			"target" : "443",
+			"name": "serD|ag-swim",
+			"appearances": ""}
+,
+		{
+			"id" : "186_444",
+			"source" : "186",
+			"target" : "444",
+			"name": "vulnD|unknown",
+			"appearances": ""}
+,
+		{
+			"id" : "222_492",
+			"source" : "222",
+			"target" : "492",
+			"name": "serD|unknown",
+			"appearances": ""}
+,
+		{
+			"id" : "222_493",
+			"source" : "222",
+			"target" : "493",
+			"name": "vulnD|mysql",
+			"appearances": ""}
+,
+		{
+			"id" : "222_6",
+			"source" : "222",
+			"target" : "6",
+			"name": "hostD|http",
+			"appearances": ""}
+,
+		{
+			"id" : "222_494",
+			"source" : "222",
+			"target" : "494",
+			"name": "hostD|us-cli",
+			"appearances": ""}
+,
+		{
+			"id" : "222_495",
+			"source" : "222",
+			"target" : "495",
+			"name": "serD|cpdlc",
+			"appearances": ""}
+,
+		{
+			"id" : "222_496",
+			"source" : "222",
+			"target" : "496",
+			"name": "vulnD|ahsp",
+			"appearances": ""}
+,
+		{
+			"id" : "267_539",
+			"source" : "267",
+			"target" : "539",
+			"name": "vulnD|mysql",
+			"appearances": ""}
+,
+		{
+			"id" : "267_540",
+			"source" : "267",
+			"target" : "540",
+			"name": "vulnD|postgresql",
+			"appearances": ""}
+,
+		{
+			"id" : "273_150",
+			"source" : "273",
+			"target" : "150",
+			"name": "vulnD|mysql",
+			"appearances": ""}
+,
+		{
+			"id" : "305_575",
+			"source" : "305",
+			"target" : "575",
+			"name": "serD|unknown",
+			"appearances": ""}
+,
+		{
+			"id" : "305_576",
+			"source" : "305",
+			"target" : "576",
+			"name": "vulnD|mysql",
+			"appearances": ""}
+,
+		{
+			"id" : "305_577",
+			"source" : "305",
+			"target" : "577",
+			"name": "serD|dsd",
+			"appearances": ""}
+,
+		{
+			"id" : "305_6",
+			"source" : "305",
+			"target" : "6",
+			"name": "hostD|http",
+			"appearances": ""}
+,
+		{
+			"id" : "305_578",
+			"source" : "305",
+			"target" : "578",
+			"name": "surf|us-cli",
+			"appearances": ""}
+,
+		{
+			"id" : "305_579",
+			"source" : "305",
+			"target" : "579",
+			"name": "surf|http",
+			"appearances": ""}
+,
+		{
+			"id" : "305_580",
+			"source" : "305",
+			"target" : "580",
+			"name": "hostD|asf-rmcp",
+			"appearances": ""}
+,
+		{
+			"id" : "305_581",
+			"source" : "305",
+			"target" : "581",
+			"name": "infoD|unknown",
+			"appearances": ""}
+,
+		{
+			"id" : "305_582",
+			"source" : "305",
+			"target" : "582",
+			"name": "serD|agma",
+			"appearances": ""}
+,
+		{
+			"id" : "305_583",
+			"source" : "305",
+			"target" : "583",
+			"name": "infoD|domain",
+			"appearances": ""}
+,
+		{
+			"id" : "343_611",
+			"source" : "343",
+			"target" : "611",
+			"name": "infoD|http",
+			"appearances": ""}
+,
+		{
+			"id" : "343_612",
+			"source" : "343",
+			"target" : "612",
+			"name": "serD|unknown",
+			"appearances": ""}
+,
+		{
+			"id" : "343_6",
+			"source" : "343",
+			"target" : "6",
+			"name": "hostD|http",
+			"appearances": ""}
+,
+		{
+			"id" : "343_75",
+			"source" : "343",
+			"target" : "75",
+			"name": "surf|http",
+			"appearances": ""}
+,
+		{
+			"id" : "353_621",
+			"source" : "353",
+			"target" : "621",
+			"name": "infoD|http",
+			"appearances": ""}
+,
+		{
+			"id" : "373_633",
+			"source" : "373",
+			"target" : "633",
+			"name": "surf|http",
+			"appearances": ""}
+,
+		{
+			"id" : "373_634",
+			"source" : "373",
+			"target" : "634",
+			"name": "remoteexp|http",
+			"appearances": ""}
+,
+		{
+			"id" : "379_637",
+			"source" : "379",
+			"target" : "637",
+			"name": "serD|unknown",
+			"appearances": ""}
+,
+		{
+			"id" : "379_150",
+			"source" : "379",
+			"target" : "150",
+			"name": "vulnD|mysql",
+			"appearances": ""}
+,
+		{
+			"id" : "379_638",
+			"source" : "379",
+			"target" : "638",
+			"name": "vulnD|ahsp",
+			"appearances": ""}
+,
+		{
+			"id" : "379_639",
+			"source" : "379",
+			"target" : "639",
+			"name": "vulnD|ms-sql-s",
+			"appearances": ""}
+,
+		{
+			"id" : "379_640",
+			"source" : "379",
+			"target" : "640",
+			"name": "serD|fis",
+			"appearances": ""}
+,
+		{
+			"id" : "383_82",
+			"source" : "383",
+			"target" : "82",
+			"name": "vulnD|mysql",
+			"appearances": ""}
+,
+		{
+			"id" : "411_671",
+			"source" : "411",
+			"target" : "671",
+			"name": "serD|cpdlc",
+			"appearances": ""}
+,
+		{
+			"id" : "411_672",
+			"source" : "411",
+			"target" : "672",
+			"name": "hostD|asf-rmcp",
+			"appearances": ""}
+,
+		{
+			"id" : "495_222",
+			"source" : "495",
+			"target" : "222",
+			"name": "vulnD|mysql",
+			"appearances": ""}
+,
+		{
+			"id" : "539_97",
+			"source" : "539",
+			"target" : "97",
+			"name": "serD|unknown",
+			"appearances": ""}
+,
+		{
+			"id" : "539_782",
+			"source" : "539",
+			"target" : "782",
+			"name": "serD|dsd",
+			"appearances": ""}
+,
+		{
+			"id" : "539_783",
+			"source" : "539",
+			"target" : "783",
+			"name": "hostD|http",
+			"appearances": ""}
+,
+		{
+			"id" : "539_784",
+			"source" : "539",
+			"target" : "784",
+			"name": "serD|cm",
+			"appearances": ""}
+,
+		{
+			"id" : "539_785",
+			"source" : "539",
+			"target" : "785",
+			"name": "serD|ssh",
+			"appearances": ""}
+,
+		{
+			"id" : "621_621",
+			"source" : "621",
+			"target" : "621",
+			"name": "infoD|http",
+			"appearances": ""}
+,
+		{
+			"id" : "672_890",
+			"source" : "672",
+			"target" : "890",
+			"name": "serD|unknown",
+			"appearances": ""}
+,
+		{
+			"id" : "672_891",
+			"source" : "672",
+			"target" : "891",
+			"name": "surf|us-cli",
+			"appearances": ""}
+,
+		{
+			"id" : "782_305",
+			"source" : "782",
+			"target" : "305",
+			"name": "vulnD|mysql",
+			"appearances": ""}
+,
+		{
+			"id" : "890_1053",
+			"source" : "890",
+			"target" : "1053",
+			"name": "vulnD|ms-sql-s",
+			"appearances": ""}
+
+	]
+}

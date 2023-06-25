@@ -1,0 +1,456 @@
+digraph NETWORKDOSmswbtserver {
+rankdir="BT"; 
+ graph [ nodesep="0.1", ranksep="0.02"] 
+ node [ fontname=Arial, fontsize=24,penwidth=3]; 
+ edge [ fontname=Arial, fontsize=20,penwidth=5 ];
+"Victim: 10.0.0.100
+NETWORK DoS
+ms-wbt-server" [shape=doubleoctagon, style=filled, fillcolor=salmon];
+{ rank = max; "Victim: 10.0.0.100
+NETWORK DoS
+ms-wbt-server"}
+"NETWORK DoS
+ms-wbt-server | ID: 307" -> "Victim: 10.0.0.100
+NETWORK DoS
+ms-wbt-server"
+"NETWORK DoS
+ms-wbt-server | ID: 307" [style=filled, fillcolor= salmon]
+"NETWORK DoS
+ms-wbt-server | ID: 36" -> "Victim: 10.0.0.100
+NETWORK DoS
+ms-wbt-server"
+"NETWORK DoS
+ms-wbt-server | ID: 36" [style=filled, fillcolor= salmon]
+"NETWORK DoS
+ms-wbt-server | ID: 297" -> "Victim: 10.0.0.100
+NETWORK DoS
+ms-wbt-server"
+"NETWORK DoS
+ms-wbt-server | ID: 297" [style=filled, fillcolor= salmon]
+{ rank=same; "NETWORK DoS
+ms-wbt-server | ID: 307" "NETWORK DoS
+ms-wbt-server | ID: 36" "NETWORK DoS
+ms-wbt-server | ID: 297"}
+"SERVICE DISCOVERY
+cm" [style=filled, fillcolor= yellow]
+"SERVICE DISCOVERY
+cm" -> "VULNERABILTY DISCOVERY
+ms-sql-s" [ color=orange] [label=<<font color="orange"> start_next: 04/11/17, 16:20:15<br/>gap: -87sec<br/>end_prev: 04/11/17, 16:21:42</font><br/><font color="orange"><b>Attacker: 10.0.254.35</b></font>>]
+"VULNERABILTY DISCOVERY
+ms-sql-s" -> "SERVICE DISCOVERY
+unknown" [ label="start_next: 04/11/17, 16:33:03
+gap: 677sec
+end_prev: 04/11/17, 16:21:46"][ fontcolor="orange" color=orange]
+"SERVICE DISCOVERY
+unknown" -> "NETWORK DoS
+ms-wbt-server | ID: 36" [ label="start_next: 04/11/17, 16:43:10
+gap: 607sec
+end_prev: 04/11/17, 16:33:03"][ fontcolor="orange" color=orange]
+"SERVICE DISCOVERY
+microsoft-ds" [style=filled, fillcolor= yellow]
+"SERVICE DISCOVERY
+microsoft-ds" -> "COMMAND AND CONTROL
+unknown | ID: 39" [ color=darkgreen] [label=<<font color="darkgreen"> start_next: 04/11/17, 13:38:58<br/>gap: 192sec<br/>end_prev: 04/11/17, 13:35:46</font><br/><font color="darkgreen"><b>Attacker: 10.0.254.35</b></font>>]
+"COMMAND AND CONTROL
+unknown | ID: 39" -> "NETWORK DoS
+ms-wbt-server | ID: 36" [ label="start_next: 04/11/17, 13:42:19
+gap: 201sec
+end_prev: 04/11/17, 13:38:58"][ fontcolor="darkgreen" color=darkgreen]
+"SERVICE DISCOVERY
+unknown" [style=filled, fillcolor= yellow]
+"SERVICE DISCOVERY
+unknown" -> "VULNERABILTY DISCOVERY
+mysql" [ color=darkgreen] [label=<<font color="darkgreen"> start_next: 04/11/17, 18:20:49<br/>gap: -57sec<br/>end_prev: 04/11/17, 18:21:46</font><br/><font color="darkgreen"><b>Attacker: 10.0.254.30</b></font>>]
+"VULNERABILTY DISCOVERY
+mysql" -> "NETWORK DoS
+ms-wbt-server | ID: 36" [ label="start_next: 04/11/17, 18:20:54
+gap: -56sec
+end_prev: 04/11/17, 18:21:49"][ fontcolor="darkgreen" color=darkgreen]
+"HOST DISCOVERY
+ms-wbt-server" [style=filled, fillcolor= yellow]
+"HOST DISCOVERY
+ms-wbt-server" -> "HOST DISCOVERY
+ms-wbt-server" [ color=blue] [label=<<font color="blue"> start_next: 04/11/17, 13:08:47<br/>gap: 522sec<br/>end_prev: 04/11/17, 13:00:06</font><br/><font color="blue"><b>Attacker: 10.0.254.31</b></font>>]
+"HOST DISCOVERY
+ms-wbt-server" -> "SERVICE DISCOVERY
+ff-ice" [ label="start_next: 04/11/17, 13:11:49
+gap: -181sec
+end_prev: 04/11/17, 13:14:50"][ fontcolor="blue" color=blue]
+"SERVICE DISCOVERY
+ff-ice" -> "VULNERABILTY DISCOVERY
+postgresql" [ label="start_next: 04/11/17, 13:20:28
+gap: 211sec
+end_prev: 04/11/17, 13:16:57"][ fontcolor="blue" color=blue]
+"VULNERABILTY DISCOVERY
+postgresql" -> "HOST DISCOVERY
+ms-wbt-server" [ label="start_next: 04/11/17, 13:20:54
+gap: 23sec
+end_prev: 04/11/17, 13:20:31"][ fontcolor="blue" color=blue]
+"HOST DISCOVERY
+ms-wbt-server" -> "VULNERABILTY DISCOVERY
+ncube-lm" [ label="start_next: 04/11/17, 13:28:15
+gap: 78sec
+end_prev: 04/11/17, 13:26:57"][ fontcolor="blue" color=blue]
+"VULNERABILTY DISCOVERY
+ncube-lm" -> "ACCOUNT MANIPULATION
+snmp | ID: -1" [ label="start_next: 04/11/17, 13:59:03
+gap: 1845sec
+end_prev: 04/11/17, 13:28:18"][ fontcolor="blue" color=blue]
+"ACCOUNT MANIPULATION
+snmp | ID: -1" -> "ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 309" [ label="start_next: 04/11/17, 13:59:30
+gap: 24sec
+end_prev: 04/11/17, 13:59:05"][ fontcolor="blue" color=blue]
+"ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 309" -> "DATA EXFILTRATION
+microsoft-ds | ID: 37" [ label="start_next: 04/11/17, 13:59:30
+gap: 0sec
+end_prev: 04/11/17, 13:59:30"][ fontcolor="blue" color=blue]
+"DATA EXFILTRATION
+microsoft-ds | ID: 37" -> "VULNERABILTY DISCOVERY
+postgresql" [ label="start_next: 04/11/17, 14:11:07
+gap: 697sec
+end_prev: 04/11/17, 13:59:30"][ fontcolor="blue" color=blue]
+"VULNERABILTY DISCOVERY
+postgresql" -> "SERVICE DISCOVERY
+unknown" [ label="start_next: 04/11/17, 14:12:01
+gap: -57sec
+end_prev: 04/11/17, 14:12:58"][ fontcolor="blue" color=blue]
+"SERVICE DISCOVERY
+unknown" -> "VULNERABILTY DISCOVERY
+ahsp" [ label="start_next: 04/11/17, 14:18:33
+gap: -1024sec
+end_prev: 04/11/17, 14:35:37"][ fontcolor="blue" color=blue]
+"VULNERABILTY DISCOVERY
+ahsp" -> "ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 931" [ label="start_next: 04/11/17, 14:32:40
+gap: -170sec
+end_prev: 04/11/17, 14:35:30"][ fontcolor="blue" color=blue]
+"ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 931" -> "DATA EXFILTRATION
+microsoft-ds | ID: 380" [ label="start_next: 04/11/17, 14:32:40
+gap: -189sec
+end_prev: 04/11/17, 14:35:49"][ fontcolor="blue" color=blue]
+"DATA EXFILTRATION
+microsoft-ds | ID: 380" -> "NETWORK DoS
+ssdp | ID: 55" [ label="start_next: 04/11/17, 14:33:06
+gap: -169sec
+end_prev: 04/11/17, 14:35:55"][ fontcolor="blue" color=blue]
+"NETWORK DoS
+ssdp | ID: 55" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: -1" [ label="start_next: 04/11/17, 14:33:53
+gap: -11sec
+end_prev: 04/11/17, 14:34:05"][ fontcolor="blue" color=blue]
+"REMOTE SERVICE EXPLOIT
+snmp | ID: -1" -> "COMMAND AND CONTROL
+unknown | ID: 308" [ label="start_next: 04/11/17, 14:34:37
+gap: 44sec
+end_prev: 04/11/17, 14:33:53"][ fontcolor="blue" color=blue]
+"COMMAND AND CONTROL
+unknown | ID: 308" -> "ACCOUNT MANIPULATION
+snmp | ID: 53" [ label="start_next: 04/11/17, 14:34:56
+gap: -152sec
+end_prev: 04/11/17, 14:37:28"][ fontcolor="blue" color=blue]
+"ACCOUNT MANIPULATION
+snmp | ID: 53" -> "VULNERABILTY DISCOVERY
+mysql" [ label="start_next: 04/11/17, 16:02:39
+gap: 5253sec
+end_prev: 04/11/17, 14:35:06"][ fontcolor="blue" color=blue]
+"VULNERABILTY DISCOVERY
+mysql" -> "ACCOUNT MANIPULATION
+snmp | ID: 831" [ label="start_next: 04/11/17, 16:02:42
+gap: 2sec
+end_prev: 04/11/17, 16:02:40"][ fontcolor="blue" color=blue]
+"ACCOUNT MANIPULATION
+snmp | ID: 831" -> "ROOT PRIVILEGE ESCALATION
+ms-wbt-server | ID: 322" [ label="start_next: 04/11/17, 16:02:56
+gap: 15sec
+end_prev: 04/11/17, 16:02:42"][ fontcolor="blue" color=blue]
+"ROOT PRIVILEGE ESCALATION
+ms-wbt-server | ID: 322" -> "COMMAND AND CONTROL
+unknown | ID: 39" [ label="start_next: 04/11/17, 16:02:56
+gap: -24sec
+end_prev: 04/11/17, 16:03:21"][ fontcolor="blue" color=blue]
+"COMMAND AND CONTROL
+unknown | ID: 39" -> "SERVICE DISCOVERY
+unknown" [ label="start_next: 04/11/17, 16:04:20
+gap: -26sec
+end_prev: 04/11/17, 16:04:46"][ fontcolor="blue" color=blue]
+"SERVICE DISCOVERY
+unknown" -> "NETWORK DoS
+ms-wbt-server | ID: 307" [ label="start_next: 04/11/17, 16:04:32
+gap: -478sec
+end_prev: 04/11/17, 16:12:30"][ fontcolor="blue" color=blue]
+"SERVICE DISCOVERY
+unknown" [style=filled, fillcolor= yellow]
+"SERVICE DISCOVERY
+unknown" -> "VULNERABILTY DISCOVERY
+mysql" [ color=blue] [label=<<font color="blue"> start_next: 04/11/17, 15:11:48<br/>gap: 1835sec<br/>end_prev: 04/11/17, 14:41:12</font><br/><font color="blue"><b>Attacker: 10.0.254.32</b></font>>]
+"VULNERABILTY DISCOVERY
+mysql" -> "NETWORK DoS
+ms-wbt-server | ID: 36" [ label="start_next: 04/11/17, 15:11:48
+gap: -5sec
+end_prev: 04/11/17, 15:11:53"][ fontcolor="blue" color=blue]
+"SERVICE DISCOVERY
+unknown" [style=filled, fillcolor= yellow]
+"SERVICE DISCOVERY
+unknown" -> "VULNERABILTY DISCOVERY
+ncube-lm" [ color=purple] [label=<<font color="purple"> start_next: 04/11/17, 13:11:09<br/>gap: 392sec<br/>end_prev: 04/11/17, 13:04:37</font><br/><font color="purple"><b>Attacker: 10.0.254.33</b></font>>]
+"VULNERABILTY DISCOVERY
+ncube-lm" -> "SERVICE DISCOVERY
+cm" [ label="start_next: 04/11/17, 13:12:18
+gap: 69sec
+end_prev: 04/11/17, 13:11:09"][ fontcolor="purple" color=purple]
+"SERVICE DISCOVERY
+cm" -> "NETWORK DoS
+ms-wbt-server | ID: 297" [ label="start_next: 04/11/17, 13:19:23
+gap: 425sec
+end_prev: 04/11/17, 13:12:18"][ fontcolor="purple" color=purple]
+"VULNERABILTY DISCOVERY
+ms-sql-s" [style=filled, fillcolor= yellow]
+"VULNERABILTY DISCOVERY
+ms-sql-s" -> "SERVICE DISCOVERY
+unknown" [ color=purple] [label=<<font color="purple"> start_next: 04/11/17, 14:46:49<br/>gap: -29sec<br/>end_prev: 04/11/17, 14:47:18</font><br/><font color="purple"><b>Attacker: 10.0.254.33</b></font>>]
+"SERVICE DISCOVERY
+unknown" -> "COMMAND AND CONTROL
+unknown | ID: 39" [ label="start_next: 04/11/17, 14:47:08
+gap: -3sec
+end_prev: 04/11/17, 14:47:11"][ fontcolor="purple" color=purple]
+"COMMAND AND CONTROL
+unknown | ID: 39" -> "HOST DISCOVERY
+ms-wbt-server" [ label="start_next: 04/11/17, 14:47:13
+gap: 5sec
+end_prev: 04/11/17, 14:47:08"][ fontcolor="purple" color=purple]
+"HOST DISCOVERY
+ms-wbt-server" -> "DATA EXFILTRATION
+microsoft-ds | ID: 298" [ label="start_next: 04/11/17, 14:47:24
+gap: 12sec
+end_prev: 04/11/17, 14:47:13"][ fontcolor="purple" color=purple]
+"DATA EXFILTRATION
+microsoft-ds | ID: 298" -> "NETWORK DoS
+ms-wbt-server | ID: 36" [ label="start_next: 04/11/17, 16:07:49
+gap: 4821sec
+end_prev: 04/11/17, 14:47:28"][ fontcolor="purple" color=purple]
+"COMMAND AND CONTROL
+unknown | ID: 1578" [style="dotted,filled", fillcolor= yellow]
+"COMMAND AND CONTROL
+unknown | ID: 1578" -> "ROOT PRIVILEGE ESCALATION
+ms-wbt-server | ID: 1258" [ color=tomato] [label=<<font color="tomato"> start_next: 04/11/17, 13:58:08<br/>gap: -1sec<br/>end_prev: 04/11/17, 13:58:09</font><br/><font color="tomato"><b>Attacker: 10.0.254.31</b></font>>]
+"ROOT PRIVILEGE ESCALATION
+ms-wbt-server | ID: 1258" -> "COMMAND AND CONTROL
+unknown | ID: 792" [ label="start_next: 04/11/17, 14:31:25
+gap: 1996sec
+end_prev: 04/11/17, 13:58:09"][ fontcolor="tomato" color=tomato]
+"COMMAND AND CONTROL
+unknown | ID: 792" -> "ROOT PRIVILEGE ESCALATION
+ms-wbt-server | ID: 302" [ label="start_next: 04/11/17, 14:32:12
+gap: -1sec
+end_prev: 04/11/17, 14:32:14"][ fontcolor="tomato" color=tomato]
+"ROOT PRIVILEGE ESCALATION
+ms-wbt-server | ID: 302" -> "NETWORK DoS
+ms-wbt-server | ID: 36" [ label="start_next: 04/11/17, 17:18:43
+gap: 9990sec
+end_prev: 04/11/17, 14:32:14"][ fontcolor="tomato" color=tomato]
+"SERVICE DISCOVERY
+unknown" [style=filled, fillcolor= yellow]
+"SERVICE DISCOVERY
+unknown" -> "SERVICE DISCOVERY
+epmap" [ color=turquoise] [label=<<font color="turquoise"> start_next: 04/11/17, 13:02:56<br/>gap: 313sec<br/>end_prev: 04/11/17, 12:57:43</font><br/><font color="turquoise"><b>Attacker: 10.0.254.30</b></font>>]
+"SERVICE DISCOVERY
+epmap" -> "NETWORK DoS
+ms-wbt-server | ID: 36" [ label="start_next: 04/11/17, 13:03:57
+gap: -372sec
+end_prev: 04/11/17, 13:10:10"][ fontcolor="turquoise" color=turquoise]
+"VULNERABILTY DISCOVERY
+mysql" [style=filled, fillcolor= yellow]
+"VULNERABILTY DISCOVERY
+mysql" -> "SERVICE DISCOVERY
+ag-swim" [ color=turquoise] [label=<<font color="turquoise"> start_next: 04/11/17, 14:06:24<br/>gap: -30sec<br/>end_prev: 04/11/17, 14:06:55</font><br/><font color="turquoise"><b>Attacker: 10.0.254.31</b></font>>]
+"SERVICE DISCOVERY
+ag-swim" -> "COMMAND AND CONTROL
+unknown | ID: 785" [ label="start_next: 04/11/17, 14:06:50
+gap: 24sec
+end_prev: 04/11/17, 14:06:26"][ fontcolor="turquoise" color=turquoise]
+"COMMAND AND CONTROL
+unknown | ID: 785" -> "DATA EXFILTRATION
+microsoft-ds | ID: 298" [ label="start_next: 04/11/17, 14:07:01
+gap: 12sec
+end_prev: 04/11/17, 14:06:50"][ fontcolor="turquoise" color=turquoise]
+"DATA EXFILTRATION
+microsoft-ds | ID: 298" -> "NETWORK DoS
+ms-wbt-server | ID: 36" [ label="start_next: 04/11/17, 15:07:53
+gap: 3648sec
+end_prev: 04/11/17, 14:07:05"][ fontcolor="turquoise" color=turquoise]
+"SERVICE DISCOVERY
+unknown" [style=filled, fillcolor= yellow]
+"SERVICE DISCOVERY
+unknown" -> "COMMAND AND CONTROL
+unknown | ID: 785" [ color=turquoise] [label=<<font color="turquoise"> start_next: 04/11/17, 14:50:49<br/>gap: 25sec<br/>end_prev: 04/11/17, 14:50:25</font><br/><font color="turquoise"><b>Attacker: 10.0.254.32</b></font>>]
+"COMMAND AND CONTROL
+unknown | ID: 785" -> "DATA EXFILTRATION
+microsoft-ds | ID: 298" [ label="start_next: 04/11/17, 14:51:01
+gap: 12sec
+end_prev: 04/11/17, 14:50:49"][ fontcolor="turquoise" color=turquoise]
+"DATA EXFILTRATION
+microsoft-ds | ID: 298" -> "NETWORK DoS
+ms-wbt-server | ID: 36" [ label="start_next: 04/11/17, 21:15:46
+gap: 23081sec
+end_prev: 04/11/17, 14:51:05"][ fontcolor="turquoise" color=turquoise]
+"SERVICE DISCOVERY
+cm" [shape=oval]
+"SERVICE DISCOVERY
+cm" [tooltip="ET SCAN Behavioral Unusual Port 135 traffic Potential Scan or Infection
+ET SCAN Potential VNC Scan 5900-5920"]
+"VULNERABILTY DISCOVERY
+ms-sql-s" [shape=oval]
+"VULNERABILTY DISCOVERY
+ms-sql-s" [tooltip="ET POLICY Suspicious inbound to MSSQL port 1433
+ET POLICY Suspicious inbound to mySQL port 3306
+ET POLICY Suspicious inbound to Oracle SQL port 1521
+ET POLICY Suspicious inbound to PostgreSQL port 5432"]
+"SERVICE DISCOVERY
+unknown" [shape=oval]
+"SERVICE DISCOVERY
+unknown" [tooltip="ET SCAN Potential VNC Scan 5800-5820
+ET SCAN Behavioral Unusual Port 445 traffic Potential Scan or Infection
+ET SCAN NMAP OS Detection Probe
+ET SCAN Potential VNC Scan 5900-5920
+ET SCAN Potential SSH Scan"]
+"NETWORK DoS
+ms-wbt-server | ID: 36" [shape=hexagon]
+"NETWORK DoS
+ms-wbt-server | ID: 36" [tooltip="ET DOS Microsoft Remote Desktop (RDP) Syn then Reset 30 Second DoS Attempt"]
+"SERVICE DISCOVERY
+microsoft-ds" [shape=oval]
+"SERVICE DISCOVERY
+microsoft-ds" [tooltip="ET SCAN Behavioral Unusual Port 445 traffic Potential Scan or Infection
+ET SCAN Potential VNC Scan 5900-5920"]
+"COMMAND AND CONTROL
+unknown | ID: 39" [shape=box]
+"COMMAND AND CONTROL
+unknown | ID: 39" [tooltip="ET POLICY RDP connection confirm"]
+"VULNERABILTY DISCOVERY
+mysql" [shape=oval]
+"VULNERABILTY DISCOVERY
+mysql" [tooltip="ET POLICY Suspicious inbound to mySQL port 3306
+ET POLICY Suspicious inbound to mSQL port 4333
+ET POLICY Suspicious inbound to MSSQL port 1433
+ET POLICY Suspicious inbound to Oracle SQL port 1521
+ET POLICY Suspicious inbound to PostgreSQL port 5432"]
+"HOST DISCOVERY
+ms-wbt-server" [shape=oval]
+"HOST DISCOVERY
+ms-wbt-server" [tooltip="ET SCAN Behavioral Unusually fast Terminal Server Traffic Potential Scan or Infection (Inbound)"]
+"SERVICE DISCOVERY
+ff-ice" [shape=oval]
+"SERVICE DISCOVERY
+ff-ice" [tooltip="ET SCAN Potential VNC Scan 5900-5920"]
+"VULNERABILTY DISCOVERY
+postgresql" [shape=oval]
+"VULNERABILTY DISCOVERY
+postgresql" [tooltip="ET POLICY Suspicious inbound to mySQL port 3306
+ET POLICY Suspicious inbound to PostgreSQL port 5432"]
+"VULNERABILTY DISCOVERY
+ncube-lm" [shape=oval]
+"VULNERABILTY DISCOVERY
+ncube-lm" [tooltip="ET POLICY Suspicious inbound to Oracle SQL port 1521"]
+"ACCOUNT MANIPULATION
+snmp | ID: -1" [shape=box]
+"ACCOUNT MANIPULATION
+snmp | ID: -1" [tooltip="GPL SNMP public access udp"]
+"ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 309" [shape=box]
+"ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 309" [tooltip="GPL NETBIOS SMB-DS Session Setup NTMLSSP unicode asn1 overflow attempt"]
+"DATA EXFILTRATION
+microsoft-ds | ID: 37" [shape=hexagon]
+"DATA EXFILTRATION
+microsoft-ds | ID: 37" [tooltip="GPL NETBIOS SMB-DS IPC$ unicode share access"]
+"VULNERABILTY DISCOVERY
+ahsp" [shape=oval]
+"VULNERABILTY DISCOVERY
+ahsp" [tooltip="ET POLICY Suspicious inbound to mySQL port 3306
+ET POLICY Suspicious inbound to mSQL port 4333
+ET POLICY Suspicious inbound to MSSQL port 1433
+ET POLICY Suspicious inbound to Oracle SQL port 1521
+ET SCAN Nessus User Agent
+ET POLICY Suspicious inbound to PostgreSQL port 5432"]
+"ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 931" [style="dotted", shape=box]
+"ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 931" [tooltip="GPL MISC UPnP malformed advertisement
+GPL NETBIOS SMB-DS Session Setup NTMLSSP unicode asn1 overflow attempt"]
+"DATA EXFILTRATION
+microsoft-ds | ID: 380" [shape=hexagon]
+"DATA EXFILTRATION
+microsoft-ds | ID: 380" [tooltip="GPL NETBIOS SMB-DS IPC$ unicode share access
+ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability"]
+"NETWORK DoS
+ssdp | ID: 55" [shape=hexagon]
+"NETWORK DoS
+ssdp | ID: 55" [tooltip="ET DOS Possible SSDP Amplification Scan in Progress
+ET DOS Microsoft Remote Desktop (RDP) Syn then Reset 30 Second DoS Attempt"]
+"REMOTE SERVICE EXPLOIT
+snmp | ID: -1" [shape=box]
+"REMOTE SERVICE EXPLOIT
+snmp | ID: -1" [tooltip="ET SNMP Samsung Printer SNMP Hardcode RW Community String"]
+"COMMAND AND CONTROL
+unknown | ID: 308" [shape=box]
+"COMMAND AND CONTROL
+unknown | ID: 308" [tooltip="ET POLICY RDP connection confirm"]
+"ACCOUNT MANIPULATION
+snmp | ID: 53" [shape=box]
+"ACCOUNT MANIPULATION
+snmp | ID: 53" [tooltip="GPL SNMP private access udp
+GPL SNMP public access udp"]
+"ACCOUNT MANIPULATION
+snmp | ID: 831" [style="dotted", shape=box]
+"ACCOUNT MANIPULATION
+snmp | ID: 831" [tooltip="GPL SNMP public access udp"]
+"ROOT PRIVILEGE ESCALATION
+ms-wbt-server | ID: 322" [shape=box]
+"ROOT PRIVILEGE ESCALATION
+ms-wbt-server | ID: 322" [tooltip="ET POLICY MS Terminal Server Root login"]
+"NETWORK DoS
+ms-wbt-server | ID: 307" [shape=hexagon]
+"NETWORK DoS
+ms-wbt-server | ID: 307" [tooltip="ET DOS Microsoft Remote Desktop (RDP) Syn then Reset 30 Second DoS Attempt"]
+"NETWORK DoS
+ms-wbt-server | ID: 297" [shape=hexagon]
+"NETWORK DoS
+ms-wbt-server | ID: 297" [tooltip="ET DOS Microsoft Remote Desktop (RDP) Syn then Reset 30 Second DoS Attempt"]
+"DATA EXFILTRATION
+microsoft-ds | ID: 298" [shape=hexagon]
+"DATA EXFILTRATION
+microsoft-ds | ID: 298" [tooltip="GPL NETBIOS SMB-DS IPC$ share access"]
+"COMMAND AND CONTROL
+unknown | ID: 1578" [shape=box]
+"COMMAND AND CONTROL
+unknown | ID: 1578" [tooltip="ET POLICY RDP connection confirm"]
+"ROOT PRIVILEGE ESCALATION
+ms-wbt-server | ID: 1258" [style="dotted", shape=box]
+"ROOT PRIVILEGE ESCALATION
+ms-wbt-server | ID: 1258" [tooltip="ET POLICY MS Remote Desktop Administrator Login Request"]
+"COMMAND AND CONTROL
+unknown | ID: 792" [style="dotted", shape=box]
+"COMMAND AND CONTROL
+unknown | ID: 792" [tooltip="ET POLICY RDP connection confirm"]
+"ROOT PRIVILEGE ESCALATION
+ms-wbt-server | ID: 302" [shape=box]
+"ROOT PRIVILEGE ESCALATION
+ms-wbt-server | ID: 302" [tooltip="ET POLICY MS Remote Desktop Administrator Login Request"]
+"SERVICE DISCOVERY
+epmap" [shape=oval]
+"SERVICE DISCOVERY
+epmap" [tooltip="ET SCAN Behavioral Unusual Port 135 traffic Potential Scan or Infection
+ET SCAN Behavioral Unusual Port 445 traffic Potential Scan or Infection"]
+"SERVICE DISCOVERY
+ag-swim" [shape=oval]
+"SERVICE DISCOVERY
+ag-swim" [tooltip="ET SCAN Potential VNC Scan 5800-5820
+ET SCAN Potential VNC Scan 5900-5920"]
+"COMMAND AND CONTROL
+unknown | ID: 785" [style="dotted", shape=box]
+"COMMAND AND CONTROL
+unknown | ID: 785" [tooltip="ET POLICY RDP connection confirm"]
+}

@@ -1,0 +1,24 @@
+digraph "" {
+	"TRUSTED ORG. EXPLOIT
+http | ID: 148"	[shape=box,
+		tooltip="\"ET WEB_SPECIFIC_APPS PHP Booking Calendar page_info_message parameter Cross-Site Scripting Vulnerability \""];
+	"TRUSTED ORG. EXPLOIT
+http | ID: 362"	[shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SERVER Onmouseover= in URI - Likely Cross Site Scripting Attempt\""];
+	"VULNERABILTY DISCOVERY
+cslistener"	[shape=oval,
+		tooltip="\"ET SCAN Nikto Web App Scan in Progress\""];
+	"VULNERABILTY DISCOVERY
+cslistener" -> "TRUSTED ORG. EXPLOIT
+http | ID: 362"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 21:42:40\ngap: -4sec\nend_prev: 03/11/18, 21:42:44\"'}"];
+	"REMOTE SERVICE EXPLOIT
+http | ID: 377"	[shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SERVER Script tag in URI Possible Cross Site Scripting Attempt\""];
+	"REMOTE SERVICE EXPLOIT
+http | ID: 377" -> "TRUSTED ORG. EXPLOIT
+http | ID: 148"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 22:42:33\ngap: -5sec\nend_prev: 03/11/18, 22:42:39\"'}"];
+}

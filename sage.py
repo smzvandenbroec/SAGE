@@ -1,25 +1,20 @@
-import os,re,operator, json, datetime, glob
+#!/usr/bin/python3
+
+import os,operator, datetime, glob
 import statistics 
-import seaborn as sns
 import pandas as pd
 import requests
 import csv
-import json
 import os.path
-import matplotlib.pyplot as plt 
 import itertools
-import numpy as np
-import matplotlib.pyplot as plt
 from numpy import diff
 from pandas import DataFrame
-import math
 import math
 from itertools import accumulate
 import matplotlib.pyplot as plt
 import matplotlib.style
 import matplotlib as mpl
 mpl.style.use('default')
-import numpy as np
 import seaborn as sns
 import numpy as np 
 import subprocess
@@ -29,16 +24,16 @@ from shutil import copyfile
 import json
 import re
 from collections import defaultdict
+from enum import Enum
 
+# Settings
 IANA_CSV_FILE = "https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.csv"
 DB_PATH = "./ports.json"
 SAVE = True
-DOCKER = True
+DOCKER = False
 
-## ----- 2
-from enum import Enum
 
-class MicroAttackStage(Enum) :
+class MicroAttackStage(Enum):
     INIT = 0
 
     TARGET_IDEN = 1
@@ -81,7 +76,7 @@ class MicroAttackStage(Enum) :
     NON_MALICIOUS = 999
 
 
-class MacroAttackStage(Enum) :
+class MacroAttackStage(Enum):
     NONE = 0
     PASSIVE_RECON = 1
     ACTIVE_RECON = 2
@@ -95,14 +90,14 @@ class MacroAttackStage(Enum) :
     DISCLOSURE = 10
     DELIVERY = 11
 
-mapping = {'MicroAttackStage.TARGET_IDEN' : 'MacroAttackStage.PASSIVE_RECON',
+mapping = {'MicroAttackStage.TARGET_IDEN': 'MacroAttackStage.PASSIVE_RECON',
        'MicroAttackStage.SURFING': 'MacroAttackStage.PASSIVE_RECON',
        'MicroAttackStage.SOCIAL_ENGINEERING': 'MacroAttackStage.PASSIVE_RECON',
        'MicroAttackStage.HOST_DISC': 'MacroAttackStage.ACTIVE_RECON',
        'MicroAttackStage.SERVICE_DISC': 'MacroAttackStage.ACTIVE_RECON',
        'MicroAttackStage.VULN_DISC': 'MacroAttackStage.ACTIVE_RECON',
        'MicroAttackStage.INFO_DISC': 'MacroAttackStage.ACTIVE_RECON',
-       'MicroAttackStage.PRIV_ESC' : 'MacroAttackStage.PRIVLEDGE_ESC',
+       'MicroAttackStage.PRIV_ESC': 'MacroAttackStage.PRIVLEDGE_ESC',
        'MicroAttackStage.USER_PRIV_ESC': 'MacroAttackStage.PRIVLEDGE_ESC',
        'MicroAttackStage.ROOT_PRIV_ESC': 'MacroAttackStage.PRIVLEDGE_ESC',
        'MicroAttackStage.NETWORK_SNIFFING': 'MacroAttackStage.PRIVLEDGE_ESC',
@@ -175,40 +170,40 @@ small_mapping = {
 }
 rev_smallmapping = dict([(value, key) for key, value in small_mapping.items()]) 
 verbose_micro = {'INIT': 'INITILIZE', 
-'TARGET_IDEN': 'TARGET IDENTIFICATION', 
-'SURFING': 'SURFING', 
-'SOCIAL_ENGINEERING': 'SOCIAL ENGINEERING', 
-'HOST_DISC': 'HOST DISCOVERY', 
-'SERVICE_DISC': 'SERVICE DISCOVERY', 
-'VULN_DISC': 'VULNERABILTY DISCOVERY', 
-'INFO_DISC': 'INFO DISCOVERY', 
-'USER_PRIV_ESC': 'USER PRIVILEGE ESCALATION', 
-'ROOT_PRIV_ESC': 'ROOT PRIVILEGE ESCALATION', 
-'NETWORK_SNIFFING': 'NETWORK SNIFFING', 
-'BRUTE_FORCE_CREDS': 'BRUTE FORCE CREDENTIALS', 
-'ACCT_MANIP': 'ACCOUNT MANIPULATION', 
-'TRUSTED_ORG_EXP': 'TRUSTED ORG. EXPLOIT', 
-'PUBLIC_APP_EXP': 'PUBLIC APP EXPLOIT', 
-'REMOTE_SERVICE_EXP': 'REMOTE SERVICE EXPLOIT', 
-'SPEARPHISHING': 'SPEAR PHISHING', 
-'SERVICE_SPECIFIC': 'SERVICE SPECIFIC', 
-'DEFENSE_EVASION': 'DEFENSE EVASION', 
-'COMMAND_AND_CONTROL': 'COMMAND AND CONTROL', 
-'LATERAL_MOVEMENT': 'LATERAL MOVEMENT', 
-'ARBITRARY_CODE_EXE': 'ARBITRARY CODE EXECUTION', 
-'PRIV_ESC': 'PRIVILEGE ESCALATION', 
-'END_POINT_DOS': 'END POINT DoS', 
-'NETWORK_DOS': 'NETWORK DoS', 
-'SERVICE_STOP': 'SERVICE STOP', 
-'RESOURCE_HIJACKING': 'RESOURCE HIJACKING', 
-'DATA_DESTRUCTION': 'DATA DESTRUCTION', 
-'CONTENT_WIPE': 'CONTENT WIPE', 
-'DATA_ENCRYPTION': 'DATA ENCRYPTION', 
-'DEFACEMENT': 'DEFACEMENT', 
-'DATA_MANIPULATION': 'DATA MANIPULATION', 
-'DATA_EXFILTRATION': 'DATA EXFILTRATION', 
-'DATA_DELIVERY': 'DATA DELIVERY', 
-'PHISHING': 'PHISHING', 
+'TARGET_IDEN': 'TARGET IDENTIFICATION',
+'SURFING': 'SURFING',
+'SOCIAL_ENGINEERING': 'SOCIAL ENGINEERING',
+'HOST_DISC': 'HOST DISCOVERY',
+'SERVICE_DISC': 'SERVICE DISCOVERY',
+'VULN_DISC': 'VULNERABILTY DISCOVERY',
+'INFO_DISC': 'INFO DISCOVERY',
+'USER_PRIV_ESC': 'USER PRIVILEGE ESCALATION',
+'ROOT_PRIV_ESC': 'ROOT PRIVILEGE ESCALATION',
+'NETWORK_SNIFFING': 'NETWORK SNIFFING',
+'BRUTE_FORCE_CREDS': 'BRUTE FORCE CREDENTIALS',
+'ACCT_MANIP': 'ACCOUNT MANIPULATION',
+'TRUSTED_ORG_EXP': 'TRUSTED ORG. EXPLOIT',
+'PUBLIC_APP_EXP': 'PUBLIC APP EXPLOIT',
+'REMOTE_SERVICE_EXP': 'REMOTE SERVICE EXPLOIT',
+'SPEARPHISHING': 'SPEAR PHISHING',
+'SERVICE_SPECIFIC': 'SERVICE SPECIFIC',
+'DEFENSE_EVASION': 'DEFENSE EVASION',
+'COMMAND_AND_CONTROL': 'COMMAND AND CONTROL',
+'LATERAL_MOVEMENT': 'LATERAL MOVEMENT',
+'ARBITRARY_CODE_EXE': 'ARBITRARY CODE EXECUTION',
+'PRIV_ESC': 'PRIVILEGE ESCALATION',
+'END_POINT_DOS': 'END POINT DoS',
+'NETWORK_DOS': 'NETWORK DoS',
+'SERVICE_STOP': 'SERVICE STOP',
+'RESOURCE_HIJACKING': 'RESOURCE HIJACKING',
+'DATA_DESTRUCTION': 'DATA DESTRUCTION',
+'CONTENT_WIPE': 'CONTENT WIPE',
+'DATA_ENCRYPTION': 'DATA ENCRYPTION',
+'DEFACEMENT': 'DEFACEMENT',
+'DATA_MANIPULATION': 'DATA MANIPULATION',
+'DATA_EXFILTRATION': 'DATA EXFILTRATION',
+'DATA_DELIVERY': 'DATA DELIVERY',
+'PHISHING': 'PHISHING',
 'NON_MALICIOUS': 'NOT MALICIOUS'}
 
 ## DO NOT EXECUTE: Convert each alert into Moskal categoru: Manual mapping
@@ -899,13 +894,13 @@ usual_mapping = {'ET ATTACK_RESPONSE Net User Command Response': MicroAttackStag
           'GPL WEB_SERVER services.cnf access': MicroAttackStage.INFO_DISC,
           'GPL WEB_SERVER viewcode access': MicroAttackStage.INFO_DISC,
           'GPL WEB_SERVER writeto.cnf access': MicroAttackStage.INFO_DISC,
-          'ETPRO EXPLOIT Possible Wget Arbitrary File Write Exploit Attempt (CVE-2016-4971)' : MicroAttackStage.DATA_DELIVERY,
+          'ETPRO EXPLOIT Possible Wget Arbitrary File Write Exploit Attempt (CVE-2016-4971)': MicroAttackStage.DATA_DELIVERY,
            "INDICATOR-SCAN PHP backdoor scan attempt": MicroAttackStage.VULN_DISC,
-           "MALWARE-CNC Win.Trojan.Dorkbot variant outbound connection" : MicroAttackStage.COMMAND_AND_CONTROL,
-           "MALWARE-CNC Win.Trojan.Saeeka variant outbound connection" : MicroAttackStage.COMMAND_AND_CONTROL,
-           "MALWARE-CNC Hacker-Tool sars notifier variant outbound connection php notification" : MicroAttackStage.COMMAND_AND_CONTROL,
-           "MALWARE-CNC Win.Trojan.Alureon.DG runtime traffic detected" : MicroAttackStage.COMMAND_AND_CONTROL,
-           "MALWARE-CNC TT-bot botnet variant outbound connection" : MicroAttackStage.COMMAND_AND_CONTROL,
+           "MALWARE-CNC Win.Trojan.Dorkbot variant outbound connection": MicroAttackStage.COMMAND_AND_CONTROL,
+           "MALWARE-CNC Win.Trojan.Saeeka variant outbound connection": MicroAttackStage.COMMAND_AND_CONTROL,
+           "MALWARE-CNC Hacker-Tool sars notifier variant outbound connection php notification": MicroAttackStage.COMMAND_AND_CONTROL,
+           "MALWARE-CNC Win.Trojan.Alureon.DG runtime traffic detected": MicroAttackStage.COMMAND_AND_CONTROL,
+           "MALWARE-CNC TT-bot botnet variant outbound connection": MicroAttackStage.COMMAND_AND_CONTROL,
            "ETPRO TROJAN CoinMiner Known Malicious Stratum Authline": MicroAttackStage.RESOURCE_HIJACKING,
            }
 endpointDoS_signatures = [
@@ -1182,69 +1177,69 @@ non_malicious_signatures = [ "SURICATA SMTP invalid reply",
 attack_stage_mapping = {
     MicroAttackStage.END_POINT_DOS: endpointDoS_signatures,
     MicroAttackStage.NETWORK_DOS: networkDoS_signatures,
-    MicroAttackStage.HOST_DISC : hostdisc_signatures,
-    MicroAttackStage.VULN_DISC : vuln_disc_signatures,
-    MicroAttackStage.INFO_DISC : info_disc_signatures,
-    MicroAttackStage.BRUTE_FORCE_CREDS : bruteforce_signatures,
-    MicroAttackStage.SERVICE_DISC : servicedisc_signatures,
-    MicroAttackStage.SERVICE_SPECIFIC : specific_exp_signatures,
-    MicroAttackStage.ARBITRARY_CODE_EXE : arbitary_exe_signatures,
-    MicroAttackStage.ROOT_PRIV_ESC : root_priv_signatures,
-    MicroAttackStage.USER_PRIV_ESC : user_priv_signatures,
-    MicroAttackStage.REMOTE_SERVICE_EXP : remote_serv_signatures,
-    MicroAttackStage.DEFENSE_EVASION : def_evasion_signatures,
-    MicroAttackStage.DATA_EXFILTRATION : exfiltration_signatures,
-    MicroAttackStage.NON_MALICIOUS : non_malicious_signatures,
+    MicroAttackStage.HOST_DISC: hostdisc_signatures,
+    MicroAttackStage.VULN_DISC: vuln_disc_signatures,
+    MicroAttackStage.INFO_DISC: info_disc_signatures,
+    MicroAttackStage.BRUTE_FORCE_CREDS: bruteforce_signatures,
+    MicroAttackStage.SERVICE_DISC: servicedisc_signatures,
+    MicroAttackStage.SERVICE_SPECIFIC: specific_exp_signatures,
+    MicroAttackStage.ARBITRARY_CODE_EXE: arbitary_exe_signatures,
+    MicroAttackStage.ROOT_PRIV_ESC: root_priv_signatures,
+    MicroAttackStage.USER_PRIV_ESC: user_priv_signatures,
+    MicroAttackStage.REMOTE_SERVICE_EXP: remote_serv_signatures,
+    MicroAttackStage.DEFENSE_EVASION: def_evasion_signatures,
+    MicroAttackStage.DATA_EXFILTRATION: exfiltration_signatures,
+    MicroAttackStage.NON_MALICIOUS: non_malicious_signatures,
 }
 
 unknown_mapping = {
-    "SERVER-MYSQL MySQL/MariaDB Server geometry query object integer overflow attempt" : MicroAttackStage.END_POINT_DOS,
-    "SERVER-MYSQL Multiple SQL products privilege escalation attempt" : MicroAttackStage.PRIV_ESC,
-    "SERVER-MYSQL yaSSL SSL Hello Message buffer overflow attempt" : MicroAttackStage.ARBITRARY_CODE_EXE,
-    "INDICATOR-SCAN User-Agent known malicious user-agent Masscan" : MicroAttackStage.HOST_DISC,
-    "INDICATOR-SCAN DirBuster brute forcing tool detected" : MicroAttackStage.INFO_DISC,
-    "INDICATOR-SCAN inbound probing for IPTUX messenger port" : MicroAttackStage.SERVICE_DISC,
-    "INDICATOR-SCAN SSH brute force login attempt" : MicroAttackStage.BRUTE_FORCE_CREDS,
-    "SERVER-APACHE Apache server mod_proxy reverse proxy bypass attempt" :  MicroAttackStage.PUBLIC_APP_EXP,
-    "SERVER-APACHE Apache header parsing space saturation denial of service attempt" : MicroAttackStage.END_POINT_DOS,
+    "SERVER-MYSQL MySQL/MariaDB Server geometry query object integer overflow attempt": MicroAttackStage.END_POINT_DOS,
+    "SERVER-MYSQL Multiple SQL products privilege escalation attempt": MicroAttackStage.PRIV_ESC,
+    "SERVER-MYSQL yaSSL SSL Hello Message buffer overflow attempt": MicroAttackStage.ARBITRARY_CODE_EXE,
+    "INDICATOR-SCAN User-Agent known malicious user-agent Masscan": MicroAttackStage.HOST_DISC,
+    "INDICATOR-SCAN DirBuster brute forcing tool detected": MicroAttackStage.INFO_DISC,
+    "INDICATOR-SCAN inbound probing for IPTUX messenger port": MicroAttackStage.SERVICE_DISC,
+    "INDICATOR-SCAN SSH brute force login attempt": MicroAttackStage.BRUTE_FORCE_CREDS,
+    "SERVER-APACHE Apache server mod_proxy reverse proxy bypass attempt":  MicroAttackStage.PUBLIC_APP_EXP,
+    "SERVER-APACHE Apache header parsing space saturation denial of service attempt": MicroAttackStage.END_POINT_DOS,
     "SERVER-APACHE Apache malformed ipv6 uri overflow attempt": MicroAttackStage.END_POINT_DOS,
-    "SERVER-APACHE Apache Struts remote code execution attempt - POST parameter" : MicroAttackStage.ARBITRARY_CODE_EXE,
-    "SERVER-APACHE Apache APR header memory corruption attempt" : MicroAttackStage.END_POINT_DOS,
-    "OS-WINDOWS Microsoft Windows DNS client TXT buffer overrun attempt" : MicroAttackStage.ARBITRARY_CODE_EXE,
+    "SERVER-APACHE Apache Struts remote code execution attempt - POST parameter": MicroAttackStage.ARBITRARY_CODE_EXE,
+    "SERVER-APACHE Apache APR header memory corruption attempt": MicroAttackStage.END_POINT_DOS,
+    "OS-WINDOWS Microsoft Windows DNS client TXT buffer overrun attempt": MicroAttackStage.ARBITRARY_CODE_EXE,
     "INDICATOR-SCAN PHP backdoor scan attempt": MicroAttackStage.VULN_DISC,
-    "INDICATOR-SCAN SSH Version map attempt" : MicroAttackStage.HOST_DISC,
-    "INDICATOR-SCAN cybercop os probe" : MicroAttackStage.SERVICE_DISC,
-    "INDICATOR-SCAN cybercop udp bomb" : MicroAttackStage.SERVICE_DISC,
-    "PROTOCOL-FINGER account enumeration attempt" : MicroAttackStage.INFO_DISC,
-    "MALWARE-CNC Win.Trojan.Crisis variant outbound connection" : MicroAttackStage.COMMAND_AND_CONTROL,
-    "MALWARE-CNC Gozi trojan checkin" : MicroAttackStage.COMMAND_AND_CONTROL,
-    "MALWARE-CNC Flame malware connection - /view.php" : MicroAttackStage.COMMAND_AND_CONTROL,
-    "OS-LINUX Linux Kernel keyring object exploit download attempt" : MicroAttackStage.PRIV_ESC,
-    "OS-LINUX Linux kernel ARM put_user write outside process address space privilege escalation attempt" : MicroAttackStage.PRIV_ESC,
-    "OS-LINUX Linux kernel madvise race condition attempt" : MicroAttackStage.PRIV_ESC,
-    "FILE-PDF PDF with click-to-launch executable" : MicroAttackStage.DATA_DELIVERY,
-    "FILE-PDF Adobe Acrobat Reader PDF font processing memory corruption attempt" : MicroAttackStage.ARBITRARY_CODE_EXE,
-    "OS-OTHER Bash environment variable injection attempt" : MicroAttackStage.ARBITRARY_CODE_EXE,
-    "OS-OTHER Intel x86 side-channel analysis information leak attempt" : MicroAttackStage.DATA_EXFILTRATION,
-    "OS-OTHER Mac OS X setuid privilege esclatation exploit attempt" : MicroAttackStage.PRIV_ESC,
-    "FILE-EXECUTABLE Microsoft Windows Authenticode signature verification bypass attempt" : MicroAttackStage.ARBITRARY_CODE_EXE,
-    "FILE-EXECUTABLE Microsoft CLFS.sys information leak attempt" : MicroAttackStage.DATA_EXFILTRATION,
-    "FILE-EXECUTABLE Kaspersky Internet Security kl1.sys out of bounds read attempt" : MicroAttackStage.END_POINT_DOS,
-    "FILE-EXECUTABLE XOR 0xfe encrypted portable executable file download attempt" : MicroAttackStage.DATA_DELIVERY,
-    "FILE-EXECUTABLE Microsoft Windows NTFS privilege escalation attempt" : MicroAttackStage.PRIV_ESC,
-    "INDICATOR-SHELLCODE ssh CRC32 overflow /bin/sh" : MicroAttackStage.ARBITRARY_CODE_EXE,
-    "INDICATOR-SHELLCODE possible /bin/sh shellcode transfer attempt" : MicroAttackStage.DATA_DELIVERY,
-    "FILE-FLASH Adobe Flash Player memory corruption attempt" : MicroAttackStage.PRIV_ESC,
-    "FILE-FLASH Adobe Flash Player use after free attempt" : MicroAttackStage.PRIV_ESC,
-    "FILE-IMAGE Oracle Java Virtual Machine malformed GIF buffer overflow attempt" : MicroAttackStage.PRIV_ESC,
+    "INDICATOR-SCAN SSH Version map attempt": MicroAttackStage.HOST_DISC,
+    "INDICATOR-SCAN cybercop os probe": MicroAttackStage.SERVICE_DISC,
+    "INDICATOR-SCAN cybercop udp bomb": MicroAttackStage.SERVICE_DISC,
+    "PROTOCOL-FINGER account enumeration attempt": MicroAttackStage.INFO_DISC,
+    "MALWARE-CNC Win.Trojan.Crisis variant outbound connection": MicroAttackStage.COMMAND_AND_CONTROL,
+    "MALWARE-CNC Gozi trojan checkin": MicroAttackStage.COMMAND_AND_CONTROL,
+    "MALWARE-CNC Flame malware connection - /view.php": MicroAttackStage.COMMAND_AND_CONTROL,
+    "OS-LINUX Linux Kernel keyring object exploit download attempt": MicroAttackStage.PRIV_ESC,
+    "OS-LINUX Linux kernel ARM put_user write outside process address space privilege escalation attempt": MicroAttackStage.PRIV_ESC,
+    "OS-LINUX Linux kernel madvise race condition attempt": MicroAttackStage.PRIV_ESC,
+    "FILE-PDF PDF with click-to-launch executable": MicroAttackStage.DATA_DELIVERY,
+    "FILE-PDF Adobe Acrobat Reader PDF font processing memory corruption attempt": MicroAttackStage.ARBITRARY_CODE_EXE,
+    "OS-OTHER Bash environment variable injection attempt": MicroAttackStage.ARBITRARY_CODE_EXE,
+    "OS-OTHER Intel x86 side-channel analysis information leak attempt": MicroAttackStage.DATA_EXFILTRATION,
+    "OS-OTHER Mac OS X setuid privilege esclatation exploit attempt": MicroAttackStage.PRIV_ESC,
+    "FILE-EXECUTABLE Microsoft Windows Authenticode signature verification bypass attempt": MicroAttackStage.ARBITRARY_CODE_EXE,
+    "FILE-EXECUTABLE Microsoft CLFS.sys information leak attempt": MicroAttackStage.DATA_EXFILTRATION,
+    "FILE-EXECUTABLE Kaspersky Internet Security kl1.sys out of bounds read attempt": MicroAttackStage.END_POINT_DOS,
+    "FILE-EXECUTABLE XOR 0xfe encrypted portable executable file download attempt": MicroAttackStage.DATA_DELIVERY,
+    "FILE-EXECUTABLE Microsoft Windows NTFS privilege escalation attempt": MicroAttackStage.PRIV_ESC,
+    "INDICATOR-SHELLCODE ssh CRC32 overflow /bin/sh": MicroAttackStage.ARBITRARY_CODE_EXE,
+    "INDICATOR-SHELLCODE possible /bin/sh shellcode transfer attempt": MicroAttackStage.DATA_DELIVERY,
+    "FILE-FLASH Adobe Flash Player memory corruption attempt": MicroAttackStage.PRIV_ESC,
+    "FILE-FLASH Adobe Flash Player use after free attempt": MicroAttackStage.PRIV_ESC,
+    "FILE-IMAGE Oracle Java Virtual Machine malformed GIF buffer overflow attempt": MicroAttackStage.PRIV_ESC,
     "FILE-IMAGE Adobe Acrobat TIFF Software tag heap buffer overflow attempt": MicroAttackStage.ARBITRARY_CODE_EXE,
-    "FILE-JAVA Oracle Java privileged protection domain exploitation attempt" : MicroAttackStage.ARBITRARY_CODE_EXE,
-    "FILE-JAVA Oracle Java sun.awt.image.ImagingLib.lookupByteBI memory corruption attempt" : MicroAttackStage.SERVICE_SPECIFIC,
-    "FILE-JAVA Oracle Java RangeStatisticImpl sandbox breach attempt" : MicroAttackStage.SERVICE_SPECIFIC,
-    "FILE-JAVA Oracle Java System.arraycopy race condition attempt" : MicroAttackStage.SERVICE_SPECIFIC,
-    "BROWSER-CHROME Apple Safari/Google Chrome Webkit memory corruption attempt" : MicroAttackStage.ARBITRARY_CODE_EXE,
-    "BROWSER-CHROME Google Chrome FileReader use after free attempt" : MicroAttackStage.PRIV_ESC,
-    "BROWSER-CHROME V8 JavaScript engine Out-of-Memory denial of service attempt" : MicroAttackStage.END_POINT_DOS,
+    "FILE-JAVA Oracle Java privileged protection domain exploitation attempt": MicroAttackStage.ARBITRARY_CODE_EXE,
+    "FILE-JAVA Oracle Java sun.awt.image.ImagingLib.lookupByteBI memory corruption attempt": MicroAttackStage.SERVICE_SPECIFIC,
+    "FILE-JAVA Oracle Java RangeStatisticImpl sandbox breach attempt": MicroAttackStage.SERVICE_SPECIFIC,
+    "FILE-JAVA Oracle Java System.arraycopy race condition attempt": MicroAttackStage.SERVICE_SPECIFIC,
+    "BROWSER-CHROME Apple Safari/Google Chrome Webkit memory corruption attempt": MicroAttackStage.ARBITRARY_CODE_EXE,
+    "BROWSER-CHROME Google Chrome FileReader use after free attempt": MicroAttackStage.PRIV_ESC,
+    "BROWSER-CHROME V8 JavaScript engine Out-of-Memory denial of service attempt": MicroAttackStage.END_POINT_DOS,
 }
 
 
@@ -1270,12 +1265,19 @@ def get_attack_stage_mapping(signature):
     return micro_inv[str(result)]
 
 # Program to find most frequent  
-def most_frequent(serv): 
-    return max(set(serv), key = serv.count) 
+def most_frequent(serv):
+    max_frequency = 0
+    most_frequent_service = None
+    for s in serv:
+       frequency = serv.count(s)
+       if frequency > max_frequency:
+            most_frequent_service = s
+            max_frequency = frequency
+    return most_frequent_service
     
 ser_groups = dict({
     'http(s)': ['http', 'https', 'ddi-udp-1', 'radan-http'],
-    'wireless' : ['wap-wsp'],
+    'wireless': ['wap-wsp'],
     'voip': ['sip', 'sips'],
     'browser': ['vrml-multi-use'], 
     'searchEng': ['search-agent'],
@@ -1283,13 +1285,13 @@ ser_groups = dict({
     'nameserver': ['domain', 'netbios-ns', 'menandmice-dns'],
     'remoteAccess': ['ssh', 'rfb', 'us-cli',  'ahsp', 'spt-automation', 'asf-rmcp', 'xdmcp', 'pcanywherestat', 'esmagent', \
                     'irdmi', 'epmap', 'wsman', 'icslap','ms-wbt-server', 'appiq-mgmt', 'sunrpc', 'mosaicsyssvc1'],
-    'surveillance' : ['remoteware-cl', 'ads-c', 'syslog', 'websm', 'distinct', 'irisa'],
+    'surveillance': ['remoteware-cl', 'ads-c', 'syslog', 'websm', 'distinct', 'irisa'],
 
     'hostingServer': ['cslistener', 'etlservicemgr', 'web2host'],
     
-    'printService' : ['pharos', 'ipps'],
+    'printService': ['pharos', 'ipps'],
     #'sendEmail': ['smtp'],
-    'migration' : ['fs-agent'],
+    'migration': ['fs-agent'],
     'email': ['smtp', 'imaps', 'pop3', 'imap', 'pop3s', 'submission'],
     'authentication': ['kerberos', 'nv-video'], 
     'ATCcomm': ['cpdlc', 'fis'],
@@ -1297,19 +1299,21 @@ ser_groups = dict({
     'storage': ['http-alt', 'ncube-lm', 'postgresql', 'mysql', 'cm', 'ms-sql-s', 'ms-sql-m', 'mongodb'],
     
     'dataSharing': ['ftp', 'pcsync-https', 'ndmp', 'netbios-ssn', 'microsoft-ds', 'profinet-rt', 'instantia'],
-    'clocksync' : ['ntp'],
+    'clocksync': ['ntp'],
     
-    'unassigned' : ['unknown', 'Unknown']
+    'unassigned': ['unknown', 'Unknown']
 })
 
 #ser_inv = {}
 #for k,v in ser_groups.items():
 #    for x in v:
 #        ser_inv.setdefault(x,[]).append(k)
-        
+
+
 def load_IANA_mapping():
     """Download the IANA port-service mapping"""
     response = requests.get(IANA_CSV_FILE)
+
     if response.ok:
         content = response.content.decode("utf-8")
     else:
@@ -1333,7 +1337,7 @@ def load_IANA_mapping():
 
             for port in range(low_port, high_port + 1):
                 ports[port] = {
-                    "name": row[0] if row[0] else "Unknown",
+                    "name": row[0] if row[0] else "unknown",
                     "description": row[3] if row[3] else "---",
                 }
         else:
@@ -1343,6 +1347,13 @@ def load_IANA_mapping():
     
 ## 3
 def readfile(fname):
+    """
+    Reads json file and returns it as a reversed list.
+
+   :param fname: json file to read from.
+
+   :return: reversed list
+    """
     unparsed_data = None
     with open(fname, 'r') as f:
         unparsed_data = json.load(f)
@@ -1359,6 +1370,13 @@ def readfile(fname):
 #h_trig = []
 
 def parse(unparsed_data, alert_labels=[], slim=False):
+    """
+    Converts the raw alert list into a list of alerts tuples.
+
+   :param unparsed_data: list of the raw alert data
+
+   :return: list of alert tuples
+    """
     
     FILTER = False
     badIP = '169.254.169.254'
@@ -1452,7 +1470,7 @@ def parse(unparsed_data, alert_labels=[], slim=False):
     #print(len(cats))
     #print(data[0][1], data[0][3])
     #print(data[1][1], data[1][3])
-    print('Reading # alerts: ', len(data))
+    print('Reading # alerts:', len(data))
     
     if slim:
         print(len(data), len(alert_labels))
@@ -1477,7 +1495,14 @@ def parse(unparsed_data, alert_labels=[], slim=False):
     return data    
 
 def removeDup(unparse, plot=False, t=1.0):
-    
+    """
+    Alert filtering for similar alerts in window t
+
+   :param t: window size, default 1.0
+
+   :return: filtered list of alert tuples
+    """
+
     if plot:
         orig, removed = dict(), dict()
         
@@ -1502,8 +1527,6 @@ def removeDup(unparse, plot=False, t=1.0):
             print(removed.keys())
         
     else:
-        
-        
         li = [unparse[x] for x in range(1,len(unparse)) if unparse[x][9] != 999 and not (unparse[x][0] <= t  # Diff from previous alert is less than x sec
                                                               and unparse[x][1] == unparse[x-1][1] # same srcIP
                                                               and unparse[x][3] == unparse[x-1][3] # same destIP
@@ -1572,19 +1595,25 @@ def removeDup(unparse, plot=False, t=1.0):
 def load_data(path, t):
     unparse = []
     team_labels = []
+
+    # Get all json files in alerts directory
     files = glob.glob(path+"/*.json")
+
     print('About to read json files...')
     if len(files) < 1:
         print('No alert files found.')
         sys.exit()
     for f in files:
+        # Get file name without extension
         name = os.path.basename(f)[:-5]
-        print(name)
+        print("Reading file:", name)
         team_labels.append(name)
         unparse_ = []
-        
+
+        # Creates the unfiltered alert tuple list
         unparse_ = parse(readfile(f), [])
-        
+
+        # Filter duplicates
         unparse_ = removeDup(unparse_, t=t)
         
         # EXP: Limit alerts by timing is better than limiting volume because each team is on a different scale. 50% alerts for one team end at a diff time than for others
@@ -1597,12 +1626,13 @@ def load_data(path, t):
         startTimes.append(first_ts)
         filtered_unparse = []
         
-        
+        # Take alerts between start/end time
         filtered_unparse = [x for x in unparse_ if (((x[8]-first_ts).total_seconds() <= end_time_limit) \
                                                 and ((x[8]-first_ts).total_seconds() >= start_time_limit))]
                                                 
         unparse.append(filtered_unparse)
-        
+
+    # Return tuple of team labels and their alerts (where team label is the file name of the alerts)
     return (unparse, team_labels)
     
 ## 11
@@ -1688,10 +1718,17 @@ def legend_without_duplicate_labels(ax, fontsize=10, loc='upper right'):
 # Goal: (1) To first form a collective attack profile of a team
 # and then (2) TO compare attack profiles of teams
 def getepisodes(action_seq, mcat, plot, debug=False):
-    
+    """
+    Get the episode sequence from an action sequence for a specific attack stage.
+
+   :param action_seq: list of alert sequences
+   :param mcat: attack stage
+
+   :return: list of episodes
+    """
     dx = 0.1
     #print(h_d_mindata)
-    y = [len(x) for x in action_seq]#
+    y = [len(x) for x in action_seq]
     
     # test case 1: normal sequence
     #y = [11, 0, 0, 2, 5, 2, 2, 2, 4, 2, 0, 0, 8, 6, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 13, 1, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 0, 0, 9, 2]
@@ -1724,9 +1761,8 @@ def getepisodes(action_seq, mcat, plot, debug=False):
         return []
     if len(y) == 1: # artifically augemnting list for a single action to be picked up                                                                 
         y = [y[0], 0]  
-    cap  = max(y)+1
-    dy = diff(y)/dx
-    
+    cap = max(y)+1
+    dy = diff(y)/dx     # derivative of #alerts per window
 
     dim = len(dy)
     #print(list(zip(y[:dim],dy[:dim])))
@@ -1806,15 +1842,17 @@ def getepisodes(action_seq, mcat, plot, debug=False):
     #print('number episodes ', len(episodes_))
     return episodes_
 
+
 def aggregate_into_episodes(unparse, team_labels, step=150):
     cols = ['b', 'r', 'g', 'c', 'm', 'y', 'k', 'olive', 'lightcoral', 'skyblue', 'mediumpurple', 'springgreen', 'chocolate', 'cadetblue', 'lavender']
 
     PRINT = False
     interesting = []
+
     # Reorganize data for each attacker per team 
     team_data = dict()
     s_t = dict()
-    for tid,team in enumerate(unparse):
+    for tid, team in enumerate(unparse):
         #attackers = list(set([x[1] for x in team])) # collecting all src ip
         #attackers.extend(list(set([x[3] for x in team]))) # collection all dst ip
         #attackers = [x for x in attackers if x not in hostip.keys()] # filtering only attackers
@@ -1832,7 +1870,7 @@ def aggregate_into_episodes(unparse, team_labels, step=150):
             sp = ev[2] if ev[2] != None else 65000 
             dp = ev[4] if ev[4] != None else 65000
             signature = ev[5]
-            # Simply respect the source,dst format! (Correction: source is always source and dest alwyas dest!)
+            # Simply respect the source,dst format! (Correction: source is always source and dest always dest!)
             
             source, dest, port = -1, -1, -1
             #print(s, d, sp, dp)
@@ -1879,61 +1917,79 @@ def aggregate_into_episodes(unparse, team_labels, step=150):
             #    continue
             #if attacker != ('corp-mail-00', 'corp-onramp-00'):
             #    continue
+
+            # Only consider attacker if he has more than 1 alert
             if len(alerts) <= 1:
                 #print('kill ', attacker)
                 continue
             
             #print(attacker, len([(x[1]) for x in alerts])) # TODO: what about IPs that are not attacker related?
-            first_elapsed_time = round((alerts[0][2]-startTimes[tid]).total_seconds(),2)
+
+            # Timestamp of first alert
+            first_elapsed_time = round((alerts[0][2]-startTimes[tid]).total_seconds(), 2)
+
             # debugging if start times of each connection are correct.
             #print(first_elapsed_time, round( (s_t[str(tid)+"|"+str(attacker[0])+"->"+str(attacker[1])] - startTimes[tid]).total_seconds(),2))
             #last_elapsed_time = round((alerts[-1][2] - alerts[0][2]).total_seconds() + first_elapsed_time,2)
             #print(first_elapsed_time, last_elapsed_time)
             
             _team_times['->'.join(attacker)] = (first_elapsed_time)#, last_elapsed_time)
+
+            # List of timestamps
             ts = [x[2] for x in alerts]
+
+            # Attributes of alerts
             rest = [(x[0], x[1], x[2], x[3], x[4]) for x in alerts]
 
             prev = -1
             DIFF = []
+
+            # Time elapsed between alerts (for previous alert)
             relative_elapsed_time = []
+
             for timeid, dt in enumerate(ts):
                 if timeid == 0:
-                    DIFF.append( 0.0)#round((dt - startTimes[tid]).total_seconds(),2) )
+                    DIFF.append(0.0)#round((dt - startTimes[tid]).total_seconds(),2) )
                 else:
-                    DIFF.append( round((dt - prev).total_seconds(),2) )
+                    DIFF.append(round((dt - prev).total_seconds(), 2))
                 prev = dt
+
             #print(DIFF[:5])
             assert(len(ts) == len(DIFF))
             elapsed_time = list(accumulate(DIFF))
-            relative_elapsed_time = [round(x+first_elapsed_time,2) for x in elapsed_time]
+            relative_elapsed_time = [round(x+first_elapsed_time, 2) for x in elapsed_time]
             
             
             assert(len(elapsed_time) == len(DIFF))
 
             t0 = int(first_elapsed_time)#int(relative_elapsed_time[0])
+
+            # Time elapsed over sequence of alerts
             tn = int(relative_elapsed_time[-1])
             
             #step = 150 # 2.5 minute fixed step. Can be reduced or increased depending on required granularity
 
             h_ep = []
             #mindatas = []
+            # mcat is attack stage
             for mcat in mcats:
-                
+
+                # Get all alerts per 'step' seconds for specific attack stage
                 mindata = []
                 for i in range(t0, tn, step):
-                    li = [a for d,a in zip(relative_elapsed_time, rest) if (d>=i and d<(i+step)) and a[1] == mcat]  
+                    # Rest is attributes of alerts without ts
+                    li = [a for d,a in zip(relative_elapsed_time, rest) if (d>=i and d<(i+step)) and a[1] == mcat]
                     mindata.append(li) # alerts per 'step' seconds
 
                 #print([len(x) for x in mindata])
                 episodes = []
                 
-                
+                # Get episodes for attack stage
                 episodes = getepisodes(mindata, micro[mcat], False)
 
                 if len(episodes) > 0:
                     
-                    events  = [len(x) for x in mindata]
+                    events = [len(x) for x in mindata]
                     raw_ports = []
                     raw_sign = []
                     timestamps = []
@@ -2015,10 +2071,10 @@ def host_episode_sequences(team_episodes):
         print(tid, sep=' ', end=' ', flush=True )
         #print(len(set([x[0] for x in team.keys()])))
         for attacker,episodes in team.items():
-            #print(attacker)
+            # print(attacker)
             if len(episodes) < 2:
                 continue
-            perp= attacker[0]
+            perp = attacker[0]
             vic = attacker[1]
             #print(perp)
             #if ('10.0.0' in perp or '10.0.1' in perp):
@@ -2177,7 +2233,7 @@ def flexfringe(*args, **kwargs):
     for key in kwargs:
       command += ["--" + key + "=" + kwargs[key]]
 
-  result = subprocess.run(["FlexFringe/flexfringe",] + command + [args[0]], stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
+  result = subprocess.run(["../FlexFringe/cmake-build-debug/flexfringe.exe",] + command + [args[0]], stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
   print(result.returncode, result.stdout, result.stderr)
 
   
@@ -2202,7 +2258,7 @@ def loadmodel(modelfile):
   # in the labels, we are removing them from the label fields
   with open(modelfile) as fh:
     data = fh.read()
-  data = re.sub( r'\"label\" : \"([^\n|]*)\n([^\n]*)\"', r'"label" : "\1 \2"', data )
+  data = re.sub( r'\"label\": \"([^\n|]*)\n([^\n]*)\"', r'"label": "\1 \2"', data )
   
   data = data.replace('\n', '').replace(',,', ',')#.replace(', ,', ',')#.replace('\t', ' ')
 
@@ -2234,35 +2290,41 @@ def traverse(dfa, sinks, sequence, statelist=False):
   sev_sinks = set()
   state = "0"
   stlst = ["0"]
-  #print('This seq', sequence.split(" "))
+  print('This seq', sequence.split(" "))
   for event in sequence.split(" "):
       sym = event.split(":")[0]
       
-      #print('curr symbol ', sym, 'state no.', dfa[state][sym]) 
+      print('curr symbol ', sym, 'state no.', dfa[state][sym])
       
       state = dfa[state][sym]
       isred = 0
       
       if state != "":
          isred = dfa[state[0]]["isred"]
-      #print(state)
-      #if state != "":
-      #if isred == 1:
+      print(state)
+      # if state != "":
+      # if isred == 1:
       #      in_main_model.add(state[0])
       if state == "":
           # return -1 for low sev symbols
           sev = rev_smallmapping[sym.split('|')[0]]
-          #print(sev)
+          print(sev)
+
+          # Take length of severity as #digits corresponds to severity (1=low, 2=med, 3=high)
           if len(str(sev)) >= 2:
-                #print('high-sev sink found', sev)
-                #print(stlst[-1], sinks[stlst[-1]], stlst)
+                print('high-sev sink found', sev)
+                print(stlst[-1], sinks[stlst[-1]], stlst)
                 try:
+                    # test = sinks[stlst[-1]]
                     state = sinks[stlst[-1]][sym][0]
                     sev_sinks.add(state)
-                except:
-                    #print('didnt work for', sequence, 'done so far:', stlst)
+                except Exception as e:
+                    print(e)
+                    print('didnt work for', sequence, 'done so far:', stlst)
                     state = '-1'
           else:
+
+              print("low sev state -> -1")
               state = '-1'
           #print("Must look in sinks")
           #print('prev symb: ', sym, 'and prev state no.', stlst[-1])
@@ -2342,11 +2404,12 @@ def encode_sequences(m, m2):
     print('Traces in sinks: ', num_sink, 'Total traces: ', total, 'Percentage: ',100*(num_sink/float(total)))
     return (traces, state_traces)    
 
+
 def find_severe_states(traces, m, m2):
     med_states = set()
     sev_states = set()
     sev_sinks = set()
-    for i,sample in enumerate(traces):    
+    for i, sample in enumerate(traces):
         r, s, sevsinks = traverse(m, m2, sample, statelist=True)
         sev_sinks.update(sevsinks)
         s = s[1:]
@@ -2632,24 +2695,20 @@ def make_AG(condensed_v_data, condensed_data, state_groups, sev_sinks, datafile,
             print("Can't create directory here")
         else:
             print("Successfully created directory for AGs")
-    
-    
-    
-    
 
     shapes = ['oval', 'oval', 'oval', 'box', 'box', 'box', 'box', 'hexagon', 'hexagon', 'hexagon', 'hexagon', 'hexagon']
-    in_main_model = [[episode[3] for episode in sequence] for sequence in condensed_data.values()] # all IDs in the main model (including high-sev sinks)
+    in_main_model = [[episode[3] for episode in sequence] for sequence in condensed_data.values()]  # all IDs in the main model (including high-sev sinks)
     in_main_model = set([item for sublist in in_main_model for item in sublist])
     
     ser_total = dict()
     simple = dict()
     total_victims = set([x.split('-')[1] for x in list(condensed_v_data.keys())]) # collect all victim IPs
     
-    OBJ_ONLY = False # Experiment 1: mas+service or only mas?
+    OBJ_ONLY = False    # Experiment 1: mas+service or only mas?
     attacks = set()
-    for episodes in condensed_data.values(): # iterate over all episodes and collect the objective nodes.
-        for ep in episodes: # iterate over every episode
-            if len(str(ep[2])) == 3: # If high-seveity, then include it
+    for episodes in condensed_data.values():    # iterate over all episodes and collect the objective nodes.
+        for ep in episodes:     # iterate over every episode
+            if len(str(ep[2])) == 3:    # If high-severity, then include it
                 cat = micro[ep[2]].split('.')[1]
                 vert_name = None
                 if OBJ_ONLY:
@@ -2658,20 +2717,20 @@ def make_AG(condensed_v_data, condensed_data, state_groups, sev_sinks, datafile,
                     vert_name = cat+'|'+ep[4] # cat + service
                 attacks.add(vert_name)
     attacks = list(attacks)
-        
+
     for int_victim in total_victims:  # iterate over every victim
-        print('\n!!! Rendering AGs for Victim ', int_victim,'\n',  sep=' ', end=' ', flush=True)
+        print('\n!!! Rendering AGs for Victim ', int_victim, '\n',  sep=' ', end=' ', flush=True)
         for attack in attacks: # iterate over every attack
-            print('\t!!!! Objective ', attack,'\n',  sep=' ', end=' ', flush=True)
+            print('\t!!!! Objective ', attack, '\n',  sep=' ', end=' ', flush=True)
             collect = dict()
             
             team_level = dict()
             observed_obj = set() # variants of current objective
             nodes = {}
             vertices, edges = 0, 0
-            for att,episodes in condensed_data.items(): # iterate over (a,v): [episode, episode, episode]
-                if int_victim not in att: # if it's not the right victim, then don't process further
-                    continue  
+            for att, episodes in condensed_data.items(): # iterate over (a,v): [episode, episode, episode]
+                if int_victim != att.split(">")[1]: # if it's not the right victim, then don't process further
+                    continue
                 vname_time = []
                 for ep in episodes:
                     start_time = round(ep[0]/1.0)
@@ -2738,23 +2797,23 @@ def make_AG(condensed_v_data, condensed_data, state_groups, sev_sinks, datafile,
                 else:
                     lines.append((0,'"'+translate(obj)+'" [style=filled, fillcolor= salmon]'))
             
-            samerank = '{ rank=same; "'+ '" "'.join([translate(x) for x in observed_obj]) # all obj variants have the same rank
+            samerank = '{ rank=same; "'+ '" "'.join([translate(x) for x in observed_obj])   # all obj variants have the same rank
             samerank += '"}'
             lines.append((0,samerank))
 
 
             already_addressed = set()
-            for attackerID,attempts in team_level.items(): # for every attacker that obtains this objective
+            for attackerID, attempts in team_level.items():     # for every attacker that obtains this objective
                 color = tcols[attackerID.split('-')[0]] # team color
                 ones = [''.join([action[0] for action in attempt]) for attempt in attempts]
                 unique = len(set(ones)) # count exactly unique attempts
-                #print(unique)
-                #print('team', attackerID, 'total paths', len(attempts), 'unique paths', unique, 'longest path:', max([len(x) for x in attempts]), \
+                # print(unique)
+                # print('team', attackerID, 'total paths', len(attempts), 'unique paths', unique, 'longest path:', max([len(x) for x in attempts]), \
                 #     'shortest path:', min([len(x) for x in attempts]))
                 
-                #path_info[attack][attackerID].append((len(attempts), unique, max([len(x) for x in attempts]), min([len(x) for x in attempts])))
+                # path_info[attack][attackerID].append((len(attempts), unique, max([len(x) for x in attempts]), min([len(x) for x in attempts])))
                 
-                for attempt in attempts: # iterate over each attempt
+                for attempt in attempts:    # iterate over each attempt
                     # record all nodes
                     for action in attempt:
                         if action[0] not in nodes.keys():
@@ -2816,7 +2875,7 @@ def make_AG(condensed_v_data, condensed_data, state_groups, sev_sinks, datafile,
                     lines.append((0,'"'+translate(vname)+'" [shape='+shape+']'))
                 else:
                     sinkflag = False
-                    for sink in sev_sinks:    
+                    for sink in sev_sinks:
                         if vname.endswith(sink):
                             sinkflag = True
                             break
@@ -2872,12 +2931,12 @@ folder = sys.argv[1]
 expname = sys.argv[2]
 t = float(sys.argv[3])
 w = int(sys.argv[4])
-_s_,_e_ = 0, 100
+_s_, _e_ = 0, 100
 if len(sys.argv) > 5:
     #range_ = str(sys.argv[5])
     try:
         #range_ = range_.replace('(', '').replace(')', '').split(',')
-        _s_ = float(sys.argv[5])#int(range_[0])
+        _s_ = float(sys.argv[5])    # int(range_[0])
         _e_ = float(sys.argv[6])#int(range_[1])
         print('Filtering alerts. Only parsing from %d-th to %d-th hour (relative to the start of the alert capture)'%(_s_,_e_))
     except:
@@ -2888,7 +2947,7 @@ startTimes = [] # We cheat a bit: In case user filters to only see alerts from (
 #                    we record the first alert just to get the real time-elapsed since first alert
     
 outaddress = ""
-path_to_ini = "FlexFringe/ini/spdfa-config.ini"
+path_to_ini = "../FlexFringe/ini/spdfa-config.ini"
 
 modelname = expname+'.txt'#'test-trace-uni-serGroup.txt'
 datafile = expname+'.txt'#'trace-uni-serGroup.txt'
@@ -2898,13 +2957,20 @@ path_to_traces = datafile
 port_services = load_IANA_mapping()
 
 print('----- Reading alerts ----------')
-(unparse, team_labels) = load_data(folder, t) # t = minimal window for alert filtering
+(unparse, team_labels) = load_data(folder, t)   # t = minimal window for alert filtering
 plt = plot_histogram(unparse, team_labels)
 plt.savefig('data_histogram-'+expname+'.png')
+
+
 print('------ Converting to episodes ---------')
-team_episodes,_ = aggregate_into_episodes(unparse, team_labels, step=w) # step = w
+# Alerts to episodes -> based on sIP and dIP (shows unique interaction between attacker/victim)
+team_episodes, _ = aggregate_into_episodes(unparse, team_labels, step=w)    # step = w
+
 print('\n---- Converting to episode sequences -----------')
-host_data  =  host_episode_sequences(team_episodes)
+# Episode sequence based on host instead of team
+host_data = host_episode_sequences(team_episodes)
+
+
 print('----- breaking into sub-sequences and making traces----------')
 (alerts, keys) = break_into_subbehaviors(host_data)
 generate_traces(alerts, keys, datafile)
@@ -2953,7 +3019,7 @@ if extracommas is not None:
 print('------ Loading and traversing SPDFA ---------')
 # Load S-PDFA
 m, data = loadmodel(path_to_model+".ff.final.json")
-m2,data2 = loadmodel(path_to_model+".ff.finalsinks.json")
+m2, data2 = loadmodel(path_to_model+".ff.finalsinks.json")
 
 print('------- Encoding into state sequences --------')
 # Encoding traces into state sequences  
@@ -2981,4 +3047,4 @@ if DOCKER:
     os.system("rm "+"spdfa-clustered-"+datafile+"-dfa.dot")
 
 print('\n------- FIN -------')
-## ----- main END ------  
+# ----- main END ------

@@ -1,0 +1,111 @@
+digraph DATAEXFILTRATIONmicrosoftds {
+rankdir="BT"; 
+ graph [ nodesep="0.1", ranksep="0.02"] 
+ node [ fontname=Arial, fontsize=24,penwidth=3]; 
+ edge [ fontname=Arial, fontsize=20,penwidth=5 ];
+"Victim: 10.0.0.223
+DATA EXFILTRATION
+microsoft-ds" [shape=doubleoctagon, style=filled, fillcolor=salmon];
+{ rank = max; "Victim: 10.0.0.223
+DATA EXFILTRATION
+microsoft-ds"}
+"DATA EXFILTRATION
+microsoft-ds | ID: 37" -> "Victim: 10.0.0.223
+DATA EXFILTRATION
+microsoft-ds"
+"DATA EXFILTRATION
+microsoft-ds | ID: 37" [style=filled, fillcolor= salmon]
+{ rank=same; "DATA EXFILTRATION
+microsoft-ds | ID: 37"}
+"HOST DISCOVERY
+ms-wbt-server" [style=filled, fillcolor= yellow]
+"HOST DISCOVERY
+ms-wbt-server" -> "VULNERABILTY DISCOVERY
+ncube-lm" [ color=darkgreen] [label=<<font color="darkgreen"> start_next: 04/11/17, 13:32:40<br/>gap: 215sec<br/>end_prev: 04/11/17, 13:29:05</font><br/><font color="darkgreen"><b>Attacker: 10.0.254.35</b></font>>]
+"VULNERABILTY DISCOVERY
+ncube-lm" -> "SERVICE DISCOVERY
+cm" [ label="start_next: 04/11/17, 13:38:04
+gap: 256sec
+end_prev: 04/11/17, 13:33:48"][ fontcolor="darkgreen" color=darkgreen]
+"SERVICE DISCOVERY
+cm" -> "COMMAND AND CONTROL
+unknown | ID: 39" [ label="start_next: 04/11/17, 13:39:05
+gap: 60sec
+end_prev: 04/11/17, 13:38:04"][ fontcolor="darkgreen" color=darkgreen]
+"COMMAND AND CONTROL
+unknown | ID: 39" -> "NETWORK DoS
+ms-wbt-server | ID: 36" [ label="start_next: 04/11/17, 13:42:17
+gap: 192sec
+end_prev: 04/11/17, 13:39:05"][ fontcolor="darkgreen" color=darkgreen]
+"NETWORK DoS
+ms-wbt-server | ID: 36" -> "SERVICE DISCOVERY
+unknown" [ label="start_next: 04/11/17, 13:49:00
+gap: 403sec
+end_prev: 04/11/17, 13:42:17"][ fontcolor="darkgreen" color=darkgreen]
+"SERVICE DISCOVERY
+unknown" -> "COMMAND AND CONTROL
+unknown | ID: 308" [ label="start_next: 04/11/17, 13:54:51
+gap: 352sec
+end_prev: 04/11/17, 13:49:00"][ fontcolor="darkgreen" color=darkgreen]
+"COMMAND AND CONTROL
+unknown | ID: 308" -> "DATA EXFILTRATION
+microsoft-ds | ID: 37" [ label="start_next: 04/11/17, 14:50:43
+gap: 3351sec
+end_prev: 04/11/17, 13:54:51"][ fontcolor="darkgreen" color=darkgreen]
+"VULNERABILTY DISCOVERY
+ms-sql-s" [style=filled, fillcolor= yellow]
+"VULNERABILTY DISCOVERY
+ms-sql-s" -> "SERVICE DISCOVERY
+ff-ice" [ color=turquoise] [label=<<font color="turquoise"> start_next: 04/11/17, 17:38:56<br/>gap: -31sec<br/>end_prev: 04/11/17, 17:39:27</font><br/><font color="turquoise"><b>Attacker: 10.0.254.31</b></font>>]
+"SERVICE DISCOVERY
+ff-ice" -> "DATA EXFILTRATION
+microsoft-ds | ID: 37" [ label="start_next: 04/11/17, 22:04:35
+gap: 15939sec
+end_prev: 04/11/17, 17:38:56"][ fontcolor="turquoise" color=turquoise]
+"HOST DISCOVERY
+ms-wbt-server" [shape=oval]
+"HOST DISCOVERY
+ms-wbt-server" [tooltip="ET SCAN Behavioral Unusually fast Terminal Server Traffic Potential Scan or Infection (Inbound)"]
+"VULNERABILTY DISCOVERY
+ncube-lm" [shape=oval]
+"VULNERABILTY DISCOVERY
+ncube-lm" [tooltip="ET POLICY Suspicious inbound to Oracle SQL port 1521
+ET POLICY Suspicious inbound to PostgreSQL port 5432"]
+"SERVICE DISCOVERY
+cm" [shape=oval]
+"SERVICE DISCOVERY
+cm" [tooltip="ET SCAN Potential VNC Scan 5900-5920"]
+"COMMAND AND CONTROL
+unknown | ID: 39" [shape=box]
+"COMMAND AND CONTROL
+unknown | ID: 39" [tooltip="ET POLICY RDP connection confirm"]
+"NETWORK DoS
+ms-wbt-server | ID: 36" [shape=hexagon]
+"NETWORK DoS
+ms-wbt-server | ID: 36" [tooltip="ET DOS Microsoft Remote Desktop (RDP) Syn then Reset 30 Second DoS Attempt"]
+"SERVICE DISCOVERY
+unknown" [shape=oval]
+"SERVICE DISCOVERY
+unknown" [tooltip="ET SCAN Potential VNC Scan 5800-5820"]
+"COMMAND AND CONTROL
+unknown | ID: 308" [shape=box]
+"COMMAND AND CONTROL
+unknown | ID: 308" [tooltip="ET POLICY RDP connection confirm"]
+"DATA EXFILTRATION
+microsoft-ds | ID: 37" [shape=hexagon]
+"DATA EXFILTRATION
+microsoft-ds | ID: 37" [tooltip="GPL NETBIOS SMB-DS IPC$ share access
+GPL NETBIOS SMB-DS ADMIN$ share access"]
+"VULNERABILTY DISCOVERY
+ms-sql-s" [shape=oval]
+"VULNERABILTY DISCOVERY
+ms-sql-s" [tooltip="ET POLICY Suspicious inbound to MSSQL port 1433
+ET POLICY Suspicious inbound to mySQL port 3306
+ET POLICY Suspicious inbound to Oracle SQL port 1521
+ET POLICY Suspicious inbound to PostgreSQL port 5432"]
+"SERVICE DISCOVERY
+ff-ice" [shape=oval]
+"SERVICE DISCOVERY
+ff-ice" [tooltip="ET SCAN Potential VNC Scan 5800-5820
+ET SCAN Potential VNC Scan 5900-5920"]
+}

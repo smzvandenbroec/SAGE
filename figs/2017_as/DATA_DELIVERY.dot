@@ -1,0 +1,1100 @@
+digraph "" {
+	"Victim: 10.0.0.100
+DATA DELIVERY
+wsman"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+wsman | ID: 61"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"GPL WEB_SERVER perl post attempt\""];
+	"DATA DELIVERY
+wsman | ID: 61" -> "Victim: 10.0.0.100
+DATA DELIVERY
+wsman"	[key=0,
+		data="{}"];
+	"ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 309"	[fillcolor=yellow,
+		shape=box,
+		style=filled,
+		tooltip="\"GPL NETBIOS SMB-DS Session Setup NTMLSSP unicode asn1 overflow attempt\""];
+	"DATA DELIVERY
+wsman | ID: 61" -> "ARBITRARY CODE EXECUTION
+microsoft-ds | ID: 309"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 17:01:48\ngap: 401sec\nend_prev: 04/11/17, 16:55:07\"'}"];
+	"DATA DELIVERY
+http | ID: 246"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"GPL WEB_SERVER perl post attempt\""];
+	"Victim: 10.0.0.101
+DATA DELIVERY
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+http | ID: 246" -> "Victim: 10.0.0.101
+DATA DELIVERY
+http"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.110
+DATA DELIVERY
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+http | ID: 246" -> "Victim: 10.0.0.110
+DATA DELIVERY
+http"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.150
+DATA DELIVERY
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+http | ID: 246" -> "Victim: 10.0.0.150
+DATA DELIVERY
+http"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.202
+DATA DELIVERY
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+http | ID: 246" -> "Victim: 10.0.0.202
+DATA DELIVERY
+http"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.27
+DATA DELIVERY
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+http | ID: 246" -> "Victim: 10.0.0.27
+DATA DELIVERY
+http"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.77
+DATA DELIVERY
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+http | ID: 246" -> "Victim: 10.0.0.77
+DATA DELIVERY
+http"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.80
+DATA DELIVERY
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+http | ID: 246" -> "Victim: 10.0.0.80
+DATA DELIVERY
+http"	[key=0,
+		data="{}"];
+	"Victim: 10.0.99.102
+DATA DELIVERY
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+http | ID: 246" -> "Victim: 10.0.99.102
+DATA DELIVERY
+http"	[key=0,
+		data="{}"];
+	"Victim: 10.0.99.225
+DATA DELIVERY
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+http | ID: 246" -> "Victim: 10.0.99.225
+DATA DELIVERY
+http"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.167
+DATA DELIVERY
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+http | ID: 246" -> "Victim: 10.0.0.167
+DATA DELIVERY
+http"	[key=0,
+		data="{}"];
+	"Victim: 10.0.99.50
+DATA DELIVERY
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+http | ID: 246" -> "Victim: 10.0.99.50
+DATA DELIVERY
+http"	[key=0,
+		data="{}"];
+	"DATA EXFILTRATION
+http | ID: 26"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability\""];
+	"DATA DELIVERY
+http | ID: 246" -> "DATA EXFILTRATION
+http | ID: 26"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 19:00:50\ngap: 12sec\nend_prev: 04/11/17, 19:00:38\"'}"];
+	"DATA DELIVERY
+http | ID: 246" -> "DATA EXFILTRATION
+http | ID: 26"	[key=1,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:04:50\ngap: 4sec\nend_prev: 04/11/17, 18:04:46\"'}"];
+	"DATA DELIVERY
+http | ID: 246" -> "DATA EXFILTRATION
+http | ID: 26"	[key=2,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:04:44\ngap: 3sec\nend_prev: 04/11/17, 18:04:41\"'}"];
+	"DATA DELIVERY
+wsman | ID: 399"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"GPL WEB_SERVER perl post attempt\""];
+	"Victim: 10.0.0.221
+DATA DELIVERY
+wsman"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+wsman | ID: 399" -> "Victim: 10.0.0.221
+DATA DELIVERY
+wsman"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.222
+DATA DELIVERY
+wsman"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+wsman | ID: 399" -> "Victim: 10.0.0.222
+DATA DELIVERY
+wsman"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.223
+DATA DELIVERY
+wsman"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+wsman | ID: 399" -> "Victim: 10.0.0.223
+DATA DELIVERY
+wsman"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.224
+DATA DELIVERY
+wsman"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+wsman | ID: 399" -> "Victim: 10.0.0.224
+DATA DELIVERY
+wsman"	[key=0,
+		data="{}"];
+	"DATA EXFILTRATION
+wsman | ID: 63"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability\""];
+	"DATA DELIVERY
+wsman | ID: 399" -> "DATA EXFILTRATION
+wsman | ID: 63"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:06:54\ngap: 3sec\nend_prev: 04/11/17, 14:06:51\"'}"];
+	"DATA DELIVERY
+wsman | ID: 399" -> "DATA EXFILTRATION
+wsman | ID: 63"	[key=1,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:35:06\ngap: 3sec\nend_prev: 04/11/17, 16:35:02\"'}"];
+	"DATA DELIVERY
+wsman | ID: 399" -> "DATA EXFILTRATION
+wsman | ID: 63"	[key=2,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:06:48\ngap: 11sec\nend_prev: 04/11/17, 18:06:36\"'}"];
+	"DATA DELIVERY
+vrml-multi-use | ID: 416"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SERVER PHP Possible php Remote File Inclusion Attempt
+ET WEB_SERVER PHP tags in HTTP POST
+GPL WEB_SERVER perl post attempt\""];
+	"Victim: 10.0.99.143
+DATA DELIVERY
+vrml-multi-use"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+vrml-multi-use | ID: 416" -> "Victim: 10.0.99.143
+DATA DELIVERY
+vrml-multi-use"	[key=0,
+		data="{}"];
+	"DATA EXFILTRATION
+vrml-multi-use | ID: 76"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability\""];
+	"DATA DELIVERY
+vrml-multi-use | ID: 416" -> "DATA EXFILTRATION
+vrml-multi-use | ID: 76"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:11:35\ngap: -1sec\nend_prev: 04/11/17, 14:11:36\"'}"];
+	"DATA DELIVERY
+vrml-multi-use | ID: 416" -> "DATA EXFILTRATION
+vrml-multi-use | ID: 76"	[key=1,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:34:48\ngap: -1sec\nend_prev: 04/11/17, 16:34:49\"'}"];
+	"DATA DELIVERY
+vrml-multi-use | ID: 416" -> "DATA EXFILTRATION
+vrml-multi-use | ID: 76"	[key=2,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:07:15\ngap: -1sec\nend_prev: 04/11/17, 18:07:16\"'}"];
+	"DATA DELIVERY
+vrml-multi-use | ID: 416" -> "DATA EXFILTRATION
+vrml-multi-use | ID: 76"	[key=3,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 19:01:24\ngap: -1sec\nend_prev: 04/11/17, 19:01:25\"'}"];
+	"DATA DELIVERY
+vrml-multi-use | ID: 416" -> "DATA EXFILTRATION
+vrml-multi-use | ID: 76"	[key=4,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 21:00:21\ngap: -292sec\nend_prev: 04/11/17, 21:05:13\"'}"];
+	"DATA DELIVERY
+unknown | ID: 935"	[fillcolor=salmon,
+		shape=hexagon,
+		style=dotted,
+		tooltip="\"ET WEB_SERVER PHP tags in HTTP POST
+GPL WEB_SERVER perl post attempt\""];
+	"Victim: 10.0.99.245
+DATA DELIVERY
+unknown"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+unknown | ID: 935" -> "Victim: 10.0.99.245
+DATA DELIVERY
+unknown"	[key=0,
+		data="{}"];
+	"DATA EXFILTRATION
+unknown | ID: 383"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability\""];
+	"DATA DELIVERY
+unknown | ID: 935" -> "DATA EXFILTRATION
+unknown | ID: 383"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:32:38\ngap: 0sec\nend_prev: 04/11/17, 16:32:38\"'}"];
+	"DATA DELIVERY
+http | ID: 21"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"GPL WEB_SERVER perl post attempt\""];
+	"DATA DELIVERY
+http | ID: 21" -> "Victim: 10.0.0.101
+DATA DELIVERY
+http"	[key=0,
+		data="{}"];
+	"DATA DELIVERY
+http | ID: 21" -> "Victim: 10.0.0.110
+DATA DELIVERY
+http"	[key=0,
+		data="{}"];
+	"DATA DELIVERY
+http | ID: 21" -> "Victim: 10.0.0.150
+DATA DELIVERY
+http"	[key=0,
+		data="{}"];
+	"DATA DELIVERY
+http | ID: 21" -> "Victim: 10.0.0.202
+DATA DELIVERY
+http"	[key=0,
+		data="{}"];
+	"DATA DELIVERY
+http | ID: 21" -> "Victim: 10.0.0.27
+DATA DELIVERY
+http"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.35
+DATA DELIVERY
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+http | ID: 21" -> "Victim: 10.0.0.35
+DATA DELIVERY
+http"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.47
+DATA DELIVERY
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+http | ID: 21" -> "Victim: 10.0.0.47
+DATA DELIVERY
+http"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.56
+DATA DELIVERY
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+http | ID: 21" -> "Victim: 10.0.0.56
+DATA DELIVERY
+http"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.71
+DATA DELIVERY
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+http | ID: 21" -> "Victim: 10.0.0.71
+DATA DELIVERY
+http"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.72
+DATA DELIVERY
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+http | ID: 21" -> "Victim: 10.0.0.72
+DATA DELIVERY
+http"	[key=0,
+		data="{}"];
+	"DATA DELIVERY
+http | ID: 21" -> "Victim: 10.0.0.77
+DATA DELIVERY
+http"	[key=0,
+		data="{}"];
+	"DATA DELIVERY
+http | ID: 21" -> "Victim: 10.0.0.80
+DATA DELIVERY
+http"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.81
+DATA DELIVERY
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+http | ID: 21" -> "Victim: 10.0.0.81
+DATA DELIVERY
+http"	[key=0,
+		data="{}"];
+	"DATA DELIVERY
+http | ID: 21" -> "Victim: 10.0.99.102
+DATA DELIVERY
+http"	[key=0,
+		data="{}"];
+	"DATA DELIVERY
+http | ID: 21" -> "Victim: 10.0.99.225
+DATA DELIVERY
+http"	[key=0,
+		data="{}"];
+	"INFO DISCOVERY
+xdmcp"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"GPL RPC xdmcp info query\""];
+	"DATA DELIVERY
+http | ID: 21" -> "INFO DISCOVERY
+xdmcp"	[key=0,
+		data="{'color': 'blue', 'label': '<font color=\"blue\"> start_next: 04/11/17, 16:29:49<br/>gap: 8773sec<br/>end_prev: 04/11/17, 14:03:36</\
+font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"VULNERABILTY DISCOVERY
+ahsp"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET POLICY Suspicious inbound to PostgreSQL port 5432
+ET POLICY Suspicious inbound to MSSQL port 1433
+ET POLICY Suspicious inbound \
+to Oracle SQL port 1521
+ET POLICY Suspicious inbound to mSQL port 4333\""];
+	"DATA DELIVERY
+http | ID: 21" -> "VULNERABILTY DISCOVERY
+ahsp"	[key=0,
+		data="{'color': 'blue', 'label': '<font color=\"blue\"> start_next: 04/11/17, 16:30:20<br/>gap: 8649sec<br/>end_prev: 04/11/17, 14:06:11</\
+font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"HOST DISCOVERY
+http"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Possible Nmap User-Agent Observed
+ET SCAN Nmap Scripting Engine User-Agent Detected (Nmap Scripting Engine)\""];
+	"DATA DELIVERY
+http | ID: 21" -> "HOST DISCOVERY
+http"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:46:22\ngap: 2305sec\nend_prev: 04/11/17, 14:07:56\"'}"];
+	"VULNERABILTY DISCOVERY
+ncube-lm"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET POLICY Suspicious inbound to mySQL port 3306
+ET POLICY Suspicious inbound to mSQL port 4333
+ET POLICY Suspicious inbound to \
+MSSQL port 1433
+ET POLICY Suspicious inbound to Oracle SQL port 1521
+ET SCAN Nessus User Agent
+ET POLICY Suspicious inbound to PostgreSQL \
+port 5432\""];
+	"DATA DELIVERY
+http | ID: 21" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		data="{'color': 'blue', 'label': '<font color=\"blue\"> start_next: 04/11/17, 17:59:05<br/>gap: 5153sec<br/>end_prev: 04/11/17, 16:33:11</\
+font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"SERVICE DISCOVERY
+ssh"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Potential SSH Scan
+ET SCAN Potential VNC Scan 5900-5920\""];
+	"DATA DELIVERY
+http | ID: 21" -> "SERVICE DISCOVERY
+ssh"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 20:55:54\ngap: 6551sec\nend_prev: 04/11/17, 19:06:43\"'}"];
+	"VULNERABILTY DISCOVERY
+mysql"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET POLICY Suspicious inbound to MSSQL port 1433
+ET POLICY Suspicious inbound to mySQL port 3306
+ET POLICY Suspicious inbound to \
+Oracle SQL port 1521
+ET POLICY Suspicious inbound to PostgreSQL port 5432\""];
+	"DATA DELIVERY
+http | ID: 21" -> "VULNERABILTY DISCOVERY
+mysql"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:27:57\ngap: 8560sec\nend_prev: 04/11/17, 14:05:17\"'}"];
+	"SURFING
+http"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET WEB_SERVER WEB-PHP phpinfo access\""];
+	"DATA DELIVERY
+http | ID: 21" -> "SURFING
+http"	[key=0,
+		data="{'color': 'purple', 'label': '<font color=\"purple\"> start_next: 04/11/17, 20:39:28<br/>gap: 849sec<br/>end_prev: 04/11/17, 20:25:\
+19</font><br/><font color=\"purple\"><b>Attacker: 10.0.254.32</b></font>'}"];
+	"DATA DELIVERY
+http | ID: 705"	[fillcolor=salmon,
+		shape=hexagon,
+		style=dotted,
+		tooltip="\"ET WEB_SERVER PHP tags in HTTP POST
+ET WEB_SERVER PHP Possible php Remote File Inclusion Attempt
+ET WEB_SERVER PHP Possible https \
+Local File Inclusion Attempt
+GPL WEB_SERVER perl post attempt\""];
+	"DATA DELIVERY
+http | ID: 705" -> "Victim: 10.0.0.35
+DATA DELIVERY
+http"	[key=0,
+		data="{}"];
+	"DATA DELIVERY
+http | ID: 705" -> "Victim: 10.0.0.71
+DATA DELIVERY
+http"	[key=0,
+		data="{}"];
+	"DATA EXFILTRATION
+http | ID: 247"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability
+ET WEB_SERVER Tilde in URI - potential .php~ source disclosure \
+vulnerability\""];
+	"DATA DELIVERY
+http | ID: 705" -> "DATA EXFILTRATION
+http | ID: 247"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:04:51\ngap: -53sec\nend_prev: 04/11/17, 18:05:44\"'}"];
+	"DATA DELIVERY
+unknown | ID: 388"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SERVER PHP Possible php Remote File Inclusion Attempt
+ET WEB_SERVER PHP tags in HTTP POST
+GPL WEB_SERVER perl post attempt\""];
+	"Victim: 10.0.0.22
+DATA DELIVERY
+unknown"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+unknown | ID: 388" -> "Victim: 10.0.0.22
+DATA DELIVERY
+unknown"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.77
+DATA DELIVERY
+unknown"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+unknown | ID: 388" -> "Victim: 10.0.0.77
+DATA DELIVERY
+unknown"	[key=0,
+		data="{}"];
+	"DATA DELIVERY
+unknown | ID: 388" -> "Victim: 10.0.99.245
+DATA DELIVERY
+unknown"	[key=0,
+		data="{}"];
+	"DATA EXFILTRATION
+unknown | ID: 57"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability\""];
+	"DATA DELIVERY
+unknown | ID: 388" -> "DATA EXFILTRATION
+unknown | ID: 57"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:04:55\ngap: -41sec\nend_prev: 04/11/17, 18:05:36\"'}"];
+	"DATA DELIVERY
+unknown | ID: 388" -> "DATA EXFILTRATION
+unknown | ID: 57"	[key=1,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 19:00:35\ngap: -35sec\nend_prev: 04/11/17, 19:01:10\"'}"];
+	"DATA DELIVERY
+unknown | ID: 56"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SERVER PHP Possible php Remote File Inclusion Attempt
+ET WEB_SERVER PHP tags in HTTP POST
+GPL WEB_SERVER perl post attempt\""];
+	"DATA DELIVERY
+unknown | ID: 56" -> "Victim: 10.0.0.22
+DATA DELIVERY
+unknown"	[key=0,
+		data="{}"];
+	"DATA DELIVERY
+unknown | ID: 56" -> "Victim: 10.0.99.245
+DATA DELIVERY
+unknown"	[key=0,
+		data="{}"];
+	"DATA DELIVERY
+unknown | ID: 56" -> "INFO DISCOVERY
+xdmcp"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:31:36\ngap: 8449sec\nend_prev: 04/11/17, 14:10:46\"'}"];
+	"DATA DELIVERY
+unknown | ID: 56" -> "VULNERABILTY DISCOVERY
+mysql"	[key=0,
+		data="{'color': 'blue', 'label': '<font color=\"blue\"> start_next: 04/11/17, 14:21:11<br/>gap: 967sec<br/>end_prev: 04/11/17, 14:05:04</\
+font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"Victim: 10.0.0.151
+DATA DELIVERY
+wap-wsp"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+wap-wsp | ID: 406"	[fillcolor=salmon,
+		shape=hexagon,
+		style=dotted,
+		tooltip="\"ET WEB_SERVER PHP tags in HTTP POST
+GPL WEB_SERVER perl post attempt\""];
+	"DATA DELIVERY
+wap-wsp | ID: 406" -> "Victim: 10.0.0.151
+DATA DELIVERY
+wap-wsp"	[key=0,
+		data="{}"];
+	"DATA EXFILTRATION
+wap-wsp | ID: 68"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability\""];
+	"DATA DELIVERY
+wap-wsp | ID: 406" -> "DATA EXFILTRATION
+wap-wsp | ID: 68"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:03:58\ngap: 0sec\nend_prev: 04/11/17, 14:03:58\"'}"];
+	"DATA DELIVERY
+wap-wsp | ID: 69"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"GPL WEB_SERVER perl post attempt\""];
+	"DATA DELIVERY
+wap-wsp | ID: 69" -> "Victim: 10.0.0.151
+DATA DELIVERY
+wap-wsp"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.153
+DATA DELIVERY
+remoteware-cl"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+remoteware-cl | ID: -1"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SERVER PHP Possible php Remote File Inclusion Attempt
+ET WEB_SERVER PHP tags in HTTP POST
+GPL WEB_SERVER perl post attempt\""];
+	"DATA DELIVERY
+remoteware-cl | ID: -1" -> "Victim: 10.0.0.153
+DATA DELIVERY
+remoteware-cl"	[key=0,
+		data="{}"];
+	"DATA EXFILTRATION
+remoteware-cl | ID: 67"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability\""];
+	"DATA DELIVERY
+remoteware-cl | ID: -1" -> "DATA EXFILTRATION
+remoteware-cl | ID: 67"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:16:16\ngap: -16sec\nend_prev: 04/11/17, 14:16:32\"'}"];
+	"DATA DELIVERY
+remoteware-cl | ID: -1" -> "DATA EXFILTRATION
+remoteware-cl | ID: 67"	[key=1,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:44:54\ngap: -16sec\nend_prev: 04/11/17, 16:45:09\"'}"];
+	"DATA DELIVERY
+remoteware-cl | ID: -1" -> "DATA EXFILTRATION
+remoteware-cl | ID: 67"	[key=2,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:15:57\ngap: -16sec\nend_prev: 04/11/17, 18:16:14\"'}"];
+	"DATA DELIVERY
+http-alt | ID: 242"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SERVER PHP Possible php Remote File Inclusion Attempt
+ET WEB_SERVER PHP tags in HTTP POST
+GPL WEB_SERVER perl post attempt\""];
+	"Victim: 10.0.99.44
+DATA DELIVERY
+http"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+http-alt | ID: 242" -> "Victim: 10.0.99.44
+DATA DELIVERY
+http"	[key=0,
+		data="{}"];
+	"Victim: 10.0.99.44
+DATA DELIVERY
+http-alt"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+http-alt | ID: 242" -> "Victim: 10.0.99.44
+DATA DELIVERY
+http-alt"	[key=0,
+		data="{}"];
+	"DATA EXFILTRATION
+http-alt | ID: 25"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability
+ET WEB_SERVER Possible MySQL SQLi Attempt Information Schema \
+Access\""];
+	"DATA DELIVERY
+http-alt | ID: 242" -> "DATA EXFILTRATION
+http-alt | ID: 25"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:10:45\ngap: -2sec\nend_prev: 04/11/17, 14:10:47\"'}"];
+	"DATA DELIVERY
+http-alt | ID: 242" -> "DATA EXFILTRATION
+http-alt | ID: 25"	[key=1,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 19:00:19\ngap: -1sec\nend_prev: 04/11/17, 19:00:21\"'}"];
+	"Victim: 10.0.0.162
+DATA DELIVERY
+distinct"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+distinct | ID: 70"	[fillcolor=yellow,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SERVER PHP Possible php Remote File Inclusion Attempt
+ET WEB_SERVER PHP tags in HTTP POST\""];
+	"DATA DELIVERY
+distinct | ID: 70" -> "Victim: 10.0.0.162
+DATA DELIVERY
+distinct"	[key=0,
+		data="{}"];
+	"DATA DELIVERY
+distinct | ID: 70" -> "VULNERABILTY DISCOVERY
+ahsp"	[key=0,
+		data="{'color': 'blue', 'label': '<font color=\"blue\"> start_next: 04/11/17, 16:29:22<br/>gap: 8642sec<br/>end_prev: 04/11/17, 14:05:20</\
+font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"DATA DELIVERY
+distinct | ID: 410"	[fillcolor=salmon,
+		shape=hexagon,
+		style=dotted,
+		tooltip="\"ET WEB_SERVER PHP Possible php Remote File Inclusion Attempt
+ET WEB_SERVER PHP tags in HTTP POST
+GPL WEB_SERVER perl post attempt\""];
+	"DATA DELIVERY
+distinct | ID: 410" -> "Victim: 10.0.0.162
+DATA DELIVERY
+distinct"	[key=0,
+		data="{}"];
+	"DATA EXFILTRATION
+distinct | ID: 71"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability\""];
+	"DATA DELIVERY
+distinct | ID: 410" -> "DATA EXFILTRATION
+distinct | ID: 71"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:33:32\ngap: -2sec\nend_prev: 04/11/17, 16:33:35\"'}"];
+	"Victim: 10.0.0.223
+DATA DELIVERY
+unknown"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+unknown | ID: 396"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"GPL WEB_SERVER perl post attempt\""];
+	"DATA DELIVERY
+unknown | ID: 396" -> "Victim: 10.0.0.223
+DATA DELIVERY
+unknown"	[key=0,
+		data="{}"];
+	"Victim: 10.0.0.224
+DATA DELIVERY
+unknown"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+unknown | ID: 396" -> "Victim: 10.0.0.224
+DATA DELIVERY
+unknown"	[key=0,
+		data="{}"];
+	"DATA DELIVERY
+unknown | ID: 396" -> "DATA EXFILTRATION
+wsman | ID: 63"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:06:55\ngap: 11sec\nend_prev: 04/11/17, 18:06:44\"'}"];
+	"DATA DELIVERY
+http | ID: 352"	[fillcolor=salmon,
+		shape=hexagon,
+		style=dotted,
+		tooltip="\"ET WEB_SERVER PHP Possible php Remote File Inclusion Attempt
+ET WEB_SERVER PHP tags in HTTP POST
+GPL WEB_SERVER perl post attempt
+\
+ET WEB_SERVER PHP Possible file Remote File Inclusion Attempt\""];
+	"DATA DELIVERY
+http | ID: 352" -> "Victim: 10.0.0.72
+DATA DELIVERY
+http"	[key=0,
+		data="{}"];
+	"NETWORK DoS
+http | ID: 50"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET SCAN Apache mod_deflate DoS via many multiple byte Range values\""];
+	"DATA DELIVERY
+http | ID: 352" -> "NETWORK DoS
+http | ID: 50"	[key=0,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 04/11/17, 22:11:13\ngap: -7sec\nend_prev: 04/11/17, 22:\
+11:20\"'}"];
+	"Victim: 10.0.99.21
+DATA DELIVERY
+unknown"	[fillcolor=salmon,
+		shape=doubleoctagon,
+		style=filled];
+	"DATA DELIVERY
+unknown | ID: 136"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET POLICY PE EXE or DLL Windows file download HTTP\""];
+	"DATA DELIVERY
+unknown | ID: 136" -> "Victim: 10.0.99.21
+DATA DELIVERY
+unknown"	[key=0,
+		data="{}"];
+	"SURFING
+remoteware-cl"	[shape=oval,
+		tooltip="\"ET WEB_SERVER WEB-PHP phpinfo access\""];
+	"SURFING
+remoteware-cl" -> "DATA DELIVERY
+remoteware-cl | ID: -1"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:14:48\ngap: 7sec\nend_prev: 04/11/17, 14:14:41\"'}"];
+	"SURFING
+remoteware-cl" -> "DATA DELIVERY
+remoteware-cl | ID: -1"	[key=1,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:43:31\ngap: 7sec\nend_prev: 04/11/17, 16:43:24\"'}"];
+	"SURFING
+remoteware-cl" -> "DATA DELIVERY
+remoteware-cl | ID: -1"	[key=2,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:14:36\ngap: 7sec\nend_prev: 04/11/17, 18:14:29\"'}"];
+	"INFO DISCOVERY
+xdmcp" -> "DATA DELIVERY
+http | ID: 246"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:12:05\ngap: 2sec\nend_prev: 04/11/17, 14:12:04\"'}"];
+	"INFO DISCOVERY
+xdmcp" -> "DATA DELIVERY
+vrml-multi-use | ID: 416"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '<font color=\"blue\"> start_next: 04/11/17, 21:00:04<br/>gap: -289sec<br/>end_prev: \
+04/11/17, 21:04:53</font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"INFO DISCOVERY
+xdmcp" -> "DATA DELIVERY
+unknown | ID: 935"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:32:34\ngap: 7sec\nend_prev: 04/11/17, 16:32:27\"'}"];
+	"SURFING
+vrml-multi-use"	[shape=oval,
+		tooltip="\"ET WEB_SERVER WEB-PHP phpinfo access\""];
+	"SURFING
+vrml-multi-use" -> "DATA DELIVERY
+vrml-multi-use | ID: 416"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:11:33\ngap: 1sec\nend_prev: 04/11/17, 14:11:32\"'}"];
+	"SURFING
+vrml-multi-use" -> "DATA DELIVERY
+vrml-multi-use | ID: 416"	[key=1,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:34:46\ngap: 3sec\nend_prev: 04/11/17, 16:34:43\"'}"];
+	"SURFING
+vrml-multi-use" -> "DATA DELIVERY
+vrml-multi-use | ID: 416"	[key=2,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:07:08\ngap: 1sec\nend_prev: 04/11/17, 18:07:07\"'}"];
+	"SURFING
+vrml-multi-use" -> "DATA DELIVERY
+vrml-multi-use | ID: 416"	[key=3,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 19:01:20\ngap: 1sec\nend_prev: 04/11/17, 19:01:18\"'}"];
+	"DATA EXFILTRATION
+distinct | ID: 409"	[fillcolor=salmon,
+		shape=hexagon,
+		style=dotted,
+		tooltip="\"ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability\""];
+	"DATA EXFILTRATION
+distinct | ID: 409" -> "DATA DELIVERY
+distinct | ID: 70"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:05:20\ngap: 0sec\nend_prev: 04/11/17, 14:05:20\"'}"];
+	"USER PRIVILEGE ESCALATION
+wsman | ID: 394"	[shape=box,
+		style=dotted,
+		tooltip="\"ET POLICY Outgoing Basic Auth Base64 HTTP Password detected unencrypted
+ET POLICY Incoming Basic Auth Base64 HTTP Password detected \
+unencrypted\""];
+	"USER PRIVILEGE ESCALATION
+wsman | ID: 394" -> "DATA DELIVERY
+wsman | ID: 61"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:55:07\ngap: 0sec\nend_prev: 04/11/17, 16:55:07\"'}"];
+	"USER PRIVILEGE ESCALATION
+wsman | ID: 394" -> "DATA DELIVERY
+wsman | ID: 61"	[key=1,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:36:05\ngap: 0sec\nend_prev: 04/11/17, 18:36:05\"'}"];
+	"SURFING
+http-alt"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET WEB_SERVER WEB-PHP phpinfo access\""];
+	"SURFING
+http-alt" -> "DATA DELIVERY
+http-alt | ID: 242"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:10:40\ngap: 1sec\nend_prev: 04/11/17, 14:10:39\"'}"];
+	"SURFING
+http-alt" -> "DATA DELIVERY
+http-alt | ID: 242"	[key=1,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 19:00:16\ngap: 0sec\nend_prev: 04/11/17, 19:00:15\"'}"];
+	"SURFING
+unknown"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET WEB_SERVER WEB-PHP phpinfo access\""];
+	"SURFING
+unknown" -> "DATA DELIVERY
+unknown | ID: 388"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:04:53\ngap: 1sec\nend_prev: 04/11/17, 18:04:51\"'}"];
+	"SURFING
+unknown" -> "DATA DELIVERY
+unknown | ID: 388"	[key=1,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 19:00:33\ngap: 1sec\nend_prev: 04/11/17, 19:00:32\"'}"];
+	"SURFING
+unknown" -> "DATA DELIVERY
+unknown | ID: 56"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:10:09\ngap: 1sec\nend_prev: 04/11/17, 14:10:08\"'}"];
+	"ACCOUNT MANIPULATION
+snmp | ID: 942"	[shape=box,
+		style=dotted,
+		tooltip="\"GPL SNMP private access udp
+GPL SNMP public access udp\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 942" -> "DATA DELIVERY
+unknown | ID: 388"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:32:24\ngap: 62sec\nend_prev: 04/11/17, 16:31:22\"'}"];
+	"DATA EXFILTRATION
+http | ID: 228"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability\""];
+	"DATA EXFILTRATION
+http | ID: 228" -> "DATA DELIVERY
+http | ID: 21"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 19:00:40\ngap: -1sec\nend_prev: 04/11/17, 19:00:41\"'}"];
+	"DATA EXFILTRATION
+http | ID: 228" -> "DATA DELIVERY
+http | ID: 21"	[key=1,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:31:43\ngap: -5sec\nend_prev: 04/11/17, 16:31:48\"'}"];
+	"HOST DISCOVERY
+http" -> "DATA DELIVERY
+http | ID: 21"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 04/11/17, 14:29:52\ngap: 3520sec\nend_prev: 04/11/17, 13:31:\
+12\"'}"];
+	"VULNERABILTY DISCOVERY
+http"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Nikto Web App Scan in Progress\""];
+	"VULNERABILTY DISCOVERY
+http" -> "DATA DELIVERY
+http | ID: 21"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 19:06:43\ngap: -86sec\nend_prev: 04/11/17, 19:08:09\"'}"];
+	"NETWORK DoS
+ssdp | ID: 231"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET DOS Possible SSDP Amplification Scan in Progress\""];
+	"NETWORK DoS
+ssdp | ID: 231" -> "DATA DELIVERY
+http | ID: 21"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 21:04:28\ngap: 108sec\nend_prev: 04/11/17, 21:02:41\"'}"];
+	"ACCOUNT MANIPULATION
+snmp | ID: 230"	[shape=box,
+		tooltip="\"GPL SNMP private access udp
+GPL SNMP public access udp\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 230" -> "DATA DELIVERY
+http | ID: 21"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:31:58\ngap: 35sec\nend_prev: 04/11/17, 16:31:23\"'}"];
+	"SURFING
+http" -> "DATA DELIVERY
+http | ID: 246"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:02:59\ngap: 1sec\nend_prev: 04/11/17, 18:02:57\"'}"];
+	"SURFING
+http" -> "DATA DELIVERY
+http | ID: 246"	[key=1,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:33:39\ngap: 0sec\nend_prev: 04/11/17, 16:33:38\"'}"];
+	"SURFING
+http" -> "DATA DELIVERY
+http | ID: 705"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:04:49\ngap: 1sec\nend_prev: 04/11/17, 18:04:48\"'}"];
+	"ACCOUNT MANIPULATION
+snmp | ID: 952"	[shape=box,
+		style=dotted,
+		tooltip="\"GPL SNMP private access udp
+GPL SNMP public access udp\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 952" -> "DATA DELIVERY
+unknown | ID: 396"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:06:44\ngap: 50sec\nend_prev: 04/11/17, 18:05:54\"'}"];
+	"ACCOUNT MANIPULATION
+snmp | ID: 53"	[shape=box,
+		tooltip="\"GPL SNMP private access udp
+GPL SNMP public access udp\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 53" -> "DATA DELIVERY
+http | ID: 246"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:33:00\ngap: 179sec\nend_prev: 04/11/17, 16:30:00\"'}"];
+	"ACCOUNT MANIPULATION
+snmp | ID: 53" -> "DATA DELIVERY
+http | ID: 246"	[key=1,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:33:31\ngap: 15sec\nend_prev: 04/11/17, 16:33:16\"'}"];
+	"ACCOUNT MANIPULATION
+snmp | ID: 53" -> "DATA DELIVERY
+http | ID: 246"	[key=2,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:04:41\ngap: 30sec\nend_prev: 04/11/17, 18:04:11\"'}"];
+	"ACCOUNT MANIPULATION
+snmp | ID: 53" -> "DATA DELIVERY
+wsman | ID: 399"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:06:51\ngap: 43sec\nend_prev: 04/11/17, 14:06:08\"'}"];
+	"ACCOUNT MANIPULATION
+snmp | ID: 53" -> "DATA DELIVERY
+wsman | ID: 399"	[key=1,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:35:02\ngap: 44sec\nend_prev: 04/11/17, 16:34:19\"'}"];
+	"INFO DISCOVERY
+http"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"GPL WEB_SERVER mod_gzip_status access\""];
+	"INFO DISCOVERY
+http" -> "DATA DELIVERY
+http | ID: 246"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:04:46\ngap: 2sec\nend_prev: 04/11/17, 18:04:44\"'}"];
+	"INFO DISCOVERY
+http" -> "DATA DELIVERY
+http | ID: 705"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 21:09:26\ngap: 70sec\nend_prev: 04/11/17, 21:08:16\"'}"];
+	"ARBITRARY CODE EXECUTION
+ssdp | ID: 703"	[shape=box,
+		tooltip="\"GPL MISC UPnP malformed advertisement\""];
+	"ARBITRARY CODE EXECUTION
+ssdp | ID: 703" -> "DATA DELIVERY
+http | ID: 246"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 19:00:38\ngap: 124sec\nend_prev: 04/11/17, 18:58:34\"'}"];
+	"ACCOUNT MANIPULATION
+snmp | ID: 965"	[shape=box,
+		style=dotted,
+		tooltip="\"GPL SNMP private access udp
+GPL SNMP public access udp\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 965" -> "DATA DELIVERY
+wap-wsp | ID: 406"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:03:49\ngap: 26sec\nend_prev: 04/11/17, 14:03:23\"'}"];
+	"DATA EXFILTRATION
+unknown | ID: 385"	[fillcolor=salmon,
+		shape=hexagon,
+		style=dotted,
+		tooltip="\"ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability
+ET WEB_SERVER Possible MySQL SQLi Attempt Information Schema \
+Access\""];
+	"DATA EXFILTRATION
+unknown | ID: 385" -> "DATA DELIVERY
+unknown | ID: 56"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:04:25\ngap: -94sec\nend_prev: 04/11/17, 14:05:58\"'}"];
+	"DATA EXFILTRATION
+http | ID: 876"	[fillcolor=salmon,
+		shape=hexagon,
+		style=dotted,
+		tooltip="\"ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability
+ET WEB_SERVER DD-WRT Information Disclosure Attempt
+ET CURRENT_\
+EVENTS Possible TLS HeartBleed Unencrypted Request Method 3 (Inbound to Common SSL Port)
+ET INFO WinHttp AutoProxy Request wpad.dat \
+Possible BadTunnel\""];
+	"DATA EXFILTRATION
+http | ID: 876" -> "DATA DELIVERY
+http | ID: 352"	[key=0,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 04/11/17, 22:10:48\ngap: -45sec\nend_prev: 04/11/17, 22:\
+11:33\"'}"];
+	"SURFING
+distinct"	[shape=oval,
+		tooltip="\"ET WEB_SERVER WEB-PHP phpinfo access\""];
+	"SURFING
+distinct" -> "DATA DELIVERY
+distinct | ID: 410"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:33:26\ngap: 2sec\nend_prev: 04/11/17, 16:33:24\"'}"];
+	"INFO DISCOVERY
+wsman"	[shape=oval,
+		tooltip="\"GPL WEB_SERVER globals.pl access\""];
+	"INFO DISCOVERY
+wsman" -> "DATA DELIVERY
+wsman | ID: 399"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:06:45\ngap: 7sec\nend_prev: 04/11/17, 14:06:38\"'}"];
+	"COMMAND AND CONTROL
+unknown | ID: 956"	[shape=box,
+		tooltip="\"ET POLICY RDP connection confirm\""];
+	"COMMAND AND CONTROL
+unknown | ID: 956" -> "DATA DELIVERY
+wsman | ID: 399"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:06:36\ngap: -36sec\nend_prev: 04/11/17, 18:07:13\"'}"];
+	"COMMAND AND CONTROL
+unknown | ID: 541"	[fillcolor=yellow,
+		shape=box,
+		style="dotted,filled",
+		tooltip="\"ET INFO Possible Windows executable sent when remote host claims to send a Text File\""];
+	"COMMAND AND CONTROL
+unknown | ID: 541" -> "DATA DELIVERY
+unknown | ID: 136"	[key=0,
+		data="{'color': 'turquoise', 'label': '<font color=\"turquoise\"> start_next: 04/11/17, 18:57:06<br/>gap: -65sec<br/>end_prev: 04/11/17, \
+18:58:11</font><br/><font color=\"turquoise\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"ACCOUNT MANIPULATION
+snmp | ID: 408"	[shape=box,
+		style=dotted,
+		tooltip="\"GPL SNMP private access udp
+GPL SNMP public access udp\""];
+	"ACCOUNT MANIPULATION
+snmp | ID: 408" -> "DATA DELIVERY
+wap-wsp | ID: 69"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:31:50\ngap: 22sec\nend_prev: 04/11/17, 16:31:28\"'}"];
+	"ACCOUNT MANIPULATION
+snmp | ID: 408" -> "DATA DELIVERY
+wap-wsp | ID: 69"	[key=1,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:03:14\ngap: 26sec\nend_prev: 04/11/17, 18:02:48\"'}"];
+}

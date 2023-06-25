@@ -1,0 +1,372 @@
+digraph DATADELIVERYhttp {
+rankdir="BT"; 
+ graph [ nodesep="0.1", ranksep="0.02"] 
+ node [ fontname=Arial, fontsize=24,penwidth=3]; 
+ edge [ fontname=Arial, fontsize=20,penwidth=5 ];
+"Victim: 10.0.0.101
+DATA DELIVERY
+http" [shape=doubleoctagon, style=filled, fillcolor=salmon];
+{ rank = max; "Victim: 10.0.0.101
+DATA DELIVERY
+http"}
+"DATA DELIVERY
+http | ID: 21" -> "Victim: 10.0.0.101
+DATA DELIVERY
+http"
+"DATA DELIVERY
+http | ID: 21" [style=filled, fillcolor= salmon]
+"DATA DELIVERY
+http | ID: 246" -> "Victim: 10.0.0.101
+DATA DELIVERY
+http"
+"DATA DELIVERY
+http | ID: 246" [style=filled, fillcolor= salmon]
+{ rank=same; "DATA DELIVERY
+http | ID: 21" "DATA DELIVERY
+http | ID: 246"}
+"VULNERABILTY DISCOVERY
+postgresql" [style=filled, fillcolor= yellow]
+"VULNERABILTY DISCOVERY
+postgresql" -> "SERVICE DISCOVERY
+ftp" [ color=blue] [label=<<font color="blue"> start_next: 04/11/17, 14:00:30<br/>gap: 3458sec<br/>end_prev: 04/11/17, 13:02:52</font><br/><font color="blue"><b>Attacker: 10.0.254.31</b></font>>]
+"SERVICE DISCOVERY
+ftp" -> "VULNERABILTY DISCOVERY
+postgresql" [ label="start_next: 04/11/17, 14:00:53
+gap: -322sec
+end_prev: 04/11/17, 14:06:14"][ fontcolor="blue" color=blue]
+"VULNERABILTY DISCOVERY
+postgresql" -> "ARBITRARY CODE EXECUTION
+epmap | ID: 64" [ label="start_next: 04/11/17, 14:03:08
+gap: 130sec
+end_prev: 04/11/17, 14:00:58"][ fontcolor="blue" color=blue]
+"ARBITRARY CODE EXECUTION
+epmap | ID: 64" -> "INFO DISCOVERY
+ftp" [ label="start_next: 04/11/17, 14:03:39
+gap: -127sec
+end_prev: 04/11/17, 14:05:47"][ fontcolor="blue" color=blue]
+"INFO DISCOVERY
+ftp" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: 299" [ label="start_next: 04/11/17, 14:03:39
+gap: -155sec
+end_prev: 04/11/17, 14:06:14"][ fontcolor="blue" color=blue]
+"REMOTE SERVICE EXPLOIT
+snmp | ID: 299" -> "NETWORK DoS
+ms-wbt-server | ID: 36" [ label="start_next: 04/11/17, 14:03:49
+gap: 10sec
+end_prev: 04/11/17, 14:03:39"][ fontcolor="blue" color=blue]
+"NETWORK DoS
+ms-wbt-server | ID: 36" -> "COMMAND AND CONTROL
+unknown | ID: 308" [ label="start_next: 04/11/17, 14:04:11
+gap: -48sec
+end_prev: 04/11/17, 14:04:59"][ fontcolor="blue" color=blue]
+"COMMAND AND CONTROL
+unknown | ID: 308" -> "ACCOUNT MANIPULATION
+snmp | ID: 53" [ label="start_next: 04/11/17, 14:04:20
+gap: -91sec
+end_prev: 04/11/17, 14:05:51"][ fontcolor="blue" color=blue]
+"ACCOUNT MANIPULATION
+snmp | ID: 53" -> "BRUTE FORCE CREDENTIALS
+unknown | ID: 1" [ label="start_next: 04/11/17, 14:04:39
+gap: -68sec
+end_prev: 04/11/17, 14:05:47"][ fontcolor="blue" color=blue]
+"BRUTE FORCE CREDENTIALS
+unknown | ID: 1" -> "HOST DISCOVERY
+ms-wbt-server" [ label="start_next: 04/11/17, 14:04:40
+gap: -7sec
+end_prev: 04/11/17, 14:04:47"][ fontcolor="blue" color=blue]
+"HOST DISCOVERY
+ms-wbt-server" -> "DATA EXFILTRATION
+http | ID: 228" [ label="start_next: 04/11/17, 14:05:28
+gap: 48sec
+end_prev: 04/11/17, 14:04:40"][ fontcolor="blue" color=blue]
+"DATA EXFILTRATION
+http | ID: 228" -> "DATA DELIVERY
+http | ID: 21" [ label="start_next: 04/11/17, 14:05:28
+gap: -5sec
+end_prev: 04/11/17, 14:05:34"][ fontcolor="blue" color=blue]
+"HOST DISCOVERY
+http" [style=filled, fillcolor= yellow]
+"HOST DISCOVERY
+http" -> "VULNERABILTY DISCOVERY
+http" [ color=blue] [label=<<font color="blue"> start_next: 04/11/17, 15:47:59<br/>gap: 0sec<br/>end_prev: 04/11/17, 15:47:59</font><br/><font color="blue"><b>Attacker: 10.0.254.31</b></font>>]
+"VULNERABILTY DISCOVERY
+http" -> "ARBITRARY CODE EXECUTION
+http | ID: 32" [ label="start_next: 04/11/17, 15:48:00
+gap: 0sec
+end_prev: 04/11/17, 15:48:00"][ fontcolor="blue" color=blue]
+"ARBITRARY CODE EXECUTION
+http | ID: 32" -> "VULNERABILTY DISCOVERY
+ncube-lm" [ label="start_next: 04/11/17, 15:53:52
+gap: 352sec
+end_prev: 04/11/17, 15:48:00"][ fontcolor="blue" color=blue]
+"VULNERABILTY DISCOVERY
+ncube-lm" -> "VULNERABILTY DISCOVERY
+ahsp" [ label="start_next: 04/11/17, 16:27:52
+gap: 2040sec
+end_prev: 04/11/17, 15:53:52"][ fontcolor="blue" color=blue]
+"VULNERABILTY DISCOVERY
+ahsp" -> "SERVICE DISCOVERY
+ftp" [ label="start_next: 04/11/17, 16:30:38
+gap: 21sec
+end_prev: 04/11/17, 16:30:18"][ fontcolor="blue" color=blue]
+"SERVICE DISCOVERY
+ftp" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: 52" [ label="start_next: 04/11/17, 16:32:26
+gap: -154sec
+end_prev: 04/11/17, 16:35:00"][ fontcolor="blue" color=blue]
+"REMOTE SERVICE EXPLOIT
+snmp | ID: 52" -> "BRUTE FORCE CREDENTIALS
+unknown | ID: 1362" [ label="start_next: 04/11/17, 16:33:05
+gap: 39sec
+end_prev: 04/11/17, 16:32:26"][ fontcolor="blue" color=blue]
+"BRUTE FORCE CREDENTIALS
+unknown | ID: 1362" -> "COMMAND AND CONTROL
+unknown | ID: 945" [ label="start_next: 04/11/17, 16:33:06
+gap: 1sec
+end_prev: 04/11/17, 16:33:05"][ fontcolor="blue" color=blue]
+"COMMAND AND CONTROL
+unknown | ID: 945" -> "ACCOUNT MANIPULATION
+snmp | ID: 391" [ label="start_next: 04/11/17, 16:33:16
+gap: -95sec
+end_prev: 04/11/17, 16:34:51"][ fontcolor="blue" color=blue]
+"ACCOUNT MANIPULATION
+snmp | ID: 391" -> "ROOT PRIVILEGE ESCALATION
+ms-wbt-server | ID: 58" [ label="start_next: 04/11/17, 16:33:16
+gap: -91sec
+end_prev: 04/11/17, 16:34:47"][ fontcolor="blue" color=blue]
+"ROOT PRIVILEGE ESCALATION
+ms-wbt-server | ID: 58" -> "SURFING
+http" [ label="start_next: 04/11/17, 16:33:57
+gap: 41sec
+end_prev: 04/11/17, 16:33:16"][ fontcolor="blue" color=blue]
+"SURFING
+http" -> "DATA DELIVERY
+http | ID: 246" [ label="start_next: 04/11/17, 16:34:00
+gap: 1sec
+end_prev: 04/11/17, 16:33:59"][ fontcolor="blue" color=blue]
+"DATA EXFILTRATION
+http | ID: 26" [style=filled, fillcolor= yellow]
+"DATA EXFILTRATION
+http | ID: 26" -> "ARBITRARY CODE EXECUTION
+ftp | ID: -1" [ color=blue] [label=<<font color="blue"> start_next: 04/11/17, 16:34:47<br/>gap: 27sec<br/>end_prev: 04/11/17, 16:34:19</font><br/><font color="blue"><b>Attacker: 10.0.254.31</b></font>>]
+"ARBITRARY CODE EXECUTION
+ftp | ID: -1" -> "ROOT PRIVILEGE ESCALATION
+ms-wbt-server | ID: -1" [ label="start_next: 04/11/17, 17:47:40
+gap: 4373sec
+end_prev: 04/11/17, 16:34:47"][ fontcolor="blue" color=blue]
+"ROOT PRIVILEGE ESCALATION
+ms-wbt-server | ID: -1" -> "COMMAND AND CONTROL
+unknown | ID: 308" [ label="start_next: 04/11/17, 17:47:40
+gap: 0sec
+end_prev: 04/11/17, 17:47:40"][ fontcolor="blue" color=blue]
+"COMMAND AND CONTROL
+unknown | ID: 308" -> "ACCOUNT MANIPULATION
+snmp | ID: 53" [ label="start_next: 04/11/17, 17:58:12
+gap: 632sec
+end_prev: 04/11/17, 17:47:40"][ fontcolor="blue" color=blue]
+"ACCOUNT MANIPULATION
+snmp | ID: 53" -> "VULNERABILTY DISCOVERY
+ms-sql-s" [ label="start_next: 04/11/17, 17:58:54
+gap: 42sec
+end_prev: 04/11/17, 17:58:12"][ fontcolor="blue" color=blue]
+"VULNERABILTY DISCOVERY
+ms-sql-s" -> "SERVICE DISCOVERY
+ftp" [ label="start_next: 04/11/17, 18:00:38
+gap: -42sec
+end_prev: 04/11/17, 18:01:20"][ fontcolor="blue" color=blue]
+"SERVICE DISCOVERY
+ftp" -> "ARBITRARY CODE EXECUTION
+ssdp | ID: 788" [ label="start_next: 04/11/17, 18:03:09
+gap: -181sec
+end_prev: 04/11/17, 18:06:10"][ fontcolor="blue" color=blue]
+"ARBITRARY CODE EXECUTION
+ssdp | ID: 788" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: 299" [ label="start_next: 04/11/17, 18:03:41
+gap: -125sec
+end_prev: 04/11/17, 18:05:46"][ fontcolor="blue" color=blue]
+"REMOTE SERVICE EXPLOIT
+snmp | ID: 299" -> "NETWORK DoS
+ms-wbt-server | ID: 36" [ label="start_next: 04/11/17, 18:03:55
+gap: 14sec
+end_prev: 04/11/17, 18:03:41"][ fontcolor="blue" color=blue]
+"NETWORK DoS
+ms-wbt-server | ID: 36" -> "COMMAND AND CONTROL
+unknown | ID: 308" [ label="start_next: 04/11/17, 18:04:16
+gap: -41sec
+end_prev: 04/11/17, 18:04:57"][ fontcolor="blue" color=blue]
+"COMMAND AND CONTROL
+unknown | ID: 308" -> "ACCOUNT MANIPULATION
+snmp | ID: 53" [ label="start_next: 04/11/17, 18:04:22
+gap: -86sec
+end_prev: 04/11/17, 18:05:49"][ fontcolor="blue" color=blue]
+"ACCOUNT MANIPULATION
+snmp | ID: 53" -> "BRUTE FORCE CREDENTIALS
+unknown | ID: 1" [ label="start_next: 04/11/17, 18:04:37
+gap: -69sec
+end_prev: 04/11/17, 18:05:46"][ fontcolor="blue" color=blue]
+"BRUTE FORCE CREDENTIALS
+unknown | ID: 1" -> "INFO DISCOVERY
+ftp" [ label="start_next: 04/11/17, 18:04:37
+gap: 0sec
+end_prev: 04/11/17, 18:04:37"][ fontcolor="blue" color=blue]
+"INFO DISCOVERY
+ftp" -> "SURFING
+http" [ label="start_next: 04/11/17, 18:05:08
+gap: -62sec
+end_prev: 04/11/17, 18:06:10"][ fontcolor="blue" color=blue]
+"SURFING
+http" -> "DATA DELIVERY
+http | ID: 246" [ label="start_next: 04/11/17, 18:05:10
+gap: 1sec
+end_prev: 04/11/17, 18:05:09"][ fontcolor="blue" color=blue]
+"VULNERABILTY DISCOVERY
+postgresql" [shape=oval]
+"VULNERABILTY DISCOVERY
+postgresql" [tooltip="ET POLICY Suspicious inbound to MSSQL port 1433
+ET POLICY Suspicious inbound to Oracle SQL port 1521
+ET POLICY Suspicious inbound to PostgreSQL port 5432"]
+"SERVICE DISCOVERY
+ftp" [shape=oval]
+"SERVICE DISCOVERY
+ftp" [tooltip="ET SCAN Nessus FTP Scan detected (ftp_writeable_directories.nasl)
+ET SCAN Nessus FTP Scan detected (ftp_anonymous.nasl)
+ET SCAN Behavioral Unusual Port 445 traffic Potential Scan or Infection
+ET SCAN Potential VNC Scan 5900-5920"]
+"ARBITRARY CODE EXECUTION
+epmap | ID: 64" [shape=box]
+"ARBITRARY CODE EXECUTION
+epmap | ID: 64" [tooltip="ET EXPLOIT Possible Pure-FTPd CVE-2014-6271 attempt
+GPL NETBIOS DCERPC Remote Activation bind attempt
+GPL NETBIOS DCERPC IActivation little endian bind attempt"]
+"INFO DISCOVERY
+ftp" [shape=oval]
+"INFO DISCOVERY
+ftp" [tooltip="GPL FTP CWD Root directory transversal attempt
+GPL FTP PORT bounce attempt
+GPL FTP CWD ~ attempt
+GPL FTP CWD ~root attempt
+GPL FTP SITE EXEC attempt
+GPL FTP CWD .... attempt
+GPL RPC xdmcp info query
+GPL FTP CWD ...
+GPL WEB_SERVER mod_gzip_status access
+GPL FTP .forward"]
+"REMOTE SERVICE EXPLOIT
+snmp | ID: 299" [shape=box]
+"REMOTE SERVICE EXPLOIT
+snmp | ID: 299" [tooltip="ET SNMP Samsung Printer SNMP Hardcode RW Community String"]
+"NETWORK DoS
+ms-wbt-server | ID: 36" [shape=hexagon]
+"NETWORK DoS
+ms-wbt-server | ID: 36" [tooltip="ET DOS Microsoft Remote Desktop (RDP) Syn then Reset 30 Second DoS Attempt"]
+"COMMAND AND CONTROL
+unknown | ID: 308" [shape=box]
+"COMMAND AND CONTROL
+unknown | ID: 308" [tooltip="ET POLICY RDP connection confirm"]
+"ACCOUNT MANIPULATION
+snmp | ID: 53" [shape=box]
+"ACCOUNT MANIPULATION
+snmp | ID: 53" [tooltip="GPL SNMP private access udp
+ET FTP Suspicious Quotation Mark Usage in FTP Username
+GPL SNMP public access udp"]
+"BRUTE FORCE CREDENTIALS
+unknown | ID: 1" [shape=box]
+"BRUTE FORCE CREDENTIALS
+unknown | ID: 1" [tooltip="ET SCAN Potential FTP Brute-Force attempt response"]
+"HOST DISCOVERY
+ms-wbt-server" [shape=oval]
+"HOST DISCOVERY
+ms-wbt-server" [tooltip="ET SCAN Behavioral Unusually fast Terminal Server Traffic Potential Scan or Infection (Inbound)"]
+"DATA EXFILTRATION
+http | ID: 228" [shape=hexagon]
+"DATA EXFILTRATION
+http | ID: 228" [tooltip="ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability"]
+"DATA DELIVERY
+http | ID: 21" [shape=hexagon]
+"DATA DELIVERY
+http | ID: 21" [tooltip="ET WEB_SERVER PHP Possible php Remote File Inclusion Attempt
+ET WEB_SERVER PHP tags in HTTP POST"]
+"HOST DISCOVERY
+http" [shape=oval]
+"HOST DISCOVERY
+http" [tooltip="ET SCAN Possible Nmap User-Agent Observed
+ET SCAN Nmap Scripting Engine User-Agent Detected (Nmap Scripting Engine)"]
+"VULNERABILTY DISCOVERY
+http" [shape=oval]
+"VULNERABILTY DISCOVERY
+http" [tooltip="ET SCAN Nikto Web App Scan in Progress
+ET POLICY Suspicious inbound to MSSQL port 1433
+ET POLICY Suspicious inbound to mySQL port 3306
+ET POLICY Suspicious inbound to PostgreSQL port 5432"]
+"ARBITRARY CODE EXECUTION
+http | ID: 32" [shape=box]
+"ARBITRARY CODE EXECUTION
+http | ID: 32" [tooltip="ET CURRENT_EVENTS QNAP Shellshock CVE-2014-6271"]
+"VULNERABILTY DISCOVERY
+ncube-lm" [shape=oval]
+"VULNERABILTY DISCOVERY
+ncube-lm" [tooltip="ET POLICY Suspicious inbound to Oracle SQL port 1521"]
+"VULNERABILTY DISCOVERY
+ahsp" [shape=oval]
+"VULNERABILTY DISCOVERY
+ahsp" [tooltip="ET POLICY Suspicious inbound to PostgreSQL port 5432
+ET POLICY Suspicious inbound to MSSQL port 1433
+ET POLICY Suspicious inbound to mSQL port 4333"]
+"REMOTE SERVICE EXPLOIT
+snmp | ID: 52" [shape=box]
+"REMOTE SERVICE EXPLOIT
+snmp | ID: 52" [tooltip="ET SNMP Samsung Printer SNMP Hardcode RW Community String"]
+"BRUTE FORCE CREDENTIALS
+unknown | ID: 1362" [style="dotted", shape=box]
+"BRUTE FORCE CREDENTIALS
+unknown | ID: 1362" [tooltip="ET SCAN Potential FTP Brute-Force attempt response"]
+"COMMAND AND CONTROL
+unknown | ID: 945" [style="dotted", shape=box]
+"COMMAND AND CONTROL
+unknown | ID: 945" [tooltip="ET POLICY RDP connection confirm"]
+"ACCOUNT MANIPULATION
+snmp | ID: 391" [style="dotted", shape=box]
+"ACCOUNT MANIPULATION
+snmp | ID: 391" [tooltip="GPL SNMP private access udp
+ET FTP Suspicious Quotation Mark Usage in FTP Username
+GPL SNMP public access udp"]
+"ROOT PRIVILEGE ESCALATION
+ms-wbt-server | ID: 58" [shape=box]
+"ROOT PRIVILEGE ESCALATION
+ms-wbt-server | ID: 58" [tooltip="ET POLICY MS Terminal Server Root login"]
+"SURFING
+http" [shape=oval]
+"SURFING
+http" [tooltip="ET WEB_SERVER WEB-PHP phpinfo access"]
+"DATA DELIVERY
+http | ID: 246" [shape=hexagon]
+"DATA DELIVERY
+http | ID: 246" [tooltip="ET WEB_SERVER PHP Possible php Remote File Inclusion Attempt
+ET WEB_SERVER PHP tags in HTTP POST
+GPL WEB_SERVER perl post attempt"]
+"DATA EXFILTRATION
+http | ID: 26" [shape=hexagon]
+"DATA EXFILTRATION
+http | ID: 26" [tooltip="ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability"]
+"ARBITRARY CODE EXECUTION
+ftp | ID: -1" [shape=box]
+"ARBITRARY CODE EXECUTION
+ftp | ID: -1" [tooltip="ET EXPLOIT Possible Pure-FTPd CVE-2014-6271 attempt"]
+"ROOT PRIVILEGE ESCALATION
+ms-wbt-server | ID: -1" [shape=box]
+"ROOT PRIVILEGE ESCALATION
+ms-wbt-server | ID: -1" [tooltip="ET POLICY MS Terminal Server Root login"]
+"VULNERABILTY DISCOVERY
+ms-sql-s" [shape=oval]
+"VULNERABILTY DISCOVERY
+ms-sql-s" [tooltip="ET POLICY Suspicious inbound to PostgreSQL port 5432
+ET POLICY Suspicious inbound to MSSQL port 1433
+ET POLICY Suspicious inbound to mSQL port 4333"]
+"ARBITRARY CODE EXECUTION
+ssdp | ID: 788" [style="dotted", shape=box]
+"ARBITRARY CODE EXECUTION
+ssdp | ID: 788" [tooltip="GPL MISC UPnP malformed advertisement
+ET EXPLOIT Possible Pure-FTPd CVE-2014-6271 attempt
+GPL NETBIOS DCERPC Remote Activation bind attempt
+GPL NETBIOS DCERPC IActivation little endian bind attempt"]
+}

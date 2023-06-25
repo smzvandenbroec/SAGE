@@ -1,0 +1,27 @@
+digraph "" {
+	"PUBLIC APP EXPLOIT
+http | ID: 142"	[shape=box,
+		tooltip="\"ET WEB_SPECIFIC_APPS IBSng str Parameter Cross Site Scripting Attempt\""];
+	"PUBLIC APP EXPLOIT
+wap-wsp | ID: 143"	[shape=box,
+		tooltip="\"ET WEB_SPECIFIC_APPS IBSng str Parameter Cross Site Scripting Attempt\""];
+	"REMOTE SERVICE EXPLOIT
+http | ID: 370"	[fillcolor=yellow,
+		shape=box,
+		style="dotted,filled",
+		tooltip="\"ET WEB_SERVER Script tag in URI Possible Cross Site Scripting Attempt\""];
+	"REMOTE SERVICE EXPLOIT
+http | ID: 370" -> "PUBLIC APP EXPLOIT
+http | ID: 142"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '<font color=\"maroon\"> start_next: 03/11/18, 21:15:06<br/>gap: -11sec<br/>\
+end_prev: 03/11/18, 21:15:17</font><br/><font color=\"maroon\"><b>Attacker: 10.0.254.202</b></font>'}"];
+	"REMOTE SERVICE EXPLOIT
+wap-wsp | ID: 371"	[fillcolor=yellow,
+		shape=box,
+		style=dotted,
+		tooltip="\"ET WEB_SERVER Script tag in URI Possible Cross Site Scripting Attempt\""];
+	"REMOTE SERVICE EXPLOIT
+wap-wsp | ID: 371" -> "PUBLIC APP EXPLOIT
+wap-wsp | ID: 143"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 03/11/18, 21:13:11\ngap: -11sec\nend_prev: 03/11/18, 21:13:22\"'}"];
+}

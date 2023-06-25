@@ -1,0 +1,71 @@
+digraph DATAEXFILTRATIONunknown {
+rankdir="BT"; 
+ graph [ nodesep="0.1", ranksep="0.02"] 
+ node [ fontname=Arial, fontsize=24,penwidth=3]; 
+ edge [ fontname=Arial, fontsize=20,penwidth=5 ];
+"Victim: 10.0.0.222
+DATA EXFILTRATION
+unknown" [shape=doubleoctagon, style=filled, fillcolor=salmon];
+{ rank = max; "Victim: 10.0.0.222
+DATA EXFILTRATION
+unknown"}
+"DATA EXFILTRATION
+unknown | ID: 57" -> "Victim: 10.0.0.222
+DATA EXFILTRATION
+unknown"
+"DATA EXFILTRATION
+unknown | ID: 57" [style=filled, fillcolor= salmon]
+{ rank=same; "DATA EXFILTRATION
+unknown | ID: 57"}
+"HOST DISCOVERY
+wsman" [style=filled, fillcolor= yellow]
+"HOST DISCOVERY
+wsman" -> "SURFING
+wsman" [ color=purple] [label=<<font color="purple"> start_next: 04/11/17, 14:07:11<br/>gap: 38sec<br/>end_prev: 04/11/17, 14:06:33</font><br/><font color="purple"><b>Attacker: 10.0.254.30</b></font>>]
+"SURFING
+wsman" -> "DATA EXFILTRATION
+wsman | ID: 63" [ label="start_next: 04/11/17, 14:07:12
+gap: -8sec
+end_prev: 04/11/17, 14:07:19"][ fontcolor="purple" color=purple]
+"DATA EXFILTRATION
+wsman | ID: 63" -> "HOST DISCOVERY
+unknown" [ label="start_next: 04/11/17, 14:15:45
+gap: 506sec
+end_prev: 04/11/17, 14:07:19"][ fontcolor="purple" color=purple]
+"HOST DISCOVERY
+unknown" -> "SURFING
+unknown" [ label="start_next: 04/11/17, 14:15:52
+gap: 7sec
+end_prev: 04/11/17, 14:15:45"][ fontcolor="purple" color=purple]
+"SURFING
+unknown" -> "DATA EXFILTRATION
+unknown | ID: 57" [ label="start_next: 04/11/17, 14:15:53
+gap: -8sec
+end_prev: 04/11/17, 14:16:01"][ fontcolor="purple" color=purple]
+"HOST DISCOVERY
+wsman" [shape=oval]
+"HOST DISCOVERY
+wsman" [tooltip="ET SCAN Possible Nmap User-Agent Observed
+ET SCAN Nmap Scripting Engine User-Agent Detected (Nmap Scripting Engine)"]
+"SURFING
+wsman" [shape=oval]
+"SURFING
+wsman" [tooltip="ET WEB_SERVER WEB-PHP phpinfo access"]
+"DATA EXFILTRATION
+wsman | ID: 63" [shape=hexagon]
+"DATA EXFILTRATION
+wsman | ID: 63" [tooltip="ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability"]
+"HOST DISCOVERY
+unknown" [shape=oval]
+"HOST DISCOVERY
+unknown" [tooltip="ET SCAN Possible Nmap User-Agent Observed
+ET SCAN Nmap Scripting Engine User-Agent Detected (Nmap Scripting Engine)"]
+"SURFING
+unknown" [shape=oval]
+"SURFING
+unknown" [tooltip="ET WEB_SERVER WEB-PHP phpinfo access"]
+"DATA EXFILTRATION
+unknown | ID: 57" [shape=hexagon]
+"DATA EXFILTRATION
+unknown | ID: 57" [tooltip="ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability"]
+}

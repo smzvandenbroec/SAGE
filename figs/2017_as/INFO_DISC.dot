@@ -1,0 +1,1201 @@
+digraph "" {
+	"INFO DISCOVERY
+xdmcp"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"GPL RPC xdmcp info query\""];
+	"VULNERABILTY DISCOVERY
+postgresql"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET POLICY Suspicious inbound to PostgreSQL port 5432\""];
+	"INFO DISCOVERY
+xdmcp" -> "VULNERABILTY DISCOVERY
+postgresql"	[key=0,
+		data="{'color': 'blue', 'label': '<font color=\"blue\"> start_next: 04/11/17, 17:59:58<br/>gap: 5247sec<br/>end_prev: 04/11/17, 16:32:31</\
+font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"SERVICE DISCOVERY
+unknown"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Potential VNC Scan 5800-5820\""];
+	"INFO DISCOVERY
+xdmcp" -> "SERVICE DISCOVERY
+unknown"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 21:01:21\ngap: -184sec\nend_prev: 04/11/17, 21:04:25\"'}"];
+	"VULNERABILTY DISCOVERY
+mysql"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET POLICY Suspicious inbound to MSSQL port 1433
+ET POLICY Suspicious inbound to mySQL port 3306
+ET POLICY Suspicious inbound to \
+Oracle SQL port 1521
+ET POLICY Suspicious inbound to PostgreSQL port 5432\""];
+	"INFO DISCOVERY
+xdmcp" -> "VULNERABILTY DISCOVERY
+mysql"	[key=0,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 13:20:44\ngap: 19sec\nend_prev: 04/11/17, 13:20:25\"'}"];
+	"ACCOUNT MANIPULATION
+snmp | ID: 53"	[shape=box,
+		tooltip="\"GPL SNMP private access udp
+GPL SNMP public access udp\""];
+	"INFO DISCOVERY
+xdmcp" -> "ACCOUNT MANIPULATION
+snmp | ID: 53"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:03:10\ngap: -89sec\nend_prev: 04/11/17, 18:04:39\"'}"];
+	"INFO DISCOVERY
+xdmcp" -> "ACCOUNT MANIPULATION
+snmp | ID: 53"	[key=1,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:33:04\ngap: -25sec\nend_prev: 04/11/17, 16:33:28\"'}"];
+	"INFO DISCOVERY
+xdmcp" -> "ACCOUNT MANIPULATION
+snmp | ID: 53"	[key=2,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:04:03\ngap: 46sec\nend_prev: 04/11/17, 18:03:18\"'}"];
+	"SURFING
+http"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET WEB_SERVER WEB-PHP phpinfo access\""];
+	"INFO DISCOVERY
+xdmcp" -> "SURFING
+http"	[key=0,
+		data="{'color': 'blue', 'label': '<font color=\"blue\"> start_next: 04/11/17, 16:31:49<br/>gap: 2sec<br/>end_prev: 04/11/17, 16:31:48</font><\
+br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"INFO DISCOVERY
+xdmcp" -> "SURFING
+http"	[key=1,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:02:57\ngap: 4sec\nend_prev: 04/11/17, 18:02:53\"'}"];
+	"INFO DISCOVERY
+xdmcp" -> "SURFING
+http"	[key=2,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 19:00:35\ngap: 1sec\nend_prev: 04/11/17, 19:00:33\"'}"];
+	"VULNERABILTY DISCOVERY
+http"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Nikto Web App Scan in Progress\""];
+	"INFO DISCOVERY
+xdmcp" -> "VULNERABILTY DISCOVERY
+http"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 19:03:50\ngap: -11sec\nend_prev: 04/11/17, 19:04:01\"'}"];
+	"DATA DELIVERY
+http | ID: 246"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"GPL WEB_SERVER perl post attempt\""];
+	"INFO DISCOVERY
+xdmcp" -> "DATA DELIVERY
+http | ID: 246"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:12:05\ngap: 2sec\nend_prev: 04/11/17, 14:12:04\"'}"];
+	"SURFING
+http-alt"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET WEB_SERVER WEB-PHP phpinfo access\""];
+	"INFO DISCOVERY
+xdmcp" -> "SURFING
+http-alt"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:10:39\ngap: 2sec\nend_prev: 04/11/17, 14:10:38\"'}"];
+	"INFO DISCOVERY
+xdmcp" -> "SURFING
+http-alt"	[key=1,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 19:00:15\ngap: 2sec\nend_prev: 04/11/17, 19:00:13\"'}"];
+	"VULNERABILTY DISCOVERY
+ncube-lm"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET POLICY Suspicious inbound to mySQL port 3306
+ET POLICY Suspicious inbound to mSQL port 4333
+ET POLICY Suspicious inbound to \
+MSSQL port 1433
+ET POLICY Suspicious inbound to Oracle SQL port 1521
+ET SCAN Nessus User Agent
+ET POLICY Suspicious inbound to PostgreSQL \
+port 5432\""];
+	"INFO DISCOVERY
+xdmcp" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 17:58:27\ngap: 5334sec\nend_prev: 04/11/17, 16:29:33\"'}"];
+	"INFO DISCOVERY
+xdmcp" -> "VULNERABILTY DISCOVERY
+ncube-lm"	[key=1,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:56:43\ngap: 3367sec\nend_prev: 04/11/17, 18:00:36\"'}"];
+	"COMMAND AND CONTROL
+unknown | ID: 308"	[fillcolor=yellow,
+		shape=box,
+		style=filled,
+		tooltip="\"ET POLICY RDP connection confirm\""];
+	"INFO DISCOVERY
+xdmcp" -> "COMMAND AND CONTROL
+unknown | ID: 308"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:34:54\ngap: -70sec\nend_prev: 04/11/17, 18:36:04\"'}"];
+	"VULNERABILTY DISCOVERY
+ms-sql-s"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET POLICY Suspicious inbound to MSSQL port 1433
+ET POLICY Suspicious inbound to mySQL port 3306
+ET POLICY Suspicious inbound to \
+Oracle SQL port 1521
+ET POLICY Suspicious inbound to mSQL port 4333\""];
+	"INFO DISCOVERY
+xdmcp" -> "VULNERABILTY DISCOVERY
+ms-sql-s"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '<font color=\"blue\"> start_next: 04/11/17, 18:57:01<br/>gap: 3359sec<br/>end_prev: \
+04/11/17, 18:01:02</font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"VULNERABILTY DISCOVERY
+ahsp"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET POLICY Suspicious inbound to PostgreSQL port 5432
+ET POLICY Suspicious inbound to MSSQL port 1433
+ET POLICY Suspicious inbound \
+to Oracle SQL port 1521
+ET POLICY Suspicious inbound to mSQL port 4333\""];
+	"INFO DISCOVERY
+xdmcp" -> "VULNERABILTY DISCOVERY
+ahsp"	[key=0,
+		data="{'color': 'blue', 'label': '<font color=\"blue\"> start_next: 04/11/17, 17:58:38<br/>gap: 5331sec<br/>end_prev: 04/11/17, 16:29:48</\
+font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"SERVICE DISCOVERY
+epmap"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Behavioral Unusual Port 135 traffic Potential Scan or Infection
+ET SCAN Potential VNC Scan 5800-5820
+ET SCAN Potential \
+VNC Scan 5900-5920\""];
+	"INFO DISCOVERY
+xdmcp" -> "SERVICE DISCOVERY
+epmap"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:56:14\ngap: 3136sec\nend_prev: 04/11/17, 18:03:58\"'}"];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 365"	[shape=box,
+		tooltip="\"ET SNMP Samsung Printer SNMP Hardcode RW Community String\""];
+	"INFO DISCOVERY
+xdmcp" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: 365"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '<font color=\"blue\"> start_next: 04/11/17, 14:00:46<br/>gap: -231sec<br/>end_prev: \
+04/11/17, 14:04:37</font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"INFO DISCOVERY
+xdmcp" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: 365"	[key=1,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 17:59:32\ngap: -1sec\nend_prev: 04/11/17, 17:59:33\"'}"];
+	"COMMAND AND CONTROL
+unknown | ID: 1363"	[shape=box,
+		style=dotted,
+		tooltip="\"ET POLICY RDP connection confirm\""];
+	"INFO DISCOVERY
+xdmcp" -> "COMMAND AND CONTROL
+unknown | ID: 1363"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:53:57\ngap: -69sec\nend_prev: 04/11/17, 16:55:06\"'}"];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 299"	[shape=box,
+		tooltip="\"ET SNMP Samsung Printer SNMP Hardcode RW Community String\""];
+	"INFO DISCOVERY
+xdmcp" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: 299"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:04:54\ngap: -49sec\nend_prev: 04/11/17, 18:05:43\"'}"];
+	"SURFING
+unknown"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET WEB_SERVER WEB-PHP phpinfo access\""];
+	"INFO DISCOVERY
+xdmcp" -> "SURFING
+unknown"	[key=0,
+		data="{'color': 'blue', 'label': '<font color=\"blue\"> start_next: 04/11/17, 14:10:08<br/>gap: 1sec<br/>end_prev: 04/11/17, 14:10:07</font><\
+br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"INFO DISCOVERY
+xdmcp" -> "SURFING
+unknown"	[key=1,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 19:00:32\ngap: 54sec\nend_prev: 04/11/17, 18:59:38\"'}"];
+	"ACCOUNT MANIPULATION
+snmp | ID: 300"	[shape=box,
+		tooltip="\"GPL SNMP public access udp\""];
+	"INFO DISCOVERY
+xdmcp" -> "ACCOUNT MANIPULATION
+snmp | ID: 300"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 16:45:52\ngap: 0sec\nend_prev: 04/11/17, 16:45:52\"'}"];
+	"ACCOUNT MANIPULATION
+snmp | ID: 965"	[shape=box,
+		style=dotted,
+		tooltip="\"GPL SNMP private access udp
+GPL SNMP public access udp\""];
+	"INFO DISCOVERY
+xdmcp" -> "ACCOUNT MANIPULATION
+snmp | ID: 965"	[key=0,
+		data="{'color': 'blue', 'label': '<font color=\"blue\"> start_next: 04/11/17, 14:03:19<br/>gap: -22sec<br/>end_prev: 04/11/17, 14:03:41</\
+font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"ACCOUNT MANIPULATION
+snmp | ID: 408"	[shape=box,
+		style=dotted,
+		tooltip="\"GPL SNMP private access udp
+GPL SNMP public access udp\""];
+	"INFO DISCOVERY
+xdmcp" -> "ACCOUNT MANIPULATION
+snmp | ID: 408"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:31:24\ngap: 20sec\nend_prev: 04/11/17, 16:31:04\"'}"];
+	"INFO DISCOVERY
+xdmcp" -> "ACCOUNT MANIPULATION
+snmp | ID: 408"	[key=1,
+		data="{'color': 'blue', 'label': '<font color=\"blue\"> start_next: 04/11/17, 18:02:42<br/>gap: -32sec<br/>end_prev: 04/11/17, 18:03:14</\
+font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"DATA EXFILTRATION
+distinct | ID: 409"	[fillcolor=salmon,
+		shape=hexagon,
+		style=dotted,
+		tooltip="\"ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability\""];
+	"INFO DISCOVERY
+xdmcp" -> "DATA EXFILTRATION
+distinct | ID: 409"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:05:13\ngap: 26sec\nend_prev: 04/11/17, 14:04:47\"'}"];
+	"ACCOUNT MANIPULATION
+snmp | ID: 367"	[shape=box,
+		tooltip="\"GPL SNMP private access udp
+GPL SNMP public access udp\""];
+	"INFO DISCOVERY
+xdmcp" -> "ACCOUNT MANIPULATION
+snmp | ID: 367"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:05:28\ngap: 52sec\nend_prev: 04/11/17, 14:04:36\"'}"];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 874"	[shape=box,
+		style=dotted,
+		tooltip="\"ET SNMP Samsung Printer SNMP Hardcode RW Community String\""];
+	"INFO DISCOVERY
+xdmcp" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: 874"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:01:27\ngap: -119sec\nend_prev: 04/11/17, 14:03:26\"'}"];
+	"ACCOUNT MANIPULATION
+snmp | ID: 351"	[shape=box,
+		style=dotted,
+		tooltip="\"GPL SNMP private access udp
+GPL SNMP public access udp\""];
+	"INFO DISCOVERY
+xdmcp" -> "ACCOUNT MANIPULATION
+snmp | ID: 351"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:06:06\ngap: -263sec\nend_prev: 04/11/17, 18:10:29\"'}"];
+	"ACCOUNT MANIPULATION
+snmp | ID: 1357"	[shape=box,
+		style=dotted,
+		tooltip="\"GPL SNMP public access udp\""];
+	"INFO DISCOVERY
+xdmcp" -> "ACCOUNT MANIPULATION
+snmp | ID: 1357"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:03:05\ngap: 49sec\nend_prev: 04/11/17, 14:02:16\"'}"];
+	"ACCOUNT MANIPULATION
+snmp | ID: 942"	[shape=box,
+		style=dotted,
+		tooltip="\"GPL SNMP private access udp
+GPL SNMP public access udp\""];
+	"INFO DISCOVERY
+xdmcp" -> "ACCOUNT MANIPULATION
+snmp | ID: 942"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:31:10\ngap: -64sec\nend_prev: 04/11/17, 16:32:13\"'}"];
+	"ACCOUNT MANIPULATION
+snmp | ID: 938"	[shape=box,
+		style=dotted,
+		tooltip="\"GPL SNMP private access udp
+GPL SNMP public access udp\""];
+	"INFO DISCOVERY
+xdmcp" -> "ACCOUNT MANIPULATION
+snmp | ID: 938"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:02:07\ngap: -71sec\nend_prev: 04/11/17, 18:03:18\"'}"];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 1368"	[shape=box,
+		style=dotted,
+		tooltip="\"ET SNMP Samsung Printer SNMP Hardcode RW Community String\""];
+	"INFO DISCOVERY
+xdmcp" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: 1368"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:05:16\ngap: -77sec\nend_prev: 04/11/17, 14:06:33\"'}"];
+	"COMMAND AND CONTROL
+unknown | ID: 956"	[shape=box,
+		tooltip="\"ET POLICY RDP connection confirm\""];
+	"INFO DISCOVERY
+xdmcp" -> "COMMAND AND CONTROL
+unknown | ID: 956"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '<font color=\"blue\"> start_next: 04/11/17, 18:05:40<br/>gap: -54sec<br/>end_prev: \
+04/11/17, 18:06:34</font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"COMMAND AND CONTROL
+unknown | ID: 1365"	[shape=box,
+		style=dotted,
+		tooltip="\"ET POLICY RDP connection confirm\""];
+	"INFO DISCOVERY
+xdmcp" -> "COMMAND AND CONTROL
+unknown | ID: 1365"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:05:22\ngap: -49sec\nend_prev: 04/11/17, 18:06:11\"'}"];
+	"ACCOUNT MANIPULATION
+snmp | ID: 230"	[shape=box,
+		tooltip="\"GPL SNMP private access udp
+GPL SNMP public access udp\""];
+	"INFO DISCOVERY
+xdmcp" -> "ACCOUNT MANIPULATION
+snmp | ID: 230"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:31:12\ngap: 57sec\nend_prev: 04/11/17, 16:30:15\"'}"];
+	"ACCOUNT MANIPULATION
+snmp | ID: 889"	[shape=box,
+		tooltip="\"GPL SNMP private access udp
+GPL SNMP public access udp\""];
+	"INFO DISCOVERY
+xdmcp" -> "ACCOUNT MANIPULATION
+snmp | ID: 889"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '<font color=\"blue\"> start_next: 04/11/17, 16:30:57<br/>gap: 55sec<br/>end_prev: \
+04/11/17, 16:30:02</font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"ACCOUNT MANIPULATION
+snmp | ID: 1505"	[shape=box,
+		style=dotted,
+		tooltip="\"GPL SNMP private access udp
+GPL SNMP public access udp\""];
+	"INFO DISCOVERY
+xdmcp" -> "ACCOUNT MANIPULATION
+snmp | ID: 1505"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:02:05\ngap: -49sec\nend_prev: 04/11/17, 18:02:54\"'}"];
+	"ACCOUNT MANIPULATION
+snmp | ID: 1155"	[shape=box,
+		style=dotted,
+		tooltip="\"GPL SNMP private access udp
+GPL SNMP public access udp\""];
+	"INFO DISCOVERY
+xdmcp" -> "ACCOUNT MANIPULATION
+snmp | ID: 1155"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:03:06\ngap: 48sec\nend_prev: 04/11/17, 14:02:19\"'}"];
+	"BRUTE FORCE CREDENTIALS
+unknown | ID: 358"	[shape=box,
+		tooltip="\"ET SCAN Multiple MySQL Login Failures Possible Brute Force Attempt\""];
+	"INFO DISCOVERY
+xdmcp" -> "BRUTE FORCE CREDENTIALS
+unknown | ID: 358"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:31:18\ngap: 48sec\nend_prev: 04/11/17, 16:30:31\"'}"];
+	"ACCOUNT MANIPULATION
+snmp | ID: 413"	[shape=box,
+		style=dotted,
+		tooltip="\"GPL SNMP private access udp
+GPL SNMP public access udp\""];
+	"INFO DISCOVERY
+xdmcp" -> "ACCOUNT MANIPULATION
+snmp | ID: 413"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:30:21\ngap: 37sec\nend_prev: 04/11/17, 16:29:44\"'}"];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 1158"	[shape=box,
+		style=dotted,
+		tooltip="\"ET SNMP Samsung Printer SNMP Hardcode RW Community String\""];
+	"INFO DISCOVERY
+xdmcp" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: 1158"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '<font color=\"blue\"> start_next: 04/11/17, 18:03:15<br/>gap: -75sec<br/>end_prev: \
+04/11/17, 18:04:30</font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 350"	[shape=box,
+		style=dotted,
+		tooltip="\"ET SNMP Samsung Printer SNMP Hardcode RW Community String\""];
+	"INFO DISCOVERY
+xdmcp" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: 350"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:29:49\ngap: -103sec\nend_prev: 04/11/17, 16:31:32\"'}"];
+	"DATA DELIVERY
+vrml-multi-use | ID: 416"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SERVER PHP Possible php Remote File Inclusion Attempt
+ET WEB_SERVER PHP tags in HTTP POST
+GPL WEB_SERVER perl post attempt\""];
+	"INFO DISCOVERY
+xdmcp" -> "DATA DELIVERY
+vrml-multi-use | ID: 416"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '<font color=\"blue\"> start_next: 04/11/17, 21:00:04<br/>gap: -289sec<br/>end_prev: \
+04/11/17, 21:04:53</font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"SURFING
+vrml-multi-use"	[shape=oval,
+		tooltip="\"ET WEB_SERVER WEB-PHP phpinfo access\""];
+	"INFO DISCOVERY
+xdmcp" -> "SURFING
+vrml-multi-use"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '<font color=\"blue\"> start_next: 04/11/17, 14:11:32<br/>gap: 2sec<br/>end_prev: \
+04/11/17, 14:11:30</font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"INFO DISCOVERY
+xdmcp" -> "SURFING
+vrml-multi-use"	[key=1,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:34:42\ngap: 2sec\nend_prev: 04/11/17, 16:34:40\"'}"];
+	"INFO DISCOVERY
+xdmcp" -> "SURFING
+vrml-multi-use"	[key=2,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:07:07\ngap: 2sec\nend_prev: 04/11/17, 18:07:05\"'}"];
+	"INFO DISCOVERY
+xdmcp" -> "SURFING
+vrml-multi-use"	[key=3,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 19:01:18\ngap: 2sec\nend_prev: 04/11/17, 19:01:16\"'}"];
+	"DATA DELIVERY
+unknown | ID: 935"	[fillcolor=salmon,
+		shape=hexagon,
+		style=dotted,
+		tooltip="\"ET WEB_SERVER PHP tags in HTTP POST
+GPL WEB_SERVER perl post attempt\""];
+	"INFO DISCOVERY
+xdmcp" -> "DATA DELIVERY
+unknown | ID: 935"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:32:34\ngap: 7sec\nend_prev: 04/11/17, 16:32:27\"'}"];
+	"INFO DISCOVERY
+http"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"GPL WEB_SERVER mod_gzip_status access\""];
+	"INFO DISCOVERY
+http" -> "SURFING
+http"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 15:49:56\ngap: 1sec\nend_prev: 04/11/17, 15:49:55\"'}"];
+	"INFO DISCOVERY
+http" -> "SURFING
+http"	[key=1,
+		data="{'color': 'tomato', 'fontcolor': '\"purple\"', 'label': '<font color=\"tomato\"> start_next: 04/11/17, 13:41:56<br/>gap: 1sec<br/>end_\
+prev: 04/11/17, 13:41:55</font><br/><font color=\"tomato\"><b>Attacker: 10.0.254.33</b></font>'}"];
+	"DATA EXFILTRATION
+http | ID: 26"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability\""];
+	"INFO DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 26"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 22:19:01\ngap: 1sec\nend_prev: 04/11/17, 22:19:00\"'}"];
+	"INFO DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 26"	[key=1,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 13:31:59\ngap: 1sec\nend_prev: 04/11/17, 13:31:59\"'}"];
+	"INFO DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 26"	[key=2,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 15:49:55\ngap: 1sec\nend_prev: 04/11/17, 15:49:54\"'}"];
+	"INFO DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 26"	[key=3,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 18:10:09\ngap: 1sec\nend_prev: 04/11/17, 18:10:08\"'}"];
+	"INFO DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 26"	[key=4,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 13:22:54\ngap: 1sec\nend_prev: 04/11/17, 13:22:53\"'}"];
+	"INFO DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 26"	[key=5,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 14:16:09\ngap: 1sec\nend_prev: 04/11/17, 14:16:09\"'}"];
+	"INFO DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 26"	[key=6,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 14:17:33\ngap: -79sec\nend_prev: 04/11/17, 14:18:52\"'}"];
+	"INFO DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 26"	[key=7,
+		data="{'color': 'tomato', 'fontcolor': '\"tomato\"', 'label': '\"start_next: 04/11/17, 16:07:27\ngap: 1sec\nend_prev: 04/11/17, 16:07:26\"'}"];
+	"HOST DISCOVERY
+http-alt"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Possible Nmap User-Agent Observed
+ET SCAN Nmap Scripting Engine User-Agent Detected (Nmap Scripting Engine)\""];
+	"INFO DISCOVERY
+http" -> "HOST DISCOVERY
+http-alt"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 14:00:02\ngap: -40sec\nend_prev: 04/11/17, 14:00:42\"'}"];
+	"INFO DISCOVERY
+http" -> "DATA DELIVERY
+http | ID: 246"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:04:46\ngap: 2sec\nend_prev: 04/11/17, 18:04:44\"'}"];
+	"DATA DELIVERY
+http | ID: 705"	[fillcolor=salmon,
+		shape=hexagon,
+		style=dotted,
+		tooltip="\"ET WEB_SERVER PHP tags in HTTP POST
+ET WEB_SERVER PHP Possible php Remote File Inclusion Attempt
+ET WEB_SERVER PHP Possible https \
+Local File Inclusion Attempt
+GPL WEB_SERVER perl post attempt\""];
+	"INFO DISCOVERY
+http" -> "DATA DELIVERY
+http | ID: 705"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 21:09:26\ngap: 70sec\nend_prev: 04/11/17, 21:08:16\"'}"];
+	"DATA EXFILTRATION
+http | ID: 296"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability\""];
+	"INFO DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 296"	[key=0,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 15:21:41\ngap: 1sec\nend_prev: 04/11/17, 15:21:40\"'}"];
+	"DATA EXFILTRATION
+http | ID: 876"	[fillcolor=salmon,
+		shape=hexagon,
+		style=dotted,
+		tooltip="\"ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability
+ET WEB_SERVER DD-WRT Information Disclosure Attempt
+ET CURRENT_\
+EVENTS Possible TLS HeartBleed Unencrypted Request Method 3 (Inbound to Common SSL Port)
+ET INFO WinHttp AutoProxy Request wpad.dat \
+Possible BadTunnel\""];
+	"INFO DISCOVERY
+http" -> "DATA EXFILTRATION
+http | ID: 876"	[key=0,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 04/11/17, 22:10:29\ngap: 1sec\nend_prev: 04/11/17, 22:\
+10:29\"'}"];
+	"INFO DISCOVERY
+microsoft-ds"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET ATTACK_RESPONSE Net User Command Response\""];
+	"ROOT PRIVILEGE ESCALATION
+ms-wbt-server | ID: -1"	[shape=box,
+		tooltip="\"ET POLICY MS Terminal Server Root login\""];
+	"INFO DISCOVERY
+microsoft-ds" -> "ROOT PRIVILEGE ESCALATION
+ms-wbt-server | ID: -1"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 17:47:33\ngap: 600sec\nend_prev: 04/11/17, 17:37:34\"'}"];
+	"INFO DISCOVERY
+unknown"	[shape=oval,
+		tooltip="\"GPL WEB_SERVER globals.pl access
+GPL WEB_SERVER mod_gzip_status access\""];
+	"INFO DISCOVERY
+unknown" -> "SURFING
+unknown"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:04:51\ngap: 3sec\nend_prev: 04/11/17, 18:04:49\"'}"];
+	"DATA EXFILTRATION
+unknown | ID: 57"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability\""];
+	"INFO DISCOVERY
+unknown" -> "DATA EXFILTRATION
+unknown | ID: 57"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 15:48:51\ngap: 1sec\nend_prev: 04/11/17, 15:48:50\"'}"];
+	"INFO DISCOVERY
+unknown" -> "DATA EXFILTRATION
+unknown | ID: 57"	[key=1,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 13:36:00\ngap: 1sec\nend_prev: 04/11/17, 13:35:59\"'}"];
+	"INFO DISCOVERY
+unknown" -> "DATA EXFILTRATION
+unknown | ID: 57"	[key=2,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 15:57:26\ngap: 1sec\nend_prev: 04/11/17, 15:57:25\"'}"];
+	"INFO DISCOVERY
+unknown" -> "DATA EXFILTRATION
+unknown | ID: 57"	[key=3,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 18:14:44\ngap: 1sec\nend_prev: 04/11/17, 18:14:43\"'}"];
+	"INFO DISCOVERY
+unknown" -> "DATA EXFILTRATION
+unknown | ID: 57"	[key=4,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 20:49:08\ngap: 1sec\nend_prev: 04/11/17, 20:49:07\"'}"];
+	"INFO DISCOVERY
+unknown" -> "DATA EXFILTRATION
+unknown | ID: 57"	[key=5,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 20:41:54\ngap: 1sec\nend_prev: 04/11/17, 20:41:53\"'}"];
+	"INFO DISCOVERY
+unknown" -> "DATA EXFILTRATION
+unknown | ID: 57"	[key=6,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 14:18:07\ngap: 1sec\nend_prev: 04/11/17, 14:18:06\"'}"];
+	"INFO DISCOVERY
+unknown" -> "DATA EXFILTRATION
+unknown | ID: 57"	[key=7,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 17:47:21\ngap: 1sec\nend_prev: 04/11/17, 17:47:20\"'}"];
+	"INFO DISCOVERY
+unknown" -> "DATA EXFILTRATION
+unknown | ID: 57"	[key=8,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 14:26:38\ngap: 1sec\nend_prev: 04/11/17, 14:26:37\"'}"];
+	"INFO DISCOVERY
+unknown" -> "DATA EXFILTRATION
+unknown | ID: 57"	[key=9,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 14:53:44\ngap: 1sec\nend_prev: 04/11/17, 14:53:43\"'}"];
+	"INFO DISCOVERY
+unknown" -> "DATA EXFILTRATION
+unknown | ID: 57"	[key=10,
+		data="{'color': 'tomato', 'fontcolor': '\"tomato\"', 'label': '\"start_next: 04/11/17, 17:01:50\ngap: 1sec\nend_prev: 04/11/17, 17:01:49\"'}"];
+	"DATA EXFILTRATION
+unknown | ID: 301"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability\""];
+	"INFO DISCOVERY
+unknown" -> "DATA EXFILTRATION
+unknown | ID: 301"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:51:43\ngap: 1sec\nend_prev: 04/11/17, 16:51:42\"'}"];
+	"INFO DISCOVERY
+domain"	[shape=oval,
+		tooltip="\"GPL WEB_SERVER globals.pl access
+GPL DNS named version attempt\""];
+	"INFO DISCOVERY
+domain" -> "SURFING
+unknown"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 18:10:07\ngap: -3sec\nend_prev: 04/11/17, 18:10:10\"'}"];
+	"INFO DISCOVERY
+wsman"	[shape=oval,
+		tooltip="\"GPL WEB_SERVER globals.pl access\""];
+	"SURFING
+wsman"	[shape=oval,
+		tooltip="\"ET WEB_SERVER WEB-PHP phpinfo access\""];
+	"INFO DISCOVERY
+wsman" -> "SURFING
+wsman"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 14:07:14\ngap: 1sec\nend_prev: 04/11/17, 14:07:13\"'}"];
+	"ACCOUNT MANIPULATION
+snmp | ID: -1"	[shape=box,
+		tooltip="\"GPL SNMP public access udp\""];
+	"INFO DISCOVERY
+wsman" -> "ACCOUNT MANIPULATION
+snmp | ID: -1"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:27:10\ngap: 852sec\nend_prev: 04/11/17, 16:12:58\"'}"];
+	"DATA DELIVERY
+wsman | ID: 399"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"GPL WEB_SERVER perl post attempt\""];
+	"INFO DISCOVERY
+wsman" -> "DATA DELIVERY
+wsman | ID: 399"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:06:45\ngap: 7sec\nend_prev: 04/11/17, 14:06:38\"'}"];
+	"DATA EXFILTRATION
+wsman | ID: 63"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability\""];
+	"INFO DISCOVERY
+wsman" -> "DATA EXFILTRATION
+wsman | ID: 63"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 14:07:20\ngap: 9sec\nend_prev: 04/11/17, 14:07:10\"'}"];
+	"INFO DISCOVERY
+wsman" -> "DATA EXFILTRATION
+wsman | ID: 63"	[key=1,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 17:57:48\ngap: 1sec\nend_prev: 04/11/17, 17:57:47\"'}"];
+	"INFO DISCOVERY
+ftp"	[shape=oval,
+		tooltip="\"GPL FTP CWD Root directory transversal attempt
+GPL FTP PORT bounce attempt
+GPL FTP CWD ~ attempt
+GPL FTP CWD ~root attempt
+GPL \
+FTP SITE EXEC attempt
+GPL FTP CWD .... attempt
+GPL FTP LIST directory traversal attempt
+GPL RPC xdmcp info query
+GPL FTP CWD ...
+\
+GPL FTP .forward\""];
+	"INFO DISCOVERY
+ftp" -> "SERVICE DISCOVERY
+unknown"	[key=0,
+		data="{'color': 'turquoise', 'fontcolor': '\"turquoise\"', 'label': '\"start_next: 04/11/17, 17:20:30\ngap: 614sec\nend_prev: 04/11/17, 17:\
+10:17\"'}"];
+	"INFO DISCOVERY
+ftp" -> "SURFING
+http"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:05:08\ngap: -62sec\nend_prev: 04/11/17, 18:06:10\"'}"];
+	"INFO DISCOVERY
+ftp" -> "REMOTE SERVICE EXPLOIT
+snmp | ID: 299"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:03:39\ngap: -155sec\nend_prev: 04/11/17, 14:06:14\"'}"];
+	"INFO DISCOVERY
+wap-wsp"	[shape=oval,
+		tooltip="\"GPL WEB_SERVER globals.pl access\""];
+	"SURFING
+wap-wsp"	[shape=oval,
+		tooltip="\"ET WEB_SERVER WEB-PHP phpinfo access\""];
+	"INFO DISCOVERY
+wap-wsp" -> "SURFING
+wap-wsp"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 14:07:50\ngap: 1sec\nend_prev: 04/11/17, 14:07:50\"'}"];
+	"DATA EXFILTRATION
+wap-wsp | ID: 68"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability\""];
+	"INFO DISCOVERY
+wap-wsp" -> "DATA EXFILTRATION
+wap-wsp | ID: 68"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 17:47:28\ngap: 1sec\nend_prev: 04/11/17, 17:47:27\"'}"];
+	"INFO DISCOVERY
+wap-wsp" -> "DATA EXFILTRATION
+wap-wsp | ID: 68"	[key=1,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 20:48:48\ngap: 1sec\nend_prev: 04/11/17, 20:48:47\"'}"];
+	"INFO DISCOVERY
+remoteware-cl"	[shape=oval,
+		tooltip="\"GPL WEB_SERVER globals.pl access
+GPL WEB_SERVER mod_gzip_status access\""];
+	"DATA EXFILTRATION
+remoteware-cl | ID: 67"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability\""];
+	"INFO DISCOVERY
+remoteware-cl" -> "DATA EXFILTRATION
+remoteware-cl | ID: 67"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 17:47:57\ngap: 4sec\nend_prev: 04/11/17, 17:47:53\"'}"];
+	"INFO DISCOVERY
+remoteware-cl" -> "DATA EXFILTRATION
+remoteware-cl | ID: 67"	[key=1,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 20:48:22\ngap: -38sec\nend_prev: 04/11/17, 20:49:00\"'}"];
+	"BRUTE FORCE CREDENTIALS
+websm | ID: 66"	[shape=box,
+		tooltip="\"GPL POLICY Sun JavaServer default password login attempt\""];
+	"INFO DISCOVERY
+remoteware-cl" -> "BRUTE FORCE CREDENTIALS
+websm | ID: 66"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:13:02\ngap: 1sec\nend_prev: 04/11/17, 14:13:01\"'}"];
+	"INFO DISCOVERY
+remoteware-cl" -> "BRUTE FORCE CREDENTIALS
+websm | ID: 66"	[key=1,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:41:46\ngap: 1sec\nend_prev: 04/11/17, 16:41:45\"'}"];
+	"INFO DISCOVERY
+remoteware-cl" -> "BRUTE FORCE CREDENTIALS
+websm | ID: 66"	[key=2,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:12:49\ngap: 1sec\nend_prev: 04/11/17, 18:12:48\"'}"];
+	"INFO DISCOVERY
+http-alt"	[shape=oval,
+		tooltip="\"GPL WEB_SERVER globals.pl access\""];
+	"DATA EXFILTRATION
+http-alt | ID: 25"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability
+ET WEB_SERVER Possible MySQL SQLi Attempt Information Schema \
+Access\""];
+	"INFO DISCOVERY
+http-alt" -> "DATA EXFILTRATION
+http-alt | ID: 25"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 04/11/17, 18:02:32\ngap: 1sec\nend_prev: 04/11/17, 18:02:31\"'}"];
+	"INFO DISCOVERY
+http-alt" -> "DATA EXFILTRATION
+http-alt | ID: 25"	[key=1,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 20:16:11\ngap: -266sec\nend_prev: 04/11/17, 20:20:37\"'}"];
+	"INFO DISCOVERY
+http-alt" -> "DATA EXFILTRATION
+http-alt | ID: 25"	[key=2,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 14:18:37\ngap: 1sec\nend_prev: 04/11/17, 14:18:36\"'}"];
+	"INFO DISCOVERY
+http-alt" -> "DATA EXFILTRATION
+http-alt | ID: 25"	[key=3,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 14:08:06\ngap: 1sec\nend_prev: 04/11/17, 14:08:05\"'}"];
+	"INFO DISCOVERY
+http-alt" -> "DATA EXFILTRATION
+http-alt | ID: 25"	[key=4,
+		data="{'color': 'tomato', 'fontcolor': '\"tomato\"', 'label': '\"start_next: 04/11/17, 16:11:49\ngap: 1sec\nend_prev: 04/11/17, 16:11:48\"'}"];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "INFO DISCOVERY
+xdmcp"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:03:54\ngap: 84sec\nend_prev: 04/11/17, 18:02:30\"'}"];
+	"VULNERABILTY DISCOVERY
+postgresql" -> "INFO DISCOVERY
+http"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 15:53:15\ngap: -108sec\nend_prev: 04/11/17, 15:55:\
+03\"'}"];
+	"SERVICE DISCOVERY
+unknown" -> "INFO DISCOVERY
+xdmcp"	[key=0,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 13:20:24\ngap: 1134sec\nend_prev: 04/11/17, 13:01:29\"'}"];
+	"SERVICE DISCOVERY
+unknown" -> "INFO DISCOVERY
+http"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:49:28\ngap: 83sec\nend_prev: 04/11/17, 14:48:05\"'}"];
+	"ARBITRARY CODE EXECUTION
+ssdp | ID: 355"	[shape=box,
+		tooltip="\"GPL MISC UPnP malformed advertisement\""];
+	"ARBITRARY CODE EXECUTION
+ssdp | ID: 355" -> "INFO DISCOVERY
+xdmcp"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:09:15\ngap: 21sec\nend_prev: 04/11/17, 14:08:53\"'}"];
+	"ARBITRARY CODE EXECUTION
+ssdp | ID: 355" -> "INFO DISCOVERY
+xdmcp"	[key=1,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:58:54\ngap: 21sec\nend_prev: 04/11/17, 18:58:33\"'}"];
+	"ARBITRARY CODE EXECUTION
+ssdp | ID: 355" -> "INFO DISCOVERY
+http"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 21:08:16\ngap: 587sec\nend_prev: 04/11/17, 20:58:29\"'}"];
+	"VULNERABILTY DISCOVERY
+mysql" -> "INFO DISCOVERY
+xdmcp"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:01:26\ngap: 97sec\nend_prev: 04/11/17, 13:59:49\"'}"];
+	"VULNERABILTY DISCOVERY
+mysql" -> "INFO DISCOVERY
+http"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 20:40:43\ngap: 4sec\nend_prev: 04/11/17, 20:40:38\"'}"];
+	"ACCOUNT MANIPULATION
+snmp | ID: 53" -> "INFO DISCOVERY
+http"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:03:34\ngap: 62sec\nend_prev: 04/11/17, 18:02:32\"'}"];
+	"ACCOUNT MANIPULATION
+snmp | ID: 53" -> "INFO DISCOVERY
+domain"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 18:06:05\ngap: 5sec\nend_prev: 04/11/17, 18:06:00\"'}"];
+	"HOST DISCOVERY
+http"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Possible Nmap User-Agent Observed
+ET SCAN Nmap Scripting Engine User-Agent Detected (Nmap Scripting Engine)\""];
+	"HOST DISCOVERY
+http" -> "INFO DISCOVERY
+xdmcp"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 16:43:55\ngap: 214sec\nend_prev: 04/11/17, 16:40:22\"'}"];
+	"HOST DISCOVERY
+http" -> "INFO DISCOVERY
+http"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '<font color=\"purple\"> start_next: 04/11/17, 13:31:59<br/>gap: 5sec<br/>end_\
+prev: 04/11/17, 13:31:54</font><br/><font color=\"purple\"><b>Attacker: 10.0.254.30</b></font>'}"];
+	"HOST DISCOVERY
+http" -> "INFO DISCOVERY
+http"	[key=1,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 15:49:55\ngap: 4sec\nend_prev: 04/11/17, 15:49:51\"'}"];
+	"ARBITRARY CODE EXECUTION
+http | ID: 32"	[shape=box,
+		tooltip="\"ET CURRENT_EVENTS QNAP Shellshock CVE-2014-6271\""];
+	"ARBITRARY CODE EXECUTION
+http | ID: 32" -> "INFO DISCOVERY
+http"	[key=0,
+		data="{'color': 'darkgreen', 'fontcolor': '\"darkgreen\"', 'label': '\"start_next: 04/11/17, 22:10:29\ngap: -46sec\nend_prev: 04/11/17, 22:\
+11:15\"'}"];
+	"SURFING
+http" -> "INFO DISCOVERY
+http"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 22:19:00\ngap: -5sec\nend_prev: 04/11/17, 22:19:05\"'}"];
+	"SURFING
+http" -> "INFO DISCOVERY
+http"	[key=1,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 13:31:59\ngap: -5sec\nend_prev: 04/11/17, 13:32:04\"'}"];
+	"SURFING
+http" -> "INFO DISCOVERY
+http"	[key=2,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 15:49:54\ngap: -5sec\nend_prev: 04/11/17, 15:50:00\"'}"];
+	"SURFING
+http" -> "INFO DISCOVERY
+http"	[key=3,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 18:10:08\ngap: -1sec\nend_prev: 04/11/17, 18:10:09\"'}"];
+	"SURFING
+http" -> "INFO DISCOVERY
+http"	[key=4,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 13:22:53\ngap: -184sec\nend_prev: 04/11/17, 13:25:\
+57\"'}"];
+	"SURFING
+http" -> "INFO DISCOVERY
+http"	[key=5,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 14:16:09\ngap: -5sec\nend_prev: 04/11/17, 14:16:14\"'}"];
+	"SURFING
+http" -> "INFO DISCOVERY
+http"	[key=6,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 14:17:32\ngap: -85sec\nend_prev: 04/11/17, 14:18:57\"'}"];
+	"SURFING
+http" -> "INFO DISCOVERY
+http"	[key=7,
+		data="{'color': 'tomato', 'label': '<font color=\"tomato\"> start_next: 04/11/17, 16:07:26<br/>gap: -5sec<br/>end_prev: 04/11/17, 16:07:\
+31</font><br/><font color=\"tomato\"><b>Attacker: 10.0.254.33</b></font>'}"];
+	"SURFING
+http" -> "INFO DISCOVERY
+ftp"	[key=0,
+		data="{'color': 'turquoise', 'fontcolor': '\"turquoise\"', 'label': '\"start_next: 04/11/17, 17:10:17\ngap: 147sec\nend_prev: 04/11/17, 17:\
+07:49\"'}"];
+	"VULNERABILTY DISCOVERY
+http" -> "INFO DISCOVERY
+http"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 15:53:15\ngap: 4sec\nend_prev: 04/11/17, 15:53:11\"'}"];
+	"VULNERABILTY DISCOVERY
+http" -> "INFO DISCOVERY
+http"	[key=1,
+		data="{'color': 'tomato', 'fontcolor': '\"tomato\"', 'label': '\"start_next: 04/11/17, 13:43:34\ngap: -242sec\nend_prev: 04/11/17, 13:47:\
+36\"'}"];
+	"DATA EXFILTRATION
+http | ID: 26" -> "INFO DISCOVERY
+xdmcp"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '<font color=\"blue\"> start_next: 04/11/17, 18:03:14<br/>gap: 5364sec<br/>end_prev: \
+04/11/17, 16:33:50</font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"DATA EXFILTRATION
+http | ID: 26" -> "INFO DISCOVERY
+http"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:04:44\ngap: 13956sec\nend_prev: 04/11/17, 14:12:08\"'}"];
+	"HOST DISCOVERY
+wap-wsp"	[shape=oval,
+		tooltip="\"ET SCAN Possible Nmap User-Agent Observed
+ET SCAN Nmap Scripting Engine User-Agent Detected (Nmap Scripting Engine)\""];
+	"HOST DISCOVERY
+wap-wsp" -> "INFO DISCOVERY
+wap-wsp"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 14:07:50\ngap: 77sec\nend_prev: 04/11/17, 14:06:33\"'}"];
+	"SURFING
+wap-wsp" -> "INFO DISCOVERY
+wap-wsp"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 17:47:27\ngap: -1sec\nend_prev: 04/11/17, 17:47:29\"'}"];
+	"SURFING
+wap-wsp" -> "INFO DISCOVERY
+wap-wsp"	[key=1,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 20:48:47\ngap: -1sec\nend_prev: 04/11/17, 20:48:48\"'}"];
+	"SURFING
+http-alt" -> "INFO DISCOVERY
+http-alt"	[key=0,
+		data="{'color': 'maroon', 'fontcolor': '\"maroon\"', 'label': '\"start_next: 04/11/17, 18:02:31\ngap: -258sec\nend_prev: 04/11/17, 18:06:\
+49\"'}"];
+	"SURFING
+http-alt" -> "INFO DISCOVERY
+http-alt"	[key=1,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 20:16:10\ngap: -272sec\nend_prev: 04/11/17, 20:20:42\"'}"];
+	"SURFING
+http-alt" -> "INFO DISCOVERY
+http-alt"	[key=2,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 14:18:36\ngap: -5sec\nend_prev: 04/11/17, 14:18:41\"'}"];
+	"SURFING
+http-alt" -> "INFO DISCOVERY
+http-alt"	[key=3,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 14:08:05\ngap: -5sec\nend_prev: 04/11/17, 14:08:10\"'}"];
+	"SURFING
+http-alt" -> "INFO DISCOVERY
+http-alt"	[key=4,
+		data="{'color': 'tomato', 'fontcolor': '\"tomato\"', 'label': '\"start_next: 04/11/17, 16:11:48\ngap: -5sec\nend_prev: 04/11/17, 16:11:53\"'}"];
+	"SURFING
+remoteware-cl"	[shape=oval,
+		tooltip="\"ET WEB_SERVER WEB-PHP phpinfo access\""];
+	"SURFING
+remoteware-cl" -> "INFO DISCOVERY
+remoteware-cl"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 17:47:53\ngap: -26sec\nend_prev: 04/11/17, 17:48:19\"'}"];
+	"SURFING
+remoteware-cl" -> "INFO DISCOVERY
+remoteware-cl"	[key=1,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 20:48:18\ngap: -48sec\nend_prev: 04/11/17, 20:49:07\"'}"];
+	"SURFING
+remoteware-cl" -> "INFO DISCOVERY
+http-alt"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 16:48:32\ngap: -171sec\nend_prev: 04/11/17, 16:51:\
+24\"'}"];
+	"VULNERABILTY DISCOVERY
+radan-http"	[shape=oval,
+		tooltip="\"ET SCAN Nikto Web App Scan in Progress\""];
+	"VULNERABILTY DISCOVERY
+radan-http" -> "INFO DISCOVERY
+http-alt"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 14:08:05\ngap: 1sec\nend_prev: 04/11/17, 14:08:04\"'}"];
+	"DATA EXFILTRATION
+http-alt | ID: 25" -> "INFO DISCOVERY
+xdmcp"	[key=0,
+		data="{'color': 'blue', 'label': '<font color=\"blue\"> start_next: 04/11/17, 18:00:58<br/>gap: 13810sec<br/>end_prev: 04/11/17, 14:10:49</\
+font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"NETWORK DoS
+ms-wbt-server | ID: 36"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET DOS Microsoft Remote Desktop (RDP) Syn then Reset 30 Second DoS Attempt\""];
+	"NETWORK DoS
+ms-wbt-server | ID: 36" -> "INFO DISCOVERY
+wsman"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:06:38\ngap: 19sec\nend_prev: 04/11/17, 14:06:20\"'}"];
+	"HOST DISCOVERY
+wsman"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Possible Nmap User-Agent Observed
+ET SCAN Nmap Scripting Engine User-Agent Detected (Nmap Scripting Engine)\""];
+	"HOST DISCOVERY
+wsman" -> "INFO DISCOVERY
+wsman"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 14:07:13\ngap: 40sec\nend_prev: 04/11/17, 14:06:33\"'}"];
+	"SURFING
+wsman" -> "INFO DISCOVERY
+wsman"	[key=0,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 14:07:10\ngap: -9sec\nend_prev: 04/11/17, 14:07:20\"'}"];
+	"SURFING
+wsman" -> "INFO DISCOVERY
+wsman"	[key=1,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 17:57:47\ngap: -9sec\nend_prev: 04/11/17, 17:57:56\"'}"];
+	"DATA EXFILTRATION
+wsman | ID: 63" -> "INFO DISCOVERY
+xdmcp"	[key=0,
+		data="{'color': 'blue', 'label': '<font color=\"blue\"> start_next: 04/11/17, 18:05:15<br/>gap: 5399sec<br/>end_prev: 04/11/17, 16:35:16</\
+font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"HOST DISCOVERY
+ms-wbt-server"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Behavioral Unusually fast Terminal Server Traffic Potential Scan or Infection (Inbound)\""];
+	"HOST DISCOVERY
+ms-wbt-server" -> "INFO DISCOVERY
+xdmcp"	[key=0,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 13:20:25\ngap: 1100sec\nend_prev: 04/11/17, 13:02:05\"'}"];
+	"SERVICE DISCOVERY
+rpas-c2"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Potential VNC Scan 5900-5920\""];
+	"SERVICE DISCOVERY
+rpas-c2" -> "INFO DISCOVERY
+xdmcp"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:05:40\ngap: 121sec\nend_prev: 04/11/17, 18:03:39\"'}"];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 52"	[shape=box,
+		tooltip="\"ET SNMP Samsung Printer SNMP Hardcode RW Community String\""];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 52" -> "INFO DISCOVERY
+xdmcp"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:29:40\ngap: 0sec\nend_prev: 04/11/17, 16:29:40\"'}"];
+	"REMOTE SERVICE EXPLOIT
+snmp | ID: 52" -> "INFO DISCOVERY
+xdmcp"	[key=1,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:01:07\ngap: 3sec\nend_prev: 04/11/17, 18:01:05\"'}"];
+	"NETWORK DoS
+ssdp | ID: 55"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET DOS Possible SSDP Amplification Scan in Progress\""];
+	"NETWORK DoS
+ssdp | ID: 55" -> "INFO DISCOVERY
+xdmcp"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:10:03\ngap: 45sec\nend_prev: 04/11/17, 14:09:19\"'}"];
+	"NETWORK DoS
+ssdp | ID: 55" -> "INFO DISCOVERY
+xdmcp"	[key=1,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:59:54\ngap: 45sec\nend_prev: 04/11/17, 18:59:10\"'}"];
+	"NETWORK DoS
+ssdp | ID: 55" -> "INFO DISCOVERY
+xdmcp"	[key=2,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 17:59:31\ngap: 40sec\nend_prev: 04/11/17, 17:58:52\"'}"];
+	"NETWORK DoS
+ssdp | ID: 55" -> "INFO DISCOVERY
+unknown"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '<font color=\"blue\"> start_next: 04/11/17, 18:04:49<br/>gap: 72sec<br/>end_prev: \
+04/11/17, 18:03:37</font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"BRUTE FORCE CREDENTIALS
+pop3s | ID: 34"	[shape=box,
+		tooltip="\"ET SCAN Rapid POP3S Connections - Possible Brute Force Attack\""];
+	"BRUTE FORCE CREDENTIALS
+pop3s | ID: 34" -> "INFO DISCOVERY
+xdmcp"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:04:32\ngap: 114sec\nend_prev: 04/11/17, 14:02:37\"'}"];
+	"NETWORK DoS
+ntp | ID: 62"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET DOS Microsoft Remote Desktop (RDP) Syn then Reset 30 Second DoS Attempt
+ET DOS Possible NTP DDoS Inbound Frequent Un-Authed \
+MON_LIST Requests IMPL 0x03\""];
+	"NETWORK DoS
+ntp | ID: 62" -> "INFO DISCOVERY
+xdmcp"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:34:11\ngap: -11sec\nend_prev: 04/11/17, 18:34:23\"'}"];
+	"DATA DELIVERY
+http | ID: 21"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"GPL WEB_SERVER perl post attempt\""];
+	"DATA DELIVERY
+http | ID: 21" -> "INFO DISCOVERY
+xdmcp"	[key=0,
+		data="{'color': 'blue', 'label': '<font color=\"blue\"> start_next: 04/11/17, 16:29:49<br/>gap: 8773sec<br/>end_prev: 04/11/17, 14:03:36</\
+font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"DATA DELIVERY
+unknown | ID: 56"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SERVER PHP Possible php Remote File Inclusion Attempt
+ET WEB_SERVER PHP tags in HTTP POST
+GPL WEB_SERVER perl post attempt\""];
+	"DATA DELIVERY
+unknown | ID: 56" -> "INFO DISCOVERY
+xdmcp"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:31:36\ngap: 8449sec\nend_prev: 04/11/17, 14:10:46\"'}"];
+	"DATA EXFILTRATION
+vrml-multi-use | ID: 76"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"ET WEB_SPECIFIC_APPS PHP-CGI query string parameter vulnerability\""];
+	"DATA EXFILTRATION
+vrml-multi-use | ID: 76" -> "INFO DISCOVERY
+xdmcp"	[key=0,
+		data="{'color': 'blue', 'label': '<font color=\"blue\"> start_next: 04/11/17, 20:58:58<br/>gap: 7053sec<br/>end_prev: 04/11/17, 19:01:25</\
+font><br/><font color=\"blue\"><b>Attacker: 10.0.254.31</b></font>'}"];
+	"SURFING
+unknown" -> "INFO DISCOVERY
+unknown"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 15:48:50\ngap: -6sec\nend_prev: 04/11/17, 15:48:56\"'}"];
+	"SURFING
+unknown" -> "INFO DISCOVERY
+unknown"	[key=1,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 13:35:59\ngap: -6sec\nend_prev: 04/11/17, 13:36:05\"'}"];
+	"SURFING
+unknown" -> "INFO DISCOVERY
+unknown"	[key=2,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 15:57:25\ngap: -6sec\nend_prev: 04/11/17, 15:57:30\"'}"];
+	"SURFING
+unknown" -> "INFO DISCOVERY
+unknown"	[key=3,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 18:14:43\ngap: -5sec\nend_prev: 04/11/17, 18:14:48\"'}"];
+	"SURFING
+unknown" -> "INFO DISCOVERY
+unknown"	[key=4,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 20:49:07\ngap: -6sec\nend_prev: 04/11/17, 20:49:12\"'}"];
+	"SURFING
+unknown" -> "INFO DISCOVERY
+unknown"	[key=5,
+		data="{'color': 'purple', 'fontcolor': '\"purple\"', 'label': '\"start_next: 04/11/17, 20:41:53\ngap: -6sec\nend_prev: 04/11/17, 20:41:58\"'}"];
+	"SURFING
+unknown" -> "INFO DISCOVERY
+unknown"	[key=6,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 14:18:06\ngap: -5sec\nend_prev: 04/11/17, 14:18:11\"'}"];
+	"SURFING
+unknown" -> "INFO DISCOVERY
+unknown"	[key=7,
+		data="{'color': 'brown', 'label': '<font color=\"brown\"> start_next: 04/11/17, 17:47:20<br/>gap: -5sec<br/>end_prev: 04/11/17, 17:47:25</\
+font><br/><font color=\"brown\"><b>Attacker: 10.0.254.30</b></font>'}"];
+	"SURFING
+unknown" -> "INFO DISCOVERY
+unknown"	[key=8,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 14:26:37\ngap: -5sec\nend_prev: 04/11/17, 14:26:43\"'}"];
+	"SURFING
+unknown" -> "INFO DISCOVERY
+unknown"	[key=9,
+		data="{'color': 'brown', 'fontcolor': '\"brown\"', 'label': '\"start_next: 04/11/17, 14:53:43\ngap: -5sec\nend_prev: 04/11/17, 14:53:48\"'}"];
+	"SURFING
+unknown" -> "INFO DISCOVERY
+unknown"	[key=10,
+		data="{'color': 'tomato', 'fontcolor': '\"tomato\"', 'label': '\"start_next: 04/11/17, 17:01:49\ngap: -5sec\nend_prev: 04/11/17, 17:01:54\"'}"];
+	"ARBITRARY CODE EXECUTION
+epmap | ID: 64"	[shape=box,
+		tooltip="\"ET EXPLOIT Possible Pure-FTPd CVE-2014-6271 attempt
+GPL NETBIOS DCERPC Remote Activation bind attempt
+GPL NETBIOS DCERPC IActivation \
+little endian bind attempt\""];
+	"ARBITRARY CODE EXECUTION
+epmap | ID: 64" -> "INFO DISCOVERY
+ftp"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:03:39\ngap: -127sec\nend_prev: 04/11/17, 14:05:47\"'}"];
+	"BRUTE FORCE CREDENTIALS
+unknown | ID: 1"	[shape=box,
+		tooltip="\"ET SCAN Multiple MySQL Login Failures Possible Brute Force Attempt\""];
+	"BRUTE FORCE CREDENTIALS
+unknown | ID: 1" -> "INFO DISCOVERY
+ftp"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:04:37\ngap: 0sec\nend_prev: 04/11/17, 18:04:37\"'}"];
+	"DATA EXFILTRATION
+microsoft-ds | ID: 37"	[fillcolor=salmon,
+		shape=hexagon,
+		style=filled,
+		tooltip="\"GPL NETBIOS SMB-DS IPC$ unicode share access\""];
+	"DATA EXFILTRATION
+microsoft-ds | ID: 37" -> "INFO DISCOVERY
+microsoft-ds"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 17:37:34\ngap: 459sec\nend_prev: 04/11/17, 17:29:54\"'}"];
+	"VULNERABILTY DISCOVERY
+remoteware-cl"	[shape=oval,
+		tooltip="\"ET SCAN Nessus User Agent\""];
+	"VULNERABILTY DISCOVERY
+remoteware-cl" -> "INFO DISCOVERY
+remoteware-cl"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 16:41:45\ngap: -215sec\nend_prev: 04/11/17, 16:45:20\"'}"];
+	"VULNERABILTY DISCOVERY
+remoteware-cl" -> "INFO DISCOVERY
+remoteware-cl"	[key=1,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 18:12:48\ngap: -177sec\nend_prev: 04/11/17, 18:15:45\"'}"];
+	"VULNERABILTY DISCOVERY
+unknown"	[fillcolor=yellow,
+		shape=oval,
+		style=filled,
+		tooltip="\"ET SCAN Nikto Web App Scan in Progress
+ET POLICY Suspicious inbound to MSSQL port 1433
+ET POLICY Suspicious inbound to Oracle SQL \
+port 1521\""];
+	"VULNERABILTY DISCOVERY
+unknown" -> "INFO DISCOVERY
+remoteware-cl"	[key=0,
+		data="{'color': 'blue', 'fontcolor': '\"blue\"', 'label': '\"start_next: 04/11/17, 14:13:01\ngap: 8sec\nend_prev: 04/11/17, 14:12:53\"'}"];
+}
